@@ -3,6 +3,8 @@ import Link from 'next/link'
 
 import styles from './layout.module.css'
 
+import Footer from '/components/footer'
+
 export const siteTitle = 'CFP CNOS-FAP DON BOSCO - San Donà di Piave';
 
 export default function Layout({ children }) {
@@ -29,9 +31,7 @@ export default function Layout({ children }) {
                 {children}
                 <Link href="/">Torna alla Home</Link>
             </main>
-            <footer>
-                
-            </footer>
+            <Footer />
         </div>
     )
 }

@@ -1,31 +1,25 @@
 import Head from 'next/head'
+import Header from '/components/header'
 import Layout from '/components/layout'
-import Link from 'next/link'
+import Carousel from '/components/carousel'
+import Settori from '/components/settori'
+import Articoli from '/components/articoli'
+import Esplora from '/components/esplora'
+import Eventi from '/components/eventi'
 
 import { getDatiArticoli } from '/lib/articoli'
-import Date from '/components/date'
 
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
       <Head>
       </Head>
-
-      <h2>Ultimi articoli</h2>
-
-      <ul>
-        {datiArticoli.map(
-          ({ id, date, title }) => (
-            <li key={id}>
-              <Link href={'/articoli/' + id}>{title}</Link>
-              <br />
-              <small><Date dateString={date} /></small>
-              <br />
-            </li>
-          )
-        )}
-      </ul>
-
+      <Header />
+      <Carousel />
+      <Settori />
+      <Esplora />
+      <Eventi />
+      <Articoli dati={ datiArticoli } />
     </Layout>
   )
 }
