@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Layout from '/components/layout'
+import Link from 'next/link'
 
 import { getDatiArticoli } from '/lib/articoli'
+import Date from '/components/date'
 
 export default function Home({ datiArticoli }) {
   return (
@@ -14,12 +16,10 @@ export default function Home({ datiArticoli }) {
       <ul>
         {datiArticoli.map(
           ({ id, date, title }) => (
-            <li>
-              {title}
+            <li key={id}>
+              <Link href={'/articoli/' + id}>{title}</Link>
               <br />
-              {id}
-              <br />
-              {date}  
+              <small><Date dateString={date} /></small>
               <br />
             </li>
           )
