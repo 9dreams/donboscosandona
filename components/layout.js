@@ -14,6 +14,16 @@ export const siteTitle = 'CFP CNOS-FAP DON BOSCO - San Donà di Piave';
 
 const theme = createTheme()
 
+const sezioni = [
+    { titolo: 'Informatico', url: '/informatico' },
+    { titolo: 'Energie', url: '/energie' },
+    { titolo: 'Elettrico', url: '/elettrico' },
+    { titolo: 'Meccanico', url: '/meccanico' },
+    { titolo: 'Motoristico', url: '/motoristico' },
+    { titolo: 'Carrozzeria', url: '/carrozzeria' },
+    { titolo: 'Trasparenza', url: '/trasparenza' },
+]
+
 export default function Layout({ children }) {
     return (
         <ThemeProvider theme={theme}>
@@ -33,13 +43,14 @@ export default function Layout({ children }) {
                     <meta name="og:title" content={siteTitle} />
                     <meta name="twitter:card" content="summary_large_image" />
                 </Head>
-                <Header />
+                
                 <Container maxWidth="lg">
+                    <Header titolo="CFP DON BOSCO" sezioni={sezioni} />
                     <main>
                         {children}
                     </main>
+                    <Footer />
                 </Container>
-                <Footer />
             </div>
         </ThemeProvider>
     )
