@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Header from '/components/header'
 import Layout from '/components/layout'
 import Carousel from '/components/carousel'
 import Settori from '/components/settori'
@@ -14,7 +13,6 @@ export default function Home({ datiArticoli }) {
     <Layout>
       <Head>
       </Head>
-      <Header />
       <Carousel />
       <Settori />
       <Esplora />
