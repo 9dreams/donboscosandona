@@ -1,3 +1,5 @@
+import Grid from '@mui/material/Grid'
+
 import Head from 'next/head'
 import Layout from '/components/layout'
 import Carousel from '/components/carousel'
@@ -6,6 +8,7 @@ import Articoli from '/components/articoli'
 import Esplora from '/components/esplora'
 import Eventi from '/components/eventi'
 import PostInEvidenza from '/components/postInEvidenza'
+import Post from '/components/Post'
 
 import { getDatiArticoli } from '/lib/articoli'
 
@@ -17,12 +20,38 @@ let postInEvidenza = {
   testoLink: 'Continua a leggere e scopri la cosa pazzesca che hanno fatto...',
 }
 
+let posts = [
+  {
+    titolo: 'Le notti di Manuel',
+    data: '6 marzo 2023',
+    testo: 'Andiamo insieme a scoprire le follie del nostro Manuel...',
+    immagine: 'https://source.unsplash.com/random',
+    url: 'https://cinema.donboscosandona.it'
+  },
+  {
+    titolo: 'Le notti di Martino',
+    data: '5 marzo 2023',
+    testo: 'Andiamo insieme a scoprire le follie del nostro Martino...',
+    immagine: 'https://source.unsplash.com/random',
+    url: 'https://cinema.donboscosandona.it'
+  },
+]
+
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
       <Head>
       </Head>
       <PostInEvidenza post={ postInEvidenza } />
+      <Grid container spacing={ 4 }>
+        {
+          posts.map(
+            (post) => (
+              <Post post={post} />
+            )
+          )
+        }
+      </Grid>
       <Carousel />
       <Settori />
       <Esplora />
