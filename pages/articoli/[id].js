@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import Layout from '/components/layout'
-import Date from '/components/date'
+import Layout from '/components/Layout'
+import Date from '/components/Date'
 
 import { getIdArticoli, getDatiArticolo } from '/lib/articoli'
 
