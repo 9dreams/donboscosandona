@@ -2,7 +2,7 @@ import Grid from '@mui/material/Grid'
 
 import Head from 'next/head'
 import Layout from '/components/layout'
-import Carousel from '/components/carousel'
+import Carousel from '/components/Carousel'
 import Settori from '/components/settori'
 import Articoli from '/components/articoli'
 import Esplora from '/components/esplora'
@@ -37,6 +37,34 @@ let posts = [
   },
 ]
 
+let slides = [
+  {
+    titolo: 'Slide spaziale',
+    descrizione: 'Questa slide conterrà un\'immagine dello spazio presa a caso da Unsplash',
+    immagine: 'https://source.unsplash.com/1600x900/?space'
+  },
+  {
+    titolo: 'Tinta unita',
+    descrizione: 'Questa slide conterrà un colore Android Green tinta unita',
+    colore: '#A3CB38'
+  },
+  {
+    titolo: 'Slide ritratto',
+    descrizione: 'Questa slide conterrà un ritratto preso a caso da Unsplash',
+    immagine: 'https://source.unsplash.com/1600x900/?portrait'
+  },
+  {
+    titolo: 'Slide acquatica',
+    descrizione: 'Questa slide conterrà un\'immagine acquatica (o di un water) presa a caso da Unsplash',
+    immagine: 'https://source.unsplash.com/1600x900/?water'
+  },
+  {
+    titolo: 'Slide della natura',
+    descrizione: 'Questa slide conterrà un\'immagine della natura presa a caso da Unsplash',
+    immagine: 'https://source.unsplash.com/1600x900/?nature'
+  },
+]
+
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
@@ -52,7 +80,7 @@ export default function Home({ datiArticoli }) {
           )
         }
       </Grid>
-      <Carousel />
+      <Carousel slides={ slides } />
       <Settori />
       <Esplora />
       <Eventi />
