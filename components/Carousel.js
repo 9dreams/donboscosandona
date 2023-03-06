@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import styles from './carousel.module.css'
+import styles from './Carousel.module.css'
 
 export default function MyCarousel({ slides }) {
     return (

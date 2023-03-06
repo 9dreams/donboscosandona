@@ -5,10 +5,10 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Container from '@mui/material/Container'
 
-import styles from './layout.module.css'
+import styles from './Layout.module.css'
 
-import Header from '/components/header'
-import Footer from '/components/footer'
+import Header from '/components/Header'
+import Footer from '/components/Footer'
 
 export const siteTitle = 'CFP CNOS-FAP DON BOSCO - San Donà di Piave';
 

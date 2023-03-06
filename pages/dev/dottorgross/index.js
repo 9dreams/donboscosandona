@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Layout from '/components/layout'
+import Layout from '/components/Layout'
 import Carousel from '/components/Carousel'
-import Settori from '/components/settori'
-import Articoli from '/components/articoli'
-import Esplora from '/components/esplora'
-import Eventi from '/components/eventi'
-import PostInEvidenza from '/components/postInEvidenza'
+import Settori from '/components/Settori'
+import Articoli from '/components/Articoli'
+import Esplora from '/components/Esplora'
+import Eventi from '/components/Eventi'
+import PostInEvidenza from '/components/PostInEvidenza'
 
 import { getDatiArticoli } from '/lib/articoli'
 
