@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Date from '/components/date'
+import Date from '/components/Date'
 
 export default function Articoli({dati}) {
     return (
