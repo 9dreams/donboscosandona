@@ -23,7 +23,6 @@ export default function Home({ datiArticoli }) {
       <Head>
       </Head>
       <PostInEvidenza post={ postInEvidenza } />
-      <Carousel />
       <Settori />
       <Esplora />
       <Eventi />
