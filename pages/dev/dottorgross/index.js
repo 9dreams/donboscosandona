@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '/components/layout'
-import Carousel from '/components/carousel'
+import Carousel from '/components/Carousel'
 import Settori from '/components/settori'
 import Articoli from '/components/articoli'
 import Esplora from '/components/esplora'
