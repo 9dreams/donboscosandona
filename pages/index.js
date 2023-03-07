@@ -92,7 +92,7 @@ export default function Home({ datiArticoli }) {
 }
 
 export async function getStaticProps() {
-  const datiArticoli = getDatiArticoli();
+  const datiArticoli = getDatiArticoli()
   return {
     props: {
       datiArticoli,
