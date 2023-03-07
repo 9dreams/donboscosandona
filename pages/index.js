@@ -1,3 +1,4 @@
+import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 
 import Head from 'next/head'
@@ -68,23 +69,24 @@ let slides = [
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
-      <Head>
-      </Head>
-      <PostInEvidenza post={ postInEvidenza } />
-      <Grid container spacing={ 4 }>
-        {
-          posts.map(
-            (post) => (
-              <Post post={post} />
+      <Head />
+      <Carousel slides={slides} maxWidth={false} />
+      <PostInEvidenza post={postInEvidenza} />
+      <Container maxWidth="lg">
+        <Grid container spacing={4}>
+          {
+            posts.map(
+              (post) => (
+                <Post post={post} />
+              )
             )
-          )
-        }
-      </Grid>
-      <Carousel slides={ slides } />
+          }
+        </Grid>
+      </Container>
       <Settori />
       <Esplora />
       <Eventi />
-      <Articoli dati={ datiArticoli } />
+      <Articoli dati={datiArticoli} />
     </Layout>
   )
 }

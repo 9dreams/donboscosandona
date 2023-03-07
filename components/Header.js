@@ -1,4 +1,4 @@
-import * as React from 'react'
+import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
@@ -8,7 +8,7 @@ import Link from '@mui/material/Link'
 
 export default function Header({titolo, sezioni}) {
     return (
-        <React.Fragment>
+        <Container maxWidth={false}>
             <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Button size="small">Login</Button>
                 <Typography
@@ -46,6 +46,6 @@ export default function Header({titolo, sezioni}) {
                     ))
                 }
             </Toolbar>
-        </React.Fragment>
+        </Container>
     )
 }

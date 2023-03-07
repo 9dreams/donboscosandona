@@ -1,7 +1,9 @@
+import Container from '@mui/material/Container'
+
 export default function Settori() {
     return (
-        <footer>
+        <Container maxWidth="lg">
             <h2>Settori</h2>
-        </footer>
+        </Container>
     )
 }

@@ -1,7 +1,9 @@
+import Container from '@mui/material/Container'
+
 export default function Esplora() {
     return (
-        <footer>
+        <Container maxWidth="lg">
             <h2>Esplora</h2>
-        </footer>
+        </Container>
     )
 }

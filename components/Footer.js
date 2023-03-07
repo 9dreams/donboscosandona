@@ -1,7 +1,9 @@
+import Container from '@mui/material/Container'
+
 export default function Footer() {
     return (
-        <footer>
+        <Container maxWidth={false}>
             <h2>Footer</h2>
-        </footer>
+        </Container>
     )
 }
