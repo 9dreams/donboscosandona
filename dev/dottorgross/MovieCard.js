@@ -10,7 +10,7 @@ export default function MediaCard({ movie }) {
     return (
         <Card>
             <CardMedia
-                sx={{ height: 140 }}
+                sx={{ height: 300 }}
                 image={movie.poster_path}
                 title={movie.title}
             />
@@ -23,9 +23,10 @@ export default function MediaCard({ movie }) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Condividi</Button>
+                <Button size="small">Scopri di più</Button>
             </CardActions>
         </Card>
-    );
+    )
 }
+
