@@ -1,18 +1,9 @@
-import useSWR from 'swr'
-
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 
 import MovieCard from '/dev/dottorgross/MovieCard'
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json())
-
-export default function Movies() {
-    const { data, error } = useSWR('https://cinema.donboscosandona.it/movie/featured.json', fetcher)
-
-    if (error) return <div>Errore di caricamento.</div>
-    if (!data) return <div>Caricamento...</div>
-
+export default function Movies({data}) {
     return (
         <Container maxWidth="lg">
             <Grid container spacing={4}>
