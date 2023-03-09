@@ -1,0 +1,130 @@
+import * as React from 'react';
+import Typography from '@mui/material/Typography'
+import Grid from '@mui/material/Grid'
+import Card from '@mui/material/Card'
+import Container from '@mui/material/Container'
+import maxWidth from '@mui/system'
+import Paper from '@mui/material/Paper'
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box'
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material/styles';
+
+
+const bull = (
+    <Box
+        component="span"
+        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+    >
+        •
+    </Box>
+);
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
+
+export default function Team({ members, team }) {
+    return (
+        <Container maxWidth={maxWidth}>
+            <Grid>
+                {
+                    team.map(
+                        (team) => (
+                            <Paper
+                                style={{
+                                    textAlign: 'center',
+                                }}
+                                elevation={0}
+                            >
+                                <Typography component="h2" variant="h3" color="inherit" gutterBottom>
+                                    {team.title}
+                                </Typography>
+                                <Typography component="h3" color="inherit" paragraph>
+                                    {team.description}
+                                </Typography>
+                            </Paper>
+                        )
+
+                    )
+                }
+
+            </Grid>
+            <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                <Grid item xs={3}>
+                    <Item elevation={0} ><Card sx={{ minWidth: 275 }} elevation={0}>
+                        <CardContent>
+                            <Stack direction="row" spacing={2}>
+                                <center>
+                                    <Avatar alt="" src="/images/team/Giada_3.jpg" sx={{ width: 150, height: 150 }} />
+
+                                    {
+                                        members.map(
+                                            (members) => (
+                                                <Paper
+                                                    style={{
+                                                        textAlign: 'center',
+                                                    }}
+                                                    elevation={0}
+                                                >
+                                                    <Typography component="h3" variant="h5" color="inherit" gutterBottom>
+                                                        {members.name}
+                                                    </Typography>
+                                                </Paper>
+                                            )
+
+                                        )
+                                    }
+
+
+                                </center>
+                            </Stack>
+                        </CardContent>
+                    </Card></Item>
+                </Grid>
+                <Grid item xs={3}>
+                    <Item elevation={0}><Card sx={{ minWidth: 275 }} elevation={0}>
+                        <CardContent>
+                            <Stack direction="row" spacing={2}>
+                                <center>
+                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg " sx={{ width: 150, height: 150 }} />
+                                </center>
+                            </Stack>
+                        </CardContent>
+                    </Card></Item>
+                </Grid>
+                <Grid item xs={3}>
+                    <Item elevation={0}><Card sx={{ minWidth: 275 }}
+                        elevation={0}
+                    >
+                        <CardContent>
+                            <Stack direction="row" spacing={2}>
+                                <center>
+                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg " sx={{ width: 150, height: 150 }} />
+                                </center>
+                            </Stack>
+                        </CardContent>
+                    </Card></Item>
+                </Grid>
+                <Grid item xs={3}>
+                    <Item elevation={0}><Card sx={{ minWidth: 275 }} elevation={0}>
+                        <CardContent >
+                            <Stack direction="row" spacing={2} >
+                                <center>
+                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg " sx={{ width: 150, height: 150 }} />
+                                </center>
+                            </Stack>
+                        </CardContent>
+                    </Card></Item>
+                </Grid>
+            </Grid>
+        </Container>
+    )
+}
