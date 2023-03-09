@@ -14,8 +14,8 @@ export default function Pagina() {
             title="Your Story Starts With Us."
             description="Every landing page needs a small description......."
             buttonText="guarda il video"
-            buttonUrl="https://www.youtube.com/watch?v=wyjm1yGmu9g"
         >
+        
         </LandingHero>)
 }
 
