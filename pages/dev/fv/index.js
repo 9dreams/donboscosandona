@@ -22,9 +22,6 @@ let menu = [
     { title: 'Energie', url: '/energie' },
     { title: 'Elettrico', url: '/elettrico' },
     { title: 'Meccanico', url: '/meccanico' },
-    { title: 'Motoristico', url: '/motoristico' },
-    { title: 'Carrozzeria', url: '/carrozzeria' },
-    { title: 'Trasparenza', url: '/trasparenza' },
 ]
 
 export default function Home({ datiArticoli }) {

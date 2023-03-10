@@ -1,0 +1,9 @@
+.btLanding{
+    color: green;
+    border: green solid 4px;
+    margin-top: 40px;
+}
+
+.btLanding:hover{
+    background-color: rgba(0,0,0,0.7);
+}
