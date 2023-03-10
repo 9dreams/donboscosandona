@@ -1,3 +1,4 @@
+import * as React from 'react'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2'
@@ -6,10 +7,10 @@ import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import styles from './LandingHero.module.css'
 import Button from '@mui/material/Button'
-import { Celebration, Verified, WidthFull } from '@mui/icons-material'
-import { minWidth, Stack, width } from '@mui/system'
 import Avatar from '@mui/material/Avatar'
-import MenuItem from '@mui/material/MenuItem';
+import MenuItem from '@mui/material/MenuItem'
+import { Toolbar } from '@mui/material'
+import Stack from '@mui/material/Stack';
 
 export default function LandingHero(props) {
   return (
@@ -17,6 +18,8 @@ export default function LandingHero(props) {
       maxWidth={false}
       sx={{
         height: '100vh',
+
+        padding: 0
       }}
     >
       <Paper
@@ -44,7 +47,8 @@ export default function LandingHero(props) {
             backgroundColor: 'rgba(0,0,0,0.7)',
           }}
         />
-        <Container maxWidth="lg">
+
+        <Container maxWidth='lg'>
 
           <Grid item md={6}>
             <Box
@@ -55,55 +59,61 @@ export default function LandingHero(props) {
               }}
             >
               <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
-                  <Grid xs={8}>
+                <Grid container spacing={4}>
+                  <Grid xs={3}>
                     <Stack sx={{
                       paddingLeft: '50px'
 
                     }}>
-                      <Typography
-                        component="p"
+                      <Button
+                        component="h3"
                         variant="subtitle1"
-                        color="white"
-                        paddingTop="0px"
+                        color="beige"
+                        marginTop="15px"
                         marginLeft='0px'
                         marginRight='20%'
+                        href='#'
                       >
                         {props.siteName}
-                      </Typography>
+                      </Button>
                     </Stack>
                   </Grid>
-                  <Grid xs={1}>
-                    <Button variant="outlined"
-                      sx={{
-                        float: 'right',
-                        marginRight:'7vh'
-                      }}
-                    >Novità!</Button>
-                  </Grid>
-                  <Grid xs={1}>
-                    <Button variant="outlined"
-                      sx={{
-                        float: 'right'
-                      }}
-                    >Accedi</Button>
-                  </Grid>
-                  <Grid xs={1}>
-                    <Avatar alt="Elia Barbaric" src="/static/images/avatar/2.jpg"
-                      sx={{
-                        height: '37px',
-                        float: 'center'
-                      }}
+                  <Grid xs={9}>
+                    <Toolbar
+                      component="nav"
+                      variant="dense"
+                      sx={{ overflowX: 'auto',
+                      float:'right'
+                    }}
 
-                    />
+                    >
+                      {
+                        menu.map((link) => (
+                          <Button
+                            color="inherit"
+                            noWrap
+                            key={link.title}
+                            variant="body2"
+                            href={link.url}
+                            sx={{ p: 1, flexShrink: 0 }}
+                          >
+                            {link.title}
+                          </Button>
+                        ))
+                      }
+                      <Button variant="outlined"
+                        sx={{
+                          float: 'right'
+                        }}
+                      >Accedi</Button>
+                    </Toolbar>
+
+
+
                   </Grid>
+
                 </Grid>
               </Box>
-
-
-
-
-
 
 
               <Stack
@@ -111,11 +121,11 @@ export default function LandingHero(props) {
                   paddingTop: '200px'
                 }}>
                 <Typography
-                  component="p"
-                  variant="h3"
-                  color="inherit"
+                  component="h3"
+                  variant="h2"
+                  color=""
                   paddingTop="px"
-                  width='650px'
+                  width='600px'
                 >
                   {props.title}
                 </Typography>
@@ -126,11 +136,11 @@ export default function LandingHero(props) {
                   marginTop: '50px'
                 }}>
                 <Typography
-                  component="p"
-                  variant="p"
-                  color="inherit"
+                  component="h"
+                  variant="h6"
+                  color="lightgrey"
                   paddingTop="0px"
-                  fontFamily='serif'
+
                 >
                   {props.description}
                 </Typography>
@@ -153,12 +163,8 @@ export default function LandingHero(props) {
                   {props.buttonText}
                 </Button>
               </Stack>
-
-
-
             </Box>
           </Grid>
-
         </Container>
       </Paper>
     </Container>
@@ -169,10 +175,7 @@ let menu = [
   { title: 'Informatico', url: '/informatico' },
   { title: 'Energie', url: '/energie' },
   { title: 'Elettrico', url: '/elettrico' },
-  { title: 'Meccanico', url: '/meccanico' },
-  { title: 'Motoristico', url: '/motoristico' },
-  { title: 'Carrozzeria', url: '/carrozzeria' },
-  { title: 'Trasparenza', url: '/trasparenza' },
+
 ]
 
 /*
