@@ -50,81 +50,50 @@ export default function Team({ members, team }) {
                                 <Typography component="h3" color="inherit" paragraph>
                                     {team.description}
                                 </Typography>
+                               
                             </Paper>
                         )
-
                     )
                 }
-
             </Grid>
-            <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                <Grid item xs={3}>
-                    <Item elevation={0} ><Card sx={{ minWidth: 275 }} elevation={0}>
-                        <CardContent>
-                            <Stack direction="row" spacing={2}>
-                                <center>
-                                    <Avatar alt="" src="/images/team/Giada_3.jpg" sx={{ width: 150, height: 150 }} />
 
-                                    {
-                                        members.map(
-                                            (members) => (
-                                                <Paper
-                                                    style={{
-                                                        textAlign: 'center',
-                                                    }}
-                                                    elevation={0}
-                                                >
-                                                    <Typography component="h3" variant="h5" color="inherit" gutterBottom>
-                                                        {members.name}
-                                                    </Typography>
-                                                </Paper>
-                                            )
-
-                                        )
-                                    }
-
-
-                                </center>
-                            </Stack>
-                        </CardContent>
-                    </Card></Item>
-                </Grid>
-                <Grid item xs={3}>
-                    <Item elevation={0}><Card sx={{ minWidth: 275 }} elevation={0}>
-                        <CardContent>
-                            <Stack direction="row" spacing={2}>
-                                <center>
-                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg " sx={{ width: 150, height: 150 }} />
-                                </center>
-                            </Stack>
-                        </CardContent>
-                    </Card></Item>
-                </Grid>
-                <Grid item xs={3}>
-                    <Item elevation={0}><Card sx={{ minWidth: 275 }}
-                        elevation={0}
-                    >
-                        <CardContent>
-                            <Stack direction="row" spacing={2}>
-                                <center>
-                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg " sx={{ width: 150, height: 150 }} />
-                                </center>
-                            </Stack>
-                        </CardContent>
-                    </Card></Item>
-                </Grid>
-                <Grid item xs={3}>
-                    <Item elevation={0}><Card sx={{ minWidth: 275 }} elevation={0}>
-                        <CardContent >
-                            <Stack direction="row" spacing={2} >
-                                <center>
-                                    <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg " sx={{ width: 150, height: 150 }} />
-                                </center>
-                            </Stack>
-                        </CardContent>
-                    </Card></Item>
-                </Grid>
+            <Grid item xs={3}>
+                
+                <Item elevation={0} ><Card sx={{ minWidth: 275 }} elevation={0}>
+                    <CardContent>
+                        <Stack direction="row" spacing={20}>
+                            {
+                                members.map(
+                                    (member) => (
+                                        <center>
+                                            <Avatar alt="" src={member.imageUrl} sx={{ width: 150, height: 150 }}/>
+                                            <Paper
+                                                style={{
+                                                    textAlign: 'center',
+                                                }}
+                                                elevation={0}
+                                            >
+                                                <Typography component="h3" variant="h5" color="inherit" gutterBottom>
+                                                    {member.name}
+                                                </Typography>
+                                                <Typography variant="subtitle1" color="text.secondary">
+                                                    {member.role}
+                                                </Typography>
+                                                <Typography variant="subtitle1" paragraph>
+                                                    {member.description}
+                                                </Typography>
+                                            </Paper>
+                                        </center>
+                                        
+                                    )
+                                )
+                            }
+                        </Stack>
+                    </CardContent>
+                </Card></Item>
             </Grid>
+
+
         </Container>
     )
 }

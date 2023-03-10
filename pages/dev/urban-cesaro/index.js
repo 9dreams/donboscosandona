@@ -5,26 +5,41 @@ import Settori from '/components/Settori'
 import Articoli from '/components/Articoli'
 import Esplora from '/components/Esplora'
 import Eventi from '/components/Eventi'
-import Team from 'dev/urban-cesaro/Team.js'
+import Team from '/dev/urban-cesaro/Team'
 
 import { getDatiArticoli } from '/lib/articoli'
 
 
 let members = [
   {
-     name: "Alec Thompson",
-     role: "CEO / CO-FOUNDER",
-     description: "And I love you like...",
-     imageUrl: "https...",
-     linkedinUrl: "https...",
-     facebookUrl: "https...",
-     instagramUrl: "https...",
-  }
+    name: "Filippo Urban",
+    role: "è bravo a guidare su gta 5",
+    description: "sono bello ",
+    imageUrl: "https://www.focusjunior.it/content/uploads/2019/06/St3pNy-.jpeg",
+  },
+  {
+    name: " Zaccaria Cesaro ",
+    role: "programma senza sapere nulla ",
+    description: "però è bravo ",
+    imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+  },
+  {
+    name: "eros ",
+    role: "molto forte su soft air(non è vero)",
+    description: " non è fortissimo  ",
+    imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
+  },
+  {
+    name: "fake omar sylla ",
+    role: "CEO / CO-FOUNDER",
+    description: "And I love you like...",
+    imageUrl: "https://www.ansa.it/webimages/foto_large_ls_350/2017/6/12/e7248097ded61e3394cadacb0d1c35d9.jpg",
+  },
 ]
 
 let team = [
   {
-    title: "Il nostor team",
+    title: "Il nostro team",
     description: "Il nostro team di professionisti!"
   }
 ]
@@ -36,11 +51,9 @@ export default function Home({ datiArticoli }) {
       <Head>
       </Head>
       <Team
-        titolo="Il nostor team"
-        descrizione="Il nostro team di professionisti!"
-        members={ members }
-        team={ team }
-        cardWidth={ 3 }
+        members={members}
+        team={team}
+        cardWidth={3}
       />
     </Layout>
   )
