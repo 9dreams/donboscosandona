@@ -11,12 +11,18 @@ import Card from '@mui/material/Card'
 export default function Footer() {
     return (
         <Container maxWidth= {true}>
-            <Card sx={{ display: 'flex' }}
-            >
+           <Box
+                 sx={{
+                    position: 'absolute',
+                    top: 0,
+                    bottom: 0,
+                    right: 0,
+                    left: 0,
+                    backgroundColor: 'rgba(0,0,0,0.9)', }}
+           
+           >
 
-            </Card>
-    
-            <h2>Nostro footer</h2>
+           </Box>
         </Container>
     )
 }
