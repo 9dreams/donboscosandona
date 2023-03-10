@@ -28,9 +28,8 @@ export default function LandingHero(props) {
           color: '#fff',
           mb: 4,
           height: '100vh',
-          backgroundImage:
-            'url(http://www.donboscosandona.it/img/column/a12efc512fdbb2a25d0a9088b19412f96e1800f3.jpg?1598796861)',
-          padding: 0,
+          backgroundImage: 'url(' + props.imageUrl + ')',
+           padding: 0,
           margin: 0,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover', // Centra l'immagine e la fa coprire l'intero sfondo senza bordi bianchi
@@ -72,6 +71,7 @@ export default function LandingHero(props) {
                         marginTop="15px"
                         marginLeft='0px'
                         marginRight='20%'
+                        width='10%'
                         href='#'
                       >
                         {props.siteName}
@@ -95,7 +95,7 @@ export default function LandingHero(props) {
                             key={link.title}
                             variant="body2"
                             href={link.url}
-                            sx={{ p: 1, flexShrink: 0 }}
+                            sx={{ p: 1, flexShrink: 0, marginRight:'20px' }}
                           >
                             {link.title}
                           </Button>
@@ -157,7 +157,7 @@ export default function LandingHero(props) {
                   component="botton"
                   variant="h6"
                   color="red"
-                  href={props.buttonUrl}
+                  //collegare href con buttonUrl
                   paddingTop="100px"
                 >
                   {props.buttonText}
