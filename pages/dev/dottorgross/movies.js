@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import Movies from './components/Movies'
+import Movies from '/dev/dottorgross/Movies'
 
 export default function Page({data}) {
   return (
