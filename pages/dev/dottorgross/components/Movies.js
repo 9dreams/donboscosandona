@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 
-import MovieCard from '/dev/dottorgross/MovieCard'
+import MovieCard from './MovieCard'
 
 export default function Movies({data}) {
     return (
