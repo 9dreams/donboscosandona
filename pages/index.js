@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid'
 
 import Head from 'next/head'
 import Layout from '/components/Layout'
+import LandingHero from '/components/LandingHero'
 import Carousel from '/components/Carousel'
 import Settori from '/components/Settori'
 import Articoli from '/components/Articoli'
@@ -66,11 +67,29 @@ let slides = [
   },
 ]
 
+let menu = [
+  { title: 'Informatico', url: '/informatico' },
+  { title: 'Energie', url: '/energie' },
+  { title: 'Elettrico', url: '/elettrico' },
+  { title: 'Meccanico', url: '/meccanico' },
+  { title: 'Motoristico', url: '/motoristico' },
+  { title: 'Carrozzeria', url: '/carrozzeria' },
+]
 
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
       <Head />
+      <LandingHero
+                opacity={0.7}
+                siteName="CFP DON BOSCO"
+                title="Il tuo futuro professionale a portata di un click!"
+                description="Every landing page needs a small description......."
+                buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
+                buttonText="guarda il video"
+                imageUrl="https://cdn.we-wealth.com/-/media/Images/summary/college-americani-il-non-aumento-delle-tasse-e-da-record.png?rev=dec6c04ac7904e55b50eef5485cd67fb&modified=20210830131241"
+                menu={menu}
+            />
       <Carousel slides={slides} maxWidth={false} />
       <PostInEvidenza post={postInEvidenza} />
       <Container maxWidth="lg">

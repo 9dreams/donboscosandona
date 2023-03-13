@@ -9,7 +9,7 @@ import styles from './Carousel.module.css'
 
 export default function MyCarousel({ slides, maxWidth }) {
     return (
-        <Container maxWidth={maxWidth}>
+        <Container maxWidth={maxWidth} disableGutters={true}>
             <div style={{ marginTop: '5px', color: '#494949' }}>
                 <Carousel className={styles.carousel} animation="slide">
                     {

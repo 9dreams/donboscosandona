@@ -44,7 +44,6 @@ export default function Layout({ children }) {
                     <meta name="twitter:card" content="summary_large_image" />
                 </Head>
                 
-                <Header titolo="CFP DON BOSCO" sezioni={sezioni} />
                 <main>
                     {children}
                 </main>
