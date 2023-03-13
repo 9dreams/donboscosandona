@@ -66,6 +66,7 @@ let slides = [
   },
 ]
 
+
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
