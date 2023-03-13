@@ -16,12 +16,15 @@ export default function LandingHero(props) {
   return (
     <Container
       maxWidth={false}
+      disableGutters={true}
       sx={{
         height: '100vh',
-
-        padding: 0
+        padding: 'ovh',
+        margin: '0vh',
       }}
+      
     >
+
       <Paper
         sx={{
           position: 'relative',
@@ -29,13 +32,14 @@ export default function LandingHero(props) {
           mb: 4,
           height: '100vh',
           backgroundImage: 'url(' + props.imageUrl + ')',
-           padding: 0,
+          padding: 0,
           margin: 0,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover', // Centra l'immagine e la fa coprire l'intero sfondo senza bordi bianchi
           backgroundPosition: 'center',
         }}
       >
+
         <Box
           sx={{
             position: 'absolute',
@@ -43,12 +47,11 @@ export default function LandingHero(props) {
             bottom: 0,
             right: 0,
             left: 0,
-            backgroundColor: 'rgba(0,0,0,0.7)',
+            backgroundColor: 'rgba(0,0,0,' + props.opacity + ')',
           }}
         />
 
         <Container maxWidth='lg'>
-
           <Grid item md={6}>
             <Box
               sx={{
@@ -57,13 +60,14 @@ export default function LandingHero(props) {
                 pr: { md: 0 },
               }}
             >
+
               <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={4}>
                   <Grid xs={3}>
                     <Stack sx={{
                       paddingLeft: '50px'
-
                     }}>
+
                       <Button
                         component="h3"
                         variant="subtitle1"
@@ -78,40 +82,40 @@ export default function LandingHero(props) {
                       </Button>
                     </Stack>
                   </Grid>
+
                   <Grid xs={9}>
                     <Toolbar
                       component="nav"
                       variant="dense"
-                      sx={{ overflowX: 'auto',
-                      float:'right'
-                    }}
-
+                      sx={{
+                        overflowX: 'auto',
+                        float: 'right'
+                      }}
                     >
+
                       {
-                        menu.map((link) => (
+                        props.menu.map((link) => (
                           <Button
                             color="inherit"
                             noWrap
                             key={link.title}
                             variant="body2"
                             href={link.url}
-                            sx={{ p: 1, flexShrink: 0, marginRight:'20px' }}
+                            sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
                           >
                             {link.title}
                           </Button>
                         ))
                       }
+
                       <Button variant="outlined"
                         sx={{
                           float: 'right'
                         }}
-                      >Accedi</Button>
+                      >Accedi
+                      </Button>
                     </Toolbar>
-
-
-
                   </Grid>
-
                 </Grid>
               </Box>
 
@@ -145,20 +149,20 @@ export default function LandingHero(props) {
                   {props.description}
                 </Typography>
               </Stack>
+
               <Stack sx={{
                 marginTop: '70px',
                 paddingLeft: '0px',
                 marginLeft: '0px',
                 width: '160px',
                 backgroundColor: 'red'
-
               }}>
+
                 <Button
-                  component="botton"
                   variant="h6"
-                  color="red"
-                  //collegare href con buttonUrl
+                  backgroundColor="crimson"
                   paddingTop="100px"
+                  href={props.buttonUrl}
                 >
                   {props.buttonText}
                 </Button>
@@ -171,39 +175,16 @@ export default function LandingHero(props) {
   );
 }
 
-let menu = [
-  { title: 'Informatico', url: '/informatico' },
-  { title: 'Energie', url: '/energie' },
-  { title: 'Elettrico', url: '/elettrico' },
-
-]
 
 /*
-<>
-          <p>{props.siteName}</p>
-          <h1>{props.title}</h1>
-          <p>{props.description}</p>
-          <div>{props.imageUrl}</div>
-          <button>{props.buttonText}</button>
-       </>
-
-/*
-le props da far apparire sono queste
--creare l'interfaccia uguale a quella di Books
--assegnare le props seguendo il video dell'app react di pitone programmatore
--provare su index.js ad importare il componente e verificare che funzioni
-
-
-
-<LandingHero
-siteName="CFP DON BOSCO"
-title="Your Story Starts With Us."
-description="Every landing page needs a small description......."
-imageUrl="https://url.dell.immagine"
-opacity={ 0.7 }
-buttonText="WATCH VIDEO"
-buttonUrl="https://....."
-menu={ menu }
-/>
-
+  <LandingHero
+  siteName="CFP DON BOSCO"
+  title="Your Story Starts With Us."
+  description="Every landing page needs a small description......."
+  imageUrl="https://url.dell.immagine"
+  opacity={ 0.7 }
+  buttonText="WATCH VIDEO"
+  buttonUrl="https://....."
+  menu={ menu }
+  />
 */

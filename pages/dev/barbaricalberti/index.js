@@ -6,19 +6,27 @@ import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 
+let menu = [
+    { title: 'Informatico', url: '/informatico' },
+    { title: 'Energie', url: '/energie' },
+    { title: 'Elettrico', url: '/elettrico' },
+]
+
 export default function Pagina() {
     return (
         <>
             <LandingHero
-
+                opacity={0.7}
                 siteName="CFP DON BOSCO"
                 title="Your Story Starts With Us."
                 description="Every landing page needs a small description......."
+                buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
                 buttonText="guarda il video"
-                buttonUrl={'https://www.google.com/search?q=don+bosco+san+dona&rlz=1C5CHFA_enIT1043IT1043&sxsrf=AJOqlzVg-sKZ-1WAUk3CxBJN5y75sfRU6g:1678458139242&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjfsaPpx9H9AhUfZ_EDHfodBWEQ_AUoAXoECAEQAw&biw=1470&bih=840&dpr=2#imgrc=dM8yptSUkOYDGM'}
-                imageUrl={'https://www.cnosfapveneto.it/wp-content/uploads/2016/11/CFP-Don-Bosco-San-Don%C3%A0-di-Piave-1024x662.jpg'}
-                />           
+                imageUrl="https://cdn.we-wealth.com/-/media/Images/summary/college-americani-il-non-aumento-delle-tasse-e-da-record.png?rev=dec6c04ac7904e55b50eef5485cd67fb&modified=20210830131241"
+                menu={menu}
+            />
         </>
     )
 }
+
 
