@@ -1,5 +1,6 @@
 import React from 'react';
 import Features from 'dev/solighetti/Features';
+import CssBaseline from '@mui/material/CssBaseline'
 
 const features = [
   {
@@ -25,9 +26,10 @@ const features = [
 function HomePage() {
   return (
     <div>
+      <CssBaseline />
       <Features
         title="I nostri punti di forza"
-        description="This is the paragraph......."
+        description="Una scuola per tutti i gusti"
         features={features}
         cardWidth={4}
       />
