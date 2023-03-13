@@ -4,7 +4,7 @@ h1, h2, h3, h4 {
     font-family: 'Roboto Slab', serif !important;
 }
 
-html {
+html,body {
     margin: 0 !important;
     padding: 0 !important;
 }
