@@ -7,7 +7,7 @@ import Paper from '@mui/material/Paper'
 import styles from 'dev/fv/landing.module.css'
 import Toolbar from '@mui/material/Toolbar'
 
-export default function LandingHero(menu) {
+export default function LandingHero(props) {
     return (
         <Paper
             sx={{
@@ -15,7 +15,7 @@ export default function LandingHero(menu) {
                 backgroundColor: 'grey.800',
                 color: '#fff',
                 mb: 4,
-                backgroundImage: 'url(' + menu.imageUrl + ')',
+                backgroundImage: 'url(' + props.imageUrl + ')',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
@@ -43,7 +43,7 @@ export default function LandingHero(menu) {
                         }}
                     >
                         <Typography component="h2" variant="h6" color="inherit" gutterBottom>
-                            {menu.siteName}
+                            {props.siteName}
                         </Typography>
 
                     </Box>
@@ -58,12 +58,12 @@ export default function LandingHero(menu) {
                         }}
                     >
                         <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                            {menu.title}
+                            {props.title}
                         </Typography>
                         <Typography component="h5" color="inherit" paragraph>
-                            {menu.description}
+                            {props.description}
                         </Typography>
-                        <Button variant="subtitle1" href={menu.buttonUrl} className={styles.btLanding} >{menu.buttonText}</Button>
+                        <Button variant="subtitle1" href={props.buttonUrl} className={styles.btLanding} >{props.buttonText}</Button>
                     </Box>
                 </Grid>
                 <Grid item md={5}>
@@ -77,22 +77,22 @@ export default function LandingHero(menu) {
                         <Toolbar
                             component="nav"
                             variant="dense"
-                            sx={{ justifycontent: 'space-between', overfluwX: 'auto' }}
+                            sx={{ justifycontent: 'space-between', overflowX: 'auto' }}
                         >
-                            {
-                                menu.map((menu) => (
-                                    <Link
-                                        color="inherit"
-                                        noWrap
-                                        key={menu.title}
-                                        variant="body2"
-                                        href={menu.url}
-                                        sx={{ p: 1, flexShrink: 0 }}
-                                    >
-                                        {sezione.titolo}
-                                    </Link>
-                                ))
-                            }
+{
+                            props.menu.map((settore) => (
+                                <Link className={styles.link_settori}
+                                    color="inherit"
+                                    noWrap
+                                    key={settore.title}
+                                    variant="body2"
+                                    href={settore.url}
+                                    sx={{ p: 1, flexShrink: 0 }}
+                                >
+                                    {settore.title}
+                                </Link>
+                            ))
+                        }
                         </Toolbar>
                     </Box>
                 </Grid>
