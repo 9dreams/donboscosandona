@@ -1,0 +1,51 @@
+.feature {
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.grid-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-size: 16px;
+  text-align: center;
+}
+
