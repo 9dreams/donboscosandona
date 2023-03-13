@@ -10,12 +10,15 @@ import Team from '/dev/urban-cesaro/Team'
 import { getDatiArticoli } from '/lib/articoli'
 
 
+
 let members = [
   {
     name: "Filippo Urban",
     role: "è bravo a guidare su gta 5",
     description: "sono bello ",
     imageUrl: "https://www.focusjunior.it/content/uploads/2019/06/St3pNy-.jpeg",
+    googleUrl:"",
+    twitterUrl:"https://twitter.com/St3pNy",
   },
   {
     name: " Zaccaria Cesaro ",
@@ -24,7 +27,8 @@ let members = [
     imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
   },
   {
-    name: "eros ",
+    
+    name: "Eros Simoncin ",
     role: "molto forte su soft air(non è vero)",
     description: " non è fortissimo  ",
     imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",

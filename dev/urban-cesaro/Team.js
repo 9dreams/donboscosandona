@@ -12,6 +12,11 @@ import Box from '@mui/material/Box'
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
+import Link from 'next/link'
+import Image from 'next/image'
+
+
+
 
 
 const bull = (
@@ -35,30 +40,23 @@ export default function Team({ members, team }) {
     return (
         <Container maxWidth={maxWidth}>
             <Grid>
-                {
-                    team.map(
-                        (team) => (
-                            <Paper
-                                style={{
-                                    textAlign: 'center',
-                                }}
-                                elevation={0}
-                            >
-                                <Typography component="h2" variant="h3" color="inherit" gutterBottom>
-                                    {team.title}
-                                </Typography>
-                                <Typography component="h3" color="inherit" paragraph>
-                                    {team.description}
-                                </Typography>
-                               
-                            </Paper>
-                        )
-                    )
-                }
+                <Paper
+                    style={{
+                        textAlign: 'center',
+                    }}
+                    elevation={0}
+                >
+                    <Typography component="h2" variant="h3" color="inherit" gutterBottom>
+                        Il nostro team!
+                    </Typography>
+                    <Typography component="h3" color="inherit" paragraph>
+                        Il nostro team di professionisti!
+                    </Typography>
+                </Paper>
             </Grid>
 
             <Grid item xs={3}>
-                
+
                 <Item elevation={0} ><Card sx={{ minWidth: 275 }} elevation={0}>
                     <CardContent>
                         <Stack direction="row" spacing={20}>
@@ -66,7 +64,8 @@ export default function Team({ members, team }) {
                                 members.map(
                                     (member) => (
                                         <center>
-                                            <Avatar alt="" src={member.imageUrl} sx={{ width: 150, height: 150 }}/>
+
+                                            <Avatar alt="" src={member.imageUrl} sx={{ width: 150, height: 150 }} />
                                             <Paper
                                                 style={{
                                                     textAlign: 'center',
@@ -82,9 +81,10 @@ export default function Team({ members, team }) {
                                                 <Typography variant="subtitle1" paragraph>
                                                     {member.description}
                                                 </Typography>
+                                                
                                             </Paper>
                                         </center>
-                                        
+
                                     )
                                 )
                             }
