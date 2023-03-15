@@ -2,22 +2,22 @@ import styles from "../solighetti2/Testimonials.module.css";
 
 const testimonials = [
   {
-    id: 1,
+    name: "Alec Thompson",
     image: "https://i.ibb.co/4MQnQw0/img1.jpg",
-    name: "John Doe",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+    text: "Qui c'è una belissima descrizione",
+    social: "@AlecThompson"
   },
   {
-    id: 2,
     image: "https://i.ibb.co/QPG6j9b/img2.jpg",
-    name: "Jane Doe",
-    text: "Duis aute irure dolor in reprehenderit in voluptate ",
+    name: "Gina Andrew",
+    text: "Qui c'è una belissima descrizione",
+    social: "@GinaAndrew"
   },
   {
-    id: 3,
     image: "https://i.ibb.co/dpQrpNt/img3.jpg",
-    name: "Bob Smith",
-    text: " aperiam, eaque ipsa quae ab illo.",
+    name: "George West",
+    text: "Qui c'è una belissima descrizione",
+    social: "@GeorgeWest"
   },
 ];
 
@@ -31,12 +31,17 @@ const Testimonials = () => {
       <div className={styles.testimonials}>
         {testimonials.map((testimonial) => (
           <div className={styles.card} key={testimonial.id}>
+            <div className={styles.cardBody}>
+              <p>{testimonial.text}</p>
+            </div>
+
             <div className={styles.cardHeader}>
               <img src={testimonial.image} alt={testimonial.name} />
+
               <h3>{testimonial.name}</h3>
             </div>
             <div className={styles.cardBody}>
-              <p>{testimonial.text}</p>
+              <p>{testimonial.social}</p>
             </div>
           </div>
         ))}
