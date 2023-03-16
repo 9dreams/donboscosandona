@@ -19,7 +19,8 @@ export default function LandingHero(props) {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                height: '90vh'
+                height: '90vh',
+                
             }}
             elevation={5}
         >
