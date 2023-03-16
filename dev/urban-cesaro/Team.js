@@ -1,32 +1,24 @@
 import * as React from 'react';
+
+import styles from './Team.module.css'
+
+import CardContent from '@mui/material/CardContent';
+import Box from '@mui/material/Box'
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import Container from '@mui/material/Container'
 import maxWidth from '@mui/system'
 import Paper from '@mui/material/Paper'
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box'
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
 import Link from 'next/link'
-import Image from 'next/image'
+
+const emails = ['username@gmail.com', 'user02@gmail.com'];
 
 
 
-
-
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -36,15 +28,28 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-export default function Team({ members, team }) {
+export default function Team({ members }) {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick = (event) => {
+        setAnchorEl(anchorEl ? null : event.currentTarget);
+    };
+
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popper' : undefined;
     return (
         <Container maxWidth={maxWidth}>
+
+
             <Grid>
                 <Paper
                     style={{
                         textAlign: 'center',
+
                     }}
                     elevation={0}
+
+
                 >
                     <Typography component="h2" variant="h3" color="inherit" gutterBottom>
                         Il nostro team!
@@ -54,46 +59,71 @@ export default function Team({ members, team }) {
                     </Typography>
                 </Paper>
             </Grid>
+            <Grid container>
 
-            <Grid item xs={3}>
+                {
 
-                <Item elevation={0} ><Card sx={{ minWidth: 275 }} elevation={0}>
-                    <CardContent>
-                        <Stack direction="row" spacing={20}>
-                            {
-                                members.map(
-                                    (member) => (
-                                        <center>
+                    members.map(
+                        (member) => (
+                            <Grid item xs={3}>
+                                <center>
+                                    <Avatar style={{ marginTop: '40%' }} alt="" src={member.imageUrl} sx={{ width: 150, height: 150 }} component={Paper} elevation={10} />
+                                    <Paper
+                                        style={{
+                                            textAlign: 'center',
+                                        }}
+                                        elevation={0}
+                                    >
+                                        <Typography component="h3" variant="h5" color="inherit" gutterBottom>
+                                            {member.name}
+                                        </Typography>
+                                        <Typography variant="subtitle1">
+                                            {member.role}
+                                        </Typography>
+                                        <Typography variant="subtitle1" color="text.secondary">
+                                            {member.description}
+                                        </Typography>
+                                        <Grid
+                                            container
+                                            direction="row"
+                                            justifyContent="space-evenly"
+                                            alignItems="center"
 
-                                            <Avatar alt="" src={member.imageUrl} sx={{ width: 150, height: 150 }} />
-                                            <Paper
-                                                style={{
-                                                    textAlign: 'center',
-                                                }}
-                                                elevation={0}
-                                            >
-                                                <Typography component="h3" variant="h5" color="inherit" gutterBottom>
-                                                    {member.name}
-                                                </Typography>
-                                                <Typography variant="subtitle1" color="text.secondary">
-                                                    {member.role}
-                                                </Typography>
-                                                <Typography variant="subtitle1" paragraph>
-                                                    {member.description}
-                                                </Typography>
-                                                
-                                            </Paper>
-                                        </center>
+                                        >
+                                            <Link href={member.twitterUrl} >
+                                                <center>
+                                                    <img
+                                                        src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"
+                                                        width="30"
+                                                    />
+                                                </center>
+                                            </Link>
+                                            <Link href={member.googleUrl}>
+                                                <center>
+                                                    <img
+                                                        src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515395_10840.jpg"
+                                                        width="30"
+                                                    />
+                                                </center>
+                                            </Link>
+                                            <Link href={member.linkedinUrl}>
+                                                <center>
+                                                    <img
+                                                        src="https://goldfollower.com/en/wp-content/uploads/2020/01/linkedin.png"
+                                                        width="30"
+                                                    />
+                                                </center>
+                                            </Link>
+                                        </Grid>
+                                    </Paper>
+                                </center>
+                            </Grid>
 
-                                    )
-                                )
-                            }
-                        </Stack>
-                    </CardContent>
-                </Card></Item>
+                        )
+                    )
+
+                }
             </Grid>
-
-
         </Container>
     )
 }
