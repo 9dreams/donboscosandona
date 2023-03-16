@@ -17,16 +17,16 @@ import Footer from '/dev/gerryscotti/Footer'
 import { TheFooter } from 'dev/gerryscotti/Footer'
 
 let socials = [
-  { title: 'Facebook', imageUrl: 'https...', url: '...' },
-  { title: 'Instagram', imageUrl: 'https...', url: '...' },
-  { title: 'Youtube', imageUrl: 'https...', url: '...' },
-  { title: 'Linkedin', imageUrl: 'https...', url: '...' },
+  { title: 'Facebook', imageUrl: 'https://www.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png', url: 'https://www.facebook.com/donboscosandona/?fref=ts' },
+  { title: 'Instagram', imageUrl: 'https://www.donboscosandona.it/img/ck/5c1c2a74750c62b3349df0d555ea9a26d1c6e8af.png', url: 'https://www.instagram.com/donboscosandona/' },
+  { title: 'Youtube', imageUrl: 'https://www.donboscosandona.it/img/ck/36189d32ee9d4be0a612c292a430106948c85bfc.png', url: 'https://www.youtube.com/channel/UCZ2sxe9w7Yf9lP4nl65oAvg' },
+  { title: 'Linkedin', imageUrl: 'https://www.donboscosandona.it/img/ck/55ed185e94be2aa2a1d854487273a4d139e5475f.png', url: 'https://www.linkedin.com/company/c-f-p-don-bosco/' },
 ]
 
 let images = [
-  { title: 'Informatico', imageUrl: 'https...', url: '...' },
-  { title: 'Informatico', imageUrl: 'https...', url: '...' },
-  { title: 'Informatico', imageUrl: 'https...', url: '...' },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
 ]
 
 let menu = [
@@ -40,7 +40,7 @@ export default function Pagina({ TheFooter }) {
   return (
     <Footer
       imageUrl="https://immagine di sfondo"
-      color="#777"
+      color="#272727"
       opacitycolor="1"
       opacity={1}
       title1="About Us"
