@@ -13,7 +13,10 @@
 }
 
 .link_settori{
-    padding-right: 90px ;
+    padding-right: 80px ;
     color: white;
     text-decoration: none;
+    overflow-wrap: break-word;
+    inline-size: min-content;
 }
+
