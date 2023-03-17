@@ -13,6 +13,8 @@ import { images } from '@/next.config'
 export default function TheFooter(props) {
     return (
         <Container maxWidth={true}>
+           
+            
 
             <Box
                 sx={{
@@ -34,6 +36,7 @@ export default function TheFooter(props) {
                                 position: 'relative',
                                 p: { xs: 0, md: 6 },
                                 pr: { md: 0 },
+                                left: 300,
                             }}
                         >
 
@@ -47,9 +50,10 @@ export default function TheFooter(props) {
 
                             <Box
                                 sx={{
-                                    position: 'assolute',
+                                    position: 'relative',
                                     p: { xs: 0, md: 0 },
                                     pr: { md: 0 },
+                                    left: 250,
                                 }}
                             >
 
@@ -58,12 +62,13 @@ export default function TheFooter(props) {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={3}>
+                    <Grid item xs={2}>
                         <Box
                             sx={{
                                 position: 'relative',
                                 p: { xs: 0, md: 6 },
                                 pr: { md: 0 },
+                                left: 400,
                             }}
                         >
                             <Typography component="h1" color="White">
@@ -103,9 +108,10 @@ export default function TheFooter(props) {
 
                             <Box
                                 sx={{
-                                    position: 'assolute',
+                                    position: 'relative',
                                     p: { xs: 0, md: 0 },
                                     pr: { md: 0 },
+                                    left: 350,
                                 }}
                             >
 
@@ -120,44 +126,122 @@ export default function TheFooter(props) {
                                 position: 'relative',
                                 p: { xs: 0, md: 6 },
                                 pr: { md: 0 },
+                                left: 300,
+                            }}
+                        >
+                            <Typography component="h1" color="White">
+                                {props.title3}
+
+                            </Typography>
+                            <Grid container spacing={2} minHeight={160}>
+
+
+                                {
+                                    props.images.map((image) => (
+
+
+                                        <Grid item xs={4} display="flex" justifyContent="center" alignItems="center">
+                                            <Link
+                                                color="inherit"
+                                                noWrap
+
+
+                                                variant="body2"
+
+                                                sx={{ p: 1, flexShrink: 3, }}
+                                            >
+                                                <img src={image.imageUrl} width="150" />
+
+
+
+                                            </Link>
+                                        </Grid>
+
+
+                                    ))
+                                }
+                            </Grid>
+
+
+
+
+
+
+                        </Box>
+
+
+                    </Grid>
+
+                </Grid>
+
+          
+                <Typography >
+
+                    <hr>
+                    </hr>
+                </Typography>
+                
+
+               
+
+                <Grid container spacing={2} minHeight={160}>
+
+                {
+                                    props.menu.map((menu) => (
+
+
+                                        <Grid item xs={1} display="flex" justifyContent="right" alignItems="left"  >
+                                            <Link
+                                                color="inherit"
+                                                noWrap
+
+
+                                                variant="body2"
+
+                                                sx={{ p: 0, flexShrink: 0, }}
+                                            >
+                                                
+                                                <Typography component="h3" color="White" position="right">
+                                                    {menu.title}
+                                                    
+
+                                                </Typography>
+
+                                               
+                                                
+                                                
+                                               
+
+
+
+                                            </Link>
+                                        </Grid>
+
+
+                                    ))
+                                }
+                                 <Grid item xs={0}>
+                        <Box
+                            sx={{
+                                position: 'relative',
+                                p: { xs: 0, md: 0 },
+                                pr: { md: 0 },
+                                left: 800,
                             }}
                         >
 
                             <Typography component="h1" color="White" >
-                                {props.title3}
-                                {
-                                    props.images.map((image) => (
-                                        <Grid container spacing={2} minHeight={160}>
-
-                                            <Grid xs display="flex" justifyContent="center" alignItems="center">
-                                                <Link
-                                                    color="inherit"
-                                                    noWrap
-
-
-                                                    variant="body2"
-
-                                                    sx={{ p: 1, flexShrink: 0, }}
-                                                >
-                                                    <img src={image.imageUrl} width="200" />
-
-
-
-                                                </Link>
-                                            </Grid>
-                                        </Grid>
-
-                                    ))
-                                }
+                                {props.copyright}
                             </Typography>
-
+                           
 
 
                             <Box
                                 sx={{
-                                    position: 'assolute',
+                                    position: 'relative',
                                     p: { xs: 0, md: 0 },
                                     pr: { md: 0 },
+                                    
                                 }}
                             >
 
@@ -165,8 +249,16 @@ export default function TheFooter(props) {
 
                         </Box>
                     </Grid>
-                </Grid>
+                                </Grid>
+                               
+                   
+                            
+
+
             </Box>
+            
+            
+
 
         </Container>
     )
