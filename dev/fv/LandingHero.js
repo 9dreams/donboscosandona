@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Link from 'next/link'
 import Paper from '@mui/material/Paper'
-import styles from 'dev/fv/landing.module.css'
+import styles from 'dev/fv/LandingHero.module.css'
 import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
 
@@ -29,7 +29,7 @@ export default function LandingHero(props) {
                     padding: 0,
                     margin: 0,
                     backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover', 
+                    backgroundSize: 'cover',
                     backgroundPosition: 'center',
 
                 }}
@@ -82,20 +82,24 @@ export default function LandingHero(props) {
                                     overflowWrap: 'break-word',
                                 }}
                             >
-                                {
-                                    props.menu.map((settore) => (
-                                        <Link className={styles.link_settori}
-                                            color="inherit"
-                                            noWrap
-                                            key={settore.title}
-                                            variant="body2"
-                                            href={settore.url}
-                                            sx={{ p: 1, flexShrink: 0 }}
-                                        >
-                                            {settore.title}
-                                        </Link>
-                                    ))
-                                }
+                                <Grid container>
+                                    {
+                                        props.menu.map((settore) => (
+                                            <Grid item>
+                                                <Link className={styles.link_settori}
+                                                    color="inherit"
+                                                    noWrap
+                                                    key={settore.title}
+                                                    variant="body2"
+                                                    href={settore.url}
+                                                    sx={{ p: 1, flexShrink: 0,}}
+                                                >
+                                                    {settore.title}
+                                                </Link>
+                                            </Grid>
+                                        ))
+                                    }
+                                </Grid>
                             </Toolbar>
                         </Box>
                     </Grid>
@@ -108,7 +112,7 @@ export default function LandingHero(props) {
                                 position: 'relative',
                                 p: { xs: 3, md: 6 },
                                 pr: { md: 0 },
-                                top: 130,
+                                top: {md: 130, xs: 100},
                             }}
                         >
                             <Typography component="h1" variant="h3" color="inherit" gutterBottom>
