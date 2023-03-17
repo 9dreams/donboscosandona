@@ -13,10 +13,14 @@
 }
 
 .link_settori{
-    padding-right: 80px ;
+    padding-right: 60px ;
     color: white;
     text-decoration: none;
-    overflow-wrap: break-word;
-    inline-size: min-content;
 }
 
+.link_settori:hover{
+    color:brown;
+}
+
+@media screen and (max-width: 768px) { .link_settori { font-size: 20px; } }
+@media screen and (min-width: 1024px) { .link_settori { font-size: 17px; } }
