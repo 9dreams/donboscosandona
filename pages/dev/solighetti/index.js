@@ -28,19 +28,19 @@ const testimonials = [
   {
     name: "Gigi Thompson",
     image: "https://i.ibb.co/4MQnQw0/img1.jpg",
-    text: "Qui c'è una belissima descrizione",
+    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
     social: "@GIGITHOMPSON"
   },
   {
     image: "https://i.ibb.co/QPG6j9b/img2.jpg",
     name: "Gina Andrew",
-    text: "Qui c'è una belissima descrizione",
+    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
     social: "@GINAANDREW"
   },
   {
     image: "https://i.ibb.co/dpQrpNt/img3.jpg",
     name: "Pino West",
-    text: "Qui c'è una belissima descrizione",
+    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
     social: "@PINOWEST"
   },
 ]
@@ -49,7 +49,7 @@ function HomePage() {
   return (
     <div>
       <CssBaseline />
-      
+
       <Features
         title="I nostri punti di forza"
         description="Una scuola per tutti i gusti"
