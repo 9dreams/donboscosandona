@@ -1,0 +1,26 @@
+.btLanding{
+    color: rgb(4, 185, 176);
+    border: rgb(23, 4, 162) solid 3.5px;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.btLanding:hover{
+    background-color: rgba(0,0,0,0.7);
+    border: rgb(23, 4, 162,0.7) solid 3.5px;
+}
+
+.link_settori{
+    padding-right: 60px ;
+    color: white;
+    text-decoration: none;
+}
+
+.link_settori:hover{
+    color:brown;
+}
+
+@media screen and (max-width: 768px) { .link_settori { font-size: 20px; } }
+@media screen and (min-width: 1024px) { .link_settori { font-size: 17px; } }

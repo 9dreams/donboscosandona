@@ -3,7 +3,7 @@ import Container from '@mui/material/Container'
 export default function Settori() {
     return (
         <Container maxWidth="lg">
-            <h2>Settori</h2>
+            <h2>Settori (Products)</h2>
         </Container>
     )
 }
