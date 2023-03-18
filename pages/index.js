@@ -233,9 +233,9 @@ export default function Home({ datiArticoli }) {
         features={features}
         cardWidth={3}
       />
-      <Testimonials testimonials={testimonials} />
+      <Testimonials testimonials={testimonials} cardWidth={4} />
       <Team
-        title="Il nostro Team"
+        title="Contatti"
         description="Formatori che ti aiutano a crescere con il cuore di don Bosco"
         members={members}
         cardWidth={3}

@@ -1,9 +1,6 @@
 import * as React from 'react';
 
-import styles from './Team.module.css'
-
 import Avatar from '@mui/material/Avatar';
-import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
@@ -14,27 +11,14 @@ import Link from 'next/link'
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 
 export default function Team({ members, cardWidth, title, description }) {
-    const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handleClick = (event) => {
-        setAnchorEl(anchorEl ? null : event.currentTarget);
-    };
-
-    const open = Boolean(anchorEl);
-    const id = open ? 'simple-popper' : undefined;
     return (
         <Container maxWidth={maxWidth} sx={{ marginTop: '3rem', marginBottom: '5rem' }}>
-
-
             <Grid>
                 <Paper
                     style={{
                         textAlign: 'center',
-
                     }}
                     elevation={0}
-
-
                 >
                     <Typography component="h2" variant="h3" color="inherit" gutterBottom>
                         {title}
@@ -45,12 +29,10 @@ export default function Team({ members, cardWidth, title, description }) {
                 </Paper>
             </Grid>
             <Grid container>
-
                 {
-
                     members.map(
                         (member) => (
-                            <Grid item xs={cardWidth}>
+                            <Grid item xs={12} lg={cardWidth}>
                                 <center>
                                     <Avatar style={{ marginTop: '3rem' }} alt="" src={member.imageUrl} sx={{ width: '7rem', height: '7rem' }} component={Paper} elevation={10} />
                                     <Paper
@@ -76,8 +58,6 @@ export default function Team({ members, cardWidth, title, description }) {
                                             direction="row"
                                             justifyContent="space-evenly"
                                             alignItems="center"
-
-
                                         >
                                             {member.twitterUrl ? (
                                                 <Link href={member.twitterUrl} style={{ marginTop: '10%' }}>
@@ -113,10 +93,8 @@ export default function Team({ members, cardWidth, title, description }) {
                                     </Paper>
                                 </center>
                             </Grid>
-
                         )
                     )
-
                 }
             </Grid>
         </Container>

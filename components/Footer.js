@@ -3,6 +3,8 @@ import Grid from '@mui/material/Grid'
 import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
+import Toolbar from '@mui/material/Toolbar'
+import Button from '@mui/material/Button'
 
 export default function Footer(props) {
     return (
@@ -20,58 +22,27 @@ export default function Footer(props) {
                     backgroundColor: props.color,
                 }}
             >
-                <Grid container>
-                    <Grid item xs={3}>
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                p: { xs: 0, md: 6 },
-                                pr: { md: 0 },
-                                left: 300,
-                            }}
-                        >
-
-                            <Typography component="h1" color="White" >
+                <Container maxWidth="lg">
+                    <Grid container spacing={3}>
+                        { /* Chi siamo */}
+                        <Grid item xs={12} lg={4}>
+                            <Typography component="h1" color="White" paddingBottom="2rem">
                                 {props.title1}
                             </Typography>
                             <Typography component="h5" color="darkgrey" paragraph>
                                 {props.description1}
                             </Typography>
+                        </Grid>
 
-
-                            <Box
-                                sx={{
-                                    position: 'relative',
-                                    p: { xs: 0, md: 0 },
-                                    pr: { md: 0 },
-                                    left: 250,
-                                }}
-                            >
-
-                            </Box>
-
-                        </Box>
-                    </Grid>
-
-                    <Grid item xs={2}>
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                p: { xs: 0, md: 6 },
-                                pr: { md: 0 },
-                                left: 400,
-                            }}
-                        >
-                            <Typography component="h1" color="White">
+                        { /* Social Feed */}
+                        <Grid item xs={12} lg={4}>
+                            <Typography component="h1" color="White" paddingBottom="2rem">
                                 {props.title2}
-
                             </Typography>
-
-
                             <Typography component="h1" color="White" >
                                 {
                                     props.socials.map((social) => (
-                                        <Grid item xs={3}>
+                                        <Container sx={{ padding: "0.5rem" }}>
                                             <Link
                                                 color="inherit"
                                                 noWrap
@@ -83,169 +54,80 @@ export default function Footer(props) {
                                             >
                                                 <img src={social.imageUrl} width="20" />
                                                 {social.title}
-
-
                                             </Link>
-                                        </Grid>
-
+                                        </Container>
                                     ))
                                 }
                             </Typography>
+                        </Grid>
 
-
-
-
-
-
-                            <Box
-                                sx={{
-                                    position: 'relative',
-                                    p: { xs: 0, md: 0 },
-                                    pr: { md: 0 },
-                                    left: 350,
-                                }}
-                            >
-
-                            </Box>
-
-                        </Box>
-                    </Grid>
-
-                    <Grid item md={3}>
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                p: { xs: 0, md: 6 },
-                                pr: { md: 0 },
-                                left: 300,
-                            }}
-                        >
-                            <Typography component="h1" color="White">
+                        { /* Immagini */}
+                        <Grid item xs={12} lg={4}>
+                            <Typography component="h1" color="White" paddingBottom="2rem">
                                 {props.title3}
-
                             </Typography>
                             <Grid container spacing={2} minHeight={160}>
-
-
                                 {
                                     props.images.map((image) => (
-
-
                                         <Grid item xs={4} display="flex" justifyContent="center" alignItems="center">
                                             <Link
                                                 color="inherit"
                                                 noWrap
-
-
                                                 variant="body2"
-
                                                 sx={{ p: 1, flexShrink: 3, }}
                                             >
-                                                <img src={image.imageUrl} width="150" />
-
-
-
+                                                <img src={image.imageUrl} width="120" />
                                             </Link>
                                         </Grid>
-
-
                                     ))
                                 }
                             </Grid>
+                        </Grid>
 
+                        { /* Linea */}
+                        <Grid item xs={12}>
+                            <Typography component="h1">
+                                <hr />
+                            </Typography>
+                        </Grid>
 
+                        { /* Menù */}
+                        <Grid item xs={12} lg={8}>
+                            <Toolbar
+                                component="nav"
+                                variant="dense"
+                                sx={{
+                                    overflowX: 'auto',
+                                    float: 'right',
+                                    color: '#fff',
+                                }}
+                            >
+                                {
+                                    props.menu.map((link) => (
+                                        <Button
+                                            color="inherit"
+                                            noWrap
+                                            key={link.title}
+                                            variant="body2"
+                                            href={link.url}
+                                            sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
+                                        >
+                                            {link.title}
+                                        </Button>
+                                    ))
+                                }
+                            </Toolbar>
+                        </Grid>
 
-
-
-
-                        </Box>
-
-
-                    </Grid>
-
-                </Grid>
-
-
-                <Typography component="h1">
-                    <hr />
-                </Typography>
-
-                <Grid container spacing={2} minHeight={160}>
-
-                    {
-                        props.menu.map((menu) => (
-
-
-                            <Grid item xs={1} display="flex" justifyContent="right" alignItems="left"  >
-                                <Link
-                                    color="inherit"
-                                    noWrap
-
-
-                                    variant="body2"
-
-                                    sx={{ p: 0, flexShrink: 0, }}
-                                >
-
-                                    <Typography component="h3" color="White" position="right">
-                                        {menu.title}
-
-
-                                    </Typography>
-
-
-
-
-
-
-
-
-                                </Link>
-                            </Grid>
-
-
-                        ))
-                    }
-                    <Grid item xs={0}>
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                p: { xs: 0, md: 0 },
-                                pr: { md: 0 },
-                                left: 800,
-                            }}
-                        >
-
+                        { /* Copyright */}
+                        <Grid item xs={12} lg={4}>
                             <Typography component="h1" color="White" >
                                 {props.copyright}
                             </Typography>
-
-
-
-                            <Box
-                                sx={{
-                                    position: 'relative',
-                                    p: { xs: 0, md: 0 },
-                                    pr: { md: 0 },
-
-                                }}
-                            >
-
-                            </Box>
-
-                        </Box>
+                        </Grid>
                     </Grid>
-                </Grid>
-
-
-
-
-
+                </Container>
             </Box>
-
-
-
-
         </Container>
     )
 }

@@ -14,13 +14,10 @@ export const siteTitle = 'CFP DON BOSCO - San Donà di Piave';
 const theme = createTheme()
 
 const sezioni = [
-    { titolo: 'Informatico', url: '/informatico' },
-    { titolo: 'Energie', url: '/energie' },
-    { titolo: 'Elettrico', url: '/elettrico' },
-    { titolo: 'Meccanico', url: '/meccanico' },
-    { titolo: 'Motoristico', url: '/motoristico' },
-    { titolo: 'Carrozzeria', url: '/carrozzeria' },
-    { titolo: 'Trasparenza', url: '/trasparenza' },
+    { title: 'Informatico', url: '/informatico' },
+    { title: 'Energie', url: '/energie' },
+    { title: 'Elettrico', url: '/elettrico' },
+    { title: 'Trasparenza', url: '/trasparenza' },
 ]
 
 let socials = [

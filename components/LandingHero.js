@@ -2,13 +2,9 @@ import * as React from 'react'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2'
-import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
-import styles from './LandingHero.module.css'
 import Button from '@mui/material/Button'
-import Avatar from '@mui/material/Avatar'
-import MenuItem from '@mui/material/MenuItem'
 import { Toolbar } from '@mui/material'
 import Stack from '@mui/material/Stack';
 
@@ -89,7 +85,6 @@ export default function LandingHero(props) {
                         float: 'right'
                       }}
                     >
-
                       {
                         props.menu.map((link) => (
                           <Button

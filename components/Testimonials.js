@@ -1,15 +1,16 @@
-import styles from "./Testimonials.module.css";
-import { Container } from '@mui/material';
+import styles from "./Testimonials.module.css"
+import { Container, Grid } from '@mui/material'
 
-const Testimonials = ({ testimonials }) => {
+const Testimonials = ({ testimonials, cardWidth }) => {
   const { name, text, image, social } = testimonials;
 
 
   return (
     <div className={styles.testimonialsContainer}>
       <Container maxWidth="lg">
-        <div className={styles.testimonials}>
+        <Grid container spacing={2} className={styles.grid}>
           {testimonials.map((testimonial, index) => (
+            <Grid item xs={12} lg={cardWidth}>
             <div className={styles.card} key={index}>
               <div className={styles.cardHeader}>
                 <img src={testimonial.image} alt={testimonial.name} />
@@ -27,11 +28,12 @@ const Testimonials = ({ testimonials }) => {
 
               </div>
             </div>
+            </Grid>
           ))}
-        </div>
+          </Grid>
       </Container>
     </div>
-  );
-};
+  )
+}
 
 export default Testimonials;
