@@ -71,6 +71,13 @@ let slides2 = slides
 // Il nostro team
 let members = [
   {
+    name: "don Nicola Munari",
+    role: "DIRETTORE / CATECHISTA",
+    description: "And I love you like Kanye",
+    description1: "loves Kanye. We need to restart the human foundation",
+    imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
+  },
+  {
     name: "Alessandro Cappelletto",
     role: "PRESIDE",
     description: "And I love you like Kanye",
@@ -93,11 +100,32 @@ let members = [
     imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
   },
   {
-    name: "don Nicola Munari",
-    role: "DIRETTORE / CATECHISTA",
+    name: "Roberta Toffoletto e Alessia Zanin",
+    role: "SEGRETERIA DIDATTICA",
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
+    imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+  },
+  {
+    name: "Andrea Pasqualetto",
+    role: "ORIENTAMENTO IN ENTRATA / SOSTEGNO",
+    description: "And I love you like Kanye",
+    description1: "loves Kanye. We need to restart the human foundation",
+    imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+  },
+  {
+    name: "Francesco Cicogna",
+    role: "COORDINATORE STAGE / CORSI PER ADULTI",
+    description: "And I love you like Kanye",
+    description1: "loves Kanye. We need to restart the human foundation",
+    imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
+  },
+  {
+    name: "Martina Dianese",
+    role: "ORIENTAMENTO IN USCITA / SERVIZI AL LAVORO",
+    description: "And I love you like Kanye",
+    description1: "loves Kanye. We need to restart the human foundation",
+    imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
   },
 ]
 

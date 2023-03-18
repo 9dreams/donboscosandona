@@ -9,7 +9,7 @@ import styles from './Layout.module.css'
 
 import Footer from '/components/Footer'
 
-export const siteTitle = 'CFP CNOS-FAP DON BOSCO - San Donà di Piave';
+export const siteTitle = 'CFP DON BOSCO - San Donà di Piave';
 
 const theme = createTheme()
 
