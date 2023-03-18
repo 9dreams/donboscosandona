@@ -218,17 +218,12 @@ export default function Home({ datiArticoli }) {
         cardWidth={3}
       />
       <Carousel slides={slides} maxWidth={false} />
-      <Team
-        members={members}
-        cardWidth={4}
-      />
       <Products
         title="I settori"
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
         products={settori}
       />
-      <PostInEvidenza post={postInEvidenza} />
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {
@@ -241,6 +236,10 @@ export default function Home({ datiArticoli }) {
         </Grid>
       </Container>
       <Testimonials testimonials={testimonials} />
+      <Team
+        members={members}
+        cardWidth={4}
+      />
       <Articoli dati={datiArticoli} />
     </Layout>
   )

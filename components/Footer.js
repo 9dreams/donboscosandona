@@ -4,27 +4,20 @@ import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 
-export default function Footer(props) {
+export default function TheFooter(props) {
     return (
-        <h1>Footer</h1>
-    )
-}
-
-function TheFooter(props) {
-    return (
-        <Container maxWidth={true}>
-
+        <Container
+            maxWidth={true}
+            disableGutters={true}
+        >
             <Box
                 sx={{
-                    position: 'absolute',
+                    position: 'relative',
                     top: 0,
                     bottom: 0,
                     right: 0,
                     left: 0,
                     backgroundColor: props.color,
-
-
-
                 }}
             >
                 <Grid container>

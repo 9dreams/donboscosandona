@@ -19,10 +19,7 @@ export default function LandingHero(props) {
       disableGutters={true}
       sx={{
         height: '100vh',
-        padding: 'ovh',
-        margin: '0vh',
       }}
-      
     >
 
       <Paper

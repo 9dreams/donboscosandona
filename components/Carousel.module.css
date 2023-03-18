@@ -6,13 +6,12 @@
     position: relative;
     height: 80vh;
     overflow: hidden;
-    padding: 100px;
+    _padding: 100px;
     padding-top: 150px;
 }
 
 .carousel .slide * {
     color: white;
-    
 }
 
 .carousel .slide .bottone {
