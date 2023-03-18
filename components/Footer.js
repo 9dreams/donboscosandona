@@ -4,7 +4,7 @@ import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 
-export default function TheFooter(props) {
+export default function Footer(props) {
     return (
         <Container
             maxWidth={true}
@@ -166,14 +166,9 @@ export default function TheFooter(props) {
                 </Grid>
 
 
-                <Typography >
-
-                    <hr>
-                    </hr>
+                <Typography component="h1">
+                    <hr />
                 </Typography>
-
-
-
 
                 <Grid container spacing={2} minHeight={160}>
 

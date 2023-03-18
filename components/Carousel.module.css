@@ -6,8 +6,7 @@
     position: relative;
     height: 80vh;
     overflow: hidden;
-    _padding: 100px;
-    padding-top: 150px;
+    padding-top: 15rem;
 }
 
 .carousel .slide * {

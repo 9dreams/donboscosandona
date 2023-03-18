@@ -47,21 +47,23 @@ const features = [
   }
 ]
 
+
+// slides per il carousel
 let slides = [
   {
-    titolo: 'Inizia la visita virtuale del nostro Centro',
-    descrizione: 'Questa slide conterrà un\'immagine dello spazio presa a caso da Unsplash',
-    immagine: 'https://source.unsplash.com/1920x1080/?space'
+    titolo: 'Fatti un bel giro',
+    descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+    immagine: '/images/news/virtual-tour.jpeg'
   },
   {
-    titolo: 'Appuntamento Grohe',
-    descrizione: 'Questa slide conterrà un colore Android Green tinta unita',
-    colore: '#A3CB38'
+    titolo: 'Progetto GIVE',
+    descrizione: "Il 15 e 16 maggio il nostro Centro ospiterà l'edizione 2023 di GIVE (GROHE Installer Vocational Training and Education), il programma di formazione dedicato ai giovani installatori idraulici: un ambiente dedicato al training pratico proposto dai professionisti di GROHE.",
+    immagine: '/images/news/2023/grohe.jpeg'
   },
   {
     titolo: 'Concorso nazionale settore elettrico',
-    descrizione: 'Questa slide conterrà un ritratto preso a caso da Unsplash',
-    immagine: 'https://source.unsplash.com/1920x1080/?portrait'
+    descrizione: "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+    immagine: '/images/news/2023/concorso-nazionale-elettrico.jpg'
   },
 ]
 
