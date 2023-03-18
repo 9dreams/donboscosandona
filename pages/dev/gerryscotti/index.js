@@ -1,20 +1,4 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
-
-import Head from 'next/head'
-import Layout from '/components/Layout'
-import Carousel from '/components/Carousel'
-import Settori from '/components/Settori'
-import Articoli from '/components/Articoli'
-import Esplora from '/components/Esplora'
-import Eventi from '/components/Eventi'
-import PostInEvidenza from '/components/PostInEvidenza'
-import Post from '/components/Post'
 import Footer from '/dev/gerryscotti/Footer'
-
-
-
-import { TheFooter } from 'dev/gerryscotti/Footer'
 
 let socials = [
   { title: 'Facebook', imageUrl: 'https://www.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png', url: 'https://www.facebook.com/donboscosandona/?fref=ts' },

@@ -4,7 +4,6 @@ import { getDatiArticoli } from '/lib/articoli'
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import Articoli from '/components/Articoli'
-import Eventi from '/components/Eventi'
 import PostInEvidenza from '/components/PostInEvidenza'
 
 let postInEvidenza = {
@@ -38,7 +37,6 @@ export default function Home({ datiArticoli }) {
                 buttonUrl="https://cinema.donboscosandona.it"
                 menu={settori} 
             />
-            <Eventi />
             <Articoli dati={datiArticoli} />
         </Layout>
     )
