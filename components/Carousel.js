@@ -13,7 +13,7 @@ export default function MyCarousel({ slides, maxWidth }) {
             maxWidth={maxWidth}
             disableGutters={true}
             sx={{
-                minHeight: '80vh',
+                minHeight: '90vh',
                 border: '300px',
                 marginBottom: '2rem',
             }}

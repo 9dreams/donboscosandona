@@ -102,26 +102,28 @@ export default function Footer(props) {
                                     color: '#fff',
                                 }}
                             >
-                                {
-                                    props.menu.map((link) => (
-                                        <Button
-                                            color="inherit"
-                                            noWrap
-                                            key={link.title}
-                                            variant="body2"
-                                            href={link.url}
-                                            sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
-                                        >
-                                            {link.title}
-                                        </Button>
-                                    ))
-                                }
+                                <Grid container sx={{ marginBottom: '10px', pb: '10px'}}>
+                                    {
+                                        props.menu.map((link) => (
+                                            <Button
+                                                color="inherit"
+                                                noWrap
+                                                key={link.title}
+                                                variant="body2"
+                                                href={link.url}
+                                                sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
+                                            >
+                                                {link.title}
+                                            </Button>
+                                        ))
+                                    }
+                                </Grid>
                             </Toolbar>
                         </Grid>
 
                         { /* Copyright */}
                         <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" >
+                            <Typography component="h1" color="White" sx={{marginLeft: '27px', marginBottom: '15px'}}>
                                 {props.copyright}
                             </Typography>
                         </Grid>
