@@ -3,9 +3,7 @@ import { getDatiArticoli } from '/lib/articoli'
 
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import Settori from '/components/Settori'
 import Articoli from '/components/Articoli'
-import Esplora from '/components/Esplora'
 import Eventi from '/components/Eventi'
 import PostInEvidenza from '/components/PostInEvidenza'
 
@@ -40,8 +38,6 @@ export default function Home({ datiArticoli }) {
                 buttonUrl="https://cinema.donboscosandona.it"
                 menu={settori} 
             />
-            <Settori />
-            <Esplora />
             <Eventi />
             <Articoli dati={datiArticoli} />
         </Layout>
