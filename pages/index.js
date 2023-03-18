@@ -6,7 +6,6 @@ import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
 import Features from '/components/Features'
 import Carousel from '/components/Carousel'
-import Articoli from '/components/Articoli'
 import PostInEvidenza from '/components/PostInEvidenza'
 import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
@@ -66,6 +65,8 @@ let slides = [
     immagine: '/images/news/2023/concorso-nazionale-elettrico.jpg'
   },
 ]
+
+let slides2 = slides
 
 // Il nostro team
 let members = [
@@ -141,23 +142,6 @@ let postInEvidenza = {
   testoLink: 'Continua a leggere e scopri la cosa pazzesca che hanno fatto...',
 }
 
-let posts = [
-  {
-    titolo: 'Le notti di Manuel',
-    data: '6 marzo 2023',
-    testo: 'Andiamo insieme a scoprire le follie del nostro Manuel...',
-    immagine: 'https://source.unsplash.com/random',
-    url: 'https://cinema.donboscosandona.it'
-  },
-  {
-    titolo: 'Le notti di Martino',
-    data: '5 marzo 2023',
-    testo: 'Andiamo insieme a scoprire le follie del nostro Martino...',
-    immagine: 'https://source.unsplash.com/random',
-    url: 'https://cinema.donboscosandona.it'
-  },
-]
-
 const testimonials = [
   {
     name: "Gigi Thompson",
@@ -196,23 +180,10 @@ export default function Home({ datiArticoli }) {
         imageUrl="/images/home/matteo_attacco_hacker.jpg"
         menu={menu}
       />
-      <Features
-        title="I nostri punti di forza"
-        description="Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!"
-        features={features}
-        cardWidth={3}
-      />
-      <Carousel slides={slides} maxWidth={false} />
-      <Products
-        title="I settori"
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
-        cardWidth={4}
-        products={settori}
-      />
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem'  }}>
         <Grid container spacing={4}>
           {
-            posts.map(
+            datiArticoli.map(
               (post) => (
                 <Post post={post} />
               )
@@ -220,6 +191,20 @@ export default function Home({ datiArticoli }) {
           }
         </Grid>
       </Container>
+      <Carousel slides={slides} maxWidth={false} />
+      <Products
+        title="I settori"
+        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
+        cardWidth={4}
+        products={settori}
+      />
+      <Carousel slides={slides2} maxWidth={false} />
+      <Features
+        title="I nostri punti di forza"
+        description="Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!"
+        features={features}
+        cardWidth={3}
+      />
       <Testimonials testimonials={testimonials} />
       <Team
         title="Il nostro Team"
@@ -227,7 +212,6 @@ export default function Home({ datiArticoli }) {
         members={members}
         cardWidth={3}
       />
-      <Articoli dati={datiArticoli} />
     </Layout>
   )
 }

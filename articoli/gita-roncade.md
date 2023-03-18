@@ -1,6 +1,8 @@
 ---
 title: 'Gita a Roncade'
 date: '2022-11-15'
+abstract: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione."
+imageUrl: 'https://villevenetetour.it/docs/gallery/5/frontale%20ingresso.jpg.ashx?w=690&h=410&mode=crop&scale=both'
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.

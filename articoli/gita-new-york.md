@@ -1,8 +1,8 @@
 ---
-title: 'Gita a Parma'
-date: '2022-10-15'
+title: 'Gita a New York'
+date: '2023-03-15'
 abstract: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione."
-imageUrl: 'https://static2-viaggi.corriereobjects.it/wp-content/uploads/2020/05/iStock-531977562-1080x584.jpg?v=384931'
+imageUrl: 'https://siviaggia.it/wp-content/uploads/sites/2/2021/02/grattacieli-new-york.jpg'
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
