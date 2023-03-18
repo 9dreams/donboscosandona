@@ -13,7 +13,7 @@ import Link from 'next/link'
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 
-export default function Team({ members }) {
+export default function Team({ members, cardWidth, title, description }) {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -23,7 +23,7 @@ export default function Team({ members }) {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popper' : undefined;
     return (
-        <Container maxWidth={maxWidth}>
+        <Container maxWidth={maxWidth} sx={{ marginTop: '3rem', marginBottom: '5rem' }}>
 
 
             <Grid>
@@ -36,11 +36,11 @@ export default function Team({ members }) {
 
 
                 >
-                    <Typography style={{ marginTop: '5%' }}component="h2" variant="h3" color="inherit" gutterBottom>
-                        Il nostro Team
+                    <Typography component="h2" variant="h3" color="inherit" gutterBottom>
+                        {title}
                     </Typography>
                     <Typography component="h3" color="inherit" paragraph>
-                        Formatori che ti aiutano a crescere con il cuore di don Bosco
+                        {description}
                     </Typography>
                 </Paper>
             </Grid>
@@ -50,9 +50,9 @@ export default function Team({ members }) {
 
                     members.map(
                         (member) => (
-                            <Grid item xs={3}>
+                            <Grid item xs={cardWidth}>
                                 <center>
-                                    <Avatar style={{ marginTop: '40%' }} alt="" src={member.imageUrl} sx={{ width: 150, height: 150 }} component={Paper} elevation={10} />
+                                    <Avatar style={{ marginTop: '3rem' }} alt="" src={member.imageUrl} sx={{ width: '7rem', height: '7rem' }} component={Paper} elevation={10} />
                                     <Paper
                                         style={{
                                             textAlign: 'center',
@@ -62,7 +62,7 @@ export default function Team({ members }) {
                                         <Typography style={{ marginTop: '5%' }} component="h3" variant="h5" color="inherit" gutterBottom paragraph>
                                             {member.name}
                                         </Typography>
-                                        <Typography  variant="subtitle1" paragraph>
+                                        <Typography variant="subtitle1" paragraph>
                                             {member.role}
                                         </Typography>
                                         <Typography variant="subtitle1" color="text.secondary">
@@ -76,33 +76,39 @@ export default function Team({ members }) {
                                             direction="row"
                                             justifyContent="space-evenly"
                                             alignItems="center"
-                                        
+
 
                                         >
-                                            <Link href={member.twitterUrl}  style={{ marginTop: '10%' }}>
-                                                <center>
-                                                    <img
-                                                        src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"
-                                                        width="38"
-                                                    />
-                                                </center>
-                                            </Link>
-                                            <Link href={member.googleUrl}style={{ marginTop: '10%' }}>
-                                                <center>
-                                                    <img
-                                                        src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515395_10840.jpg"
-                                                        width="35"
-                                                    />
-                                                </center>
-                                            </Link>
-                                            <Link href={member.linkedinUrl}style={{ marginTop: '10%' }}>
-                                                <center>
-                                                    <img
-                                                        src="https://goldfollower.com/en/wp-content/uploads/2020/01/linkedin.png"
-                                                        width="35"
-                                                    />
-                                                </center>
-                                            </Link>
+                                            {member.twitterUrl ? (
+                                                <Link href={member.twitterUrl} style={{ marginTop: '10%' }}>
+                                                    <center>
+                                                        <img
+                                                            src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"
+                                                            width="38"
+                                                        />
+                                                    </center>
+                                                </Link>) : ''
+                                            }
+                                            {member.googleUrl ? (
+                                                <Link href={member.googleUrl} style={{ marginTop: '10%' }}>
+                                                    <center>
+                                                        <img
+                                                            src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515395_10840.jpg"
+                                                            width="35"
+                                                        />
+                                                    </center>
+                                                </Link>) : ''
+                                            }
+                                            {member.linkedinUrl ? (
+                                                <Link href={member.linkedinUrl} style={{ marginTop: '10%' }}>
+                                                    <center>
+                                                        <img
+                                                            src="https://goldfollower.com/en/wp-content/uploads/2020/01/linkedin.png"
+                                                            width="35"
+                                                        />
+                                                    </center>
+                                                </Link>) : ''
+                                            }
                                         </Grid>
                                     </Paper>
                                 </center>

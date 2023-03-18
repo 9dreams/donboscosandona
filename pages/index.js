@@ -75,19 +75,14 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
-    googleUrl: "f.urban@donboscosandona.it",
-    linkedinUrl: "https://it.linkedin.com/",
-    twitterUrl: "https://twitter.com/St3pNy",
   },
   {
     name: "Alessandro Ferro",
     role: "VICE-PRESIDE / TUTOR DIGITALE",
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://www.focusjunior.it/content/uploads/2019/06/St3pNy-.jpeg",
-    googleUrl: "https://www.google.it/",
-    linkedinUrl: "https://it.linkedin.com/",
-    twitterUrl: "https://twitter.com/St3pNy",
+    imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
+    linkedinUrl: "https://it.linkedin.com/in/alessandro-ferro-128aab103",
   },
   {
     name: "Anna Maria D'Ambrosio",
@@ -95,9 +90,6 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
-    googleUrl: "https://www.google.it/",
-    linkedinUrl: "https://it.linkedin.com/",
-    twitterUrl: "https://twitter.com/St3pNy",
   },
   {
     name: "don Nicola Munari",
@@ -105,48 +97,39 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
-    googleUrl: "https://www.google.it/",
-    linkedinUrl: "https://it.linkedin.com/",
-    twitterUrl: "https://twitter.com/St3pNy",
   },
 ]
 
 let settori = [
   {
     title: "Elettrico",
-    category: "Qualifica di Operatore Elettrico",
-    description: "L’operatore elettrico installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.",
-    immagine: "https://thumbs.dreamstime.com/b/programmatore-di-sviluppo-professionista-che-lavora-nel-sito-web-programmazione-un-software-e-codifica-tecnologia-scrivendo-i-134227099.jpg"
+    category: "QUALIFICA DI OPERATORE ELETTRICO",
+    description: "Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.",
+    immagine: "https://www.donboscosandona.it/img/column/42480c58c90ada8ff75c443fdde83ae71fea75ac.jpg?1539529685"
   },
   {
-    title: "Energie",
-    category: "FREMIUM TEMPLATE",
-    description: "L’operatore energetico interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-    immagine: "https://thumbs.dreamstime.com/b/programmatore-femminile-sorridente-di-bellezza-che-per-mezzo-del-computer-103397705.jpg"
+    title: "Energia",
+    category: "QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI",
+    description: "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+    immagine: "https://www.donboscosandona.it/img/column/417afaa0f0697f0f0aabf9ccf61030769cb76f14.jpg?1539529180"
   },
   {
     title: "Informatico",
-    category: "PREMIUM TEMPLATE",
-    description: "L’operatore informatico installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di soluzioni software.",
-    immagine: "https://thumbs.dreamstime.com/b/analista-di-codifica-138364750.jpg"
+    category: "DIPLOMA DI TECNICO INFORMATICO",
+    description: "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+    immagine: "https://www.donboscosandona.it/img/column/97f264e9d16a0856dd2cb973630af1cac4426f73.jpg?1539529314"
   },
   {
     title: "Meccanico",
-    category: "Qualifica di Operatore Elettrico",
-    description: "L’operatore elettrico installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.",
-    immagine: "https://thumbs.dreamstime.com/b/programmatore-di-sviluppo-professionista-che-lavora-nel-sito-web-programmazione-un-software-e-codifica-tecnologia-scrivendo-i-134227099.jpg"
+    category: "DIPLOMA DI TECNICO PER LA CONDUZIONE E LA MANUTENZIONE DI IMPIANTI AUTOMATIZZATI",
+    description: "Realizza lavorazioni al tornio, fresatrice e macchine utensili in generale. Partendo dal progetto realizzato con il CAD effettua la programmazione delle macchine a controllo numerico. Realizza saldature ad arco, TIG, MAG, taglio al plasma.",
+    immagine: "https://www.donboscosandona.it/img/column/b0bd034769ac3471bf375239f1e64e39f5684aa6.jpg?1539523300"
   },
   {
-    title: "Motoristico",
-    category: "FREMIUM TEMPLATE",
-    description: "L’operatore energetico interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-    immagine: "https://thumbs.dreamstime.com/b/programmatore-femminile-sorridente-di-bellezza-che-per-mezzo-del-computer-103397705.jpg"
-  },
-  {
-    title: "Carrozzeria",
-    category: "PREMIUM TEMPLATE",
-    description: "L’operatore informatico installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di soluzioni software.",
-    immagine: "https://thumbs.dreamstime.com/b/analista-di-codifica-138364750.jpg"
+    title: "Motoristico / Carrozzeria",
+    category: "QUALIFICA DI OPERATORE ALLA RIPARAZIONE DI VEICOLI A MOTORE",
+    description: "Effettua riparazioni e manutenzione dei motori e dell'autoveicolo in tutte le sue parti. Effettua diagnosi e prove sui gas di scarico intervenendo per risolvere le anomalie.",
+    immagine: "https://www.donboscosandona.it/img/column/342f349c6bb5bbf9a37b95353df2bee2309b9792.jpg?1539524741"
   },
 ]
 
@@ -239,8 +222,10 @@ export default function Home({ datiArticoli }) {
       </Container>
       <Testimonials testimonials={testimonials} />
       <Team
+        title="Il nostro Team"
+        description="Formatori che ti aiutano a crescere con il cuore di don Bosco"
         members={members}
-        cardWidth={4}
+        cardWidth={3}
       />
       <Articoli dati={datiArticoli} />
     </Layout>

@@ -8,7 +8,7 @@ import { padding, textAlign } from '@mui/system'
 export default function Products({ title, description, cardWidth, products }) {
     return (
         <Container maxWidth="lg"> 
-               <Typography text-align='center' style={{ textAlign: 'center'  }} component="h3" variant="h4" color="inherit" gutterBottom>
+               <Typography text-align='center' style={{ textAlign: 'center'  }} component="h3" variant="h3" color="inherit" gutterBottom>
                             {title}
               </Typography> 
               <Typography variant="subtitle1" style={{ textAlign: 'center', padding: '10px'  }}  text-align='center' color="text.secondary"paragraph>
