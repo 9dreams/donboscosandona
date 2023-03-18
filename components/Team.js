@@ -37,10 +37,10 @@ export default function Team({ members }) {
 
                 >
                     <Typography style={{ marginTop: '5%' }}component="h2" variant="h3" color="inherit" gutterBottom>
-                        Il nostro team!
+                        Il nostro Team
                     </Typography>
                     <Typography component="h3" color="inherit" paragraph>
-                        Il nostro team di professionisti!
+                        Formatori che ti aiutano a crescere con il cuore di don Bosco
                     </Typography>
                 </Paper>
             </Grid>

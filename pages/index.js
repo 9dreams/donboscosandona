@@ -6,10 +6,7 @@ import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
 import Features from '/components/Features'
 import Carousel from '/components/Carousel'
-import Settori from '/components/Settori'
 import Articoli from '/components/Articoli'
-import Esplora from '/components/Esplora'
-import Eventi from '/components/Eventi'
 import PostInEvidenza from '/components/PostInEvidenza'
 import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
@@ -17,6 +14,139 @@ import Team from '/components/Team'
 import Post from '/components/Post'
 
 import { getDatiArticoli } from '/lib/articoli'
+
+// Voci del menù per il componente LandingHero
+let menu = [
+  { title: 'Chi siamo', url: '/chi-siamo' },
+  { title: 'Contatti', url: '/contatti' },
+  { title: 'Dove siamo', url: '/dove-siamo' },
+  { title: 'Trasparenza', url: '/trasparenza' },
+]
+
+// I punti di forza
+const features = [
+  {
+    title: "Progetto educativo",
+    image: "https://www.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png",
+    description: "Un progetto chiaro e affidabile per far crescere e diventare uomini. "
+  },
+  {
+    title: "Didattica attiva",
+    image: "https://www.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png",
+    description: "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti."
+  },
+  {
+    title: "Laboratori",
+    image: "https://www.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.png",
+    description: "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro."
+  },
+  {
+    title: "Servizi al lavoro",
+    image: "https://www.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png",
+    description: "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore."
+  }
+]
+
+let slides = [
+  {
+    titolo: 'Inizia la visita virtuale del nostro Centro',
+    descrizione: 'Questa slide conterrà un\'immagine dello spazio presa a caso da Unsplash',
+    immagine: 'https://source.unsplash.com/1920x1080/?space'
+  },
+  {
+    titolo: 'Appuntamento Grohe',
+    descrizione: 'Questa slide conterrà un colore Android Green tinta unita',
+    colore: '#A3CB38'
+  },
+  {
+    titolo: 'Concorso nazionale settore elettrico',
+    descrizione: 'Questa slide conterrà un ritratto preso a caso da Unsplash',
+    immagine: 'https://source.unsplash.com/1920x1080/?portrait'
+  },
+]
+
+// Il nostro team
+let members = [
+  {
+    name: "Alessandro Cappelletto",
+    role: "PRESIDE",
+    description: "And I love you like Kanye",
+    description1: "loves Kanye. We need to restart the human foundation",
+    imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
+    googleUrl: "f.urban@donboscosandona.it",
+    linkedinUrl: "https://it.linkedin.com/",
+    twitterUrl: "https://twitter.com/St3pNy",
+  },
+  {
+    name: "Alessandro Ferro",
+    role: "VICE-PRESIDE / TUTOR DIGITALE",
+    description: "And I love you like Kanye",
+    description1: "loves Kanye. We need to restart the human foundation",
+    imageUrl: "https://www.focusjunior.it/content/uploads/2019/06/St3pNy-.jpeg",
+    googleUrl: "https://www.google.it/",
+    linkedinUrl: "https://it.linkedin.com/",
+    twitterUrl: "https://twitter.com/St3pNy",
+  },
+  {
+    name: "Anna Maria D'Ambrosio",
+    role: "RESPONSABILE DELLA DISCIPLINA",
+    description: "And I love you like Kanye",
+    description1: "loves Kanye. We need to restart the human foundation",
+    imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+    googleUrl: "https://www.google.it/",
+    linkedinUrl: "https://it.linkedin.com/",
+    twitterUrl: "https://twitter.com/St3pNy",
+  },
+  {
+    name: "don Nicola Munari",
+    role: "DIRETTORE / CATECHISTA",
+    description: "And I love you like Kanye",
+    description1: "loves Kanye. We need to restart the human foundation",
+    imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
+    googleUrl: "https://www.google.it/",
+    linkedinUrl: "https://it.linkedin.com/",
+    twitterUrl: "https://twitter.com/St3pNy",
+  },
+]
+
+let settori = [
+  {
+    title: "Elettrico",
+    category: "Qualifica di Operatore Elettrico",
+    description: "L’operatore elettrico installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.",
+    immagine: "https://thumbs.dreamstime.com/b/programmatore-di-sviluppo-professionista-che-lavora-nel-sito-web-programmazione-un-software-e-codifica-tecnologia-scrivendo-i-134227099.jpg"
+  },
+  {
+    title: "Energie",
+    category: "FREMIUM TEMPLATE",
+    description: "L’operatore energetico interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+    immagine: "https://thumbs.dreamstime.com/b/programmatore-femminile-sorridente-di-bellezza-che-per-mezzo-del-computer-103397705.jpg"
+  },
+  {
+    title: "Informatico",
+    category: "PREMIUM TEMPLATE",
+    description: "L’operatore informatico installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di soluzioni software.",
+    immagine: "https://thumbs.dreamstime.com/b/analista-di-codifica-138364750.jpg"
+  },
+  {
+    title: "Meccanico",
+    category: "Qualifica di Operatore Elettrico",
+    description: "L’operatore elettrico installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.",
+    immagine: "https://thumbs.dreamstime.com/b/programmatore-di-sviluppo-professionista-che-lavora-nel-sito-web-programmazione-un-software-e-codifica-tecnologia-scrivendo-i-134227099.jpg"
+  },
+  {
+    title: "Motoristico",
+    category: "FREMIUM TEMPLATE",
+    description: "L’operatore energetico interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+    immagine: "https://thumbs.dreamstime.com/b/programmatore-femminile-sorridente-di-bellezza-che-per-mezzo-del-computer-103397705.jpg"
+  },
+  {
+    title: "Carrozzeria",
+    category: "PREMIUM TEMPLATE",
+    description: "L’operatore informatico installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di soluzioni software.",
+    immagine: "https://thumbs.dreamstime.com/b/analista-di-codifica-138364750.jpg"
+  },
+]
 
 let postInEvidenza = {
   titolo: 'Le folli notti di Bilal',
@@ -43,85 +173,6 @@ let posts = [
   },
 ]
 
-let slides = [
-  {
-    titolo: 'Slide spaziale',
-    descrizione: 'Questa slide conterrà un\'immagine dello spazio presa a caso da Unsplash',
-    immagine: 'https://source.unsplash.com/1600x900/?space'
-  },
-  {
-    titolo: 'Tinta unita',
-    descrizione: 'Questa slide conterrà un colore Android Green tinta unita',
-    colore: '#A3CB38'
-  },
-  {
-    titolo: 'Slide ritratto',
-    descrizione: 'Questa slide conterrà un ritratto preso a caso da Unsplash',
-    immagine: 'https://source.unsplash.com/1600x900/?portrait'
-  },
-  {
-    titolo: 'Slide acquatica',
-    descrizione: 'Questa slide conterrà un\'immagine acquatica (o di un water) presa a caso da Unsplash',
-    immagine: 'https://source.unsplash.com/1600x900/?water'
-  },
-  {
-    titolo: 'Slide della natura',
-    descrizione: 'Questa slide conterrà un\'immagine della natura presa a caso da Unsplash',
-    immagine: 'https://source.unsplash.com/1600x900/?nature'
-  },
-]
-
-let menu = [
-  { title: 'Informatico', url: '/informatico' },
-  { title: 'Energie', url: '/energie' },
-  { title: 'Elettrico', url: '/elettrico' },
-  { title: 'Meccanico', url: '/meccanico' },
-  { title: 'Motoristico', url: '/motoristico' },
-  { title: 'Carrozzeria', url: '/carrozzeria' },
-]
-
-const features = [
-  {
-    id: 1,
-    image: "https://i.ibb.co/JjgJ35G/comment.png",
-    title: "Chi siamo",
-    description: "Una breve descrizione di chi siamo."
-  },
-  {
-    id: 2,
-    image: "https://i.ibb.co/LNkL1hY/shield.png",
-    title: "Cosa facciamo",
-    description: "Una breve descrizione di cosa facciamo"
-  },
-  {
-    id: 3,
-    image: "https://i.ibb.co/f4sGXQp/fingerprint.png",
-    title: "Contattaci",
-    description: "I nostri contatti"
-  }
-]
-
-let products = [
-  {
-    title: "NextJS Material Kit Free",
-    category: "FREE UI KIT",
-    description: "It is Free Mterial-UI Kit with a fresh, new desing inspired by Google's material design. It's a great pleasure to introduce to you the material concepts in an easy to use and beautiful set of conmponents.",
-    immagine: "https://thumbs.dreamstime.com/b/programmatore-di-sviluppo-professionista-che-lavora-nel-sito-web-programmazione-un-software-e-codifica-tecnologia-scrivendo-i-134227099.jpg"
-  },
-  {
-    title: "Light Bootstrap Dashboard PRO React",
-    category: "FREMIUM TEMPLATE",
-    description: "Light Bootstrap Dashboard PRO is a Bootstrap 3 Admin Theme designed to look simple and beautiful. Forget about boring dashboards and grab yourself a copy to Kickstart new project!",
-    immagine: "https://thumbs.dreamstime.com/b/programmatore-femminile-sorridente-di-bellezza-che-per-mezzo-del-computer-103397705.jpg"
-  },
-  {
-    title: "Now UI Dashboard PRO React",
-    category: "PREMIUM TEMPLATE",
-    description: "Now UI-Dashboard React is an admin dashboard templete designed by Invasion and coded by Creative Tim. It is built on top of Reactstrap,using. Now UI-Dashboard and it is fully responsive",
-    immagine: "https://thumbs.dreamstime.com/b/analista-di-codifica-138364750.jpg"
-  },
-]
-
 const testimonials = [
   {
     name: "Gigi Thompson",
@@ -143,70 +194,40 @@ const testimonials = [
   },
 ]
 
-let members = [
-  {
-    name: "Alec Thompson",
-    role: "CEO / CO-FOUNDER",
-    description: "And I love you like Kanye",
-    description1:"loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
-    googleUrl:"f.urban@donboscosandona.it",
-    linkedinUrl:"https://it.linkedin.com/",
-    twitterUrl:"https://twitter.com/St3pNy",
-  },
-   {
-    name: "Filippo Urban",
-    role: "CEO / CO-FOUNDER",
-    description: "And I love you like Kanye",
-    description1:"loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://www.focusjunior.it/content/uploads/2019/06/St3pNy-.jpeg",
-    googleUrl:"https://www.google.it/",
-    linkedinUrl:"https://it.linkedin.com/",
-    twitterUrl:"https://twitter.com/St3pNy",
-  },
-  {
-    name: " Zaccaria Cesaro ",
-    role: "CEO / CO-FOUNDER",
-    description: "And I love you like Kanye",
-    description1:"loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
-    googleUrl:"https://www.google.it/",
-    linkedinUrl:"https://it.linkedin.com/",
-    twitterUrl:"https://twitter.com/St3pNy",
-  },
-  {
-    name: "Eros Simoncin",
-    role: "CEO / CO-FOUNDER",
-    description: "And I love you like Kanye",
-    description1:"loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
-    googleUrl:"https://www.google.it/",
-    linkedinUrl:"https://it.linkedin.com/",
-    twitterUrl:"https://twitter.com/St3pNy",
-  },
-]
-
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
       <Head />
+      {
+
+      }
       <LandingHero
-        opacity={0.7}
+        opacity={0.5}
         siteName="CFP DON BOSCO"
-        title="Il tuo futuro professionale a portata di un click!"
-        description="Every landing page needs a small description......."
+        title="Centro di Formazione Professionale don Bosco"
+        description="Diventa adulto con il metodo educativo di don Bosco preparandoti a entrare a testa alta nel mondo professionale di domani!"
         buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
-        buttonText="guarda il video"
-        imageUrl="https://cdn.we-wealth.com/-/media/Images/summary/college-americani-il-non-aumento-delle-tasse-e-da-record.png?rev=dec6c04ac7904e55b50eef5485cd67fb&modified=20210830131241"
+        buttonText="Guarda il video"
+        imageUrl="/images/home/matteo_attacco_hacker.jpg"
         menu={menu}
       />
       <Features
         title="I nostri punti di forza"
-        description="Una scuola per tutti i gusti"
+        description="Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!"
         features={features}
-        cardWidth={4}
+        cardWidth={3}
       />
       <Carousel slides={slides} maxWidth={false} />
+      <Team
+        members={members}
+        cardWidth={4}
+      />
+      <Products
+        title="I settori"
+        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
+        cardWidth={4}
+        products={settori}
+      />
       <PostInEvidenza post={postInEvidenza} />
       <Container maxWidth="lg">
         <Grid container spacing={4}>
@@ -219,20 +240,7 @@ export default function Home({ datiArticoli }) {
           }
         </Grid>
       </Container>
-      <Team
-        members={members}
-        cardWidth={4}
-      />
-      <Products
-        title="Some of Our Awesome Products-2"
-        description="This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information."
-        cardWidth={4}
-        products={products}
-      />
       <Testimonials testimonials={testimonials} />
-      <Settori />
-      <Esplora />
-      <Eventi />
       <Articoli dati={datiArticoli} />
     </Layout>
   )

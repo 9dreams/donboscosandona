@@ -107,13 +107,6 @@ export default function LandingHero(props) {
                           </Button>
                         ))
                       }
-
-                      <Button variant="outlined"
-                        sx={{
-                          float: 'right'
-                        }}
-                      >Accedi
-                      </Button>
                     </Toolbar>
                   </Grid>
                 </Grid>

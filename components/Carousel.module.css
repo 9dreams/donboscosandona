@@ -4,7 +4,7 @@
 
 .carousel .slide {
     position: relative;
-    height: 500px;
+    height: 80vh;
     overflow: hidden;
     padding: 100px;
     padding-top: 150px;

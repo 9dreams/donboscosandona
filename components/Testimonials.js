@@ -8,10 +8,6 @@ const Testimonials = ({ testimonials }) => {
   return (
     <div className={styles.testimonialsContainer}>
       <Container maxWidth="lg">
-        <div>
-          <h2>I nostri professori</h2>
-        </div>
-        <p>Testimonials</p>
         <div className={styles.testimonials}>
           {testimonials.map((testimonial, index) => (
             <div className={styles.card} key={index}>

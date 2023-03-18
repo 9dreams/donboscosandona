@@ -9,7 +9,14 @@ import styles from './Carousel.module.css'
 
 export default function MyCarousel({ slides, maxWidth }) {
     return (
-        <Container maxWidth={maxWidth} disableGutters={true}>
+        <Container
+            maxWidth={maxWidth}
+            disableGutters={true}
+            sx={{
+                minHeight: '80vh',
+                border: '300px',
+            }}
+        >
             <div style={{ marginTop: '5px', color: '#494949' }}>
                 <Carousel className={styles.carousel} animation="slide">
                     {
@@ -36,7 +43,7 @@ export default function MyCarousel({ slides, maxWidth }) {
                                             backgroundColor: slide.immagine ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0)',
                                         }}
                                     />
-                                    <Grid container>
+                                    <Grid container maxWidth="lg" border="1px white solid">
                                         <Grid item md={6}>
                                             <Box
                                                 sx={{
