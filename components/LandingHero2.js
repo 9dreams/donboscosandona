@@ -4,9 +4,10 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Link from 'next/link'
 import Paper from '@mui/material/Paper'
-import styles from 'dev/fv/LandingHero.module.css'
+import styles from 'components/LandingHero2.module.css'
 import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
+import Stack from '@mui/material/Stack'
 
 export default function LandingHero(props) {
     return (
@@ -33,7 +34,6 @@ export default function LandingHero(props) {
                     backgroundPosition: 'center',
 
                 }}
-                elevation={5}
             >
                 <Box
                     sx={{
@@ -42,11 +42,11 @@ export default function LandingHero(props) {
                         bottom: 0,
                         right: 0,
                         left: 0,
-                        backgroundColor: 'rgba(0,0,0,0.4)',
+                        backgroundColor: 'rgba(0,0,0,' + props.opacity + ' )',
                     }}
                 />
                 <Grid container >
-                    <Grid item md={6} xs={8} >
+                    <Grid item md={5} xs={8} >
                         <Box
                             sx={{
                                 position: 'relative',
@@ -61,7 +61,7 @@ export default function LandingHero(props) {
 
                         </Box>
                     </Grid>
-                    <Grid item md={6} className={styles.nav}>
+                    <Grid item md={7} className={styles.nav}>
                         <Box
                             sx={{
                                 position: 'relative',
@@ -92,7 +92,7 @@ export default function LandingHero(props) {
                                                     key={settore.title}
                                                     variant="body2"
                                                     href={settore.url}
-                                                    sx={{ p: 1, flexShrink: 0,}}
+                                                    sx={{ p: 1, flexShrink: 0, }}
                                                 >
                                                     {settore.title}
                                                 </Link>
@@ -112,7 +112,7 @@ export default function LandingHero(props) {
                                 position: 'relative',
                                 p: { xs: 3, md: 6 },
                                 pr: { md: 0 },
-                                top: {md: 130, xs: 100},
+                                top: { md: 130, xs: 100 },
                             }}
                         >
                             <Typography component="h1" variant="h3" color="inherit" gutterBottom>
@@ -121,7 +121,17 @@ export default function LandingHero(props) {
                             <Typography component="h5" color="inherit" paragraph>
                                 {props.description}
                             </Typography>
-                            <Button variant="subtitle1" href={props.buttonUrl} className={styles.btLanding} >{props.buttonText}</Button>
+                            <Button
+                                variant="contained"
+                                size="large"
+                                color="error"
+                                href={props.buttonUrl}
+                                sx={{
+                                    marginTop: '1rem',
+                                }}
+                            >
+                                {props.buttonText}
+                            </Button>
                         </Box>
                     </Grid>
                 </Grid>
