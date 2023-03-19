@@ -202,7 +202,7 @@ export default function Home({ datiArticoli }) {
         opacity={0.5}
         siteName="CFP DON BOSCO"
         title="Centro di Formazione Professionale don Bosco"
-        description="Diventa adulto con il metodo educativo di don Bosco preparandoti a entrare a testa alta nel mondo professionale di domani!"
+        description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
         buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
         buttonText="Guarda il video"
         imageUrl="/images/home/matteo_attacco_hacker.jpg"
