@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Link from 'next/link'
 import Paper from '@mui/material/Paper'
-import styles from 'dev/fv/LandingHero.module.css'
+import styles from 'components/LandingHero2.module.css'
 import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
 
@@ -33,7 +33,6 @@ export default function LandingHero(props) {
                     backgroundPosition: 'center',
 
                 }}
-                elevation={5}
             >
                 <Box
                     sx={{
@@ -42,11 +41,11 @@ export default function LandingHero(props) {
                         bottom: 0,
                         right: 0,
                         left: 0,
-                        backgroundColor: 'rgba(0,0,0,0.4)',
+                        backgroundColor: 'rgba(0,0,0,' + props.opacity +' )',
                     }}
                 />
                 <Grid container >
-                    <Grid item md={6} xs={8} >
+                    <Grid item md={5} xs={8} >
                         <Box
                             sx={{
                                 position: 'relative',
@@ -61,7 +60,7 @@ export default function LandingHero(props) {
 
                         </Box>
                     </Grid>
-                    <Grid item md={6} className={styles.nav}>
+                    <Grid item md={7} className={styles.nav}>
                         <Box
                             sx={{
                                 position: 'relative',
