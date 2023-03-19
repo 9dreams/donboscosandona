@@ -172,10 +172,10 @@ let postInEvidenza = {
 
 const testimonials = [
   {
-    name: "Gigi Thompson",
-    image: "https://i.ibb.co/4MQnQw0/img1.jpg",
-    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
-    social: "@GIGITHOMPSON"
+    name: "Michele Venturato",
+    image: "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.png",
+    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
+    social: "@Google"
   },
   {
     image: "https://i.ibb.co/QPG6j9b/img2.jpg",
