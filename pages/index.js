@@ -76,6 +76,8 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
+    email:"c.coso@donboscosandona.it",
+    phone: '0421 3388949874950',
   },
   {
     name: "Alessandro Cappelletto",
@@ -83,6 +85,8 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
+    email:"c.ciaoooo@donboscosandona.it",
+    phone: '123456',
   },
   {
     name: "Alessandro Ferro",
@@ -90,7 +94,9 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
-    linkedinUrl: "https://it.linkedin.com/in/alessandro-ferro-128aab103",
+ 
+    email:"a.ferro@donboscosandona.it",
+    phone: '0421 111 222',
   },
   {
     name: "Anna Maria D'Ambrosio",
@@ -98,6 +104,8 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+    email:"l.hdggfd@donboscosandona.it",
+    phone: '12365598445',
   },
   {
     name: "Roberta Toffoletto e Alessia Zanin",
@@ -105,6 +113,8 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+    email:"c.cosocoso@donboscosandona.it",
+    phone: '0421 123456338 950',
   },
   {
     name: "Andrea Pasqualetto",
@@ -112,6 +122,8 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+    email:"c.cosinocoso@donboscosandona.it",
+    phone: '123456 338 950',
   },
   {
     name: "Francesco Cicogna",
@@ -119,6 +131,8 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
+    email:"hhh.coso@donboscosandona.it",
+    phone: '0421 338 950',
   },
   {
     name: "Martina Dianese",
@@ -126,6 +140,8 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
+    email:"c.coso@donboscosandona.it",
+    phone: '0421 338 950',
   },
 ]
 
