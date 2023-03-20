@@ -76,6 +76,7 @@ export default function Team({ members }) {
                                             direction="row"
                                             justifyContent="space-evenly"
                                             alignItems="center"
+                                            style={{ marginBottom: '60%' }}
                                         
 
                                         >
@@ -87,6 +88,7 @@ export default function Team({ members }) {
                                                     />
                                                 </center>
                                             </Link>
+                                            
                                             <Link href={member.googleUrl}style={{ marginTop: '10%' }}>
                                                 <center>
                                                     <img
