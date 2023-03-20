@@ -5,12 +5,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { ProductionQuantityLimitsSharp } from '@mui/icons-material';
 
 
 export default function CardProducts(props) {
     return (
 
-        products.map((product) => (
+        props.Products.map(
+            (products) => (
             <Card sx={{ maxWidth: 300, margin: "20px" }} elevation={0}>
                 <CardMedia
                     sx={{
@@ -24,16 +26,16 @@ export default function CardProducts(props) {
 
                 <CardContent>
                     <Typography gutterBottom variant="h6" fontSize="1em" component="div" >
-                        {props.title}
+                        {products.title}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         <center>
-                            {props.category}
+                            {products.category}
                         </center>
                     </Typography>
                     <br />
                     <Typography variant="subtitle1" color="ActiveCaption" sx={{ color: "grey" }}>
-                        {props.description}
+                        {products.description}
                     </Typography>
                 </CardContent>
             </Card>
