@@ -1,24 +1,46 @@
-import { Container } from "@mui/system"
-import Box from "@mui/material/Box"
-import { Typography } from "@mui/material"
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 
-export default function Product(props){
-    return(
-        <Container sx={{alignContent:'center', height:'100vh'}}>
-            <center>
-                <h1>Some of Our Aweson Products - 2</h1>
-            </center>
-            <center>
-                <Typography variant="subtitle2" sx={{color: 'grey'}}>This is the paragraph where you can write more details about your projects. Keep you user <br/> engaged providing meaningful information</Typography>
-            </center>
-            <Box marginTop="150px" display="flex">   
-            
-                <Typography variant="h5">
-                    ciao
-                </Typography>  
-            </Box>
-            
-        </Container>
-    )
+export default function CardProducts(props) {
+    return (
+
+        products.map((product) => (
+            <Card sx={{ maxWidth: 300, margin: "20px" }} elevation={0}>
+                <CardMedia
+                    sx={{
+                        borderRadius: "15px"
+                    }}
+                    component="img"
+                    alt="green iguana"
+                    height="230"
+                    Image src={props.url}
+                />
+
+                <CardContent>
+                    <Typography gutterBottom variant="h6" fontSize="1em" component="div" >
+                        {props.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        <center>
+                            {props.category}
+                        </center>
+                    </Typography>
+                    <br />
+                    <Typography variant="subtitle1" color="ActiveCaption" sx={{ color: "grey" }}>
+                        {props.description}
+                    </Typography>
+                </CardContent>
+            </Card>
+        )
+
+        )
+
+
+    );
 }
