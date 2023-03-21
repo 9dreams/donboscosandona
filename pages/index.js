@@ -194,10 +194,10 @@ const testimonials = [
     social: "@Google"
   },
   {
-    image: "https://i.ibb.co/QPG6j9b/img2.jpg",
-    name: "Gina Andrew",
-    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
-    social: "@GINAANDREW"
+    image: "/images/home/recensioni/bob.png",
+    name: "Daniele Mladenovic",
+    text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
+    social: "@BOBTEK"
   },
   {
     image: "https://i.ibb.co/dpQrpNt/img3.jpg",
