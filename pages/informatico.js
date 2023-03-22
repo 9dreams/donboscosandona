@@ -43,6 +43,9 @@ let slides = [
 
 let slides2 = slides
 
+
+
+
 export default function Home({ datiArticoli }) {
     return (
         <Layout>
@@ -62,20 +65,28 @@ export default function Home({ datiArticoli }) {
             />
             <Carousel slides={slides} maxWidth={false} />
 
-            
+
             <Grid container spacing={12}>
-            <Grid item xs={4}>
-                <Image src='/images/informatico/9dreams.png' width={350} height={132} />
-            </Grid>
+                <Grid item xs={4}>
+                    <Image src='/images/informatico/9dreams.png' width={350} height={132} />
+                </Grid>
                 <Grid item xs={4}>
                     <Image src='/images/informatico/developer.png' width={350} height={132} />
                 </Grid>
                 <Grid item xs={4}>
                     <Image src='/images/informatico/youtube.png' width={350} height={132} />
                 </Grid>
-            
-        </Grid>
+
+            </Grid>
+            <div>
+                <br></br>
+                <br></br>
+            </div>
+
+
 
         </Layout>
+
+
     )
 }
