@@ -52,17 +52,17 @@ let slides = [
   {
     titolo: 'Fatti un bel giro',
     descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagineUrl: '/images/news/virtual-tour.jpeg'
+    immagine: '/images/news/virtual-tour.jpeg'
   },
   {
     titolo: 'Progetto GIVE',
     descrizione: "Il 15 e 16 maggio il nostro Centro ospiterà l'edizione 2023 di GIVE (GROHE Installer Vocational Training and Education), il programma di formazione dedicato ai giovani installatori idraulici: un ambiente dedicato al training pratico proposto dai professionisti di GROHE.",
-    immagineUrl: '/images/news/2023/grohe.jpeg'
+    immagine: '/images/news/2023/grohe.jpeg'
   },
   {
     titolo: 'Concorso nazionale settore elettrico',
     descrizione: "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    immagineUrl: '/images/news/2023/concorso-nazionale-elettrico.jpg'
+    immagine: '/images/news/2023/concorso-nazionale-elettrico.jpg'
   },
 ]
 
