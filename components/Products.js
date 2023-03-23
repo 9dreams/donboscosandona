@@ -23,13 +23,13 @@ export default function Products({ title, description, cardWidth, products }) {
                     products.map(
                         (product) => (
                             <Grid item md={cardWidth}>
-                                <CardActionArea component="a" href={product.link}>
+                                <CardActionArea component="a" href={product.url}>
                                     <Card sx={{ display: 'flex' }} elevation={0}>
                                         <CardContent sx={{ flex: 1 }}>
                                             <CardMedia
                                                 component="img"
                                                 sx={{display: { xs: 'block', sm: 'block', margin: 'auto' } }}
-                                                image={product.immagine}
+                                                image={product.immagineUrl}
                                                 alt={product.title}
                                             />
                                             <Typography text-align='center' component="h4" variant="h6" style={{ textAlign: 'center' }} color="inherit" gutterBottom>
