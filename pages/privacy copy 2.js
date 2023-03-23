@@ -62,19 +62,16 @@ export default function Home() {
                 </h1></center>
 
 
-                <font face="Verdana">
+                <font face="Verdana"><p>
 
-                    <p>
-                        Il nuovo Regolamento Europeo (UE) 2016/679 del Parlamento Europeo (GDPR) relativo alla protezione dei dati è stato pubblicato sulla GUUE del 4 maggio 2016, è entrato in vigore il 24 maggio del 2016 ed è divenuto pienamente operativo negli Stati membri dal 25 maggio 2018.
-                        Tale regolamento consolida e rende più omogenea la protezione dei dati personali dei cittadini e dei residenti dell’Unione Europea evitando lacune di tutela in ambito europeo e consacrando il diritto alla protezione dei dati personali degli interessati tra i diritti fondamentali e costituzionali.
-                        In conformità a quanto previsto dal Regolamento Europeo (UE) 2016/679 per la protezione dei dati personali la informiamo che l’Associazione C.F.P. CNOS/FAP Don Bosco ha nominato il Responsabile della Protezione dei Dati (RPD o DPO).
-                    </p>
+                    Il nuovo Regolamento Europeo (UE) 2016/679 del Parlamento Europeo (GDPR) relativo alla protezione dei dati è stato pubblicato sulla GUUE del 4 maggio 2016, è entrato in vigore il 24 maggio del 2016 ed è divenuto pienamente operativo negli Stati membri dal 25 maggio 2018.
+                    Tale regolamento consolida e rende più omogenea la protezione dei dati personali dei cittadini e dei residenti dell’Unione Europea evitando lacune di tutela in ambito europeo e consacrando il diritto alla protezione dei dati personali degli interessati tra i diritti fondamentali e costituzionali.
+                    In conformità a quanto previsto dal Regolamento Europeo (UE) 2016/679 per la protezione dei dati personali la informiamo che l’Associazione C.F.P. CNOS/FAP Don Bosco ha nominato il Responsabile della Protezione dei Dati (RPD o DPO).</p>
 
 
 
                     <h2> Dati di contatto del Responsabile della Protezione dei Dati. </h2>
-                    <p>
-                        Avv. Marco Bernabè
+                    <p> Avv. Marco Bernabè
                         <br />Via dei Salesiani, 15
                         <br />30174 Venezia - Mestre (VENEZIA)
                         <br />e-mail: marco.bernabe@ordineavvocativicenza.it
@@ -88,12 +85,9 @@ export default function Home() {
                     <br />
                     <h1><center><br />INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI
                         <br /> AI SENSI DELL ART. 13
-                        <br />DEL GDPR (GENERAL DATA PROTECTION REGULATION) 2016/679</center>
-                    </h1>
+                        <br />DEL GDPR (GENERAL DATA PROTECTION REGULATION) 2016/679</center></h1>
 
-
-                    <p>
-                        PERCHÉ QUESTE INFORMAZIONI
+                    <p>PERCHÉ QUESTE INFORMAZIONI
 
                         <br />
                         <br />
@@ -115,18 +109,30 @@ export default function Home() {
                         <br />
                         <br />La presente informativa non è da considerarsi valida per altri siti web eventualmente consultabili tramite links presenti su questo sito internet, rispetto ai quali non siamo in alcun modo responsabile.
                     </p>
-
                     <br />
                     <br />
-                    
                     a. <strong>IDENTITÀ DI CONTATTO DEL TITOLARE DEL TRATTAMENTO DEI DATI PERSONALI E RESPONSABILE DELLA PROTEZIONE DEI DATI (RPD)</strong>
-                    <p>
-                        Ai sensi dell’art. 13 e 14 del GDPR Ti comunichiamo che il Titolare del trattamento dei tuoi dati personali forniti attraverso il sito internet è Associazione C.F.P. CNOS/FAP Don Bosco Via XIII Martiri 86 - 30027 San Donà di Piave (VE). Il Responsabile della protezione dei dati (RPD o DPO) è contattabile al seguente indirizzo: dpo@salesianinordest.it o telefonicamente al 041.2030438.
+                    <p>Ai sensi dell’art. 13 e 14 del GDPR Ti comunichiamo che il Titolare del trattamento dei tuoi dati personali forniti attraverso il sito internet è Associazione C.F.P. CNOS/FAP Don Bosco Via XIII Martiri 86 - 30027 San Donà di Piave (VE). Il Responsabile della protezione dei dati (RPD o DPO) è contattabile al seguente indirizzo: dpo@salesianinordest.it o telefonicamente al 041.2030438.
                     </p>
 
-                    b.  <strong> QUALI DATI TRATTIAMO? PER CHE FINALITÀ? </strong>
+                    b.  <strong>QUALI DATI TRATTIAMO? PER CHE FINALITÀ?</strong>
 
+                    <p>Ti precisiamo che sono dati personali le informazioni che si riferiscono a una persona fisica identificata o identificabile, come il nome, l'indirizzo e-mail, il numero di telefono, l'indirizzo postale o l'indirizzo IP del computer.
 
+                        <br />
+                        <br />
+                        Sono dati particolari quelli che rivelano l’origine razziale o etnica, le opinioni politiche, le convinzioni religiose o filosofiche, o l’appartenenza sindacale, nonché i dati genetici, dati biometrici intesi a identificare in modo univoco una persona fisica, i dati relativi alla salute o alla vita sessuale o all’orientamento sessuale della persona.
+
+                        <br />
+                        <br />
+                        Nel nostro sito tendenzialmente trattiamo solo dati personali (sono gli unici richiesti per la conclusione del contratto o per l’iscrizione alle newsletter) ma potrebbe succedere che, incidentalmente, possano essere trattati dati particolari (pensa, ad esempio, se la tua mail dovesse manifestare il tuo orientamento religioso o politico).
+                    </p>
+
+                    Ti precisiamo che <strong>nel sito in cui stai navigando vengono raccolti i seguenti dati personali:</strong>
+                    <br />
+                    <br />
+                    <br />
+                    <i>DATI DA TE INSERITI</i>
                     <p>Sono i dati personali da te <strong>inseriti nei campi di registrazione</strong>, per accedere alle newsletter da noi proposte, per crearti (eventualmente) un  account utente personale o per stipulare un contratto con noi. Questi dati sono da noi trattati per le seguenti finalità:
                         <br />
                         <br />
@@ -162,7 +168,7 @@ export default function Home() {
 
                         Ti precisiamo infine che l'invio facoltativo, esplicito e volontario di messaggi agli indirizzi di contatto dell’Ente, nonché la compilazione e l'inoltro dei moduli presenti sul sito comportano l'acquisizione dei dati di contatto del mittente, necessari a rispondere, nonché di tutti i dati personali inclusi nelle comunicazioni.
                     </p>
-                    
+
                     <br />
                     <br />
                     <i>DATI REGISTRATI AUTOMATICAMENTE</i>
@@ -184,10 +190,10 @@ export default function Home() {
                     <li>data e ora della tua visita</li>
                     <li>le proprietà del dispositivo, in particolare il sistema operativo, il browser utilizzato e la dimensione della finestra del browser</li>
 
+                    <p>
+                        i nomi a dominio dei computer e dei terminali utilizzati dagli utenti, gli indirizzi in notazione URI/URL (Uniform Resource Identifier/Locator) delle risorse richieste, l'orario della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) ed altri parametri relativi al sistema operativo e all'ambiente informatico dell'utente.
 
-                    i nomi a dominio dei computer e dei terminali utilizzati dagli utenti, gli indirizzi in notazione URI/URL (Uniform Resource Identifier/Locator) delle risorse richieste, l'orario della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) ed altri parametri relativi al sistema operativo e all'ambiente informatico dell'utente.
-
-
+                    </p>
 
                     Tali dati, necessari per la fruizione dei servizi web, vengono anche trattati allo scopo di:
                     <li>
@@ -222,16 +228,17 @@ export default function Home() {
                         <br />
                         <br />
                         I dati forniti per l’iscrizione alle newsletter saranno conservati per il periodo in cui il servizio è attivo.
-
                     </p>
 
                     d.   <strong>Obbligo di conferire i dati</strong>
                     <p>
 
-                    Il conferimento dei dati è obbligatorio e necessario per lo svolgimento del contratto stipulato tra te e il Titolare del trattamento e per ricevere le newsletter, per cui l’eventuale rifiuto di conferire i dati personali richiesti comporta la cessazione del rapporto.
-                    <br />
-                    <br />
-                    Il titolare rende noto, inoltre, che l'eventuale non comunicazione, o comunicazione errata, di una delle informazioni obbligatorie, ha come conseguenza l'impossibilità del titolare di garantire la congruità del trattamento stesso ai patti contrattuali per cui esso sia eseguito e la possibile mancata corrispondenza dei risultati del trattamento stesso agli obblighi imposti dalla normativa fiscale, amministrativa o del lavoro cui esso è indirizzato. 
+                        Il conferimento dei dati è obbligatorio e necessario per lo svolgimento del contratto stipulato tra te e il Titolare del trattamento e per ricevere le newsletter, per cui l’eventuale rifiuto di conferire i dati personali richiesti comporta la cessazione del rapporto.
+
+                        <br />
+                        <br />
+
+                        Il titolare rende noto, inoltre, che l'eventuale non comunicazione, o comunicazione errata, di una delle informazioni obbligatorie, ha come conseguenza l'impossibilità del titolare di garantire la congruità del trattamento stesso ai patti contrattuali per cui esso sia eseguito e la possibile mancata corrispondenza dei risultati del trattamento stesso agli obblighi imposti dalla normativa fiscale, amministrativa o del lavoro cui esso è indirizzato.
                     </p>
 
                     f.    <strong>Diritti dell’interessato</strong>
@@ -257,12 +264,14 @@ export default function Home() {
                     </p>
 
 
+
+
                     <strong>Modalità di esercizio dei diritti</strong>
+                    <p>
 
+                        Potrai in qualsiasi momento esercitare i diritti con raccomandata a.r. a Associazione C.F.P. CNOS/FAP Don Bosco Via XIII Martiri 86 – 30027 San Donà di Piave (VE),  oppure inviando una e-mail all’indirizzo privacy@donboscosandona.it indicando nell’oggetto la dicitura “accesso privacy”.
+                    </p>
 
-                    Potrai in qualsiasi momento esercitare i diritti con raccomandata a.r. a Associazione C.F.P. CNOS/FAP Don Bosco Via XIII Martiri 86 – 30027 San Donà di Piave (VE),  oppure inviando una e-mail all’indirizzo privacy@donboscosandona.it indicando nell’oggetto la dicitura “accesso privacy”.
-
-
                     <br />
                     <br />
                     <br />
@@ -270,9 +279,9 @@ export default function Home() {
                     <br />
                     <br />
 
-                    <center>
+                    <center><font size="4" face="Verdana, Arial, Helvetica, sans-serif" color="blue">
                         <h2>Quali sono le informazioni che permettiamo ad altri servizi di raccogliere</h2>
-
+                    </font>
                     </center>
                     <p>
 
@@ -283,7 +292,7 @@ export default function Home() {
                         <br />
 
                         <li>
-                            Per analizzare l’uso dei nostri servizi: consentiamo a determinati fornitori di servizi di raccogliere queste informazioni per aiutarci a capire come viene utilizzato il nostro sito web e per aiutarci a migliorare il contenuto e il funzionamento dello stesso. Questi fornitori di servizi raccolgono dati di utilizzo  statistico aggregati che non sono abbinati o collegati a nessun singolo utente.
+                            Per analizzare l’uso dei nostri servizi: consentiamo a determinati fornitori di servizi di raccogliere queste informazioni per aiutarci a capire come viene    utilizzato il nostro sito web e per aiutarci a migliorare il contenuto e il funzionamento dello stesso. Questi fornitori di servizi raccolgono dati di utilizzo  statistico aggregati che non sono abbinati o collegati a nessun singolo utente.
                         </li>
 
                         <br />
@@ -302,9 +311,9 @@ export default function Home() {
                     <br />
                     <br />
 
-                    <center>
+                    <center><font size="4" face="Verdana, Arial, Helvetica, sans-serif" color="blue">
                         <h2>Cookies e tecnologie simili</h2>
-
+                    </font>
                     </center>
                     <p>
                         Possiamo utilizzare una varietà di tecnologie per raccogliere informazioni sul tuo dispositivo e sull’utilizzo del nostro sito web. Queste tecnologie includono cookie, javascript, entity tags e archiviazione locale HTML. La maggior parte dei browser web può essere impostata per accettare o rifiutare l’utilizzo di alcune o tutte queste tecnologie. Per maggiori informazioni, consultare la sezione di questo documento dal titolo “Scegli come gestire i tuoi dati”.
@@ -332,9 +341,9 @@ export default function Home() {
                     <br />
                     <br />
 
-                    <center>
+                    <center><font size="4" face="Verdana, Arial, Helvetica, sans-serif" color="blue">
                         <h2>Perché vengono utilizzate queste tecnologie</h2>
-
+                    </font>
                     </center>
 
                     <p>
@@ -351,30 +360,24 @@ export default function Home() {
                     <br />
 
 
-                    <center>
+                    <center><font size="4" face="Verdana, Arial, Helvetica, sans-serif" color="blue">
                         <h2>Quali cookie sono utilizzati sul nostro sito</h2>
+                    </font>
                     </center>
 
                     <p>
                         Su nostro sito sono presenti solamente cookie di tipo tecnico, che pertanto non prevedono il consenso da parte dell’utente. Questi cookie sono necessari per il funzionamento del sito, raccogliendo dati di utilizzo in modo aggregato e in forma anonima.
-
+                    
 
                         I cookie che utilizziamo sono:
-                        <li>
-                            cookie tecnici per il funzionamento del sito web;
-                        </li>
-
-                        <li>
-                            cookie di Google analytics che raccolgono dati di navigazione aggregati e in forma anonima, rientrano nella classificazione di cookie tecnici;
-                        </li>
-
-                        <li>
-                            cookie tecnico necessario per il funzionamento del banner informativo dei cookie.
-                        </li>
+                        <li>cookie tecnici per il funzionamento del sito web;</li>
+                        <li>cookie di Google analytics che raccolgono dati di navigazione aggregati e in forma anonima, rientrano nella classificazione di cookie tecnici;</li>
+                        <li>cookie tecnico necessario per il funzionamento del banner informativo dei cookie.</li>
                         <br />
                         I dati raccolti dai cookie tecnici vengono conservati dal nostro sistema per una durata di 6 mesi, così come previsto dalle linee guida del Garante Privacy.
                     </p>
                 </font>
+
             </Container>
             <Products
                 title="Documenti utili"
