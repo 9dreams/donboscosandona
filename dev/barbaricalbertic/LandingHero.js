@@ -26,7 +26,7 @@ export default function LandingHero(props) {
       
     >
 
-      <Paper
+      <div
         sx={{
           position: 'relative',
           color: '#fff',
@@ -171,7 +171,7 @@ export default function LandingHero(props) {
             </Box>
           </Grid>
         </Container>
-      </Paper>
+      </div>
     </Container>
   );
 }
