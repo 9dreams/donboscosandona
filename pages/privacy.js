@@ -1,17 +1,21 @@
 import Container from '@mui/material/Container'
-
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero2.js'
 import Products from '/components/Products'
 
 // Voci del menù per il componente LandingHero
+
 let menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
     { title: 'Contatti', url: '/contatti' },
     { title: 'Dove siamo', url: '/dove-siamo' },
     { title: 'Trasparenza', url: '/trasparenza' },
 ]
+
+
+
+
 
 
 let documenti = [
@@ -40,10 +44,21 @@ let documenti = [
 
 
 
+
 export default function Home() {
     return (
         <Layout>
             <Head />
+            <LandingHero
+                opacity={0.5}
+                siteName="CFP DON BOSCO"
+                title="Centro Privacy-Policy"
+                description="Leggi qua per la privacy e policy"
+                buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
+                buttonText="Guarda il video"
+                imageUrl="/images/privacy/imgsfondo.webp"
+                menu={menu}
+            />
             {
 
             }
@@ -320,20 +335,20 @@ export default function Home() {
 
                     <center><h2>Quali cookie sono utilizzati sul nostro sito</h2></center>
                     <p>
-                    Su nostro sito sono presenti solamente cookie di tipo tecnico, che pertanto non prevedono il consenso da parte dell’utente. Questi cookie sono necessari per il funzionamento del sito, raccogliendo dati di utilizzo in modo aggregato e in forma anonima.
-                    <br />
-                    <br />
-                    I cookie che utilizziamo sono:
+                        Su nostro sito sono presenti solamente cookie di tipo tecnico, che pertanto non prevedono il consenso da parte dell’utente. Questi cookie sono necessari per il funzionamento del sito, raccogliendo dati di utilizzo in modo aggregato e in forma anonima.
+                        <br />
+                        <br />
+                        I cookie che utilizziamo sono:
                     </p>
 
                     <li>
-                    Cookie tecnici per il funzionamento del sito web;
+                        Cookie tecnici per il funzionamento del sito web;
                     </li>
                     <li>
-                    Cookie di Google analytics che raccolgono dati di navigazione aggregati e in forma anonima, rientrano nella classificazione di cookie tecnici;
+                        Cookie di Google analytics che raccolgono dati di navigazione aggregati e in forma anonima, rientrano nella classificazione di cookie tecnici;
                     </li>
                     <li>
-                    Cookie tecnico necessario per il funzionamento del banner informativo dei cookie.
+                        Cookie tecnico necessario per il funzionamento del banner informativo dei cookie.
                     </li>
                     <br />
                     I dati raccolti dai cookie tecnici vengono conservati dal nostro sistema per una durata di 6 mesi, così come previsto dalle linee guida del Garante Privacy.
