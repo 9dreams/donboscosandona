@@ -19,19 +19,22 @@ let documenti = [
         title: "Informativa Privacy Scuola",
         category: "",
         description: "",
-        immagine: "https://www.psbconsulting.it/wp-content/uploads/2018/04/privacy-policy-psb-consulting-gdpr-nuovo-regolamento-europeo.jpeg"
+        immagineUrl: "https://www.psbconsulting.it/wp-content/uploads/2018/04/privacy-policy-psb-consulting-gdpr-nuovo-regolamento-europeo.jpeg",
+        url: "/docs/privacy/Informativa_Scuola.pdf"
     },
     {
         title: "Informativa Privacy Clienti e Fornitori",
         category: "",
         description: "",
-        immagine: "https://www.altalex.com/~/media/Images/Lex/Privacy/privacy_key%20jpg.jpg"
+        immagineUrl: "https://www.altalex.com/~/media/Images/Lex/Privacy/privacy_key%20jpg.jpg",
+        url: "/docs/privacy/Informativa_per_aziende_tirocinio.pdf"
     },
     {
         title: "Informativa Privacy Aziende Tirocinio",
         category: "",
         description: "",
-        immagine: "https://www.dynamicquest.com/wp-content/uploads/2021/04/DQ-Blog-CyberSec-SMB-724x483-1.jpg"
+        immagineUrl: "https://www.dynamicquest.com/wp-content/uploads/2021/04/DQ-Blog-CyberSec-SMB-724x483-1.jpg",
+        url: "/docs/privacy/Informativa_clienti-fornitori_.pdf"
     },
 ]
 
@@ -282,7 +285,7 @@ export default function Home() {
 
                     <br />
                     <br />
-                    
+
                     <center><h2>Cookies e tecnologie simili</h2></center>
                     <p>
                         Possiamo utilizzare una varietà di tecnologie per raccogliere informazioni sul tuo dispositivo e sull’utilizzo del nostro sito web. Queste tecnologie includono cookie, javascript, entity tags e archiviazione locale HTML. La maggior parte dei browser web può essere impostata per accettare o rifiutare l’utilizzo di alcune o tutte queste tecnologie. Per maggiori informazioni, consultare la sezione di questo documento dal titolo “Scegli come gestire i tuoi dati”.
