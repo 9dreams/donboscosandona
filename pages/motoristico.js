@@ -74,10 +74,10 @@ export default function Home({ datiArticoli }) {
                         <li>Effettua diagnosi e prove sui gas di scarico, intervenendo per risolvere le anomalie</li>
                         <li>Effettua la riconsegna del veicolo</li>
                     </ul>
-                    <img src="public/images/motoristico/progetti formativi.png"></img>
+                    <img src="/images/motoristico/formativi.png"></img>
                 </Typography>
             </Container>
             <Carousel slides={slides} maxWidth={false} />
         </Layout>
     )
-};
+}
