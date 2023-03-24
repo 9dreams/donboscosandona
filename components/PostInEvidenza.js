@@ -48,6 +48,7 @@ export default function PostInEvidenza({ post }) {
                             <Link variant="subtitle1" href="#">
                                 {post.testoLink}
                             </Link>
+                            
                         </Box>
                     </Grid>
                 </Grid>

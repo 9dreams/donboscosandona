@@ -9,33 +9,41 @@ import styles from './Carousel.module.css'
 
 export default function MyCarousel({ slides, maxWidth }) {
     return (
-        <Container maxWidth={maxWidth} disableGutters={true}>
-            <div style={{ marginTop: '5px', color: '#494949' }}>
-                <Carousel className={styles.carousel} animation="slide">
-                    {
-                        slides.map(
-                            (slide) => (
-                                <Paper
-                                    className={styles.slide}
-                                    style={{
-                                        backgroundColor: slide.colore,
-                                        backgroundImage: 'url(' + slide.immagine + ')',
-                                        backgroundSize: 'cover',
-                                        backgroundRepeat: 'no-repeat',
-                                        backgroundPosition: 'center',
+        <Container
+            maxWidth={maxWidth}
+            disableGutters={true}
+            sx={{
+                minHeight: '90vh',
+                border: '300px',
+                marginBottom: '2rem',
+            }}
+        >
+            <Carousel className={styles.carousel} animation="slide">
+                {
+                    slides.map(
+                        (slide) => (
+                            <Paper
+                                className={styles.slide}
+                                sx={{
+                                    backgroundColor: slide.colore,
+                                    backgroundImage: 'url(' + slide.immagine + ')',
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundPosition: 'center',
+                                }}
+                                elevation={5}
+                            >
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        bottom: 0,
+                                        right: 0,
+                                        left: 0,
+                                        backgroundColor: slide.immagine ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0)',
                                     }}
-                                    elevation={5}
-                                >
-                                    <Box
-                                        sx={{
-                                            position: 'absolute',
-                                            top: 0,
-                                            bottom: 0,
-                                            right: 0,
-                                            left: 0,
-                                            backgroundColor: slide.immagine ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0)',
-                                        }}
-                                    />
+                                />
+                                <Container maxWidth="lg">
                                     <Grid container>
                                         <Grid item md={6}>
                                             <Box
@@ -55,12 +63,12 @@ export default function MyCarousel({ slides, maxWidth }) {
                                             </Box>
                                         </Grid>
                                     </Grid>
-                                </Paper>
-                            )
+                                </Container>
+                            </Paper>
                         )
-                    }
-                </Carousel>
-            </div>
+                    )
+                }
+            </Carousel>
         </Container>
     )
 }

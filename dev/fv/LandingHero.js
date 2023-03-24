@@ -33,7 +33,6 @@ export default function LandingHero(props) {
                     backgroundPosition: 'center',
 
                 }}
-                elevation={5}
             >
                 <Box
                     sx={{
@@ -42,7 +41,7 @@ export default function LandingHero(props) {
                         bottom: 0,
                         right: 0,
                         left: 0,
-                        backgroundColor: 'rgba(0,0,0,0.4)',
+                        backgroundColor: 'rgba(0,0,0,' + props.opacity + ')'
                     }}
                 />
                 <Grid container >

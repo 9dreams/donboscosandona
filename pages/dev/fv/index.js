@@ -3,14 +3,10 @@ import { getDatiArticoli } from '/lib/articoli'
 
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import Settori from '/components/Settori'
-import Articoli from '/components/Articoli'
-import Esplora from '/components/Esplora'
-import Eventi from '/components/Eventi'
 import PostInEvidenza from '/components/PostInEvidenza'
 
 let postInEvidenza = {
-    title: 'Le folli notti di Bilal',
+    titolo: 'Le folli notti di Bilal',
     descrizione: 'Il dott. Bilal, noto migliardario pieno di schèi, passa le sue notti tra belle ragazze e partite a poker. Come inviati di donboscosandona siamo riusciti ad accedere a questo mondo esclusivo per raccontarvelo in prima persona...',
     immagine: 'https://media.istockphoto.com/id/522728130/it/foto/amici-divertirsi-giocando-a-poker.jpg?s=612x612&w=is&k=20&c=w2_p0SHrR_-cmURmZY9-dHXu3-qqVqN9QkdiZrgJpfc=',
     testoImmagine: 'Bilal seduto su un divanetto in mezzo a due tipe.',
@@ -40,10 +36,6 @@ export default function Home({ datiArticoli }) {
                 buttonUrl="https://cinema.donboscosandona.it"
                 menu={settori} 
             />
-            <Settori />
-            <Esplora />
-            <Eventi />
-            <Articoli dati={datiArticoli} />
         </Layout>
     )
 }

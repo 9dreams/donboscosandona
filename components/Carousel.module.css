@@ -4,15 +4,13 @@
 
 .carousel .slide {
     position: relative;
-    height: 500px;
+    height: 90vh;
     overflow: hidden;
-    padding: 100px;
-    padding-top: 150px;
+    padding-top: 30vh;
 }
 
 .carousel .slide * {
     color: white;
-    
 }
 
 .carousel .slide .bottone {
