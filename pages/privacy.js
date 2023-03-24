@@ -118,7 +118,7 @@ export default function Home() {
 
                     <br />
                     <br />
-                    
+
                     a. <strong>IDENTITÀ DI CONTATTO DEL TITOLARE DEL TRATTAMENTO DEI DATI PERSONALI E RESPONSABILE DELLA PROTEZIONE DEI DATI (RPD)</strong>
                     <p>
                         Ai sensi dell’art. 13 e 14 del GDPR Ti comunichiamo che il Titolare del trattamento dei tuoi dati personali forniti attraverso il sito internet è Associazione C.F.P. CNOS/FAP Don Bosco Via XIII Martiri 86 - 30027 San Donà di Piave (VE). Il Responsabile della protezione dei dati (RPD o DPO) è contattabile al seguente indirizzo: dpo@salesianinordest.it o telefonicamente al 041.2030438.
@@ -162,7 +162,7 @@ export default function Home() {
 
                         Ti precisiamo infine che l'invio facoltativo, esplicito e volontario di messaggi agli indirizzi di contatto dell’Ente, nonché la compilazione e l'inoltro dei moduli presenti sul sito comportano l'acquisizione dei dati di contatto del mittente, necessari a rispondere, nonché di tutti i dati personali inclusi nelle comunicazioni.
                     </p>
-                    
+
                     <br />
                     <br />
                     <i>DATI REGISTRATI AUTOMATICAMENTE</i>
@@ -228,10 +228,10 @@ export default function Home() {
                     d.   <strong>Obbligo di conferire i dati</strong>
                     <p>
 
-                    Il conferimento dei dati è obbligatorio e necessario per lo svolgimento del contratto stipulato tra te e il Titolare del trattamento e per ricevere le newsletter, per cui l’eventuale rifiuto di conferire i dati personali richiesti comporta la cessazione del rapporto.
-                    <br />
-                    <br />
-                    Il titolare rende noto, inoltre, che l'eventuale non comunicazione, o comunicazione errata, di una delle informazioni obbligatorie, ha come conseguenza l'impossibilità del titolare di garantire la congruità del trattamento stesso ai patti contrattuali per cui esso sia eseguito e la possibile mancata corrispondenza dei risultati del trattamento stesso agli obblighi imposti dalla normativa fiscale, amministrativa o del lavoro cui esso è indirizzato. 
+                        Il conferimento dei dati è obbligatorio e necessario per lo svolgimento del contratto stipulato tra te e il Titolare del trattamento e per ricevere le newsletter, per cui l’eventuale rifiuto di conferire i dati personali richiesti comporta la cessazione del rapporto.
+                        <br />
+                        <br />
+                        Il titolare rende noto, inoltre, che l'eventuale non comunicazione, o comunicazione errata, di una delle informazioni obbligatorie, ha come conseguenza l'impossibilità del titolare di garantire la congruità del trattamento stesso ai patti contrattuali per cui esso sia eseguito e la possibile mancata corrispondenza dei risultati del trattamento stesso agli obblighi imposti dalla normativa fiscale, amministrativa o del lavoro cui esso è indirizzato.
                     </p>
 
                     f.    <strong>Diritti dell’interessato</strong>
@@ -255,125 +255,85 @@ export default function Home() {
 
                         Hai, inoltre, il diritto di proporre reclamo al Garante, come previsto dall'art. 77 del Regolamento stesso, o di adire le opportune sedi giudiziarie (art. 79 del Regolamento) nel caso in cui tu ritenga che il trattamento dei dati personali a te riferiti effettuato attraverso questo sito avvenga in violazione di quanto previsto dal Regolamento.
                     </p>
+                    g.   <strong>Modalità di esercizio dei diritti</strong>
 
-
-                    <strong>Modalità di esercizio dei diritti</strong>
-
-
-                    Potrai in qualsiasi momento esercitare i diritti con raccomandata a.r. a Associazione C.F.P. CNOS/FAP Don Bosco Via XIII Martiri 86 – 30027 San Donà di Piave (VE),  oppure inviando una e-mail all’indirizzo privacy@donboscosandona.it indicando nell’oggetto la dicitura “accesso privacy”.
-
+                    <p>Potrai in qualsiasi momento esercitare i diritti con raccomandata a.r. a Associazione C.F.P. CNOS/FAP Don Bosco Via XIII Martiri 86 – 30027 San Donà di Piave (VE),  oppure inviando una e-mail all’indirizzo privacy@donboscosandona.it indicando nell’oggetto la dicitura “accesso privacy”.</p>
 
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
 
-                    <center>
-                        <h2>Quali sono le informazioni che permettiamo ad altri servizi di raccogliere</h2>
-
-                    </center>
+                    <center><h2>Quali sono le informazioni che permettiamo ad altri servizi di raccogliere</h2></center>
                     <p>
-
-
                         Quando viene utilizzato il nostro sito web possiamo consentire a terzi di raccogliere informazioni su dispositivi, utilizzo e informazioni sulla posizione tramite cookie e altre tecnologie simili. Questi soggetti terzi raccolgono queste informazioni per i seguenti scopi e per altri scopi coerenti con le loro politiche sulla privacy:
-
-                        <br />
-                        <br />
-
-                        <li>
-                            Per analizzare l’uso dei nostri servizi: consentiamo a determinati fornitori di servizi di raccogliere queste informazioni per aiutarci a capire come viene utilizzato il nostro sito web e per aiutarci a migliorare il contenuto e il funzionamento dello stesso. Questi fornitori di servizi raccolgono dati di utilizzo  statistico aggregati che non sono abbinati o collegati a nessun singolo utente.
-                        </li>
-
-                        <br />
-
-                        <li>
-                            Per fare in modo che i servizi di altre società funzionino sul nostro sito web: consentiamo alle aziende di utilizzare cookie e altre tecnologie simili per migliorare servizi e funzionalità del nostro sito web.
-                        </li>
-
-                        <br />
-
-                        <li>
-                            Per collegare la tua attività sul nostro sito web ai social network: abbiamo aggiunto alcune funzionalità al nostro sito web che consentono ai social network (come Facebook, Twitter, LinkedIn) di tenere traccia delle tue attività o di raccogliere determinate informazioni quando viene utilizzato il nostro sito web. Se sei preoccupato per il modo in cui un social network sta monitorando la tua attività, ti preghiamo di contattare il social network o rivedere la sua politica sulla privacy. Ad esempio, puoi consultare la politica sull’uso dei dati di Facebook all’indirizzo https://www.facebook.com/about/privacy/.
-                        </li>
                     </p>
 
+                    <li>
+                        Per analizzare l’uso dei nostri servizi: consentiamo a determinati fornitori di servizi di raccogliere queste informazioni per aiutarci a capire come viene utilizzato il nostro sito web e per aiutarci a migliorare il contenuto e il funzionamento dello stesso. Questi fornitori di servizi raccolgono dati di utilizzo statistico aggregati che non sono abbinati o collegati a nessun singolo utente.
+                    </li>
+                    <br />
+                    <li>
+                        Per fare in modo che i servizi di altre società funzionino sul nostro sito web: consentiamo alle aziende di utilizzare cookie e altre tecnologie simili per migliorare servizi e funzionalità del nostro sito web.
+                    </li>
+                    <br />
+                    <li>
+                        Per collegare la tua attività sul nostro sito web ai social network: abbiamo aggiunto alcune funzionalità al nostro sito web che consentono ai social network (come Facebook, Twitter, LinkedIn) di tenere traccia delle tue attività o di raccogliere determinate informazioni quando viene utilizzato il nostro sito web. Se sei preoccupato per il modo in cui un social network sta monitorando la tua attività, ti preghiamo di contattare il social network o rivedere la sua politica sulla privacy. Ad esempio, puoi consultare la politica sull’uso dei dati di Facebook all’indirizzo https://www.facebook.com/about/privacy/.
+                    </li>
+
+
                     <br />
                     <br />
-
-                    <center>
-                        <h2>Cookies e tecnologie simili</h2>
-
-                    </center>
+                    
+                    <center><h2>Cookies e tecnologie simili</h2></center>
                     <p>
                         Possiamo utilizzare una varietà di tecnologie per raccogliere informazioni sul tuo dispositivo e sull’utilizzo del nostro sito web. Queste tecnologie includono cookie, javascript, entity tags e archiviazione locale HTML. La maggior parte dei browser web può essere impostata per accettare o rifiutare l’utilizzo di alcune o tutte queste tecnologie. Per maggiori informazioni, consultare la sezione di questo documento dal titolo “Scegli come gestire i tuoi dati”.
-
-
-                        <br />
-
-                        <li>
-                            I cookie sono piccoli file di dati che vengono inviati dal server di un sito web e sono memorizzati sul disco rigido del dispositivo dell’utente solo per la durata della visita (“cookie di sessione”) o per un periodo determinato (“cookie permanenti”). I cookie contengono informazioni che possono essere successivamente lette da un server web.
-                        </li>
-
-                        <br />
-
-                        <li>
-                            Java Script: i Java Script sono snippet di codice incorporati in varie parti di un sito web allo scopo di facilitare varie operazioni, tra cui la velocità di aggiornamento di determinate funzionalità o il monitoraggio dell’utilizzo di vari componenti online.
-                        </li>
-
-                        <br />
-
-                        <li>
-                            Entity Tags e archiviazione HTML5: sono funzionalità che consentono di memorizzare porzioni di siti web e di memorizzarli nella cache all’interno del browser, accelerando le prestazioni del sito web.
-                        </li>
                     </p>
+                    <li>
+                        Cookie – I cookie sono piccoli file di dati che vengono inviati dal server di un sito web e sono memorizzati sul disco rigido del dispositivo dell’utente solo per la durata della visita (“cookie di sessione”) o per un periodo determinato (“cookie permanenti”). I cookie contengono informazioni che possono essere successivamente lette da un server web.
+                    </li>
+                    <br />
+                    <li>
+                        Java Script: i Java Script sono snippet di codice incorporati in varie parti di un sito web allo scopo di facilitare varie operazioni, tra cui la velocità di aggiornamento di determinate funzionalità o il monitoraggio dell’utilizzo di vari componenti online.
+                    </li>
+                    <br />
+                    <li>
+                        Entity Tags e archiviazione HTML5: sono funzionalità che consentono di memorizzare porzioni di siti web e di memorizzarli nella cache all’interno del browser, accelerando le prestazioni del sito web.
+                    </li>
 
                     <br />
                     <br />
 
-                    <center>
-                        <h2>Perché vengono utilizzate queste tecnologie</h2>
-
-                    </center>
+                    <center><h2>Perché vengono utilizzate queste tecnologie</h2></center>
 
                     <p>
-
                         Alcune di queste tecnologie ci aiutano ad analizzare il traffico web e a valutare il volume di utilizzo delle funzionalità sul nostro sito web. Ci mostrano come i visitatori interagiscono, se ci sono errori di navigazione, il livello di utilizzo di determinate pagine web. Quando queste tecnologie vengono utilizzate per il monitoraggio delle prestazioni, non vengono raccolte informazioni che ti identificano.
-
                         <br />
                         <br />
-
                         Alcune di queste tecnologie migliorano la facilità d’uso del sito web accelerando i tempi di caricamento e aggiornamento delle pagine.
                     </p>
 
+
                     <br />
                     <br />
 
-
-                    <center>
-                        <h2>Quali cookie sono utilizzati sul nostro sito</h2>
-                    </center>
-
+                    <center><h2>Quali cookie sono utilizzati sul nostro sito</h2></center>
                     <p>
-                        Su nostro sito sono presenti solamente cookie di tipo tecnico, che pertanto non prevedono il consenso da parte dell’utente. Questi cookie sono necessari per il funzionamento del sito, raccogliendo dati di utilizzo in modo aggregato e in forma anonima.
-
-
-                        I cookie che utilizziamo sono:
-                        <li>
-                            cookie tecnici per il funzionamento del sito web;
-                        </li>
-
-                        <li>
-                            cookie di Google analytics che raccolgono dati di navigazione aggregati e in forma anonima, rientrano nella classificazione di cookie tecnici;
-                        </li>
-
-                        <li>
-                            cookie tecnico necessario per il funzionamento del banner informativo dei cookie.
-                        </li>
-                        <br />
-                        I dati raccolti dai cookie tecnici vengono conservati dal nostro sistema per una durata di 6 mesi, così come previsto dalle linee guida del Garante Privacy.
+                    Su nostro sito sono presenti solamente cookie di tipo tecnico, che pertanto non prevedono il consenso da parte dell’utente. Questi cookie sono necessari per il funzionamento del sito, raccogliendo dati di utilizzo in modo aggregato e in forma anonima.
+                    <br />
+                    <br />
+                    I cookie che utilizziamo sono:
                     </p>
+
+                    <li>
+                    Cookie tecnici per il funzionamento del sito web;
+                    </li>
+                    <li>
+                    Cookie di Google analytics che raccolgono dati di navigazione aggregati e in forma anonima, rientrano nella classificazione di cookie tecnici;
+                    </li>
+                    <li>
+                    Cookie tecnico necessario per il funzionamento del banner informativo dei cookie.
+                    </li>
+                    <br />
+                    I dati raccolti dai cookie tecnici vengono conservati dal nostro sistema per una durata di 6 mesi, così come previsto dalle linee guida del Garante Privacy.
                 </font>
             </Container>
             <Products
