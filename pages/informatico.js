@@ -12,6 +12,7 @@ import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
+import { Typography } from '@mui/material'
 
 
 
@@ -83,6 +84,12 @@ export default function Home({ datiArticoli }) {
                 <br></br>
             </div>
 
+            <Container sm={{ alignContent: 'center', height: '100vh' }}>
+                <center>
+                    <br />
+                    
+                </center><Image src='/images/informatico/freecodecamp.jpg' width={630} height={200} /><Typography variant="subtitle1" sx={{ color: 'grey' }}>This is the paragraph where you can write more details about your projects. Keep you user <br /> testo</Typography>
+            </Container>
 
 
         </Layout>
