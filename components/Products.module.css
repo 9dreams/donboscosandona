@@ -1,5 +1,8 @@
 .immagine {
     width: 50px;
     background-size: 100px;
-    
+}
+
+.card{
+    min-height: 620px;
 }

@@ -2,7 +2,7 @@ import Container from '@mui/material/Container'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
-import styles from 'dev/alexalex/Products.module.css'
+import styles from '/components/Products.module.css'
 import { padding, textAlign } from '@mui/system'
 import Card from '@mui/material/Card'
 import CardActionArea from '@mui/material/CardActionArea'
@@ -23,7 +23,7 @@ export default function Products({ title, description, cardWidth, products }) {
                     products.map(
                         (product) => (
                             <Grid item md={cardWidth}>
-                                <CardActionArea component="a" href={product.url}>
+                                <CardActionArea className={styles.card} component="a" href={product.url}>
                                     <Card sx={{ display: 'flex' }} elevation={0}>
                                         <CardContent sx={{ flex: 1 }}>
                                             <CardMedia
