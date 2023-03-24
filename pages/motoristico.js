@@ -43,15 +43,33 @@ let slides = [
     },
 ]
 
+let notizie = [
+    {
+        title: "Incontro con l'azienda Würth",
+        description: "Giovedì 25 novembre 2021 noi allievi della classe 3C abbiamo avuto il piacere di partecipare all'incontro formativo tenuto da due rappresentanti dell'azienda Würth.",
+        immagineUrl: "/images/motoristico/wurth.jpg",
+        url: "https://www.donboscosandona.it/incontro-con-l-azienda-wurth"
+    },
+    {
+        title: "Carrozzeria al C.F.P. “don Bosco”!",
+        description: "Carrozzeria: nuovo percorso formativo e una nuova cabina a disposizione del C.F.P. “don Bosco”!",
+        immagineUrl: "/images/motoristico/spraybooth.jpg",
+        url: "https://www.donboscosandona.it/carrozzeria-al-c-f-p-don-bosco"
+    },
+    {
+        title: "Incontro con Scania",
+        description: "L'azienda Scania ha incontrato i nostri allievi del settore motoristico, per presentare la realtà aziendale e l’evoluzione nel mondo dei mezzi pesanti.",
+        immagineUrl: "/images/motoristico/scania.jpg",
+        url: "https://www.donboscosandona.it/incontro-con-scania-2"
+    },
+]
+
 let slides2 = slides
 
 export default function Home({ datiArticoli }) {
     return (
         <Layout>
             <Head />
-            {
-
-            }
             <LandingHero
                 opacity={0.5}
                 siteName="CFP DON BOSCO"
@@ -59,7 +77,7 @@ export default function Home({ datiArticoli }) {
                 description="Operatore a riparazione di veicoli a motore."
                 buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
                 buttonText="Guarda il video"
-                imageUrl="/images/motoristico/sfondo.JPG"
+                imageUrl="/images/motoristico/sfondo.jpg"
                 menu={menu}
             />
             <Container maxWidth="lg">
@@ -78,6 +96,28 @@ export default function Home({ datiArticoli }) {
                 </Typography>
             </Container>
             <Carousel slides={slides} maxWidth={false} />
+
+            <Products
+                title="Notizie"
+                description="Le notizie inerenti al Settore Motoristico"
+                cardWidth={4}
+                products={notizie}
+            />
+            <Container maxWidth="lg">
+                <img src="/images/motoristico/pianoformativo.png"></img>
+                <Typography variant="h4" gutterBottom>
+                    La voce ai formatori del settore MOTORISTICO:
+                </Typography>
+                <Typography variant="h6" gutterBottom>
+                    «Il nostro settore è un’appassionante percorso alla scoperta dell’autoveicolo in tutte le sue parti, grazie anche alla collaborazione con il gruppo FCA, a numerose aziende di componenti di parti dell’autoveicolo ed aziende del territorio.
+
+                    Tutto questo ci permette di poter contare su risorse continuamente aggiornate; gli insegnanti, partecipano ai corsi proposti dalle principali aziende leader nel settore e gli autoveicoli sui quali lavoriamo ricoprono tecnologie moderne sino alle ultime nate; le attrezzature, continuamente aggiornate, sia dal punto di vista hardware che software, ci permettono di affrontare le problematiche legate all’automobile da tutti i punti di vista, siano impianti elettrici, elettronici, meccanici o carrozzeria.
+
+                    Il nostri laboratori sono ambienti completi e aderenti alle tecnologie presenti nel mercato. Grazie ad attrezzature dedicate, diagnosi, banche dati, prove particolari, interventi ordinari e straordinari, tintometri, vi guideremo in un percorso via via sempre più ricco.
+
+                    Vi aspettiamo per toccare con mano una realtà dove tecnologia, passione e formazione sono gli ingredienti di un percorso di successo!»
+                </Typography>
+            </Container>
         </Layout>
     )
 }
