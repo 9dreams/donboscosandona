@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem'
 import { Toolbar } from '@mui/material'
 import Stack from '@mui/material/Stack';
 
+
 export default function LandingHero(props) {
   return (
     <Container
@@ -25,7 +26,7 @@ export default function LandingHero(props) {
       
     >
 
-      <Paper
+      <div
         sx={{
           position: 'relative',
           color: '#fff',
@@ -170,7 +171,7 @@ export default function LandingHero(props) {
             </Box>
           </Grid>
         </Container>
-      </Paper>
+      </div>
     </Container>
   );
 }
