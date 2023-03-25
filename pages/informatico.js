@@ -170,6 +170,28 @@ export default function Home({ datiArticoli }) {
             <Carousel slides={slides} maxWidth={false} />
 
 
+            <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+                <b>Il primo anno</b> vivrai un primo approccio alle Tecnologie dell'Informazione e al Coding grazie al<br /> laboratorio Internet of Things: imparerai a conoscere i componenti elettronici e a farli comunicare con il<br /> mondo esterno utilizzando dei moduli programmabili (Lego Mindstorms, Arduino, Raspberry).<br /><br />
+
+                <b>Il secondo anno</b> è dedicato all’assemblaggio, alla riparazione, all’installazione dei personal computer:<br /> con il resto della classe farai parte del centro di assistenza tecnica dell’intera scuola, imparando così a<br /> fornire assistenza in casi reali sempre diversi e non con dei semplici esercizi scolastici. Questo ti aiuterà<br /> anche a sviluppare le competenze relazionali fondamentali in qualunque ambiente di lavoro. Dal<br /> punto di vista dello sviluppo software entrerai nella logica dei linguaggi di programmazione con C# e<br /> Unity, acquisendo inoltre gli strumenti per diventare uno sviluppatore frontend (HTML, CSS,<br /> JAVASCRIPT, BOOTSTRAP).<br /><br />
+
+                <b>Il terzo anno</b> ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end<br /> con linguaggi lato server come Ruby on Rails. Imparerai inoltre a sviluppare applicazioni per i<br /> dispositivi mobili.<br /><br />
+
+                <b>Il quarto anno</b> se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico, sarai<br /> collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda).<br /><br /><br />
+            </Typography>
+
+            <Container>
+                <Image
+                    src="/images/informatico/vr.jpg"
+                    alt=""
+                    width={1920}
+                    height={500}
+                    style={{ width: "100%" }}
+                />
+            </Container> <br/><br/>
+
+
+
 
 
 
