@@ -188,12 +188,118 @@ export default function Home({ datiArticoli }) {
                     height={500}
                     style={{ width: "100%" }}
                 />
-            </Container> <br/><br/>
+            </Container> <br /><br />
 
 
 
+            <Image
+                src="/images/informatico/programma-scolastico.svg"
+                alt=""
+                width={2560}
+                height={1440}
+                style={{ width: "100%" }}
+            />
+
+            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={2.4}>
+                        <a href="https://www.microsoft.com/it-it/"><Image src={"/images/informatico/loghi/microsoft.jpg"} width={200} height={200} /></a>
+                    </Grid>
+                    <Grid item xs={2.4}>
+                        <a href="https://ubuntu.com/"><Image src={"/images/informatico/loghi/ubuntu.png"} width={200} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={2.4}>
+                        <a href="https://www.cisco.com/"><Image src={"/images/informatico/loghi/cisco.png"} width={200} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={2.4}>
+                        <a href="https://mikrotik.com/"><Image src={"/images/informatico/loghi/microtik.png"} width={220} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={2.4}>
+                        <a href="https://www.raspberrypi.org/"><Image src={"/images/informatico/loghi/rasberry.png"} width={150} height={150} /></a><br /><br /><br />
+                    </Grid>
+                </Grid>
+            </Container>
+
+            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={3}>
+                        <a href="https://www.arduino.cc/"><Image src={"/images/informatico/loghi/arduino.png"} width={250} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://www.lego.com/it-it/mindstorms/about-ev3"><Image src={"/images/informatico/loghi/lego.png"} width={170} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://www.comitec.it/"><Image src={"/images/informatico/loghi/shc.png"} width={220} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://www.rethinkrobotics.com/"><Image src={"/images/informatico/loghi/rethink.png"} width={200} height={150} /></a> <br /><br /><br />
+                    </Grid>
+                </Grid>
+            </Container>
+
+            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={3}>
+                        <a href="https://www.mysql.com/it/"><Image src={"/images/informatico/loghi/mysql.png"} width={200} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://www.postgresql.org/"> <Image src={"/images/informatico/loghi/postgresql.png"} width={200} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://visualstudio.microsoft.com/it/"><Image src={"/images/informatico/loghi/visual-studio.jpg"} width={250} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://www.php.net/"> <Image src={"/images/informatico/loghi/php.png"} width={200} height={150} /></a> <br /><br /><br />
+                    </Grid>
+                </Grid>
+            </Container>
 
 
+            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={2.4}>
+                        <a href="https://www.ruby-lang.org/it/"> <Image src={"/images/informatico/loghi/ruby.png"} width={200} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={2.4}>
+                        <a href="https://rubyonrails.org/"><Image src={"/images/informatico/loghi/rails.png"} width={200} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={2.4}>
+                        <a href="https://learn.microsoft.com/it-it/dotnet/csharp/"> <Image src={"/images/informatico/loghi/c.png"} width={150} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={2.4}>
+                        <Image src={"/images/informatico/loghi/html.jpg"} width={200} height={150} />
+                    </Grid>
+                    <Grid item xs={2.4}>
+                        <a href="https://getbootstrap.com/"> <Image src={"/images/informatico/loghi/bootstrap.png"} width={200} height={150} /></a> <br /><br /><br />
+                    </Grid>
+                </Grid>
+            </Container>
+
+
+            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={3}>
+                        <a href="https://www.autodesk.it/products/autocad/overview?term=1-YEAR&tab=subscription"> <Image src={"/images/informatico/loghi/autodesk.png"} width={200} height={180} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://unity.com/"> <Image src={"/images/informatico/loghi/unity.png"} width={250} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://it.reactjs.org/"> <Image src={"/images/informatico/loghi/react.jpeg"} width={200} height={150} /></a>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <a href="https://www.meta.com/it/it/quest/?utm_source=www.donboscosandona.it&utm_medium=oculusredirect"> <Image src={"/images/informatico/loghi/oculus.png"} width={200} height={150} /></a> <br /><br /><br />
+                    </Grid>
+                </Grid>
+            </Container>
+
+            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        <a href="https://www.unrealengine.com/en-US/"> <Image src={"/images/informatico/loghi/unreal-engine.png"} width={400} height={150} /></a> <br /><br /><br />
+                    </Grid>
+                </Grid>
+            </Container>
 
         </Layout>
 
