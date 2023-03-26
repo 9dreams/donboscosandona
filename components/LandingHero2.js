@@ -140,3 +140,13 @@ export default function LandingHero(props) {
         </Container>
     )
 }
+
+LandingHero.defaultProps = {
+    menu: [
+        { title: 'Chi siamo', url: '/chi-siamo' },
+        { title: 'Contatti', url: '/contatti' },
+        { title: 'Dove siamo', url: '/dove-siamo' },
+        { title: 'Privacy', url: '/privacy' },
+        { title: 'Trasparenza', url: '/trasparenza' },
+    ]
+}

@@ -14,14 +14,6 @@ import Post from '/components/Post'
 
 import { getDatiArticoli } from '/lib/articoli'
 
-// Voci del menù per il componente LandingHero
-let menu = [
-  { title: 'Chi siamo', url: '/chi-siamo' },
-  { title: 'Contatti', url: '/contatti' },
-  { title: 'Dove siamo', url: '/dove-siamo' },
-  { title: 'Trasparenza', url: '/trasparenza' },
-]
-
 // I punti di forza
 const features = [
   {
@@ -227,7 +219,6 @@ export default function Home({ datiArticoli }) {
         buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
         buttonText="Guarda il video"
         imageUrl="/images/home/matteo_attacco_hacker.jpg"
-        menu={menu}
       />
       <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem'  }}>
         <Grid container spacing={4}>

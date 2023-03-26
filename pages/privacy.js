@@ -1,22 +1,8 @@
 import Container from '@mui/material/Container'
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero2.js'
+import LandingHero from '/components/LandingHero2'
 import Products from '/components/Products'
-
-// Voci del menù per il componente LandingHero
-
-let menu = [
-    { title: 'Chi siamo', url: '/chi-siamo' },
-    { title: 'Contatti', url: '/contatti' },
-    { title: 'Dove siamo', url: '/dove-siamo' },
-    { title: 'Trasparenza', url: '/trasparenza' },
-]
-
-
-
-
-
 
 let documenti = [
     {
@@ -43,8 +29,6 @@ let documenti = [
 ]
 
 
-
-
 export default function Home() {
     return (
         <Layout>
@@ -53,25 +37,10 @@ export default function Home() {
                 opacity={0.5}
                 siteName="CFP DON BOSCO"
                 title="Centro Privacy-Policy"
-                description="Leggi qua per la privacy e policy"
-                buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
+                description="Leggi qua per la privacy policy"
                 buttonText="Guarda il video"
                 imageUrl="/images/privacy/imgsfondo.webp"
-                menu={menu}
             />
-            {
-
-            }
-            {/*             <LandingHero
-                opacity={0.5}
-                siteName="CFP DON BOSCO"
-                title="Centro di Formazione Professionale don Bosco"
-                description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
-                buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
-                buttonText="Guarda il video"
-                imageUrl="/images/privacy/imgsfondo.webp"
-                menu={menu}
-            /> */}
             <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
 
                 <center><h1>
