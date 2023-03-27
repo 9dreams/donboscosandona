@@ -18,13 +18,14 @@ export default function TheLogo(props) {
                 <Grid container
 
                 >
-                    <Grid item xs={12} >
+                    
                         <Box
                             sx={{
                                 position: 'relative',
                                 p: { xs: 0, md: 0 },
-                                pr: { md: 0 },
-                                left: 700,
+                                pr: { md: 0},
+                                left: 400,
+                                top:90,
                             }}
                         >
 
@@ -37,20 +38,20 @@ export default function TheLogo(props) {
 
                         </Box>
                     </Grid>
-                    <Grid item xs={12}>
+                    
                     <Box
                             sx={{
                                 position: 'relative',
-                                p: { xs: 1, md: 2 },
+                                p: { xs: 0, md: 1 },
                                 pr: { md: 0 },
                                 left: 1,
                             }}
                         >
                         <img src={props.logoUrl} width="20%" />
                         </Box>
-                    </Grid>
+                    
 
-                </Grid>
+                
 
 
             </Box>
