@@ -12,6 +12,7 @@ import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
 
+
 // Voci del menù per il componente LandingHero
 let menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
@@ -22,7 +23,7 @@ let menu = [
 
 
 
-
+//inizio icone 
 const features = [
     {
         title: "installazione e manutenzione ",
@@ -41,119 +42,32 @@ const features = [
     },
 
 ]
-let settori = [
-    {
-        title: "Elettrico",
-        category: "QUALIFICA DI OPERATORE ELETTRICO",
-        description: "Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/42480c58c90ada8ff75c443fdde83ae71fea75ac.jpg?1539529685",
-        url: "https://www.donboscosandona.it/elettrico"
-    },
-    {
-        title: "Energia",
-        category: "QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI",
-        description: "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/417afaa0f0697f0f0aabf9ccf61030769cb76f14.jpg?1539529180",
-        url: "https://www.donboscosandona.it/energia"
-    },
-    {
-        title: "Informatico",
-        category: "DIPLOMA DI TECNICO INFORMATICO",
-        description: "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/97f264e9d16a0856dd2cb973630af1cac4426f73.jpg?1539529314",
-        url: "https://www.donboscosandona.it/informatico"
-    },
-    {
-        title: "Meccanico",
-        category: "DIPLOMA DI TECNICO PER LA CONDUZIONE E LA MANUTENZIONE DI IMPIANTI AUTOMATIZZATI",
-        description: "Realizza lavorazioni al tornio, fresatrice e macchine utensili in generale. Partendo dal progetto realizzato con il CAD effettua la programmazione delle macchine a controllo numerico. Realizza saldature ad arco, TIG, MAG, taglio al plasma.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/b0bd034769ac3471bf375239f1e64e39f5684aa6.jpg?1539523300",
-        url: "https://www.donboscosandona.it/meccanico"
-    },
-    {
-        title: "Motoristico / Carrozzeria",
-        category: "QUALIFICA DI OPERATORE ALLA RIPARAZIONE DI VEICOLI A MOTORE",
-        description: "Effettua riparazioni e manutenzione dei motori e dell'autoveicolo in tutte le sue parti. Effettua diagnosi e prove sui gas di scarico intervenendo per risolvere le anomalie.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/342f349c6bb5bbf9a37b95353df2bee2309b9792.jpg?1539524741",
-        url: "https://www.donboscosandona.it/motoristico"
-    },
-]
-let members = [
-    {
-        name: "don Nicola Munari",
-        role: "DIRETTORE / CATECHISTA",
-        description: "And I love you like Kanye",
-        description1: "loves Kanye. We need to restart the human foundation",
-        imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
-        email: "c.coso@donboscosandona.it",
-        phone: '0421 3388949874950',
-    },
-    {
-        name: "Alessandro Cappelletto",
-        role: "PRESIDE",
-        description: "And I love you like Kanye",
-        description1: "loves Kanye. We need to restart the human foundation",
-        imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
-        email: "c.ciaoooo@donboscosandona.it",
-        phone: '123456',
-    },
-    {
-        name: "Alessandro Ferro",
-        role: "VICE-PRESIDE / TUTOR DIGITALE",
-        description: "And I love you like Kanye",
-        description1: "loves Kanye. We need to restart the human foundation",
-        imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
 
-        email: "a.ferro@donboscosandona.it",
-        phone: '0421 111 222',
+//fine icone 
+
+//inizio carousel
+let slides = [
+    {
+        titolo: 'Fatti un bel giro',
+        descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+        immagine: '/images/elettrico/IMG_9702.JPG'
     },
     {
-        name: "Anna Maria D'Ambrosio",
-        role: "RESPONSABILE DELLA DISCIPLINA",
-        description: "And I love you like Kanye",
-        description1: "loves Kanye. We need to restart the human foundation",
-        imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
-        email: "l.hdggfd@donboscosandona.it",
-        phone: '12365598445',
+        titolo: 'Aula cad ',
+        descrizione: "Questa è l'aula di cad del settore elettrico con a disposizione molti computer per tutti i lavori di cad e Spac ",
+        immagine: '/images/elettrico/IMG_9721--.JPG'
     },
     {
-        name: "Roberta Toffoletto e Alessia Zanin",
-        role: "SEGRETERIA DIDATTICA",
-        description: "And I love you like Kanye",
-        description1: "loves Kanye. We need to restart the human foundation",
-        imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
-        email: "c.cosocoso@donboscosandona.it",
-        phone: '0421 123456338 950',
-    },
-    {
-        name: "Andrea Pasqualetto",
-        role: "ORIENTAMENTO IN ENTRATA / SOSTEGNO",
-        description: "And I love you like Kanye",
-        description1: "loves Kanye. We need to restart the human foundation",
-        imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
-        email: "c.cosinocoso@donboscosandona.it",
-        phone: '123456 338 950',
-    },
-    {
-        name: "Francesco Cicogna",
-        role: "COORDINATORE STAGE / CORSI PER ADULTI",
-        description: "And I love you like Kanye",
-        description1: "loves Kanye. We need to restart the human foundation",
-        imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
-        email: "hhh.coso@donboscosandona.it",
-        phone: '0421 338 950',
-    },
-    {
-        name: "Martina Dianese",
-        role: "ORIENTAMENTO IN USCITA / SERVIZI AL LAVORO",
-        description: "And I love you like Kanye",
-        description1: "loves Kanye. We need to restart the human foundation",
-        imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
-        email: "c.coso@donboscosandona.it",
-        phone: '0421 338 950',
+        titolo: "",
+        descrizione: "Il 15 e 16 maggio il nostro Centro ospiterà l'edizione 2023 di GIVE (GROHE Installer Vocational Training and Education), il programma di formazione dedicato ai giovani installatori idraulici: un ambiente dedicato al training pratico proposto dai professionisti di GROHE.",
+        immagine: '/images/elettrico/IMG_9725.JPG'
     },
 ]
 
+let slides2 = slides
+// fine carousel 
+
+//layout
 export default function Elettrico() {
     return (
         <Layout>
@@ -164,34 +78,29 @@ export default function Elettrico() {
             <LandingHero
                 opacity={0.5}
                 siteName="CFP DON BOSCO"
-                title="Settero Elettrico"
+                title="Settotre Elettrico"
                 description="OPERATORE ELETTRICO"
                 buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
                 buttonText="Guarda il video"
                 imageUrl="/images/elettrico/elet1.jpg"
                 menu={menu}
+
             />
-        
+
             <Features
-                title="I nostri punti di forza"
-                description="Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!"
+                title="Qualifica triennale"
+                description=""
                 features={features}
                 cardWidth={4
                 }
             />
-                <Products
-                title="I settori"
-                description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
-                cardWidth={4}
-                products={settori}
-            />
-            
-            <Team
-                title="Contatti"
-                description="Formatori che ti aiutano a crescere con il cuore di don Bosco"
-                members={members}
-                cardWidth={3}
-            />
+            <Carousel slides={slides} maxWidth={false} />
+
+            <center><img src="/images/elettrico/Screenshot 2023-03-27 090952...png" /></center>
+            <center><img src="/images/elettrico/9957d0b12e8146011f93c1de45aaf2012a2d30fa.png" /></center>
+
+
+
         </Layout>
     )
 }
