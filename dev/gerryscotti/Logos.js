@@ -1,3 +1,5 @@
+
+
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
@@ -13,9 +15,27 @@ export default function TheLogo(props) {
 
 
                     backgroundColor: props.color,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 }}
             >
-                <Grid container
+                <Grid container xs={12} md={6} lg={4} xl={3}
 
                 >
                     
@@ -25,18 +45,30 @@ export default function TheLogo(props) {
                                 p: { xs: 0, md: 0 },
                                 pr: { md: 0},
                                 left: 400,
-                                top:90,
+                                top:50,
                             }}
                         >
 
 
 
 
-                            <img src={props.sponsorUrl} width="55%" />
+                            <img src={props.sponsorUrl} width="250%" />
 
 
 
-                        </Box>
+                        </Box>+
+
+
+
+
+
+
+
+
+
+
+
+
                     </Grid>
                     
                     <Box
@@ -45,6 +77,7 @@ export default function TheLogo(props) {
                                 p: { xs: 0, md: 1 },
                                 pr: { md: 0 },
                                 left: 1,
+                                bottom: 40,
                             }}
                         >
                         <img src={props.logoUrl} width="20%" />
