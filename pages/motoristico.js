@@ -27,18 +27,18 @@ let menu = [
 
 let slides = [
     {
-        titolo: 'Fatti un bel giro',
-        descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+        titolo: 'Assetto vettura',
+        descrizione: 'Un assetto ottmale permette di ottimizzare il comportamento della vettura durante le fasi più critiche della guida come le curve, le frenate e le accelerazioni, inoltre consente funzionalità fondamentali come il ritorno del volante dopo aver effettuato una svolta.',
         immagine: '/images/motoristico/carousel1.jpg'
     },
     {
-        titolo: 'Progetto GIVE',
-        descrizione: "Il 15 e 16 maggio il nostro Centro ospiterà l'edizione 2023 di GIVE (GROHE Installer Vocational Training and Education), il programma di formazione dedicato ai giovani installatori idraulici: un ambiente dedicato al training pratico proposto dai professionisti di GROHE.",
+        titolo: 'Area motori e cambi',
+        descrizione: 'Il motore è il cuore della macchina e fornisce la potenza necessaria per farla muovere. Il cambio, invece, è la parte del veicolo che permette di cambiare marcia, per adattarsi alle diverse condizioni di guida.',
         immagine: '/images/motoristico/carousel2.JPG'
     },
     {
-        titolo: 'Concorso nazionale settore elettrico',
-        descrizione: "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+        titolo: 'Area Pneumatici',
+        descrizione: "I pneumatici sono le scarpe del veicolo e sono essenziali per la tenuta di strada, la stabilità e la sicurezza durante la guida. In questa area dell'officina, i meccanici si occupano di controllare lo stato dei pneumatici, ad esempio verificando la pressione dell'aria, l'usura del battistrada o eventuali danni.",
         immagine: '/images/motoristico/carousel3.JPG'
     },
 ]
@@ -105,6 +105,8 @@ export default function Home({ datiArticoli }) {
             />
             <Container maxWidth="lg">
                 <img src="/images/motoristico/pianoformativo.png"></img>
+                <br/>
+                <br/>
                 <Typography variant="h4" gutterBottom>
                     La voce ai formatori del settore MOTORISTICO:
                 </Typography>
@@ -116,7 +118,10 @@ export default function Home({ datiArticoli }) {
                     Il nostri laboratori sono ambienti completi e aderenti alle tecnologie presenti nel mercato. Grazie ad attrezzature dedicate, diagnosi, banche dati, prove particolari, interventi ordinari e straordinari, tintometri, vi guideremo in un percorso via via sempre più ricco.
 
                     Vi aspettiamo per toccare con mano una realtà dove tecnologia, passione e formazione sono gli ingredienti di un percorso di successo!»
+                
                 </Typography>
+                <br/>
+                <br/>
             </Container>
         </Layout>
     )
