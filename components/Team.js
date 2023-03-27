@@ -7,6 +7,11 @@ import Container from '@mui/material/Container'
 import maxWidth from '@mui/system'
 import Paper from '@mui/material/Paper'
 import Link from 'next/link'
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import FaceIcon from '@mui/icons-material/Face';
+import CallIcon from '@mui/icons-material/Call';
+import EmailIcon from '@mui/icons-material/Email';
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 
@@ -53,12 +58,17 @@ export default function Team({ members, cardWidth, title, description }) {
                                         <Typography variant="subtitle1" color="text.secondary">
                                             {member.description1}
                                         </Typography>
+                                        
+
                                         <Grid
                                             container
                                             direction="row"
                                             justifyContent="space-evenly"
                                             alignItems="center"
                                         >
+                                            
+                                            <Chip icon={<CallIcon />} label={member.phone} color="primary" size="small"/>
+                                            <Chip icon={<EmailIcon />} label={member.email}style={{ marginTop: '5%' }}  color="success" size="small"/>
                                             {member.twitterUrl ? (
                                                 <Link href={member.twitterUrl} style={{ marginTop: '10%' }}>
                                                     <center>
