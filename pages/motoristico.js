@@ -34,12 +34,12 @@ let slides = [
     {
         titolo: 'Area motori e cambi',
         descrizione: 'Il motore è il cuore della macchina e fornisce la potenza necessaria per farla muovere. Il cambio, invece, è la parte del veicolo che permette di cambiare marcia, per adattarsi alle diverse condizioni di guida.',
-        immagine: '/images/motoristico/carousel2.JPG'
+        immagine: '/images/motoristico/carousel2.jpg'
     },
     {
         titolo: 'Area Pneumatici',
         descrizione: "I pneumatici sono le scarpe del veicolo e sono essenziali per la tenuta di strada, la stabilità e la sicurezza durante la guida. In questa area dell'officina, i meccanici si occupano di controllare lo stato dei pneumatici, ad esempio verificando la pressione dell'aria, l'usura del battistrada o eventuali danni.",
-        immagine: '/images/motoristico/carousel3.JPG'
+        immagine: '/images/motoristico/carousel3.jpg'
     },
 ]
 
