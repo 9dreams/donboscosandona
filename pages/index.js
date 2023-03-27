@@ -20,6 +20,7 @@ let menu = [
   { title: 'Contatti', url: '/contatti' },
   { title: 'Dove siamo', url: '/dove-siamo' },
   { title: 'Trasparenza', url: '/trasparenza' },
+  { title: 'Job', url: '/job'}
 ]
 
 // I punti di forza

@@ -4,12 +4,16 @@ import Head from 'next/head'
 import Products from '/components/Products'
 import Button from '@mui/material/Button'
 
+import styles from 'dev/fv/job.module.css'
+import { useSlotProps } from "@mui/base";
+
 // Voci del menù per il componente LandingHero
 let menu = [
   { title: 'Chi siamo', url: '/chi-siamo' },
   { title: 'Contatti', url: '/contatti' },
   { title: 'Dove siamo', url: '/dove-siamo' },
   { title: 'Trasparenza', url: '/trasparenza' },
+  { title: 'Home', url: '/' },
 ]
 
 let settori = [
@@ -17,133 +21,163 @@ let settori = [
     title: "Cercasi operatori meccanici",
     description: "Azienda di Chiarano ricerca fresatori da inserire.",
     immagineUrl: "/images/job/26.jpg",
+    rif: 'Rif. 26',
+    labelColor: 'meccanico',
   },
   {
     title: "Operatore meccanico",
     description: "Cercasi un profilo da inserire all’interno di azienda come operaio montatore in carpenteria metallica pesante.",
-    immagineUrl: "/images/job/25.jpg"
+    immagineUrl: "/images/job/25.jpg",
+    rif: 'Rif. 25',
   },
   {
     title: "Cercasi operaio fresatore",
     description: "Azienda specializzata nelle lavorazioni meccaniche a pressione ad alta qualità, nella fresatura e tornitura su acciaio, materie plastiche e leghe leggere con particolare esperienza nell’alluminio, cerca un operaio fresatore oppure apprendista possibilmente diplomato.",
-    immagineUrl: "/images/job/24.jpg"
+    immagineUrl: "/images/job/24.jpg",
+    rif: 'Rif. 24',
   },
   {
     title: "Neodiplomato termotecnico",
     description: "Ditta di Azzano Decimo che si occupa di produzione ed installazione di pannelli radianti cerca diplomato da inserire nello staff. La risorsa affiancherà l’ufficio tecnico per la progettazione dei layout impianto radiante e sarà di supporto nella gestione dei cantieri. E’ richiesta la conoscenza e l’uso del programma AUTOCAD.",
-    immagineUrl: "/images/job/23.jpg"
+    immagineUrl: "/images/job/23.jpg",
+    rif: 'Rif. 23',
   },
   {
     title: "Diplomati tecnico energetico ed elettrico",
     description: "Azienda cerca diplomati nei settori elettrico ed energetico, zona Motta di Livenza.",
-    immagineUrl: "/images/job/22.jpg"
+    immagineUrl: "/images/job/22.jpg",
+    rif: 'Rif. 22',
   },
   {
     title: "Stagisti per carrozzeria",
     description: "Cercasi qualificati settore motoristico da inserire, anche in stage presso carrozzeria zona Salgareda.",
-    immagineUrl: "/images/job/21.jpg"
+    immagineUrl: "/images/job/21.jpg",
+    rif: 'Rif. 21',
   },
   {
     title: "Diploma indirizzo meccanico e meccatronico",
     description: "Ditta che si occupa di costruzione stampi in acciaio per materie plastiche cerca diplomati nel settore da integrare come dipendenti in officina.",
-    immagineUrl: "/images/job/20.jpg"
+    immagineUrl: "/images/job/20.jpg",
+    rif: 'Rif. 20',
   },
   {
     title: "Apprendista meccatronico",
     description: "Giovane appassionato di automotive, appena diplomato presso una scuola professionale o con un’esperienza lavorativa pregressa in officina, anche in ambiti differenti dal veicolo industriale. Necessaria la disponibilità a spostamenti fuori sede per interventi su strada e corsi di formazione. Preferibile che il candidato abiti nel raggio di 20 km dal comune di San Stino di Livenza.",
-    immagineUrl: "/images/job/19.jpg"
+    immagineUrl: "/images/job/19.jpg",
+    rif: 'Rif. 19',
   },
   {
     title: "Cercasi diplomato",
     description: "Azienda del settore elettrico cerca diplomato con competenze di disegno tecnico, pacchetto office, inglese livello base e con conoscenze su utilizzo di strumenti di misura di base (calibro, strumenti campione, calibromicrometro, etc.) Zona Noventa di Piave.",
-    immagineUrl: "/images/job/18.jpg"
+    immagineUrl: "/images/job/18.jpg",
+    rif: 'Rif. 18',
   },
   {
     title: "Qualificati o diplomati settore elettrico",
     description: "Azienda di Motta di Livenza è interessata all'assunzione di due ragazzi che abbiano finito il terzo o quarto anno.",
-    immagineUrl: "/images/job/17.jpg"
+    immagineUrl: "/images/job/17.jpg",
+    rif: 'Rif. 17',
   },
   {
     title: "Diploma tecnico elettrico",
     description: "Azienda settore elettrico, cerca diplomati.Zona Mogliano Veneto.",
-    immagineUrl: "/images/job/16.jpg"
+    immagineUrl: "/images/job/16.jpg",
+    rif: 'Rif. 16',
   },
   {
     title: "Tecnico energetico",
     description: "Azienda di produzione cabine doccia, cercas diplomati da inserire nel reparto produzione.Zona Torre di Mosto.",
-    immagineUrl: "/images/job/15.jpg"
+    immagineUrl: "/images/job/15.jpg",
+    rif: 'Rif. 15',
   },
   {
     title: "Tecnico meccanico",
     description: "Cercasi tecnico meccanico, che abbia proseguito gli studi fino al conseguimento della maturità. SI richiede i fondamenti basilari del disegno tecnico e la conoscenza del programma Autocad. Zona San Donà di Piave.",
-    immagineUrl: "/images/job/14.jpg"
+    immagineUrl: "/images/job/14.jpg",
+    rif: 'Rif. 14',
   },
   {
     title: "Operatore energetico",
     description: "Azienda che si occupa di impianti termoidraulici e assistenza caldaie e pompe di calore in ambito civile ed industriale, cerca personale qualificato.",
-    immagineUrl: "/images/job/13.jpg"
+    immagineUrl: "/images/job/13.jpg",
+    rif: 'Rif. 13',
   },
   {
     title: "Tecnico meccanico",
     description: "Cercasi disegnatore meccanico a tempo pieno. Requisiti e competenze: diploma tecnico in meccanica, conoscenza pacchetto office, conoscenza base software 3D. Principali mansioni: sviluppo disegni meccanici con software CAD.",
-    immagineUrl: "/images/job/12.jpg"
+    immagineUrl: "/images/job/12.jpg",
+    rif: 'Rif. 12',
   },
   {
     title: "Operatore macchine utensili CNC",
     description: "Azienda zona Meolo, cerca un operatore attrezzaggio macchine CNC, con buona capacità di relazionarsi e lavorare in team. Scopo assunzione definitiva.",
-    immagineUrl: "/images/job/11.jpg"
+    immagineUrl: "/images/job/11.jpg",
+    rif: 'Rif. 11',
   },
   {
     title: "Operatore elettrico",
     description: "Cercasi personale qualificato per azienda di costruzioni elettromeccaniche ed impianti elettrici. Zona San Donà di Piave.",
-    immagineUrl: "/images/job/10.jpg"
+    immagineUrl: "/images/job/10.jpg",
+    rif: 'Rif. 10',
   },
   {
     title: "Operatore elettrico",
     description: "Offresi lavoro come operatore elettrico, si richiede qualifica professionale PRESSO CAVALLINO-TREPORTI.",
-    immagineUrl: "/images/job/9.jpg"
+    immagineUrl: "/images/job/9.jpg",
+    rif: 'Rif. 9',
   },
   {
     title: "Cercasi diplomato",
     description: "Offresi lavoro come operatore elettrico, si richiede qualifica professionale PRESSO CAVALLINO-TREPORTI.",
-    immagineUrl: "/images/job/8.jpg"
+    immagineUrl: "/images/job/8.jpg",
+    rif: 'Rif. 8',
   },
   {
     title: "Operatore meccanico",
     description: "La figura ricercata si occuperà di elaborare disegni tecnici di macchinari o di parti di macchinari di processo in supporto al team dell'ufficio tecnico. Anche senza esperienza pregressa nel ruolo, si garantisce formazione ed affiancamento. richiesta preferibile dimestichezza con il disegno tecnico, con il programma CAD (2D e 3D) e una buona conoscenza della lingua inglese.",
-    immagineUrl: "/images/job/7.jpg"
+    immagineUrl: "/images/job/7.jpg",
+    rif: 'Rif. 7',
   },
   {
     title: "Operatori elettrici e termoidraulici",
     description: "Cercasi idraulico ed elettricista, azienda che si occupa di impianti di condizionamento e riscaldamento, caldaie, impianti fotovoltaici, pannelli solari, impianti di allarme e sicurezza.",
-    immagineUrl: "/images/job/6.jpg"
+    immagineUrl: "/images/job/6.jpg",
+    rif: 'Rif. 6',
   },
   {
     title: "Operatore meccanico",
     description: "Azienda del settore cerca tornitori, fresatori, operatori macchine utensili.",
-    immagineUrl: "/images/job/5.jpg"
+    immagineUrl: "/images/job/5.jpg",
+    rif: 'Rif. 5',
   },
   {
     title: "Operatore termoidraulico",
     description: "Cercasi operatori addetti alla manutenzione, riparazione di impianti tecnologici ( climatizzazione invernale ed estiva, trattamento acque ecc..).",
-    immagineUrl: "/images/job/4.jpg"
+    immagineUrl: "/images/job/4.jpg",
+    rif: 'Rif. 4',
   },
   {
     title: "Operatore motoristico",
     description: "Cercasi gommista, zona Musile e Jesolo.",
-    immagineUrl: "/images/job/3.jpg"
+    immagineUrl: "/images/job/3.jpg",
+    rif: 'Rif. 3',
+
   },
   {
     title: "Operatore elettrico",
     description: "Azienda nell'ambito della sicurezza, con sede a Jesolo, cerca operatore elettrico per sistemi di allarme.",
-    immagineUrl: "/images/job/2.jpg"
+    immagineUrl: "/images/job/2.jpg",
+    rif: 'Rif. 2',
+
   },
   {
     title: "Operatore elettrico",
     description: "Annuncio: azienda di ascensori cerca elettricista.",
-    immagineUrl: "/images/job/1.jpg"
+    immagineUrl: "/images/job/1.jpg",
+    rif: 'Rif. 1',
   },
 ]
+
 
 
 export default function Home() {
@@ -165,13 +199,17 @@ export default function Home() {
         size="large"
         color="error"
         href="https://docs.google.com/forms/d/e/1FAIpQLScT8wrDP7INROdL74k39tLZxwf-Aarbx8vzqNI-09Nslgmw8g/viewform?usp=sf_link"
+        className={styles.modulobt}
       >
-        Compila il modulo
+        <h1 id={styles.btmodulo}>Compila il modulo</h1>
       </Button>
       <Products
         cardWidth={4}
         products={settori}
-      />
+      >
+      </Products>
+
+
     </Layout>
   )
 }

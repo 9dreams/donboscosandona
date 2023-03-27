@@ -8,6 +8,7 @@ import Card from '@mui/material/Card'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
+import styles1 from '/dev/fv/job.module.css'
 
 export default function Products({ title, description, cardWidth, products }) {
     return (
@@ -41,6 +42,13 @@ export default function Products({ title, description, cardWidth, products }) {
                                             <Typography variant="subtitle1" style={{ padding: '10px' }} color="inherit" paragraph>
                                                 {product.description}
                                             </Typography>
+                                            {product.rif &&
+                                            <Typography variant="subtitle1" style={{ padding: '10px', }} color="inherit" paragraph >
+                                                <label className={styles.label} styles={{backgroudColor: product.labelColor}} >
+                                                {product.rif}
+                                                </label>
+                                            </Typography>
+                                            }
                                         </CardContent>
                                     </Card>
                                 </CardActionArea>

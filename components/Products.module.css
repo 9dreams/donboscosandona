@@ -1,3 +1,6 @@
+
+
+
 .immagine {
     width: 50px;
     background-size: 100px;
@@ -5,4 +8,10 @@
 
 .card{
     min-height: 620px;
+}
+
+.label{
+    text-align: right;
+    padding: 10px;
+    margin-right: 50px;
 }
