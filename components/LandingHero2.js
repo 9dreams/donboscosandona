@@ -124,7 +124,7 @@ export default function LandingHero(props) {
                            
 
 
-                                {props.buttonUrl.length > 0 && 
+                                {props.buttonUrl && 
                            
                                     <Button
                                         variant="contained"
