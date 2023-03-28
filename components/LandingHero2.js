@@ -121,17 +121,26 @@ export default function LandingHero(props) {
                             <Typography component="h5" color="inherit" paragraph>
                                 {props.description}
                             </Typography>
-                            <Button
-                                variant="contained"
-                                size="large"
-                                color="error"
-                                href={props.buttonUrl}
-                                sx={{
-                                    marginTop: '1rem',
-                                }}
-                            >
-                                {props.buttonText}
-                            </Button>
+                           
+
+
+                                {props.buttonUrl && 
+                           
+                                    <Button
+                                        variant="contained"
+                                        size="large"
+                                        color="error"
+                                        href={props.buttonUrl}
+                                        sx={{
+                                            marginTop: '1rem',
+                                        }}
+                                    >
+                                        {props.buttonText}
+                                    </Button>
+                                    }
+
+                        
+                         
                         </Box>
                     </Grid>
                 </Grid>
