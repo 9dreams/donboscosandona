@@ -73,43 +73,21 @@ export default function Home() {
                     Guida all’applicazione del Regolamento europeo in materia di protezione dei dati personali
                 </Link>
             </Paragraph>
+            <Paragraph
+                title="INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI AI SENSI DELL ART. 13 DEL GDPR (GENERAL DATA PROTECTION REGULATION) 2016/679"
+                subtitle="Perché queste informazioni"
+            >
+                Ai sensi dell’art. 13 del Regolamento UE 2016/679 (d’ora in poi Regolamento o anche solo GDPR) ti descriviamo le modalità di trattamento dei dati personali degli utenti che consultano questo sito web.
+                <br />Ti precisiamo prima di tutto che il sito internet www.donboscosandona.it è di titolarità e gestito da Associazione CFP CNOS-FAP DON BOSCO, via XIII Martiri, 86 - 30027 San Donà di Piave (VE).
+                <br />Raccogliamo i dati da te inseriti e i dati di navigazione per l’esecuzione del contratto.
+                <br />Nel prosieguo, Ti illustreremo, quindi, le modalità e finalità di gestione del sito in riferimento al trattamento dei dati personali utilizzati nell’una e nell’altra ipotesi.
+                <br />Ti precisiamo fin d’ora che il trattamento è effettuato in ossequio ai principi di liceità e correttezza, in conformità alla normativa vigente.
+                <br />
+                <br />La presente informativa non è da considerarsi valida per altri siti web eventualmente consultabili tramite links presenti su questo sito internet, rispetto ai quali non siamo in alcun modo responsabile.
+            </Paragraph>
 
             <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
                 <font face="Verdana">
-                    <br />
-                    <h1><center><br />INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI
-                        <br /> AI SENSI DELL ART. 13
-                        <br />DEL GDPR (GENERAL DATA PROTECTION REGULATION) 2016/679</center>
-                    </h1>
-
-
-                    <p>
-                        PERCHÉ QUESTE INFORMAZIONI
-
-                        <br />
-                        <br />
-                        Ai sensi dell’art. 13 del Regolamento UE 2016/679 (d’ora in poi Regolamento o anche solo GDPR) ti descriviamo le modalità di trattamento dei dati personali degli utenti che consultano questo sito web.
-
-                        <br />
-                        <br />Ti precisiamo prima di tutto che il sito internet www.donboscosandona.it è di titolarità e gestito da Associazione CFP CNOS-FAP DON BOSCO, via XIII Martiri, 86 - 30027 San Donà di Piave (VE).
-
-                        <br />
-                        <br />Raccogliamo i dati da te inseriti e i dati di navigazione per l’esecuzione del contratto.
-
-                        <br />
-                        <br />Nel prosieguo, Ti illustreremo, quindi, le modalità e finalità di gestione del sito in riferimento al trattamento dei dati personali utilizzati nell’una e nell’altra ipotesi.
-
-                        <br />
-                        <br />
-                        Ti prcisiamo fin d’ora che il trattamento è effettuato in ossequio ai principi di liceità e correttezza, in conformità alla normativa vigente.
-
-                        <br />
-                        <br />La presente informativa non è da considerarsi valida per altri siti web eventualmente consultabili tramite links presenti su questo sito internet, rispetto ai quali non siamo in alcun modo responsabile.
-                    </p>
-
-                    <br />
-                    <br />
-
                     a. <strong>IDENTITÀ DI CONTATTO DEL TITOLARE DEL TRATTAMENTO DEI DATI PERSONALI E RESPONSABILE DELLA PROTEZIONE DEI DATI (RPD)</strong>
                     <p>
                         Ai sensi dell’art. 13 e 14 del GDPR Ti comunichiamo che il Titolare del trattamento dei tuoi dati personali forniti attraverso il sito internet è Associazione C.F.P. CNOS/FAP Don Bosco Via XIII Martiri 86 - 30027 San Donà di Piave (VE). Il Responsabile della protezione dei dati (RPD o DPO) è contattabile al seguente indirizzo: dpo@salesianinordest.it o telefonicamente al 041.2030438.

@@ -41,7 +41,9 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                     columnGap: '3rem',
                 }}
             >
-                {children}
+                <Typography variant="body1" gutterBottom>
+                    {children}
+                </Typography>
             </Container>
         </Container>
     )
