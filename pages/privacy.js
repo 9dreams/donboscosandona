@@ -1,8 +1,10 @@
 import Container from '@mui/material/Container'
+import Link from '@mui/material/Link'
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero2'
 import Products from '/components/Products'
+import Paragraph from '/components/Paragraph'
 
 let documenti = [
     {
@@ -41,37 +43,39 @@ export default function Home() {
                 buttonText="Guarda il video"
                 imageUrl="/images/privacy/imgsfondo.webp"
             />
-            <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
-
-                <center><h1>
-                    GDPR
-                    La tutela della privacy
-                </h1></center>
-
-
-                <font face="Verdana">
-
-                    <p>
-                        Il nuovo Regolamento Europeo (UE) 2016/679 del Parlamento Europeo (GDPR) relativo alla protezione dei dati è stato pubblicato sulla GUUE del 4 maggio 2016, è entrato in vigore il 24 maggio del 2016 ed è divenuto pienamente operativo negli Stati membri dal 25 maggio 2018.
-                        Tale regolamento consolida e rende più omogenea la protezione dei dati personali dei cittadini e dei residenti dell’Unione Europea evitando lacune di tutela in ambito europeo e consacrando il diritto alla protezione dei dati personali degli interessati tra i diritti fondamentali e costituzionali.
-                        In conformità a quanto previsto dal Regolamento Europeo (UE) 2016/679 per la protezione dei dati personali la informiamo che l’Associazione C.F.P. CNOS/FAP Don Bosco ha nominato il Responsabile della Protezione dei Dati (RPD o DPO).
-                    </p>
-
-
-
-                    <h2> Dati di contatto del Responsabile della Protezione dei Dati. </h2>
-                    <p>
-                        Avv. Marco Bernabè
-                        <br />Via dei Salesiani, 15
-                        <br />30174 Venezia - Mestre (VENEZIA)
-                        <br />e-mail: marco.bernabe@ordineavvocativicenza.it
-                        <br />tel. 392 154 9739
-                    </p>
-
-                    <h2>Documentazione utile</h2>
+            <Paragraph
+                title="GDPR"
+                subtitle="La tutela della privacy"
+                columnCount={2}
+            >
+                Il nuovo Regolamento Europeo (UE) 2016/679 del Parlamento Europeo (GDPR) relativo alla protezione dei dati è stato pubblicato sulla GUUE del 4 maggio 2016, è entrato in vigore il 24 maggio del 2016 ed è divenuto pienamente operativo negli Stati membri dal 25 maggio 2018.
+                Tale regolamento consolida e rende più omogenea la protezione dei dati personali dei cittadini e dei residenti dell’Unione Europea evitando lacune di tutela in ambito europeo e consacrando il diritto alla protezione dei dati personali degli interessati tra i diritti fondamentali e costituzionali.
+                In conformità a quanto previsto dal Regolamento Europeo (UE) 2016/679 per la protezione dei dati personali la informiamo che l’Associazione C.F.P. CNOS/FAP Don Bosco ha nominato il Responsabile della Protezione dei Dati (RPD o DPO).
+            </Paragraph>
+            <Paragraph
+                subtitle="Dati di contatto del Responsabile della Protezione dei Dati."
+                backgroundColor="#fed"
+            >
+                <b>Avv. Marco Bernabè</b>
+                <br />Via dei Salesiani, 15
+                <br />30174 Venezia - Mestre (VENEZIA)
+                <br />e-mail: marco.bernabe@ordineavvocativicenza.it
+                <br />tel. 392 154 9739
+            </Paragraph>
+            <Paragraph
+                title="Documentazione utile"
+            >
+                <Link href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/6264597">
                     Regolamento UE 2016 679. Con riferimenti ai considerando
-                    <br />Guida all’applicazione del Regolamento europeo in materia di protezione dei dati personali
+                </Link>
+                <br />
+                <Link href="http://www.garanteprivacy.it/web/guest/regolamentoue/guida-all-applicazione-del-regolamento-europeo-in-materia-di-protezione-dei-dati-personali">
+                    Guida all’applicazione del Regolamento europeo in materia di protezione dei dati personali
+                </Link>
+            </Paragraph>
 
+            <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
+                <font face="Verdana">
                     <br />
                     <h1><center><br />INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI
                         <br /> AI SENSI DELL ART. 13
