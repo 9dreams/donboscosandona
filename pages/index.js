@@ -186,18 +186,18 @@ let postInEvidenza = {
 const testimonials = [
   {
     name: "Michele Venturato",
-    image: "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.png",
+    imageUrl: "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.png",
     text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
     social: "@Google"
   },
   {
-    image: "/images/home/recensioni/bob.png",
+    imageUrl: "/images/home/recensioni/bob.png",
     name: "Daniele Mladenovic",
     text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
     social: "@BOBTEK"
   },
   {
-    image: "https://i.ibb.co/dpQrpNt/img3.jpg",
+    imageUrl: "https://i.ibb.co/dpQrpNt/img3.jpg",
     name: "Pino West",
     text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
     social: "@PINOWEST"
