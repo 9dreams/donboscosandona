@@ -231,14 +231,14 @@ export default function Home({ datiArticoli }) {
           }
         </Grid>
       </Container>
-      <Carousel slides={slides} maxWidth={false} />
+      <Carousel slides={slides} />
       <Products
         title="I settori"
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
         products={settori}
       />
-      <Carousel slides={slides2} maxWidth={false} />
+      <Carousel slides={slides2} />
       <Features
         title="I nostri punti di forza"
         description="Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!"
