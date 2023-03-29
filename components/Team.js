@@ -4,18 +4,15 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
-import maxWidth from '@mui/system'
 import Paper from '@mui/material/Paper'
 import Link from 'next/link'
 import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
-import FaceIcon from '@mui/icons-material/Face';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 
-export default function Team({ members, cardWidth, title, description }) {
+export default function Team({ members, cardWidth, title, description, maxWidth }) {
     return (
         <Container maxWidth={maxWidth} sx={{ marginTop: '3rem', marginBottom: '5rem' }}>
             <Grid>
@@ -109,4 +106,8 @@ export default function Team({ members, cardWidth, title, description }) {
             </Grid>
         </Container>
     )
+}
+
+Team.defaultProps = {
+    maxWidth: 'lg'
 }
