@@ -1,6 +1,6 @@
 import { Container, Typography, CardMedia } from "@mui/material"
 
-export default function Paragraph({ title, subtitle, children, maxWidth, columnCount, backgroundColor, imageUrl }) {
+export default function Paragraph({ title, subtitle, children, maxWidth, columnCount, backgroundColor, imageUrl, sx }) {
     return (
         <Container
             maxWidth={maxWidth}
@@ -9,7 +9,8 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                 padding: '3rem',
                 textAlign: 'justify',
                 backgroundColor: backgroundColor,
-                borderRadius: '1rem'
+                borderRadius: '1rem',
+                ...sx
             }}
         >
             {imageUrl &&
@@ -18,7 +19,7 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                     image={imageUrl}
                     width="100%"
                     sx={{
-                        marginBottom: '3rem'
+                        marginBottom: '3rem',
                     }}
                 />
             }
