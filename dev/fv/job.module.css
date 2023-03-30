@@ -23,9 +23,8 @@
     margin-bottom: 40px;   
 }
 
-#elettrico{
-    background-color: green;
-}
+
+
 
 @media screen and (max-width: 768px) { .modulobt { left: 35px; font-size: 8px; margin-top: 30px;} }
 @media screen and (min-width: 1024px) { .modulobt { left: 75%; } }

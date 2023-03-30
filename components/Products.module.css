@@ -7,11 +7,15 @@
 }
 
 .card{
-    min-height: 620px;
+    min-height: 660px;
+    margin-bottom: 25px;
 }
 
 .label{
     text-align: right;
-    padding: 10px;
-    margin-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
