@@ -9,6 +9,7 @@ import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
 import Stack from '@mui/material/Stack'
 
+
 export default function LandingHero(props) {
     return (
         <Container
@@ -131,7 +132,8 @@ export default function LandingHero(props) {
                                         size="large"
                                         color="error"
                                         href={props.buttonUrl}
-                                        sx={{
+                                        className={styles.btlanding}
+                                sx={{
                                             marginTop: '1rem',
                                         }}
                                     >
