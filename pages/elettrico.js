@@ -1,4 +1,3 @@
-import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import Paragraph from '@/components/Paragraph'
 
@@ -7,12 +6,6 @@ import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero2.js'
 import Features from '/components/Features'
 import Carousel from '/components/Carousel'
-import PostInEvidenza from '/components/PostInEvidenza'
-import Products from '/components/Products'
-import Testimonials from '/components/Testimonials'
-import Team from '/components/Team'
-import Post from '/components/Post'
-
 
 // Voci del menù per il componente LandingHero
 let menu = [
@@ -22,23 +15,21 @@ let menu = [
     { title: 'Trasparenza', url: '/trasparenza' },
 ]
 
-
-
 //inizio icone 
 const features = [
     {
         title: "installazione e manutenzione ",
-        image: "/images/elettrico/download.png",
+        imageUrl: "/images/elettrico/download.png",
         description: "Interviene nell’installazione e manutenzione di impianti civili ed industriali"
     },
     {
         title: "Domotica",
-        image: "https://www.casazerlini.it/storage/app/media/appartamenti/icone/domotica.png",
+        imageUrl: "https://www.casazerlini.it/storage/app/media/appartamenti/icone/domotica.png",
         description: "Realizza la programmazione dei componenti domotici e dei controllori programmabili"
     },
     {
         title: "Laboratori",
-        image: "/images/elettrico/4211847-icona-cacciavite-costruzione-gratuito-vettoriale.jpg",
+        imageUrl: "/images/elettrico/4211847-icona-cacciavite-costruzione-gratuito-vettoriale.jpg",
         description: "Esegue i disegni al CAD con la distribuzione dei componenti"
     },
 
@@ -104,11 +95,9 @@ export default function Elettrico() {
             >
                 <Paragraph
                     title="La voce ai formatori del settore ELETTRICO:"
-
                     backgroundColor="rgb(240,240,240)"
                     columnCount={1}
                     maxWidth="lg"
-                    
                 >
                     «Caposaldo del C.F.P. don Bosco è il settore elettrico; la maggior parte degli imprenditori che si occupano di impianti elettrici lo conosce direttamente, come ex-allievo, o perché ha assunto chi ha conseguito la qualifica in questo ambito.
 
