@@ -11,6 +11,7 @@ import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
+import DidatticaAttiva from './didattica'
 
 import { getDatiArticoli } from '/lib/articoli'
 
