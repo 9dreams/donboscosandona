@@ -1,5 +1,5 @@
 import Products from 'dev/alexalex/Products'
-
+import Certifications from '@/components/Certifications'
 
 let products = [
     {
@@ -22,13 +22,43 @@ let products = [
     },
 ]
 
+let certifications = [
+    {
+        logoUrl: '/images/certification/iso.png',
+        text1: 'ISO 9001:2015',
+        text2: 'Reg. n. 2593-A - Settore EA: 37'
+    },
+    {
+        logoUrl: '/images/certification/kiwa.png',
+        text1: 'Progettazione ed erogazione di attività formative e di orientamento'
+    },
+    {
+        logoUrl: '/images/certification/knx.png',
+        text1: 'Authorised Training Center'
+    },
+    {
+        logoUrl: '/images/certification/regioneveneto.png',
+        text1: 'Cod. A033 - Formazione Iniziale,',
+        text2: 'Superiore e Orientamento'
+    },
+
+]
+
+
 export default function Home() {
     return (
-        <Products 
+        <Products
             title="Some of Our Awesome Products-2"
             description="This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information."
             cardWidth={4}
             products={products}
+        />,
+        <Certifications
+            title=""
+            text1=""
+            text2=""
+            cardWidth={3}
+            certifications={certifications}
         />
     )
 }
