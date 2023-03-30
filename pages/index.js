@@ -231,10 +231,6 @@ let certifications = [
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
-      <Head />
-      {
-
-      }
       <LandingHero
         opacity={0.5}
         siteName="CFP DON BOSCO"
@@ -277,9 +273,6 @@ export default function Home({ datiArticoli }) {
         cardWidth={3}
       />
       <Certifications
-            title=""
-            text1=""
-            text2=""
             cardWidth={3}
             certifications={certifications}
         />
