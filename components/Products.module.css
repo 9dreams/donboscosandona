@@ -1,13 +1,9 @@
-
-
-
 .immagine {
     width: 50px;
     background-size: 100px;
 }
 
 .card{
-    min-height: 660px;
     margin-bottom: 25px;
 }
 

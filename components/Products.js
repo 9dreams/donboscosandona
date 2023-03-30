@@ -1,15 +1,11 @@
 import Container from '@mui/material/Container'
-import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import styles from '/components/Products.module.css'
-import { padding, textAlign } from '@mui/system'
 import Card from '@mui/material/Card'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
-import styles1 from '/dev/fv/job.module.css'
-import Box from '@mui/material/Box'
 
 export default function Products({ title, description, cardWidth, products }) {
     return (
