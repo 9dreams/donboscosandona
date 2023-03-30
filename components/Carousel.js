@@ -72,3 +72,8 @@ export default function MyCarousel({ slides, maxWidth }) {
         </Container>
     )
 }
+
+MyCarousel.defaultProps = {
+    maxWidth: false,
+    height: '90vh'
+}

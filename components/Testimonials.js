@@ -13,7 +13,7 @@ const Testimonials = ({ testimonials, cardWidth }) => {
             <Grid item xs={12} lg={cardWidth}>
             <div className={styles.card} key={index}>
               <div className={styles.cardHeader}>
-                <img src={testimonial.image} alt={testimonial.name} />
+                <img src={testimonial.imageUrl} alt={testimonial.name} />
               </div>
               <div className={styles.virgolette}>
                 <img src="https://i.ibb.co/yP6QVQk/virgolette.png" alt="" />

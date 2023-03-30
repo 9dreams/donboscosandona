@@ -4,13 +4,15 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
-import maxWidth from '@mui/system'
 import Paper from '@mui/material/Paper'
 import Link from 'next/link'
+import Chip from '@mui/material/Chip';
+import CallIcon from '@mui/icons-material/Call';
+import EmailIcon from '@mui/icons-material/Email';
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 
-export default function Team({ members, cardWidth, title, description }) {
+export default function Team({ members, cardWidth, title, description, maxWidth }) {
     return (
         <Container maxWidth={maxWidth} sx={{ marginTop: '3rem', marginBottom: '5rem' }}>
             <Grid>
@@ -53,12 +55,17 @@ export default function Team({ members, cardWidth, title, description }) {
                                         <Typography variant="subtitle1" color="text.secondary">
                                             {member.description1}
                                         </Typography>
+                                        
+
                                         <Grid
                                             container
                                             direction="row"
                                             justifyContent="space-evenly"
                                             alignItems="center"
                                         >
+                                            
+                                            <Chip icon={<CallIcon />} label={member.phone} color="primary" size="small"/>
+                                            <Chip icon={<EmailIcon />} label={member.email}style={{ marginTop: '5%' }}  color="success" size="small"/>
                                             {member.twitterUrl ? (
                                                 <Link href={member.twitterUrl} style={{ marginTop: '10%' }}>
                                                     <center>
@@ -99,4 +106,8 @@ export default function Team({ members, cardWidth, title, description }) {
             </Grid>
         </Container>
     )
+}
+
+Team.defaultProps = {
+    maxWidth: 'lg'
 }
