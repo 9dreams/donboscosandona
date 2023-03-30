@@ -17,44 +17,40 @@ import { getDatiArticoli } from '/lib/articoli'
 // I punti di forza
 const features = [
   {
-    title: "Progetto educativo",
-    image: "https://www.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png",
-    description: "Un progetto chiaro e affidabile per far crescere e diventare uomini. "
+    
+    image: "/images/energie/pci.jpg",
+    description: "installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e di apparecchiature idrosanitarie "
   },
   {
     title: "Didattica attiva",
-    image: "https://www.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png",
-    description: "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti."
+    image: "/images/energie/pci.jpg",
+    description: "Effettua l’installazione, la manutenzione e il collaudo di impianti tecnologici ad eelvata efficienza energetica (fotovoltaico, solare, termico, …) compresi quelli di building automation per il risparmio energetico"
   },
   {
     title: "Laboratori",
     image: "https://www.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.png",
-    description: "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro."
+    description: "Esegue i disegni al CAD con la distribuzione dei vari componenti"
   },
-  {
-    title: "Servizi al lavoro",
-    image: "https://www.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png",
-    description: "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore."
-  }
+ 
 ]
 
 
 // slides per il carousel
 let slides = [
   {
-    titolo: 'Fatti un bel giro',
-    descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine: '/images/news/virtual-tour.jpeg'
+    titolo: 'Il Laboratorio di energie',
+    descrizione: 'il nostro laboratorio di energie ! ',
+    immagine: '/images/energie/fotolabidra.JPG'
   },
   {
-    titolo: 'Progetto GIVE',
-    descrizione: "Il 15 e 16 maggio il nostro Centro ospiterà l'edizione 2023 di GIVE (GROHE Installer Vocational Training and Education), il programma di formazione dedicato ai giovani installatori idraulici: un ambiente dedicato al training pratico proposto dai professionisti di GROHE.",
-    immagine: '/images/news/2023/grohe.jpeg'
+    titolo: 'I nostri ragazzi al lavoro ',
+    descrizione: "3 ragazzi del settore energetico che lavorano nel proprio impianto ",
+    immagine: '/images/energie/fotolavoro.JPG'
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
-    descrizione: "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    immagine: '/images/news/2023/concorso-nazionale-elettrico.jpg'
+    titolo: 'Pannello ',
+    descrizione: "Un pannello finito ",
+    immagine: '/images/energie/fotoimpianto.JPG'
   },
 ]
 
@@ -118,6 +114,12 @@ export default function Home({ datiArticoli }) {
         description="OPERATORE DI IMPIANTI TERMO-IDRAULICI"
         imageUrl="https://www.donboscosandona.it/img/column/33b02f7f8b0e7fe98cd0ea48723c1b75b9b12b18.jpg?1539976223"
       />
+          <Features
+        title="Qualifica triennale"
+        description="Cosa acquisisci conseguendo la qualifica triennale al CFP DON BOSCO"
+        features={features}
+        cardWidth={4}
+      /> 
       <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem'  }}>
         <Grid container spacing={4}>
           {
@@ -133,13 +135,8 @@ export default function Home({ datiArticoli }) {
         cardWidth={4}
         products={settori}
       />
-      <Carousel slides={slides2} maxWidth={false} />
-      <Features
-        title="I nostri punti di forza"
-        description="Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!"
-        features={features}
-        cardWidth={3}
-      />
+    
+  
       
     
       
