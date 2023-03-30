@@ -14,34 +14,26 @@ import Post from '/components/Post'
 
 import { getDatiArticoli } from '/lib/articoli'
 
-// Voci del menù per il componente LandingHero
-let menu = [
-  { title: 'Chi siamo', url: '/chi-siamo' },
-  { title: 'Contatti', url: '/contatti' },
-  { title: 'Dove siamo', url: '/dove-siamo' },
-  { title: 'Trasparenza', url: '/trasparenza' },
-]
-
 // I punti di forza
 const features = [
   {
     title: "Progetto educativo",
-    image: "https://www.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png",
+    imageUrl: "https://www.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png",
     description: "Un progetto chiaro e affidabile per far crescere e diventare uomini. "
   },
   {
     title: "Didattica attiva",
-    image: "https://www.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png",
+    imageUrl: "https://www.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png",
     description: "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti."
   },
   {
     title: "Laboratori",
-    image: "https://www.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.png",
+    imageUrl: "https://www.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.png",
     description: "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro."
   },
   {
     title: "Servizi al lavoro",
-    image: "https://www.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png",
+    imageUrl: "https://www.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png",
     description: "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore."
   }
 ]
@@ -93,7 +85,7 @@ let members = [
     role: "VICE-PRESIDE / TUTOR DIGITALE",
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
+    imageUrl: "/images/team/A_Ferro.png",
  
     email:"a.ferro@donboscosandona.it",
     phone: '0421 111 222',
@@ -103,7 +95,7 @@ let members = [
     role: "RESPONSABILE DELLA DISCIPLINA",
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+    imageUrl: "/images/team/A_dambrosio.png",
     email:"l.hdggfd@donboscosandona.it",
     phone: '12365598445',
   },
@@ -112,7 +104,7 @@ let members = [
     role: "SEGRETERIA DIDATTICA",
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+    imageUrl: "/images/team/segretarie.png",
     email:"c.cosocoso@donboscosandona.it",
     phone: '0421 123456338 950',
   },
@@ -121,7 +113,7 @@ let members = [
     role: "ORIENTAMENTO IN ENTRATA / SOSTEGNO",
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://www.webboh.it/wp-content/uploads/2020/10/Surry-758x424.jpg",
+    imageUrl: "/images/team/Pasqualetto.png",
     email:"c.cosinocoso@donboscosandona.it",
     phone: '123456 338 950',
   },
@@ -130,7 +122,7 @@ let members = [
     role: "COORDINATORE STAGE / CORSI PER ADULTI",
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
+    imageUrl: "/images/team/cicogna.png",
     email:"hhh.coso@donboscosandona.it",
     phone: '0421 338 950',
   },
@@ -194,18 +186,18 @@ let postInEvidenza = {
 const testimonials = [
   {
     name: "Michele Venturato",
-    image: "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.png",
+    imageUrl: "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.png",
     text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
     social: "@Google"
   },
   {
-    image: "/images/home/recensioni/bob.png",
+    imageUrl: "/images/home/recensioni/bob.png",
     name: "Daniele Mladenovic",
     text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
     social: "@BOBTEK"
   },
   {
-    image: "https://i.ibb.co/dpQrpNt/img3.jpg",
+    imageUrl: "https://i.ibb.co/dpQrpNt/img3.jpg",
     name: "Pino West",
     text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
     social: "@PINOWEST"
@@ -224,10 +216,9 @@ export default function Home({ datiArticoli }) {
         siteName="CFP DON BOSCO"
         title="Centro di Formazione Professionale don Bosco"
         description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
-        buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
+        buttonUrl='j'
         buttonText="Guarda il video"
         imageUrl="/images/home/matteo_attacco_hacker.jpg"
-        menu={menu}
       />
       <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem'  }}>
         <Grid container spacing={4}>
@@ -240,14 +231,14 @@ export default function Home({ datiArticoli }) {
           }
         </Grid>
       </Container>
-      <Carousel slides={slides} maxWidth={false} />
+      <Carousel slides={slides} />
       <Products
         title="I settori"
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
         products={settori}
       />
-      <Carousel slides={slides2} maxWidth={false} />
+      <Carousel slides={slides2} />
       <Features
         title="I nostri punti di forza"
         description="Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!"

@@ -121,17 +121,26 @@ export default function LandingHero(props) {
                             <Typography component="h5" color="inherit" paragraph>
                                 {props.description}
                             </Typography>
-                            <Button
-                                variant="contained"
-                                size="large"
-                                color="error"
-                                href={props.buttonUrl}
-                                sx={{
-                                    marginTop: '1rem',
-                                }}
-                            >
-                                {props.buttonText}
-                            </Button>
+                           
+
+
+                                {props.buttonUrl && 
+                           
+                                    <Button
+                                        variant="contained"
+                                        size="large"
+                                        color="error"
+                                        href={props.buttonUrl}
+                                        sx={{
+                                            marginTop: '1rem',
+                                        }}
+                                    >
+                                        {props.buttonText}
+                                    </Button>
+                                    }
+
+                        
+                         
                         </Box>
                     </Grid>
                 </Grid>
@@ -139,4 +148,14 @@ export default function LandingHero(props) {
             </Paper>
         </Container>
     )
+}
+
+LandingHero.defaultProps = {
+    menu: [
+        { title: 'Chi siamo', url: '/chi-siamo' },
+        { title: 'Contatti', url: '/contatti' },
+        { title: 'Dove siamo', url: '/dove-siamo' },
+        { title: 'Privacy', url: '/privacy' },
+        { title: 'Trasparenza', url: '/trasparenza' },
+    ]
 }
