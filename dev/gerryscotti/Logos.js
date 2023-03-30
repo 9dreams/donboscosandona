@@ -19,16 +19,16 @@ export default function TheLogo(props) {
 
             >
 
-                <Grid item xs={4} >
+                <Grid item xs={12} lg={6}>
 
-                    <img src={props.logoUrl} width="45%" />
+                    <img src={props.logoUrl} width="30%" />
 
                 </Grid>
 
             
-            <Grid item xs={4} >
+            <Grid item xs={12}  lg={6} >
 
-                <img src={props.sponsorUrl} width="160%" />
+                <img src={props.sponsorUrl} width="100%" />
 
             </Grid>
             </Grid>
