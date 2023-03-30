@@ -48,19 +48,19 @@ const features = [
 //inizio carousel
 let slides = [
     {
-        titolo: 'Fatti un bel giro',
-        descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+        titolo: ' lavoro!',
+        descrizione: 'Uno dei nostri studenti a lavoro, che opera sul suo pannello personale ',
         immagine: '/images/elettrico/IMG_9702.JPG'
     },
     {
-        titolo: 'Aula cad ',
-        descrizione: "Questa è l'aula di cad del settore elettrico con a disposizione molti computer per tutti i lavori di cad e Spac ",
+        titolo: 'Aula domotica ',
+        descrizione: "Questa è l'aula di domotica del settore elettrico con a disposizione molti computer per tutti i lavori di progettazione domotica ",
         immagine: '/images/elettrico/IMG_9721--.JPG'
     },
     {
-        titolo: "",
-        descrizione: "Il 15 e 16 maggio il nostro Centro ospiterà l'edizione 2023 di GIVE (GROHE Installer Vocational Training and Education), il programma di formazione dedicato ai giovani installatori idraulici: un ambiente dedicato al training pratico proposto dai professionisti di GROHE.",
-        immagine: '/images/elettrico/IMG_9725.JPG'
+        titolo: "Laboratorio Elettrico",
+        descrizione: "Queste sono le aule per tutti i nostri futuri elettricisti, con atrezzi e strumentazioni molto professionali ",
+        immagine: '/images/elettrico/IMG_9717.JPG'
     },
 ]
 
@@ -78,7 +78,7 @@ export default function Elettrico() {
             <LandingHero
                 opacity={0.5}
                 siteName="CFP DON BOSCO"
-                title="Settotre Elettrico"
+                title="Settore Elettrico"
                 description="OPERATORE ELETTRICO"
                 buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
                 buttonText="Guarda il video"
