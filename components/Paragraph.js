@@ -17,9 +17,11 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                 <CardMedia
                     component="img"
                     image={imageUrl}
+                    
                     width="100%"
                     sx={{
-                        marginBottom: '3rem',
+                        marginBottom: '2rem',
+                        borderRadius:'1rem'
                     }}
                 />
             }
@@ -29,7 +31,7 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                 </Typography>
             }
             {subtitle &&
-                <Typography variant="h5" component="h1" gutterBottom>
+                <Typography variant="h5" component="h1" gutterBottom >
                     {subtitle}
                 </Typography>
             }
@@ -42,7 +44,7 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                     columnGap: '3rem',
                 }}
             >
-                <Typography variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom sx={{marginBottom:"100px"}}>
                     {children}
                 </Typography>
             </Container>

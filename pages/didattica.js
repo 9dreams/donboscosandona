@@ -1,6 +1,6 @@
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
-
+import Paragraph from '@/components/Paragraph'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -45,37 +45,46 @@ let slides = [
 
 let slides2 = slides
 
-
-
-
 export default function Home({ datiArticoli }) {
     return (
         <Layout>
             <LandingHero
                 opacity={0.5}
                 siteName="CFP DON BOSCO"
-                title="Settore Informatico"
-                description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
-                buttonUrl={'https://youtu.be/0Fh458fo8SQ'}
+                title="Didatica"
+                description="Scopri qui le modalità didattiche al nostro CFP Don Bosco"
+                buttonUrl={'https://youtu.be/jRDREPCdpCE'}
                 buttonText="Guarda il video"
-                imageUrl="/images/informatico/settore-informatico.jpg"
+                imageUrl="https://www.themapreport.com/wp-content/uploads/2020/09/118912576_10160178165764573_6159701433539309627_o-OK.jpg"
                 menu={menu}
             />
 
-            <Typography variant='h4' sx={{ margin: "20px", marginBottom: "100px" }}>qui ci va il paragrafo di didattica attiva</Typography>
-            <Typography variant='subtitle1' sx={{textAlign:"center", margin:"200px"}}>
+            
+
+            <Paragraph
+                title="Il Progetto Ipad"
+                subtitle="Formazione professionale, innovazione e futuro"
+                imageUrl="https://www.donboscosandona.it/img/column/10045d7aacca74ad7094871071f20f07e0c8397d.jpg?1598797184"
+                backgroundColor="white"
+                columnCount={1}
+                maxWidth="lg"
+                
+                
+            >
                 Il nostro Centro sta vivendo da alcuni anni un’esperienza di innovazione pedagogica e didattica che si basa su un modello attivo nel quale l’insegnante, da fornitore di conoscenze, diventa facilitatore di processi di ricerca e di interazione significativa.
-
                 Il mondo, noi stessi e gli altri sono le fonti di un processo di apprendimento più ampio, che si concretizza con la ricerca e l’utilizzo di risorse disponibili , in funzione di mandati di lavoro complessi ed interdisciplinari.
-
                 Ai nostri giovani vengono assegnati compiti reali, da svolgere in gruppo, e viene richiesta la produzione di oggetti multimediali che uniscono vari ambiti disciplinari.
-
                 L’adozione del tablet nella didattica e un grande investimento tecnologico nella nostra infrastruttura di rete permettono ai nostri giovani di sperimentare modalità didattiche attive quali la flipped classroom, il cooperative learning, il peer to peer e altro ancora.
-
                 L’utilizzo dell’iPad richiede il rispetto di alcune condizioni, sottoscritte a inizio anno da genitori e giovani.
-            </Typography>
+
+            </Paragraph>
         </Layout>
 
 
     )
 }
+
+//sistemare e scegliere l'immagine
+//abbellire la pagina aggiungendo cose
+//modificare le posizioni dei file
+//consegnare
