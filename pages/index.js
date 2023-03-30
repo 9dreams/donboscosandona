@@ -11,6 +11,7 @@ import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
+import Certifications from '@/components/Certifications'
 
 import { getDatiArticoli } from '/lib/articoli'
 
@@ -204,6 +205,29 @@ const testimonials = [
   },
 ]
 
+let certifications = [
+  {
+      logoUrl: '/images/certification/iso.png',
+      text1: 'ISO 9001:2015',
+      text2: 'Reg. n. 2593-A - Settore EA: 37'
+  },
+  {
+      logoUrl: '/images/certification/kiwa.png',
+      text1: 'Progettazione ed erogazione di attività formative e di orientamento'
+  },
+  {
+      logoUrl: '/images/certification/knx.png',
+      text1: 'Authorised Training Center'
+  },
+  {
+      logoUrl: '/images/certification/regioneveneto.png',
+      text1: 'Cod. A033 - Formazione Iniziale,',
+      text2: 'Superiore e Orientamento'
+  },
+
+]
+
+
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
@@ -252,6 +276,13 @@ export default function Home({ datiArticoli }) {
         members={members}
         cardWidth={3}
       />
+      <Certifications
+            title=""
+            text1=""
+            text2=""
+            cardWidth={3}
+            certifications={certifications}
+        />
     </Layout>
   )
 }
