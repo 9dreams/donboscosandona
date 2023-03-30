@@ -1,4 +1,5 @@
 import { Container, Typography, CardMedia } from "@mui/material"
+import styles from '/components/Paragraph.module.css'
 
 export default function Paragraph({ title, subtitle, children, maxWidth, columnCount, backgroundColor, imageUrl, sx }) {
     return (
@@ -24,16 +25,17 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                 />
             }
             {title &&
-                <Typography variant="h4" component="h1" gutterBottom>
+                <Typography variant="h4" component="h1" gutterBottom >
                     {title}
                 </Typography>
             }
             {subtitle &&
-                <Typography variant="h5" component="h1" gutterBottom>
+                <Typography variant="h5" component="h1" gutterBottom >
                     {subtitle}
                 </Typography>
             }
             <Container
+                className={styles.scritte}
                 disableGutters={true}
                 sx={{
                     maxWidth: false,
@@ -42,7 +44,7 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                     columnGap: '3rem',
                 }}
             >
-                <Typography variant="body1" gutterBottom>
+                <Typography variant="body1" gutterBottom >
                     {children}
                 </Typography>
             </Container>
@@ -55,3 +57,4 @@ Paragraph.defaultProps = {
     maxWidth: "lg",
     backgroundColor: false
 }
+
