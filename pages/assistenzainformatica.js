@@ -70,13 +70,13 @@ export default function Home({ datiArticoli }) {
 
             <Grid container spacing={12}>
                 <Grid item xs={4}>
-                    <Image src='/images/informatico/9dreams.png' width={350} height={165}style={{ paddingTop: 43 }} />
+                    <Image src='/images/informatico/9dreams.png' width={350} height={165} style={{ paddingTop: 43 }} />
                 </Grid>
                 <Grid item xs={4}>
-                    <Image src='/images/informatico/developer.png' width={350} height={145} style={{ paddingTop: 43 }}/>
+                    <Image src='/images/informatico/developer.png' width={350} height={145} style={{ paddingTop: 43 }} />
                 </Grid>
                 <Grid item xs={4}>
-                    <Image src='/images/informatico/youtube.png' width={350} height={132} style={{ paddingTop: 43 }}/>
+                    <Image src='/images/informatico/youtube.png' width={350} height={132} style={{ paddingTop: 43 }} />
                 </Grid>
 
             </Grid>
@@ -302,14 +302,14 @@ export default function Home({ datiArticoli }) {
             </Container>
 
             <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Image
-                src="/images/informatico/tabella-ore.png"
-                alt=""
-                width={1920}
-                height={1500}
-                
-            />
-            </Container><br /><br/><br/><br/>
+                <Image
+                    src="/images/informatico/tabella-ore.png"
+                    alt=""
+                    width={1920}
+                    height={1500}
+
+                />
+            </Container><br /><br /><br /><br />
 
 
         </Layout>
