@@ -1,9 +1,7 @@
 import Container from '@mui/material/Container'
-import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
-import styles from 'dev/alexalex/Products.module.css'
-import { padding, textAlign } from '@mui/system'
+import styles from '/components/Products.module.css'
 import Card from '@mui/material/Card'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
@@ -23,7 +21,7 @@ export default function Products({ title, description, cardWidth, products }) {
                     products.map(
                         (product) => (
                             <Grid item md={cardWidth}>
-                                <CardActionArea component="a" href={product.url}>
+                                <CardActionArea className={styles.card} component="a" href={product.url}>
                                     <Card sx={{ display: 'flex' }} elevation={0}>
                                         <CardContent sx={{ flex: 1 }}>
                                             <CardMedia
@@ -41,6 +39,13 @@ export default function Products({ title, description, cardWidth, products }) {
                                             <Typography variant="subtitle1" style={{ padding: '10px' }} color="inherit" paragraph>
                                                 {product.description}
                                             </Typography>
+                                            {product.rif &&
+                                            <Typography variant="subtitle1" style={{ padding: '10px', }} color="inherit" paragraph >
+                                                <div className={styles.label} style={{ backgroundColor: product.labelColor }} >
+                                                    <p>{product.rif}</p>
+                                                </div>
+                                            </Typography>
+                                            }
                                         </CardContent>
                                     </Card>
                                 </CardActionArea>
