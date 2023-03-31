@@ -5,6 +5,8 @@ import LandingHero from '/components/LandingHero2.js'
 import Products from '/components/Products'
 import Paragraph from "/components/Paragraph"
 import { Typography } from '@mui/material'
+import Box from '@mui/material/Box'
+import { grey } from '@mui/material/colors'
 
 // Voci del menù per il componente LandingHero
 
@@ -48,43 +50,43 @@ let products = [
         title: "Configurazione dispositivi",
         category: "",
         description: "Se avete recentemente acquistato un dispositivo, e vi serve aiuto per configurarlo o per passare i dati da un dispositivo all'altro, noi possiamo aiutarvi! ",
-        immagineUrl: "/images/assistenza/confdisp.jpg",
-        url: "https://dev.donboscosandona.it/informatico"
+        immagineUrl: "/images/assistenza/stampantecute.jpg",
+        url: "#"
     },
     {
         title: "Sostituzione componenti hardware computer",
         category: "",
         description: "Un computer risulta lento ed obsoleto? Non vi preoccupate, basta mandare una richiesta di assistenza e noi vi porteremo un computer sostituvo con al suo interno ogni applicazione che vi può servire, nel mentre che sistemeremo/cambieremo il computer obsoleto!",
-        immagineUrl: "/images/assistenza/sostituzione.png",
-        url: "https://dev.donboscosandona.it/informatico"
+        immagineUrl: "/images/assistenza/comphardware.png",
+        url: "#"
     },
     {
         title: "Assistenza generale",
         category: "",
         description: "Se vi serve una mano con un dispositivo che dal nulla smette di funzionare o ha qualche funzione disattivata, possiamo aiutarvi! Come ad esempio il collegamento della stampante alla rete wi-fi per la stampa wireless!",
-        immagineUrl: "/images/assistenza/generale.png",
-        url: "https://dev.donboscosandona.it/informatico"
+        immagineUrl: "/images/assistenza/assistenza2pc.webp",
+        url: "#"
     },
     {
         title: "Installazione sistema operativo Computer",
         category: "",
         description: "Se un computer ha bisogno di essere aggiornato, con un nuovo sistema operativo, basta mandare una richiesta di assistenza, e noi, quando avremo tempo libero, verremo a darvi una mano senza esitare! ",
-        immagineUrl: "https://gibilogic.com/wp-content/themes/yootheme/cache/7d/gibilogic-assistenza-informatica-vantaggi-7d396f3c.png",
-        url: "https://dev.donboscosandona.it/informatico"
+        immagineUrl: "/images/assistenza/installazionesist.png",
+        url: "#"
     },
     {
         title: "Pulizia Computer",
         category: "",
         description: "Un computer è troppo lento o fa rumore? Mandate una richiesta di assistenza, e noi porteremo un computer sostitutivo nel mentre che puliremo e metteremo apposto il computer!",
         immagineUrl: "/images/assistenza/pulizia.jpg",
-        url: "https://dev.donboscosandona.it/informatico"
+        url: "#"
     },
     {
         title: "Assistenza iPad",
         category: "",
         description: "Se un iPad ha problemi, o non va qualche funzione che dovrebbe andare, noi arriveremo in vostro soccorso e cercare di darvi una mano al massimo delle nostre possibilità!",
-        immagineUrl: "/images/assistenza/ipad.jpg",
-        url: "https://dev.donboscosandona.it/informatico"
+        immagineUrl: "/images/assistenza/assistenzaipad.png",
+        url: "#"
     },
 ]
 
@@ -151,20 +153,19 @@ export default function Home() {
                     products={products}
                     cardWidth={4}
                 />
-                <center><img src="/images/assistenza/valutazioni.png" /></center>
-                <center><Typography variant="h6" gutterBottom>
-                    Questa foto mostra quante assistenza abbiamo ricevuto fino ad ora quest'anno. Come si vede, le valuazioni sonon ottime, e tutti i clienti sono contenti dei nostri risultati.
-                </Typography></center>
+                    <Paragraph
+                        backgroundColor="#D2D2D2"
+                        columnCount={1}
+                        maxWidth="lg"
+                    >
+                        <center><img src="/images/assistenza/valutazioni.png" /></center>
+                    </Paragraph>
+
+
+
 
 
             </Container>
-            <Products
-                title="Documenti utili"
-                description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
-                cardWidth={4}
-                products={documenti}
-            />
-
         </Layout>
     )
 }
