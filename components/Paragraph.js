@@ -4,6 +4,7 @@ import styles from '/components/Paragraph.module.css'
 export default function Paragraph({ title, subtitle, children, maxWidth, columnCount, backgroundColor, imageUrl, sx }) {
     return (
         <Container
+            className={styles.scritte2}
             maxWidth={maxWidth}
             sx={{
                 marginTop: '2rem',
@@ -35,8 +36,8 @@ export default function Paragraph({ title, subtitle, children, maxWidth, columnC
                 </Typography>
             }
             <Container
-                className={styles.scritte}
                 disableGutters={true}
+                className={styles.scritte}
                 sx={{
                     maxWidth: false,
                     marginTop: '2rem',

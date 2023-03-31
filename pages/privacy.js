@@ -75,9 +75,11 @@ export default function Home() {
                 </Link>
             </Paragraph>
             <Paragraph
-                title="INFORMATIVA SUL TRATTAMENTO DEI DATI PERSONALI AI SENSI DELL ART. 13 DEL GDPR (GENERAL DATA PROTECTION REGULATION) 2016/679"
-                subtitle="Perché queste informazioni"
+                title="Informativa sul trattamento dei dati personali "
+                subtitle="Ai sensi del Art. 13 del GDPR (General Data Protection Regulation) 2016/679 "
+                
             >
+                <h3>Perché queste informazioni</h3>
                 Ai sensi dell’art. 13 del Regolamento UE 2016/679 (d’ora in poi Regolamento o anche solo GDPR) ti descriviamo le modalità di trattamento dei dati personali degli utenti che consultano questo sito web.
                 <br />Ti precisiamo prima di tutto che il sito internet www.donboscosandona.it è di titolarità e gestito da Associazione CFP CNOS-FAP DON BOSCO, via XIII Martiri, 86 - 30027 San Donà di Piave (VE).
                 <br />Raccogliamo i dati da te inseriti e i dati di navigazione per l’esecuzione del contratto.
