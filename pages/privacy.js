@@ -6,6 +6,8 @@ import LandingHero from '/components/LandingHero2'
 import Products from '/components/Products'
 import Paragraph from '/components/Paragraph'
 
+import styles from '/components/Paragraph.module.css'
+
 
 let documenti = [
     {
@@ -89,12 +91,13 @@ export default function Home() {
                 <br />La presente informativa non è da considerarsi valida per altri siti web eventualmente consultabili tramite links presenti su questo sito internet, rispetto ai quali non siamo in alcun modo responsabile.
                 <br />
                 <br />
+            </Paragraph>
 
                 <Paragraph
                     subtitle=" A. IDENTITÀ DI CONTATTO DEL TITOLARE DEL TRATTAMENTO DEI DATI PERSONALI E RESPONSABILE DELLA PROTEZIONE DEI DATI (RPD)"
                     imageUrl=""
                     columnCount={2}
-
+                    className={styles.scritte}
                 >
 
 
@@ -149,9 +152,6 @@ export default function Home() {
 
 
                 </Paragraph>
-
-
-            </Paragraph>
 
             <Paragraph
                 subtitle="DATI REGISTRATI AUTOMATICAMENTE"
