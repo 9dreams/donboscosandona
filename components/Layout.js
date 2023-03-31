@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import Container from '@mui/material/Container'
 
 import styles from './Layout.module.css'
-
+import Logos from '/components/Logos'
 import Footer from '/components/Footer'
 
 export const siteTitle = 'CFP DON BOSCO - San Donà di Piave';
@@ -57,6 +55,11 @@ export default function Layout({ children }) {
                     <meta name="twitter:card" content="summary_large_image" />
                 </Head>
 
+                <Logos
+                    logoUrl="/images/home/logo_donbosco.png"
+                    sponsorUrl="/images/home/loghi_sponsor.png"
+                    color="#FFFFFF"
+                />
                 <main>
                     {children}
                 </main>
