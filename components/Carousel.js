@@ -18,7 +18,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                 marginBottom: '2rem',
             }}
         >
-            <Carousel className={styles.carousel} animation="slide" sx={{height: height}}>
+            <Carousel className={styles.carousel} animation="slide" sx={{height: height + 'vh'}}>
                 {
                     slides.map(
                         (slide) => (
@@ -30,8 +30,8 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
-                                    height: height,
-                                    paddingTop: '10'
+                                    height: height + 'vh',
+                                    paddingTop: (height/3) + 'vh'
                                 }}
                                 elevation={5}
                             >
@@ -77,5 +77,5 @@ export default function MyCarousel({ slides, maxWidth, height }) {
 
 MyCarousel.defaultProps = {
     maxWidth: false,
-    height: '90vh'
+    height: 90
 }
