@@ -69,7 +69,7 @@ export default function Home({ datiArticoli }) {
 
             <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Typography variant="h3" sx={{ color: 'text.secondary' }}>2. I SOGGETTI: LA COMUNITÀ’ EDUCATIVA PASTORALE</Typography>
-            </Container><br/><br/>
+            </Container><br /><br />
 
             <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Typography variant="h5" sx={{ color: 'blue' }}>Una comunità che educa</Typography>
