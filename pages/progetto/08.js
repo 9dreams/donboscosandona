@@ -58,8 +58,8 @@ export default function Home({ datiArticoli }) {
             <LandingHero
                 opacity={0.5}
                 siteName="CFP DON BOSCO"
-                title="Settore Informatico"
-                description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
+                title="Regolamento"
+                description="Relazioni, buone prassi e azioni"
                 buttonUrl={'https://youtu.be/0Fh458fo8SQ'}
                 buttonText="Guarda il video"
                 imageUrl="/images/informatico/settore-informatico.jpg"
