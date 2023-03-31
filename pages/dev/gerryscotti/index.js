@@ -1,4 +1,5 @@
-import Footer from '/dev/gerryscotti/Footer'
+import Layout from '/components/Layout'
+import Logos from '/dev/gerryscotti/Logos'
 
 let socials = [
   { title: 'Facebook', imageUrl: 'https://www.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png', url: 'https://www.facebook.com/donboscosandona/?fref=ts' },
@@ -8,12 +9,12 @@ let socials = [
 ]
 
 let images = [
-  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
-  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
-  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
-  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
-  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
-  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707',  },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707', },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707', },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707', },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707', },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707', },
+  { title: '', imageUrl: 'https://www.donboscosandona.it/img/column/f65e4622afa225a8f6f407cff0b9e616279eea44.jpg?1570719707', },
 
 ]
 
@@ -24,23 +25,16 @@ let menu = [
   { title: 'PAYMENT', url: '/meccanico' },
   { title: 'CONTACT US', url: '/motoristico' },
 ]
-export default function Pagina({ TheFooter }) {
+export default function Pagina() {
   return (
-    <Footer
-      imageUrl="https://immagine di sfondo"
-      color="#272727"
-      opacitycolor="1"
-      opacity={1}
-      title1="About Us"
-      description1="Footer che apparirà sul fondo di tutte le pagine del sito. Sarà possibile passare al componente un'immagine di sfondo opzionale oppure un colore di sfondo. L'attributo opaciy permetterà di sovrapporre all'immagine un Box con il colore di sfondo e un'opacità regolabile.
-      La prima colonna sarà destinata a un testo descrittivo, la seconda ai social, la terza a un menù di navigazione grafico (che porta ad es. ai settori).
-      "
-      title2="Social Feed"
-      socials={socials}
-      title3="I Settori"
-      images={images}
-      menu={menu}
-      copyright="Copyright (C) 2023 9dreams Agency."
-    />
+    <Layout>
+      
+      <Logos
+        logoUrl="/images/home/logo_donbosco.png"
+        sponsorUrl="/images/home/loghi_sponsor.png"
+        color="#FFFFFF"
+      />
+      
+    </Layout>
   )
 }
