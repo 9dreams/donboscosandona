@@ -1,12 +1,12 @@
 import styles from "./Testimonials.module.css"
 import { Container, Grid } from '@mui/material'
 
-const Testimonials = ({ testimonials, cardWidth, imgUrl }) => {
+const Testimonials = ({ testimonials, cardWidth, imageUrl }) => {
   const { name, text, image, social } = testimonials;
 
 
   return (
-    <div className={styles.testimonialsContainer} style={{'background-image': 'url(' + imgUrl + ')'
+    <div className={styles.testimonialsContainer} style={{'background-image': 'url(' + imageUrl + ')'
   }}>
       <Container maxWidth="lg">
         <Grid container spacing={2} className={styles.grid}>

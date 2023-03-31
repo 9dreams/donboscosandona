@@ -268,7 +268,7 @@ export default function Home({ datiArticoli }) {
       <Testimonials
         testimonials={testimonials}
         cardWidth={4}
-        imgUrl="https://images8.alphacoders.com/948/948649.jpg"
+        imageUrl="https://images8.alphacoders.com/948/948649.jpg"
       />
       <Team
         title="Contatti"
