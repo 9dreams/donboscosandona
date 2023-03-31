@@ -59,7 +59,23 @@ let slides = [
   },
 ]
 
-let slides2 = slides
+let slides2 = [
+  {
+    titolo: 'Acqua della settimana',
+    descrizione: 'Argomento nel buongiorno della settimana',
+    immagine: '/images/news/2023/acqua-della-sett.jpg'
+  },
+  {
+    titolo: 'Gita a Torino delle classi prime e seconde',
+    descrizione: "In questa gita si visiterà tutta la città di Torino e l'oratorio Don Bosco",
+    immagine: '/images/news/2023/gita-torino.png'
+  },
+  {
+    titolo: 'Gita scolastica a Roma',
+    descrizione: "Con i nostri ragazzi più grandi visiteremo alcuni importanti posti nella magnifica città di Roma",
+    immagine: '/images/news/2023/gita-roma.jpg'
+  },
+]
 
 // Il nostro team
 let members = [
