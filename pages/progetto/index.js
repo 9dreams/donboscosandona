@@ -12,6 +12,7 @@ import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
 import { Typography } from '@mui/material'
+import Paragraph from '/components/Paragraph'
 
 import { getDatiArticoli } from '/lib/articoli'
 
@@ -50,13 +51,28 @@ export default function Home({ datiArticoli }) {
       <LandingHero
         opacity={0.5}
         siteName="CFP DON BOSCO"
-        title="Centro di Formazione Professionale don Bosco"
+        title="Progetto educativo"
         description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
         buttonUrl='j'
         buttonText="Guarda il video"
-        imageUrl="/images/home/matteo_attacco_hacker.jpg"
+        imageUrl="/images/progetto/foto-home.jpg"
       />
-      
+      <Paragraph>
+        Il Progetto Educativo del CNOS-FAP CFP Don Bosco si propone come risposta alle richieste dei genitori e alle esigenze di formazione dei giovani di un ampio contesto territoriale. È uno strumento che mette in luce l’identità del Centro, una guida che delinea le strategie e gli strumenti finalizzati al raggiungimento del successo scolastico, un testo che presenta quei valori umani e cristiani nei quali la Comunità Educativa si riconosce. Conformemente all’insegnamento di don Bosco, offre un disegno di educazione al futuro che investe sull’intelligenza (anche quella delle mani) e sulle potenzialità di ciascuno.<br /><br />
+        <a href="/progetto/01">1 Identità del Centro Salesiano</a><br /><br />
+        <a href="/progetto/02">2 I soggetti</a><br /><br />
+        <a href="/progetto/03">3 Il coordinamento</a><br /><br />
+        <a href="/progetto/04">4 Il patto educativo</a><br /><br />
+        <a href="/progetto/05">5 Gli obiettivi</a><br /><br />
+        <a href="/progetto/06">6 Le azioni educative</a><br /><br />
+        <a href="/progetto/07">7 Metodologie e strumenti didattici</a><br /><br />
+        <a href="/progetto/08">8 Il regolamento</a><br /><br />
+        <a href="/progetto/09">9 Attività promozionali</a><br /><br />
+        <a href="/progetto/10">10 Valutazione</a>
+      </Paragraph>
+
+
+
     </Layout>
   )
 }
