@@ -21,22 +21,22 @@ import { getDatiArticoli } from '/lib/articoli'
 const features = [
     {
         title: "Progetto educativo",
-        image: "https://www.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png",
+        image: "https://www.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.jpg",
         description: "Un progetto chiaro e affidabile per far crescere e diventare uomini. "
     },
     {
         title: "Didattica attiva",
-        image: "https://www.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png",
+        image: "https://www.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.jpg",
         description: "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti."
     },
     {
         title: "Laboratori",
-        image: "https://www.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.png",
+        image: "https://www.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.jpg",
         description: "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro."
     },
     {
         title: "Servizi al lavoro",
-        image: "https://www.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png",
+        image: "https://www.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.jpg",
         description: "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore."
     }
 ]
@@ -142,41 +142,84 @@ let members = [
 
 let settori = [
     {
-        title: "Elettrico",
-        category: "QUALIFICA DI OPERATORE ELETTRICO",
-        description: "Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/42480c58c90ada8ff75c443fdde83ae71fea75ac.jpg?1539529685",
-        url: "https://www.donboscosandona.it/elettrico"
+        title: "Fusione2023",
+        category: "Fusione per incorporazione nel Centro di Formazione CNOS-FAP BEARZI di sette Associazione civilmente riconosciute operanti nella formazione professionale",
+        description: "",
+        immagineUrl: "/images/trasparenza/Fusione.jpg",
+        url: "/docs/trasparenza/Fusione_2023.zip"
     },
     {
-        title: "Energia",
-        category: "QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI",
-        description: "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/417afaa0f0697f0f0aabf9ccf61030769cb76f14.jpg?1539529180",
-        url: "https://www.donboscosandona.it/energia"
+        title: "Verbale 24 febbraio 2023",
+        category: "Verbale assemblea 24 Febbraio 2023 Approvazione del Progetto di Fusione",
+        description: "",
+        immagineUrl: "/images/trasparenza/Verbale.jpg",
+        url: "/docs/trasparenza/Verbale_24_febbraio_2023.pdf"
     },
     {
-        title: "Informatico",
-        category: "DIPLOMA DI TECNICO INFORMATICO",
-        description: "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/97f264e9d16a0856dd2cb973630af1cac4426f73.jpg?1539529314",
-        url: "https://www.donboscosandona.it/informatico"
+        title: "Carta dei Servizi",
+        category: "Carta dei servizi",
+        description: "",
+        immagineUrl: "/images/trasparenza/CartaDeiServizi.jpg",
+        url: "/docs/trasparenza/Carta_dei_Servizi.pdf"
     },
     {
-        title: "Meccanico",
-        category: "DIPLOMA DI TECNICO PER LA CONDUZIONE E LA MANUTENZIONE DI IMPIANTI AUTOMATIZZATI",
-        description: "Realizza lavorazioni al tornio, fresatrice e macchine utensili in generale. Partendo dal progetto realizzato con il CAD effettua la programmazione delle macchine a controllo numerico. Realizza saldature ad arco, TIG, MAG, taglio al plasma.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/b0bd034769ac3471bf375239f1e64e39f5684aa6.jpg?1539523300",
-        url: "https://www.donboscosandona.it/meccanico"
+        title: "Bilancio 2021 formato CEE",
+        category: "Bilancio 2021",
+        description: "",
+        immagineUrl: "/images/trasparenza/Bilancio.jpg",
+        url: "/docs/trasparenza/Bilancio_2021_formato_CEE.pdf"
     },
     {
-        title: "Motoristico / Carrozzeria",
-        category: "QUALIFICA DI OPERATORE ALLA RIPARAZIONE DI VEICOLI A MOTORE",
-        description: "Effettua riparazioni e manutenzione dei motori e dell'autoveicolo in tutte le sue parti. Effettua diagnosi e prove sui gas di scarico intervenendo per risolvere le anomalie.",
-        immagineUrl: "https://www.donboscosandona.it/img/column/342f349c6bb5bbf9a37b95353df2bee2309b9792.jpg?1539524741",
-        url: "https://www.donboscosandona.it/motoristico"
+        title: "Elenco contributi 2021",
+        category: "Contributi 2021",
+        description: "",
+        immagineUrl: "/images/trasparenza/Contributi.jpg",
+        url: "/docs/trasparenza/Elenco_contributi_2021.pdf"
+    },
+    {
+        title: "Costi contabilizzati 2021 ",
+        category: "Costi contabilizzati 2021",
+        description: "",
+        immagineUrl: "/images/trasparenza/CostiConta.jpg",
+        url: "/docs/trasparenza/Costi_contabilizzati_2021.pdf"
+    },
+    {
+        title: "Griglia di rilevazione ",
+        category: "Griglia di rilevazione",
+        description: "",
+        immagineUrl: "/images/trasparenza/GrigliaDiRilevazione.jpg",
+        url: "/docs/trasparenza/Griglia_di_rilevazione.xlsx"
+    },
+    {
+        title: "Scheda di sintesi ",
+        category: "Scheda di sintesi",
+        description: "",
+        immagineUrl: "/images/trasparenza/SchedaDiSintesi.jpg",
+        url: "/docs/trasparenza/Scheda_di_sintesi.pdf"
+    },
+    {
+        title: "Documento di attestazione ",
+        category: "Documento di attestazione",
+        description: "",
+        immagineUrl: "/images/trasparenza/Attestazione.jpg",
+        url: "/docs/trasparenza/Documento_di_attestazione_(2).pdf"
+    },
+    {
+        title: "Altri contenuti ",
+        category: "Altri contenuti",
+        description: "",
+        immagineUrl: "/images/trasparenza/AltriContenuti.jpg",
+        url: "/docs/trasparenza/Altri_contenuti.pdf"
+    },
+    {
+        title: "Bandi In Corso",
+        category: "Bandi di concorso (al momento non sono presenti bandi di concorso)",
+        description: "",
+        immagineUrl: "/images/trasparenza/x.png",
+        url: ""
     },
 ]
+
 
 let postInEvidenza = {
     titolo: 'Le folli notti di Bilal',
@@ -189,12 +232,12 @@ let postInEvidenza = {
 const testimonials = [
     {
         name: "Michele Venturato",
-        image: "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.png",
+        image: "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.jpg",
         text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
         social: "@Google"
     },
     {
-        image: "/images/home/recensioni/bob.png",
+        image: "/images/home/recensioni/bob.jpg",
         name: "Daniele Mladenovic",
         text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
         social: "@BOBTEK"
@@ -240,21 +283,14 @@ export default function Home({ datiArticoli }) {
                     </Grid>
                 </Grid>
             </Container><br /><br />
+            <Products 
+                title="Documenti Scaricabili"
+                description=""
+                cardWidth={4}
+                products={settori}
+            />
 
-
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Fusione_2023.zip', '_blank')} style={{ fontSize: '30px', width: '1000px', height: '225px', textTransform: 'none' }}>Fusione per incorporazione<br /> nel Centro di Formazione CNOS-FAP BEARZI<br /> di sette Associazione civilmente riconosciute <br /> operanti nella formazione professionale </Button><br /><br /></center>
-
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Verbale_24_febbraio_2023.pdf', '_blank')} style={{ fontSize: '30px', width: '700px', height: '160px', textTransform: 'none' }}>Verbale assemblea 24 Febbraio 2023<br />Approvazione del Progetto di Fusione</Button><br /><br /><br /></center>
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Carta_dei_Servizi.pdf', '_blank')} style={{ fontSize: '30px', width: '300px', height: '100px', textTransform: 'none' }}>Carta dei servizi</Button><br /><br /></center>
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Bilancio_2021_formato_CEE.pdf', '_blank')} style={{ fontSize: '30px', width: '250px', height: '100px', textTransform: 'none' }}>Bilancio 2021</Button><br /><br /></center>
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Elenco_contributi_2021.pdf', '_blank')} style={{ fontSize: '30px', width: '300px', height: '100px', textTransform: 'none' }}>Contributi 2021</Button><br /><br /></center>
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Costi_contabilizzati_2021.pdf', '_blank')} style={{ fontSize: '30px', width: '420px', height: '100px', textTransform: 'none' }}>Costi contabilizzati 2021</Button><br /><br /><br /></center>
-            <center><Button variant="outlined" style={{ fontSize: '30px', width: '350px', height: '100px', textTransform: 'none' }}>Bandi di concorso</Button><br /><br /> <center><Typography variant="h6" sx={{ textAlign: 'center', color: 'text.secondary' }}>(al momento non sono presenti bandi di concorso) </Typography></center><br /></center><br />
-
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Griglia_di_rilevazione.xlsx', '_blank')} style={{ fontSize: '30px', width: '380px', height: '100px', textTransform: 'none' }}>Griglia di rilevazione</Button><br /><br /></center>
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Scheda_di_sintesi.pdf', '_blank')} style={{ fontSize: '30px', width: '310px', height: '100px', textTransform: 'none' }}>Scheda di sintesi</Button><br /><br /></center>
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Documento_di_attestazione_(2).pdf', '_blank')} style={{ fontSize: '30px', width: '500px', height: '100px', textTransform: 'none' }}>Documento di attestazione</Button><br /><br /></center>
-            <center><Button variant="outlined" onClick={() => window.open('/docs/trasparenza/Altri_contenuti.pdf', '_blank')} style={{ fontSize: '30px', width: '290px', height: '100px', textTransform: 'none' }}>Altri contenuti</Button><br /><br /><br /></center>
+            
 
         </Layout>
     )
