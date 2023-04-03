@@ -6,9 +6,6 @@ import LandingHero from '/components/LandingHero2'
 import Products from '/components/Products'
 import Paragraph from '/components/Paragraph'
 
-import styles from '/components/Paragraph.module.css'
-
-
 let documenti = [
     {
         title: "Informativa Privacy Scuola",
@@ -97,7 +94,6 @@ export default function Home() {
                     subtitle=" A. IDENTITÀ DI CONTATTO DEL TITOLARE DEL TRATTAMENTO DEI DATI PERSONALI E RESPONSABILE DELLA PROTEZIONE DEI DATI (RPD)"
                     imageUrl=""
                     columnCount={2}
-                    className={styles.scritte}
                 >
 
 
