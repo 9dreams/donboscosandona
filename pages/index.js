@@ -59,7 +59,23 @@ let slides = [
   },
 ]
 
-let slides2 = slides
+let slides2 = [
+  {
+    titolo: 'Acqua della settimana',
+    descrizione: 'Argomento nel buongiorno della settimana',
+    immagine: '/images/news/2023/acqua-della-sett.jpg'
+  },
+  {
+    titolo: 'Gita a Torino delle classi prime e seconde',
+    descrizione: "In questa gita si visiterà tutta la città di Torino e l'oratorio Don Bosco",
+    immagine: '/images/news/2023/gita-torino.png'
+  },
+  {
+    titolo: 'Gita scolastica a Roma',
+    descrizione: "Con i nostri ragazzi più grandi visiteremo alcuni importanti posti nella magnifica città di Roma",
+    immagine: '/images/news/2023/gita-roma.jpg'
+  },
+]
 
 // Il nostro team
 let members = [
@@ -69,7 +85,7 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg",
-    email:"c.coso@donboscosandona.it",
+    email: "c.coso@donboscosandona.it",
     phone: '0421 3388949874950',
   },
   {
@@ -78,7 +94,7 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02",
-    email:"c.ciaoooo@donboscosandona.it",
+    email: "c.ciaoooo@donboscosandona.it",
     phone: '123456',
   },
   {
@@ -87,8 +103,8 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "/images/team/A_Ferro.png",
- 
-    email:"a.ferro@donboscosandona.it",
+
+    email: "a.ferro@donboscosandona.it",
     phone: '0421 111 222',
   },
   {
@@ -97,7 +113,7 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "/images/team/A_dambrosio.png",
-    email:"l.hdggfd@donboscosandona.it",
+    email: "l.hdggfd@donboscosandona.it",
     phone: '12365598445',
   },
   {
@@ -106,7 +122,7 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "/images/team/segretarie.png",
-    email:"c.cosocoso@donboscosandona.it",
+    email: "c.cosocoso@donboscosandona.it",
     phone: '0421 123456338 950',
   },
   {
@@ -115,7 +131,7 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "/images/team/Pasqualetto.png",
-    email:"c.cosinocoso@donboscosandona.it",
+    email: "c.cosinocoso@donboscosandona.it",
     phone: '123456 338 950',
   },
   {
@@ -124,7 +140,7 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "/images/team/cicogna.png",
-    email:"hhh.coso@donboscosandona.it",
+    email: "hhh.coso@donboscosandona.it",
     phone: '0421 338 950',
   },
   {
@@ -133,7 +149,7 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
-    email:"c.coso@donboscosandona.it",
+    email: "c.coso@donboscosandona.it",
     phone: '0421 338 950',
   },
 ]
@@ -207,22 +223,22 @@ const testimonials = [
 
 let certifications = [
   {
-      logoUrl: '/images/certification/iso.png',
-      text1: 'ISO 9001:2015',
-      text2: 'Reg. n. 2593-A - Settore EA: 37'
+    logoUrl: '/images/certification/iso.png',
+    text1: 'ISO 9001:2015',
+    text2: 'Reg. n. 2593-A - Settore EA: 37'
   },
   {
-      logoUrl: '/images/certification/kiwa.png',
-      text1: 'Progettazione ed erogazione di attività formative e di orientamento'
+    logoUrl: '/images/certification/kiwa.png',
+    text1: 'Progettazione ed erogazione di attività formative e di orientamento'
   },
   {
-      logoUrl: '/images/certification/knx.png',
-      text1: 'Authorised Training Center'
+    logoUrl: '/images/certification/knx.png',
+    text1: 'Authorised Training Center'
   },
   {
-      logoUrl: '/images/certification/regioneveneto.png',
-      text1: 'Cod. A033 - Formazione Iniziale,',
-      text2: 'Superiore e Orientamento'
+    logoUrl: '/images/certification/regioneveneto.png',
+    text1: 'Cod. A033 - Formazione Iniziale,',
+    text2: 'Superiore e Orientamento'
   },
 
 ]
@@ -240,7 +256,7 @@ export default function Home({ datiArticoli }) {
         buttonText="Guarda il video"
         imageUrl="/images/home/matteo_attacco_hacker.jpg"
       />
-      <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem'  }}>
+      <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
         <Grid container spacing={4}>
           {
             datiArticoli.map(
@@ -265,7 +281,11 @@ export default function Home({ datiArticoli }) {
         features={features}
         cardWidth={3}
       />
-      <Testimonials testimonials={testimonials} cardWidth={4} />
+      <Testimonials
+        testimonials={testimonials}
+        cardWidth={4}
+        imageUrl="https://images8.alphacoders.com/948/948649.jpg"
+      />
       <Team
         title="Contatti"
         description="Formatori che ti aiutano a crescere con il cuore di don Bosco"
@@ -273,9 +293,9 @@ export default function Home({ datiArticoli }) {
         cardWidth={3}
       />
       <Certifications
-            cardWidth={3}
-            certifications={certifications}
-        />
+        cardWidth={3}
+        certifications={certifications}
+      />
     </Layout>
   )
 }

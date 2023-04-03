@@ -7,18 +7,18 @@ import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import styles from './Carousel.module.css'
 
-export default function MyCarousel({ slides, maxWidth }) {
+export default function MyCarousel({ slides, maxWidth, height }) {
     return (
         <Container
             maxWidth={maxWidth}
             disableGutters={true}
             sx={{
-                minHeight: '90vh',
+              
                 border: '300px',
                 marginBottom: '2rem',
             }}
         >
-            <Carousel className={styles.carousel} animation="slide">
+            <Carousel className={styles.carousel} animation="slide" sx={{height: height + 'vh'}}>
                 {
                     slides.map(
                         (slide) => (
@@ -30,6 +30,8 @@ export default function MyCarousel({ slides, maxWidth }) {
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
+                                    height: height + 'vh',
+                                    paddingTop: (height/3) + 'vh'
                                 }}
                                 elevation={5}
                             >
@@ -75,5 +77,5 @@ export default function MyCarousel({ slides, maxWidth }) {
 
 MyCarousel.defaultProps = {
     maxWidth: false,
-    height: '90vh'
+    height: 90
 }
