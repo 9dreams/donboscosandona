@@ -4,9 +4,10 @@
 
 .carousel .slide {
     position: relative;
-    height: 90vh;
+  
+    
     overflow: hidden;
-    padding-top: 30vh;
+
 }
 
 .carousel .slide * {
