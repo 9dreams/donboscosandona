@@ -100,8 +100,7 @@ let members = [
   {
     name: "Alessandro Ferro",
     role: "VICE-PRESIDE / TUTOR DIGITALE",
-    description: "And I love you like Kanye",
-    description1: "loves Kanye. We need to restart the human foundation",
+    description1: "Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ",
     imageUrl: "/images/team/A_Ferro.png",
 
     email: "a.ferro@donboscosandona.it",
@@ -110,8 +109,7 @@ let members = [
   {
     name: "Anna Maria D'Ambrosio",
     role: "RESPONSABILE DELLA DISCIPLINA",
-    description: "And I love you like Kanye",
-    description1: "loves Kanye. We need to restart the human foundation",
+    description1: "Gestione disciplina,organizzazione scolastica e insegnamento are cultura",
     imageUrl: "/images/team/A_dambrosio.png",
     email: "l.hdggfd@donboscosandona.it",
     phone: '12365598445',
@@ -128,8 +126,7 @@ let members = [
   {
     name: "Andrea Pasqualetto",
     role: "ORIENTAMENTO IN ENTRATA / SOSTEGNO",
-    description: "And I love you like Kanye",
-    description1: "loves Kanye. We need to restart the human foundation",
+    description1: "Orientatore tutor, seguo la promozione e l’entrata dalla terza media alla classe prima superiore e monitoraggio allivi che incontrano difficoltà",
     imageUrl: "/images/team/Pasqualetto.png",
     email: "c.cosinocoso@donboscosandona.it",
     phone: '123456 338 950',
@@ -137,8 +134,8 @@ let members = [
   {
     name: "Francesco Cicogna",
     role: "COORDINATORE STAGE / CORSI PER ADULTI",
-    description: "And I love you like Kanye",
-    description1: "loves Kanye. We need to restart the human foundation",
+    description: "gestione delle attività con le aziende “stage ” e formazione continua si",
+    
     imageUrl: "/images/team/cicogna.png",
     email: "hhh.coso@donboscosandona.it",
     phone: '0421 338 950',
@@ -146,9 +143,8 @@ let members = [
   {
     name: "Martina Dianese",
     role: "ORIENTAMENTO IN USCITA / SERVIZI AL LAVORO",
-    description: "And I love you like Kanye",
-    description1: "loves Kanye. We need to restart the human foundation",
-    imageUrl: "https://media.licdn.com/dms/image/C5603AQHlyDoD0W6G-A/profile-displayphoto-shrink_800_800/0/1551801387517?e=2147483647&v=beta&t=JT3YTFL7g1ykrUcSwl7W0_iO0YSiBolctjntN2T9dCA",
+    description1: "Orientamento e acompagniamento individuale, sportellò servizio al lavoro",
+    imageUrl: "/images/team/martina.png",
     email: "c.coso@donboscosandona.it",
     phone: '0421 338 950',
   },
