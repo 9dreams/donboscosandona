@@ -13,10 +13,9 @@ import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
-import { Button, Typography } from '@mui/material'
+import { Button, Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import Link from 'next/link'
-
 
 let menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
@@ -49,27 +48,22 @@ export default function Home({ datiArticoli }) {
     return (
         <Layout>
             <LandingHero
-                opacity={0.5}
+                opacity={0.7}
                 siteName="CFP DON BOSCO"
-                title="Didatica"
+                title="Didattica"
                 description="Scopri qui le modalità didattiche al nostro CFP Don Bosco"
                 buttonUrl={'https://youtu.be/jRDREPCdpCE'}
                 buttonText="Guarda il video"
-                imageUrl="https://www.themapreport.com/wp-content/uploads/2020/09/118912576_10160178165764573_6159701433539309627_o-OK.jpg"
+                imageUrl="/images/didatticaattiva/principale.jpg"
                 menu={menu}
             />
-
-            
-
             <Paragraph
                 title="Il Progetto Ipad"
                 subtitle="Formazione professionale, innovazione e futuro"
-                imageUrl="https://www.donboscosandona.it/img/column/10045d7aacca74ad7094871071f20f07e0c8397d.jpg?1598797184"
+                imageUrl="/images/didatticaattiva/foto1.jpg"
                 backgroundColor="white"
                 columnCount={1}
                 maxWidth="lg"
-                
-                
             >
                 Il nostro Centro sta vivendo da alcuni anni un’esperienza di innovazione pedagogica e didattica che si basa su un modello attivo nel quale l’insegnante, da fornitore di conoscenze, diventa facilitatore di processi di ricerca e di interazione significativa.
                 Il mondo, noi stessi e gli altri sono le fonti di un processo di apprendimento più ampio, che si concretizza con la ricerca e l’utilizzo di risorse disponibili , in funzione di mandati di lavoro complessi ed interdisciplinari.
@@ -79,12 +73,6 @@ export default function Home({ datiArticoli }) {
 
             </Paragraph>
         </Layout>
-
-
     )
 }
 
-//sistemare e scegliere l'immagine
-//abbellire la pagina aggiungendo cose
-//modificare le posizioni dei file
-//consegnare
