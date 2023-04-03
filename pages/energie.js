@@ -80,18 +80,41 @@ export default function Home({ datiArticoli }) {
             <Carousel slides={slides} maxWidth={false} />
 
             <Paragraph
-                title="Titolo"
-                subtitle="Sottotitolo ( se serve )"
+                title="Settore energie"
+                subtitle=""
                 imageUrl=""
                 backgroundColor="#"
                 columnCount={1}
                 maxWidth="lg"
                 sx={{ }}
             >
-                Spiegazione energie 
+                Interviene nell’installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e di apparecchiature idrosanitarie
+Effettua l’installazione, la manutenzione e il collaudo di impianti tecnologici ad eelvata efficienza energetica (fotovoltaico, solare, termico, …) compresi quelli di building automation per il risparmio energetico
+Esegue i disegni al CAD con la distribuzione dei vari componenti
+            </Paragraph>
+
+
+            <Paragraph
+                title="La voce ai formatori del settore ENERGETICO:"
+                subtitle=""
+                imageUrl=""
+                backgroundColor="#"
+                columnCount={1}
+                maxWidth="lg"
+                sx={{ }}
+            >
+                «Il settore energia è stato attivato come un percorso nuovo pensato per rispondere alle richieste del territorio: si tratta di un corso che integra le conoscenze elettriche con le competenze termoidrauliche.
+<br /> <br />
+Questo si concretizza nella realizzazione di impianti per il riscaldamento e per il raffrescamento con la capacità di integrare quanto necessario per ottenere un risparmio energetico, ovvero pannelli fotovoltaici e/o pannelli solari termici, caldaie a condensazione, fan coil con rendimento ottimizzato e quanto sia utile per ridurre i consumi. Il tutto gestito da sistemi domotici che permettano la supervisione dell’impianto.
+<br /> <br />
+
+Il corso punta a formare persone che possano inserirsi nel mondo del lavoro con conoscenze che contribuiscano alla riduzione dei consumi e alla scelta di tecnologie innovative attente all’ambiente».
             </Paragraph>
 
             <Paragraph
+
+
+
                
         
                 imageUrl="/images/energie/orarioenergie.png"
@@ -100,6 +123,7 @@ export default function Home({ datiArticoli }) {
             
             </Paragraph>
 
+        
 
 
 
