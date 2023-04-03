@@ -160,11 +160,6 @@ export default function Home() {
                     >
                         <center><img src="/images/assistenza/valutazioni.png" /></center>
                     </Paragraph>
-
-
-
-
-
             </Container>
         </Layout>
     )
