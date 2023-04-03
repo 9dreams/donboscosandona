@@ -86,7 +86,7 @@ export default function Elettrico() {
                 cardWidth={4
                 }
             />
-            <Carousel slides={slides} maxWidth={false} />
+            <Carousel slides={slides} maxWidth={false} height={90} />
 
             <center><img src="/images/elettrico/Screenshot 2023-03-27 090952...png" /></center>
             <center><img src="/images/elettrico/9957d0b12e8146011f93c1de45aaf2012a2d30fa.png" /></center>
