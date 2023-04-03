@@ -54,10 +54,11 @@ export default function LandingHero(props) {
                                 p: { xs: 3, md: 6 },
                                 pr: { md: 0 },
                                 top: 55,
+                                
                             }}
                         >
-                            <Typography component="h2" variant="h6" color="inherit" gutterBottom>
-                                {props.siteName}
+                            <Typography component="h2" variant="h6" gutterBottom >
+                             <Link style={{color:'#FFFFFF'}}href="/">{props.siteName}</Link>
                             </Typography>
 
                         </Box>

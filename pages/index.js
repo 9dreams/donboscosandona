@@ -249,6 +249,7 @@ export default function Home({ datiArticoli }) {
     <Layout>
       <LandingHero
         opacity={0.5}
+         color="inherit"
         siteName="CFP DON BOSCO"
         title="Centro di Formazione Professionale don Bosco"
         description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"

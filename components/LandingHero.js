@@ -7,6 +7,7 @@ import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import { Toolbar } from '@mui/material'
 import Stack from '@mui/material/Stack';
+import Link from 'next/link'
 
 export default function LandingHero(props) {
   return (
@@ -20,6 +21,7 @@ export default function LandingHero(props) {
 
       <Paper
         sx={{
+          
           position: 'relative',
           color: '#fff',
           mb: 4,
@@ -101,6 +103,7 @@ export default function LandingHero(props) {
                       }
                     </Toolbar>
                   </Grid>
+                  
                 </Grid>
               </Box>
 
