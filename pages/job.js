@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Products from '/components/Products'
 import Button from '@mui/material/Button'
 
-import styles from 'dev/fv/job.module.css'
+import styles from './job.module.css'
 import { useSlotProps } from "@mui/base";
 
 // Voci del menù per il componente LandingHero
