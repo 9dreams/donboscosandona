@@ -7,8 +7,8 @@ import Paper from '@mui/material/Paper'
 import styles from 'components/LandingHero2.module.css'
 import Toolbar from '@mui/material/Toolbar'
 import Container from '@mui/material/Container'
-import Stack from '@mui/material/Stack'
 
+import { siteName, menu } from '/config/default'
 
 export default function LandingHero(props) {
     return (
@@ -122,27 +122,23 @@ export default function LandingHero(props) {
                             <Typography component="h5" color="inherit" paragraph>
                                 {props.description}
                             </Typography>
-                           
+                            {props.buttonUrl &&
+                                <Button
+                                    variant="contained"
+                                    size="large"
+                                    color="error"
+                                    href={props.buttonUrl}
+                                    className={styles.btlanding}
+                                    sx={{
+                                        marginTop: '1rem',
+                                    }}
+                                >
+                                    {props.buttonText}
+                                </Button>
+                            }
 
 
-                                {props.buttonUrl && 
-                           
-                                    <Button
-                                        variant="contained"
-                                        size="large"
-                                        color="error"
-                                        href={props.buttonUrl}
-                                        className={styles.btlanding}
-                                sx={{
-                                            marginTop: '1rem',
-                                        }}
-                                    >
-                                        {props.buttonText}
-                                    </Button>
-                                    }
 
-                        
-                         
                         </Box>
                     </Grid>
                 </Grid>
@@ -153,11 +149,6 @@ export default function LandingHero(props) {
 }
 
 LandingHero.defaultProps = {
-    menu: [
-        { title: 'Chi siamo', url: '/chi-siamo' },
-        { title: 'Contatti', url: '/contatti' },
-        { title: 'Dove siamo', url: '/dove-siamo' },
-        { title: 'Privacy', url: '/privacy' },
-        { title: 'Trasparenza', url: '/trasparenza' },
-    ]
+    siteName: siteName,
+    menu: menu
 }

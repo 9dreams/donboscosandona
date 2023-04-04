@@ -237,16 +237,13 @@ let certifications = [
     text1: 'Cod. A033 - Formazione Iniziale,',
     text2: 'Superiore e Orientamento'
   },
-
 ]
-
 
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
       <LandingHero
         opacity={0.5}
-        siteName="CFP DON BOSCO"
         title="Centro di Formazione Professionale don Bosco"
         description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
         buttonUrl='j'

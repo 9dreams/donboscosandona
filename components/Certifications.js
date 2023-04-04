@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
-import styles from 'dev/alexalex/Products.module.css'
+import styles from '/components/Products.module.css'
 
 export default function Certifications({ certifications, cardWidth, maxWidth }) {
     return (

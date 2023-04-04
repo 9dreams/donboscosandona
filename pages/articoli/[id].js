@@ -8,14 +8,6 @@ import LandingHero from '/components/LandingHero2'
 
 import { getIdArticoli, getDatiArticolo } from '/lib/articoli'
 
-// Voci del menù per il componente LandingHero
-let menu = [
-    { title: 'Chi siamo', url: '/chi-siamo' },
-    { title: 'Contatti', url: '/contatti' },
-    { title: 'Dove siamo', url: '/dove-siamo' },
-    { title: 'Trasparenza', url: '/trasparenza' },
-]
-
 export default function Articolo({ datiArticolo }) {
     return (
         <Layout>
@@ -25,13 +17,11 @@ export default function Articolo({ datiArticolo }) {
             </Head>
             <LandingHero
                 opacity={0.5}
-                siteName="CFP DON BOSCO"
                 title={datiArticolo.title}
                 description={datiArticolo.abstract}
                 buttonUrl=""
                 buttonText="Guarda il video"
                 imageUrl={datiArticolo.imageUrl}
-                menu={menu}
             />
             <Container
                 maxWidth="lg"
