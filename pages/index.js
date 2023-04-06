@@ -164,7 +164,7 @@ export default function Home({ datiArticoli }) {
       <LandingHero
         opacity={0.5}
         title="Proposta Estate Ragazzi 2023"
-        description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
+        description="Il sito della PER 23"
         buttonUrl='j'
         buttonText="Guarda il video"
         imageUrl="https://source.unsplash.com/random"
