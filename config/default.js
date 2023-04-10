@@ -6,9 +6,9 @@ export const siteTitle = "Proposta Estate Ragazzi 2023 - San Donà di Piave"
 export const siteDescription = "Sito ufficiale dell'Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave"
 
 export const menu = [
+    { title: 'Oratorio don Bosco', url: 'http://www.inoratorio.it' },
     { title: 'Iscrizioni', url: '/iscrizioni' },
-    { title: 'Oratorio', url: 'http://www.inoratorio.it' },
-    { title: 'Cinema', url: 'https://cinema.donboscosandona.it' },
+    { title: 'Calendario', url: '/iscrizioni' },
     { title: 'Privacy', url: '/privacy' },
 ]
 
