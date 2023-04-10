@@ -195,22 +195,22 @@ let altri_link = [
 
 const testimonials = [
   {
-    name: "Romualda Venturato",
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    text: "Testimonianza di un'animatrice.",
-    social: "@Google"
+    name: "Michela B.",
+    text: "Grazie mille per tutte le infinite emozioni che ci avete regalato, non solo nella serata finale ma in ogni occasione come alla sfilata, alle gite, ai momenti di condivisione, alle cene all'aperto e ai cori delle squadre o alle canzioni cantate e ballate che si sentivano fino a fuori dell'oratorio... per noi è stata la prima esperienza ipergalattica, ma la cosa più bella è che questa PER ha fatto scoprire nuove passioni grazie ai laboratori... Non resta che ringraziare tutti, dal primo all'ultimo e dirvi di continuare così, perchè come alla PER non ci di diverte!!!",
+    social: "@ragazza"
   },
   {
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Pamela Giacani",
-    text: "Testimonianza di una mamma.",
-    social: "@BOBTEK"
+    name: "Samuele D.",
+    text: "E' stato il mio primo anno alla PER. Il prossimo sarò ancora con voi perchè l'UNIONE, la CONDIVISIONE e l'AMICIZIA che si creano all'oratorio don Bosco sono... wow!!! Mi sono divertito un mondo!!! Grazie di tutto!! Alla prossima!!!",
+    social: "@animatore"
   },
   {
+    name: "Loredana Z.",
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Alberto Zanchettini",
-    text: "Testimonianza di un ragazzo.",
-    social: "@PINOWEST"
+    text: "A chi dice che i giovani non hanno voglia di fare nulla, io li inviterei in oratorio durante la PER. Che vedano gli animatori e il lavoro che dedicano per allietare bambini e bambine e la gioia che trasmettono. Quando ragazzi e bambini trovano un senso, sono i primi a buttarsi. Ma la PER non è solo gioco e svago. E' un'esperienza che aiuta i più piccoli ad esprimere i loro talenti, a condividere lo stile e il carisma salesiano, a vivere in una comunità che è fortemente educante e gioiosa. Un grazie di cuore all'Oratorio don Bosco!!!",
+    social: "@mamma"
   },
 ]
 
@@ -264,6 +264,10 @@ export default function Home({ datiArticoli }) {
         testimonials={testimonials}
         cardWidth={4}
         imageUrl="https://images8.alphacoders.com/948/948649.jpg"
+      />
+      <Products
+        cardWidth={2}
+        products={altri_link}
       />
       <Paragraph
         title="La Segreteria"
