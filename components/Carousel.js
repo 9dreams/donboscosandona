@@ -63,12 +63,13 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                                 </Typography>
                                                 {slide.buttonUrl &&
                                                     <Button
-                                                        variant="contained"
+                                                        variant="outlined"
                                                         size="large"
                                                         color="error"
                                                         href={slide.buttonUrl}
                                                         sx={{
                                                             marginTop: '1rem',
+                                                            borderRadius: '2rem',
                                                         }}
                                                     >
                                                         {slide.buttonText}

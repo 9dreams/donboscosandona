@@ -1,5 +1,6 @@
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero2.js'
@@ -165,13 +166,16 @@ export default function Home({ datiArticoli }) {
     <Layout>
       <LandingHero
         opacity={0.5}
-        title="Centro di Formazione Professionale don Bosco"
+        title="Progetto educativo"
         description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
         buttonUrl='j'
         buttonText="Guarda il video"
         imageUrl="https://source.unsplash.com/random"
       />
-      <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
+      <Container maxWidth="lg" sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
+        <Typography style={{ textAlign: 'left', paddingBottom: '2rem', }} component="h2" variant="h4" color="inherit" gutterBottom>
+          Le ultime news
+        </Typography>
         <Grid container spacing={4}>
           {
             datiArticoli.map(
