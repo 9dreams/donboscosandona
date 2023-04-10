@@ -136,13 +136,9 @@ export default function LandingHero(props) {
                                     {props.buttonText}
                                 </Button>
                             }
-
-
-
                         </Box>
                     </Grid>
                 </Grid>
-
             </Paper>
         </Container>
     )
