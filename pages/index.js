@@ -263,7 +263,7 @@ export default function Home({ datiArticoli }) {
       <Testimonials
         testimonials={testimonials}
         cardWidth={4}
-        imageUrl="https://images8.alphacoders.com/948/948649.jpg"
+        imageUrl="http://www.inoratorio.it/img/column/644c7a3837566eb954e2658ef028dfb7c3738d75.jpg?1542899553"
       />
       <Products
         cardWidth={2}
