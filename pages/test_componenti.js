@@ -45,6 +45,8 @@ let slides = [
     titolo: 'Fatti un bel giro',
     descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
     immagine: 'https://source.unsplash.com/random',
+    buttonText: 'Scopri di più!',
+    buttonUrl: 'https:...',
   },
   {
     titolo: 'Concorso nazionale settore elettrico',
