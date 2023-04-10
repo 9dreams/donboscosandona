@@ -13,12 +13,12 @@ export default function MyCarousel({ slides, maxWidth, height }) {
             maxWidth={maxWidth}
             disableGutters={true}
             sx={{
-              
+
                 border: '300px',
                 marginBottom: '2rem',
             }}
         >
-            <Carousel className={styles.carousel} animation="slide" sx={{height: height + 'vh'}}>
+            <Carousel className={styles.carousel} animation="slide" sx={{ height: height + 'vh' }}>
                 {
                     slides.map(
                         (slide) => (
@@ -31,7 +31,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
                                     height: height + 'vh',
-                                    paddingTop: (height/3) + 'vh'
+                                    paddingTop: (height / 3) + 'vh'
                                 }}
                                 elevation={5}
                             >
@@ -61,7 +61,20 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                                 <Typography component="h5" color="inherit" paragraph>
                                                     {slide.descrizione}
                                                 </Typography>
-                                                <Button className={styles.bottone}>Scopri di più!</Button>
+                                                {slide.buttonUrl &&
+                                                    <Button
+                                                        variant="outlined"
+                                                        size="large"
+                                                        color="error"
+                                                        href={slide.buttonUrl}
+                                                        sx={{
+                                                            marginTop: '1rem',
+                                                            borderRadius: '2rem',
+                                                        }}
+                                                    >
+                                                        {slide.buttonText}
+                                                    </Button>
+                                                }
                                             </Box>
                                         </Grid>
                                     </Grid>
