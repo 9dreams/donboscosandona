@@ -11,28 +11,29 @@ import Team from '/components/Team'
 import Post from '/components/Post'
 import Certifications from '@/components/Certifications'
 import Maps from '/components/Maps'
+import Paragraph from 'components/Paragraph'
 
 import { getDatiArticoli } from '/lib/articoli'
 
 // I punti di forza
 const features = [
   {
-    title: "Progetto educativo",
+    title: "Una proposta cristiana",
     imageUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
     description: "Un progetto chiaro e affidabile per far crescere e diventare uomini. "
   },
   {
-    title: "Didattica attiva",
+    title: "Divertendosi insieme",
     imageUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
     description: "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti."
   },
   {
-    title: "Laboratori",
+    title: "Mettendo a frutto la creatività",
     imageUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
     description: "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro."
   },
   {
-    title: "Servizi al lavoro",
+    title: "Esplorando il mondo",
     imageUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
     description: "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore."
   }
@@ -40,14 +41,28 @@ const features = [
 
 
 // slides per il carousel
-let slides = [
+let serate = [
   {
-    titolo: 'Fatti un bel giro',
+    titolo: 'Serata 1',
     descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
     immagine: 'https://source.unsplash.com/random',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
+    titolo: 'Serata 2',
+    descrizione: "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+    colore: '#22aa22',
+  },
+]
+
+let gite = [
+  {
+    titolo: 'Gita 1',
+    descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+    immagine: 'https://source.unsplash.com/random',
+    url: 'djdjfdj',
+  },
+  {
+    titolo: 'Gita 2',
     descrizione: "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
     colore: '#22aa22',
   },
@@ -56,105 +71,146 @@ let slides = [
 // Il nostro team
 let members = [
   {
-    name: "don Nicola Munari",
-    role: "DIRETTORE / CATECHISTA",
+    name: "Segreteria PER",
+    role: "Iscrizioni e informazioni generali",
     description: "And I love you like Kanye",
-    description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    email: "c.coso@donboscosandona.it",
+    email: "per@donboscosandona.it",
     phone: '0421 3388949874950',
   },
   {
-    name: "Alessandro Cappelletto",
-    role: "PRESIDE",
+    name: "don Michele Bortolato",
+    role: "Responsabile dell'attività",
     description: "And I love you like Kanye",
-    description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    email: "c.ciaoooo@donboscosandona.it",
-    phone: '123456',
   },
   {
-    name: "Alessandro Ferro",
-    role: "VICE-PRESIDE / TUTOR DIGITALE",
-    description1: "Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ",
+    name: "Cinema don Bosco",
+    role: "Orari e biglietti",
+    description1: "Puoi acquistare i biglietti per le serate cinema al prezzo speciale riservato agli iscritti alla PER e ai loro amici e familiari il lunedì mattina dalle 8.30 alle 12.30 o negli altri orari di apertura del cinema, purché entro le ore 19.00 del giorno dello spettacolo.",
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-
-    email: "a.ferro@donboscosandona.it",
-    phone: '0421 111 222',
-  },
-  {
-    name: "Anna Maria D'Ambrosio",
-    role: "RESPONSABILE DELLA DISCIPLINA",
-    description1: "Gestione disciplina,organizzazione scolastica e insegnamento are cultura",
-    imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    email: "l.hdggfd@donboscosandona.it",
-    phone: '12365598445',
+    email: "cinema@donboscosandona.it",
+    phone: '346 960 5687',
   },
 ]
 
-let prodotti = [
+let in_evidenza = [
   {
-    title: "Elettrico",
-    category: "QUALIFICA DI OPERATORE ELETTRICO",
-    description: "Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.",
-    immagineUrl: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    url: "/elettrico"
+    title: 'Iscrizioni',
+    description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/iscrizioni'
   },
   {
-    title: "Energia",
-    category: "QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI",
-    description: "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-    immagineUrl: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    url: "/energia"
+    title: 'Calendario',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/calendario'
   },
   {
-    title: "Informatico",
-    category: "DIPLOMA DI TECNICO INFORMATICO",
-    description: "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
-    immagineUrl: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    url: "/informatico"
+    title: 'Tema formativo',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/tema'
+  },
+  {
+    title: 'Squadre',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/tema'
+  },
+]
+
+let laboratori = [
+  {
+    title: 'Espressivi',
+    description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/iscrizioni'
+  },
+  {
+    title: 'Sportivi',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/calendario'
+  },
+  {
+    title: 'Artistici',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/tema'
+  },
+  {
+    title: 'Novità 2023',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/laboratori'
+  },
+]
+
+let altri_link = [
+  {
+    title: 'Regolamento',
+    description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/iscrizioni'
+  },
+  {
+    title: 'Servizio autobus',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/calendario'
+  },
+  {
+    title: 'Momenti di preghiera e riflessione',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/tema'
+  },
+  {
+    title: 'Gruppo Special',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/laboratori'
+  },
+  {
+    title: 'Spazio animatori',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/laboratori'
+  },
+  {
+    title: 'Spazio genitori',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/laboratori'
+  },
+  {
+    title: 'Dopo la Campanella Summer Edition',
+    description: 'Scopri la #PER23 giorno per giorno',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/laboratori'
   },
 ]
 
 const testimonials = [
   {
-    name: "Michele Venturato",
+    name: "Romualda Venturato",
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
+    text: "Testimonianza di un'animatrice.",
     social: "@Google"
   },
   {
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Daniele Mladenovic",
-    text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
+    name: "Pamela Giacani",
+    text: "Testimonianza di una mamma.",
     social: "@BOBTEK"
   },
   {
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Pino West",
-    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
+    name: "Alberto Zanchettini",
+    text: "Testimonianza di un ragazzo.",
     social: "@PINOWEST"
-  },
-]
-
-let certifications = [
-  {
-    logoUrl: 'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'ISO 9001:2015',
-    text2: 'Reg. n. 2593-A - Settore EA: 37'
-  },
-  {
-    logoUrl: 'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Progettazione ed erogazione di attività formative e di orientamento'
-  },
-  {
-    logoUrl: 'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Authorised Training Center'
-  },
-  {
-    logoUrl: 'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Cod. A033 - Formazione Iniziale,',
-    text2: 'Superiore e Orientamento'
   },
 ]
 
@@ -162,56 +218,68 @@ export default function Home({ datiArticoli }) {
   return (
     <Layout>
       <LandingHero
-        opacity={0.5}
+        opacity={0.2}
         title="Proposta Estate Ragazzi 2023"
         description="Il sito della PER 23"
         buttonUrl='j'
         buttonText="Guarda il video"
-        imageUrl="https://source.unsplash.com/random"
+        imageUrl="https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg"
       />
-      <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
-        <Grid container spacing={4}>
-          {
-            datiArticoli.map(
-              (post) => (
-                <Post post={post} />
-              )
-            )
-          }
-        </Grid>
-      </Container>
-      <Carousel slides={slides} />
-      <Products
-        title="I prodotti"
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
-        cardWidth={4}
-        products={prodotti}
-      />
+      <Paragraph
+        title="Saluto del Direttore"
+      >
+        [mettere Avatar con foto don Nicola] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Paragraph>
       <Features
-        title="I nostri punti di forza"
-        description="Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!"
+        title="La #per dell'Oratorio don Bosco è..."
+        description=""
         features={features}
         cardWidth={3}
       />
+      <Paragraph
+        title="Orario della giornata"
+      >
+        ...
+      </Paragraph>
+      <Products
+        title=""
+        description=""
+        cardWidth={3}
+        products={in_evidenza}
+      />
+      <Carousel slides={gite} />
+      <Products
+        title="I laboratori"
+        description="Stare insieme..."
+        cardWidth={3}
+        products={laboratori}
+      />
+      <Carousel slides={serate} />
+      <Paragraph
+        title="Stay tuned"
+      >
+        ...
+      </Paragraph>
       <Testimonials
         testimonials={testimonials}
         cardWidth={4}
         imageUrl="https://images8.alphacoders.com/948/948649.jpg"
       />
+      <Paragraph
+        title="La Segreteria"
+      >
+        ...
+      </Paragraph>
       <Team
         title="Contatti"
-        description="Formatori che ti aiutano a crescere con il cuore di don Bosco"
+        description="Hai dei dubbi? Contattaci pure (preferibilmente via email) e ti risponderemo il prima possibile."
         members={members}
-        cardWidth={3}
+        cardWidth={4}
       />
       <Maps
         maxWidth='100%'
         maxHeight='550px'
         url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit"
-      />
-      <Certifications
-        cardWidth={3}
-        certifications={certifications}
       />
     </Layout>
   )
