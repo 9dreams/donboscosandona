@@ -226,9 +226,14 @@ export default function Home({ datiArticoli }) {
         imageUrl="https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg"
       />
       <Paragraph
-        title="Saluto del Direttore"
+        title="Perché il tempo spensierato non sia tempo perso"
+        subtitle="Saluto del Direttore, don Nicola Munari"
       >
-        [mettere Avatar con foto don Nicola] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <p>Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.</p>
+        
+        <p>La Proposta Estate Ragazzi, da più di 40 anni, è un’occasione per vivere un’Estate davvero ricca: di incontri, attività molteplici, gite, escursioni, serate con le famiglie… il tutto vissuto in un clima di amicizia, festa e grinta che contagiano e coinvolgono tutti.</p>
+        
+        <p>Se mi domandassero perché venire alla P.E.R. 2023 direi solo questo. È un’esperienza per vivere alla grande e non vivacchiare. A noi piace vivere così: ogni giornata è densa perché piena di cose belle, vissute con grinta ed entusiasmo. Questo l’augurio per ogni genitore, ogni ragazzo e ogni educatore che vivrà questa proposta: “Che ogni giorno ci veda andare a letto stanchi ,ma felici per gli incontri, per la gioia condivisa e le esperienze arricchenti che potremmo fare insieme”. Buona P.E.R. 2023!</p>
       </Paragraph>
       <Features
         title="La #per dell'Oratorio don Bosco è..."
