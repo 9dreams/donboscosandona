@@ -12,6 +12,7 @@ import Team from '/components/Team'
 import Post from '/components/Post'
 import Certifications from '@/components/Certifications'
 import Maps from '/components/Maps'
+import Paragraph from 'components/Paragraph'
 
 import { getDatiArticoli } from '/lib/articoli'
 
@@ -204,6 +205,19 @@ export default function Home({ datiArticoli }) {
         cardWidth={4}
         imageUrl="https://images8.alphacoders.com/948/948649.jpg"
       />
+      <Paragraph
+        title="Perché il tempo spensierato non sia tempo perso"
+        subtitle="Saluto del Direttore"
+      >
+        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.
+      </Paragraph>
+      <Paragraph
+        title="Perché il tempo spensierato non sia tempo perso"
+        subtitle="Saluto del Direttore"
+        columnCount={2}
+      >
+        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.
+      </Paragraph>
       <Team
         title="Contatti"
         description="Formatori che ti aiutano a crescere con il cuore di don Bosco"
