@@ -56,15 +56,19 @@ let serate = [
 
 let gite = [
   {
-    titolo: 'Gita 1',
-    descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine: 'https://source.unsplash.com/random',
-    url: 'djdjfdj',
+    titolo: 'Gita a Noale',
+    descrizione: '22 Giugno e 11 Luglio - Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+    immagine: '/images/gite/aquaestate.webp',
   },
   {
-    titolo: 'Gita 2',
-    descrizione: "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#22aa22',
+    titolo: 'Gita in Val di Gares',
+    descrizione: "27 Giugno - A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+    immagine: '/images/gite/val_gares.jpeg',
+  },
+  {
+    titolo: 'Gita al Parco Sigurtà',
+    descrizione: "4 Luglio - A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+    immagine: '/images/gite/parco_sigurta.jpeg',
   },
 ]
 
@@ -98,7 +102,7 @@ let in_evidenza = [
   {
     title: 'Iscrizioni',
     description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
-    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    immagineUrl: "https://fumettologica.it/wp-content/uploads/2022/07/trailer-pinocchio-netflix-del-toro.jpg",
     url: '/iscrizioni'
   },
   {
@@ -143,8 +147,8 @@ let laboratori = [
   {
     title: 'Novità 2023',
     description: 'Scopri la #PER23 giorno per giorno',
-    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: '/laboratori'
+    immagineUrl: "/images/laboratori_new/lhsfondo.jpg",
+    url: '/laboratori_new'
   },
 ]
 
@@ -188,8 +192,8 @@ let altri_link = [
   {
     title: 'Dopo la Campanella Summer Edition',
     description: 'Scopri la #PER23 giorno per giorno',
-    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: '/laboratori'
+    immagineUrl: "/images/dlc/imgsfondo1.png",
+    url: '/dlc'
   },
 ]
 
@@ -252,14 +256,20 @@ export default function Home({ datiArticoli }) {
         cardWidth={3}
         products={in_evidenza}
       />
-      <Carousel slides={gite} />
+      <Carousel
+        slides={gite}
+        height={70}
+      />
       <Products
         title="I laboratori"
         description="Stare insieme..."
         cardWidth={3}
         products={laboratori}
       />
-      <Carousel slides={serate} />
+      <Carousel
+        slides={serate}
+        height={70}
+      />
       <Paragraph
         title="Stay tuned"
       >

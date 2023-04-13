@@ -6,7 +6,7 @@ export default function Pagina() {
     return (
         <Layout>
             <LandingHero
-                opacity={0.2}
+                opacity={0.0}
                 title="Dopo la Campanella"
                 description="Il dopo scuola dell'Oratorio don Bosco"
                 imageUrl="/images/dlc/imgsfondo1.png"
