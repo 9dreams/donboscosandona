@@ -144,7 +144,7 @@ let laboratori = [
     title: 'Novità 2023',
     description: 'Scopri la #PER23 giorno per giorno',
     immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: '/laboratori'
+    url: '/laboratori_new'
   },
 ]
 
