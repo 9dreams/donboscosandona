@@ -126,7 +126,7 @@ let laboratori = [
     title: 'Espressivi',
     description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
     immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: '/iscrizioni'
+    url: '/laboratori_espressivi'
   },
   {
     title: 'Sportivi',
