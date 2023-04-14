@@ -47,7 +47,7 @@ export default function Pagina() {
         title="Laboratori espressivi"
 
         description="I laboratori espressivi sono spazi in cui le persone possono esplorare e comunicare le proprie emozioni e pensieri in modo creativo e spontaneo, attraverso l'utilizzo di diversi media espressivi, come la pittura, la musica, la danza, la scrittura e la fotografia."
-        imageUrl="https://images.ctfassets.net/22n7d68fswlw/1HfuJqJtRZUtdbXoyuLUzr/ae1df87ceddcee109109c2c6513c731d/Pinocchio_01.jpg"
+        imageUrl="https://static01.nyt.com/images/2023/01/03/multimedia/03pinocchio-puppets-5-97e3/03pinocchio-puppets-5-97e3-superJumbo.jpg"
       />
       <Paragraph
       >
