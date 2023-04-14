@@ -99,7 +99,7 @@ let in_evidenza = [
     title: 'Iscrizioni',
     description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
     immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: '/iscrizioni'
+    url: '/iscrizioni'    
   },
   {
     title: 'Calendario',
