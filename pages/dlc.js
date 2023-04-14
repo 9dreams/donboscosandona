@@ -15,43 +15,45 @@ export default function Pagina() {
                 title=""
                 subtitle=""
             >
-                <font face="Verdana"><p>
-                    L’attività di doposcuola nel nostro oratorio affonda le sue radici nel secolo scorso, per intuizione di don Alberto e nasce dal desiderio di offrire ai ragazzi un ambiente stimolante e accogliente, in cui poter svolgere i propri compiti scolastici e socializzare, confrontandosi con coetanei, compagni di classe e adulti. Il progetto quindi racchiude in sé la dimensione didattica, educativa, ludica e di sostegno.
-                </p>
-
+                <font face="Verdana">
                     <p>
-                        La diffusione del progetto, che conta ogni anno più di 150 iscritti,  è stata favorita dal contributo del Comune di San Donà di Piave e di altri enti locali limitrofi, come il Comune di Musile di Piave e Noventa di Piave.
-                        Per rendere la proposta educativa e formativa sempre più efficace per i ragazzi, negli anni sono state avviate collaborazioni con i servizi territoriali come la Neuropsichiatria Infantile, l’Associazione “La Nostra Famiglia” e i servizi di Tutela Minori. Sono operative collaborazioni con l’Università di Trieste (sede di Portogruaro), l’Università di Padova e di Venezia.
+                        Ciao ragazzi,
+                        grazie al contributo del comune,  anche quest’anno dopo la Proposta Estate continueremo l’attività: “Scuola d’estate? Si,grazie!”.
+                        Da lunedì 17 luglio a giovedì 3 agosto 2017, per tutti i ragazzi dal secondo anno della scuola primaria al terzo anno della scuola secondaria ci sarà la possibilità di svolgere i compiti delle vacanze con il supporto dei nostri  operatori, ma non solo!
                     </p>
 
 
-                    <p>
-                        I principali destinatari del progetto sono i bambini delle classi 3°- 4° e 5° della scuola primaria e gli allievi del triennio della scuola secondaria di primo grado, ma il supporto è aperto anche ai ragazzi che frequentano le scuole superiori.
+                    <p> Lo studio si alternerà a momenti di svago, gioco e allegria così tutto diventerà più interessante e piacevole. </p>
+                        <p>
+                            Ci saranno i nostri operatori pronti ad aiutarvi, coadiuvati da alcuni giovani animatori della Proposta Estate e dai salesiani del nostro oratorio.
+                            Studieremo, giocheremo, ci divertiremo insieme nel vero spirito salesiano!
+                        </p>
+                   
+
+                    
+                       <p> L’attività si svolgerà dal lunedì al giovedì, secondo gli orari indicati nel calendario ed un giovedì sarà dedicato all’uscita presso un parco acquatico.
+                        E’ una proposta che da anni offre l’Oratorio Don Bosco e che viene accolta sempre con grande entusiasmo …  non puoi mancare proprio tu!
+
                     </p>
 
+                    Orario della giornata tipo:
                     <p>
-                        <b>L’equipe di operatori è multidisciplinare e include educatori, psicologi e pedagogisti, oltre che volontari qualificati.</b>
-                    </p>
-
-                    Questi sono i nostri obiettivi:
-                    <p>
-                        <li>Approcciare lo studio ed il lavoro scolastico individuale in modo positivo e proficuo</li>
-                        <li>Imparare o migliorare il metodo di studio</li>
-                        <li>Recuperare le lacune nella preparazione e utilizzare un linguaggio specifico</li>
-                        <li>Sostenere chi è in difficoltà attraverso i laboratori DSA</li>
-                        <li>Migliorare l’autostima, la consapevolezza di sé e la socializzazione</li>
-                    </p>
-
-                    <p>
-                        <b>L’attività si svolge all’interno dell’ambiente salesiano, educativo e gioioso, connotato dal metodo preventivo.</b> Il ragazzo è protagonista e viene supportato ed incoraggiato nello svolgimento delle attività scolastiche, offrendo opportunità di approfondimento, ma anche la possibilità di partecipare ad attività ludico ricreative quali corsi musicali e laboratori espressivi.
-                    </p>
-
-                    <p>
-                        Nell’organizzazione del progetto risulta di fondamentale rilevanza il lavoro in rete, dove i nostri operatori si mettono in relazione con la famiglia, prima “agenzia educativa”, veicolo di valori e conoscenze, e con gli istituti scolastici, realtà formative nelle quali i ragazzi passano molto del loro tempo.
-                    </p>
-
-                    <p>
-                        Importanti sono i momenti di incontro tra gli operatori, per verificare l’efficacia degli interventi attuati e ottimizzare i risultati, e con le famiglie, attraverso appuntamenti personali o durante gli incontri di verifica previsti nell’anno formativo, invitate ad esprimere esigenze e aspettative per elaborare insieme i percorsi educativi più adeguati.
+                        <li>09:00 Accoglienza</li>
+                        <li>09:30 1^ ora di compiti</li>
+                        <li>10:30 Intervallo con attività ludico-ricreative</li>
+                        <li>11:00 2^ ora di compiti</li>
+                        <li>12:00 Tutti a casa per il pranzo</li>
+                        <li>14:30 Riapertura cortili per tutti</li>
+                        <br />
+                        <li><b>Medie:</b> </li>
+                        <li>alle 15:00 3^ ora di compiti</li> 
+                        <li>15:45 Intervallo con attività ludico-ricreative</li>
+                        <li>16:15 4^ ora di compiti</li>
+                        <br />
+                        <li><b>Elementari:</b></li>
+                        <li>15:00 3^ ora di compiti</li>
+                        <li>16:00 Attività ludico-ricreative con giochi organizzati</li>
+                        <li>17:00 Arrivederci a domani per tutti</li>
                     </p>
                 </font>
 
