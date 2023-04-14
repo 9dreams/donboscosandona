@@ -13,7 +13,7 @@ import Certifications from "@/components/Certifications";
 import Maps from "/components/Maps";
 import Paragraph from "components/Paragraph";
 
-import { getDatiArticoli } from "/lib/articoli";
+import { getDatiArticoli } from '/lib/articoli'
 
 // I punti di forza
 const features = [
@@ -147,11 +147,10 @@ let in_evidenza = [
 
 let laboratori = [
   {
-    title: "Espressivi",
-    description: "Tutto quello che devi sapere per iscriverti alla #PER23",
-    immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/iscrizioni",
+    title: 'Espressivi',
+    description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
+    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    url: '/laboratori_espressivi'
   },
   {
     title: "Sportivi",
