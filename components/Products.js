@@ -20,7 +20,7 @@ export default function Products({ title, description, cardWidth, products }) {
                 {
                     products.map(
                         (product) => (
-                            <Grid item md={cardWidth}>
+                            <Grid item md={cardWidth} >
                                 <CardActionArea className={styles.card} component="a" href={product.url}>
                                     <Card sx={{ display: 'flex' }} elevation={0}>
                                         <CardContent sx={{ flex: 1 }}>
@@ -36,7 +36,7 @@ export default function Products({ title, description, cardWidth, products }) {
                                             <Typography variant="subtitle1" style={{ textAlign: 'center' }} color="text.secondary" paragraph>
                                                 {product.category}
                                             </Typography >
-                                            <Typography variant="subtitle1" style={{ padding: '10px' }} color="inherit" paragraph>
+                                            <Typography variant="subtitle1" style={{ padding: '10px', textAlign: 'center' }} color="inherit" paragraph>
                                                 {product.description}
                                             </Typography>
                                             {product.rif &&

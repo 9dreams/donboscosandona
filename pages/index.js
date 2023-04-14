@@ -68,6 +68,44 @@ let gite = [
   },
 ]
 
+let serate_cinema =[
+  {
+    title:'TRANSFORMERS: IL RISVEGLIO',
+    description:'Lunedì 19 Giugno ore 20:45',
+    immagineUrl:'https://image.tmdb.org/t/p/original/aY2hzOLuHTxKev5bWnC05ZjxtrB.jpg',
+  },
+
+  {
+    title:'GUARDIANI DELLA GALASSIA 3 ',
+    description:'Lunedì 26 Giugno ore 20.45',
+    immagineUrl:'https://image.tmdb.org/t/p/original/d8blPzI36RKZzARwyXtT5KMpSkF.jpg',
+  },
+
+  {
+    title:' INDIANA JONES E IL QUADRANTE DEL DESTINO ',
+    description:'Lunedì 3 Luglio ore 20.45',
+    immagineUrl:'https://image.tmdb.org/t/p/original/y4MBS0SKE0pHR57vfYBxGhrkfcv.jpg',
+  },
+
+  {
+    title:'LA SIRENETTA ',
+    description:'Lunedì 10 Luglio ore 20.45',
+    immagineUrl:'https://image.tmdb.org/t/p/original/s7NxJaX2NV6P2BjhB8uhlltIwSS.jpg',
+  },
+
+  {
+    title:'MISSION IMPOSSIBLE 7',
+    description:'Lunedì 17 Luglio ore 20.45',
+    immagineUrl:'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f452aa2c-0c64-4bbf-b065-942b8dbda8bb/deybcgp-36da842e-b54d-40f9-8929-a13b60a21d47.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y0NTJhYTJjLTBjNjQtNGJiZi1iMDY1LTk0MmI4ZGJkYThiYlwvZGV5YmNncC0zNmRhODQyZS1iNTRkLTQwZjktODkyOS1hMTNiNjBhMjFkNDcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HK_zjbw8uSR8rWKubPz6HyjMLnm6_qnLH9G7j-zpI8k',
+  },
+  {
+    title:'ELEMENTAL',
+    description:'Lunedì 17 Luglio ore 20.45',
+    immagineUrl:'https://image.tmdb.org/t/p/original//v9dZ3MnuSOU5C0ma21HP30zVGI.jpg',
+  },
+ 
+]
+
 // Il nostro team
 let members = [
   {
@@ -279,6 +317,20 @@ export default function Home({ datiArticoli }) {
       >
         ...
       </Paragraph>
+      
+      
+      
+      <Products
+        title="Serate Cinema"
+        description="Goditi le nostre serate al cimema"
+        cardWidth={3}
+        products={serate_cinema}
+      />
+      
+      
+      
+      
+      
       <Team
         title="Contatti"
         description="Hai dei dubbi? Contattaci pure (preferibilmente via email) e ti risponderemo il prima possibile."
