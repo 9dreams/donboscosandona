@@ -13,6 +13,7 @@ import Certifications from '@/components/Certifications'
 import Maps from '/components/Maps'
 import Paragraph from 'components/Paragraph'
 
+
 import { getDatiArticoli } from '/lib/articoli'
 
 // I punti di forza
