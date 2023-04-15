@@ -13,35 +13,31 @@ import Certifications from "@/components/Certifications";
 import Maps from "/components/Maps";
 import Paragraph from "components/Paragraph";
 
-import { getDatiArticoli } from '/lib/articoli'
+import { getDatiArticoli } from "/lib/articoli";
 
 // I punti di forza
 const features = [
   {
     title: "Una proposta cristiana",
-    imageUrl:
-      "/images/home/proposta_cristiana.png",
+    imageUrl: "/images/home/proposta_cristiana.png",
     description:
       "Un progetto chiaro e affidabile per far crescere e diventare uomini. ",
   },
   {
     title: "Divertendosi insieme",
-    imageUrl:
-      "/images/home/divertendosi.png",
+    imageUrl: "/images/home/divertendosi.png",
     description:
       "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.",
   },
   {
     title: "Mettendo a frutto la creatività",
-    imageUrl:
-      "/images/home/creativa.png",
+    imageUrl: "/images/home/creativa.png",
     description:
       "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
   },
   {
     title: "Esplorando il mondo",
-    imageUrl:
-      "/images/home/esplorando.png",
+    imageUrl: "/images/home/esplorando.png",
     description:
       "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
   },
@@ -118,8 +114,7 @@ let in_evidenza = [
   {
     title: "Iscrizioni",
     description: "Tutto quello che devi sapere per iscriverti alla #PER23",
-    immagineUrl:
-      "/images/home/iscrizioni.png",
+    immagineUrl: "/images/home/iscrizioni.png",
     url: "/iscrizioni",
   },
   {
@@ -132,31 +127,28 @@ let in_evidenza = [
   {
     title: "Tema formativo",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/home/tema.png",
+    immagineUrl: "/images/home/tema.png",
     url: "/tema",
   },
 ];
 
 let laboratori = [
   {
-    title: 'Espressivi',
-    description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
+    title: "Espressivi",
+    description: "Tutto quello che devi sapere per iscriverti alla #PER23",
     immagineUrl: "/images/home/laboratori_espressivi.png",
-    url: '/laboratori_espressivi'
+    url: "/laboratori_espressivi",
   },
   {
     title: "Sportivi",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/home/laboratori_artistici.png",
+    immagineUrl: "/images/home/laboratori_artistici.png",
     url: "/laboratori_sportivi",
   },
   {
     title: "Artistici",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/home/laboratori_artistici.png",
+    immagineUrl: "/images/home/laboratori_artistici.png",
     url: "/laboratori_artistici",
   },
   {
@@ -171,15 +163,13 @@ let altri_link = [
   {
     title: "Regolamento",
     description: "Tutto quello che devi sapere per iscriverti alla #PER23",
-    immagineUrl:
-      "/images/home/regolamento.png",
+    immagineUrl: "/images/home/regolamento.png",
     url: "/regolamento",
   },
   {
     title: "Servizio autobus",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/home/autobus.png",
+    immagineUrl: "/images/home/autobus.png",
     url: "/autobus",
   },
   {
@@ -192,22 +182,19 @@ let altri_link = [
   {
     title: "Gruppo Special",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/home/special.png",
+    immagineUrl: "/images/home/special.png",
     url: "/special",
   },
   {
     title: "Spazio animatori",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/home/animatori.png",
+    immagineUrl: "/images/home/animatori.png",
     url: "/animatori",
   },
   {
     title: "Spazio genitori",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/home/genitori.png",
+    immagineUrl: "/images/home/genitori.png",
     url: "/genitori",
   },
   {
@@ -274,7 +261,7 @@ let serate_cinema = [
     immagineUrl:
       "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f452aa2c-0c64-4bbf-b065-942b8dbda8bb/deybcgp-36da842e-b54d-40f9-8929-a13b60a21d47.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y0NTJhYTJjLTBjNjQtNGJiZi1iMDY1LTk0MmI4ZGJkYThiYlwvZGV5YmNncC0zNmRhODQyZS1iNTRkLTQwZjktODkyOS1hMTNiNjBhMjFkNDcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HK_zjbw8uSR8rWKubPz6HyjMLnm6_qnLH9G7j-zpI8k",
   },
-]
+];
 
 export default function Home({ datiArticoli }) {
   return (
@@ -327,13 +314,18 @@ export default function Home({ datiArticoli }) {
         cardWidth={3}
       />
       <Paragraph title="Orario della giornata">...</Paragraph>
-      <Products title="" description="" cardWidth={4} products={in_evidenza} />
+      <Products
+        cardWidth={4}
+        products={in_evidenza}
+        borderRadius="50%"
+      />
       <Carousel slides={gite} height={70} />
       <Products
         title="I laboratori"
         description="Stare insieme..."
         cardWidth={3}
         products={laboratori}
+        borderRadius="2rem"
       />
       <Carousel slides={serate} height={70} />
       <Products
@@ -341,6 +333,7 @@ export default function Home({ datiArticoli }) {
         description="Ogni settimana uno splendido film da gustare in compagnia degli amici della PER!"
         cardWidth={3}
         products={serate_cinema}
+        borderRadius="5px"
       />
       <Paragraph title="Stay tuned">...</Paragraph>
       <Testimonials
@@ -348,7 +341,7 @@ export default function Home({ datiArticoli }) {
         cardWidth={4}
         imageUrl="/images/home/sfondo_giostra.jpeg"
       />
-      <Products cardWidth={3} products={altri_link} />
+      <Products cardWidth={3} products={altri_link} borderRadius="50%" />
       <Paragraph title="La Segreteria">...</Paragraph>
       {/* <Team
         title="Contatti"
