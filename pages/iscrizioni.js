@@ -25,6 +25,7 @@ export default function Pagina() {
 
             <Paragraph
                 subtitle="Ecco i passaggi per l'iscrizione"
+                backgroundColor="#ffe9c2"
             >
                 1. <b>Collegati al sito</b> <a href="http://www.inoratorio.it/per">http://www.inoratorio.it/per</a> e segui le istruzioni.<br />
                 2. Inserendo il <b>codice</b> ricevuto, ti verrà presentata la scheda con i tuoi <b>dati</b>: controlla se sono corretti, in caso aggiornali.<br />
@@ -42,15 +43,17 @@ export default function Pagina() {
             </Paragraph>
 
             <Paragraph
-                title="ATTENZIONE!!!"
+                backgroundColor="#ffe100"
+                leftImageUrl="/images/iscrizioni/warning.png"
             >
-                Al momento dell’effettiva iscrizione in Oratorio <b>(tra il 22 e il 26 Maggio)</b> sono necessari:<br />
+                ATTENZIONE: Al momento dell’effettiva iscrizione in Oratorio <b>(tra il 22 e il 26 Maggio)</b> sono necessari:<br />
                 -<b> i ragazzi/e che frequenteranno la PER23</b>: sarà scattata la foto e sarà consegnata la maglietta;<br />
                 -<b> un genitore</b> (o chi ne fa le veci): per la firma della liberatoria sulla privacy e il pagamento della quota di partecipazione.
             </Paragraph>
 
             <Paragraph
-                subtitle="Quota di iscrizione: "
+                subtitle="Quota di iscrizione:"
+                backgroundColor="#ffe9c2"
             >
                 1 ragazzo: 120,00 €<br />
                 2 fratelli: 215,00€<br />
