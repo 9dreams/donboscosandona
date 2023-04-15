@@ -44,7 +44,7 @@ export default function MyTable(props) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {props.rows.map((row, i) => (
+            {props.rows.map((row, i) => (i>0 && 
               <TableRow
                 key={i}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
