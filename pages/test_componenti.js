@@ -74,8 +74,6 @@ let members = [
     description: "And I love you like Kanye",
     description1: "loves Kanye. We need to restart the human foundation",
     imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    email: "c.ciaoooo@donboscosandona.it",
-    phone: '123456',
   },
   {
     name: "Alessandro Ferro",
