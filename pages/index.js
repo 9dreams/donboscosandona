@@ -1,19 +1,20 @@
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container"
+import Grid from "@mui/material/Grid"
 
-import Layout from "/components/Layout";
-import LandingHero from "/components/LandingHero2.js";
-import Features from "/components/Features";
-import Carousel from "/components/Carousel";
-import Products from "/components/Products";
-import Testimonials from "/components/Testimonials";
-import Team from "/components/Team";
-import Post from "/components/Post";
-import Certifications from "@/components/Certifications";
-import Maps from "/components/Maps";
-import Paragraph from "components/Paragraph";
+import Layout from "/components/Layout"
+import LandingHero from "/components/LandingHero2.js"
+import Features from "/components/Features"
+import Carousel from "/components/Carousel"
+import Products from "/components/Products"
+import Testimonials from "/components/Testimonials"
+import Team from "/components/Team"
+import Post from "/components/Post"
+import Certifications from "@/components/Certifications"
+import Maps from "/components/Maps"
+import Paragraph from "components/Paragraph"
+import Table from 'components/Table'
 
-import { getDatiArticoli } from "/lib/articoli";
+import { getDatiArticoli } from "/lib/articoli"
 
 // I punti di forza
 const features = [
@@ -316,7 +317,22 @@ export default function Home({ datiArticoli }) {
         features={features}
         cardWidth={3}
       />
-      <Paragraph title="Orario della giornata">...</Paragraph>
+      <Table
+        title="Orario della Giornata"
+        backgroundColor="#ffecb8"
+        elevation="5"
+        rows={[
+          ["Mattino", "", "Pomeriggio", ""],
+          ['8.30', 'Accoglienza informale', '14.30', 'Riapertura cancelli'],
+          ['8.34', 'Preghiera e avvisi', '15.00', 'Inizio pomeriggio: tornei, giochi al parco, spettacoli, ecc.'],
+          ['9.30', 'Momento di preghiera ragazzi', '17.45', 'Concludiamo insieme la giornata'],
+          ['10.00', 'Prima ora di attività', '18.00', 'Termine attività pomeridiane'],
+          ['10.50', 'Ricreazione', '18.30', 'Santa Messa (per chi lo desidera)'],
+          ['11.10', 'Seconda ora di attività'],
+          ['12.00', 'A casa... buon pranzo!'],
+        ]}
+      />
+
       <Products
         cardWidth={4}
         products={in_evidenza}
