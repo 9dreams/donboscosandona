@@ -206,15 +206,34 @@ export default function Home({ datiArticoli }) {
       <Paragraph
         title="Perché il tempo spensierato non sia tempo perso"
         subtitle="Saluto del Direttore"
+        avatarImageUrl="https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png"
       >
+        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.
         Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.
       </Paragraph>
       <Paragraph
         title="Perché il tempo spensierato non sia tempo perso"
         subtitle="Saluto del Direttore"
-        columnCount={2}
+        leftImageUrl="https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png"
       >
         Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.
+        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.
+      </Paragraph>
+      <Paragraph
+        title="Perché il tempo spensierato non sia tempo perso"
+        subtitle="Saluto del Direttore"
+        rightImageUrl="https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png"
+      >
+        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.
+        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso.
+      </Paragraph>
+      <Paragraph
+        topImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
+        title="Perché il tempo spensierato non sia tempo perso"
+        subtitle="Saluto del Direttore"
+        columnCount={2}
+      >
+        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia quel periodo tanto atteso dove finalmente si può fare ciò che si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il tempo libero rischia di diventare tempo perso. 
       </Paragraph>
       <Team
         title="Contatti"
