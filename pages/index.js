@@ -85,7 +85,6 @@ let members = [
   {
     name: "Segreteria PER",
     role: "Iscrizioni e informazioni generali",
-    description: "And I love you like Kanye",
     imageUrl:
       "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
     email: "per@donboscosandona.it",
@@ -93,16 +92,19 @@ let members = [
   },
   {
     name: "don Michele Bortolato",
-    role: "Responsabile dell'attività",
-    description: "And I love you like Kanye",
+    role: "Responsabile della Proposta Estate",
+    imageUrl:
+      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    name: "don Nicola Munari",
+    role: "Direttore dell'Opera",
     imageUrl:
       "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
   {
     name: "Cinema don Bosco",
     role: "Orari e biglietti",
-    description1:
-      "Puoi acquistare i biglietti per le serate cinema al prezzo speciale riservato agli iscritti alla PER e ai loro amici e familiari il lunedì mattina dalle 8.30 alle 12.30 o negli altri orari di apertura del cinema, purché entro le ore 19.00 del giorno dello spettacolo.",
     imageUrl:
       "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
     email: "cinema@donboscosandona.it",
@@ -343,12 +345,12 @@ export default function Home({ datiArticoli }) {
       />
       <Products cardWidth={3} products={altri_link} borderRadius="50%" />
       <Paragraph title="La Segreteria">...</Paragraph>
-      {/* <Team
+      <Team
         title="Contatti"
         description="Hai dei dubbi? Contattaci pure (preferibilmente via email) e ti risponderemo il prima possibile."
         members={members}
-        cardWidth={4}
-      /> */}
+        cardWidth={3}
+      />
       <Maps
         maxWidth="100%"
         maxHeight="550px"
