@@ -279,6 +279,7 @@ export default function Home({ datiArticoli }) {
       <Paragraph
         title="Perché il tempo spensierato non sia tempo perso"
         subtitle="Saluto del Direttore, don Nicola Munari"
+        avatarImageUrl="https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png"
       >
         <p>
           Quando finalmente suona l’ultima campanella dell’anno scolastico
