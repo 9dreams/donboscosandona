@@ -9,7 +9,7 @@ export default function Pagina() {
                 opacity={0.2}
                 title="“Regolamento” della P.E.R."
                 description=""
-                imageUrl="/images/regolamenti/rego.webp"
+                imageUrl="/images/regolamento/rego.webp"
             />
             <Paragraph
                 title="Ecco qui tutte le regole da rispettare alla P.E.R!!!"

@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero2.js'

@@ -9,7 +9,7 @@ export default function Pagina() {
         opacity={0.2}
         title="Spazio Genitori"
         description=""
-        imageUrl="/images/genitori/genfem.png"
+        imageUrl="/images/genitori/femmine.png"
       />
       <Paragraph
         title="Spazio genitori"

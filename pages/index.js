@@ -20,28 +20,28 @@ const features = [
   {
     title: "Una proposta cristiana",
     imageUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+      "/images/home/proposta_cristiana.png",
     description:
       "Un progetto chiaro e affidabile per far crescere e diventare uomini. ",
   },
   {
     title: "Divertendosi insieme",
     imageUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+      "/images/home/divertendosi.png",
     description:
       "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.",
   },
   {
     title: "Mettendo a frutto la creatività",
     imageUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+      "/images/home/creativa.png",
     description:
       "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
   },
   {
     title: "Esplorando il mondo",
     imageUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+      "/images/home/esplorando.png",
     description:
       "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
   },
@@ -119,7 +119,7 @@ let in_evidenza = [
     title: "Iscrizioni",
     description: "Tutto quello che devi sapere per iscriverti alla #PER23",
     immagineUrl:
-      "https://fumettologica.it/wp-content/uploads/2022/07/trailer-pinocchio-netflix-del-toro.jpg",
+      "/images/home/iscrizioni.png",
     url: "/iscrizioni",
   },
   {
@@ -133,14 +133,7 @@ let in_evidenza = [
     title: "Tema formativo",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/tema",
-  },
-  {
-    title: "Squadre",
-    description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+      "/images/home/tema.png",
     url: "/tema",
   },
 ];
@@ -149,27 +142,27 @@ let laboratori = [
   {
     title: 'Espressivi',
     description: 'Tutto quello che devi sapere per iscriverti alla #PER23',
-    immagineUrl: "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    immagineUrl: "/images/home/laboratori_espressivi.png",
     url: '/laboratori_espressivi'
   },
   {
     title: "Sportivi",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/calendario",
+      "/images/home/laboratori_artistici.png",
+    url: "/laboratori_sportivi",
   },
   {
     title: "Artistici",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/tema",
+      "/images/home/laboratori_artistici.png",
+    url: "/laboratori_artistici",
   },
   {
     title: "Novità 2023",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/laboratori_new/lhsfondo.jpg",
+    immagineUrl: "/images/home/laboratori_new.png",
     url: "/laboratori_new",
   },
 ];
@@ -179,48 +172,48 @@ let altri_link = [
     title: "Regolamento",
     description: "Tutto quello che devi sapere per iscriverti alla #PER23",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/iscrizioni",
+      "/images/home/regolamento.png",
+    url: "/regolamento",
   },
   {
     title: "Servizio autobus",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/calendario",
+      "/images/home/autobus.png",
+    url: "/autobus",
   },
   {
     title: "Momenti di preghiera e riflessione",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
       "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/tema",
+    url: "/preghiera",
   },
   {
     title: "Gruppo Special",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/laboratori",
+      "/images/home/special.png",
+    url: "/special",
   },
   {
     title: "Spazio animatori",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/laboratori",
+      "/images/home/animatori.png",
+    url: "/animatori",
   },
   {
     title: "Spazio genitori",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
-    url: "/laboratori",
+      "/images/home/genitori.png",
+    url: "/genitori",
   },
   {
     title: "Dopo la Campanella Summer Edition",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/dlc/imgsfondo1.png",
+    immagineUrl: "/images/home/dlc.png",
     url: "/dlc",
   },
 ];
@@ -257,23 +250,24 @@ let serate_cinema = [
       "https://image.tmdb.org/t/p/original/aY2hzOLuHTxKev5bWnC05ZjxtrB.jpg",
   },
   {
-    title: "GUARDIANI DELLA GALASSIA 3 ",
+    title: "ELEMENTAL",
     description: "Lunedì 26 Giugno ore 20.45",
+    immagineUrl:
+      "https://image.tmdb.org/t/p/original//v9dZ3MnuSOU5C0ma21HP30zVGI.jpg",
+  },
+  {
+    title: "GUARDIANI DELLA GALASSIA 3 ",
+    description: "Lunedì 3 Luglio ore 20.45",
     immagineUrl:
       "https://image.tmdb.org/t/p/original/d8blPzI36RKZzARwyXtT5KMpSkF.jpg",
   },
   {
     title: " INDIANA JONES E IL QUADRANTE DEL DESTINO ",
-    description: "Lunedì 3 Luglio ore 20.45",
+    description: "Lunedì 10 Luglio ore 20.45",
     immagineUrl:
       "https://image.tmdb.org/t/p/original/y4MBS0SKE0pHR57vfYBxGhrkfcv.jpg",
   },
-  {
-    title: "ELEMENTAL",
-    description: "Lunedì 17 Luglio ore 20.45",
-    immagineUrl:
-      "https://image.tmdb.org/t/p/original//v9dZ3MnuSOU5C0ma21HP30zVGI.jpg",
-  },
+
   {
     title: "MISSION IMPOSSIBLE 7",
     description: "Lunedì 17 Luglio ore 20.45",
@@ -333,7 +327,7 @@ export default function Home({ datiArticoli }) {
         cardWidth={3}
       />
       <Paragraph title="Orario della giornata">...</Paragraph>
-      <Products title="" description="" cardWidth={3} products={in_evidenza} />
+      <Products title="" description="" cardWidth={4} products={in_evidenza} />
       <Carousel slides={gite} height={70} />
       <Products
         title="I laboratori"
@@ -344,7 +338,7 @@ export default function Home({ datiArticoli }) {
       <Carousel slides={serate} height={70} />
       <Products
         title="Serate Cinema"
-        description="Goditi le nostre serate al cimema"
+        description="Ogni settimana uno splendido film da gustare in compagnia degli amici della PER!"
         cardWidth={3}
         products={serate_cinema}
       />
@@ -354,14 +348,14 @@ export default function Home({ datiArticoli }) {
         cardWidth={4}
         imageUrl="/images/home/sfondo_giostra.jpeg"
       />
-      <Products cardWidth={2} products={altri_link} />
+      <Products cardWidth={3} products={altri_link} />
       <Paragraph title="La Segreteria">...</Paragraph>
-      <Team
+      {/* <Team
         title="Contatti"
         description="Hai dei dubbi? Contattaci pure (preferibilmente via email) e ti risponderemo il prima possibile."
         members={members}
         cardWidth={4}
-      />
+      /> */}
       <Maps
         maxWidth="100%"
         maxHeight="550px"

@@ -6,10 +6,10 @@ export default function Pagina() {
   return (
     <Layout>
       <LandingHero
-        opacity={0.2}
+        opacity={0.0}
         title="Tema"
         description="In questa pagina parleremo di un esempio."
-        imageUrl="images/temi/persone.png"
+        imageUrl="images/tema/persone.png"
       />
       <Paragraph
         title="Titolo"
