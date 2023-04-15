@@ -83,23 +83,23 @@ export default function Team({
                   justifyContent="space-evenly"
                   alignItems="center"
                 >
-                  {member.phone && (
+                  {member.phone &&
                     <Chip
                       icon={<CallIcon />}
                       label={member.phone}
                       style={{ marginTop: "1rem" }}
                       size="small"
                     />
-                  )}
-                  {member.email && (
+                  }
+                  {member.email &&
                     <Chip
                       icon={<EmailIcon />}
                       label={member.email}
                       style={{ marginTop: "1rem" }}
                       size="small"
                     />
-                  )}
-                  {member.twitterUrl ? (
+                  }
+                  {member.twitterUrl &&
                     <Link href={member.twitterUrl} style={{ marginTop: "10%" }}>
                       <center>
                         <img
@@ -108,10 +108,8 @@ export default function Team({
                         />
                       </center>
                     </Link>
-                  ) : (
-                    ""
-                  )}
-                  {member.googleUrl ? (
+                  }
+                  {member.googleUrl &&
                     <Link href={member.googleUrl} style={{ marginTop: "10%" }}>
                       <center>
                         <img
@@ -120,10 +118,8 @@ export default function Team({
                         />
                       </center>
                     </Link>
-                  ) : (
-                    ""
-                  )}
-                  {member.linkedinUrl ? (
+                  }
+                  {member.linkedinUrl &&
                     <Link
                       href={member.linkedinUrl}
                       style={{ marginTop: "10%" }}
@@ -135,9 +131,7 @@ export default function Team({
                         />
                       </center>
                     </Link>
-                  ) : (
-                    ""
-                  )}
+                  }
                 </Grid>
               </Paper>
             </center>
