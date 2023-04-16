@@ -55,7 +55,11 @@ let slides = [
     titolo: "Fatti un bel giro",
     descrizione:
       "Scopri tutti i segreti del nostro Centro con il tour virtuale!",
-    immagine: "https://source.unsplash.com/random",
+    immagine:
+      "https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg",
+    colore: "#ED4C67",
+    opacity: 0.5,
+    blur: "0.5rem",
     buttonText: "Scopri di più!",
     buttonUrl: "https:...",
   },
@@ -320,6 +324,7 @@ export default function Home({ datiArticoli }) {
         backgroundImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
         backgroundColor="orange"
         opacity={0.8}
+        blur="0.2rem"
         color="white"
         title="Perché il tempo spensierato non sia tempo perso"
         subtitle="Saluto del Direttore"
@@ -339,6 +344,7 @@ export default function Home({ datiArticoli }) {
         backgroundImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
         backgroundColor="#EE5A24"
         opacity={0.8}
+        blur="0.2rem"
         color="white"
         rows={[
           ["Cognome", "Nome", "Età"],

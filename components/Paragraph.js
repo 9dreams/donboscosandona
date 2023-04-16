@@ -30,6 +30,17 @@ export default function Paragraph(props) {
           borderRadius: "1rem",
         }}
       />
+      <Container
+        maxWidth={false}
+        sx={{
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+          right: 0,
+          left: 0,
+          backdropFilter: "blur(" + props.blur + ")",
+        }}
+      />
       <Container sx={{ position: "relative", color: props.color }}>
         {props.topImageUrl && (
           <CardMedia

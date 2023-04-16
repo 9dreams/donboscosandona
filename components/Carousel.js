@@ -25,13 +25,13 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                             <Paper
                                 className={styles.slide}
                                 sx={{
-                                    backgroundColor: slide.colore,
+                                    position: 'relative',
                                     backgroundImage: 'url(' + slide.immagine + ')',
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
                                     height: height + 'vh',
-                                    paddingTop: (height / 3) + 'vh'
+                                    paddingTop: (height / 3) + 'vh',
                                 }}
                                 elevation={5}
                             >
@@ -42,7 +42,19 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                         bottom: 0,
                                         right: 0,
                                         left: 0,
-                                        backgroundColor: slide.immagine ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0)',
+                                        backgroundColor: slide.colore,
+                                        opacity: slide.opacity,
+                                    }}
+                                />
+                                <Container
+                                    maxWidth={false}
+                                    sx={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        bottom: 0,
+                                        right: 0,
+                                        left: 0,
+                                        backdropFilter: "blur(" + slide.blur +")",
                                     }}
                                 />
                                 <Container maxWidth="lg">
