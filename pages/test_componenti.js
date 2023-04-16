@@ -336,8 +336,10 @@ export default function Home({ datiArticoli }) {
       <Table
         title="Titolo della tabella"
         subtitle="Sottotitolo della tabella"
-        backgroundColor="#ffecb8"
-        elevation="1"
+        backgroundImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
+        backgroundColor="#EE5A24"
+        opacity={0.8}
+        color="white"
         rows={[
           ["Cognome", "Nome", "Età"],
           ["Paoletti", "Vigilio", 75],
