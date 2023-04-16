@@ -316,11 +316,30 @@ export default function Home({ datiArticoli }) {
         spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
         tempo libero rischia di diventare tempo perso.
       </Paragraph>
+      <Paragraph
+        backgroundImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
+        backgroundColor="orange"
+        opacity={0.8}
+        color="white"
+        title="Perché il tempo spensierato non sia tempo perso"
+        subtitle="Saluto del Direttore"
+      >
+        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
+        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
+        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
+        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
+        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
+        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
+        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
+        tempo libero rischia di diventare tempo perso.
+      </Paragraph>
       <Table
         title="Titolo della tabella"
         subtitle="Sottotitolo della tabella"
-        backgroundColor="#ffecb8"
-        elevation="1"
+        backgroundImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
+        backgroundColor="#EE5A24"
+        opacity={0.8}
+        color="white"
         rows={[
           ["Cognome", "Nome", "Età"],
           ["Paoletti", "Vigilio", 75],
