@@ -3,11 +3,7 @@
 }
 
 .carousel .slide {
-    position: relative;
-  
-    
     overflow: hidden;
-
 }
 
 .carousel .slide * {

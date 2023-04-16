@@ -55,7 +55,10 @@ let slides = [
     titolo: "Fatti un bel giro",
     descrizione:
       "Scopri tutti i segreti del nostro Centro con il tour virtuale!",
-    immagine: "https://source.unsplash.com/random",
+    immagine: "https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg",
+    colore: "#ED4C67",
+    opacity: 0.5,
+    blur: "0.5rem",
     buttonText: "Scopri di più!",
     buttonUrl: "https:...",
   },
@@ -65,7 +68,7 @@ let slides = [
       "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
     colore: "#22aa22",
   },
-];
+]
 
 // Il nostro team
 let members = [
