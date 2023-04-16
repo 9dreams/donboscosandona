@@ -316,8 +316,10 @@ export default function Home({ datiArticoli }) {
       />
       <Table
         title="Orario della Giornata"
-        backgroundColor="#ffecb8"
-        elevation="5"
+        backgroundImageUrl="http://www.inoratorio.it/img/column/fefafd65dff6ae8d5816a76b10eda7d57d3bdfb2.jpg?1536915917"
+        backgroundColor="#c23616"
+        opacity={0.8}
+        color="white"
         rows={[
           ["Mattino", "", "Pomeriggio", ""],
           ['8.30', 'Accoglienza informale', '14.30', 'Riapertura cancelli'],
@@ -325,8 +327,8 @@ export default function Home({ datiArticoli }) {
           ['9.30', 'Momento di preghiera ragazzi', '17.45', 'Concludiamo insieme la giornata'],
           ['10.00', 'Prima ora di attività', '18.00', 'Termine attività pomeridiane'],
           ['10.50', 'Ricreazione', '18.30', 'Santa Messa (per chi lo desidera)'],
-          ['11.10', 'Seconda ora di attività'],
-          ['12.00', 'A casa... buon pranzo!'],
+          ['11.10', 'Seconda ora di attività', '', ''],
+          ['12.00', 'A casa... buon pranzo!', '', ''],
         ]}
       />
 
