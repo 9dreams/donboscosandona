@@ -1,10 +1,8 @@
 import { Container, Typography, CardMedia } from "@mui/material";
-import styles from "/components/Paragraph.module.css";
 
 export default function Paragraph(props) {
   return (
     <Container
-      className={styles.scritte2}
       maxWidth={props.maxWidth}
       sx={{
         marginTop: "2rem",
@@ -37,11 +35,9 @@ export default function Paragraph(props) {
       )}
       <Container
         disableGutters={true}
-        className={styles.scritte}
         sx={{
-          maxWidth: false,
           marginTop: "2rem",
-          columnCount: props.columnCount,
+          columnCount: { xs: 1, md: props.columnCount },
           columnGap: "3rem",
         }}
       >
