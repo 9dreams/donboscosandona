@@ -317,8 +317,9 @@ export default function Home({ datiArticoli }) {
       <Table
         title="Orario della Giornata"
         backgroundImageUrl="http://www.inoratorio.it/img/column/fefafd65dff6ae8d5816a76b10eda7d57d3bdfb2.jpg?1536915917"
-        backgroundColor="#c23616"
-        opacity={0.8}
+        backgroundColor="#EE5A24"
+        opacity={0.7}
+        blur="0.2rem"
         color="white"
         rows={[
           ["Mattino", "", "Pomeriggio", ""],
