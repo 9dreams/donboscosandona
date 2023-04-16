@@ -66,18 +66,27 @@ let gite = [
     descrizione:
       "22 Giugno e 11 Luglio - Scopri tutti i segreti del nostro Centro con il tour virtuale!",
     immagine: "/images/gite/aquaestate.webp",
+    colore: "#FFC312",
+    opacity: 0.5,
+    blur: "0.3rem",
   },
   {
     titolo: "Gita in Val di Gares",
     descrizione:
       "27 Giugno - A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
     immagine: "/images/gite/val_gares.jpeg",
+    colore: "#009432",
+    opacity: 0.5,
+    blur: "0.3rem",
   },
   {
     titolo: "Gita al Parco Sigurtà",
     descrizione:
       "4 Luglio - A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
     immagine: "/images/gite/parco_sigurta.jpeg",
+    colore: "#A3CB38",
+    opacity: 0.5,
+    blur: "0.3rem",
   },
 ];
 
