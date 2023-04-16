@@ -281,6 +281,7 @@ export default function Home({ datiArticoli }) {
         title="Perché il tempo spensierato non sia tempo perso"
         subtitle="Saluto del Direttore, don Nicola Munari"
         avatarImageUrl="https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png"
+        columnCount={2}
       >
         <p>
           Quando finalmente suona l’ultima campanella dell’anno scolastico
@@ -291,23 +292,19 @@ export default function Home({ datiArticoli }) {
           Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il
           tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e
           pigrizia e il tempo libero rischia di diventare tempo perso.
-        </p>
-
-        <p>
+        <br />
           La Proposta Estate Ragazzi, da più di 40 anni, è un’occasione per
           vivere un’Estate davvero ricca: di incontri, attività molteplici,
           gite, escursioni, serate con le famiglie… il tutto vissuto in un clima
           di amicizia, festa e grinta che contagiano e coinvolgono tutti.
-        </p>
-
-        <p>
+        <br />
           Se mi domandassero perché venire alla P.E.R. 2023 direi solo questo. È
           un’esperienza per vivere alla grande e non vivacchiare. A noi piace
           vivere così: ogni giornata è densa perché piena di cose belle, vissute
           con grinta ed entusiasmo. Questo l’augurio per ogni genitore, ogni
           ragazzo e ogni educatore che vivrà questa proposta: “Che ogni giorno
-          ci veda andare a letto stanchi ,ma felici per gli incontri, per la
-          gioia condivisa e le esperienze arricchenti che potremmo fare
+          ci veda andare a letto stanchi ma felici per gli incontri, per la
+          gioia condivisa e le esperienze arricchenti che potremo fare
           insieme”. Buona P.E.R. 2023!
         </p>
       </Paragraph>
