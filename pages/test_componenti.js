@@ -55,7 +55,8 @@ let slides = [
     titolo: "Fatti un bel giro",
     descrizione:
       "Scopri tutti i segreti del nostro Centro con il tour virtuale!",
-    immagine: "https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg",
+    immagine:
+      "https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg",
     colore: "#ED4C67",
     opacity: 0.5,
     blur: "0.5rem",
@@ -68,7 +69,7 @@ let slides = [
       "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
     colore: "#22aa22",
   },
-]
+];
 
 // Il nostro team
 let members = [
@@ -323,6 +324,7 @@ export default function Home({ datiArticoli }) {
         backgroundImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
         backgroundColor="orange"
         opacity={0.8}
+        blur="0.2rem"
         color="white"
         title="Perché il tempo spensierato non sia tempo perso"
         subtitle="Saluto del Direttore"
@@ -342,6 +344,7 @@ export default function Home({ datiArticoli }) {
         backgroundImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
         backgroundColor="#EE5A24"
         opacity={0.8}
+        blur="0.2rem"
         color="white"
         rows={[
           ["Cognome", "Nome", "Età"],
