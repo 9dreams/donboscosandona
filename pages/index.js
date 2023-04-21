@@ -52,20 +52,22 @@ const features = [
 // slides per il carousel
 let slides = [
   {
-    immagine:
-      "https://www.calidario.it/wp-content/uploads/13-13-_Z5A1587-1.jpg",
-    titolo: "Le nostre terme",
+    titolo: "Fatti un bel giro",
     descrizione:
-      "se hai bisognio di un po di riposo ti consigliamo le nostre terme con ottimi massagiatori e massagiatrici",
+      "Scopri tutti i segreti del nostro Centro con il tour virtuale!",
+    immagine:
+      "https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg",
+    colore: "#ED4C67",
+    opacity: 0.5,
+    blur: "0.5rem",
+    buttonText: "Scopri di più!",
+    buttonUrl: "https:...",
   },
   {
-    immagine:
-      "https://www.iparchidivertimento.it/wp-content/uploads/2017/05/Gardaland-uno-dei-20-parchi-divertimento-piu-belli-in-Italia.jpg",
-    titolo: "Le nostre giostre",
+    titolo: "Concorso nazionale settore elettrico",
     descrizione:
-      "le nostre giostre sono famose in tutto il mondo per essere a tema 'miti', infatti potrete salire sul buda espres una gistra che vi fara ripassare tutte le divinita greche",
-     
-      
+      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+    colore: "#22aa22",
   },
 ];
 
@@ -114,28 +116,28 @@ let members = [
 
 let prodotti = [
   {
-    title: "Prenota la tua vacanza",
+    title: "Dove siamo?",
     description:
-      "Sei pronto per un anno pieno di avventure? Approfitta dello sconto fino al 20% e prenota il tuo soggiorno nei nostri hotel, i biglietti sono inclusi nel pacchetto!",
+      "Dreams Island si trova nella fantastica isola di Ons, in Sp.....",
     immagineUrl:
-      "https://staticfanpage.akamaized.net/wp-content/uploads/sites/33/2022/08/castello-walt-disney.jpg",
-    url: "/shop",
+      "https://th.bing.com/th/id/R.624700fc4a51b4dd3f2ad8a73e607f6c?rik=i1hgED1aXA5DEg&pid=ImgRaw&r=0",
+    url: "/luogo",
   },
   {
-    title: "Novità 2023",
+    title: "Come funziona il nostro servizio",
     description:
-      "per un eseprienza più genuina prova il nostro nuovo acqua park a tema shrek ",
+      "Il servizio che offriamo alla dream island e quello di realizare il tuo sognio personale in modo facile infatti baster........",
     immagineUrl:
-      "https://i.ytimg.com/vi/n8lpM4Vr9RA/maxresdefault.jpg",
-    url: "/energia",
+      "https://th.bing.com/th/id/R.d82596bdaa001867ab9eb0a736d6dc61?rik=6D4LJCAkni8lyg&pid=ImgRaw&r=0",
+    url: "/servizzio",
   },
   {
-    title: "Dream island shop",
+    title: "Il nostro staff",
     description:
-      "Scopri il nuovo negozio online di Dream island dove troverai tantissimi gadget personalizzati, articoli LEGO® esclusivi e tanto altro.",
+      "ogni grande azzienda ha il suo staf, il nostro e composto da.....",
     immagineUrl:
-      "https://oasidelmattoncino.com/wp-content/uploads/2019/11/lego-bambini.png",
-    url: "/informatico",
+      "https://th.bing.com/th/id/OIP.TL0uQ59gckmw2BknzGlgiAHaEZ?pid=ImgDet&w=1920&h=1140&rs=1",
+    url: "/staff",
   },
 ];
 
@@ -143,22 +145,22 @@ const testimonials = [
   {
     name: "Michele Venturato",
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
+      "https://th.bing.com/th/id/OIP.82_My22QpvNrp2T4EGw9xgHaGq?pid=ImgDet&rs=1",
+    text: "bellisomo posto ci sono stato quest estate con mia moglie, il nostro sognio nera quello di esplorare una casa degli orrori ma non avevamo il coraggio di andare in una cassa vera, grazie a dream islan abbiamo potuto fare tutto in sicurezza. la cosa piu bella e stata la cura al dettaglio di tutto",
     social: "@Google",
   },
   {
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://th.bing.com/th/id/OIP.p0jJRiFn-AkY155DAs9d9AHaE8?pid=ImgDet&rs=1",
     name: "Daniele Mladenovic",
-    text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
+    text: "Ciao oggi volevo raccontarvi la mia esperienza a Dream island, uno dei miei sogni era quello di essere il protagonista in uno scenario simile a star wars, mi proposero una simulazione (inizialmente ero scettico), dopo il pagamento aspettai solo un mese. arrivato la mi dieddero il materiale nescessario e iniziammo una missione inventata pero devo ammetere che e stata la eseprienza stupenda ",
     social: "@BOBTEK",
   },
   {
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://th.bing.com/th/id/OIP.iGR94-o7mdpomhnbFMYZ4wHaHa?pid=ImgDet&rs=1",
     name: "Pino West",
-    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
+    text: "Wow, questa e lunica cosa che mi viene in mente dopo essere stato a drem islan, qualche mese va avevo chiesto se potessere creare una specie di battle royale realistico a tema Fortinte, devo dire che sono piu che sodistaffatto e stata la cosa piu bella che abbia mai fatto, trovate tutto nel mio canale you tube mi chiamo gepettoilnerd",
     social: "@PINOWEST",
   },
 ];
@@ -166,23 +168,26 @@ const testimonials = [
 let certifications = [
   {
     logoUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Logo_Nutella.svg/2560px-Logo_Nutella.svg.png",
-    
+      "https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png",
+    text1: "ISO 9001:2015",
+    text2: "Reg. n. 2593-A - Settore EA: 37",
   },
   {
     logoUrl:
       "https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png",
-    
+    text1:
+      "Progettazione ed erogazione di attività formative e di orientamento",
   },
   {
     logoUrl:
       "https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png",
-    
+    text1: "Authorised Training Center",
   },
   {
     logoUrl:
       "https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png",
-   
+    text1: "Cod. A033 - Formazione Iniziale,",
+    text2: "Superiore e Orientamento",
   },
 ];
 
@@ -191,77 +196,62 @@ export default function Home({ datiArticoli }) {
     <Layout>
       <LandingHero
         opacity={0.5}
-        title="Dream Island"
-        description="esaudisci il duo desiderio nascosto"
-        imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Island_of_Dreams2.jpg/1200px-Island_of_Dreams2.jpg"
-      />
-      <br />
-      <br />
-      <br />
-      <br/>
-      <br/>
-
-      <Products
-
-        cardWidth={4}
-        products={prodotti}
+        
+        imageUrl="https://th.bing.com/th/id/R.49d0a4a386261e9b1460c05baba702af?rik=%2bLqyTbwOL5%2bb6g&pid=ImgRaw&r=0"
       />
 
-      <br/><br/><br/><br/>
+      <Container maxWidth={false} sx={{ backgroundColor: "#f8f32b", height: "100px" }}></Container>
+      <Container maxWidth={false} sx={{ background: "linear-gradient(to bottom, #f8f32b 80%, #ffffff 100%)", height: "150px" }}>
+        <Typography
+          style={{ textAlign: "center", paddingBottom: "2rem", }}
+          component="h2"
+          variant="h3"
+          color=""
 
-      
-
-      <Carousel slides={slides} />
-
-        <Paragraph
-          title="Chi siamo e cosa facciamo"
-          rightImageUrl="https://www.benesserecorpomente.it/wp-content/uploads/2017/12/lampada-dei-desideri.jpg"
+          gutterBottom
         >
-          Nati dal idea di realizare il sognio di qualsiasi uomo,donna,bambino e bambina.
-          grazie allo staf di dream island riuscirai a reaizarlo, vi bastera conttatarci e dopo un analisi del vostro sognio
-          vi verra chiesto un quantitativo di denaro che puo essere pagato anche con dele comodissime rate mensili, nell prezzo e compreso
-          cibo in base alle vostre preferenze e allogio in un hotel a tema
-        </Paragraph>
-
-      <Container>
-
-      <Table
-        title="prezzi per le giostre e le terme"
-        backgroundImageUrl="https://www.altroconsumo.it/-/media/altroconsumo/images/home/vita-privata-e-famiglia/servizi-e-contratti/news/prezzi-inflazione-news_800x450.jpg?rev=e90f4ca4-b859-46f3-9323-004b90dca6ba&mw=660&hash=8710A6703FB6B01ECEC0397C1E07467D"
-        backgroundColor="#102c54"
-        opacity={0.8}
-        blur="0.2rem"
-        color="white"
-        rows={[
-          ["categorie", "minori di 18 anni", "maggiore di 18 anni"],
-          ["livello Bronzo", 50, 70],
-          ["livello Argento", 80, 85],
-          ["livello Oro", 120, 150],
-        ]}
-      />
+          <center> <b>Benvenuto nel sito di Dream island!</b></center>
+        </Typography>
 
       </Container>
-      <br/><br/><br/><br/>
 
-      <Paragraph
-        backgroundImageUrl="https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg"
-        backgroundColor="black"
-        opacity={0.8}
-        blur="0.2rem"
-        color="white"
-        title="Rendi possibile il tuo sonio"
-        
-      >
-       il prezzo per la realizazione del sognio e apparte, la cifra medio per una famiglia si aggira intorno agli 800 €
-      </Paragraph>
-      <br/><br/><br/><br/>
+      <Container sx={{ marginTop: "70px" }}>
+        <Products
+          title="Tutto quello che da sapere su di noi"
+          cardWidth={4}
+          products={prodotti} />
+      </Container>
+      <br/><br/><br/>
 
+      <Container maxWidth={false} sx={{ background: "linear-gradient(to top, #f8f32b 80%, #ffffff 100%)", height: "100px" }}></Container>
+      <Container maxWidth={false} sx={{ backgroundColor: "#f8f32b", }}>
+        <Typography
+          style={{ textAlign: "center", paddingBottom: "2rem", }}
+          component="h4"
+          variant="h3"
+          color=""
+
+          gutterBottom
+        >
+          <center> <b>Esperienze dei nostri clienti</b></center>
+        </Typography>
+
+        <Testimonials 
+        testimonials={testimonials}
+        cardWidth={4}
+        imageUrl="https://www.canva.com/design/DAFgwVcUUl0/view"
+      />
+<br/><br/><br/><br/><br/><br/>
+      </Container>
       
       
-
       
 
-     
+
+
+
+
+
     </Layout>
   );
 }

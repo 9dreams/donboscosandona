@@ -30,7 +30,7 @@ const Features = (props) => {
 
 Features.defaultProps = {
   title: 'Features',
-  description: 'Questo è un paragrafo',
+  
 };
 
 export default Features;

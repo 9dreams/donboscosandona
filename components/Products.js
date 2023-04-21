@@ -9,10 +9,10 @@ import CardMedia from "@mui/material/CardMedia";
 
 export default function Products({ title, description, cardWidth, products, borderRadius }) {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" >
       <Typography
         text-align="center"
-        style={{ textAlign: "center" }}
+        style={{ textAlign: "center" , padding: "10px" , marginTop:"10px"}}
         component="h3"
         variant="h3"
         color="inherit"
@@ -22,7 +22,7 @@ export default function Products({ title, description, cardWidth, products, bord
       </Typography>
       <Typography
         variant="subtitle1"
-        style={{ textAlign: "center", padding: "10px" }}
+        style={{ textAlign: "center", padding: "10px" , marginTop:"10px"}}
         text-align="center"
         color="text.secondary"
         paragraph
@@ -32,13 +32,13 @@ export default function Products({ title, description, cardWidth, products, bord
       <Grid container>
         {products.map((product) => (
           <Grid item md={cardWidth}>
-            <CardActionArea
+            <CardActionArea 
               className={styles.card}
               component="a"
               href={product.url}
             >
               <Card sx={{ display: "flex" }} elevation={0}>
-                <CardContent sx={{ flex: 1 }}>
+                <CardContent sx={{ flex: 1, background: "#f8f32b", marginRight:"20px" ,}}>
                   <CardMedia
                     component="img"
                     sx={{
@@ -46,7 +46,8 @@ export default function Products({ title, description, cardWidth, products, bord
                         xs: "block",
                         sm: "block",
                         margin: "auto",
-                        borderRadius: borderRadius,
+                        borderRadius: '0',
+                        
                       },
                     }}
                     image={product.immagineUrl}
@@ -56,7 +57,7 @@ export default function Products({ title, description, cardWidth, products, bord
                     text-align="center"
                     component="h4"
                     variant="h6"
-                    style={{ textAlign: "center" }}
+                    style={{ textAlign: "center"  , marginTop:"30px"}}
                     color="inherit"
                     gutterBottom
                   >
@@ -87,7 +88,7 @@ export default function Products({ title, description, cardWidth, products, bord
                     >
                       <div
                         className={styles.label}
-                        style={{ backgroundColor: product.labelColor }}
+                        style={{ backgroundColor: "#f8f32b" }}
                       >
                         <p>{product.rif}</p>
                       </div>
