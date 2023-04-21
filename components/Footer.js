@@ -62,27 +62,7 @@ export default function Footer(props) {
                         </Grid>
 
                         { /* Immagini */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title3}
-                            </Typography>
-                            <Grid container spacing={2} minHeight={160}>
-                                {
-                                    props.images.map((image) => (
-                                        <Grid item xs={4} display="flex" justifyContent="center" alignItems="center">
-                                            <Link
-                                                color="inherit"
-                                                noWrap
-                                                variant="body2"
-                                                sx={{ p: 1, flexShrink: 3, }}
-                                            >
-                                                <img src={image.imageUrl} width="120" />
-                                            </Link>
-                                        </Grid>
-                                    ))
-                                }
-                            </Grid>
-                        </Grid>
+                        
 
                         { /* Linea */}
                         <Grid item xs={12}>
@@ -102,31 +82,12 @@ export default function Footer(props) {
                                     color: '#fff',
                                 }}
                             >
-                                <Grid container sx={{ marginBottom: '10px', pb: '10px'}}>
-                                    {
-                                        props.menu.map((link) => (
-                                            <Button
-                                                color="inherit"
-                                                noWrap
-                                                key={link.title}
-                                                variant="body2"
-                                                href={link.url}
-                                                sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
-                                            >
-                                                {link.title}
-                                            </Button>
-                                        ))
-                                    }
-                                </Grid>
+                               
                             </Toolbar>
                         </Grid>
 
                         { /* Copyright */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" sx={{marginLeft: '27px', marginBottom: '15px'}}>
-                                {props.copyright}
-                            </Typography>
-                        </Grid>
+                        
                     </Grid>
                 </Container>
             </Box>
