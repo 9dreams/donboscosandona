@@ -1,20 +1,229 @@
-import Container from "@mui/material/Container"
-import Grid from "@mui/material/Grid"
+import Layout from "/components/Layout";
+import LandingHero from "/components/LandingHero2.js";
+import Features from "/components/Features";
+import Carousel from "/components/Carousel";
+import Products from "/components/Products";
+import Testimonials from "/components/Testimonials";
+import Team from "/components/Team";
+import Maps from "/components/Maps";
+import Paragraph from "components/Paragraph";
+import Table from "components/Table";
 
-import Layout from "/components/Layout"
-import LandingHero from "/components/LandingHero2.js"
-import Features from "/components/Features"
-import Carousel from "/components/Carousel"
-import Products from "/components/Products"
-import Testimonials from "/components/Testimonials"
-import Team from "/components/Team"
-import Post from "/components/Post"
-import Certifications from "@/components/Certifications"
-import Maps from "/components/Maps"
-import Paragraph from "components/Paragraph"
-import Table from 'components/Table'
+export default function Home({ datiArticoli }) {
+  return (
+    <Layout>
+      <LandingHero
+        opacity={0.2}
+        title="Proposta Estate Ragazzi"
+        description="Dal 15 Giugno al 14 Luglio 2023"
+        buttonUrl="/tema"
+        buttonText="be-Real: from lie to Life"
+        imageUrl="https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg"
+      />
+      <Paragraph
+        title="Perché il tempo spensierato non sia tempo perso"
+        subtitle="Saluto del Direttore, don Nicola Munari"
+        avatarImageUrl="https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png"
+        columnCount={2}
+      >
+        <p>
+          Quando finalmente suona l’ultima campanella dell’anno scolastico
+          inizia quel periodo tanto atteso dove finalmente si può fare ciò che
+          si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere,
+          insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa
+          l’attesa più grande durante l’ultima parte dell’anno scolastico.
+          Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il
+          tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e
+          pigrizia e il tempo libero rischia di diventare tempo perso.
+        </p>
+        <p>
+          La Proposta Estate Ragazzi, da più di 40 anni, è un’occasione per
+          vivere un’Estate davvero ricca: di incontri, attività molteplici,
+          gite, escursioni, serate con le famiglie… il tutto vissuto in un clima
+          di amicizia, festa e grinta che contagiano e coinvolgono tutti.
+        </p>
+        <p>
+          Se mi domandassero perché venire alla P.E.R. 2023 direi solo questo. È
+          un’esperienza per vivere alla grande e non vivacchiare. A noi piace
+          vivere così: ogni giornata è densa perché piena di cose belle, vissute
+          con grinta ed entusiasmo. Questo l’augurio per ogni genitore, ogni
+          ragazzo e ogni educatore che vivrà questa proposta: “Che ogni giorno
+          ci veda andare a letto stanchi ,ma felici per gli incontri, per la
+          gioia condivisa e le esperienze arricchenti che potremmo fare
+          insieme”. Buona P.E.R. 2023
+        </p>
+      </Paragraph>
+      <Features
+        title="La #per dell'Oratorio don Bosco è..."
+        description=""
+        features={features}
+        cardWidth={3}
+      />
+      <Table
+        title="Orario della Giornata tipo"
+        backgroundImageUrl="http://www.inoratorio.it/img/column/fefafd65dff6ae8d5816a76b10eda7d57d3bdfb2.jpg?1536915917"
+        backgroundColor="#EE5A24"
+        opacity={0.7}
+        blur="0.2rem"
+        color="white"
+        rows={[
+          ["Mattino", "", "Pomeriggio", ""],
+          ["8.30", "Accoglienza informale", "14.30", "Riapertura cancelli"],
+          [
+            "8.45",
+            "Preghiera e avvisi animatori",
+            "15.00",
+            "Inizio pomeriggio: tornei, giochi al parco, spettacoli, ecc.",
+          ],
+          [
+            "9.30",
+            "Momento di preghiera ragazzi",
+            "17.45",
+            "Concludiamo insieme la giornata",
+          ],
+          [
+            "10.00",
+            "Prima ora di attività",
+            "18.00",
+            "Termine attività pomeridiane",
+          ],
+          [
+            "10.50",
+            "Ricreazione",
+            "18.30",
+            "Santa Messa (per chi lo desidera)",
+          ],
+          ["11.10", "Seconda ora di attività", "", ""],
+          [
+            "12.00",
+            "A casa... buon pranzo!",
+            "",
+            "Attenzione: tutti i mercoledì pomeriggio non c’è attività pertanto l’oratorio rimarrà chiuso.",
+          ],
+        ]}
+      />
+      <Products cardWidth={3} products={in_evidenza} borderRadius="50%" />
+      <Carousel slides={gite} height={70} />
+      <Products
+        title="I laboratori"
+        description="Stare insieme..."
+        cardWidth={3}
+        products={laboratori}
+        borderRadius="2rem"
+      />
+      <Carousel slides={serate} height={70} />
+      <Products
+        title="Serate Cinema"
+        description="Ogni settimana uno splendido film da gustare in compagnia degli amici della PER!"
+        cardWidth={3}
+        products={serate_cinema}
+        borderRadius="5px"
+      />
+      <Paragraph
+        title="Stay tuned"
+        subtitle="Per essere sempre aggiornato sulla PER!"
+        avatarImageUrl="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+      >
+        <p>
+          Sito internet e Social Network verranno continuamente aggiornati per
+          raccontare cos'è la proposta estate e per ricordare tutti gli
+          appuntamenti importanti.
+          <br />
+          Animatori, ragazzi e genitori potranno così essere sempre connessi e
+          raccontare la propria esperienza usando gli hashtag #PER23{" "}
+        </p>
+        <p>
+          Seguiteci su
+          <br />
+          Instagram @inoratorio.it
+          <br />
+          Facebook @Don Bosco San Donà - inoratorio.it
+        </p>
+        <p>
+          <b>Anche quest’anno potrai ricevere tutte le NEWS della PER23
+          direttamente su WhatsApp!!!</b> E' semplice e comodo:
+          <br />
+          1) Registra nella tua rubrica il nostro numero: 3924643689
+          <br />
+          2) Inviaci un messaggio con scritto NEWS PER23 Tutto qui!
+        </p>
+      </Paragraph>
+      <Testimonials
+        testimonials={testimonials}
+        cardWidth={4}
+        imageUrl="/images/home/sfondo_giostra.jpeg"
+      />
+      <Products cardWidth={3} products={altri_link} borderRadius="50%" />
+      <Paragraph
+        title="La Segreteria durante la PER"
+        backgroundColor="#ED4C67"
+        opacity={0.8}
+        maxWidth={false}
+        color="white"
+        backgroundImageUrl="https://images.unsplash.com/photo-1578402027014-8adededc0fac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2252&q=80"
+      >
+        <p>
+          La segreteria sarà aperta per le iscrizioni alle varie gite e per
+          qualsiasi informazione dal lunedì al venerdì nei seguenti orari:
+        </p>
+        <p align="center">
+          <b>
+            <br />
+            8.30 - 10.00
+            <br />
+            11.45 - 12.15
+            <br />
+            14.40 - 15.20
+            <br />
+            17.30 - 18.15
+          </b>
+        </p>
+        <p>
+          La segreteria rimarrà chiusa le mattine in cui ci saranno le gite ed
+          il mercoledì pomeriggio){" "}
+        </p>
+        <p>
+          Ricordiamo che l’iscrizione alle uscite deve avvenire al massimo entro
+          le ore 12.00 di due giorni precedenti all’uscita (salvo eventuali
+          altre indicazioni).
+        </p>
+        <p>
+          Le liste verranno esposte verso le 18.00 nella vigilia delle gite.
+        </p>
+        <p>
+          Per potervi servire meglio e più velocemente è importante venire in
+          segreteria con la tessera personale che consegneremo ai ragazzi
+          all’inizio della P.E.R. e con i soldi giusti.
+        </p>
+        <p>
+          Non è necessaria la presenza del genitore per l’iscrizione alle gite.
+        </p>
+      </Paragraph>
+      <Team
+        title="Contatti"
+        description="Hai dei dubbi? Contattaci pure (preferibilmente via email) e ti risponderemo il prima possibile."
+        members={members}
+        cardWidth={4}
+      />
+      <Maps
+        maxWidth="100%"
+        maxHeight="550px"
+        url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit"
+      />
+    </Layout>
+  );
+}
 
-import { getDatiArticoli } from "/lib/articoli"
+import { getDatiArticoli } from "/lib/articoli";
+
+export async function getStaticProps() {
+  const datiArticoli = getDatiArticoli();
+  return {
+    props: {
+      datiArticoli,
+    },
+  };
+}
 
 // I punti di forza
 const features = [
@@ -22,25 +231,25 @@ const features = [
     title: "Una proposta cristiana",
     imageUrl: "/images/home/proposta_cristiana.png",
     description:
-      "Un progetto chiaro e affidabile per far crescere e diventare uomini. ",
+      "Il nostro compagno di viaggio in questa splendida avventura estiva sarà sempre Gesù.",
   },
   {
-    title: "Divertendosi insieme",
+    title: "In allegria",
     imageUrl: "/images/home/divertendosi.png",
     description:
-      "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.",
+      "La PER è piena di allegria vissuta in compagnia in ogni momento: giochi, attività, gite, serate...",
   },
   {
     title: "Mettendo a frutto la creatività",
     imageUrl: "/images/home/creativa.png",
     description:
-      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
+      "Nei laboratori i talenti fioriscono: in te forse c'è uno sportivo, un artista, un creativo... scegli con cura al momento della preiscrizione",
   },
   {
-    title: "Esplorando il mondo",
+    title: "Coltivando le relazioni",
     imageUrl: "/images/home/esplorando.png",
     description:
-      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
+      "Durante la PER non sarai mai da solo: educatori, animatori, altri ragazzi, ospiti... ognuno è un mondo da esplorare, devi solo buttarti!",
   },
 ];
 
@@ -94,30 +303,35 @@ let gite = [
 let members = [
   {
     name: "Segreteria PER",
-    role: "Iscrizioni e informazioni generali",
+    role: "Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo:",
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "",
     email: "per@donboscosandona.it",
-    phone: "0421 3388949874950",
   },
   {
     name: "don Michele Bortolato",
     role: "Responsabile della Proposta Estate",
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "",
   },
   {
     name: "don Nicola Munari",
     role: "Direttore dell'Opera",
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "",
+  },
+  {
+    name: "Dopo la Campanella",
+    role: "Dott. Andrea Pasqualetto",
+    imageUrl:
+      "",
+    phone: "391 706 4430",
   },
   {
     name: "Cinema don Bosco",
-    role: "Orari e biglietti",
+    role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero:",
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    email: "cinema@donboscosandona.it",
+      "",
     phone: "346 960 5687",
   },
 ];
@@ -141,6 +355,12 @@ let in_evidenza = [
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/home/tema.png",
     url: "/tema",
+  },
+  {
+    title: "I pomeriggi",
+    description: "Scopri la #PER23 giorno per giorno",
+    immagineUrl: "/images/home/tema.png",
+    url: "/pomeriggi",
   },
 ];
 
@@ -274,123 +494,3 @@ let serate_cinema = [
       "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f452aa2c-0c64-4bbf-b065-942b8dbda8bb/deybcgp-36da842e-b54d-40f9-8929-a13b60a21d47.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y0NTJhYTJjLTBjNjQtNGJiZi1iMDY1LTk0MmI4ZGJkYThiYlwvZGV5YmNncC0zNmRhODQyZS1iNTRkLTQwZjktODkyOS1hMTNiNjBhMjFkNDcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HK_zjbw8uSR8rWKubPz6HyjMLnm6_qnLH9G7j-zpI8k",
   },
 ];
-
-export default function Home({ datiArticoli }) {
-  return (
-    <Layout>
-      <LandingHero
-        opacity={0.2}
-        title="Proposta Estate Ragazzi 2023"
-        description="Il sito della PER 23"
-        buttonUrl="j"
-        buttonText="Guarda il video"
-        imageUrl="https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg"
-      />
-      <Paragraph
-        title="Perché il tempo spensierato non sia tempo perso"
-        subtitle="Saluto del Direttore, don Nicola Munari"
-        avatarImageUrl="https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png"
-        columnCount={2}
-      >
-        <p>
-          Quando finalmente suona l’ultima campanella dell’anno scolastico
-          inizia quel periodo tanto atteso dove finalmente si può fare ciò che
-          si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere,
-          insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa
-          l’attesa più grande durante l’ultima parte dell’anno scolastico.
-          Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il
-          tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e
-          pigrizia e il tempo libero rischia di diventare tempo perso.
-        <br />
-          La Proposta Estate Ragazzi, da più di 40 anni, è un’occasione per
-          vivere un’Estate davvero ricca: di incontri, attività molteplici,
-          gite, escursioni, serate con le famiglie… il tutto vissuto in un clima
-          di amicizia, festa e grinta che contagiano e coinvolgono tutti.
-        <br />
-          Se mi domandassero perché venire alla P.E.R. 2023 direi solo questo. È
-          un’esperienza per vivere alla grande e non vivacchiare. A noi piace
-          vivere così: ogni giornata è densa perché piena di cose belle, vissute
-          con grinta ed entusiasmo. Questo l’augurio per ogni genitore, ogni
-          ragazzo e ogni educatore che vivrà questa proposta: “Che ogni giorno
-          ci veda andare a letto stanchi ma felici per gli incontri, per la
-          gioia condivisa e le esperienze arricchenti che potremo fare
-          insieme”. Buona P.E.R. 2023!
-        </p>
-      </Paragraph>
-      <Features
-        title="La #per dell'Oratorio don Bosco è..."
-        description=""
-        features={features}
-        cardWidth={3}
-      />
-      <Table
-        title="Orario della Giornata"
-        backgroundImageUrl="http://www.inoratorio.it/img/column/fefafd65dff6ae8d5816a76b10eda7d57d3bdfb2.jpg?1536915917"
-        backgroundColor="#EE5A24"
-        opacity={0.7}
-        blur="0.2rem"
-        color="white"
-        rows={[
-          ["Mattino", "", "Pomeriggio", ""],
-          ['8.30', 'Accoglienza informale', '14.30', 'Riapertura cancelli'],
-          ['8.34', 'Preghiera e avvisi', '15.00', 'Inizio pomeriggio: tornei, giochi al parco, spettacoli, ecc.'],
-          ['9.30', 'Momento di preghiera ragazzi', '17.45', 'Concludiamo insieme la giornata'],
-          ['10.00', 'Prima ora di attività', '18.00', 'Termine attività pomeridiane'],
-          ['10.50', 'Ricreazione', '18.30', 'Santa Messa (per chi lo desidera)'],
-          ['11.10', 'Seconda ora di attività', '', ''],
-          ['12.00', 'A casa... buon pranzo!', '', ''],
-        ]}
-      />
-
-      <Products
-        cardWidth={4}
-        products={in_evidenza}
-        borderRadius="50%"
-      />
-      <Carousel slides={gite} height={70} />
-      <Products
-        title="I laboratori"
-        description="Stare insieme..."
-        cardWidth={3}
-        products={laboratori}
-        borderRadius="2rem"
-      />
-      <Carousel slides={serate} height={70} />
-      <Products
-        title="Serate Cinema"
-        description="Ogni settimana uno splendido film da gustare in compagnia degli amici della PER!"
-        cardWidth={3}
-        products={serate_cinema}
-        borderRadius="5px"
-      />
-      <Paragraph title="Stay tuned">...</Paragraph>
-      <Testimonials
-        testimonials={testimonials}
-        cardWidth={4}
-        imageUrl="/images/home/sfondo_giostra.jpeg"
-      />
-      <Products cardWidth={3} products={altri_link} borderRadius="50%" />
-      <Paragraph title="La Segreteria">...</Paragraph>
-      <Team
-        title="Contatti"
-        description="Hai dei dubbi? Contattaci pure (preferibilmente via email) e ti risponderemo il prima possibile."
-        members={members}
-        cardWidth={3}
-      />
-      <Maps
-        maxWidth="100%"
-        maxHeight="550px"
-        url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit"
-      />
-    </Layout>
-  );
-}
-
-export async function getStaticProps() {
-  const datiArticoli = getDatiArticoli();
-  return {
-    props: {
-      datiArticoli,
-    },
-  };
-}

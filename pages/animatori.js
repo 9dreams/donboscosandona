@@ -27,10 +27,6 @@ Circa 200 ragazzi, dalla prima alla quarta superiore, che dopo le fatiche di un 
 -Molte le serate di danza e sfide sportive nel dopo cena...<br/>
 
 e se il cammino continuasse anche nel periodo invernale?!?!?! Scopri tutte le proposte sul nostro sito www.inoratorio.it<br/>
-
-Pubblicità - mezza pagina
-
-
       </Paragraph>
     </Layout>
   )
