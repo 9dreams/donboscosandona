@@ -9,7 +9,7 @@ export default function Pagina() {
         opacity={0.2}
         title="Gruppo Special"
         description="L'attività cucita su misura per i ragazzi di terza media!"
-        imageUrl="/images/special/speciallll.webp"
+        imageUrl="/images/special.png"
       />
       <Paragraph>
         <p>

@@ -61,10 +61,10 @@ export default function Home({ datiArticoli }) {
       />
       <Table
         title="Orario della Giornata tipo"
-        backgroundImageUrl="http://www.inoratorio.it/img/column/fefafd65dff6ae8d5816a76b10eda7d57d3bdfb2.jpg?1536915917"
-        backgroundColor="#EE5A24"
-        opacity={0.7}
-        blur="0.2rem"
+        backgroundImageUrl="/images/giornata.png"
+        backgroundColor="#e84393"
+        opacity={0.5}
+        blur="0.1rem"
         color="white"
         rows={[
           ["Mattino", "", "Pomeriggio", ""],
@@ -156,11 +156,12 @@ export default function Home({ datiArticoli }) {
       <Products cardWidth={3} products={altri_link} borderRadius="50%" />
       <Paragraph
         title="La Segreteria durante la PER"
-        backgroundColor="#ED4C67"
-        opacity={0.8}
+        backgroundColor="#3867d6"
+        opacity={0.5}
+        blur="0.2rem"
         maxWidth={false}
         color="white"
-        backgroundImageUrl="https://images.unsplash.com/photo-1578402027014-8adededc0fac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2252&q=80"
+        backgroundImageUrl="/images/segreteria.png"
       >
         <p>
           La segreteria sarà aperta per le iscrizioni alle varie gite e per
@@ -340,26 +341,26 @@ let in_evidenza = [
   {
     title: "Iscrizioni",
     description: "Tutto quello che devi sapere per iscriverti alla #PER23",
-    immagineUrl: "/images/home/iscrizioni.png",
+    immagineUrl: "/images/_iscrizioni.png",
     url: "/iscrizioni",
   },
   {
     title: "Calendario",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+      "/images/_calendario.png",
     url: "/calendario",
   },
   {
     title: "Tema formativo",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/tema.png",
+    immagineUrl: "/images/_tema.png",
     url: "/tema",
   },
   {
     title: "I pomeriggi",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/tema.png",
+    immagineUrl: "/images/_pomeriggi.png",
     url: "/pomeriggi",
   },
 ];
@@ -368,25 +369,25 @@ let laboratori = [
   {
     title: "Espressivi",
     description: "Tutto quello che devi sapere per iscriverti alla #PER23",
-    immagineUrl: "/images/home/laboratori_espressivi.png",
+    immagineUrl: "/images/_espressivi.png",
     url: "/laboratori_espressivi",
   },
   {
     title: "Sportivi",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/laboratori_artistici.png",
+    immagineUrl: "/images/_sportivi.png",
     url: "/laboratori_sportivi",
   },
   {
-    title: "Artistici",
+    title: "Manuali",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/laboratori_artistici.png",
+    immagineUrl: "/images/_manuali.png",
     url: "/laboratori_artistici",
   },
   {
     title: "Novità 2023",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/laboratori_new.png",
+    immagineUrl: "/images/_novità.png",
     url: "/laboratori_new",
   },
 ];
@@ -395,44 +396,44 @@ let altri_link = [
   {
     title: "Regolamento",
     description: "Tutto quello che devi sapere per iscriverti alla #PER23",
-    immagineUrl: "/images/home/regolamento.png",
+    immagineUrl: "/images/_regolamento.png",
     url: "/regolamento",
   },
   {
     title: "Servizio autobus",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/autobus.png",
+    immagineUrl: "/images/_autobus.png",
     url: "/autobus",
   },
   {
     title: "Momenti di preghiera e riflessione",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl:
-      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+      "/images/_preghiera.png",
     url: "/preghiera",
   },
   {
     title: "Gruppo Special",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/special.png",
+    immagineUrl: "/images/_special.png",
     url: "/special",
   },
   {
     title: "Spazio animatori",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/animatori.png",
+    immagineUrl: "/images/_animatori.png",
     url: "/animatori",
   },
   {
     title: "Spazio genitori",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/genitori.png",
+    immagineUrl: "/images/_genitori.png",
     url: "/genitori",
   },
   {
     title: "Dopo la Campanella Summer Edition",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl: "/images/home/dlc.png",
+    immagineUrl: "/images/_dlc.png",
     url: "/dlc",
   },
 ];

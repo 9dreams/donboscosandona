@@ -8,10 +8,7 @@ export default function Pagina() {
       <LandingHero
         opacity={0.2}
         title="Spazio animatori"
-
-        imageUrl="/images/animatori/animatori.png"
-
-
+        imageUrl="/images/animatori.png"
       />
       <Paragraph
         title="Spazio animatori"

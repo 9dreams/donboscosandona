@@ -9,7 +9,7 @@ export default function Pagina() {
         opacity={0.0}
         title="Be-Real"
         description="From lie to Life"
-        imageUrl="images/tema/persone.png"
+        imageUrl="/images/tema.png"
       />
       <Paragraph title="C'era una volta...">
         <p>

@@ -79,7 +79,7 @@ export default function Pagina() {
         opacity={0.2}
         title="Laboratori Sportivi"
         description="In questa pagina troverete le informazioni relative ai laboratori sportivi."
-        imageUrl="https://i.ibb.co/3pyCN0t/copertina.jpg"
+        imageUrl="/images/sportivi.png"
       />
       <br />
 

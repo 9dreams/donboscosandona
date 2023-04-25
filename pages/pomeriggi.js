@@ -9,7 +9,7 @@ export default function Pagina() {
         opacity={0.2}
         title="I nostri pomeriggi"
         description="Divertimento assicurato!"
-        imageUrl="/images/pomeriggi/pome.png"
+        imageUrl="/images/pomeriggi.png"
       />
       <Paragraph>
         <p>

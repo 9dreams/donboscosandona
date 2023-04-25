@@ -11,7 +11,7 @@ export default function Pagina() {
                 opacity={0.2}
                 title="Trasporto autobus"
                 description="Dalle frazioni all'oratorio"
-                imageUrl="https://images.everyeye.it/img-notizie/pinocchio-guillermo-toro-netflix-quinte-scena-ciao-papa-v3-623662.jpg"
+                imageUrl="/images/autobus.png"
             />
 
             <Paragraph title="Dalle frazioni all'oratorio" />

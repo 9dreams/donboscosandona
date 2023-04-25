@@ -9,7 +9,7 @@ export default function Pagina() {
         opacity={0.0}
         title="Dopo la Campanella"
         description="Il dopo scuola dell'Oratorio don Bosco"
-        imageUrl="/images/dlc/imgsfondo1.png"
+        imageUrl="/images/dlc.png"
       />
       <Paragraph title="" subtitle="">
         <p>

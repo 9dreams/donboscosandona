@@ -9,7 +9,7 @@ export default function Pagina() {
         opacity={0.2}
         title="Momenti di preghiera e riflessione"
         description=""
-        imageUrl=""
+        imageUrl="/images/preghiera.png"
       />
       <Paragraph>
     <p>La Proposta Estate desidera offrire a tutti i ragazzi ed animatori un tempo di qualità per prendersi cura di tutti gli aspetti della vita, compreso quello spirituale, prendendoci cura dell’amicizia tra di noi e con il Signore della nostra vita.</p>

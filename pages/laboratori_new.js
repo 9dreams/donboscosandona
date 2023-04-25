@@ -51,7 +51,7 @@ export default function Pagina() {
         opacity={0.2}
         title="I nuovi laboratori"
         description="In questa pagina parleremo dei nuovi laboratori della proposta estate 2023."
-        imageUrl="/images/laboratori_new/lhsfondo.jpg"
+        imageUrl="/images/novità.png"
       />
       <Paragraph
         title="Novità del 2023"

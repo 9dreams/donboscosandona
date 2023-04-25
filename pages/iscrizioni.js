@@ -10,7 +10,7 @@ export default function Pagina() {
         opacity={0.2}
         title="Iscrizioni"
         description="Iscriviti e non inventare bugie per non venire, ti aspettiamo!"
-        imageUrl="https://fumettologica.it/wp-content/uploads/2022/07/trailer-pinocchio-netflix-del-toro.jpg"
+        imageUrl="/images/iscrizioni.png"
       />
       <Paragraph subtitle="Anche quest’anno la preiscrizione si farà direttamente da casa, tramite Internet!">
         <p>
