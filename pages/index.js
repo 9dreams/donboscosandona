@@ -114,7 +114,10 @@ export default function Home({ datiArticoli }) {
       <Carousel slides={serate} height={70} />
       <Products
         title="Serate Cinema"
-        description="Ogni settimana uno splendido film da gustare in compagnia degli amici della PER!"
+        description="Ogni lunedì sera sarà la serata dedicata al cinema. Le proiezioni inizieranno alle ore 20:45, con accesso alla biglietteria da via XIII Martiri, al prezzo incredibile di 4,00 € (più un euro se non hai ancora gli occhiali 3D);
+ l’uscita invece sarà fatta dalla parte dell’Oratorio, per garantire una maggiore sicurezza dei ragazzi mentre aspettano i genitori.
+ 
+ Per ottenere il biglietto al prezzo speciale PER, l’acquisto deve essere fatto alla biglietteria del Cinema il lunedì mattina dalle 8.30 alle 9.30 o dalle 11.30 alle 12.30 o tutti i giorni dalle 16 alle 19. In alternativa è possibile acquistarlo online sul sito del cinema al prezzo consueto (5 € il biglietto e 2 € gli occhiali 3D): potrai scegliere con comodo il posto e ci darai un aiutino in più. "
         cardWidth={3}
         products={serate_cinema}
         borderRadius="5px"
@@ -140,8 +143,11 @@ export default function Home({ datiArticoli }) {
           Facebook @Don Bosco San Donà - inoratorio.it
         </p>
         <p>
-          <b>Anche quest’anno potrai ricevere tutte le NEWS della PER23
-          direttamente su WhatsApp!!!</b> E' semplice e comodo:
+          <b>
+            Anche quest’anno potrai ricevere tutte le NEWS della PER23
+            direttamente su WhatsApp!!!
+          </b>{" "}
+          E' semplice e comodo:
           <br />
           1) Registra nella tua rubrica il nostro numero: 3924643689
           <br />
@@ -305,34 +311,29 @@ let members = [
   {
     name: "Segreteria PER",
     role: "Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo:",
-    imageUrl:
-      "",
+    imageUrl: "",
     email: "per@donboscosandona.it",
   },
   {
     name: "don Michele Bortolato",
     role: "Responsabile della Proposta Estate",
-    imageUrl:
-      "",
+    imageUrl: "",
   },
   {
     name: "don Nicola Munari",
     role: "Direttore dell'Opera",
-    imageUrl:
-      "",
+    imageUrl: "",
   },
   {
     name: "Dopo la Campanella",
     role: "Dott. Andrea Pasqualetto",
-    imageUrl:
-      "",
+    imageUrl: "",
     phone: "391 706 4430",
   },
   {
     name: "Cinema don Bosco",
     role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero:",
-    imageUrl:
-      "",
+    imageUrl: "",
     phone: "346 960 5687",
   },
 ];
@@ -347,8 +348,7 @@ let in_evidenza = [
   {
     title: "Calendario",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/_calendario.png",
+    immagineUrl: "/images/_calendario.png",
     url: "/calendario",
   },
   {
@@ -408,8 +408,7 @@ let altri_link = [
   {
     title: "Momenti di preghiera e riflessione",
     description: "Scopri la #PER23 giorno per giorno",
-    immagineUrl:
-      "/images/_preghiera.png",
+    immagineUrl: "/images/_preghiera.png",
     url: "/preghiera",
   },
   {
@@ -441,22 +440,22 @@ let altri_link = [
 const testimonials = [
   {
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://png.pngtree.com/png-vector/20220608/ourmid/pngtree-happy-girl-avatar-kid-funny-png-image_4911174.png",
     name: "Michela B.",
     text: "Grazie mille per tutte le infinite emozioni che ci avete regalato, non solo nella serata finale ma in ogni occasione come alla sfilata, alle gite, ai momenti di condivisione, alle cene all'aperto e ai cori delle squadre o alle canzoni cantate e ballate che si sentivano fino a fuori dell'oratorio... per noi è stata la prima esperienza ipergalattica, ma la cosa più bella è che questa PER ha fatto scoprire nuove passioni grazie ai laboratori... Non resta che ringraziare tutti, dal primo all'ultimo e dirvi di continuare così, perchè come alla PER non ci di diverte!!!",
     social: "@giovane iscritta",
   },
   {
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Samuele D.",
+      "https://png.pngtree.com/png-vector/20220817/ourmid/pngtree-cartoon-man-avatar-vector-ilustration-png-image_6111064.png",
+    name: "Samuele Z.",
     text: "E' stato il mio primo anno alla PER. Il prossimo sarò ancora con voi perchè l'UNIONE, la CONDIVISIONE e l'AMICIZIA che si creano all'oratorio don Bosco sono... wow!!! Mi sono divertito un mondo!!! Grazie di tutto!! Alla prossima!!!",
     social: "@animatore",
   },
   {
     name: "Loredana Z.",
     imageUrl:
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s5z4ojtNwl2jXifp1jiboZ2T0plskgirZXxHaE_UW2jdj9PI-8Ig05DPcMBUUAvWNCQ&usqp=CAU",
     text: "A chi dice che i giovani non hanno voglia di fare nulla, io li inviterei in oratorio durante la PER. Che vedano gli animatori e il lavoro che dedicano per allietare bambini e bambine e la gioia che trasmettono. Quando ragazzi e bambini trovano un senso, sono i primi a buttarsi. Ma la PER non è solo gioco e svago. E' un'esperienza che aiuta i più piccoli ad esprimere i loro talenti, a condividere lo stile e il carisma salesiano, a vivere in una comunità che è fortemente educante e gioiosa. Un grazie di cuore all'Oratorio don Bosco!!!",
     social: "@mamma",
   },
@@ -465,33 +464,34 @@ const testimonials = [
 let serate_cinema = [
   {
     title: "TRANSFORMERS: IL RISVEGLIO",
-    description: "Lunedì 19 Giugno ore 20:45",
+    description:
+      "Il film introdurrà: i Maximal, discendenti degli Autobot; i Predacon, discendenti dei Decepticon, e i Terrorcons, gruppo di Decepticon in grado di trasformarsi in bestie mitologiche.",
     immagineUrl:
       "https://image.tmdb.org/t/p/original/aY2hzOLuHTxKev5bWnC05ZjxtrB.jpg",
+    url: "https://cinema.donboscosandona.it",
   },
   {
     title: "ELEMENTAL",
-    description: "Lunedì 26 Giugno ore 20.45",
+    description:
+      "In una città in cui abitanti di fuoco, acqua, terra e aria vivono insieme, un’ardente giovane donna e un ragazzo che segue la corrente stanno per scoprire qualcosa di fondamentale: quanto hanno davvero in comune.",
     immagineUrl:
       "https://image.tmdb.org/t/p/original//v9dZ3MnuSOU5C0ma21HP30zVGI.jpg",
+    url: "https://cinema.donboscosandona.it",
   },
   {
-    title: "GUARDIANI DELLA GALASSIA 3 ",
-    description: "Lunedì 3 Luglio ore 20.45",
+    title: "DUNGEONS & DRAGONS",
+    description:
+      "Un affascinante ladro e un gruppo di improbabili avventurieri realizzano il colpo del secolo recuperando una reliquia perduta. Ma le cose si mettono male quando il gruppo si imbatte nelle persone sbagliate.",
     immagineUrl:
-      "https://image.tmdb.org/t/p/original/d8blPzI36RKZzARwyXtT5KMpSkF.jpg",
+      "https://image.tmdb.org/t/p/original/3zeG7F9QFEmPSfCF3EEZzRQVuCA.jpg",
+    url: "https://cinema.donboscosandona.it",
   },
   {
     title: " INDIANA JONES E IL QUADRANTE DEL DESTINO ",
-    description: "Lunedì 10 Luglio ore 20.45",
+    description:
+      "Nel 1969, l'archeologo e avventuriero statunitense Indiana Jones vive sullo sfondo della corsa allo spazio. Jones è a disagio per il fatto che il governo federale degli Stati Uniti d’America abbia reclutato ex nazisti per aiutare a battere l'Unione Sovietica nella competizione per arrivare nello spazio.",
     immagineUrl:
       "https://image.tmdb.org/t/p/original/y4MBS0SKE0pHR57vfYBxGhrkfcv.jpg",
-  },
-
-  {
-    title: "MISSION IMPOSSIBLE 7",
-    description: "Lunedì 17 Luglio ore 20.45",
-    immagineUrl:
-      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f452aa2c-0c64-4bbf-b065-942b8dbda8bb/deybcgp-36da842e-b54d-40f9-8929-a13b60a21d47.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y0NTJhYTJjLTBjNjQtNGJiZi1iMDY1LTk0MmI4ZGJkYThiYlwvZGV5YmNncC0zNmRhODQyZS1iNTRkLTQwZjktODkyOS1hMTNiNjBhMjFkNDcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HK_zjbw8uSR8rWKubPz6HyjMLnm6_qnLH9G7j-zpI8k",
+    url: "https://cinema.donboscosandona.it",
   },
 ];
