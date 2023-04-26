@@ -22,10 +22,9 @@ export const menu = [
 const menuFooter = menu
 
 const socials = [
-    { title: 'Facebook', imageUrl: 'https://archive.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png', url: 'https://www.facebook.com/donboscosandona/?fref=ts' },
-    { title: 'Instagram', imageUrl: 'https:///archive.donboscosandona.it/img/ck/5c1c2a74750c62b3349df0d555ea9a26d1c6e8af.png', url: 'https://www.instagram.com/donboscosandona/' },
-    { title: 'Youtube', imageUrl: 'https://archive.donboscosandona.it/img/ck/36189d32ee9d4be0a612c292a430106948c85bfc.png', url: 'https://www.youtube.com/channel/UCZ2sxe9w7Yf9lP4nl65oAvg' },
-    { title: 'Linkedin', imageUrl: 'https://archive.donboscosandona.it/img/ck/55ed185e94be2aa2a1d854487273a4d139e5475f.png', url: 'https://www.linkedin.com/company/c-f-p-don-bosco/' },
+    { title: 'Facebook', imageUrl: 'http://www.inoratorio.it/img/ck/cf4a1aad53f6a2eec3ff6ac8dfe78bbc6941c0b7.png', url: 'https://www.facebook.com/inoratorio/' },
+    { title: 'Instagram', imageUrl: 'http://www.inoratorio.it/img/ck/a5c24d7a4215cc69e8e6954ed4ff307e8409e0c0.png', url: 'https://www.instagram.com/inoratorio.it/' },
+    { title: 'Youtube', imageUrl: 'http://www.inoratorio.it/img/ck/3b92f113069615a5ef8fc2fdc9544d7ad90da149.png', url: 'https://www.youtube.com/user/inoratorio' },
 ]
 
 let images = []
@@ -35,8 +34,8 @@ export const footer = <Footer
     color="#272727"
     opacitycolor="1"
     opacity={1}
-    title1="Chi siamo"
-    description1="..."
+    title1="Proposta Estate Ragazzi"
+    description1="La Proposta estiva dell'Oratorio don Bosco di San Donà di Piave. Per divertirsi insieme crescendo nella fede e nella relazione con gli altri."
     title2="Seguici sui Social"
     socials={socials}
     title3=""
