@@ -278,31 +278,40 @@ let serate = [
 
 let gite = [
   {
-    titolo: "Gita a Noale",
+    titolo: "Porto Santa Margherita // Baia Blanca",
     descrizione:
-      "22 Giugno e 11 Luglio - Scopri tutti i segreti del nostro Centro con il tour virtuale!",
-    immagine: "/images/gite/aquaestate.webp",
+      "Lunedì 26 Giugno con i ragazzi di quinta elementare e prima media / Venerdì 30 giugno con i ragazzi di seconda e terza media / Lunedì 3 Luglio con i ragazzi di terza e quarta elementare / Materiale: Costume di ricambio, asciugamano, ciabatte, cappellino, spuntino, bibita...",
+    immagine: "/images/gite/mare.jpeg",
     colore: "#FFC312",
     opacity: 0.5,
-    blur: "0.3rem",
+    blur: "0.2rem",
   },
   {
-    titolo: "Gita in Val di Gares",
+    titolo: "Noale // Aquaestate",
     descrizione:
-      "27 Giugno - A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+      "Giovedì 22 Giugno / Martedì 11 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!",
+    immagine: "/images/gite/noale.jpeg",
+    colore: "#e74c3c",
+    opacity: 0.3,
+    blur: "0.2rem",
+  },
+  {
+    titolo: "Valle del Gares // Escursione in montagna",
+    descrizione:
+      "Martedì 27 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!",
     immagine: "/images/gite/val_gares.jpeg",
     colore: "#009432",
     opacity: 0.5,
-    blur: "0.3rem",
+    blur: "0.1rem",
   },
   {
-    titolo: "Gita al Parco Sigurtà",
+    titolo: "Valeggio sul Mincio // Parco Giardino Sigurtà",
     descrizione:
-      "4 Luglio - A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+      "Martedì 4 Luglio / La Proposta Estate 2023 si immerge nell’antica storia del “Brolo cinto de Mura” alla scoperta delle misteriose vicende di nobili ed Imperatori grazie ai giochi interattivi e alle meraviglie del Parco Giardino Sigurtà.",
     immagine: "/images/gite/parco_sigurta.jpeg",
     colore: "#A3CB38",
     opacity: 0.5,
-    blur: "0.3rem",
+    blur: "0.2rem",
   },
 ]
 
