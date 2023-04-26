@@ -83,7 +83,7 @@ export default function Calendar({
                       &nbsp;Mattino: {date.morning}
                     </Typography>
                   )}
-                  {date.evening && (
+                  {date.afternoon && (
                     <Typography
                       variant="subtitle1"
                       style={{ padding: "10px" }}
@@ -91,7 +91,7 @@ export default function Calendar({
                       paragraph
                     >
                       <LightModeIcon />
-                      &nbsp;Pomeriggio: {date.pomeriggio}
+                      &nbsp;Pomeriggio: {date.afternoon}
                     </Typography>
                   )}
                   {date.evening && (
