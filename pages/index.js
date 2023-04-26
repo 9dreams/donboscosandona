@@ -263,16 +263,49 @@ const features = [
 // slides per il carousel
 let serate = [
   {
-    titolo: "Serata 1",
+    titolo: "Oratorio's Got Talent",
     descrizione:
-      "Scopri tutti i segreti del nostro Centro con il tour virtuale!",
-    immagine: "https://source.unsplash.com/random",
+      "Martedì 20 Giugno / Una serata dedicata ai talenti dei ragazzi della PER#23!!! Metti alla prova la tua creatività artistica, canora, di ballo, teatrale in una sfida mozzafiato!",
+    immagine: "/images/serate/talent.jpeg",
+    colore: "#e84393",
+    opacity: 0.6,
+    blur: "0.2rem",
   },
   {
-    titolo: "Serata 2",
+    titolo: "Spettacolo DEKRU",
     descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: "#22aa22",
+      "Venerdì 23 Giugno / Dekru è un quartetto di giovani talentuosi mimi formatosi nel 2010 in Ucraina, a Kiev. Premiati al Festival Mondiale del Circo di Mosca e al Festival di Clown e Mimi di Odessa, sono apparsi in Italia nel 2016 nella trasmissione Tu sì que Vales.",
+    immagine: "/images/serate/dekru.jpeg",
+    colore: "#2c3e50",
+    opacity: 0.5,
+    blur: "0.2rem",
+  },
+  {
+    titolo: "Basket Freestyle Show - DUNK",
+    descrizione:
+      "Basket Freestyle Show per un intrattenimento assicurato ! Trampolino elastico, freestyle, acrobatica e schiacciate come non le avete mai viste! L'unico team in italia di acro dunk!",
+    immagine: "/images/serate/dunk.jpeg",
+    colore: "#f0932b",
+    opacity: 0.5,
+    blur: "0.2rem",
+  },
+  {
+    titolo: "Serata delle Squadre",
+    descrizione:
+      "Giovedì 6 Luglio / Sfilata squadre, animazione da palco e gara di torte",
+    immagine: "/images/serate/sfilata.jpeg",
+    colore: "#44bd32",
+    opacity: 0.5,
+    blur: "0.1rem",
+  },
+  {
+    titolo: "Serata Finale",
+    descrizione:
+      "Venerdì 14 Luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER23",
+    immagine: "/images/serate/finale.jpeg",
+    colore: "#c0392b",
+    opacity: 0.5,
+    blur: "0.1rem",
   },
 ]
 
