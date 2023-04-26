@@ -258,7 +258,7 @@ const features = [
     description:
       "Durante la PER non sarai mai da solo: educatori, animatori, altri ragazzi, ospiti... ognuno è un mondo da esplorare, devi solo buttarti!",
   },
-];
+]
 
 // slides per il carousel
 let serate = [
@@ -274,7 +274,7 @@ let serate = [
       "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
     colore: "#22aa22",
   },
-];
+]
 
 let gite = [
   {
@@ -304,7 +304,7 @@ let gite = [
     opacity: 0.5,
     blur: "0.3rem",
   },
-];
+]
 
 // Il nostro team
 let members = [
@@ -363,7 +363,7 @@ let in_evidenza = [
     immagineUrl: "/images/_pomeriggi.png",
     url: "/pomeriggi",
   },
-];
+]
 
 let laboratori = [
   {
@@ -382,7 +382,7 @@ let laboratori = [
     title: "Manuali",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_manuali.png",
-    url: "/laboratori_artistici",
+    url: "/laboratori_manuali",
   },
   {
     title: "Novità 2023",
@@ -390,7 +390,7 @@ let laboratori = [
     immagineUrl: "/images/_novità.png",
     url: "/laboratori_new",
   },
-];
+]
 
 let altri_link = [
   {
