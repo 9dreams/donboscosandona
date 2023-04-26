@@ -9,7 +9,7 @@ export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Oratorio don Bosco', url: 'http://www.inoratorio.it' },
     { title: 'Iscrizioni', url: '/iscrizioni' },
-    { title: 'Calendario', url: '/iscrizioni' },
+    { title: 'Calendario', url: '/calendario' },
     { title: 'Privacy', url: 'http://www.inoratorio.it/privacy-policy' },
 ]
 
