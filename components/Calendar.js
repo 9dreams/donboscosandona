@@ -41,7 +41,7 @@ export default function Calendar({
       </Typography>
       <Grid container>
         {events.map((date) => (
-          <Grid item md={cardWidth}>
+          <Grid item xs={6} sm={4} md={cardWidth}>
             <CardActionArea
               className={styles.card}
               component="a"

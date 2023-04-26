@@ -15,7 +15,7 @@ const Features = (props) => {
         <p className={`${styles.description}`}>{description}</p>
         <Grid container spacing={2} className={styles.grid}>
           {features.map((feature) => (
-            <Grid key={feature.id} item xs={12} lg={cardWidth}>
+            <Grid key={feature.id} item xs={6} sm={4} md={cardWidth}>
               <div className={styles.feature}>
                 <img src={feature.imageUrl} alt={feature.title} width="100" height="100" />
                 <h2>{feature.title}</h2>
