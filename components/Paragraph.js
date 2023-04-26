@@ -7,7 +7,7 @@ export default function Paragraph(props) {
       sx={{
         position: "relative",
         marginTop: "2rem",
-        padding: {"sm": "1rem", "md": "2rem", "lg": "3rem"},
+        padding: {"xs": "1rem", "md": "2rem", "lg": "3rem"},
         textAlign: "justify",
         backgroundColor: props.backgroundColor,
         borderRadius: "1rem",
@@ -66,7 +66,7 @@ export default function Paragraph(props) {
           disableGutters={true}
           sx={{
             marginTop: "2rem",
-            columnCount: { xs: 1, md: props.columnCount },
+            columnCount: { xs: 1, sm: props.columnCount },
             columnGap: "3rem",
           }}
         >
