@@ -3,6 +3,7 @@ import Layout from "/components/Layout";
 import LandingHero from "/components/LandingHero2.js";
 import Paragraph from "components/Paragraph";
 import Products from "/components/Products.js";
+import { Container, ButtonGroup, Button } from "@mui/material/";
 
 let products = [
   {
@@ -122,6 +123,25 @@ export default function Pagina() {
         title="Laboratori Manuali"
         imageUrl="/images/manuali.png"
       />
+      <Container sx={{ padding: "2rem", textAlign: "center" }}>
+        <ButtonGroup
+          color="secondary"
+          aria-label="Scelta del tipo di laboratori"
+        >
+          <Button key="espressivi" href="/laboratori_espressivi">
+            Espressivi
+          </Button>
+          <Button key="sportivi" href="/laboratori_sportivi">
+            Sportivi
+          </Button>
+          <Button key="manuali" href="/laboratori_manuali">
+            Manuali
+          </Button>
+          <Button key="novità" href="/laboratori_new">
+            Novità
+          </Button>
+        </ButtonGroup>
+      </Container>
       <Products products={products} cardWidth={3} />
     </Layout>
   );
