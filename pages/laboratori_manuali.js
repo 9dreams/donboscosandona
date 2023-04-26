@@ -1,7 +1,8 @@
-import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero2.js'
-import Paragraph from 'components/Paragraph'
-import Products from '/components/Products.js'
+import Head from "next/head";
+import Layout from "/components/Layout";
+import LandingHero from "/components/LandingHero2.js";
+import Paragraph from "components/Paragraph";
+import Products from "/components/Products.js";
 
 let products = [
   {
@@ -19,7 +20,8 @@ let products = [
   {
     title: "FILI E PERLINE",
     category: "1ª ora medie / 2ª ora elementari",
-    description: "L’arte dell’intreccio di corde e stoffe per realizzare magnifici braccialetti … ma non solo.",
+    description:
+      "L’arte dell’intreccio di corde e stoffe per realizzare magnifici braccialetti … ma non solo.",
     immagineUrl: "/images/laboratori/perline.jpeg",
   },
   {
@@ -55,7 +57,8 @@ let products = [
   {
     title: "STRING ART",
     category: "1ª ora elementari / 2ª ora elementari",
-    description: "Cosa si può fare con una tavoletta di legno, dei chiodi e fili colorati? magnifiche opere d’arte",
+    description:
+      "Cosa si può fare con una tavoletta di legno, dei chiodi e fili colorati? magnifiche opere d’arte",
     immagineUrl: "/images/laboratori/stringart.jpeg",
   },
   {
@@ -91,23 +94,35 @@ let products = [
   {
     title: "TUTTO BICI",
     category: "1ª ora medie / 2ª ora elementari",
-    description: "Un team di ciclo-meccanici pronti ad aggiustare qualsiasi guasto",
+    description:
+      "Un team di ciclo-meccanici pronti ad aggiustare qualsiasi guasto",
     immagineUrl: "/images/laboratori/tuttobici.jpeg",
   },
-]
+];
 
 export default function Pagina() {
   return (
     <Layout>
+      <Head>
+        <title>Proposta Estate Ragazzi di San Donà di Piave</title>
+        <meta
+          name="og:url"
+          content="https://per.donboscosandona.it/laboratori_manuali"
+        />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="it_IT" />
+        <meta
+          name="og:title"
+          content="Proposta Estate Ragazzi di San Donà di Piave"
+        />
+        <meta name="og:image" content="/images/manuali.png" />
+      </Head>
       <LandingHero
-        opacity={0.2}
+        opacity={0.0}
         title="Laboratori Manuali"
         imageUrl="/images/manuali.png"
       />
-      <Products
-        products={products}
-        cardWidth={3}
-      />
+      <Products products={products} cardWidth={3} />
     </Layout>
-  )
+  );
 }

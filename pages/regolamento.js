@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "/components/Layout";
 import LandingHero from "/components/LandingHero2.js";
 import Paragraph from "components/Paragraph";
@@ -5,10 +6,28 @@ import Paragraph from "components/Paragraph";
 export default function Pagina() {
   return (
     <Layout>
+      <Head>
+        <title>Proposta Estate Ragazzi di San Donà di Piave</title>
+        <meta
+          name="og:url"
+          content="https://per.donboscosandona.it/regolamento"
+        />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="it_IT" />
+        <meta
+          name="og:title"
+          content="Proposta Estate Ragazzi di San Donà di Piave"
+        />
+        <meta
+          name="og:description"
+          content="Tutte le regole della Proposta Estate."
+        />
+        <meta name="og:image" content="/images/regolamento.png" />
+      </Head>
       <LandingHero
-        opacity={0.2}
-        title="“Regolamento” della P.E.R."
-        description=""
+        opacity={0.1}
+        title="Regolamento"
+        description="Tutte le regole della Proposta Estate"
         imageUrl="/images/regolamento.png"
       />
       <Paragraph>

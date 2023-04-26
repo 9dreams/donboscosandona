@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "/components/Layout";
 import LandingHero from "/components/LandingHero2.js";
 import Paragraph from "components/Paragraph";
@@ -6,10 +7,28 @@ import Link from "next/link";
 export default function Pagina() {
   return (
     <Layout>
+      <Head>
+        <title>Proposta Estate Ragazzi di San Donà di Piave</title>
+        <meta
+          name="og:url"
+          content="https://per.donboscosandona.it/iscrizioni"
+        />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="it_IT" />
+        <meta
+          name="og:title"
+          content="Proposta Estate Ragazzi di San Donà di Piave"
+        />
+        <meta
+          name="og:description"
+          content="Tutto quello che c'è da sapere per iscriversi alla Proposta Estate."
+        />
+        <meta name="og:image" content="/images/iscrizioni.png" />
+      </Head>
       <LandingHero
-        opacity={0.2}
+        opacity={0.1}
         title="Iscrizioni"
-        description="Iscriviti e non inventare bugie per non venire, ti aspettiamo!"
+        description="Tutto quello che c'è da sapere per iscriversi alla Proposta Estate."
         imageUrl="/images/iscrizioni.png"
       />
       <Paragraph subtitle="Anche quest’anno la preiscrizione si farà direttamente da casa, tramite Internet!">
@@ -105,9 +124,12 @@ export default function Pagina() {
       <Paragraph title="2. Pagamento" backgroundColor="#ffd1b8">
         <p>
           <b>Quota di iscrizione:</b>
-          <br />un ragazzo: 120,00 €
-          <br />due fratelli: 215,00 €
-          <br />tre fratelli: 300,00 €
+          <br />
+          un ragazzo: 120,00 €
+          <br />
+          due fratelli: 215,00 €
+          <br />
+          tre fratelli: 300,00 €
           <br />I ragazzi di terza media pagano 95,00 €
         </p>
         <p>
@@ -157,13 +179,19 @@ export default function Pagina() {
             </li>
           </ul>
         </p>
-        <p>Il non presentarsi nel giorno e ora specificati, comporta la perdita della priorità acquisita nella scelta delle attività/laboratori, rimarrà tuttavia valida la preiscrizione!
-Se al momento della pre-iscrizione on-line non compaiono alcune attività/laboratori, significa che questi sono già pieni. NON C’E’ alcuna possibilità di aggiungere posti extra!
-</p>
-<p> 
-I dati e le attività/laboratori scelti possono essere modificati fino al momento dell’iscrizione utilizzando l’email ricevuta al momento della pre-iscrizione.
-</p>
-
+        <p>
+          Il non presentarsi nel giorno e ora specificati, comporta la perdita
+          della priorità acquisita nella scelta delle attività/laboratori,
+          rimarrà tuttavia valida la preiscrizione! Se al momento della
+          pre-iscrizione on-line non compaiono alcune attività/laboratori,
+          significa che questi sono già pieni. NON C’E’ alcuna possibilità di
+          aggiungere posti extra!
+        </p>
+        <p>
+          I dati e le attività/laboratori scelti possono essere modificati fino
+          al momento dell’iscrizione utilizzando l’email ricevuta al momento
+          della pre-iscrizione.
+        </p>
       </Paragraph>
     </Layout>
   );

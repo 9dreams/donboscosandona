@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "/components/Layout";
 import LandingHero from "/components/LandingHero2.js";
 import Paragraph from "components/Paragraph";
@@ -6,9 +7,28 @@ import Calendar from "/components/Calendar.js";
 export default function Pagina() {
   return (
     <Layout>
+      <Head>
+        <title>Proposta Estate Ragazzi di San Donà di Piave</title>
+        <meta
+          name="og:url"
+          content="https://per.donboscosandona.it/calendario"
+        />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="it_IT" />
+        <meta
+          name="og:title"
+          content="Proposta Estate Ragazzi di San Donà di Piave"
+        />
+        <meta
+          name="og:description"
+          content="Il calendario dettagliato delle giornate e delle serate."
+        />
+        <meta name="og:image" content="/images/calendario.png" />
+      </Head>
       <LandingHero
         opacity={0.0}
         title="Calendario"
+        description="Il calendario dettagliato delle giornate e delle serate."
         imageUrl="/images/calendario.png"
       />
       <Calendar cardWidth={4} events={settimana0} />
@@ -35,7 +55,8 @@ let settimana0 = [
   },
   {
     date: "Domenica 18 Giugno",
-    morning: "Messa di apertura, incontro con i genitori, giochi e pranzo al sacco",
+    morning:
+      "Messa di apertura, incontro con i genitori, giochi e pranzo al sacco",
     immagineUrl: "/images/calendario/messa.png",
   },
 ];

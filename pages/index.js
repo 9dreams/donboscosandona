@@ -14,13 +14,19 @@ export default function Home({ datiArticoli }) {
   return (
     <Layout>
       <Head>
-        <title>Proposta Estate Ragazzi</title>
+        <title>Proposta Estate Ragazzi di San Donà di Piave</title>
         <meta name="og:url" content="https://per.donboscosandona.it/" />
         <meta name="og:type" content="website" />
         <meta name="og:locale" content="it_IT" />
-        <meta name="og:title" content="Proposta Estate Ragazzi" />
-        <meta name="og:description" content="Il sito ufficiale della Proposta Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave (VE)" />
-        <meta name="og:image" content="https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg" />
+        <meta name="og:title" content="Proposta Estate Ragazzi di San Donà di Piave" />
+        <meta
+          name="og:description"
+          content="Il sito ufficiale della Proposta Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave (VE)"
+        />
+        <meta
+          name="og:image"
+          content="https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg"
+        />
       </Head>
       <LandingHero
         opacity={0.2}
@@ -482,7 +488,7 @@ let altri_link = [
     url: "/genitori",
   },
   {
-    title: "Dopo la Campanella Summer Edition",
+    title: "Scuola d'Estate? Sì grazie!",
     description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_dlc.png",
     url: "/dlc",

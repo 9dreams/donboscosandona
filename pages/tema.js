@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "/components/Layout";
 import LandingHero from "/components/LandingHero2.js";
 import Paragraph from "components/Paragraph";
@@ -5,10 +6,28 @@ import Paragraph from "components/Paragraph";
 export default function Pagina() {
   return (
     <Layout>
+      <Head>
+        <title>Proposta Estate Ragazzi di San Donà di Piave</title>
+        <meta
+          name="og:url"
+          content="https://per.donboscosandona.it/tema"
+        />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="it_IT" />
+        <meta
+          name="og:title"
+          content="Proposta Estate Ragazzi di San Donà di Piave"
+        />
+        <meta
+          name="og:description"
+          content="Be-Real: from lie to Life. Il tema della Proposta Estate 2023."
+        />
+        <meta name="og:image" content="/images/tema.png" />
+      </Head>
       <LandingHero
         opacity={0.0}
         title="Be-Real"
-        description="From lie to Life"
+        description="From lie to Life: il tema della Proposta Estate 2023"
         imageUrl="/images/tema.png"
       />
       <Paragraph title="C'era una volta...">
