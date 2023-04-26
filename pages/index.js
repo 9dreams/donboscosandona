@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "/components/Layout";
 import LandingHero from "/components/LandingHero2.js";
 import Features from "/components/Features";
@@ -12,6 +13,15 @@ import Table from "components/Table";
 export default function Home({ datiArticoli }) {
   return (
     <Layout>
+      <Head>
+        <title>Proposta Estate Ragazzi</title>
+        <meta name="og:url" content="https://per.donboscosandona.it/" />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="it_IT" />
+        <meta name="og:title" content="Proposta Estate Ragazzi" />
+        <meta name="og:description" content="Il sito ufficiale della Proposta Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave (VE)" />
+        <meta name="og:image" content="https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg" />
+      </Head>
       <LandingHero
         opacity={0.2}
         title="Proposta Estate Ragazzi"
@@ -258,7 +268,7 @@ const features = [
     description:
       "Durante la PER non sarai mai da solo: educatori, animatori, altri ragazzi, ospiti... ognuno è un mondo da esplorare, devi solo buttarti!",
   },
-]
+];
 
 // slides per il carousel
 let serate = [
@@ -307,7 +317,7 @@ let serate = [
     opacity: 0.5,
     blur: "0.1rem",
   },
-]
+];
 
 let gite = [
   {
@@ -346,7 +356,7 @@ let gite = [
     opacity: 0.5,
     blur: "0.2rem",
   },
-]
+];
 
 // Il nostro team
 let members = [
@@ -405,7 +415,7 @@ let in_evidenza = [
     immagineUrl: "/images/_pomeriggi.png",
     url: "/pomeriggi",
   },
-]
+];
 
 let laboratori = [
   {
@@ -432,7 +442,7 @@ let laboratori = [
     immagineUrl: "/images/_novità.png",
     url: "/laboratori_new",
   },
-]
+];
 
 let altri_link = [
   {
