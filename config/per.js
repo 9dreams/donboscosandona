@@ -1,5 +1,6 @@
 import Logos from '/components/Logos'
 import Footer from '/components/Footer'
+import Link from '@mui/material/Link'
 
 export const siteName = "#PER23"
 export const siteTitle = "Proposta Estate Ragazzi 2023 - San Donà di Piave"
@@ -22,9 +23,9 @@ export const menu = [
 const menuFooter = menu
 
 const socials = [
-    { title: 'Facebook', imageUrl: 'http://www.inoratorio.it/img/ck/cf4a1aad53f6a2eec3ff6ac8dfe78bbc6941c0b7.png', url: 'https://www.facebook.com/inoratorio/' },
-    { title: 'Instagram', imageUrl: 'http://www.inoratorio.it/img/ck/a5c24d7a4215cc69e8e6954ed4ff307e8409e0c0.png', url: 'https://www.instagram.com/inoratorio.it/' },
-    { title: 'Youtube', imageUrl: 'http://www.inoratorio.it/img/ck/3b92f113069615a5ef8fc2fdc9544d7ad90da149.png', url: 'https://www.youtube.com/user/inoratorio' },
+    { title: 'Facebook', imageUrl: '/images/social/facebook.png', url: 'https://www.facebook.com/inoratorio/' },
+    { title: 'Instagram', imageUrl: '/images/social/instagram.png', url: 'https://www.instagram.com/inoratorio.it/' },
+    { title: 'Youtube', imageUrl: '/images/social/youtube.png', url: 'https://www.youtube.com/user/inoratorio' },
 ]
 
 let images = []
@@ -41,5 +42,5 @@ export const footer = <Footer
     title3=""
     images={images}
     menu={menuFooter}
-    copyright="Copyright (C) 2023 9dreams Agency."
+    copyright={<Link href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico">Copyright (C) 2023 9dreams Agency.</Link>}
 />

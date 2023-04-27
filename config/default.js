@@ -1,5 +1,6 @@
 import Logos from '/components/Logos'
 import Footer from '/components/Footer'
+import Link from '@mui/material/Link'
 
 export const siteName = "#PER23"
 export const siteTitle = "Proposta Estate Ragazzi 2023 - San Donà di Piave"
@@ -41,5 +42,5 @@ export const footer = <Footer
     title3=""
     images={images}
     menu={menuFooter}
-    copyright="Copyright (C) 2023 9dreams Agency."
+    copyright={<Link color="#fff" href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico">Copyright (C) 2023 9dreams Agency.</Link>}
 />
