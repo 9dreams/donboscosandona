@@ -15,9 +15,6 @@ import MenuItem from '@mui/material/MenuItem'
 
 import { siteName, menu } from '/config/default'
 
-// da rimuovere:
-const pages = ['Products', 'Pricing', 'Blog']
-
 export default function LandingHero(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
 
