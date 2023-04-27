@@ -1,15 +1,14 @@
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import styles from "/components/Calendar.module.css";
-import Card from "@mui/material/Card";
-import CardActionArea from "@mui/material/CardActionArea";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import Grid from '@mui/material/Grid'
+import Card from '@mui/material/Card'
+import CardActionArea from '@mui/material/CardActionArea'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
 
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import NightlightIcon from '@mui/icons-material/Nightlight';
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import LightModeIcon from '@mui/icons-material/LightMode'
+import NightlightIcon from '@mui/icons-material/Nightlight'
 
 export default function Calendar({
   title,
@@ -19,43 +18,47 @@ export default function Calendar({
   borderRadius,
 }) {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth='lg'>
       <Typography
-        text-align="center"
-        style={{ textAlign: "center" }}
-        component="h3"
-        variant="h3"
-        color="inherit"
+        text-align='center'
+        style={{ textAlign: 'center' }}
+        component='h3'
+        variant='h3'
+        color='inherit'
         gutterBottom
       >
         {title}
       </Typography>
       <Typography
-        variant="subtitle1"
-        style={{ textAlign: "center", padding: "10px" }}
-        text-align="center"
-        color="text.secondary"
+        variant='subtitle1'
+        style={{ textAlign: 'center', padding: '10px' }}
+        text-align='center'
+        color='text.secondary'
         paragraph
       >
         {description}
       </Typography>
       <Grid container>
         {events.map((date) => (
-          <Grid item xs={6} sm={4} md={cardWidth}>
-            <CardActionArea
-              className={styles.card}
-              component="a"
-              href={date.url}
-            >
-              <Card sx={{ display: "flex" }} elevation={0}>
+          <Grid item xs={6} sm={4} md={cardWidth}>
+            <CardActionArea component='a' href={date.url}>
+              <Card
+                sx={{
+                  display: 'flex',
+                  margin: { xs: '5px', md: '0.5rem' },
+                  backgroundColor: '#eee',
+                  borderRadius: '10px',
+                }}
+                elevation={0}
+              >
                 <CardContent sx={{ flex: 1 }}>
                   <CardMedia
-                    component="img"
+                    component='img'
                     sx={{
                       display: {
-                        xs: "block",
-                        sm: "block",
-                        margin: "auto",
+                        xs: 'block',
+                        sm: 'block',
+                        margin: 'auto',
                         borderRadius: borderRadius,
                       },
                     }}
@@ -63,20 +66,20 @@ export default function Calendar({
                     alt={date.date}
                   />
                   <Typography
-                    text-align="center"
-                    component="h4"
-                    variant="h6"
-                    style={{ textAlign: "center" }}
-                    color="inherit"
+                    text-align='center'
+                    component='h4'
+                    variant='h6'
+                    style={{ textAlign: 'center' }}
+                    color='inherit'
                     gutterBottom
                   >
                     {date.date}
                   </Typography>
                   {date.morning && (
                     <Typography
-                      variant="subtitle1"
-                      style={{ padding: "10px" }}
-                      color="inherit"
+                      variant='subtitle1'
+                      style={{ padding: '1px' }}
+                      color='#e84393'
                       paragraph
                     >
                       <AccessTimeIcon />
@@ -85,9 +88,9 @@ export default function Calendar({
                   )}
                   {date.afternoon && (
                     <Typography
-                      variant="subtitle1"
-                      style={{ padding: "10px" }}
-                      color="inherit"
+                      variant='subtitle1'
+                      style={{ padding: '1px' }}
+                      color='#EE5A24'
                       paragraph
                     >
                       <LightModeIcon />
@@ -96,9 +99,9 @@ export default function Calendar({
                   )}
                   {date.evening && (
                     <Typography
-                      variant="subtitle1"
-                      style={{ padding: "10px" }}
-                      color="inherit"
+                      variant='subtitle1'
+                      style={{ padding: '1px' }}
+                      color='#1289A7'
                       paragraph
                     >
                       <NightlightIcon />
@@ -112,10 +115,10 @@ export default function Calendar({
         ))}
       </Grid>
     </Container>
-  );
+  )
 }
 
 Calendar.defaultProps = {
   cardWidth: 3,
-  borderRadius: "10px",
-};
+  borderRadius: '10px',
+}
