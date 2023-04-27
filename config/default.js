@@ -22,9 +22,9 @@ export const menu = [
 const menuFooter = menu
 
 const socials = [
-    { title: 'Facebook', imageUrl: 'http://www.inoratorio.it/img/ck/cf4a1aad53f6a2eec3ff6ac8dfe78bbc6941c0b7.png', url: 'https://www.facebook.com/inoratorio/' },
-    { title: 'Instagram', imageUrl: 'http://www.inoratorio.it/img/ck/a5c24d7a4215cc69e8e6954ed4ff307e8409e0c0.png', url: 'https://www.instagram.com/inoratorio.it/' },
-    { title: 'Youtube', imageUrl: 'http://www.inoratorio.it/img/ck/3b92f113069615a5ef8fc2fdc9544d7ad90da149.png', url: 'https://www.youtube.com/user/inoratorio' },
+    { title: 'Facebook', imageUrl: '/images/social/facebook.png', url: 'https://www.facebook.com/inoratorio/' },
+    { title: 'Instagram', imageUrl: '/images/social/instagram.png', url: 'https://www.instagram.com/inoratorio.it/' },
+    { title: 'Youtube', imageUrl: '/images/social/youtube.png', url: 'https://www.youtube.com/user/inoratorio' },
 ]
 
 let images = []
