@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "/components/Layout";
 import LandingHero from "/components/LandingHero2.js";
 import Paragraph from "components/Paragraph";
-import Link from "next/link";
+import Button from "@mui/material/Button"
 
 export default function Pagina() {
   return (
@@ -85,6 +85,8 @@ export default function Pagina() {
           <br />
           Una volta che le preiscrizioni saranno aperte, clicca sul bottone di
           iscrizione:
+          <br />
+          <Button sx={{ width: '100%', margin: '2rem', padding: '1rem', borderRadius: '2rem' }} target="_blank" color="warning" variant="contained" href="https://dbdb.inoratorio.it/presubscriptions">ISCRIVITI</Button>
           <ol>
             <li>Inserisci il Codice Fiscale del ragazzo che vuoi iscrivere</li>
             <li>Clicca sul bottone Invia codice OTP</li>
@@ -158,10 +160,7 @@ export default function Pagina() {
           L’accettazione o il diniego della richiesta di partecipazione sarà
           comunicato tramite email, la settimana successiva, assieme ai dati per
           il pagamento e all’appuntamento per l’iscrizione, da effettuare in
-          presenza, presso l’Oratorio Don Bosco, dal 23 al 28 maggio 2022. Al
-          momento dell’effettiva iscrizione in Oratorio (tra il 23 maggio e il
-          27 maggio 2023) saranno necessari: L’informativa privacy inviata via
-          mail a tutti gli iscritti. Copia dell'avvenuto pagamento della quota.
+          presenza, presso l’Oratorio Don Bosco, dal 22 al 27 maggio 2023 (ELEMENTARI: Lunedì, Martedì e Mercoledì, MEDIE: Giovedì, Venerdì, Sabato mattina).
         </p>
         <h1>Attenzione!!!</h1>
         <p>
@@ -169,7 +168,7 @@ export default function Pagina() {
           Maggio) sono necessari:
           <ul>
             <li>
-              un genitore (o chi ne fa le veci): per la firma della liberatoria
+              Un genitore (o chi ne fa le veci): per la firma della liberatoria
               sulla privacy.
             </li>
             <li>

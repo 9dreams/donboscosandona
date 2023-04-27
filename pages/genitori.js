@@ -50,7 +50,7 @@ export default function Pagina() {
           </strong>
         </li>
         Per coloro che volessero regalare un po’ del proprio tempo e dare una
-        mano a Don Bosco durante la P.E.R., non esiti a contattare don Bogdan. A
+        mano a Don Bosco durante la P.E.R., non esiti a contattare don Nicola. A
         fine maggio una riunione organizzativa!!!
       </Paragraph>
     </Layout>

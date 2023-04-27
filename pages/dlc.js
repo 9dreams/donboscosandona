@@ -34,7 +34,7 @@ export default function Pagina() {
         <p>
           Ciao ragazzi, grazie al contributo del Comune, anche quest’anno dopo
           la Proposta Estate continueremo l’attività: “Scuola d’estate?
-          Si,grazie!”. Da lunedì 17 luglio a giovedì 3 agosto 2017, per tutti i
+          Si,grazie!”. Da lunedì 17 luglio a giovedì 3 agosto 2023, per tutti i
           ragazzi dal secondo anno della scuola primaria al terzo anno della
           scuola secondaria ci sarà la possibilità di svolgere i compiti delle
           vacanze con il supporto dei nostri operatori, ma non solo!

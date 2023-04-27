@@ -35,14 +35,14 @@ let laboratori = [
   {
     title: "TRAFORO",
     description: "L'intaglio del legno per dei lavori indimenticabili",
-    immagineUrl: "/images/laboratori/traforo.png",
+    immagineUrl: "/images/laboratori/traforo.jpeg",
     category: "1ªora medie / 2ªora elementari",
   },
   {
-    title: "IMBIANCHINO",
-    description: "Colore, pennello e non solo!",
-    immagineUrl: "/images/laboratori/imbianchino.jpeg",
-    category: "1ªora medie / 2ªora elementari",
+    title: 'STREET HOCKEY',
+    category: '1ª ora elementari / 2ª ora medie',
+    description: 'Sport di squadra, versione dell\'hockey su ghiaccio giocato con o senza pattini su una superficie di asfalto. Generalmente è giocato su strade, parcheggi o campi da tennis.',
+    immagineUrl: '/images/laboratori/hockey.webp',
   },
 ];
 
@@ -67,7 +67,6 @@ export default function Pagina() {
       <LandingHero
         opacity={0.0}
         title="Novità 2023"
-        description="Tutte le novità di quest'anno!"
         imageUrl="/images/novità.png"
       />
       <Container sx={{ padding: "2rem", textAlign: "center" }}>

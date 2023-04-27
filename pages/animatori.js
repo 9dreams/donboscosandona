@@ -42,20 +42,14 @@ export default function Pagina() {
         -Mercoledì 21 e 28 giugno, 5 luglio, 12 Luglio dalle 15 alle 18:
         Pit-Stop Animatori. L’Oratorio rimane a porte chiuse e gli animatori
         fanno il punto della situazione, cercando sempre il meglio per i
-        ragazzi! In particolare:
-        <br />
-        - Mercoledì 28 giugno: incontro-testimonianza con il campione del volley
-        Jack.
-        <br />
-        - Mercoledì 5 luglio: testimonianza-concerto dei “Mienmiuaif” il duo con
-        l’anello.
+        ragazzi!
         <br />
         -Sabato 8 Luglio, pellegrinaggio per tutti al Santuario di Motta di
         Livenza, ore 11.30 la Santa Messa di ringraziamento... e alla fine
         ANGURIA PER TUTTI!!!
         <br />
         -Sabato 15 Luglio: dopo la risistemazione dell’Oratorio, una giornata di
-        relax a Noale… con grigliatona al tramonto!
+        relax al mare... con grigliatona al tramonto!
         <br />
         -Molte le serate di danza e sfide sportive nel dopo cena...
         <br />

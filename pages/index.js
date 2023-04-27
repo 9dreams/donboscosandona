@@ -39,7 +39,7 @@ export default function Home({ datiArticoli }) {
       <Paragraph
         title="Perché il tempo spensierato non sia tempo perso"
         subtitle="Saluto del Direttore, don Nicola Munari"
-        avatarImageUrl="https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png"
+        avatarImageUrl="/images/home/nik.png"
         columnCount={2}
       >
         <p>
@@ -109,7 +109,7 @@ export default function Home({ datiArticoli }) {
             "18.30",
             "Santa Messa (per chi lo desidera)",
           ],
-          ["11.10", "Seconda ora di attività", "", ""],
+          ["11.10", "Seconda ora di attività", "20.45", "Serate: spettacoli, tornei, animazione, film..."],
           [
             "12.00",
             "A casa... buon pranzo!",
@@ -122,7 +122,7 @@ export default function Home({ datiArticoli }) {
       <Carousel slides={gite} height={70} />
       <Products
         title="I laboratori"
-        description="Stare insieme..."
+        description="Scegli due laboratori per le prime due settimane di PER, e altri due per le ultime due settimane. "
         cardWidth={3}
         products={laboratori}
         borderRadius="2rem"
@@ -162,12 +162,8 @@ export default function Home({ datiArticoli }) {
           <b>
             Anche quest’anno potrai ricevere tutte le NEWS della PER23
             direttamente su WhatsApp!!!
-          </b>{" "}
+          </b><br />{" "}
           E' semplice e comodo:
-          <br />
-          1) Registra nella tua rubrica il nostro numero: 3924643689
-          <br />
-          2) Inviaci un messaggio con scritto NEWS PER23 Tutto qui!
         </p>
       </Paragraph>
       <Testimonials
@@ -203,20 +199,15 @@ export default function Home({ datiArticoli }) {
         </p>
         <p>
           La segreteria rimarrà chiusa le mattine in cui ci saranno le gite ed
-          il mercoledì pomeriggio){" "}
+          il mercoledì pomeriggio.{" "}
         </p>
         <p>
-          Ricordiamo che l’iscrizione alle uscite deve avvenire al massimo entro
-          le ore 12.00 di due giorni precedenti all’uscita (salvo eventuali
+          Ricordiamo che l’iscrizione alle uscite deve avvenire <b>al massimo entro
+          le ore 12.00 di due giorni precedenti all’uscita</b> (salvo eventuali
           altre indicazioni).
         </p>
         <p>
           Le liste verranno esposte verso le 18.00 nella vigilia delle gite.
-        </p>
-        <p>
-          Per potervi servire meglio e più velocemente è importante venire in
-          segreteria con la tessera personale che consegneremo ai ragazzi
-          all’inizio della P.E.R. e con i soldi giusti.
         </p>
         <p>
           Non è necessaria la presenza del genitore per l’iscrizione alle gite.
@@ -254,7 +245,7 @@ const features = [
     title: "Una proposta cristiana",
     imageUrl: "/images/home/proposta_cristiana.png",
     description:
-      "Il nostro compagno di viaggio in questa splendida avventura estiva sarà sempre Gesù.",
+      "Nel cuore dell'estate la PER vuol essere un'occasione per riscoprire la bellezza della fede.",
   },
   {
     title: "In allegria",
@@ -266,7 +257,7 @@ const features = [
     title: "Mettendo a frutto la creatività",
     imageUrl: "/images/home/creativa.png",
     description:
-      "Nei laboratori i talenti fioriscono: in te forse c'è uno sportivo, un artista, un creativo... scegli con cura al momento della preiscrizione",
+      "Nei laboratori i talenti fioriscono: in te forse c'è uno sportivo, un artista, un creativo... scegli con cura al momento della preiscrizione.",
   },
   {
     title: "Coltivando le relazioni",
@@ -299,7 +290,7 @@ let serate = [
   {
     titolo: "Basket Freestyle Show - DUNK",
     descrizione:
-      "Basket Freestyle Show per un intrattenimento assicurato ! Trampolino elastico, freestyle, acrobatica e schiacciate come non le avete mai viste! L'unico team in italia di acro dunk!",
+      "Venerdì 30 Giugno / Basket Freestyle Show per un intrattenimento assicurato ! Trampolino elastico, freestyle, acrobatica e schiacciate come non le avete mai viste! L'unico team in italia di acro dunk!",
     immagine: "/images/serate/dunk.jpeg",
     colore: "#f0932b",
     opacity: 0.5,
@@ -373,16 +364,6 @@ let members = [
     email: "per@donboscosandona.it",
   },
   {
-    name: "don Michele Bortolato",
-    role: "Responsabile della Proposta Estate",
-    imageUrl: "",
-  },
-  {
-    name: "don Nicola Munari",
-    role: "Direttore dell'Opera",
-    imageUrl: "",
-  },
-  {
     name: "Dopo la Campanella",
     role: "Dott. Andrea Pasqualetto",
     imageUrl: "",
@@ -399,25 +380,21 @@ let members = [
 let in_evidenza = [
   {
     title: "Iscrizioni",
-    description: "Tutto quello che devi sapere per iscriverti alla #PER23",
     immagineUrl: "/images/_iscrizioni.png",
     url: "/iscrizioni",
   },
   {
     title: "Calendario",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_calendario.png",
     url: "/calendario",
   },
   {
     title: "Tema formativo",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_tema.png",
     url: "/tema",
   },
   {
     title: "I pomeriggi",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_pomeriggi.png",
     url: "/pomeriggi",
   },
@@ -426,25 +403,21 @@ let in_evidenza = [
 let laboratori = [
   {
     title: "Espressivi",
-    description: "Tutto quello che devi sapere per iscriverti alla #PER23",
     immagineUrl: "/images/_espressivi.png",
     url: "/laboratori_espressivi",
   },
   {
     title: "Sportivi",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_sportivi.png",
     url: "/laboratori_sportivi",
   },
   {
     title: "Manuali",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_manuali.png",
     url: "/laboratori_manuali",
   },
   {
     title: "Novità 2023",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_novità.png",
     url: "/laboratori_new",
   },
@@ -453,19 +426,16 @@ let laboratori = [
 let altri_link = [
   {
     title: "Regolamento",
-    description: "Tutto quello che devi sapere per iscriverti alla #PER23",
     immagineUrl: "/images/_regolamento.png",
     url: "/regolamento",
   },
   {
     title: "Servizio autobus",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_autobus.png",
     url: "/autobus",
   },
   {
     title: "Momenti di preghiera e riflessione",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_preghiera.png",
     url: "/preghiera",
   },
@@ -477,19 +447,16 @@ let altri_link = [
   },
   {
     title: "Spazio animatori",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_animatori.png",
     url: "/animatori",
   },
   {
     title: "Spazio genitori",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_genitori.png",
     url: "/genitori",
   },
   {
     title: "Scuola d'Estate? Sì grazie!",
-    description: "Scopri la #PER23 giorno per giorno",
     immagineUrl: "/images/_dlc.png",
     url: "/dlc",
   },
@@ -511,7 +478,7 @@ const testimonials = [
     social: "@animatore",
   },
   {
-    name: "Loredana Z.",
+    name: "Loredana F.",
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s5z4ojtNwl2jXifp1jiboZ2T0plskgirZXxHaE_UW2jdj9PI-8Ig05DPcMBUUAvWNCQ&usqp=CAU",
     text: "A chi dice che i giovani non hanno voglia di fare nulla, io li inviterei in oratorio durante la PER. Che vedano gli animatori e il lavoro che dedicano per allietare bambini e bambine e la gioia che trasmettono. Quando ragazzi e bambini trovano un senso, sono i primi a buttarsi. Ma la PER non è solo gioco e svago. E' un'esperienza che aiuta i più piccoli ad esprimere i loro talenti, a condividere lo stile e il carisma salesiano, a vivere in una comunità che è fortemente educante e gioiosa. Un grazie di cuore all'Oratorio don Bosco!!!",
