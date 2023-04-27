@@ -185,7 +185,7 @@ let settimana4 = [
   {
     date: "Lunedì 10 Luglio",
     morning: "Attività regolare",
-    afternoon: "Quinta elementare e prima media al mare",
+    afternoon: "Giochi al parco e tornei",
     evening: "ore 20.45 Film INDIANA JONES E IL QUADRANTE DEL DESTINO 3D",
     immagineUrl: "/images/calendario/indiana.png",
   },
