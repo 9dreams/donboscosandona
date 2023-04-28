@@ -40,77 +40,75 @@ export default function Calendar({
       </Typography>
       <Grid container>
         {events.map((date) => (
-          <Grid item xs={6} sm={4} md={cardWidth}>
-            <CardActionArea component='a' href={date.url}>
-              <Card
-                sx={{
-                  display: 'flex',
-                  margin: { xs: '5px', md: '0.5rem' },
-                  backgroundColor: '#eee',
-                  borderRadius: '10px',
-                }}
-                elevation={0}
-              >
-                <CardContent sx={{ flex: 1 }}>
-                  <CardMedia
-                    component='img'
-                    sx={{
-                      display: {
-                        xs: 'block',
-                        sm: 'block',
-                        margin: 'auto',
-                        borderRadius: borderRadius,
-                      },
-                    }}
-                    image={date.immagineUrl}
-                    alt={date.date}
-                  />
+          <Grid item xs={12} sm={6} md={cardWidth}>
+            <Card
+              sx={{
+                display: 'flex',
+                margin: { xs: '5px', md: '0.5rem' },
+                backgroundColor: '#eee',
+                borderRadius: '10px',
+              }}
+              elevation={0}
+            >
+              <CardContent sx={{ flex: 1 }}>
+                <CardMedia
+                  component='img'
+                  sx={{
+                    display: {
+                      xs: 'block',
+                      sm: 'block',
+                      margin: 'auto',
+                      borderRadius: borderRadius,
+                    },
+                  }}
+                  image={date.immagineUrl}
+                  alt={date.date}
+                />
+                <Typography
+                  text-align='center'
+                  component='h4'
+                  variant='h6'
+                  style={{ textAlign: 'center' }}
+                  color='inherit'
+                  gutterBottom
+                >
+                  {date.date}
+                </Typography>
+                {date.morning && (
                   <Typography
-                    text-align='center'
-                    component='h4'
-                    variant='h6'
-                    style={{ textAlign: 'center' }}
-                    color='inherit'
-                    gutterBottom
+                    variant='subtitle1'
+                    style={{ padding: '1px' }}
+                    color='#e84393'
+                    paragraph
                   >
-                    {date.date}
+                    <AccessTimeIcon />
+                    &nbsp;Mattino: {date.morning}
                   </Typography>
-                  {date.morning && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ padding: '1px' }}
-                      color='#e84393'
-                      paragraph
-                    >
-                      <AccessTimeIcon />
-                      &nbsp;Mattino: {date.morning}
-                    </Typography>
-                  )}
-                  {date.afternoon && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ padding: '1px' }}
-                      color='#EE5A24'
-                      paragraph
-                    >
-                      <LightModeIcon />
-                      &nbsp;Pomeriggio: {date.afternoon}
-                    </Typography>
-                  )}
-                  {date.evening && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ padding: '1px' }}
-                      color='#1289A7'
-                      paragraph
-                    >
-                      <NightlightIcon />
-                      &nbsp;Sera: {date.evening}
-                    </Typography>
-                  )}
-                </CardContent>
-              </Card>
-            </CardActionArea>
+                )}
+                {date.afternoon && (
+                  <Typography
+                    variant='subtitle1'
+                    style={{ padding: '1px' }}
+                    color='#EE5A24'
+                    paragraph
+                  >
+                    <LightModeIcon />
+                    &nbsp;Pomeriggio: {date.afternoon}
+                  </Typography>
+                )}
+                {date.evening && (
+                  <Typography
+                    variant='subtitle1'
+                    style={{ padding: '1px' }}
+                    color='#1289A7'
+                    paragraph
+                  >
+                    <NightlightIcon />
+                    &nbsp;Sera: {date.evening}
+                  </Typography>
+                )}
+              </CardContent>
+            </Card>
           </Grid>
         ))}
       </Grid>
