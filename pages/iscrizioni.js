@@ -86,7 +86,7 @@ export default function Pagina() {
           Una volta che le preiscrizioni saranno aperte, clicca sul bottone di
           iscrizione:
           <br />
-          <Button sx={{ width: '100%', margin: '2rem', padding: '1rem', borderRadius: '2rem' }} target="_blank" color="warning" variant="contained" href="https://dbdb.inoratorio.it/presubscriptions">ISCRIVITI</Button>
+          <Button sx={{ width: '100%', marginTop: '2rem', marginBottom: '2rem', padding: '1rem', borderRadius: '2rem' }} target="_blank" color="warning" variant="contained" href="https://dbdb.inoratorio.it/presubscriptions">ISCRIVITI</Button>
           <ol>
             <li>Inserisci il Codice Fiscale del ragazzo che vuoi iscrivere</li>
             <li>Clicca sul bottone Invia codice OTP</li>
