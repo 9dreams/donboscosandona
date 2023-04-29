@@ -7,6 +7,13 @@ import { Container, ButtonGroup, Button } from '@mui/material/'
 
 let products = [
   {
+    title: 'BASEBALL',
+    category: '1ª ora elementari / 2ª ora medie',
+    description:
+      "sport di squadra in cui due squadre composte da nove giocatori si affrontano per nove inning (o riprese) in ciascuno dei quali le due squadre si alternano nella fase di attacco e di difesa.",
+    immagineUrl: '/images/laboratori/baseball.jpeg',
+  },
+  {
     title: 'CALCIO',
     category: '1ª ora elementari / 2ª ora medie',
     description:
