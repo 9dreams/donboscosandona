@@ -1,4 +1,7 @@
 import Head from "next/head";
+
+import Button from "@mui/material/Button"
+
 import Layout from "/components/Layout";
 import LandingHero from "/components/LandingHero2.js";
 import Features from "/components/Features";
@@ -163,7 +166,9 @@ export default function Home({ datiArticoli }) {
             Anche quest’anno potrai ricevere tutte le NEWS della PER23
             direttamente su WhatsApp!!!
           </b><br />{" "}
-          E' semplice e comodo:
+          E' semplice e comodo... usando il tuo telefono tocca il seguente bottone per iscriverti:
+          <br />
+          <Button sx={{ width: '100%', marginTop: '2rem', marginBottom: '2rem', padding: '1rem', borderRadius: '2rem' }} target="_blank" color="success" variant="contained" href="https://chat.whatsapp.com/KrecmR06m0rFcpGzmbO7C0">ISCRIVITI ALLE NEWS SU WHATSAPP</Button>
         </p>
       </Paragraph>
       <Testimonials
