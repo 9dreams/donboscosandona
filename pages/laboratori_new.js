@@ -36,7 +36,7 @@ let laboratori = [
     title: "TRAFORO",
     description: "L'intaglio del legno per dei lavori indimenticabili",
     immagineUrl: "/images/laboratori/traforo.jpeg",
-    category: "1ªora medie / 2ªora elementari",
+    category: "1ªora medie / 2ªora medie",
   },
   {
     title: 'STREET HOCKEY',
