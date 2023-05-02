@@ -145,7 +145,7 @@ export default function Pagina() {
             BANCO BPM filiale di San Donà di Piave - IBAN:
             IT56Z0503436282000000004212
             <br />
-            con causale: PER 2022 - ISCRIZIONE "nome iscritto/i"
+            con causale: PER 2023 - ISCRIZIONE "nome iscritto/i"
           </b>
         </p>
         <p>
