@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Layout from "/components/Layout";
-import LandingHero from "/components/LandingHero2.js";
-import Paragraph from "components/Paragraph";
+import Head from 'next/head'
+import Layout from '/components/Layout'
+import LandingHero from '/components/LandingHero2.js'
+import Paragraph from 'components/Paragraph'
 
 export default function Pagina() {
   return (
@@ -9,26 +9,26 @@ export default function Pagina() {
       <Head>
         <title>Proposta Estate Ragazzi di San Donà di Piave</title>
         <meta
-          name="og:url"
-          content="https://per.donboscosandona.it/regolamento"
+          name='og:url'
+          content='https://per.donboscosandona.it/regolamento'
         />
-        <meta name="og:type" content="website" />
-        <meta name="og:locale" content="it_IT" />
+        <meta name='og:type' content='website' />
+        <meta name='og:locale' content='it_IT' />
         <meta
-          name="og:title"
-          content="Proposta Estate Ragazzi di San Donà di Piave"
+          name='og:title'
+          content='Proposta Estate Ragazzi di San Donà di Piave'
         />
         <meta
-          name="og:description"
-          content="Tutte le regole della Proposta Estate."
+          name='og:description'
+          content='Tutte le regole della Proposta Estate.'
         />
-        <meta name="og:image" content="/images/regolamento.png" />
+        <meta name='og:image' content='/images/regolamento.png' />
       </Head>
       <LandingHero
         opacity={0.1}
-        title="Regolamento"
-        description="Tutte le regole della Proposta Estate"
-        imageUrl="/images/regolamento.png"
+        title='Regolamento'
+        description='Tutte le regole della Proposta Estate'
+        imageUrl='/images/regolamento.png'
       />
       <Paragraph>
         <p>
@@ -51,10 +51,9 @@ export default function Pagina() {
           calendario dettagliato.
         </p>
         <p>
-          Il direttore dell’Oratorio e della Comunità Salesiana è don Nicola
-          Munari, il responsabile per l’organizzazione, il coordinamento e la
-          gestione della Proposta Estate Ragazzi è don Michele Bortolato, che si
-          avvale della collaborazione di corresponsabili, operatori
+          Il direttore dell’Oratorio e responsabile dell'organizzazione,
+          coordinamento e gestione della Proposta Estate è don Nicola Munari, il
+          quale si avvale della collaborazione di corresponsabili, operatori
           (animatori/educatori con specifica e prolungata esperienza nel
           settore), animatori (volontari con più di un anno di esperienza) ed
           aiuto-animatori (volontari che hanno frequentato corsi di formazione
@@ -101,10 +100,10 @@ export default function Pagina() {
           nel presente regolamento, si rimanda al comune buon senso, fermo
           restando l’insindacabilità del giudizio espresso dal direttore don
           Nicola Munari e dal coordinatore della Proposta Estate Ragazzi, don
-          Michele Bortolato.
+          Nicola Munari.
         </p>
         <p>&nbsp;</p>
       </Paragraph>
     </Layout>
-  );
+  )
 }

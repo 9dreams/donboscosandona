@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Layout from "/components/Layout";
-import LandingHero from "/components/LandingHero2.js";
-import Paragraph from "components/Paragraph";
-import Button from "@mui/material/Button"
+import Head from 'next/head'
+import Layout from '/components/Layout'
+import LandingHero from '/components/LandingHero2.js'
+import Paragraph from 'components/Paragraph'
+import Button from '@mui/material/Button'
 
 export default function Pagina() {
   return (
@@ -10,28 +10,28 @@ export default function Pagina() {
       <Head>
         <title>Proposta Estate Ragazzi di San Donà di Piave</title>
         <meta
-          name="og:url"
-          content="https://per.donboscosandona.it/iscrizioni"
+          name='og:url'
+          content='https://per.donboscosandona.it/iscrizioni'
         />
-        <meta name="og:type" content="website" />
-        <meta name="og:locale" content="it_IT" />
+        <meta name='og:type' content='website' />
+        <meta name='og:locale' content='it_IT' />
         <meta
-          name="og:title"
-          content="Proposta Estate Ragazzi di San Donà di Piave"
+          name='og:title'
+          content='Proposta Estate Ragazzi di San Donà di Piave'
         />
         <meta
-          name="og:description"
+          name='og:description'
           content="Tutto quello che c'è da sapere per iscriversi alla Proposta Estate."
         />
-        <meta name="og:image" content="/images/iscrizioni.png" />
+        <meta name='og:image' content='/images/iscrizioni.png' />
       </Head>
       <LandingHero
         opacity={0.1}
-        title="Iscrizioni"
+        title='Iscrizioni'
         description="Tutto quello che c'è da sapere per iscriversi alla Proposta Estate."
-        imageUrl="/images/iscrizioni.png"
+        imageUrl='/images/iscrizioni.png'
       />
-      <Paragraph subtitle="Anche quest’anno la preiscrizione si farà direttamente da casa, tramite Internet!">
+      <Paragraph subtitle='Anche quest’anno la preiscrizione si farà direttamente da casa, tramite Internet!'>
         <p>
           La pre-iscrizione è obbligatoria: se non hai l’accesso a Internet da
           casa, potrai usare le postazioni computer della sala giochi
@@ -52,7 +52,7 @@ export default function Pagina() {
         </p>
       </Paragraph>
 
-      <Paragraph title="1. Preiscrizione online" backgroundColor="#faffb8">
+      <Paragraph title='1. Preiscrizione online' backgroundColor='#faffb8'>
         <p>
           La fase più divertente dell'iscrizione alla PER è la "preiscrizione
           online": in questa fase ci comunicherai i dati anagrafici dei tuoi
@@ -86,7 +86,21 @@ export default function Pagina() {
           Una volta che le preiscrizioni saranno aperte, clicca sul bottone di
           iscrizione:
           <br />
-          <Button sx={{ width: '100%', marginTop: '2rem', marginBottom: '2rem', padding: '1rem', borderRadius: '2rem' }} target="_blank" color="warning" variant="contained" href="https://dbdb.inoratorio.it/presubscriptions">ISCRIVITI</Button>
+          <Button
+            sx={{
+              width: '100%',
+              marginTop: '2rem',
+              marginBottom: '2rem',
+              padding: '1rem',
+              borderRadius: '2rem',
+            }}
+            target='_blank'
+            color='warning'
+            variant='contained'
+            href='https://dbdb.inoratorio.it/presubscriptions'
+          >
+            ISCRIVITI
+          </Button>
           <ol>
             <li>Inserisci il Codice Fiscale del ragazzo che vuoi iscrivere</li>
             <li>Clicca sul bottone Invia codice OTP</li>
@@ -123,7 +137,7 @@ export default function Pagina() {
         </p>
       </Paragraph>
 
-      <Paragraph title="2. Pagamento" backgroundColor="#ffd1b8">
+      <Paragraph title='2. Pagamento' backgroundColor='#ffd1b8'>
         <p>
           <b>Quota di iscrizione:</b>
           <br />
@@ -155,12 +169,15 @@ export default function Pagina() {
         <p>Nota: la quota per le singole uscite è a parte</p>
       </Paragraph>
 
-      <Paragraph title="3. Iscrizione" backgroundColor="#bdf2ff">
+      <Paragraph title='3. Iscrizione' backgroundColor='#bdf2ff'>
         <p>
           L’accettazione o il diniego della richiesta di partecipazione sarà
-          comunicato tramite email, la settimana successiva, assieme ai dati per
-          il pagamento e all’appuntamento per l’iscrizione, da effettuare in
-          presenza, presso l’Oratorio Don Bosco, dal 22 al 27 maggio 2023 (ELEMENTARI: Lunedì, Martedì e Mercoledì, MEDIE: Giovedì, Venerdì, Sabato mattina).
+          comunicato tramite email o whatsapp, la settimana successiva, assieme
+          ai dati per il pagamento, al modulo per la Privacy, al regolamento
+          della PER e all’appuntamento per l’iscrizione, da effettuare in
+          presenza, presso l’Oratorio Don Bosco, dal 22 al 27 maggio 2023
+          (ELEMENTARI: Lunedì, Martedì e Mercoledì, MEDIE: Giovedì, Venerdì,
+          Sabato mattina).
         </p>
         <h1>Attenzione!!!</h1>
         <p>
@@ -193,5 +210,5 @@ export default function Pagina() {
         </p>
       </Paragraph>
     </Layout>
-  );
+  )
 }
