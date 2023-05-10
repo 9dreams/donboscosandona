@@ -53,7 +53,7 @@ export default function Pagina() {
           i loro animatori!
         </p>
         <p>
-          Venerdì 8 e Sabato 9 LUGLIO - PELLEGRINAGGIO
+          Venerdì 7 e Sabato 8 LUGLIO - PELLEGRINAGGIO
           <br />
           Il pellegrinaggio è un’esperienza fondamentale nel cammino della
           P.E.R.: dopo tanti doni ricevuti, è il momento di ringraziare, prima
@@ -62,15 +62,13 @@ export default function Pagina() {
           IL PROGRAMMA dettagliato verrà dato durante la P.E.R.
         </p>
         <p>
-          Un gruppo partirà a piedi nel pomeriggio di venerdì 8, passerà la
+          Un gruppo partirà a piedi nel pomeriggio di venerdì 7, passerà la
           notte in sacco a pelo e materassini, ospitati presso la parrocchia di
-          Grassaga. Un secondo gruppo partirà sabato mattina in pullman
-          dall’oratorio per arrivare a Campo di Pietra, unendosi al primo gruppo
-          e percorreranno gli ultimi 10 km a piedi assieme. Un terzo gruppo
-          partirà in bicicletta sabato mattina e raggiungeranno il resto dei
+          Grassaga. Un secondo gruppo
+          partirà in bicicletta sabato mattina e raggiungerà il resto dei
           pellegrini per l’ultima tappa e il pranzo al sacco. Tutti gli altri
           (pigri, fratelli, genitori, nonni, zii e chi vuole…) sono attesi per
-          la S. Messa che sarà celebrata alle ore 15.30 al Santuario di Motta. …
+          la S. Messa che sarà celebrata alle ore 11.00 al Santuario di Motta. …
           E POI ANGURIA PER TUTTI!!!
         </p>
       </Paragraph>

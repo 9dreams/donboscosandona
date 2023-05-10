@@ -45,7 +45,7 @@ export default function Pagina() {
         ragazzi!
         <br />
         -Sabato 8 Luglio, pellegrinaggio per tutti al Santuario di Motta di
-        Livenza, ore 11.30 la Santa Messa di ringraziamento... e alla fine
+        Livenza, ore 11.00 la Santa Messa di ringraziamento... e alla fine
         ANGURIA PER TUTTI!!!
         <br />
         -Sabato 15 Luglio: dopo la risistemazione dell’Oratorio, una giornata di
