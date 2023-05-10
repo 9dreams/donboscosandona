@@ -1,8 +1,10 @@
 import Head from 'next/head'
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero2.js'
 import Paragraph from 'components/Paragraph'
-import Button from '@mui/material/Button'
 
 export default function Pagina() {
   return (
@@ -195,6 +197,40 @@ export default function Pagina() {
             </li>
           </ul>
         </p>
+        <Grid container>
+          <Grid item xs={6}>
+            <Button
+              sx={{
+                marginTop: '2rem',
+                marginBottom: '2rem',
+                padding: '1rem',
+                borderRadius: '2rem',
+              }}
+              target='_blank'
+              color='primary'
+              variant='contained'
+              href='/docs/INFORMATIVACentroEstivo.pdf'
+            >
+              Informativa Privacy
+            </Button>
+          </Grid>
+          <Grid item xs={6}>
+            <Button
+              sx={{
+                marginTop: '2rem',
+                marginBottom: '2rem',
+                padding: '1rem',
+                borderRadius: '2rem',
+              }}
+              target='_blank'
+              color='primary'
+              variant='contained'
+              href='/docs/Regolamento_PER-2023.pdf'
+            >
+              Regolamento Proposta Estate
+            </Button>
+          </Grid>
+        </Grid>
         <p>
           Il non presentarsi nel giorno e ora specificati, comporta la perdita
           della priorità acquisita nella scelta delle attività/laboratori,
