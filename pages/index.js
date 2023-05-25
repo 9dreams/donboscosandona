@@ -13,7 +13,7 @@ export default function Pagina() {
     return (
         <Layout>
             <LandingHero
-                siteName="CFP DON BOSCO"
+                siteName="Sueños Locos S.A."
                 title="DREAMS ISLAND"
                 description="La miglior isola su cui trascorrere le vacanze ed immergersi nei proprio sogni"
                 imageUrl="https://rare-gallery.com/uploads/posts/349427-4k-wallpaper.jpg"

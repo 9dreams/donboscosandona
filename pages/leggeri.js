@@ -13,7 +13,7 @@ export default function Pagina() {
     return (
         <Layout>
             <LandingHero
-                siteName="CFP DON BOSCO"
+                siteName="Sueños Locos S.A."
                 title="Goku's Dream"
                 description="Il sogno migliore a tema Dragon Ball"
                 imageUrl="https://www.xtrafondos.com/wallpapers/resoluciones/19/casa-kame-de-dragon-ball_2560x1440_3963.jpg"
