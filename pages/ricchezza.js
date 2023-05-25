@@ -13,8 +13,8 @@ export default function Pagina() {
     return (
         <Layout>
             <LandingHero
-                siteName="CFP DON BOSCO"
-                title="Pirati dei caraibi"
+                siteName="Sueños Locos S.A."
+                title="Sogno muy rico"
                 description="Il sogno migliore a tema della vita da ricchi"
                 imageUrl="https://images.unsplash.com/photo-1604689598793-b8bf1dc445a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                 opacity={0.2}
