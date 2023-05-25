@@ -90,7 +90,7 @@ export default function Paragraph(props) {
                   float: 'left',
                   marginTop: '-1rem',
                   marginRight: '1rem',
-                  width: '8rem',
+                  width: '16rem',
                   borderRadius: '50%',
                 }}
               />

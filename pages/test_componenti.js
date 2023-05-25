@@ -1,19 +1,19 @@
-import { Container, Grid, Typography } from '@mui/material'
-import {
-  Carousel,
-  Certifications,
-  Layout,
-  LandingHero,
-  Features,
-  Products,
-  Calendar,
-  Testimonials,
-  Team,
-  Post,
-  Maps,
-  Paragraph,
-  Table
-} from '/components'
+import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
+import Layout from '/components/Layout'
+import LandingHero from '/components/LandingHero2.js'
+import Features from '/components/Features'
+import Carousel from '/components/Carousel'
+import Products from '/components/Products'
+import Calendar from '/components/Calendar'
+import Testimonials from '/components/Testimonials'
+import Team from '/components/Team'
+import Post from '/components/Post'
+import Certifications from '/components/Certifications'
+import Maps from '/components/Maps'
+import Paragraph from '/components/Paragraph'
+import Table from '/components/Table'
 
 export default function Home({ datiArticoli }) {
   return (

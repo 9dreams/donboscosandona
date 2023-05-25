@@ -2,14 +2,19 @@
 
 h1, h2, h3, h4 {
     font-family: 'Bebas Neue', cursive !important;
+    color: white !important;
+
 }
 
 h5, h6, h, a, p, th, td {
     font-family: 'Figtree', sans-serif !important;
+    color:white !important;
 }
 
 html,body {
     margin: 0 !important;
     padding: 0 !important;
     font-family: 'Figtree', sans-serif !important;
+    background-color:#192a56 !important;
+    
 }
