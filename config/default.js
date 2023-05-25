@@ -6,6 +6,8 @@ export const siteTitle = "I DRONI DEL PIAVE - La tua droneria officiale di fiduc
 export const siteDescription = "La migliore e ufficiale droneria di San Donà di Piave"
 
 export const menu = [
+
+
   
     
 ]
@@ -25,10 +27,14 @@ const socials = [
 ]
 
 let images = [
-    { title: '', imageUrl: 'https://source.unsplash.com/random', },
-    { title: '', imageUrl: 'https://source.unsplash.com/random', },
-    { title: '', imageUrl: 'https://source.unsplash.com/random', },
-    { title: '', imageUrl: 'https://source.unsplash.com/random', },
+    { title: '', imageUrl: 'https://openseauserdata.com/files/3c4bc3acd3845cf8fbb5889844211821.png', },
+    { title: '', imageUrl: 'https://i.imgur.com/kgmBEwM.jpeg', },
+    { title: '', imageUrl: 'https://i.imgur.com/IqQMKed.png', },
+    { title: '', imageUrl: 'https://i.imgur.com/1EjXsbx.png', },
+    { title: '', imageUrl: 'https://i.imgur.com/bPgb1QR.png', },
+    { title: '', imageUrl: 'https://i.imgur.com/Jk1BrW8.png', },
+    { title: '', imageUrl: 'https://i.imgur.com/Xaw800L.png', },
+    { title: '', imageUrl: 'https://i.imgur.com/0z92p5G.png', },
 ]
 
 export const footer = <Footer
@@ -36,11 +42,11 @@ export const footer = <Footer
     color="#272727"
     opacitycolor="1"
     opacity={1}
-    title1="About Us"
-    description1="Footer che apparirà sul fondo di tutte le pagine del sito. Sarà possibile passare al componente un'immagine di sfondo opzionale oppure un colore di sfondo. L'attributo opaciy permetterà di sovrapporre all'immagine un Box con il colore di sfondo e un'opacità regolabile.
-La prima colonna sarà destinata a un testo descrittivo, la seconda ai social, la terza a un menù di navigazione grafico (che porta ad es. ai settori).
-"
-    title2="Social Feed"
+    title1="I collaboratori"
+    description1="1. Leonardo Pavan: Il genio del design, crea esperienze web straordinarie grazie alle sue abilità.
+    2. Giacomo Pistolato: Il codice è la sua arma, sviluppa siti web perfetti , è uno dei migliori tra noi. 
+    3. Simone Mazzola: Il navigatore digitale, guida il team verso il successo online. "
+    
     socials={socials}
     title3="I Settori"
     images={images}

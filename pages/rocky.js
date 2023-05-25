@@ -13,41 +13,39 @@ export default function Pagina() {
     return (
         <Layout>
             <LandingHero
-                siteName="CFP DON BOSCO"
-                title="Pirati dei caraibi"
-                description="Il sogno migliore a tema Dragon Ball"
-                imageUrl="https://www.madmass.it/wp-content/uploads/2017/05/pirati-dei-caraibi-la-vendetta-di-salazar.jpg"
-                opacity={0.2}
+                siteName="Sueños Locos S.A."
+                title="Rocky's Dream"
+                description="Il sogno americano"
+                imageUrl="https://www.focus.it/images/2022/04/15/pugilato_1500x1000.jpg"
                 height="75"
             />
             <h1></h1>
             <Paragraph
                 title="Breve introduzione al sogno"
             >
-               Benvenuti nell'incantevole Isola dei Caraibi, un luogo magico che evoca l'avventura e la leggenda dei temibili pirati dei Caraibi. Quest'isola a tema è un paradiso per gli amanti dei pirati, offrendo un'esperienza indimenticabile in un ambiente pittoresco.
-               Mentre metti piede sull'isola, sarai accolto da una spettacolare baia, con un porto costellato di imponenti navi pirate ancorate. La vista di queste maestose imbarcazioni ti trasporterà in un'epoca di ardimentose battaglie e grandi ricchezze.
-               L'atmosfera sull'isola è vibrante e autentica, con pirati vestiti con abiti sgargianti, occhiacci fulminanti e fedeli spade. I visitatori possono unirsi a queste temibili ciurme o semplicemente immergersi nella storia e nell'avventura che permeano ogni angolo dell'isola.
-               Esplora i caratteristici vicoli del villaggio pirata, pieni di negozi che vendono cappelli da pirata, vestiti eleganti, mappe del tesoro e repliche di armi antiche. Gli spettacoli teatrali e le ricostruzioni di combattimenti navali catturano l'immaginazione di grandi e piccini, mentre la musica dei Caraibi riempie l'aria, invitandoti a ballare e a goderti la festa.
+               Questa opzione descrive alla perfezione il sogno americano, quello in cui l'uomo comune può centrare qualunque traguardo, persino quello di affrontare sul ring il campione del mondo dei pesi massimi.
+               Perché tu sarai l'eroe perdente per eccellenza e l'eroe perdente, si sa, è più amato di quello vincente.
+               Perché fonde alla perfezione pugilato e romanticismo: per Rocky Balboa la storia d'amore con Adriana Pennino conta più del titolo mondiale.
+               Tu verrai allenato continuamente da un coach professionista e alla fine dovrai sfidarti con uno dei campioni massimi di pugilato più famosi al mondo, questo sogno è adatto per le persone che amano allenarsi e fare pugilato.
             </Paragraph>
             <h1></h1>
             <Paragraph 
                   
-                  topImageUrl="https://images.everyeye.it/img-notizie/pirati-caraibi-confini-mondo-film-piU-costoso-disney-v5-439830.jpg"
+                  topImageUrl="https://www.mmawiki.org/it/wp-content/uploads/2012/07/boxe.jpg"
                    
             />
             <Paragraph
                 title="opinioni del cliente"
                 subtite="eskere"
-                avatarImageUrl="https://1.bp.blogspot.com/-9AWY0O8spEk/TpAMPSHVwfI/AAAAAAAAC5E/qGGFyC6eEQA/s1600/Image15.jpg"
+                avatarImageUrl="https://i.ytimg.com/vi/XfGD0VtwOiY/maxresdefault.jpg"
                 columnCount="{2}"
                 backgroundColor="#2c3e50"
                 opacity={0.5}
 
-                backgroundImageUrl="https://upload.wikimedia.org/wikipedia/it/6/6d/Piratideicaraibi_lamaledizionedelforzierefantasma.jpg"
+                backgroundImageUrl="https://www.kombatnet.com/wp-content/uploads/2022/04/ring-da-combattimento-boxe-boxing-kickboxing-savate-muay-thai-thai-boxe-Kombatnet-Wiki.jpeg"
             >
-               Ho avuto il piacere di visitare l'Isola a tema Pirati dei Caraibi, e devo dire che è stata un'esperienza indimenticabile. L'atmosfera creata sull'isola è semplicemente magica. 
-               Fin dal momento in cui metti piede sulla terraferma, ti immergi in un mondo di avventura e di storia.
-               Il villaggio pirata è affascinante, con i suoi vicoli caratteristici e i negozi che vendono oggetti a tema pirata. Ho potuto acquistare un autentico cappello da pirata e una mappa del tesoro per sentirmi parte di quel mondo incantato. Gli spettacoli teatrali e le ricostruzioni di battaglie navali erano incredibilmente realistici, e mi hanno trasportato in un'epoca di audacia e coraggio.
+               La migliore esperienza e allenamento che abbia mai fatto , soprattutto nella parte della corsa nei sentieri dell'isola e il coach era simpaticissimo e bravissimo, uno dei migliori che abbia mai avuto nei miei 10 anni di allenamento in palestra e al palazzatto dove pratico pugilato.
+               Sono riuscito a mandare k.o. il campione per un soffio, ovviamente si erano presi cura anche dell'aspetto per la cura del cliente e quindi erano pronti in caso qualcuno si facesse male sempre. 5 stelle se potessi ne darei di più.
             </Paragraph>
             
             <h1></h1>

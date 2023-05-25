@@ -13,8 +13,8 @@ export default function Pagina() {
     return (
         <Layout>
             <LandingHero
-                siteName="CFP DON BOSCO"
-                title="Pirati dei caraibi"
+                siteName="Sueños Locos S.A."
+                title="Sogno muy rico"
                 description="Il sogno migliore a tema Dragon Ball"
                 imageUrl="https://www.madmass.it/wp-content/uploads/2017/05/pirati-dei-caraibi-la-vendetta-di-salazar.jpg"
                 opacity={0.2}
