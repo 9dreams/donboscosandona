@@ -6,7 +6,7 @@ export const siteTitle = "I DRONI DEL PIAVE - La tua droneria officiale di fiduc
 export const siteDescription = "La migliore e ufficiale droneria di San Donà di Piave"
 
 export const menu = [
-
+    { title: 'Home', url: '/' },
 
   
     
