@@ -66,7 +66,7 @@ let settimana1 = [
     date: "Lunedì 19 Giugno",
     morning: "Attività regolare",
     afternoon: "Giochi al parco e tornei",
-    evening: "ore 20.45 Film TRANSFORMERS - IL RISVEGLIO",
+    evening: "ore 20.45 Film TRANSFORMERS - IL RISVEGLIO 3D",
     immagineUrl: "/images/calendario/transformers.png",
   },
   {
@@ -108,8 +108,8 @@ let settimana2 = [
     date: "Lunedì 26 Giugno",
     morning: "Attività regolare",
     afternoon: "Quinta elementare e prima media al mare",
-    evening: "ore 20.45 Film ELEMENTAL 3D",
-    immagineUrl: "/images/calendario/elemental.png",
+    evening: "ore 20.45 Film THE FLASH",
+    immagineUrl: "/images/calendario/flash.png",
   },
   {
     date: "Martedì 27 Giugno",
@@ -144,8 +144,8 @@ let settimana3 = [
     date: "Lunedì 3 Luglio",
     morning: "Cambio attività",
     afternoon: "Terza e quarta elementare al mare",
-    evening: "ore 20.45 Film DUNGEONS & DRAGONS",
-    immagineUrl: "/images/calendario/dungeons.png",
+    evening: "ore 20.45 Film ELEMENTAL 3D",
+    immagineUrl: "/images/calendario/elemental.png",
   },
   {
     date: "Martedì 4 Luglio",

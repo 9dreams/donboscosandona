@@ -518,7 +518,7 @@ const testimonials = [
 
 let serate_cinema = [
   {
-    title: 'TRANSFORMERS: IL RISVEGLIO',
+    title: 'TRANSFORMERS: IL RISVEGLIO 3D',
     description:
       'Il film introdurrà: i Maximal, discendenti degli Autobot; i Predacon, discendenti dei Decepticon, e i Terrorcons, gruppo di Decepticon in grado di trasformarsi in bestie mitologiche.',
     immagineUrl:
@@ -534,7 +534,7 @@ let serate_cinema = [
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'ELEMENTAL',
+    title: 'ELEMENTAL 3D',
     description:
       'In una città in cui abitanti di fuoco, acqua, terra e aria vivono insieme, un’ardente giovane donna e un ragazzo che segue la corrente stanno per scoprire qualcosa di fondamentale: quanto hanno davvero in comune.',
     immagineUrl:
@@ -542,7 +542,7 @@ let serate_cinema = [
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: ' INDIANA JONES E IL QUADRANTE DEL DESTINO ',
+    title: ' INDIANA JONES E IL QUADRANTE DEL DESTINO 3D',
     description:
       "Nel 1969, l'archeologo e avventuriero statunitense Indiana Jones vive sullo sfondo della corsa allo spazio. Jones è a disagio per il fatto che il governo federale degli Stati Uniti d’America abbia reclutato ex nazisti per aiutare a battere l'Unione Sovietica nella competizione per arrivare nello spazio.",
     immagineUrl:
