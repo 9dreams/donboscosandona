@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import Button from '@mui/material/Button'
+import { Button, Container, Typography, Grid } from '@mui/material'
 
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero2.js'
@@ -12,6 +12,7 @@ import Team from '/components/Team'
 import Maps from '/components/Maps'
 import Paragraph from 'components/Paragraph'
 import Table from 'components/Table'
+import Post from 'components/Post'
 
 export default function Home({ datiArticoli }) {
   return (
@@ -75,6 +76,22 @@ export default function Home({ datiArticoli }) {
           insieme”. Buona P.E.R. 2023
         </p>
       </Paragraph>
+      <Container maxWidth='lg' sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
+        <Typography
+          style={{ textAlign: 'left', paddingBottom: '2rem' }}
+          component='h2'
+          variant='h4'
+          color='inherit'
+          gutterBottom
+        >
+          Le ultime news
+        </Typography>
+        <Grid container spacing={4}>
+          {datiArticoli.map((post) => (
+            <Post post={post} />
+          ))}
+        </Grid>
+      </Container>
       <Features
         title="La #per dell'Oratorio don Bosco è..."
         description=''
@@ -528,7 +545,7 @@ let serate_cinema = [
   {
     title: 'THE FLASH',
     description:
-      "In The Flash i mondi si scontrano quando Barry usa i suoi superpoteri per viaggiare indietro nel tempo e cambiare gli eventi del passato. Ma quando il tentativo di salvare la sua famiglia altera inavvertitamente il futuro, Barry rimane intrappolato in una realtà in cui il generale Zod è tornato, minacciando distruzione, e senza alcun Supereroe a cui rivolgersi...",
+      'In The Flash i mondi si scontrano quando Barry usa i suoi superpoteri per viaggiare indietro nel tempo e cambiare gli eventi del passato. Ma quando il tentativo di salvare la sua famiglia altera inavvertitamente il futuro, Barry rimane intrappolato in una realtà in cui il generale Zod è tornato, minacciando distruzione, e senza alcun Supereroe a cui rivolgersi...',
     immagineUrl:
       'https://image.tmdb.org/t/p/original/iSrDzA2PtYvSpl6IS8QJwajJe3b.jpg',
     url: 'https://cinema.donboscosandona.it',
