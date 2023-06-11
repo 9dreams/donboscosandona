@@ -324,6 +324,8 @@ let serate = [
     colore: '#e84393',
     opacity: 0.6,
     blur: '0.2rem',
+    buttonText: 'Vai al modulo di iscrizione',
+    buttonUrl: 'https://forms.gle/vKbDEzoJyLW7YWjG9'
   },
   {
     titolo: 'Spettacolo DEKRU',

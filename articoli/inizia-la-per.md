@@ -1,22 +1,15 @@
 ---
-title: 'Inizia la PER'
-date: '2023-06-06'
-abstract: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione."
-imageUrl: 'https://siviaggia.it/wp-content/uploads/sites/2/2021/02/grattacieli-new-york.jpg'
+title: 'Oratorio''s got talent'
+date: '2023-06-11'
+abstract: "Aperte le iscrizioni alla serata talent: non aspettare e compila subito il modulo di iscrizione!"
+imageUrl: '/images/news/serata-talent.jpeg'
 ---
 
-# Inizia la PER
+# Aperte le iscrizioni alla Serata Talent
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+Vuoi iniziare fin dalla prima settimana della PER a raccogliere punti per la tua squadra? Mostraci cosa sai fare!
 
-* **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-* **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+[Iscriviti al più presto compilando il modulo](https://forms.gle/vKbDEzoJyLW7YWjG9)
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
-
-## Gite
- 
-### Iscrizioni
- A [link](http://example.com).
-
- 
+Ti aspettiamo il 20 giugno alle ore 20.30 nel cortile dell'Oratorio.
+Ricordati di portare TUTTO IL NECESSARIO per la tua esibizione.
