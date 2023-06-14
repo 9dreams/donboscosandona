@@ -21,7 +21,7 @@ export default function Articolo({ datiArticolo }) {
           content={datiArticolo.title}
         />
         <meta name='og:description' content={datiArticolo.abstract} />
-        <meta name='og:image' content={'https://per.donboscosandona.it' + datiArticolo.imageUrl} />
+        <meta property='og:image' content={'https://per.donboscosandona.it' + datiArticolo.imageUrl} />
       </Head>
       <LandingHero
         opacity={0.5}
