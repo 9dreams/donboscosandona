@@ -43,5 +43,5 @@ Vuoi iniziare fin dalla prima settimana della PER a raccogliere punti per la tua
 
 [Iscriviti al più presto compilando il modulo](https://forms.gle/vKbDEzoJyLW7YWjG9)
 
-Ti aspettiamo il 20 giugno alle ore 20.30 nel cortile dell'Oratorio.
-Ricordati di portare TUTTO IL NECESSARIO per la tua esibizione.
+Ti aspettiamo il 20 giugno alle ore 20.30 nel cortile dell'Oratorio:
+Ricordati di portare TUTTO IL NECESSARIO per la tua esibizione...
