@@ -20,7 +20,7 @@ Ogni lunedì sera sarà la serata dedicata al cinema. Le proiezioni inizieranno 
 - MATTINO: Attività regolare.
 - POMERIGGIO: Giochi al parco e tornei
 - SERA ore 20.45 : ORATORIO'S GOT TALENT - Una serata dedicata ai talenti dei ragazzi della PER#23!! 
- [Iscriviti qui](https://per.donboscosandona.it/articoli/inizia-la-per)
+ [Iscriviti qui](https://per.donboscosandona.it/articoli/inizia-la-per) entro domenica 18 alle ore 17
 
 ## MERCOLEDI’ 21/06/2023
 Ore 12:15 CHIUSURA ISCRIZIONE GITE
