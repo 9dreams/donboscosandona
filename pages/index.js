@@ -537,15 +537,7 @@ const testimonials = [
 
 let serate_cinema = [
   {
-    title: 'TRANSFORMERS: IL RISVEGLIO 3D',
-    description:
-      'Il film introdurrà: i Maximal, discendenti degli Autobot; i Predacon, discendenti dei Decepticon, e i Terrorcons, gruppo di Decepticon in grado di trasformarsi in bestie mitologiche.',
-    immagineUrl:
-      'https://image.tmdb.org/t/p/original/aY2hzOLuHTxKev5bWnC05ZjxtrB.jpg',
-    url: 'https://cinema.donboscosandona.it',
-  },
-  {
-    title: 'THE FLASH',
+    title: '26 GIUGNO - THE FLASH',
     description:
       'In The Flash i mondi si scontrano quando Barry usa i suoi superpoteri per viaggiare indietro nel tempo e cambiare gli eventi del passato. Ma quando il tentativo di salvare la sua famiglia altera inavvertitamente il futuro, Barry rimane intrappolato in una realtà in cui il generale Zod è tornato, minacciando distruzione, e senza alcun Supereroe a cui rivolgersi...',
     immagineUrl:
@@ -553,7 +545,7 @@ let serate_cinema = [
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'ELEMENTAL 3D',
+    title: '3 LUGLIO - ELEMENTAL 3D',
     description:
       'In una città in cui abitanti di fuoco, acqua, terra e aria vivono insieme, un’ardente giovane donna e un ragazzo che segue la corrente stanno per scoprire qualcosa di fondamentale: quanto hanno davvero in comune.',
     immagineUrl:
@@ -561,11 +553,19 @@ let serate_cinema = [
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: ' INDIANA JONES E IL QUADRANTE DEL DESTINO 3D',
+    title: '10 LUGLIO - INDIANA JONES E IL QUADRANTE DEL DESTINO',
     description:
       "Nel 1969, l'archeologo e avventuriero statunitense Indiana Jones vive sullo sfondo della corsa allo spazio. Jones è a disagio per il fatto che il governo federale degli Stati Uniti d’America abbia reclutato ex nazisti per aiutare a battere l'Unione Sovietica nella competizione per arrivare nello spazio.",
     immagineUrl:
       'https://image.tmdb.org/t/p/original/y4MBS0SKE0pHR57vfYBxGhrkfcv.jpg',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: '17 LUGLIO - MISSION: IMPOSSIBLE - DEAD RECKONING',
+    description:
+      'Tom Cruise torna ancora una volta a vestire i panni dell’intramontabile Ethan Hunt, specialista dello spionaggio ad altro rischio. Questa volta Ethan insieme alla sua squadra dell\'IMF saranno alle prese con la sfida più pericolosa mai affrontata finora: il team dovrà riuscire a rintracciare e disinnescare una nuova e terribile arma, che si rivelerà essere una minaccia per l\'intera umanità.',
+    immagineUrl:
+      'https://image.tmdb.org/t/p/original/89j8FMC252IeF6MuzJ1wQjVbte8.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
 ]
