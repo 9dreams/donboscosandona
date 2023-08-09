@@ -15,6 +15,8 @@ export {default as Products } from './Products'
 export {default as Table } from './Table'
 export {default as Team } from './Team'
 export {default as Testimonials } from './Testimonials'
+export {default as News } from './News'
+export {default as NewsCard } from './NewsCard'
 
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder

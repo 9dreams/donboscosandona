@@ -12,7 +12,8 @@ import {
   Post,
   Maps,
   Paragraph,
-  Table
+  Table,
+  News,
 } from '/components'
 
 export default function Home({ datiArticoli }) {
@@ -32,6 +33,10 @@ export default function Home({ datiArticoli }) {
         cardWidth={3}
         events={date}
       />
+      <News
+        title='News'
+        url='https://channels.donboscosandona.it/api/donboscosandona.json'
+      />
       <Container maxWidth='lg' sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
         <Typography
           style={{ textAlign: 'left', paddingBottom: '2rem' }}
@@ -40,7 +45,7 @@ export default function Home({ datiArticoli }) {
           color='inherit'
           gutterBottom
         >
-          Le ultime news
+          Le ultime news (prefetch da file md)
         </Typography>
         <Grid container spacing={4}>
           {datiArticoli.map((post) => (
