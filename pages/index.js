@@ -1,20 +1,15 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
-
-import Head from 'next/head'
-import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero2.js'
-import Features from '/components/Features'
-import Carousel from '/components/Carousel'
-import PostInEvidenza from '/components/PostInEvidenza'
-import Products from '/components/Products'
-import Testimonials from '/components/Testimonials'
-import Team from '/components/Team'
-import Post from '/components/Post'
-import Certifications from '@/components/Certifications'
-import Maps from '/components/Maps'
-
-import { getDatiArticoli } from '/lib/articoli'
+import {
+  Carousel,
+  Certifications,
+  Layout,
+  LandingHero,
+  Features,
+  Products,
+  Testimonials,
+  Team,
+  Maps,
+  News,
+} from '/components'
 
 // I punti di forza
 const features = [
@@ -239,7 +234,7 @@ let certifications = [
   },
 ]
 
-export default function Home({ datiArticoli }) {
+export default function Home() {
   return (
     <Layout>
       <LandingHero
@@ -250,17 +245,7 @@ export default function Home({ datiArticoli }) {
         buttonText="Guarda il video"
         imageUrl="/images/home/matteo_attacco_hacker.jpg"
       />
-      <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
-        <Grid container spacing={4}>
-          {
-            datiArticoli.map(
-              (post) => (
-                <Post post={post} />
-              )
-            )
-          }
-        </Grid>
-      </Container>
+      <News channel='donboscosandona' />
       <Carousel slides={slides} />
       <Products
         title="I settori"
@@ -297,13 +282,4 @@ export default function Home({ datiArticoli }) {
       />
     </Layout>
   )
-}
-
-export async function getStaticProps() {
-  const datiArticoli = getDatiArticoli()
-  return {
-    props: {
-      datiArticoli,
-    },
-  }
 }
