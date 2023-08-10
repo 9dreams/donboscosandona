@@ -16,7 +16,7 @@ import {
   News,
 } from '/components'
 
-export default function Home({ datiArticoli }) {
+export default function Home({ data }) {
   return (
     <Layout>
       <LandingHero
@@ -35,25 +35,9 @@ export default function Home({ datiArticoli }) {
       />
       <News
         title='News'
-        channel='donboscosandona'
+        data={data}
         limit={2}
       />
-      <Container maxWidth='lg' sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
-        <Typography
-          style={{ textAlign: 'left', paddingBottom: '2rem' }}
-          component='h2'
-          variant='h4'
-          color='inherit'
-          gutterBottom
-        >
-          Le ultime news (prefetch da file md)
-        </Typography>
-        <Grid container spacing={4}>
-          {datiArticoli.map((post) => (
-            <Post post={post} />
-          ))}
-        </Grid>
-      </Container>
       <Carousel slides={slides} />
       <Products
         title='I prodotti'
@@ -202,15 +186,13 @@ export default function Home({ datiArticoli }) {
   )
 }
 
-import { getDatiArticoli } from '/lib/articoli'
-
-export async function getStaticProps() {
-  const datiArticoli = getDatiArticoli()
-  return {
-    props: {
-      datiArticoli,
-    },
-  }
+// This gets called on every request
+export async function getServerSideProps() {
+  const res = await fetch('https://channels.donboscosandona.it/api/posts/donboscosandona')
+  const data = await res.json()
+ 
+  // Pass data to the page via props
+  return { props: { data } }
 }
 
 // I punti di forza
