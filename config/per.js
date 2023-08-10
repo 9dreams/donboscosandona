@@ -42,5 +42,5 @@ export const footer = <Footer
     title3=""
     images={images}
     menu={menuFooter}
-    copyright={<Link href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico">Copyright (C) 2023 9dreams Agency.</Link>}
+    copyright={<Link color="#fff" href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico">Copyright (C) 2023 9dreams Agency.</Link>}
 />
