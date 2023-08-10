@@ -35,7 +35,8 @@ export default function Home({ datiArticoli }) {
       />
       <News
         title='News'
-        url='https://channels.donboscosandona.it/api/donboscosandona.json'
+        channel='donboscosandona'
+        limit={2}
       />
       <Container maxWidth='lg' sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
         <Typography

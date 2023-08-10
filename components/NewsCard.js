@@ -8,7 +8,7 @@ import {
 
 export default function NewsCard({ post }) {
   return (
-    <CardActionArea component='a' href={post.allegato || post.link}>
+    <CardActionArea component='a' href={post.articolo && '/articoli/show?id=' + post.id || post.link || post.allegato}>
       <Card sx={{ display: 'flex' }}>
         <CardContent sx={{ flex: 1 }}>
           <Typography component='h2' variant='h5'>
@@ -25,7 +25,7 @@ export default function NewsCard({ post }) {
             Continua a leggere...
           </Typography>
           }
-          {post.allegato &&
+          {!post.articolo && post.allegato &&
           <Typography variant='subtitle1' color='primary'>
             Scarica l'allegato
           </Typography>

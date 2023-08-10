@@ -6,11 +6,12 @@ import NewsCard from '/components/NewsCard'
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
-export default function News({ title, url }) {
-  const { data, error } = useSWR(url, fetcher)
+export default function News({ title, channel, limit }) {
+  const { data, error } = useSWR('https://channels.donboscosandona.it/api/posts/' + channel, fetcher)
 
   if (error) return <div>Errore di caricamento delle news.</div>
   if (!data) return <div>Caricamento...</div>
+  data.splice(limit)
 
   return (
     <Container maxWidth='lg' sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
@@ -32,4 +33,9 @@ export default function News({ title, url }) {
       </Grid>
     </Container>
   )
+}
+
+News.defaultProps = {
+  title: 'News',
+  limit: 6,
 }
