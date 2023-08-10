@@ -19,8 +19,6 @@ export default function Articolo({ datiArticolo }) {
                 opacity={0.5}
                 title={datiArticolo.title}
                 description={datiArticolo.abstract}
-                buttonUrl=""
-                buttonText="Guarda il video"
                 imageUrl={datiArticolo.imageUrl}
             />
             <Container
