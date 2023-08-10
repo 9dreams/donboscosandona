@@ -4,6 +4,7 @@ import Footer from '/components/Footer'
 export const siteName = "CFP DON BOSCO"
 export const siteTitle = "CFP DON BOSCO - San Donà di Piave"
 export const siteDescription = "Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave"
+export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
 export const menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
