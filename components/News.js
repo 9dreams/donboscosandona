@@ -9,8 +9,9 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json())
 export default function News({ title, channel, limit }) {
   const { data, error } = useSWR('https://channels.donboscosandona.it/api/posts/' + channel, fetcher)
 
-  if (error) return <div>Errore di caricamento delle news.</div>
+  if (error || data && data.status=='404') return <div>Errore di caricamento delle news.</div>
   if (!data) return <div>Caricamento...</div>
+  
   data.splice(limit)
 
   return (
