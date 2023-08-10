@@ -1,31 +1,19 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import useSWR from 'swr'
+import { siteBaseUrl } from '/config/default'
 
 import { Container, Typography } from '@mui/material'
 
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero2'
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json())
-
-export default function Show() {
-  const router = useRouter()
-  const { id } = router.query
-
-  const { data, error } = useSWR(
-    'https://channels.donboscosandona.it/api/post/' + id,
-    fetcher
-  )
-
-  if (error) return <div>Errore di caricamento dell'articolo.</div>
+export default function Show({data}) {
   if (!data) return <div>Caricamento...</div>
 
   return (
     <Layout>
       <Head>
         <title>{data.titolo}</title>
-        <meta name='og:url' content={window.location.origin + '/articoli/show?id=' + data.id } />
+        <meta name='og:url' content={siteBaseUrl + '/articoli/show?id=' + data.id } />
         <meta name='og:type' content='website' />
         <meta name='og:locale' content='it_IT' />
         <meta
@@ -58,4 +46,14 @@ export default function Show() {
       </Container>
     </Layout>
   )
+}
+
+// This gets called on every request
+export async function getServerSideProps(context) {
+  const { id } = context.query
+  const res = await fetch('https://channels.donboscosandona.it/api/post/' + id)
+  const data = await res.json()
+ 
+  // Pass data to the page via props
+  return { props: { data } }
 }
