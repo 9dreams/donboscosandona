@@ -10,7 +10,7 @@ export const menu = [
     { title: 'Contatti', url: '/contatti' },
     { title: 'Dove siamo', url: '/dove-siamo' },
     { title: 'Privacy', url: '/privacy' },
-    { title: 'Trasparenza', url: '/trasparenza' },
+    { title: 'Informatico', url: '/informatico' },
 ]
 
 export const header = <Logos
