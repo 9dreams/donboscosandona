@@ -25,7 +25,15 @@ export default function Show() {
     <Layout>
       <Head>
         <title>{data.titolo}</title>
-        <meta name='og:title' content={data.titolo} />
+        <meta name='og:url' content={window.location.origin + '/articoli/show?id=' + data.id } />
+        <meta name='og:type' content='website' />
+        <meta name='og:locale' content='it_IT' />
+        <meta
+          name='og:title'
+          content={data.titolo}
+        />
+        <meta name='og:description' content={data.abstract} />
+        <meta property='og:image' content={data.immagine} />
       </Head>
       <LandingHero
         opacity={0.5}
