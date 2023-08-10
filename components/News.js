@@ -4,7 +4,7 @@ import NewsCard from '/components/NewsCard'
 
 export default function News({ title, data, limit }) {
   if (!data) return <div>Caricamento...</div>
-  
+  if (data && data.status=='404') return <div>Errore: il canale specificato per le News è inesistente.</div>
   data.splice(limit)
 
   return (
