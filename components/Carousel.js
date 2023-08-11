@@ -1,10 +1,5 @@
 import Carousel from 'react-material-ui-carousel'
-import Paper from '@mui/material/Paper'
-import Button from '@mui/material/Button'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
+import {Paper, Button, Box, Grid, Typography, Container } from '@mui/material'
 import styles from './Carousel.module.css'
 
 export default function MyCarousel({ slides, maxWidth, height }) {
@@ -13,7 +8,6 @@ export default function MyCarousel({ slides, maxWidth, height }) {
             maxWidth={maxWidth}
             disableGutters={true}
             sx={{
-
                 border: '300px',
                 marginBottom: '2rem',
             }}
@@ -75,7 +69,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                                 </Typography>
                                                 {slide.buttonUrl &&
                                                     <Button
-                                                        variant="outlined"
+                                                        variant="contained"
                                                         size="large"
                                                         color="error"
                                                         href={slide.buttonUrl}

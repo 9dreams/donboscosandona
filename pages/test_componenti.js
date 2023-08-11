@@ -14,6 +14,7 @@ import {
   Paragraph,
   Table,
   News,
+  Featured,
 } from '/components'
 
 export default function Home({ data }) {
@@ -33,11 +34,8 @@ export default function Home({ data }) {
         cardWidth={3}
         events={date}
       />
-      <News
-        title='News'
-        data={data}
-        limit={2}
-      />
+      <Featured data={data} limit={4} />
+      <News title='News' data={data} limit={2} />
       <Carousel slides={slides} />
       <Products
         title='I prodotti'
@@ -188,9 +186,11 @@ export default function Home({ data }) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  const res = await fetch('https://channels.donboscosandona.it/api/posts/donboscosandona')
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+  )
   const data = await res.json()
- 
+
   // Pass data to the page via props
   return { props: { data } }
 }
