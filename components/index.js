@@ -17,6 +17,7 @@ export {default as Team } from './Team'
 export {default as Testimonials } from './Testimonials'
 export {default as News } from './News'
 export {default as NewsCard } from './NewsCard'
+export {default as Featured } from './Featured'
 
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder
