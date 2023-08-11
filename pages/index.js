@@ -9,6 +9,7 @@ import {
   Team,
   Maps,
   News,
+  Featured,
 } from '/components'
 
 // I punti di forza
@@ -271,14 +272,7 @@ let certifications = [
 export default function Home({ data }) {
   return (
     <Layout>
-      <LandingHero
-        opacity={0.5}
-        title='Centro di Formazione Professionale don Bosco'
-        description='Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!'
-        buttonUrl='j'
-        buttonText='Guarda il video'
-        imageUrl='/images/home/matteo_attacco_hacker.jpg'
-      />
+      <Featured data={data} />
       <News data={data} />
       <Carousel slides={slides} />
       <Products
