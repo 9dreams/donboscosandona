@@ -9,11 +9,11 @@ import {
   Calendar,
   Testimonials,
   Team,
-  Post,
   Maps,
   Paragraph,
   Table,
   News,
+  Featured,
 } from '/components'
 
 export default function Home({ data }) {
@@ -33,11 +33,8 @@ export default function Home({ data }) {
         cardWidth={3}
         events={date}
       />
-      <News
-        title='News'
-        data={data}
-        limit={2}
-      />
+      <Featured data={data} limit={4} />
+      <News title='News' data={data} limit={2} />
       <Carousel slides={slides} />
       <Products
         title='I prodotti'
@@ -188,9 +185,11 @@ export default function Home({ data }) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  const res = await fetch('https://channels.donboscosandona.it/api/posts/donboscosandona')
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+  )
   const data = await res.json()
- 
+
   // Pass data to the page via props
   return { props: { data } }
 }
@@ -300,7 +299,6 @@ let prodotti = [
       'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
     immagineUrl:
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
   },
   {
     title: 'Energia',
