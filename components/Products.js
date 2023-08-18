@@ -38,7 +38,7 @@ export default function Products({
       <Grid container>
         {products.map((product) => (
           <Grid item xs={6} sm={4} md={cardWidth}>
-            <CardActionArea component='a' href={product.url}>
+            <CardActionArea component='a' href={product.url} disabled={!product.url}>
               <Card
                 sx={{ display: 'flex' }}
                 className={styles.card}
