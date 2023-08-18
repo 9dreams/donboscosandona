@@ -4,7 +4,7 @@ import { Container, Typography } from '@mui/material'
 
 import Layout from '/components/Layout'
 import Date from '/components/Date'
-import LandingHero from '/components/LandingHero2'
+import LandingHero from '/components/LandingHero'
 
 import { getIdArticoli, getDatiArticolo } from '/lib/articoli'
 

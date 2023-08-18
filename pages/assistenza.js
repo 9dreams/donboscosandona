@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container'
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero2.js'
+import LandingHero from '/components/LandingHero.js'
 import Products from '/components/Products'
 import Paragraph from "/components/Paragraph"
 import { Typography } from '@mui/material'
