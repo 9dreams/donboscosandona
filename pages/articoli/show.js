@@ -4,7 +4,7 @@ import { siteBaseUrl } from '/config/default'
 import { Container, Typography, Chip, Stack } from '@mui/material'
 
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero2'
+import LandingHero from '/components/LandingHero'
 
 export default function Show({ data }) {
   if (!data) return <div>Caricamento...</div>

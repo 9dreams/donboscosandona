@@ -9,7 +9,6 @@ import {
   Calendar,
   Testimonials,
   Team,
-  Post,
   Maps,
   Paragraph,
   Table,
