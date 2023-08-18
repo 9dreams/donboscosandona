@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero2.js'
+import LandingHero from '/components/LandingHero.js'
 import Paragraph from 'components/Paragraph'
 import Table from 'components/Table'
 

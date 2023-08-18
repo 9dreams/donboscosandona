@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Button, Container, Typography, Grid } from '@mui/material'
 
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero2.js'
+import LandingHero from '/components/LandingHero.js'
 import Features from '/components/Features'
 import Carousel from '/components/Carousel'
 import Products from '/components/Products'
