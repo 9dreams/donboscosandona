@@ -2,7 +2,7 @@ import Container from '@mui/material/Container'
 import Link from '@mui/material/Link'
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero'
+import LandingHero from '/components/LandingHero2'
 import Products from '/components/Products'
 import Paragraph from '/components/Paragraph'
 

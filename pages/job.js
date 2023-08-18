@@ -1,4 +1,4 @@
-import LandingHero from "@/components/LandingHero";
+import LandingHero from "@/components/LandingHero2";
 import Layout from "@/components/Layout";
 import Head from 'next/head'
 import Products from '/components/Products'

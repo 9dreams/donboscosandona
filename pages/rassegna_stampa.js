@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero'
+import LandingHero from '/components/LandingHero2'
 import Products from '/components/Products'
 
 let rassegna_stampa = [
