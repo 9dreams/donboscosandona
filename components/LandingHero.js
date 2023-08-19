@@ -13,8 +13,6 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 
-import { siteName, menu } from '/config/default'
-
 export default function LandingHero(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
 
@@ -232,6 +230,6 @@ export default function LandingHero(props) {
 
 LandingHero.defaultProps = {
   siteName: '',
-  menu: menu,
+  menu: null,
   height: 80,
 }

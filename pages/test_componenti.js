@@ -38,7 +38,6 @@ export default function Home({ data }) {
         cardWidth={3}
         events={date}
       />
-      <NavBar />
       <Featured data={data} limit={4} />
       <News title='News' data={data} limit={2} />
       <Carousel slides={slides} />

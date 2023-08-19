@@ -13,9 +13,8 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import Paper from '@mui/material/Paper'
 
-import { siteName, menu, logoUrl } from '/config/default'
+// import { siteName, menu, logoUrl } from '/config/default'
 
 const drawerWidth = 240
 
@@ -116,18 +115,16 @@ export default function DrawerAppBar({
           {drawer}
         </Drawer>
       </Box>
-      <Box component='main' sx={{ p: 3 }}>
-        <Toolbar />
-      </Box>
     </Box>
   )
 }
 
 DrawerAppBar.defaultProps = {
-  siteName: siteName,
-  menu: menu,
+  siteName: '',
+  menu: [],
+  logoUrl: '',
   bgcolor: 'transparent',
-  drawerBgcolor: '#0097e6',
+  drawerBgcolor: '#1289A7',
   drawerTextColor: '#fff',
   color: '#ccc',
   elevation: 0,
