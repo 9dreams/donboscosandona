@@ -116,7 +116,7 @@ const testimonials = [
     imageUrl: '/images/home/recensioni/giacomo.png',
     name: 'Giacomo P.',
     text: 'In questi anni il don Bosco mi ha dato molto: gli insegnati lavorano con passione e trattano i propri alunni come dei veri amici, per qualsiasi tipo di problema sono sempre al tuo fianco ed è una cosa da non dare per nulla per scontata. La scuola aiuta molto ad inserirsi anche nel mondo del lavoro grazie alle esperienze acquisite nei vari laboratori ma soprattutto grazie alle esperienze di stage offerte. In questi anni ho ricevuto una formazione completa formandomi come lavoratore ma soprattutto come uomo.',
-    social: '@PINOWEST',
+    social: '@PISTO',
   },
 ]
 

@@ -30,7 +30,7 @@ export default function Home({ data }) {
         <br />
         CF 93005640276 - P.IVA 02732470279
       </Paragraph>
-      <News title={null} data={data} />
+      <News title={null} data={data} limit={30} />
     </Layout>
   )
 }
