@@ -25,7 +25,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
                                     height: height + 'vh',
-                                    paddingTop: (height / 3) + 'vh',
+                                    paddingTop: (height / 2) - 10 + 'vh',
                                 }}
                                 elevation={5}
                             >
