@@ -15,10 +15,10 @@ export const menu = [
   { title: 'Trasparenza', url: '/trasparenza' },
 ]
 
-export const header = <NavBar menu={menu} siteName={siteName} />
-
 export const logoUrl =
-  'https://archive.donboscosandona.it/img/ck/96448406eee9201111c084f9f70330b052012ac5.png'
+  'https://i.postimg.cc/zvqYsPKD/SFP-DON-BOSCO-SAN-DONA-BIANCO.png'
+
+export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 
 const menuFooter = [
   { title: 'Informatico', url: '/informatico' },

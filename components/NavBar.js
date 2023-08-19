@@ -1,7 +1,6 @@
 import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
-import CssBaseline from '@mui/material/CssBaseline'
 import Divider from '@mui/material/Divider'
 import Drawer from '@mui/material/Drawer'
 import IconButton from '@mui/material/IconButton'
@@ -21,6 +20,7 @@ const drawerWidth = 240
 export default function DrawerAppBar({
   menu,
   siteName,
+  logoUrl,
   bgcolor,
   drawerBgcolor,
   drawerTextColor,
@@ -37,9 +37,12 @@ export default function DrawerAppBar({
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant='h6' sx={{ my: 2, color: drawerTextColor }}>
-        {siteName}
+        {logoUrl ? (
+          <img src={logoUrl} style={{ width: '100%', padding: '1rem'}} />
+        ) : (
+          <h2>{siteName}</h2>
+        )}
       </Typography>
-      <Divider />
       <List>
         {menu.map((item) => (
           <ListItem key={item.title} disablePadding>
@@ -73,9 +76,13 @@ export default function DrawerAppBar({
           <Typography
             variant='h6'
             component='div'
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, textAlign: {xs: 'right', md: 'left'}, display: { xs: 'block', sm: 'block' } }}
           >
-            {siteName}
+            {logoUrl ? (
+              <img src={logoUrl} style={{ height: '6rem', padding: '1rem', align: 'right'}} />
+            ) : (
+              <h2>{siteName}</h2>
+            )}
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {menu.map((item) => (
