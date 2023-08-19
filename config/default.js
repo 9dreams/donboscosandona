@@ -7,11 +7,10 @@ export const siteDescription = "Sito ufficiale della Scuola della Formazione Pro
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
 export const menu = [
-    { title: 'Chi siamo', url: '/chi-siamo' },
+    { title: 'Home', url: '/' },
     { title: 'Contatti', url: '/contatti' },
-    { title: 'Dove siamo', url: '/dove-siamo' },
+    { title: 'Trasparenza', url: '/trasparenza' },
     { title: 'Privacy', url: '/privacy' },
-    { title: 'Informatico', url: '/informatico' },
 ]
 
 export const logoUrl =

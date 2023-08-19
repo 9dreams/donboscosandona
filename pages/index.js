@@ -44,128 +44,6 @@ const features = [
   },
 ]
 
-// slides per il carousel
-let slides = [
-  {
-    titolo: 'Fatti un bel giro',
-    descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine: '/images/news/virtual-tour.jpeg',
-  },
-  {
-    titolo: 'Progetto GIVE',
-    descrizione:
-      "Il 15 e 16 maggio il nostro Centro ospiterà l'edizione 2023 di GIVE (GROHE Installer Vocational Training and Education), il programma di formazione dedicato ai giovani installatori idraulici: un ambiente dedicato al training pratico proposto dai professionisti di GROHE.",
-    immagine: '/images/news/2023/grohe.jpeg',
-  },
-  {
-    titolo: 'Concorso nazionale settore elettrico',
-    descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    immagine: '/images/news/2023/concorso-nazionale-elettrico.jpg',
-  },
-]
-
-let slides2 = [
-  {
-    titolo: 'Acqua della settimana',
-    descrizione: 'Argomento nel buongiorno della settimana',
-    immagine: '/images/news/2023/acqua-della-sett.jpg',
-  },
-  {
-    titolo: 'Gita a Torino delle classi prime e seconde',
-    descrizione:
-      "In questa gita si visiterà tutta la città di Torino e l'oratorio Don Bosco",
-    immagine: '/images/news/2023/gita-torino.png',
-  },
-  {
-    titolo: 'Gita scolastica a Roma',
-    descrizione:
-      'Con i nostri ragazzi più grandi visiteremo alcuni importanti posti nella magnifica città di Roma',
-    immagine: '/images/news/2023/gita-roma.jpg',
-  },
-]
-
-// Il nostro team
-let members = [
-  {
-    name: 'don Nicola Munari',
-    role: 'DIRETTORE / CATECHISTA',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
-    imageUrl:
-      'https://media.gamerbrain.net/wp-content/uploads/2019/11/27094442/anima.jpg',
-    email: 'c.coso@donboscosandona.it',
-    phone: '0421 3388949874950',
-  },
-  {
-    name: 'Alessandro Cappelletto',
-    role: 'PRESIDE',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
-    imageUrl:
-      'https://preview.redd.it/6ymh125pcra71.jpg?auto=webp&s=d0ec0c4112ca7a2a8f8228be3dfda0645091ac02',
-    email: 'c.ciaoooo@donboscosandona.it',
-    phone: '123456',
-  },
-  {
-    name: 'Alessandro Ferro',
-    role: 'VICE-PRESIDE / TUTOR DIGITALE',
-    description1:
-      'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
-    imageUrl: '/images/team/A_Ferro.png',
-
-    email: 'a.ferro@donboscosandona.it',
-    phone: '0421 111 222',
-  },
-  {
-    name: "Anna Maria D'Ambrosio",
-    role: 'RESPONSABILE DELLA DISCIPLINA',
-    description1:
-      'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
-    imageUrl: '/images/team/A_dambrosio.png',
-    email: 'l.hdggfd@donboscosandona.it',
-    phone: '12365598445',
-  },
-  {
-    name: 'Roberta Toffoletto e Alessia Zanin',
-    role: 'SEGRETERIA DIDATTICA',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
-    imageUrl: '/images/team/segretarie.png',
-    email: 'c.cosocoso@donboscosandona.it',
-    phone: '0421 123456338 950',
-  },
-  {
-    name: 'Andrea Pasqualetto',
-    role: 'ORIENTAMENTO IN ENTRATA / SOSTEGNO',
-    description1:
-      'Orientatore tutor, seguo la promozione e l’entrata dalla terza media alla classe prima superiore e monitoraggio allivi che incontrano difficoltà',
-    imageUrl: '/images/team/Pasqualetto.png',
-    email: 'c.cosinocoso@donboscosandona.it',
-    phone: '123456 338 950',
-  },
-  {
-    name: 'Francesco Cicogna',
-    role: 'COORDINATORE STAGE / CORSI PER ADULTI',
-    description:
-      'gestione delle attività con le aziende “stage ” e formazione continua si',
-
-    imageUrl: '/images/team/cicogna.png',
-    email: 'hhh.coso@donboscosandona.it',
-    phone: '0421 338 950',
-  },
-  {
-    name: 'Martina Dianese',
-    role: 'ORIENTAMENTO IN USCITA / SERVIZI AL LAVORO',
-    description1:
-      'Orientamento e acompagniamento individuale, sportellò servizio al lavoro',
-    imageUrl: '/images/team/martina.png',
-    email: 'c.coso@donboscosandona.it',
-    phone: '0421 338 950',
-  },
-]
-
 let settori = [
   {
     title: 'Elettrico',
@@ -237,7 +115,7 @@ const testimonials = [
   {
     imageUrl: '/images/home/recensioni/giacomo.png',
     name: 'Giacomo P.',
-    text: "In questi anni il don Bosco mi ha dato molto: gli insegnati lavorano con passione e trattano i propri alunni come dei veri amici, per qualsiasi tipo di problema sono sempre al tuo fianco ed è una cosa da non dare per nulla per scontata. La scuola aiuta molto ad inserirsi anche nel mondo del lavoro grazie alle esperienze acquisite nei vari laboratori ma soprattutto grazie alle esperienze di stage offerte. In questi anni ho ricevuto una formazione completa formandomi come lavoratore ma soprattutto come uomo.",
+    text: 'In questi anni il don Bosco mi ha dato molto: gli insegnati lavorano con passione e trattano i propri alunni come dei veri amici, per qualsiasi tipo di problema sono sempre al tuo fianco ed è una cosa da non dare per nulla per scontata. La scuola aiuta molto ad inserirsi anche nel mondo del lavoro grazie alle esperienze acquisite nei vari laboratori ma soprattutto grazie alle esperienze di stage offerte. In questi anni ho ricevuto una formazione completa formandomi come lavoratore ma soprattutto come uomo.',
     social: '@PINOWEST',
   },
 ]
@@ -268,15 +146,14 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Featured data={data} />
-      <News data={data} />
-      <Carousel slides={slides} />
+      <News title={null} data={data} />
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
         products={settori}
       />
-      <Carousel slides={slides2} />
+      <Carousel slides={slides} />
       <Features
         title='I nostri punti di forza'
         description='Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!'
@@ -286,13 +163,7 @@ export default function Home({ data }) {
       <Testimonials
         testimonials={testimonials}
         cardWidth={4}
-        imageUrl='https://images8.alphacoders.com/948/948649.jpg'
-      />
-      <Team
-        title='Contatti'
-        description='Formatori che ti aiutano a crescere con il cuore di don Bosco'
-        members={members}
-        cardWidth={3}
+        imageUrl='/images/home/recensioni/sfondo.jpg'
       />
       <Maps
         maxWidth='100%'
@@ -306,9 +177,23 @@ export default function Home({ data }) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  const res = await fetch('https://channels.donboscosandona.it/api/posts/donboscosandona')
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+  )
   const data = await res.json()
- 
+
   // Pass data to the page via props
   return { props: { data } }
 }
+
+let slides = [
+  {
+    titolo: 'Visita virtuale',
+    descrizione:
+      'Scopri tutti i segreti della nostra Scuola con il tour virtuale!',
+    immagine:
+      '/images/home/vr.webp',
+    buttonText: 'Inizia il tour',
+    buttonUrl: 'https://archive.donboscosandona.it/virtual-tour/index.htm',
+  },
+]
