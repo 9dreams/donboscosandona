@@ -13,6 +13,8 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 
+import styles from './NavBar.module.css'
+
 // import { siteName, menu, logoUrl } from '/config/default'
 
 const drawerWidth = 240
@@ -88,6 +90,7 @@ export default function DrawerAppBar({
             {menu.map((item) => (
               <Button
                 key={item.title}
+                className={styles.link}
                 sx={{
                   color: { color },
                   textShadow: textShadow,

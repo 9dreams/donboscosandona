@@ -189,7 +189,7 @@ export default function LandingHero(props) {
                 position: 'relative',
                 p: { xs: 3, md: 6 },
                 pr: { md: 0 },
-                top: props.height / 3 - 10 + 'vh',
+                top: props.height / 2 - 10 + 'vh',
               }}
             >
               <Typography
