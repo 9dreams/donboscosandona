@@ -14,6 +14,8 @@ import {
   Table,
   News,
   Featured,
+  NavBar,
+  Logos,
 } from '/components'
 
 export default function Home({ data }) {
@@ -26,6 +28,9 @@ export default function Home({ data }) {
         buttonUrl='j'
         buttonText='Guarda il video'
         imageUrl='https://source.unsplash.com/random'
+      />
+      <Logos
+        url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png'
       />
       <Calendar
         title='Una settimana di allegria'
