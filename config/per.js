@@ -5,6 +5,7 @@ import Link from '@mui/material/Link'
 export const siteName = "#PER23"
 export const siteTitle = "Proposta Estate Ragazzi 2023 - San Donà di Piave"
 export const siteDescription = "Sito ufficiale dell'Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave"
+export const siteBaseUrl = 'https://per.donboscosandona.it'
 
 export const menu = [
     { title: 'Home', url: '/' },
