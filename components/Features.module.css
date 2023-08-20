@@ -50,3 +50,12 @@
   text-align: center;
 }
 
+.cardAction {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.cardAction:hover {
+  color: rgb(70, 70, 70);
+}
+
