@@ -41,6 +41,7 @@ const features = [
       'https://archive.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png',
     description:
       "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
+    url: '/sal',
   },
 ]
 
@@ -192,8 +193,7 @@ let slides = [
     titolo: 'Visita virtuale',
     descrizione:
       'Scopri tutti i segreti della nostra Scuola con il tour virtuale!',
-    immagine:
-      '/images/home/vr.webp',
+    immagine: '/images/home/vr.webp',
     buttonText: 'Inizia il tour',
     buttonUrl: 'https://archive.donboscosandona.it/virtual-tour/index.htm',
   },
