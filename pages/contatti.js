@@ -55,6 +55,9 @@ export default function Home() {
           <li>
             Amministrazione: n.caramaschi@donboscosandona.it - tel. 0421 338 988
           </li>
+          <li>
+            Risorse umane e qualità: a.maschio@donboscosandona.it - tel. 0421 338 988
+          </li>
           <br />
           <li>
             Direttore Generale: don Nicola Munari - direzione@donboscosandona.it
