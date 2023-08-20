@@ -9,6 +9,7 @@ export const siteBaseUrl = 'https://dev.donboscosandona.it'
 export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Contatti', url: '/contatti' },
+    { title: 'Lavoro', url: '/sal' },
     { title: 'Trasparenza', url: '/trasparenza' },
     { title: 'Privacy', url: '/privacy' },
 ]
