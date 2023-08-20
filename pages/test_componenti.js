@@ -45,6 +45,7 @@ export default function Home({ data }) {
         title='I prodotti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
+        cardWidthXs={12}
         products={prodotti}
       />
       <Features
