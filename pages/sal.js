@@ -4,33 +4,6 @@ import LandingHero from '/components/LandingHero'
 import News from '/components/News'
 import Paragraph from '/components/Paragraph'
 
-let documenti = [
-  {
-    title: 'Informativa Privacy Scuola',
-    category: '',
-    description: '',
-    immagineUrl:
-      'https://www.psbconsulting.it/wp-content/uploads/2018/04/privacy-policy-psb-consulting-gdpr-nuovo-regolamento-europeo.jpeg',
-    url: '/docs/privacy/Informativa_Scuola.pdf',
-  },
-  {
-    title: 'Informativa Privacy Clienti e Fornitori',
-    category: '',
-    description: '',
-    immagineUrl:
-      'https://www.altalex.com/~/media/Images/Lex/Privacy/privacy_key%20jpg.jpg',
-    url: '/docs/privacy/Informativa_per_aziende_tirocinio.pdf',
-  },
-  {
-    title: 'Informativa Privacy Aziende Tirocinio',
-    category: '',
-    description: '',
-    immagineUrl:
-      'https://www.dynamicquest.com/wp-content/uploads/2021/04/DQ-Blog-CyberSec-SMB-724x483-1.jpg',
-    url: '/docs/privacy/Informativa_clienti-fornitori_.pdf',
-  },
-]
-
 export default function Page({ data }) {
   return (
     <Layout>
@@ -39,7 +12,7 @@ export default function Page({ data }) {
         opacity={0.2}
         siteName='CFP DON BOSCO'
         title='Servizi al lavoro'
-        description="Facilitano l'incontro della domanda con l'offerta del lavoro "
+        description="Il nostro sportello è aperto tutti i giorni dalle 10.30 alle 11.30"
         buttonText='Guarda il video'
         imageUrl='/images/news/2023/sal.JPG'
       />
