@@ -13,3 +13,12 @@ html,body {
     padding: 0 !important;
     font-family: 'Figtree', sans-serif !important;
 }
+
+a {
+    color: #1289A7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1cd2ff;
+}
