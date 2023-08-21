@@ -158,7 +158,7 @@ export default function Home({ data }) {
       <Carousel slides={slides} />
       <Features
         title='I nostri punti di forza'
-        description='Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!'
+        description='Scopri perché SFP DON BOSCO è davvero la scuola che fa al caso tuo!'
         features={features}
         cardWidth={3}
       />
