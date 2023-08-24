@@ -29,9 +29,7 @@ export default function Home({ data }) {
         buttonText='Guarda il video'
         imageUrl='https://source.unsplash.com/random'
       />
-      <Logos
-        url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png'
-      />
+      <Logos url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png' />
       <Calendar
         title='Una settimana di allegria'
         description='Scopri tutti gli eventi'
@@ -45,6 +43,7 @@ export default function Home({ data }) {
         title='I prodotti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
+        cardWidthXs={12}
         products={prodotti}
       />
       <Features
@@ -207,6 +206,7 @@ const features = [
       'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
     description:
       'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
+    url: 'https://cinema.donboscosandona.it',
   },
   {
     title: 'Didattica attiva',

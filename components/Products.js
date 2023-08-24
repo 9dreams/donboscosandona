@@ -11,6 +11,7 @@ export default function Products({
   title,
   description,
   cardWidth,
+  cardWidthXs,
   products,
   borderRadius,
 }) {
@@ -37,7 +38,7 @@ export default function Products({
       </Typography>
       <Grid container>
         {products.map((product) => (
-          <Grid item xs={6} sm={4} md={cardWidth}>
+          <Grid item xs={cardWidthXs} sm={4} md={cardWidth}>
             <CardActionArea component='a' href={product.url} disabled={!product.url}>
               <Card
                 sx={{ display: 'flex' }}
@@ -111,5 +112,6 @@ export default function Products({
 
 Products.defaultProps = {
   cardWidth: 3,
+  cardWidthXs: 6,
   borderRadius: '10px',
 }
