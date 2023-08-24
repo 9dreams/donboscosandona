@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         </Head>
 
         <CookieBanner
-          message='Questo sito utilizza i cookies e altre tecniche di tracciamento per migliorare la tua esperienza di navigazione nel nostro sito, per mostrarti contenuti personalizzati e annunci mirati, per analizzare il traffico sul sito e per capire da dove arrivano i visitatori.'
+          message='Questo sito utilizza i cookies e altre tecniche di tracciamento per migliorare la tua esperienza di navigazione, per mostrarti contenuti personalizzati e annunci mirati, per analizzare il traffico sul sito e per capire da dove arrivano i visitatori.'
           wholeDomain={true}
           onAccept={() => {}}
           onAcceptPreferences={() => {}}
