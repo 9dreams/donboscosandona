@@ -18,17 +18,10 @@ export default function Home({ data }) {
         imageUrl='/images/trasparenza/transparency-2.webp'
       />
       <Paragraph backgroundColor='#b4cfd6'>
-        <b>ASSOCIAZIONE C.F.P. CNOS-FAP DON BOSCO</b>
-        <br />
-        Ente con personalità giuridica di diritto privato
-        <br />
-        Sede Legale ed Operativa
-        <br />
-        Via XIII Martiri 86
-        <br />
-        30027 San Donà di Piave
-        <br />
-        CF 93005640276 - P.IVA 02732470279
+        <b>Fondazione Salesiana per la Formazione Professionale
+        <br />Ispettoria Salesiana Nordest - Impresa Sociale - SFP Don Bosco</b>
+        <br />Via XIII Martiri 86 - 30027 San Donà di Piave
+        <br />C.F. 80015710306  P.IVA 01845730306
       </Paragraph>
       <News title={null} data={data} limit={30} />
     </Layout>
