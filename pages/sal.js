@@ -88,13 +88,14 @@ export default function Page({ data }) {
   )
 }
 
-// This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/donboscosandona?q=job'
   )
   const data = await res.json()
 
-  // Pass data to the page via props
-  return { props: { data } }
+  return {
+    props: { data },
+    revalidate: 3600, // I dati vengono ricaricati al massimo una volta all'ora
+  }
 }

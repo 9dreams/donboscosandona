@@ -177,7 +177,7 @@ export default function Home({ data }) {
   )
 }
 
-// This gets called on every request
+/* // This gets called on every request
 export async function getServerSideProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/donboscosandona'
@@ -186,6 +186,24 @@ export async function getServerSideProps() {
 
   // Pass data to the page via props
   return { props: { data } }
+} */
+
+// This function gets called at build time on server-side.
+// It may be called again, on a serverless function, if
+// revalidation is enabled and a new request comes in
+export async function getStaticProps() {
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+  )
+  const data = await res.json()
+
+  return {
+    props: { data },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 minutes
+    revalidate: 3600, // In secondi: il build viene fatto al massimo una volta all'ora
+  }
 }
 
 let slides = [
