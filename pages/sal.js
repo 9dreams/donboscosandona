@@ -76,10 +76,7 @@ export default function Page({ data }) {
       </Paragraph>
 
       <Paragraph title='Incontro domanda e offerta di lavoro'>
-        Il CNOS-FAP si avvale di SAL PLESK, sistema integrato per gestire
-        l’incontro domanda ed offerta di lavoro per ottimizzare la gestione del
-        processo di selezione mediante tracking delle candidature e di
-        PerformanSe, strumento informatizzato per l’orientamento e la
+        Il CNOS-FAP si avvale di PerformanSe, strumento informatizzato per l’orientamento e la
         valorizzazione delle competenze professionali, finalizzato alla crescita
         professionale nel contesto lavorativo.
       </Paragraph>
