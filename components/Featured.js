@@ -16,7 +16,7 @@ export default function Featured({ data, limit, maxWidth, height }) {
     colore: '#000',
     opacity: 0.5,
     buttonText: post.articolo && 'Continua a leggere...' || post.link && 'Scopri di più' || post.allegato && 'Scarica l\'allegato',
-    buttonUrl: post.articolo && '/articoli/show?id=' + post.id || post.link || post.allegato,
+    buttonUrl: post.articolo && '/articoli/' + post.id || post.link || post.allegato,
   }))
 
   return <>

@@ -11,7 +11,7 @@ export default function NewsCard({ post }) {
     <CardActionArea
       component='a'
       href={
-        (post.articolo && '/articoli/show?id=' + post.id) ||
+        (post.articolo && '/articoli/' + post.id) ||
         post.link ||
         post.allegato
       }
