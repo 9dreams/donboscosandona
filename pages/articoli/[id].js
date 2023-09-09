@@ -68,7 +68,7 @@ export async function getStaticProps({ params }) {
   const data = await res.json()
 
   // Pass data to the page via props
-  return { props: { data }, revalidate: 30 }
+  return { props: { data }, revalidate: 3600 }
 }
 
 export async function getStaticPaths() {
