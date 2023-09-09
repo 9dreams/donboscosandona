@@ -62,11 +62,13 @@ export default function Show({ data }) {
 
 // This gets called on every request
 export async function getStaticProps({ params }) {
-  const res = await fetch('https://channels.donboscosandona.it/api/post/' + params.id)
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/post/' + params.id
+  )
   const data = await res.json()
 
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { data }, revalidate: 30 }
 }
 
 export async function getStaticPaths() {
@@ -74,6 +76,6 @@ export async function getStaticPaths() {
   console.log(paths)
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
