@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
-import News from '/components/News'
+import SwiperNews from '/components/SwiperNews'
 import Paragraph from '/components/Paragraph'
 
 export default function Page({ data }) {
@@ -80,7 +80,7 @@ export default function Page({ data }) {
         valorizzazione delle competenze professionali, finalizzato alla crescita
         professionale nel contesto lavorativo.
       </Paragraph>
-      <News title='Offerte di lavoro' data={data} limit={30} />
+      <SwiperNews title='Offerte di lavoro' data={data} limit={30} />
     </Layout>
   )
 }
