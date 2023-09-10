@@ -8,7 +8,7 @@ import {
   Testimonials,
   Team,
   Maps,
-  News,
+  SwiperNews,
   Featured,
 } from '/components'
 
@@ -147,7 +147,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Featured data={data} />
-      <News title={null} data={data} />
+      <SwiperNews title='News' data={data} limit={8} />
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
