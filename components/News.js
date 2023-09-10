@@ -22,7 +22,7 @@ export default function News({ title, data, limit }) {
       </Typography>
       <Grid container spacing={4}>
         {data.map((post) => (
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6} md={4}>
             <NewsCard post={post} />
           </Grid>
         ))}
