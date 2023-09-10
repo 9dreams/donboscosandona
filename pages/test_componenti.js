@@ -13,6 +13,7 @@ import {
   Paragraph,
   Table,
   News,
+  SwiperNews,
   Featured,
   NavBar,
   Logos,
@@ -37,7 +38,8 @@ export default function Home({ data }) {
         events={date}
       />
       <Featured data={data} limit={4} />
-      <News title='News' data={data} limit={2} />
+      <News title='News' data={data} limit={4} />
+      <SwiperNews title='News' data={data} limit={6} />
       <Carousel slides={slides} />
       <Products
         title='I prodotti'
@@ -187,16 +189,21 @@ export default function Home({ data }) {
   )
 }
 
-// This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/donboscosandona'
   )
   const data = await res.json()
 
-  // Pass data to the page via props
-  return { props: { data } }
+  return {
+    props: { data },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 minutes
+    revalidate: 1800, // In secondi: il build viene fatto al massimo una volta ogni mezzora
+  }
 }
+
 
 // I punti di forza
 const features = [

@@ -17,10 +17,10 @@ export default function NewsCard({ post }) {
       }
       disabled={!post.articolo && !post.link && !post.allegato}
     >
-      <Card sx={{ display: {xs: 'block', sm: 'flex'} }}>
+      <Card sx={{ display: 'block' }}>
         <CardMedia
           component='img'
-          sx={{ width: '100%', display: { xs: 'block', sm: 'none' } }}
+          sx={{ width: '100%', display: 'block' }}
           image={post.immagine}
           alt={post.titolo}
         />
@@ -45,12 +45,6 @@ export default function NewsCard({ post }) {
             </Typography>
           )}
         </CardContent>
-        <CardMedia
-          component='img'
-          sx={{ width: 200, display: { xs: 'none', sm: 'block' } }}
-          image={post.immagine}
-          alt={post.titolo}
-        />
       </Card>
     </CardActionArea>
   )
