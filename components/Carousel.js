@@ -2,7 +2,7 @@ import Carousel from 'react-material-ui-carousel'
 import {Paper, Button, Box, Grid, Typography, Container } from '@mui/material'
 import styles from './Carousel.module.css'
 
-export default function MyCarousel({ slides, maxWidth, height }) {
+export default function MyCarousel({ slides, maxWidth, height, animation, interval }) {
     return (
         <Container
             maxWidth={maxWidth}
@@ -12,7 +12,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                 marginBottom: '2rem',
             }}
         >
-            <Carousel className={styles.carousel} animation="slide" sx={{ height: height + 'vh' }}>
+            <Carousel className={styles.carousel} interval={ interval } animation={ animation } sx={{ height: height + 'vh' }}>
                 {
                     slides.map(
                         (slide) => (
@@ -96,5 +96,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
 
 MyCarousel.defaultProps = {
     maxWidth: false,
-    height: 90
+    height: 90,
+    animation: 'fade',
+    interval: 4000,
 }
