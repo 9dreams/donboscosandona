@@ -17,6 +17,7 @@ import {
   Featured,
   NavBar,
   Logos,
+  Sponsor,
 } from '/components'
 
 export default function Home({ data }) {
@@ -54,6 +55,7 @@ export default function Home({ data }) {
         features={features}
         cardWidth={3}
       />
+      <Sponsor title='I nostri sponsor' logos={sponsor} />
       <Testimonials
         testimonials={testimonials}
         cardWidth={4}
@@ -203,7 +205,6 @@ export async function getStaticProps() {
     revalidate: 1800, // In secondi: il build viene fatto al massimo una volta ogni mezzora
   }
 }
-
 
 // I punti di forza
 const features = [
@@ -430,4 +431,18 @@ let date = [
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     url: '/elettrico',
   },
+]
+
+let sponsor = [
+  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
+  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
+  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
+  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
+  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
+  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
+  'https://www.comitec.it/img/logo.png?v=1.1',
+  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
+
+
 ]
