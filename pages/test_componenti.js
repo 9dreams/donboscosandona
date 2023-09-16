@@ -443,6 +443,4 @@ let sponsor = [
   'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
   'https://www.comitec.it/img/logo.png?v=1.1',
   'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
-
-
 ]
