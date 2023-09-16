@@ -1,7 +1,4 @@
-import { Typography, Container, Grid } from '@mui/material'
-
 import Head from 'next/head'
-import Image from 'next/image'
 
 import {
   Layout,
@@ -9,6 +6,7 @@ import {
   Products,
   SwiperNews,
   Paragraph,
+  Sponsor,
 } from '/components'
 
 export default function Home({ data }) {
@@ -115,14 +113,14 @@ export default function Home({ data }) {
       />
       <Products
         title='Secondo anno'
-        description='Il secondo anno è dedicato all’assemblaggio, alla riparazione, all’installazione dei personal computer: con il resto della classe farai parte del centro di assistenza tecnica dell’intera scuola, imparando così a fornire assistenza in casi reali sempre diversi e non con dei semplici esercizi scolastici. Questo ti aiuterà anche a sviluppare le competenze relazionali fondamentali in qualunque ambiente di lavoro. Dal punto di vista dello sviluppo software entrerai nella logica dei linguaggi di programmazione con C# e Unity, acquisendo inoltre gli strumenti per diventare uno sviluppatore frontend (HTML, CSS, JAVASCRIPT, BOOTSTRAP).'
+        description="Il secondo anno è dedicato all\'assistenza tecnica al cliente da tutti i punti di vista. Nella parte di programmazione vedremo lo sviluppo front-end."
         cardWidth={3}
         cardWidthXs={6}
         products={secondo_anno}
       />
       <Products
         title='Terzo anno'
-        description='Il terzo anno ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end con linguaggi lato server come Ruby on Rails. Imparerai inoltre a sviluppare applicazioni per i dispositivi mobili.'
+        description='Il terzo anno ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end, full-stack e delle API (Application Programming Interfaces)'
         cardWidth={4}
         cardWidthXs={12}
         products={terzo_anno}
@@ -136,6 +134,7 @@ export default function Home({ data }) {
       />
       <SwiperNews title='News dal Settore Informatico' data={data} limit={15} />
       <Paragraph topImageUrl='/images/informatico/programma-scolastico.svg' />
+      <Sponsor logos={sponsor} />
       <Paragraph topImageUrl='/images/informatico/tabella-ore.png' />
       <Products
         title='I nostri progetti'
@@ -192,27 +191,27 @@ let progetti = [
 ]
 
 let primo_anno = [
-    {
-        title: 'Sicurezza',
-        description: '...',
-        immagineUrl: '',
-      },
-    {
-        title: 'Assemblaggio PC',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Sistemi Operativi',
-        description: '...',
-        immagineUrl: '',
-      },
-    {
-        title: 'Arduino',
-        description: '...',
-        immagineUrl: '',
-      },
-    {
+  {
+    title: 'Sicurezza',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Assemblaggio PC',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Sistemi Operativi',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Arduino',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
     title: 'C++',
     description: '',
     immagineUrl: '',
@@ -225,42 +224,42 @@ let primo_anno = [
 ]
 
 let secondo_anno = [
-    {
-        title: 'Assistenza al cliente',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Scelta dei componenti',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Benchmark e Test',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Apparati di rete',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Shell Linux',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Python',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Raspberry',
-        description: '...',
-        immagineUrl: '',
-      },
-    {
+  {
+    title: 'Assistenza al cliente',
+    description: 'Con il resto della classe farai parte del centro di assistenza tecnica dell’intera scuola, imparando così a fornire assistenza in casi reali sempre diversi e non con dei semplici esercizi scolastici. Questo ti aiuterà anche a sviluppare le competenze relazionali fondamentali in qualunque ambiente di lavoro.',
+    immagineUrl: '',
+  },
+  {
+    title: 'Scelta dei componenti',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Benchmark e Test',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Apparati di rete',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Shell Linux',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Python',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Raspberry',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
     title: 'Versioning',
     description: 'Visual Studio Code, estensioni, GitHub, Fork...',
     immagineUrl: '',
@@ -303,41 +302,41 @@ let secondo_anno = [
 ]
 
 let terzo_anno = [
-    {
-        title: 'Server Windows',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Server Linux',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Virtualizzazione',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Domini Active Directory',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Router',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Cisco Packet Tracer',
-        description: '...',
-        immagineUrl: '',
-      },
-      {
-        title: 'Sicurezza Informatica',
-        description: '...',
-        immagineUrl: '',
-      },
+  {
+    title: 'Server Windows',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Server Linux',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Virtualizzazione',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Domini Active Directory',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Router',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Cisco Packet Tracer',
+    description: '...',
+    immagineUrl: '',
+  },
+  {
+    title: 'Sicurezza Informatica',
+    description: '...',
+    immagineUrl: '',
+  },
   {
     title: 'SQL',
     description: '...',
@@ -380,7 +379,7 @@ let terzo_anno = [
   },
   {
     title: 'Unreal Engine 5',
-    description: '...',
+    description: 'VR...',
     immagineUrl: '',
   },
 ]
@@ -401,4 +400,17 @@ let quarto_anno = [
     description: '...',
     immagineUrl: '',
   },
+]
+
+let sponsor = [
+  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
+  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
+  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
+  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
+  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
+  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
+  'https://www.comitec.it/img/logo.png?v=1.1',
+  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
+  'https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png',
 ]
