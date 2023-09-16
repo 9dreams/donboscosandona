@@ -7,16 +7,16 @@ import {
   SwiperNews,
   Paragraph,
   Sponsor,
+  Table,
 } from '/components'
 
 export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <LandingHero
-        opacity={0}
-        siteName='CFP DON BOSCO'
-        imageUrl='/images/informatico/settore-informatico.jpg'
+      <img
+        src='/images/informatico/settore-informatico.jpg'
+        style={{ width: '100%' }}
       />
       <Paragraph
         title='Operatore Informatico'
@@ -107,7 +107,7 @@ export default function Home({ data }) {
       <Products
         title='Primo anno'
         description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e al Coding grazie al laboratorio Internet of Things: imparerai a conoscere i componenti elettronici e a farli comunicare con il mondo esterno utilizzando dei moduli programmabili (Lego Mindstorms, Arduino, Raspberry)."
-        cardWidth={3}
+        cardWidth={4}
         cardWidthXs={6}
         products={primo_anno}
       />
@@ -121,21 +121,45 @@ export default function Home({ data }) {
       <Products
         title='Terzo anno'
         description='Il terzo anno ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end, full-stack e delle API (Application Programming Interfaces)'
-        cardWidth={4}
-        cardWidthXs={12}
+        cardWidth={3}
+        cardWidthXs={6}
         products={terzo_anno}
       />
       <Products
         title='Quarto anno'
         description="Il quarto anno se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico, sarai collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda)."
-        cardWidth={3}
+        cardWidth={4}
         cardWidthXs={6}
         products={quarto_anno}
       />
       <SwiperNews title='News dal Settore Informatico' data={data} limit={15} />
       <Paragraph topImageUrl='/images/informatico/programma-scolastico.svg' />
       <Sponsor logos={sponsor} />
-      <Paragraph topImageUrl='/images/informatico/tabella-ore.png' />
+
+      <Paragraph>
+        <Table
+          title='Piano formativo'
+          rows={[
+            ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno'],
+            ['Italiano', 3, 3, 2, 3],
+            ['Storia / Economia / Diritto', 1, 1, 1, 1],
+            ['Inglese', 2, 2, 2, 2],
+            ['Religione', 1, 1, 1, 1],
+            ['Matematica', 3, 3, 3, 2],
+            ['Fisica', 2, 2, 2, 2],
+            ['CAD', 2, 2, 2, 2],
+            ['Teoria Sistemi e reti', 5, 3, 3, ''],
+            ['Laboratorio Sistemi e Programmazione', 10, 12, 12, 3],
+            ['', '', '', '', ''],
+            ['ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO', '', 200, 200, 500],
+          ]}
+          backgroundImageUrl='/images/informatico/sfondo-piano-formativo.jpg'
+          backgroundColor='#003185'
+          opacity={0.8}
+          blur='0.1rem'
+          color='white'
+        />
+      </Paragraph>
       <Products
         title='I nostri progetti'
         description='...'
@@ -226,7 +250,8 @@ let primo_anno = [
 let secondo_anno = [
   {
     title: 'Assistenza al cliente',
-    description: 'Con il resto della classe farai parte del centro di assistenza tecnica dell’intera scuola, imparando così a fornire assistenza in casi reali sempre diversi e non con dei semplici esercizi scolastici. Questo ti aiuterà anche a sviluppare le competenze relazionali fondamentali in qualunque ambiente di lavoro.',
+    description:
+      'Con il resto della classe farai parte del centro di assistenza tecnica dell’intera scuola, imparando così a fornire assistenza in casi reali sempre diversi e non con dei semplici esercizi scolastici. Questo ti aiuterà anche a sviluppare le competenze relazionali fondamentali in qualunque ambiente di lavoro.',
     immagineUrl: '',
   },
   {
