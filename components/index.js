@@ -20,6 +20,7 @@ export { default as SwiperNews } from './SwiperNews'
 export { default as NewsCard } from './NewsCard'
 export { default as Featured } from './Featured'
 export { default as NavBar } from './NavBar'
+export { default as Sponsor } from './Sponsor'
 
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder
