@@ -25,7 +25,7 @@ export default function Home({ data }) {
     <Layout>
       <LandingHero
         opacity={0.5}
-        title='Progetto educativo'
+        title='Oratorio don Bosco'
         description='Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!'
         buttonUrl='j'
         buttonText='Guarda il video'
