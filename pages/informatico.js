@@ -395,7 +395,7 @@ let terzo_anno = [
   {
     title: 'Droni',
     description: '...',
-    immagineUrl: '',
+    immagineUrl: '/images/informatico/drone.png',
   },
   {
     title: 'Montaggio video',
@@ -413,12 +413,12 @@ let quarto_anno = [
   {
     title: 'React Native',
     description: '...',
-    immagineUrl: '',
+    immagineUrl: '/images/informatico/react.png',
   },
   {
     title: 'Flutter',
     description: '...',
-    immagineUrl: '',
+    immagineUrl: '/images/informatico/flutter.png',
   },
   {
     title: 'Test Sistematici',
