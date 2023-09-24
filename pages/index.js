@@ -89,16 +89,6 @@ let settori = [
   },
 ]
 
-let postInEvidenza = {
-  titolo: 'Le folli notti di Bilal',
-  descrizione:
-    'Il dott. Bilal, noto migliardario pieno di schèi, passa le sue notti tra belle ragazze e partite a poker. Come inviati di donboscosandona siamo riusciti ad accedere a questo mondo esclusivo per raccontarvelo in prima persona...',
-  immagineUrl:
-    'https://media.istockphoto.com/id/522728130/it/foto/amici-divertirsi-giocando-a-poker.jpg?s=612x612&w=is&k=20&c=w2_p0SHrR_-cmURmZY9-dHXu3-qqVqN9QkdiZrgJpfc=',
-  testoimmagineUrl: 'Bilal seduto su un divanetto in mezzo a due tipe.',
-  testoUrl: 'Continua a leggere e scopri la cosa pazzesca che hanno fatto...',
-}
-
 const testimonials = [
   {
     name: 'Michele Venturato',
@@ -147,7 +137,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Featured data={data} />
-      <SwiperNews title='News' data={data} limit={8} />
+      <SwiperNews title='News' data={data} limit={12} />
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
