@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from '@mui/material'
 import {
-  Carousel,
+  Carousel2,
   Certifications,
   Layout,
   LandingHero,
@@ -41,7 +41,7 @@ export default function Home({ data }) {
       <Featured data={data} limit={4} />
       <News title='News' data={data} limit={4} />
       <SwiperNews title='News' data={data} limit={6} />
-      <Carousel slides={slides} />
+      <Carousel2 slides={slides} />
       <Products
         title='I prodotti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
@@ -245,8 +245,7 @@ let slides = [
     titolo: 'Fatti un bel giro',
     descrizione:
       'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
+    immagine: '',
     colore: '#ED4C67',
     opacity: 0.5,
     blur: '0.5rem',
