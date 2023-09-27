@@ -41,7 +41,7 @@ export default function Home() {
             Informazioni generali: info@donboscosandona.it - tel. 0421 338 980
           </li>
           <li>
-            Segreteria didattica: segreteria@donboscosandona.it - tel. 0421 338
+            Segreteria didattica: segreteria.fp.sandona@salesianinordest.it - tel. 0421 338
             980
           </li>
           <li>Posta elettronica certificata: cfp.sandona@pec.it</li>
@@ -64,7 +64,7 @@ export default function Home() {
           </li>
           <li>
             Direttore della Scuola: dott. Alessandro Cappelletto -
-            direzione.sfp@donboscosandona.it
+            direzione.fp.sandona@salesianinordest.it
           </li>
           <li>
             Vicedirettore: Alessandro Ferro - a.ferro@donboscosandona.it - tel.
