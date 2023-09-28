@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from '@mui/material'
 import {
-  Carousel2,
+  Carousel,
   Certifications,
   Layout,
   LandingHero,
@@ -41,7 +41,9 @@ export default function Home({ data }) {
       <Featured data={data} limit={4} />
       <News title='News' data={data} limit={4} />
       <SwiperNews title='News' data={data} limit={6} />
-      <Carousel2 slides={slides} />
+
+      <Carousel slides={slides} />
+      
       <Products
         title='I prodotti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
