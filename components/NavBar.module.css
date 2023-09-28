@@ -1,0 +1,19 @@
+.logo {
+  height: 6rem;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    height: 5rem;
+  }
+}
+
+.link {
+  color: rgb(207, 207, 207);
+  text-decoration: none;
+}
+
+.link:hover {
+  font-weight: 800;
+  color: white;
+}

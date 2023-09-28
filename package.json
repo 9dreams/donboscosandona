@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.12",
     "@next/font": "13.1.6",
+    "@palmabit/react-cookie-law": "^0.7.0",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "13.1.6",
@@ -23,6 +24,7 @@
     "react-material-ui-carousel": "^3.4.2",
     "remark": "^14.0.2",
     "remark-html": "^15.0.2",
-    "swr": "^2.1.0"
+    "swiper": "^10.2.0",
+    "swr": "^2.2.0"
   }
 }

@@ -1,37 +1,31 @@
 import Carousel from 'react-material-ui-carousel'
-import Paper from '@mui/material/Paper'
-import Button from '@mui/material/Button'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
+import {Paper, Button, Box, Grid, Typography, Container } from '@mui/material'
 import styles from './Carousel.module.css'
 
-export default function MyCarousel({ slides, maxWidth, height }) {
+export default function MyCarousel({ slides, maxWidth, height, animation, interval }) {
     return (
         <Container
             maxWidth={maxWidth}
             disableGutters={true}
             sx={{
-
                 border: '300px',
                 marginBottom: '2rem',
             }}
         >
-            <Carousel className={styles.carousel} animation="slide" sx={{ height: height + 'vh' }}>
+            <Carousel className={styles.carousel} interval={ interval } animation={ animation } sx={{ height: height + 'vh' }}>
                 {
                     slides.map(
                         (slide) => (
                             <Paper
                                 className={styles.slide}
                                 sx={{
-                                    backgroundColor: slide.colore,
+                                    position: 'relative',
                                     backgroundImage: 'url(' + slide.immagine + ')',
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'center',
                                     height: height + 'vh',
-                                    paddingTop: (height / 3) + 'vh'
+                                    paddingTop: (height / 2) - 10 + 'vh',
                                 }}
                                 elevation={5}
                             >
@@ -42,7 +36,19 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                         bottom: 0,
                                         right: 0,
                                         left: 0,
-                                        backgroundColor: slide.immagine ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0)',
+                                        backgroundColor: slide.colore,
+                                        opacity: slide.opacity,
+                                    }}
+                                />
+                                <Container
+                                    maxWidth={false}
+                                    sx={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        bottom: 0,
+                                        right: 0,
+                                        left: 0,
+                                        backdropFilter: "blur(" + slide.blur +")",
                                     }}
                                 />
                                 <Container maxWidth="lg">
@@ -63,7 +69,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
                                                 </Typography>
                                                 {slide.buttonUrl &&
                                                     <Button
-                                                        variant="outlined"
+                                                        variant="contained"
                                                         size="large"
                                                         color="error"
                                                         href={slide.buttonUrl}
@@ -90,5 +96,7 @@ export default function MyCarousel({ slides, maxWidth, height }) {
 
 MyCarousel.defaultProps = {
     maxWidth: false,
-    height: 90
+    height: 90,
+    animation: 'fade',
+    interval: 4000,
 }
