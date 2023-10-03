@@ -41,7 +41,7 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                                         left: 0,
                                         backgroundColor: slide.colore,
                                         opacity: slide.opacity,                
-                                        background: `linear-gradient(${slide.Gr1 || 'transparent'}, ${slide.Gr2 || 'black'})`,
+                                        background: `linear-gradient(${slide.gr1 || 'transparent'}, ${slide.gr2 || 'black'})`,
                                     }}
                                     
                                 />
