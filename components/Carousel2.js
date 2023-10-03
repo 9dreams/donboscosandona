@@ -1,6 +1,7 @@
 import Carousel from 'react-material-ui-carousel'
 import {Paper, Button, Box, Grid, Typography, Container } from '@mui/material'
-import styles from './Carousel2.module.css'
+import styles from '/components/altro/Carousel2.module.css'
+import { Gradient } from '@mui/icons-material'
 
 export default function MyCarousel({ slides, maxWidth, height, animation, interval }) {
     return (
@@ -16,6 +17,7 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                 {
                     slides.map(
                         (slide) => (
+                            
                             <Paper
                                 className={styles.slide}
                                 sx={{
@@ -29,6 +31,7 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                                 }}
                                 elevation={5}
                             >
+                                
                                 <Box
                                     sx={{
                                         position: 'absolute',
@@ -37,8 +40,10 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                                         right: 0,
                                         left: 0,
                                         backgroundColor: slide.colore,
-                                        opacity: slide.opacity,
+                                        opacity: slide.opacity,                
+                                        background: `linear-gradient(${slide.Gr1 || 'transparent'}, ${slide.Gr2 || 'black'})`,
                                     }}
+                                    
                                 />
                                 <Container
                                     maxWidth={false}
@@ -59,6 +64,7 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                                                     position: 'relative',
                                                     p: { xs: 3, md: 6 },
                                                     pr: { md: 0 },
+                                                    mt:"180px",
                                                 }}
                                             >
                                                 <Typography component="h2" variant="h3" color="inherit" gutterBottom>
