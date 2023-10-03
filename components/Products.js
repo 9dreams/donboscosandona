@@ -1,11 +1,11 @@
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import styles from '/components/Products.module.css'
-import Card from '@mui/material/Card'
-import CardActionArea from '@mui/material/CardActionArea'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import styles from "/components/Products.module.css";
+import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 
 export default function Products({
   title,
@@ -16,22 +16,22 @@ export default function Products({
   borderRadius,
 }) {
   return (
-    <Container maxWidth='lg'>
+    <Container maxWidth="lg">
       <Typography
-        text-align='center'
-        style={{ textAlign: 'center' }}
-        component='h3'
-        variant='h3'
-        color='inherit'
+        text-align="center"
+        style={{ textAlign: "center" }}
+        component="h3"
+        variant="h3"
+        color="inherit"
         gutterBottom
       >
         {title}
       </Typography>
       <Typography
-        variant='subtitle1'
-        style={{ textAlign: 'center', padding: '10px' }}
-        text-align='center'
-        color='text.secondary'
+        variant="subtitle1"
+        style={{ textAlign: "center", padding: "10px" }}
+        text-align="center"
+        color="text.secondary"
         paragraph
       >
         {description}
@@ -39,20 +39,25 @@ export default function Products({
       <Grid container>
         {products.map((product) => (
           <Grid item xs={cardWidthXs} sm={4} md={cardWidth}>
-            <CardActionArea component='a' href={product.url} disabled={!product.url}>
+            <CardActionArea
+              component="a"
+              href={product.url}
+              disabled={!product.url}
+            >
               <Card
-                sx={{ display: 'flex' }}
+                sx={{ display: "flex" }}
                 className={styles.card}
                 elevation={0}
               >
                 <CardContent sx={{ flex: 1 }}>
                   <CardMedia
-                    component='img'
+                  className={styles.immagine}
+                    component="img"
                     sx={{
                       display: {
-                        xs: 'block',
-                        sm: 'block',
-                        margin: 'auto',
+                        xs: "block",
+                        sm: "block",
+                        margin: "auto",
                         borderRadius: borderRadius,
                       },
                     }}
@@ -60,36 +65,36 @@ export default function Products({
                     alt={product.title}
                   />
                   <Typography
-                    text-align='center'
-                    component='h4'
-                    variant='h6'
-                    style={{ textAlign: 'center' }}
-                    color='inherit'
+                    text-align="center"
+                    component="h4"
+                    variant="h6"
+                    style={{ textAlign: "center" }}
+                    color="inherit"
                     gutterBottom
                   >
                     {product.title}
                   </Typography>
                   <Typography
-                    variant='subtitle1'
-                    style={{ textAlign: 'center' }}
-                    color='text.secondary'
+                    variant="subtitle1"
+                    style={{ textAlign: "center" }}
+                    color="text.secondary"
                     paragraph
                   >
                     {product.category}
                   </Typography>
                   <Typography
-                    variant='subtitle1'
-                    style={{ padding: '10px' }}
-                    color='inherit'
+                    variant="subtitle1"
+                    style={{ padding: "10px" }}
+                    color="inherit"
                     paragraph
                   >
                     {product.description}
                   </Typography>
                   {product.rif && (
                     <Typography
-                      variant='subtitle1'
-                      style={{ padding: '10px' }}
-                      color='inherit'
+                      variant="subtitle1"
+                      style={{ padding: "10px" }}
+                      color="inherit"
                       paragraph
                     >
                       <div
@@ -107,11 +112,11 @@ export default function Products({
         ))}
       </Grid>
     </Container>
-  )
+  );
 }
 
 Products.defaultProps = {
   cardWidth: 3,
   cardWidthXs: 6,
-  borderRadius: '10px',
-}
+  borderRadius: "10px",
+};
