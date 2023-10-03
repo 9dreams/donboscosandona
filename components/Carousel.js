@@ -1,7 +1,6 @@
 import Carousel from 'react-material-ui-carousel'
 import {Paper, Button, Box, Grid, Typography, Container } from '@mui/material'
-import styles from '/components/altro/Carousel2.module.css'
-import { Gradient } from '@mui/icons-material'
+import styles from '/components/altro/Carousel.module.css'
 
 export default function MyCarousel({ slides, maxWidth, height, animation, interval }) {
     return (

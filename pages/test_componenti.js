@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from '@mui/material'
 import {
-  Carousel2,
+  Carousel,
   Certifications,
   Layout,
   LandingHero,
@@ -42,7 +42,7 @@ export default function Home({ data }) {
       <News title='News' data={data} limit={4} />
       <SwiperNews title='News' data={data} limit={6} />
 
-      <Carousel2 slides={slides} />
+      <Carousel slides={slides} />
       
       <Products
         title='I prodotti'
