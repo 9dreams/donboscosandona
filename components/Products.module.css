@@ -10,3 +10,8 @@
     bottom: 0;
     right: 0;
 }
+
+
+.immagine {
+  aspect-ratio: 2 / 1;
+}
