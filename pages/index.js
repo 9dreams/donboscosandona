@@ -136,30 +136,29 @@ let certifications = [
 let link_utili = [
   {
     title: 'Regolamento',
-    description: 'Il regolamento sottoscritto a inizio anno, che tutti gli allievi si impegnano a rispettare.',
-    immagineUrl:
-      '/images/home/regolamento.png',
-    url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96c2ed50875db2d6bc536633e55dab4b1d4c1288/Regolamento%20San%20Dona%CC%80%20Settembre%202023.pdf'
+    description:
+      'Il regolamento sottoscritto a inizio anno, che tutti gli allievi si impegnano a rispettare.',
+    immagineUrl: '/images/home/regolamento.png',
+    url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96c2ed50875db2d6bc536633e55dab4b1d4c1288/Regolamento%20San%20Dona%CC%80%20Settembre%202023.pdf',
   },
   {
     title: 'ScuolaOnLine',
     description: 'Accesso al registro elettronico per genitori e allievi.',
-    immagineUrl:
-      '/images/home/scuolaonline.png',
-    url: 'https://scuolaonline.soluzione-web.it/SOL_0264/'
+    immagineUrl: '/images/home/scuolaonline.png',
+    url: 'https://scuolaonline.soluzione-web.it/SOL_0264/',
   },
   {
     title: 'ORATORIO DON BOSCO',
-    description: 'La SFP DON BOSCO sorge all\'interno dell\'Oratorio don Bosco: visita il sito.',
-    immagineUrl:
-      '/images/home/inoratorio.png',
-    url: 'https://cinema.donboscosandona.it'
+    description:
+      "La SFP DON BOSCO sorge all'interno dell'Oratorio don Bosco: visita il sito.",
+    immagineUrl: '/images/home/inoratorio.png',
+    url: 'https://cinema.donboscosandona.it',
   },
   {
-    description: 'La nostra Scuola ha anche un Cinema: scopri la programmazione.',
-    immagineUrl:
-      '/images/home/cinema_don_bosco.png',
-    url: 'https://cinema.donboscosandona.it'
+    description:
+      'La nostra Scuola ha anche un Cinema: scopri la programmazione.',
+    immagineUrl: '/images/home/cinema_don_bosco.png',
+    url: 'https://cinema.donboscosandona.it',
   },
 ]
 
@@ -182,7 +181,7 @@ export default function Home({ data }) {
         features={features}
         cardWidth={3}
       />
-      <Products cardWidth={3} products={link_utili} />
+      <Products cardWidth={3} products={link_utili} aspectRatio='4 / 2' />
       <Testimonials
         testimonials={testimonials}
         cardWidth={4}
