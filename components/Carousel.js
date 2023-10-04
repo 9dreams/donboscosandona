@@ -16,6 +16,7 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                 {
                     slides.map(
                         (slide) => (
+                            
                             <Paper
                                 className={styles.slide}
                                 sx={{
@@ -29,6 +30,7 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                                 }}
                                 elevation={5}
                             >
+                                
                                 <Box
                                     sx={{
                                         position: 'absolute',
@@ -36,9 +38,10 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                                         bottom: 0,
                                         right: 0,
                                         left: 0,
-                                        backgroundColor: slide.colore,
-                                        opacity: slide.opacity,
+                                        opacity: slide.opacity,                
+                                        background: `linear-gradient(${slide.colore2 || slide.colore || 'transparent'}, ${slide.colore || 'black'})`,
                                     }}
+                                    
                                 />
                                 <Container
                                     maxWidth={false}
@@ -59,6 +62,7 @@ export default function MyCarousel({ slides, maxWidth, height, animation, interv
                                                     position: 'relative',
                                                     p: { xs: 3, md: 6 },
                                                     pr: { md: 0 },
+                                                    mt:"180px",
                                                 }}
                                             >
                                                 <Typography component="h2" variant="h3" color="inherit" gutterBottom>
