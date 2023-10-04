@@ -41,7 +41,9 @@ export default function Home({ data }) {
       <Featured data={data} limit={4} />
       <News title='News' data={data} limit={4} />
       <SwiperNews title='News' data={data} limit={6} />
+
       <Carousel slides={slides} />
+      
       <Products
         title='I prodotti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
@@ -245,10 +247,11 @@ let slides = [
     titolo: 'Fatti un bel giro',
     descrizione:
       'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine:
+      immagine:
       'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
     colore: '#ED4C67',
-    opacity: 0.5,
+    colore2: 'rgba(100,100,100,0)',
+    opacity: 0.8,
     blur: '0.5rem',
     buttonText: 'Scopri di più!',
     buttonUrl: 'https:...',
