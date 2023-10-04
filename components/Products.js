@@ -14,6 +14,7 @@ export default function Products({
   cardWidthXs,
   products,
   borderRadius,
+  aspectRatio
 }) {
   return (
     <Container maxWidth='lg'>
@@ -39,7 +40,11 @@ export default function Products({
       <Grid container>
         {products.map((product) => (
           <Grid item xs={cardWidthXs} sm={4} md={cardWidth}>
-            <CardActionArea component='a' href={product.url} disabled={!product.url}>
+            <CardActionArea
+              component='a'
+              href={product.url}
+              disabled={!product.url}
+            >
               <Card
                 sx={{ display: 'flex' }}
                 className={styles.card}
@@ -48,12 +53,14 @@ export default function Products({
                 <CardContent sx={{ flex: 1 }}>
                   <CardMedia
                     component='img'
+                    className={styles.immagine}
                     sx={{
                       display: {
                         xs: 'block',
                         sm: 'block',
                         margin: 'auto',
                         borderRadius: borderRadius,
+                        aspectRatio: aspectRatio,
                       },
                     }}
                     image={product.immagineUrl}
@@ -114,4 +121,5 @@ Products.defaultProps = {
   cardWidth: 3,
   cardWidthXs: 6,
   borderRadius: '10px',
+  aspectRatio: '3 / 2',
 }
