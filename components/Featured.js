@@ -22,7 +22,8 @@ export default function Featured({
     descrizione: post.abstract,
     immagine: post.immagine,
     colore: '#000',
-    opacity: 0.5,
+    colore2: 'transparent',
+    opacity: 1,
     buttonText:
       (post.articolo && 'Continua a leggere...') ||
       (post.link && 'Scopri di più') ||
