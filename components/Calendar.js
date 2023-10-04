@@ -16,6 +16,7 @@ export default function Calendar({
   cardWidth,
   events,
   borderRadius,
+  aspectRatio,
 }) {
   return (
     <Container maxWidth='lg'>
@@ -60,6 +61,7 @@ export default function Calendar({
                       margin: 'auto',
                       borderRadius: borderRadius,
                     },
+                    aspectRatio: aspectRatio,
                   }}
                   image={date.immagineUrl}
                   alt={date.date}
@@ -119,4 +121,5 @@ export default function Calendar({
 Calendar.defaultProps = {
   cardWidth: 3,
   borderRadius: '10px',
+  aspectRatio: '3 / 2'
 }
