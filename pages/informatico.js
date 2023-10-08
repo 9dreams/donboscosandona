@@ -316,7 +316,7 @@ let secondo_anno = [
   },
   {
     title: 'NextJS',
-    description: 'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci.',
+    description: 'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci. Anche questo sito è creato con React e NextJS.',
     immagineUrl: '/images/informatico/nextjs.png',
   },
   {

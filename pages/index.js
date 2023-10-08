@@ -65,6 +65,7 @@ let settori = [
   {
     title: 'Informatico',
     category: 'DIPLOMA DI TECNICO INFORMATICO',
+    url: '/informatico',
     description:
       "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
     immagineUrl:
