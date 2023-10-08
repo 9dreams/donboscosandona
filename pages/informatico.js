@@ -106,14 +106,14 @@ export default function Home({ data }) {
       </Paragraph>
       <Products
         title='Primo anno'
-        description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e al Coding grazie al laboratorio Internet of Things: imparerai a conoscere i componenti elettronici e a farli comunicare con il mondo esterno utilizzando dei moduli programmabili (Lego Mindstorms, Arduino, Raspberry)."
+        description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e al Coding grazie al laboratorio Internet of Things: imparerai a conoscere i componenti elettronici e a farli comunicare con il mondo esterno."
         cardWidth={4}
         cardWidthXs={6}
         products={primo_anno}
       />
       <Products
         title='Secondo anno'
-        description="Il secondo anno è dedicato all\'assistenza tecnica al cliente da tutti i punti di vista. Nella parte di programmazione vedremo lo sviluppo front-end."
+        description="Il secondo anno è dedicato all'assistenza tecnica al cliente da tutti i punti di vista. Nella parte di programmazione vedremo lo sviluppo del front-end delle applicazioni."
         cardWidth={3}
         cardWidthXs={6}
         products={secondo_anno}
@@ -217,33 +217,33 @@ let progetti = [
 let primo_anno = [
   {
     title: 'Sicurezza',
-    description: '',
+    description: 'Lavorare in sicurezza è fondamentale per qualsiasi professione. Imparerai la normativa, l\'uso corretto degli attrezzi manuali e delle sostanze chimiche, quali sono i dispositivi di protezione da indossare, le procedure antincendio e la lettura dei vari cartelli.',
     immagineUrl: '/images/informatico/sicurezza.png',
   },
   {
     title: 'Assemblaggio PC',
-    description: '',
+    description: 'Scheda madre, processore, dissipatore, RAM, alimentatore, SSD: imparerai a riconoscere i vari componenti del computer e ad assemblarli in modo corretto, per dare vita a un pc funzionante.',
     immagineUrl: '/images/informatico/assemblaggio-pc.png',
   },
   {
     title: 'Sistemi Operativi',
-    description: '',
+    description: 'Dopo aver assemblato il tuo pc imparerai a dargli vita installando e configurando le principali versioni dei sistemi operativi Windows e Linux.',
     immagineUrl: '/images/informatico/sistemi-operativi.png',
   },
   {
+    title: 'LEGO Mindstorms',
+    description: 'Imparare a programmare divertendosi: dopo aver costruito il tuo robot LEGO imparerai a programmarlo in modo che riconosca gli ostacoli ed esegua dei compiti nel mondo reale.',
+    immagineUrl: '/images/informatico/legomindstorms.jfif',
+  },
+  {
     title: 'Arduino',
-    description: '',
+    description: 'Arduino è una piccola scheda elettronica che ti permette di collegare dei sensori e scrivere un programma che legge il loro valore e comanda degli attuatori nel mondo reale: un\'ottima introduzione alla programmazione e all\'elettronica.',
     immagineUrl: '/images/informatico/arduino.png',
   },
   {
     title: 'C++',
-    description: '',
+    description: 'Imparerai le basi della programmazione con quello che è tuttora uno dei più veloci linguaggi di programmazione al mondo: non per niente i videogiochi 3D più impegnativi sono scritti in C++. Sarà un ottimo fondamento sul quale costruire la tua conoscenza di tutti gli altri linguaggi di programmazione.',
     immagineUrl: '/images/informatico/cpp.png',
-  },
-  {
-    title: 'LEGO Mindstorms',
-    description: '',
-    immagineUrl: '/images/informatico/legomindstorms.jfif',
   },
 ]
 
@@ -251,77 +251,77 @@ let secondo_anno = [
   {
     title: 'Assistenza al cliente',
     description:
-      '',
+      'Nella nostra scuola l\'assistenza informatica è fornita dagli allievi informatici di seconda: 500 iPad, 6 aule informatiche, apparecchiature di ogni tipo e svariati uffici bisognosi di cure ogni giorno.',
     immagineUrl: '/images/informatico/assistenza-al-cliente.png',
   },
   {
     title: 'Scelta dei componenti',
-    description: '',
+    description: 'Dopo aver visto come assemblarli, dedicherai del tempo a capire quali sono i criteri per capire quali componenti sono compatibili con gli altri, e a sceglierli correttamente per ottenere un pc con prestazioni ottimali.',
     immagineUrl: '/images/informatico/cambio-componenti.png',
   },
   {
     title: 'Benchmark e Test',
-    description: '',
+    description: 'Utilizzerai gli strumenti hardware e software a disposizione per verificare che tutte le parti del pc stiano operando correttamente, senza surriscaldamenti o perdite di dati.',
     immagineUrl: '/images/informatico/benchmark-test.png',
   },
   {
     title: 'Apparati di rete',
-    description: '',
+    description: 'Imparerai a connettere tra di loro i pc in una rete locale utilizzando switch, router, access point e altre apparecchiature di rete.',
     immagineUrl: '/images/informatico/apparati-di-rete.png',
   },
   {
     title: 'Shell Linux',
-    description: '',
+    description: 'Sempre più dispositivi e servizi sono basati sul sistema operativo Linux, che permette un controllo potente senza l\'appesantimento di un\'interfaccia grafica. Imparerai ad usare i comandi fondamentali della linea di comando e a gestire i vari processi del Sistema Operativo.',
     immagineUrl: '/images/informatico/shell-linux.png',
   },
   {
     title: 'Python',
-    description: '',
+    description: 'Python è un linguaggio di programmazione che viene impiegato sempre più nelle applicazioni web, nella scienza dei dati e nel Machine Learning. Vale la pena di fare la sua conoscenza.',
     immagineUrl: '/images/informatico/python.png',
   },
   {
     title: 'Raspberry',
-    description: '',
+    description: 'Hai presente Arduino visto in prima? Raspberry è una sua evoluzione e ti permette di controllare ingressi e uscite collegati al mondo reale con un vero e proprio computer che sta nel palmo di una mano. Un ottimo banco di prova per le tue conoscenze di Linux e della programmazione.',
     immagineUrl: '/images/informatico/raspberry.png',
   },
   {
     title: 'Versioning',
-    description: '',
+    description: 'Git e GitHub sono strumenti utilizzati quotidianamente dagli sviluppatori di tutto il mondo per gestire il loro codice: imparerai a mantenere diverse versioni di uno stesso programma, e a collaborare con altri sviluppatori in modo che il codice scritto da ognuno vada a fondersi con quello scritto dagli altri senza creare problemi.',
     immagineUrl: '/images/informatico/versioning.png',
   },
   {
     title: 'HTML',
-    description: '',
+    description: 'HTML è un linguaggio basato sui tag che è alla base di qualsiasi applicazione web. Puoi considerarlo lo scheletro dell\'applicazione.',
     immagineUrl: '/images/informatico/html.png',
   },
   {
     title: 'CSS',
-    description: '',
+    description: 'Usato insieme ad HTML, CSS permette di curare l\'aspetto grafico della tua applicazione... proprio come quando applichi diversi temi allo stesso programma.',
     immagineUrl: '/images/informatico/css.png',
   },
   {
     title: 'Bootstrap',
-    description: '',
+    description: 'Bootstrap ti permetterà di strutturare velocemente le tue pagine web in modo che si adattino senza problemi anche agli schermi di smartphone e tablet.',
     immagineUrl: '/images/informatico/bootstrap.png',
   },
   {
     title: 'JavaScript',
-    description: '',
+    description: 'Dopo aver curato l\'aspetto della tua pagina, potrai darle vita e renderla attiva usando JavaScript.',
     immagineUrl: '/images/informatico/javascript.png',
   },
   {
     title: 'ReactJS',
-    description: '',
+    description: 'React è una libreria creata dagli sviluppatori di Facebook che viene usata in tutto il mondo per costruire velocemente applicazioni basate su componenti creati da te o da altri sviluppatori.',
     immagineUrl: '/images/informatico/reactjs.png',
   },
   {
     title: 'NextJS',
-    description: '',
+    description: 'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci.',
     immagineUrl: '/images/informatico/nextjs.png',
   },
   {
     title: '.NET',
-    description: '',
+    description: 'È il framework alla base di tutte le applicazioni del mondo Microsoft: imparerai ad utilizzarlo programmando in C#.',
     immagineUrl: '/images/informatico/net.png',
   },
 ]
