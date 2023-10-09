@@ -329,82 +329,82 @@ let secondo_anno = [
 let terzo_anno = [
   {
     title: 'Server Windows',
-    description: '',
+    description: 'Dopo aver visto nel dettaglio come si gestiscono i personal computer, in terza imparerai a gestire i server, che con i loro servizi sono il cuore di tutte le reti locali di computer.',
     immagineUrl: '/images/informatico/windows-server.png',
   },
   {
     title: 'Server Linux',
-    description: '',
+    description: 'Oltre ai server Windows imparerai a gestire quelli con il sistema operativo Linux, ampiamente utilizzati per ospitare le applicazioni web, ma anche mille altre servizi legati all\'Internet delle cose.',
     immagineUrl: '/images/informatico/server-linux.png',
   },
   {
     title: 'Virtualizzazione',
-    description: '',
+    description: 'Un unico server fisico può ospitare molti server virtuali, che possono essere accesi, duplicati, spostati all\'occorrenza.',
     immagineUrl: '/images/informatico/virtualizzazione.png',
   },
   {
     title: 'Domini Active Directory',
-    description: '',
+    description: 'Le reti aziendali, con centinaia o migliaia di utenti, sono per lo più basate su domini Active Directory: imparerai a gestire gli utenti e i loro spazi, a concedere i permessi, insomma ad avere il potere dell\'Amministratore di Rete.',
     immagineUrl: '/images/informatico/domini-active-directory.png',
   },
   {
     title: 'Router',
-    description: '',
+    description: 'In ogni nodo della rete Internet, ma anche a casa tua, c\'è un router, un dispositivo che permette di instradare il traffico di rete in modo che prenda la direzione più opportuna per raggiungere l\'indirizzo richiesto, che sia a due passi come dall\'altra parte del mondo.',
     immagineUrl: '/images/informatico/router.png',
   },
   {
     title: 'Cisco Packet Tracer',
-    description: '',
+    description: 'Con questo strumento imparerai a simulare il funzionamento di reti complesse, collegando tra loro diversi dispositivi virtuali e analizzando il traffico dei dati.',
     immagineUrl: '/images/informatico/cisco-packet.png',
   },
   {
     title: 'Sicurezza Informatica',
-    description: '',
+    description: 'La sicurezza informatica non è solo questione di film: ogni giono nel mondo migliaia di persone o aziende perdono i loro dati, sono truffate o messe nei guai dai criminali informatici. Imparerai le tecniche di base per difendere il server o la rete che gestisci da questi attacchi.',
     immagineUrl: '/images/informatico/sicurezza-informatica.png',
   },
   {
     title: 'SQL',
-    description: '',
+    description: 'È il linguaggio usato per interrogare i database, per inserire nuovi dati e per fare ricerche tra di essi.',
     immagineUrl: '/images/informatico/sql.png',
   },
   {
     title: 'NodeJS',
-    description: '',
+    description: 'Permette di creare dei servizi superveloci, ai quali poi le applicazioni web o dai dispositivi mobili possono collegarsi per ricevere i dati da mostrare all\'utente.',
     immagineUrl: '/images/informatico/nodejs.png',
   },
   {
     title: 'MongoDB',
-    description: '',
+    description: 'Un esempio di database noSQL, che non memorizza i dati in forma di tabelle e righe come fanno i normali database, ma sotto forma di documenti complessi.',
     immagineUrl: 'images/informatico/mongodb.png',
   },
   {
     title: 'Ruby on Rails',
-    description: '',
+    description: 'È un framework che permette di creare rapidamente complesse applicazioni web full-stack, e cioè sia la parte lato server, sia quella visibile all\'utente.',
     immagineUrl: '/images/informatico/ruby-rails.png',
   },
   {
     title: 'Figma',
-    description: '',
+    description: 'Con questo stumento potrai disegnare l\'interfaccia utente della tua applicazione: realizzerai un progetto grafico e di comunicazione sul quale poi basare lo sviluppo vero e proprio.',
     immagineUrl: '/images/informatico/figma.png',
   },
   {
     title: 'Fotoritocco',
-    description: '',
+    description: 'Imparerai a scattare foto e a curarle nei dettagli, perché al centro di ogni buon sito ci sono sempre le immagini.',
     immagineUrl: '/images/informatico/fotoritocco.png',
   },
   {
     title: 'Droni',
-    description: '  ',
+    description: 'Con i tuoi compagni avrai a disposizione una squadriglia di quattro droni per scattare foto e girare clip video dall\'alto o comunque con inquadrature spettacolari.',
     immagineUrl: '/images/informatico/drone.png',
   },
   {
     title: 'Montaggio video',
-    description: '',
+    description: 'Imparerai a mettere insieme le clip video per realizzare dei video dal forte impatto che saranno proiettati nel grande schermo all\'ingresso della scuola e distribuiti tramite i nostri social.',
     immagineUrl: '/images/informatico/montaggio-video.png',
   },
   {
     title: 'Unreal Engine 5',
-    description: '',
+    description: 'Una vera chicca: programmare è bello, ma farlo per realizzare uno spettacolare videogioco 3D lo è ancora di più. Conoscerai questo potentissimo motore grafico imparando al contempo le basi del potentissimo linguaggio C++.',
     immagineUrl: '/images/informatico/unreal-engine5.png',
   },
 ]
@@ -412,17 +412,12 @@ let terzo_anno = [
 let quarto_anno = [
   {
     title: 'React Native',
-    description: '',
+    description: 'Potrai mettere a frutto la conoscenza di ReactJS fatta negli anni precedenti per realizzare applicazioni native per iOS e Android. Sarai tu a sviluppare la prossima app virale negli store?',
     immagineUrl: '/images/informatico/react.png',
   },
   {
-    title: 'Flutter',
-    description: '',
-    immagineUrl: '/images/informatico/flutter.png',
-  },
-  {
     title: 'Test Sistematici',
-    description: '',
+    description: 'Al giorno d\'oggi non si sviluppa un\'applicazione di qualsiasi tipo senza dotarla di una serie di test automatici, che permettano di identificare al volo eventuali bug inseriti nel codice tra una versione e l\'altra.',
     immagineUrl: '/images/informatico/test-sistematici.png',
   },
 ]
