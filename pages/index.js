@@ -164,10 +164,10 @@ let link_utili = [
 ]
 
 let bottoni =[
-  {immagineUrl: '/image/home/sfpdonbosco',
+  {immagineUrl: '/image/home/1985.jpg',
    url:'https://forms.gle/Zney1K244XaXoV8D8 '
   },
-  { immagineUrl: '/image/home/lab.jpg',
+  { immagineUrl: '/image/home/1986.jpg',
     url: 'https://turni.inoratorio.it/shifts?group_id=7&key=lfdja4shjf2'
 ]
 
