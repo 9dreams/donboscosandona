@@ -163,10 +163,21 @@ let link_utili = [
   },
 ]
 
+let bottoni =[
+  {immagine: '',
+   url:'https://forms.gle/Zney1K244XaXoV8D8 '
+  },
+  { immagine: '',
+    url: 'https://turni.inoratorio.it/shifts?group_id=7&key=lfdja4shjf2'
+]
+
 export default function Home({ data }) {
   return (
     <Layout>
       <Featured data={data} />
+    
+      <Products cardWidth={6} product={bottoni}/>
+    
       <SwiperNews title='News' data={data} limit={12} />
       <Products
         title='I settori'
