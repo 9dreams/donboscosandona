@@ -165,11 +165,13 @@ let link_utili = [
 
 let bottoni = [
   {
-    immagineUrl: "/image/home/sfp-donbosco.jpg",
+    // title: 'Clicca qui',
+    immagineUrl: "/images/home/sfp-donbosco.jpg",
     url: "https://forms.gle/Zney1K244XaXoV8D8 ",
   },
   {
-    immagineUrl: "/image/home/lab.jpg",
+    // title: 'Clicca qui',
+    immagineUrl: "/images/home/lab.jpg",
     url: "https://turni.inoratorio.it/shifts?group_id=7&key=lfdja4shjf2",
   },
 ];
@@ -179,7 +181,7 @@ export default function Home({ data }) {
     <Layout>
       <Featured data={data} />
 
-      <Products cardWidth={6} products={bottoni} />
+      <Products cardWidth={6} products={bottoni} aspectRatio={"2 / 1"} />
 
       <SwiperNews title="News" data={data} limit={12} />
       <Products
