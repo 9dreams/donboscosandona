@@ -127,7 +127,7 @@ export default function Home({ data }) {
       />
       <Products
         title='Quarto anno'
-        description="Il quarto anno se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico, sarai collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda)."
+        description="Il quarto anno - se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico - sarai collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda)."
         cardWidth={4}
         cardWidthXs={6}
         products={quarto_anno}
