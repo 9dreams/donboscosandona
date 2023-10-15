@@ -1,156 +1,308 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
-
 import Head from 'next/head'
-import Image from 'next/image'
-import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero.js'
-import Features from '/components/Features'
-import Carousel from '/components/Carousel'
-import PostInEvidenza from '/components/PostInEvidenza'
-import Products from '/components/Products'
-import Testimonials from '/components/Testimonials'
-import Team from '/components/Team'
-import Post from '/components/Post'
-import { Typography } from '@mui/material'
 
-import { getDatiArticoli } from '/lib/articoli'
+import {
+  Layout,
+  LandingHero,
+  Products,
+  SwiperNews,
+  Paragraph,
+  Sponsor,
+  Table,
+} from '/components'
 
-let menu = [
-    { title: 'Chi siamo', url: '/chi-siamo' },
-    { title: 'Contatti', url: '/contatti' },
-    { title: 'Dove siamo', url: '/dove-siamo' },
-    { title: 'Trasparenza', url: '/trasparenza' },
-]
+export default function Home({ data }) {
+  return (
+    <Layout>
+      <Head />
+      <img
+        src='/images/informatico/settore-elettrico.jpg'
+        style={{ width: '100%' }}
+      />
+      <Paragraph
+        title='Operatore Elettrico'
+        subtitle='Qualifica triennale'
+        rightImageUrl='https://archive.donboscosandona.it/img/ck/9957d0b12e8146011f93c1de45aaf2012a2d30fa.png'
+      >
+        L’operatore elettrico interviene nel processo di progettazione,
+        installazione e manutenzione degli impianti elettrici civili e
+        industriali. È in grado di gestire e utilizzare software per il disegno
+        e la progettazione elettrica sia in ambito civile che industriale.
+        Sviluppa le competenze adatte al lavoro in cantiere e in azienda per
+        l’installazione e la manutenzione di qualsiasi tipologia di impianto
+        (elettrico, domotico, TV, TVCC, allarme, antincendio, macchine
+        industriali). Utilizza app e software per la configurazione e la
+        supervisione di impianti domotici e di automazione industriale.
+        <h3>Competenze sviluppate nel corso dei tre anni:</h3>
+        <ol>
+          <li>
+            Installare, cablare e configurare i dispositivi per la creazione di
+            impianti elettrici civili e di domotica. Effettuare la manutenzione
+            degli impianti elettrici civili e domotici.
+          </li>
+          <li>
+            Installare, cablare e configurare i dispositivi per la creazione di
+            impianti elettrici industriali e di automazione. Effettuare la
+            manutenzione degli impianti elettrici industriali e di automazione.
+          </li>
+          <li>
+            Utilizzare i software per la progettazione e il disegno degli schemi
+            elettrici civili e industriali. Utilizzare i software per la
+            programmazione dei dispositivi programmabili negli impianti domotici
+            e di automazione industriale.
+          </li>
+        </ol>
+      </Paragraph>
+      <Paragraph
+        title='Tecnico Elettrico'
+        subtitle='Diploma Professionale Quadriennale in Sistema Duale con indirizzo Impianti Elettrici Civili e Industriali - Building Automation'
+      >
+        Il Tecnico Elettrico interviene con autonomia, nel limite delle proprie
+        competenze, nell’intero processo di installazione e collaudo degli
+        impianti elettrici civili e industriali. Utilizza con disinvoltura i
+        software per la progettazione e il disegno di impianti. è in grado di
+        intervenire attivamente sui processi di programmazione e configurazione
+        di dispositivi programmabili industriali (PLC - HMI) e di sistemi di
+        domotica e building automation (KNX). Partecipa a processi aziendali
+        quali organizzazione magazzino, giacenza scorte e preventivazione.
+        <ol>
+          <h3>Competenze del tecnico elettrico:</h3>
+          <li>
+            Consultare schemi elettrici e documenti tecnici per l’installazione
+            dei dispositivi negli impianti
+          </li>
+          <li>
+            Effettuare l’installazione di impianti elettrici civili e
+            industriali comprensivi di dispositivi ad alto livello tecnologico
+          </li>
+          <li>
+            Collaborare ad avviare il sistema per verificare la funzionalità
+            dell’impianto elettrico
+          </li>
+          <li>Effettuare la programmazione di PLC e dispositivi HMI</li>
+          <li>
+            Effettuare la programmazione e la configurazione di impianti di
+            domotica e building automation (KNX)
+          </li>
+          <li>
+            Collaborare alla verifica dell’impianto elettrico civile e
+            industriale rispetto alle specifiche tecniche, alla compatibilità
+            delle componenti e all’installazione tecnica
+          </li>
+        </ol>
+      </Paragraph>
+      <Products
+        title='Primo anno'
+        description='Il primo anno ti introduce al mondo dell’impiantistica civile. Imparerai a gestire e utilizzare i principali strumenti di lavoro, ad effettuare le operazioni basilari per l’installazione elettrica e a costruire i primi semplici impianti elettrici. Darai da subito un’occhiata agli impianti civili smart, da poter controllare con i dispositivi mobili quali smartphone e/o tablet.'
+        cardWidth={4}
+        cardWidthXs={6}
+        products={primo_anno}
+      />
+      <Products
+        title='Secondo anno'
+        description='Nel secondo anno approfondirai le tematiche relative all’installazione e alla manutenzione degli impianti civili. Scoprirai gli impianti domotici e le numerosi applicazioni che consentono. Verrai introdotto al mondo dell’impiantistica industriale e ai quadri di comando delle macchine, utilizzando sistemi elettromeccanici e pneumatici.'
+        cardWidth={3}
+        cardWidthXs={6}
+        products={secondo_anno}
+      />
+      <Products
+        title='Terzo anno'
+        description='Nel terzo anno imparerai a conoscere i dispositivi industriali logici programmabili, come inverter, PLC (Controllori Logici Programmabili) e HMI (Interfaccia Uomo Macchina), curandone schemistica, installazione e programmazione con adeguati software. Verrai introdotto al mondo della building automation e degli impianti Konnex (KNX). Utilizzerai software di disegno elettrico complessi.'
+        cardWidth={3}
+        cardWidthXs={6}
+        products={terzo_anno}
+      />
+      <Products
+        title='Quarto anno'
+        description='Nel quarto anno approfondirai la programmazione di PLC, HMI e azionamenti scoprendo le grandi potenzialità del software TIA Portal di Siemens. Avrai la possibilità di diventare un ottimo tecnico di building automation curando sia l’installazione dei dispositivi domotici che la programmazione grazie al software ETS.'
+        cardWidth={4}
+        cardWidthXs={6}
+        products={quarto_anno}
+      />
+      <SwiperNews title='News dal Settore Elettrico' data={data} limit={15} />
+      <Sponsor logos={sponsor} />
 
-let slides = [
-    {
-        titolo: 'Fatti un bel giro',
-        descrizione: 'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-        immagine: '/images/informatico/carousel1.jpg'
-    },
-    {
-        titolo: 'Progetto GIVE',
-        descrizione: "Il 15 e 16 maggio il nostro Centro ospiterà l'edizione 2023 di GIVE (GROHE Installer Vocational Training and Education), il programma di formazione dedicato ai giovani installatori idraulici: un ambiente dedicato al training pratico proposto dai professionisti di GROHE.",
-        immagine: '/images/informatico/carousel2.jpg'
-    },
-    {
-        titolo: 'Concorso nazionale settore elettrico',
-        descrizione: "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-        immagine: '/images/informatico/carousel3.jpg'
-    },
-]
-
-let slides2 = slides
-
-export default function Home({ datiArticoli }) {
-    return (
-        <Layout>
-            <Head />
-            {
-
-            }
-            <LandingHero
-                opacity={0.5}
-                siteName="CFP DON BOSCO"
-                title="Settore Meccanico"
-                description="L’operatore meccanico realizza lavorazioni al tornio, fresatrice e macchine utensili in generale. Partendo dal progetto realizzato con il CAD effettua la programmazione delle macchine a controllo numerico. Realizza saldature ad arco, TIG, MAG, taglio al plasma."
-                buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
-                buttonText="Guarda il video"
-                imageUrl="/images/meccanico/settore-meccanico.jpg"
-            />
-
-            <Container sx={{ py: 8 }}>
-                <Grid container spacing={4} alignItems="center">
-                    <Grid item xs={12} md={7}>
-                        <Typography variant="h4"sx={{textAlign: 'center'}} gutterBottom>
-                            OPERATORE MECCANICO
-                        </Typography>
-                        <Typography variant="h5" sx={{textAlign: 'center', color: 'blue' }}>Qualifica triennale</Typography>
-                        <Typography variant="h6" sx={{ textAlign: 'center',color: 'text.secondary' }}>
-                            <li>Realizza lavorazioni al tornio, fresatrice e<br /> macchine utensili in generale, partendo da<br /> un disegno realizzato con il CAD<br /></li>
-                            <li>Effettua la programmazione delle<br /> macchine a controllo numerico con il CAD-<br />CAM<br /></li>
-                            <li>Realizza saldature ad arco, TIG, MAG,<br /> ossiacetilenica, effettua il taglio al plasma<br /> programmando la saldatrice a controllo<br /> numerico<br /></li>
-                            <li>Effettua disegni al CAD e modellazioni<br /> solide tridimensionali di componenti<br /> meccanici<br /></li></Typography>
-                        <br />
-                    </Grid>
-                    <Grid item xs={12} md={5}>
-                        <Image src="/images/meccanico/operatore-meccanico.png" alt="" width={630} height={410} />
-                    </Grid>
-                </Grid>
-            </Container>
-
-
-
-            <Typography variant="h3" sx={{ textAlign: 'center',color: 'text.secondary' }}>
-                TECNICO PER LA CONDUZIONE E LA MANUTENZIONE DI IMPIANTI AUTOMATIZZATI
-            </Typography>
-
-            <Typography variant="h5" sx={{ textAlign: 'center',color: 'blue' }}>
-
-                Diploma Professionale Quadriennale in Sistema Duale.
-
-            </Typography>
-
-            <Typography variant="h6" sx={{ textAlign: 'center',color: 'text.secondary' }}>
-                <li>Produce la documentazione di appoggio e di avanzamento relativa a lavorazioni, manutenzioni e<br /> installazioni</li>
-            </Typography>
-            <Typography variant="h6" sx={{textAlign: 'center', color: 'text.secondary' }}>
-                <li>Provvede al monitoraggio, verifica e controllo del funzionamento di impianti automatizzati,<br /> effettuando interventi di cura, assistenza e ripristino</li>
-            </Typography>
-            <br />
-
-            <br /><br />
-
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Image
-                    src="/images/meccanico/laboratorio.jpg"
-                    alt=""
-                    width={1920}
-                    height={750}
-                    sx={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }}
-                />
-            </Container><br /><br />
-
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Image
-                    src="/images/meccanico/tabella-ore.png"
-                    alt=""
-                    width={1920}
-                    height={1500}
-
-                />
-            </Container><br /><br /><br /><br />
-
-            <Typography variant="h5" sx={{ textAlign: 'center', color: 'black' }}> La voce ai formatori del settore MECCANICO: </Typography>
-
-            <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
-                «Il Settore Meccanico è presente nel Centro di Formazione Salesiano “Don Bosco” fin<br /> dal 1957, ossia fin dalla fondazione dell’Istituto stesso, nell’ambito della Formazione Professionale.<br /><br />
-
-                Da noi tutto ruota intorno alla persona del ragazzo, posto al centro del sistema formativo denominato<br /> da Don Bosco stesso “preventivo”, orientato a soddisfare non solo le esigenze di formazione<br /> professionale, ma anche a contribuire alla sua crescita integrale: culturale, sociale, etica, religiosa.<br /><br />
-
-                La qualifica di operatore meccanico alle macchine utensili, in continua relazione con le principali<br /> Associazioni di categoria ed Ordini professionali ed in collaborazione con le principali aziende di<br /> settore, con la sua preparazione offre al territorio una figura professionale in costante formazione e<br />aggiornamento rispetto all’evoluzione tecnologica e normativa.<br /><br />
-
-                È una figura professionale in grado di eseguire, su precise indicazioni, la lavorazione, la costruzione,<br /> l’assemblaggio e la revisione di particolari meccanici. Opera utilizzando macchine utensili tradizionali,<br /> semiautomatiche o a controllo numerico in aziende di produzione manifatturiera del settore<br /> meccanico di grande, media e piccola dimensione e a livello artigianale.<br /><br />
-
-                Nel nostro centro potrai, attraverso laboratori attrezzati, ottenere una preparazione professionale<br /> tecnico-pratica sulle diverse fasi produttive:<br /><br />
-
-                <li>Collaborare con la direzione della produzione per calcolare e monitorare i tempi e i metodi della<br /> produzione.</li>
-                <li>Programmare macchine utensili a Controllo Numerico utilizzando linguaggi macchina e sistemi<br /> CAD/CAM.</li>
-                <li>Provvedere al monitoraggio, verifica e controllo del funzionamento di impianti automatizzati.<br />
-                    Intervenire con competenza nel controllo di qualità del prodotto».</li>
-            </Typography>
-
-
-        </Layout>
-    )
+      <Paragraph>
+        <Table
+          title='Piano formativo'
+          rows={[
+            ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno'],
+            ['Italiano', 3, 3, 2, 3],
+            ['Storia / Economia / Diritto', 1, 1, 1, 1],
+            ['Inglese', 2, 2, 2, 2],
+            ['Religione', 1, 1, 1, 1],
+            ['Matematica', 3, 3, 3, 2],
+            ['Fisica', 2, 2, 2, 2],
+            ['CAD', 2, 2, 2, 2],
+            ['Informatica', 2, '', '', ''],
+            ['Elettrotecnica', 3, 3, 3, ''],
+            ['Laboratorio Elettrico', 10, 12, 12, 3],
+            ['', '', '', '', ''],
+            ['ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO', '', 200, 200, 500],
+          ]}
+          backgroundImageUrl='/images/informatico/sfondo-piano-formativo.jpg'
+          backgroundColor='#003185'
+          opacity={0.8}
+          blur='0.1rem'
+          color='white'
+        />
+      </Paragraph>
+    </Layout>
+  )
 }
 
 export async function getStaticProps() {
-    const datiArticoli = getDatiArticoli()
-    return {
-        props: {
-            datiArticoli,
-        },
-    }
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona?q=elettrico'
+  )
+  const data = await res.json()
+
+  return {
+    props: { data },
+    revalidate: 3600, // I dati vengono ricaricati al massimo una volta all'ora
+  }
 }
+
+let primo_anno = [
+  {
+    title: 'Forbici e cacciaviti',
+    description: 'Imparare l’uso di forbici e cacciaviti',
+    immagineUrl: '',
+  },
+  {
+    title: 'Tubo e scatole',
+    description: 'Installazione e montaggio degli elementi di supporto all’impianto',
+    immagineUrl: '',
+  },
+  {
+    title: 'Cablaggio',
+    description: 'Passaggio fili e cablaggio dei dispositivi',
+    immagineUrl: '',
+  },
+  {
+    title: 'Trasformazione',
+    description: 'Trasformazione di un impianto da tradizionale a smart',
+    immagineUrl: '',
+  },
+  {
+    title: 'Configurazione Smart',
+    description: 'Configurazione dei dispositivi smart con app dedicate',
+    immagineUrl: '',
+  },
+]
+
+let secondo_anno = [
+  {
+    title: 'Impianti tradizionali',
+    description: 'Installazione di impianti su box di simulazione',
+    immagineUrl: '',
+  },
+  {
+    title: 'Impianti domotici',
+    description: 'Installazione e configurazione di impianti domotici',
+    immagineUrl: '',
+  },
+  {
+    title: 'Simulazione',
+    description: 'Utilizzo di software per la simulazione di impianti industriali',
+    immagineUrl: '',
+  },
+  {
+    title: 'Quadri',
+    description: 'Montaggio di quadri di comando',
+    immagineUrl: '',
+  },
+  {
+    title: 'Dispositivi industriali',
+    description: 'Installazione e cablaggio di dispositivi industriali',
+    immagineUrl: '',
+  },
+  {
+    title: 'Motori',
+    description: 'Comando di motori elettrici',
+    immagineUrl: '',
+  },
+  {
+    title: 'Impianti pneumatici',
+    description: 'Realizzazione di impianti ad aria compressa',
+    immagineUrl: '',
+  },
+  {
+    title: 'Relè programmabili',
+    description: 'Introduzione all’utilizzo di dispositivi logici',
+    immagineUrl: '',
+  },
+]
+
+let terzo_anno = [
+  {
+    title: 'SPAC Automazione',
+    description: 'Disegno di schemi son SPAC Automazione',
+    immagineUrl: '',
+  },
+  {
+    title: 'Functional Safety',
+    description: 'Studio e utilizzo dei sistemi di sicurezza funzionale',
+    immagineUrl: '',
+  },
+  {
+    title: 'Inverter',
+    description: 'Utilizzo degli inverter per il comando elettronico dei motori elettrici',
+    immagineUrl: '',
+  },
+  {
+    title: 'PLC',
+    description: 'Cablaggio e installazione dei Controllori Logici Programmabili',
+    immagineUrl: '',
+  },
+  {
+    title: 'Programmazione',
+    description: 'Programmazione PLC e HMI',
+    immagineUrl: '',
+  },
+  {
+    title: 'KNX',
+    description: 'Configurazione e programmazione di sistemi di building automation basati su tecnologia Konnex',
+    immagineUrl: '',
+  },
+]
+
+let quarto_anno = [
+  {
+    title: 'PLC Avanzato',
+    description: 'Programmazione PLC in TIA Portal',
+    immagineUrl: '',
+  },
+  {
+    title: 'HMI Avanzato',
+    description: 'Programmazione HMI in TIA Portal',
+    immagineUrl: '',
+  },
+  {
+    title: 'Sistemi',
+    description: 'Programmazione di sistemi industriali complessi',
+    immagineUrl: '',
+  },
+  {
+    title: 'KNX',
+    description: 'Installazione componenti impianti KNX',
+    immagineUrl: '',
+  },
+  {
+    title: 'ETS',
+    description: 'Programmazione di sistemi KNX con software ETS',
+    immagineUrl: '',
+  },
+]
+
+let sponsor = [
+  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
+  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
+  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
+  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
+  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
+  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
+  'https://www.comitec.it/img/logo.png?v=1.1',
+  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
+  'https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png',
+]
