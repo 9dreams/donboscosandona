@@ -19,101 +19,87 @@ export default function Home({ data }) {
         style={{ width: '100%' }}
       />
       <Paragraph
-        title='Operatore Elettrico'
+        title='Operatore Meccanico'
         subtitle='Qualifica triennale'
         rightImageUrl='https://archive.donboscosandona.it/img/ck/9957d0b12e8146011f93c1de45aaf2012a2d30fa.png'
       >
-        L’operatore elettrico interviene nel processo di progettazione,
-        installazione e manutenzione degli impianti elettrici civili e
-        industriali. È in grado di gestire e utilizzare software per il disegno
-        e la progettazione elettrica sia in ambito civile che industriale.
-        Sviluppa le competenze adatte al lavoro in cantiere e in azienda per
-        l’installazione e la manutenzione di qualsiasi tipologia di impianto
-        (elettrico, domotico, TV, TVCC, allarme, antincendio, macchine
-        industriali). Utilizza app e software per la configurazione e la
-        supervisione di impianti domotici e di automazione industriale.
+        L'operatore meccanico interviene, a livello esecutivo, nel processo di
+        produzione meccanica con autonomia e responsabilità limitate a ciò che
+        prevedono le procedure e le metodiche della sua operatività. La
+        qualificazione nell'applicazione/utilizzo di metodologie di base, di
+        strumenti e di informazioni gli consente di svolgere attività relative
+        alle lavorazioni di pezzi e complessivi meccanici, al montaggio e
+        all'adattamento in opera di gruppi, sottogruppi e particolari meccanici,
+        con competenze nell'approntamento e conduzione delle macchine e delle
+        attrezzature, nel controllo e verifica di conformità delle lavorazioni
+        assegnate, proprie della produzione meccanica.
         <h3>Competenze sviluppate nel corso dei tre anni:</h3>
         <ol>
+          <li>Lavorazione meccanica per asportazione e deformazione</li>
+          <li>Saldatura e giunzione dei componenti</li>
+          <li>Montaggio componenti mecccanici</li>
           <li>
-            Installare, cablare e configurare i dispositivi per la creazione di
-            impianti elettrici civili e di domotica. Effettuare la manutenzione
-            degli impianti elettrici civili e domotici.
-          </li>
-          <li>
-            Installare, cablare e configurare i dispositivi per la creazione di
-            impianti elettrici industriali e di automazione. Effettuare la
-            manutenzione degli impianti elettrici industriali e di automazione.
-          </li>
-          <li>
-            Utilizzare i software per la progettazione e il disegno degli schemi
-            elettrici civili e industriali. Utilizzare i software per la
-            programmazione dei dispositivi programmabili negli impianti domotici
-            e di automazione industriale.
+            Fabbricazione e montaggio/installazione di infissi, telai e
+            serramenti
           </li>
         </ol>
       </Paragraph>
       <Paragraph
-        title='Tecnico Elettrico'
-        subtitle='Diploma Professionale Quadriennale in Sistema Duale con indirizzo Impianti Elettrici Civili e Industriali - Building Automation'
+        title='Tecnico Meccanico'
+        subtitle='Diploma Professionale Quadriennale in Sistema Duale con indirizzo Programmazione e Gestione di Impianti di Produzione'
       >
-        Il Tecnico Elettrico interviene con autonomia, nel limite delle proprie
-        competenze, nell’intero processo di installazione e collaudo degli
-        impianti elettrici civili e industriali. Utilizza con disinvoltura i
-        software per la progettazione e il disegno di impianti. è in grado di
-        intervenire attivamente sui processi di programmazione e configurazione
-        di dispositivi programmabili industriali (PLC - HMI) e di sistemi di
-        domotica e building automation (KNX). Partecipa a processi aziendali
-        quali organizzazione magazzino, giacenza scorte e preventivazione.
+        Il Tecnico per la programmazione e la gestione di impianti di produzione
+        interviene con autonomia, nel quadro di azione stabilito e delle
+        specifiche assegnate, contribuendo - in rapporto ai diversi ambiti di
+        esercizio – al presidio del processo di produzione realizzato con
+        sistemi CNC, sistemi automatizzati CAD-CAM e linee robotizzate,
+        attraverso la partecipazione all'individuazione delle risorse
+        strumentali e tecnologiche, la collaborazione nell'organizzazione
+        operativa delle lavorazioni, l'implementazione di procedure di
+        miglioramento continuo, il monitoraggio e la valutazione del risultato.
+        Possiede competenze funzionali - in rapporto ai diversi indirizzi - alla
+        produzione di documentazione tecnica e alla programmazione, conduzione,
+        manutenzione.
         <ol>
-          <h3>Competenze del tecnico elettrico:</h3>
+          <h3>Competenze del tecnico meccanico:</h3>
           <li>
-            Consultare schemi elettrici e documenti tecnici per l’installazione
-            dei dispositivi negli impianti
+            Operare in sicurezza e nel rispetto delle norme di igiene e di
+            salvaguardia ambientale, identificando e prevenendo situazioni di
+            rischio per sé, per gli altri e per l'ambiente
           </li>
           <li>
-            Effettuare l’installazione di impianti elettrici civili e
-            industriali comprensivi di dispositivi ad alto livello tecnologico
+            Provvedere al monitoraggio e controllo del ciclo di lavorazione
+            effettuando rilevazioni con macchine di misura e producendo
+            documentazione tecnica di avanzamento e valutazione relativa alle
+            lavorazioni svolte
           </li>
-          <li>
-            Collaborare ad avviare il sistema per verificare la funzionalità
-            dell’impianto elettrico
-          </li>
-          <li>Effettuare la programmazione di PLC e dispositivi HMI</li>
-          <li>
-            Effettuare la programmazione e la configurazione di impianti di
-            domotica e building automation (KNX)
-          </li>
-          <li>
-            Collaborare alla verifica dell’impianto elettrico civile e
-            industriale rispetto alle specifiche tecniche, alla compatibilità
-            delle componenti e all’installazione tecnica
-          </li>
+          <li>Realizzaredi modelli tridimensionali con software CAD 3D</li>
         </ol>
       </Paragraph>
       <Products
         title='Primo anno'
-        description='Il primo anno ti introduce al mondo dell’impiantistica civile. Imparerai a gestire e utilizzare i principali strumenti di lavoro, ad effettuare le operazioni basilari per l’installazione elettrica e a costruire i primi semplici impianti elettrici. Darai da subito un’occhiata agli impianti civili smart, da poter controllare con i dispositivi mobili quali smartphone e/o tablet.'
+        description=''
         cardWidth={4}
         cardWidthXs={6}
         products={primo_anno}
       />
       <Products
         title='Secondo anno'
-        description='Nel secondo anno approfondirai le tematiche relative all’installazione e alla manutenzione degli impianti civili. Scoprirai gli impianti domotici e le numerosi applicazioni che consentono. Verrai introdotto al mondo dell’impiantistica industriale e ai quadri di comando delle macchine, utilizzando sistemi elettromeccanici e pneumatici.'
+        description=''
         cardWidth={3}
         cardWidthXs={6}
         products={secondo_anno}
       />
       <Products
         title='Terzo anno'
-        description='Nel terzo anno imparerai a conoscere i dispositivi industriali logici programmabili, come inverter, PLC (Controllori Logici Programmabili) e HMI (Interfaccia Uomo Macchina), curandone schemistica, installazione e programmazione con adeguati software. Verrai introdotto al mondo della building automation e degli impianti Konnex (KNX). Utilizzerai software di disegno elettrico complessi.'
+        description=''
         cardWidth={3}
         cardWidthXs={6}
         products={terzo_anno}
       />
       <Products
         title='Quarto anno'
-        description='Nel quarto anno approfondirai la programmazione di PLC, HMI e azionamenti scoprendo le grandi potenzialità del software TIA Portal di Siemens. Avrai la possibilità di diventare un ottimo tecnico di building automation curando sia l’installazione dei dispositivi domotici che la programmazione grazie al software ETS.'
+        description=''
         cardWidth={4}
         cardWidthXs={6}
         products={quarto_anno}
@@ -152,7 +138,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona?q=elettrico'
+    'https://channels.donboscosandona.it/api/posts/donboscosandona?q=meccanico'
   )
   const data = await res.json()
 
@@ -164,132 +150,171 @@ export async function getStaticProps() {
 
 let primo_anno = [
   {
-    title: 'Forbici e cacciaviti',
-    description: 'Imparare l’uso di forbici e cacciaviti',
+    title: '',
+    description: 'Sicurezza',
     immagineUrl: '',
   },
   {
-    title: 'Tubo e scatole',
-    description: 'Installazione e montaggio degli elementi di supporto all’impianto',
+    title: '',
+    description: 'Prime conoscenze della meccanica industriale',
     immagineUrl: '',
   },
   {
-    title: 'Cablaggio',
-    description: 'Passaggio fili e cablaggio dei dispositivi',
+    title: '',
+    description: "Spiegazione dell'utensileria di base",
     immagineUrl: '',
   },
   {
-    title: 'Trasformazione',
-    description: 'Trasformazione di un impianto da tradizionale a smart',
+    title: '',
+    description: 'Lettura di una tavola tecnica',
     immagineUrl: '',
   },
   {
-    title: 'Configurazione Smart',
-    description: 'Configurazione dei dispositivi smart con app dedicate',
+    title: '',
+    description:
+      'Utilizzo di macchine tradizionali come tornio, fresa, trapano a colonna per lavorazioni base e saldatrice',
+    immagineUrl: '',
+  },
+  {
+    title: '',
+    description: 'Realizzazione e lettura fasi di lavoro',
+    immagineUrl: '',
+  },
+  {
+    title: '',
+    description:
+      'Utilizzo di strumenti di misura e precisione quali il calibro ventesimale',
+    immagineUrl: '',
+  },
+  {
+    title: '',
+    description: 'Utilizzo minifresa CNC',
+    immagineUrl: '',
+  },
+  {
+    title: '',
+    description: 'Lettura tolleranze',
     immagineUrl: '',
   },
 ]
 
 let secondo_anno = [
   {
-    title: 'Impianti tradizionali',
-    description: 'Installazione di impianti su box di simulazione',
+    title: '',
+    description: 'Programmazione di macchine a Controllo Numerico (CNC)',
     immagineUrl: '',
   },
   {
-    title: 'Impianti domotici',
-    description: 'Installazione e configurazione di impianti domotici',
+    title: '',
+    description: 'Utilizzo tornio e fresa CNC per lavorazioni varie',
     immagineUrl: '',
   },
   {
-    title: 'Simulazione',
-    description: 'Utilizzo di software per la simulazione di impianti industriali',
+    title: '',
+    description: 'Disegno con AutoCAD',
     immagineUrl: '',
   },
   {
-    title: 'Quadri',
-    description: 'Montaggio di quadri di comando',
+    title: '',
+    description:
+      'Realizzazione di varie tipologie di pezzi complicati per le lavorazioni',
     immagineUrl: '',
   },
   {
-    title: 'Dispositivi industriali',
-    description: 'Installazione e cablaggio di dispositivi industriali',
+    title: '',
+    description: 'Simulazione al PC per tornio CNC',
     immagineUrl: '',
   },
   {
-    title: 'Motori',
-    description: 'Comando di motori elettrici',
+    title: '',
+    description: 'Uso del micrometro',
     immagineUrl: '',
   },
   {
-    title: 'Impianti pneumatici',
-    description: 'Realizzazione di impianti ad aria compressa',
+    title: '',
+    description: 'Saldatura TIG-MIG-MAG',
     immagineUrl: '',
   },
   {
-    title: 'Relè programmabili',
-    description: 'Introduzione all’utilizzo di dispositivi logici',
+    title: '',
+    description: 'Realizzazione accoppiamenti',
+    immagineUrl: '',
+  },
+  {
+    title: '',
+    description: 'Utilizzo della stampante 3D a filo continuo',
+    immagineUrl: '',
+  },
+  {
+    title: '',
+    description: 'Manutenzione alle macchine utensili tradizionali',
+    immagineUrl: '',
+  },
+  {
+    title: '',
+    description: 'Lubrificazione con olio refrigerante dei macchinari',
     immagineUrl: '',
   },
 ]
 
 let terzo_anno = [
   {
-    title: 'SPAC Automazione',
-    description: 'Disegno di schemi son SPAC Automazione',
+    title: '',
+    description: 'Utilizzo di Inventor per disegni 3D e messa in tavola',
     immagineUrl: '',
   },
   {
-    title: 'Functional Safety',
-    description: 'Studio e utilizzo dei sistemi di sicurezza funzionale',
+    title: '',
+    description: 'Utilizzo CAD-CAM',
     immagineUrl: '',
   },
   {
-    title: 'Inverter',
-    description: 'Utilizzo degli inverter per il comando elettronico dei motori elettrici',
+    title: '',
+    description: 'Progettazione di pezzi meccanici',
     immagineUrl: '',
   },
   {
-    title: 'PLC',
-    description: 'Cablaggio e installazione dei Controllori Logici Programmabili',
+    title: '',
+    description: 'Utilizzo tolleranze per pezzi di maggior precisione',
     immagineUrl: '',
   },
   {
-    title: 'Programmazione',
-    description: 'Programmazione PLC e HMI',
-    immagineUrl: '',
-  },
-  {
-    title: 'KNX',
-    description: 'Configurazione e programmazione di sistemi di building automation basati su tecnologia Konnex',
+    title: '',
+    description: 'Prototipazione rapida con stampante 3D',
     immagineUrl: '',
   },
 ]
 
 let quarto_anno = [
   {
-    title: 'PLC Avanzato',
-    description: 'Programmazione PLC in TIA Portal',
+    title: '',
+    description: 'Utilizzo Inventor per modellazione 3D',
     immagineUrl: '',
   },
   {
-    title: 'HMI Avanzato',
-    description: 'Programmazione HMI in TIA Portal',
+    title: '',
+    description:
+      'Utilizzo software CAD-CAM per la gestione di macchine utensili',
     immagineUrl: '',
   },
   {
-    title: 'Sistemi',
-    description: 'Programmazione di sistemi industriali complessi',
+    title: '',
+    description: 'CNC con utilizzo di utensili motorizzati',
     immagineUrl: '',
   },
   {
-    title: 'KNX',
-    description: 'Installazione componenti impianti KNX',
+    title: '',
+    description: 'Gestione cicli-fasi di lavoro',
     immagineUrl: '',
   },
   {
-    title: 'ETS',
-    description: 'Programmazione di sistemi KNX con software ETS',
+    title: '',
+    description: 'Sistemi di produzione',
+    immagineUrl: '',
+  },
+  {
+    title: '',
+    description: 'Stampa 3D di complessivi meccanici',
     immagineUrl: '',
   },
 ]

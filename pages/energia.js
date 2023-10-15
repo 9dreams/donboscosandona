@@ -163,7 +163,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona?q=elettrico'
+    'https://channels.donboscosandona.it/api/posts/donboscosandona?q=energia'
   )
   const data = await res.json()
 
