@@ -210,12 +210,6 @@ export default function Home({ data }) {
   )
 }
 
-Products.defaultProps = {
-cardWidth: 3,
-cardWidthXs: 6,
-borderRadius: '10px',
-aspectRatio: '3 / 2',
-}
 
 /* // This gets called on every request
 export async function getServerSideProps() {
