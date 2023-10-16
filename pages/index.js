@@ -178,7 +178,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Featured data={data} />
-      <Products products={bottoni} cardWidth={6} aspectRatio={'2 / 1'} />
+      <Products products={bottoni} cardWidth={6} aspectRatio={'2 / 1'}/>
       <SwiperNews title='News' data={data} limit={12} />
       <Products
         title='I settori'
@@ -208,6 +208,13 @@ export default function Home({ data }) {
       <Certifications cardWidth={3} certifications={certifications} />
     </Layout>
   )
+}
+
+Products.defaultProps = {
+cardWidth: 3,
+cardWidthXs: 6,
+borderRadius: '10px',
+aspectRatio: '3 / 2',
 }
 
 /* // This gets called on every request
