@@ -53,7 +53,6 @@ export default function Home({ data }) {
       <Paragraph
         title='Tecnico Informatico'
         subtitle='Diploma Professionale Quadriennale in Sistema Duale con indirizzo Sviluppo soluzioni ICT'
-        leftImageUrl='https://archive.donboscosandona.it/img/ck/ef718d5f3b16b5b074f7305e4bf7bad73ede5378.jpeg'
       >
         Il Tecnico informatico interviene con autonomia - nelle specifiche
         assegnate - al presidio dei processi relativi ai sistemi, reti, data
