@@ -281,7 +281,7 @@ let secondo_anno = [
   {
     title: 'Raspberry',
     description: 'Hai presente Arduino visto in prima? Raspberry è una sua evoluzione e ti permette di controllare ingressi e uscite collegati al mondo reale con un vero e proprio computer che sta nel palmo di una mano. Un ottimo banco di prova per le tue conoscenze di Linux e della programmazione.',
-    immagineUrl: '/images/informatico/raspberry.png',
+    immagineUrl: '/images/informatico/rasp-berry.png',
   },
   {
     title: 'Versioning',
