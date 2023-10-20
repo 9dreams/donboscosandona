@@ -10,6 +10,7 @@ import {
   Maps,
   SwiperNews,
   Featured,
+  Logos,
 } from '/components'
 
 // I punti di forza
@@ -169,16 +170,22 @@ let bottoni = [
     url: 'https://forms.gle/Zney1K244XaXoV8D8',
   },
   {
-    immagineUrl:'/images/home/lab.jpg',
+    immagineUrl: '/images/home/lab.jpg',
     url: 'https://turni.inoratorio.it/shifts?group_id=7&key=lfdja4shjf2',
-  }
+  },
 ]
 
 export default function Home({ data }) {
   return (
     <Layout>
       <Featured data={data} />
-      <Products products={bottoni} cardWidth={6} cardWidthXs={14} aspectRatio={'3.5 / 2'}/>
+      <Logos url='/images/home/loghi_sponsor.png' />
+      <Products
+        products={bottoni}
+        cardWidth={6}
+        cardWidthXs={14}
+        aspectRatio={'3.5 / 2'}
+      />
       <SwiperNews title='News' data={data} limit={12} />
       <Products
         title='I settori'
@@ -209,7 +216,6 @@ export default function Home({ data }) {
     </Layout>
   )
 }
-
 
 /* // This gets called on every request
 export async function getServerSideProps() {
