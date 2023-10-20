@@ -301,14 +301,18 @@ let quarto_anno = [
 ]
 
 let sponsor = [
-  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
-  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
-  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
-  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
-  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
-  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
-  'https://www.comitec.it/img/logo.png?v=1.1',
-  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
-  'https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png',
+  'https://lh7-us.googleusercontent.com/H9reO_fhwQ5hI7RJ-IszbV3FyhWoqmOIEAJfAzqt1R7Z9Xyy2TxIvlBR6aAOhVOmEYpaxvWpTb844P6wMro7MByyQ9YAhpzIAOL-82CeZ1v1LLFJe9gniWZVC_587lrCRbs1a1SXIghpgRu9WUPHapQ',
+  'https://lh7-us.googleusercontent.com/szNQXDuxanlRJLdi0cDBUCkw6B-DUhFU5t0D5uwS7buJ4HxHEt8tNzhvNJ8q1AwQJYRahx-nodphqeANCxBlxrBEeIbjB5pCMS8XzzuUkmYZqkuwP-BLlkhMFGJwKO6dd16WX6mrqGsCKOsQYdZTRsM',
+  'https://lh7-us.googleusercontent.com/OpyvaYDqDSJH8KI1h1xjMusNsfq21wOVWgP8xFkostU7YiG2JG0jEefwhSG_N3LO_BGUihpj3HMmFu7Y4NcQTkGa1IvOyHoRgosTIbis0mwiV1QfaKEc-KUnCb0XTEdEZLeanyzPNwpjvgSOfDqsrTU',
+  'https://lh7-us.googleusercontent.com/wDrpmDECz63NjRRM6QyAG9JZ2B9WyVTHqf8H20I4BKLkEoepxa3qXvf3uzj5cuIa1ttp3AZf9y0nkjO2_2Alay32WAMip0KWwpf8mvo8A_q3PxPoS_BWQdR8vPhzfMrE7IbCoAJ6i4SevOjywUjG5k0',
+  'https://lh7-us.googleusercontent.com/0BXXTfH38WqUz1pklTwo3kQNxxswgaHbwsdkNFWTUHb1UlieiIcqCvhSxq1rC3kvJTw0ZHzvMJ1X5HeSEAMhCaxzAG6_DFAcqnvU2tXD-GwaGQ0B7-rHCAnkzHN4OOcPSUEZ3mqvcOvdH5K7k6VNCOk',
+  'https://lh7-us.googleusercontent.com/sx_q5dgVV0nkrznhnfwNTOLCxYGSePh1Nq5KR8f61CxewtKTwoWYK1EuMv24CwujheDhfqQK2FgW2le4Ot8A5M5csXQv5gqA1b_77ptPBUEATODhV2J017n_yC1rmyjMzQGnjy3nLw5nnMGAvc8GJKI',
+  'https://lh7-us.googleusercontent.com/p1SbNuPjcVN_maQlJL775nTQGYJ4kxr95PcaTPjzBYEcj3vaeIAbQ44twzb8Vz9mXuN1bLnfcXBy3d1IwihSveHdwIEccR_V7Bbk-eiTU4Tl6zT3AOrpVwDQbZv27qEybHEEimbrNN7nClQ9iBRtRDw',
+  'https://www.insightdiy.co.uk/live/news/wysiwyg/GROHE%20GIVE%20logo.jpg',
+  'https://lh7-us.googleusercontent.com/c_PlASOaEfcnsHNEjGHDgtV0L_NmCb5nYBlxTnadncEClA4zFp9VebpisZlWbQuY6wx19cSaa_BNYQ47M_Lqx3zwXSmnDEduO0bXwcwLYP8dUJauJvV7tq5kL9LwmQb7yMhhcgqo4B1MZvkyH__uD8w',
+  'https://lh7-us.googleusercontent.com/DdP4lrc4eBjYbDS6pIMtJrrFghAXo9LcQZaTCSyRDyKCzv-lWmZ1h9fv8GEW0AmeYUvx1xupw2rr4okKefxpgAd-tr2mUXelqetvMZA957Nf4hJL5jwAcZ8ZCM1LB1xok_05uKQli7mJ0Q-1GfHC9V4',
+  'https://lh7-us.googleusercontent.com/MrchyzFRpLIT6pB7p_OncUEPCAJgnZOVmVnSCoD8jJ5zrt-GzG2qAJovr6GBp1_9qbhGWjJVITmhKRVUnNhxaONBu9es1NOskcoKMB73Hacv6r54xkuCags9-RYw_RgInu1JJeV5d0i9Jh5DY2fz5hE',
+  'https://lh7-us.googleusercontent.com/DIloCv68Om2QeRLEHPn3Tlh2LwVbX6H4oB3bQD1_A2Z0Xv714KD6dis3Vhtl3AjLKuw_7F1LPNnaL7d8j-XW2PqOKKi11IlN4_I8Q6tH0pdIkJWXfdl3_Y4_d7L5Qz97EGGxGdZFc6oom-wC47hqDag',
+  'https://lh7-us.googleusercontent.com/x0Y_xxxvCfQfdscoUsLoGyxDAo_-D5I2M-nwqol_XJqrMgpjZp0DzI0eQv66cZeKCgAt2-47TqkOhfaXvuiWdnDBCCJ1cJ4Gjj900Zzne3pk7oxF90KcHdxqU8tAVWi1YxiYOOUiuoRiRfK9T1MfST0',
+  'https://lh7-us.googleusercontent.com/-tHfDhGK7yxUuqjqsxDfJsJWE4fsCaqUBcuccAlevS1otvKpQY4jHFpxV0d38qrqOeEL6gFnMh222oXQb1KK7k2cxIcilLjCHUUSV0vbhp-J0DYJBwJTHuq6K74xdkw96ycfrTJV1olVoFKG27V5A98',
 ]
