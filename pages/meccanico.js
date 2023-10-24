@@ -202,43 +202,43 @@ let secondo_anno = [
   {
     title: '',
     description: 'Programmazione di macchine a Controllo Numerico (CNC)',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/controll numerico cnc.jpg',
   },
   {
     title: '',
     description: 'Utilizzo tornio e fresa CNC per lavorazioni varie',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/cnc.jpg',
   },
   {
     title: '',
     description: 'Disegno con AutoCAD',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/disegno autocad.jpg',
   },
   {
     title: '',
     description:
       'Realizzazione di varie tipologie di pezzi complicati per le lavorazioni',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/pezzi complicati.jpg',
   },
   {
     title: '',
     description: 'Simulazione al PC per tornio CNC',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/simualzione cnc.jpg',
   },
   {
     title: '',
     description: 'Uso del micrometro',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/micrometro.jpg',
   },
   {
     title: '',
     description: 'Saldatura TIG-MIG-MAG',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/saldatura.jpg',
   },
   {
     title: '',
     description: 'Realizzazione accoppiamenti',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/accoppiamewnti.jpg',
   },
   {
     title: '',
@@ -248,12 +248,12 @@ let secondo_anno = [
   {
     title: '',
     description: 'Manutenzione alle macchine utensili tradizionali',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/macchine tradizionali.jpg',
   },
   {
     title: '',
     description: 'Lubrificazione con olio refrigerante dei macchinari',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/olio lubrificante.jpg',
   },
 ]
 
