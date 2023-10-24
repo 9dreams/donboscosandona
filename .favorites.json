@@ -1,0 +1,26 @@
+[
+    {
+        "type": "Directory",
+        "name": "/Users/andrea/donboscosandona/pages",
+        "parent_id": null,
+        "workspaceRoot": "/Users/andrea/donboscosandona",
+        "workspacePath": "pages",
+        "id": "xZROpe54mTawgMFJ"
+    },
+    {
+        "type": "Directory",
+        "name": "/Users/andrea/donboscosandona/components",
+        "parent_id": null,
+        "workspaceRoot": "/Users/andrea/donboscosandona",
+        "workspacePath": "components",
+        "id": "9l2gfUnAR3GWuyEZ"
+    },
+    {
+        "type": "Directory",
+        "name": "/Users/andrea/donboscosandona/public",
+        "parent_id": null,
+        "workspaceRoot": "/Users/andrea/donboscosandona",
+        "workspacePath": "public",
+        "id": "72pCKl0GDkd6Vn9P"
+    }
+]

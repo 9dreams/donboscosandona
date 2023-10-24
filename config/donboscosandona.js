@@ -1,23 +1,23 @@
-import Logos from '/components/Logos'
+import NavBar from '/components/NavBar'
 import Footer from '/components/Footer'
 
 export const siteName = "CFP DON BOSCO"
 export const siteTitle = "CFP DON BOSCO - San Donà di Piave"
 export const siteDescription = "Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave"
+export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
 export const menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
     { title: 'Contatti', url: '/contatti' },
     { title: 'Dove siamo', url: '/dove-siamo' },
     { title: 'Privacy', url: '/privacy' },
-    { title: 'Trasparenza', url: '/trasparenza' },
+    { title: 'Informatico', url: '/informatico' },
 ]
 
-export const header = <Logos
-    logoUrl="/images/home/logo_donbosco.png"
-    sponsorUrl="/images/home/loghi_sponsor.png"
-    color="#FFFFFF"
-/>
+export const logoUrl =
+  'https://i.postimg.cc/zvqYsPKD/SFP-DON-BOSCO-SAN-DONA-BIANCO.png'
+
+export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 
 const menuFooter = [
     { title: 'Informatico', url: '/informatico' },

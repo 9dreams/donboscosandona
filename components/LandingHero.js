@@ -1,38 +1,54 @@
 import * as React from 'react'
-import Paper from '@mui/material/Paper'
+import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Unstable_Grid2'
 import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
-import { Toolbar } from '@mui/material'
-import Stack from '@mui/material/Stack';
+import Link from 'next/link'
+import Paper from '@mui/material/Paper'
+import styles from 'components/LandingHero.module.css'
+import Toolbar from '@mui/material/Toolbar'
+import Container from '@mui/material/Container'
+import IconButton from '@mui/material/IconButton'
+import MenuIcon from '@mui/icons-material/Menu'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
 
 export default function LandingHero(props) {
+  const [anchorElNav, setAnchorElNav] = React.useState(null)
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget)
+  }
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null)
+  }
+
   return (
     <Container
-      maxWidth={false}
+      maxWidth
       disableGutters={true}
       sx={{
-        height: '100vh',
+        height: props.height + 'vh',
+        padding: '0vh',
+        margin: '0vh',
+        width: '100%',
       }}
     >
-
       <Paper
         sx={{
           position: 'relative',
           color: '#fff',
           mb: 4,
-          height: '100vh',
+          height: props.height + 'vh',
           backgroundImage: 'url(' + props.imageUrl + ')',
           padding: 0,
           margin: 0,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover', // Centra l'immagine e la fa coprire l'intero sfondo senza bordi bianchi
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-
         <Box
           sx={{
             position: 'absolute',
@@ -40,136 +56,180 @@ export default function LandingHero(props) {
             bottom: 0,
             right: 0,
             left: 0,
-            backgroundColor: 'rgba(0,0,0,' + props.opacity + ')',
+            backgroundColor: 'rgba(0,0,0,' + props.opacity + ' )',
           }}
         />
 
-        <Container maxWidth='lg'>
-          <Grid item md={6}>
+        {/* Menù per dispositivi mobili */}
+        {props.menu && (
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size='large'
+              aria-label='menù'
+              aria-controls='menu-appbar'
+              aria-haspopup='true'
+              onClick={handleOpenNavMenu}
+              color='inherit'
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id='menu-appbar'
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {props.menu.map((item) => (
+                <MenuItem key={item.title} onClick={handleCloseNavMenu}>
+                  <Button
+                    color='inherit'
+                    noWrap
+                    key={item.title}
+                    href={item.url}
+                  >
+                    {item.title}
+                  </Button>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+        )}
+
+        {/* Menù per dispositivi desktop */}
+        {props.menu && (
+          <Grid container>
+            <Grid item md={3} xs={8}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  p: { xs: 3, md: 6 },
+                  pr: { md: 0 },
+                  top: 55,
+                }}
+              >
+                <Typography
+                  component='h2'
+                  variant='h6'
+                  color='inherit'
+                  gutterBottom
+                >
+                  {props.siteName}
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item md={9} className={styles.nav}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  p: { xs: 2, md: 5 },
+                  pr: { md: 0 },
+                  top: 0,
+                  right: 0,
+                  overflow: 'auto',
+                  width: '100%',
+                }}
+              >
+                <Toolbar
+                  component='nav'
+                  variant='dense'
+                  sx={{
+                    justifycontent: 'space-between',
+                    overflowX: 'auto',
+                    overflow: 'hidden',
+                    overflowWrap: 'break-word',
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: { xs: 'none', sm: 'block' },
+                      position: 'absolute',
+                      top: '1rem',
+                      right: '5rem',
+                    }}
+                  >
+                    {props.menu.map((item) => (
+                      <Button
+                        className={styles.link_settori}
+                        color='inherit'
+                        noWrap
+                        key={item.title}
+                        href={item.url}
+                        sx={{
+                          paddingLeft: '2rem',
+                        }}
+                      >
+                        {item.title}
+                      </Button>
+                    ))}
+                  </Box>
+                </Toolbar>
+              </Box>
+            </Grid>
+          </Grid>
+        )}
+
+        {/* Contenuto principale */}
+        <Grid container>
+          <Grid item md={2} />
+          <Grid item md={5}>
             <Box
               sx={{
                 position: 'relative',
                 p: { xs: 3, md: 6 },
                 pr: { md: 0 },
+                top: props.height / 2 - 10 + 'vh',
               }}
             >
-
-              <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={4}>
-                  <Grid xs={3}>
-                    <Stack sx={{
-                      paddingLeft: '50px'
-                    }}>
-
-                      <Button
-                        component="h3"
-                        variant="subtitle1"
-                        color="beige"
-                        marginTop="15px"
-                        marginLeft='0px'
-                        marginRight='20%'
-                        width='10%'
-                        href='#'
-                      >
-                        {props.siteName}
-                      </Button>
-                    </Stack>
-                  </Grid>
-
-                  <Grid xs={9}>
-                    <Toolbar
-                      component="nav"
-                      variant="dense"
-                      sx={{
-                        overflowX: 'auto',
-                        float: 'right'
-                      }}
-                    >
-                      {
-                        props.menu.map((link) => (
-                          <Button
-                            color="inherit"
-                            noWrap
-                            key={link.title}
-                            variant="body2"
-                            href={link.url}
-                            sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
-                          >
-                            {link.title}
-                          </Button>
-                        ))
-                      }
-                    </Toolbar>
-                  </Grid>
-                </Grid>
-              </Box>
-
-
-              <Stack
-                sx={{
-                  paddingTop: '200px'
-                }}>
-                <Typography
-                  component="h3"
-                  variant="h2"
-                  color=""
-                  paddingTop="px"
-                  width='600px'
-                >
-                  {props.title}
-                </Typography>
-              </Stack>
-
-              <Stack
-                sx={{
-                  marginTop: '50px'
-                }}>
-                <Typography
-                  component="h"
-                  variant="h6"
-                  color="lightgrey"
-                  paddingTop="0px"
-
-                >
-                  {props.description}
-                </Typography>
-              </Stack>
-
-              <Stack sx={{
-                marginTop: '70px',
-                paddingLeft: '0px',
-                marginLeft: '0px',
-                width: '160px',
-                backgroundColor: 'red'
-              }}>
-
+              <Typography
+                component='h1'
+                variant='h3'
+                color='inherit'
+                gutterBottom
+              >
+                {props.title}
+              </Typography>
+              <Typography component='h5' color='inherit' paragraph>
+                {props.description}
+              </Typography>
+              {props.buttonUrl && (
                 <Button
-                  variant="h6"
-                  backgroundColor="crimson"
-                  paddingTop="100px"
+                  variant='contained'
+                  size='large'
+                  color='error'
                   href={props.buttonUrl}
+                  className={styles.btlanding}
+                  sx={{
+                    marginTop: '1rem',
+                    borderRadius: '2rem',
+                    paddingLeft: '3rem',
+                    paddingRight: '3rem',
+                  }}
                 >
                   {props.buttonText}
                 </Button>
-              </Stack>
+              )}
             </Box>
           </Grid>
-        </Container>
+        </Grid>
       </Paper>
     </Container>
-  );
+  )
 }
 
-
-/*
-  <LandingHero
-  siteName="CFP DON BOSCO"
-  title="Your Story Starts With Us."
-  description="Every landing page needs a small description......."
-  imageUrl="https://url.dell.immagine"
-  opacity={ 0.7 }
-  buttonText="WATCH VIDEO"
-  buttonUrl="https://....."
-  menu={ menu }
-  />
-*/
+LandingHero.defaultProps = {
+  siteName: '',
+  menu: null,
+  height: 80,
+}

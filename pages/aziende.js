@@ -1,7 +1,7 @@
 import Container from '@mui/material/Container'
 import Head from 'next/head'
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero2'
+import LandingHero from '/components/LandingHero'
 
 
 export default function Home() {
