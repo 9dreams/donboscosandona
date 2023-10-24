@@ -243,7 +243,7 @@ let secondo_anno = [
   {
     title: '',
     description: 'Utilizzo della stampante 3D a filo continuo',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/stampa3d.jpg',
   },
   {
     title: '',
