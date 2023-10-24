@@ -261,27 +261,27 @@ let terzo_anno = [
   {
     title: '',
     description: 'Utilizzo di Inventor per disegni 3D e messa in tavola',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/3dmessaintavola.jpg',
   },
   {
     title: '',
     description: 'Utilizzo CAD-CAM',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/cadmeccanico.jpg',
   },
   {
     title: '',
     description: 'Progettazione di pezzi meccanici',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/progmec.png',
   },
   {
     title: '',
     description: 'Utilizzo tolleranze per pezzi di maggior precisione',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/tolleranza.png',
   },
   {
     title: '',
     description: 'Prototipazione rapida con stampante 3D',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/fsi-stampa-3d.png',
   },
 ]
 
@@ -289,33 +289,33 @@ let quarto_anno = [
   {
     title: '',
     description: 'Utilizzo Inventor per modellazione 3D',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/inventormodellazione3d.jpg',
   },
   {
     title: '',
     description:
       'Utilizzo software CAD-CAM per la gestione di macchine utensili',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/cadcam2.png',
   },
   {
     title: '',
     description: 'CNC con utilizzo di utensili motorizzati',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/macchine-cnc.jpg',
   },
   {
     title: '',
     description: 'Gestione cicli-fasi di lavoro',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/1_meccanica.jpg',
   },
   {
     title: '',
     description: 'Sistemi di produzione',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/software-mes-produzione-1024x640.jpg',
   },
   {
     title: '',
     description: 'Stampa 3D di complessivi meccanici',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/stampa3dmetallo.jpg.9948dab902dafe72fe3c04f7de37cd28.jpg',
   },
 ]
 
