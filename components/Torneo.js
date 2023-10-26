@@ -1,40 +1,53 @@
+import React from 'react';
 import Styles from './Torneo.module.css';
 import { Container } from '@mui/material';
 
 const Torneo = () => {
+  const numPizzettes = 20; // Numero di pizzette da mostrare
+
+  const createRandomPosition = () => {
+    const randomX = Math.floor(Math.random() * 100) + 'vw'; // Posizione orizzontale casuale
+    const randomY = Math.floor(Math.random() * 100) + 'vh'; // Posizione verticale casuale
+    return { left: randomX, top: randomY };
+  };
+
+  const pizzettes = Array.from({ length: numPizzettes }, (_, index) => (
+    <div
+      key={index}
+      className={Styles.pizzette}
+      style={{
+        backgroundImage: `url("/images/pizza/pizza.png")`,
+        ...createRandomPosition(),
+      }}
+    />
+  ));
 
   return (
-    <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', backgroundImage: '/images/pizza/pizzeria.jpg', borderRadius: '50px', border: '2px black solid', }}>
-      <div style={{
-        position: 'absolute',
-        left: 40,
-        border: '2px solid black', 
-        width: '400px',
-        height: '200px',
-        zIndex: 1,
-        backgroundColor: 'rgba(178, 79, 172, 0.5)',
-      }}>
-        
+    <Container
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '80vh',
+        backgroundImage: 'url("/images/pizza/pizzeria.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center', // Imposta il posizionamento al centro
+        position: 'relative',
+        overflow: 'hidden', // Nasconde le pizzette che cadono al di fuori del container
+      }}
+    >
+      {/* La pizza che gira */}
+      <div>
+        <img
+          className={Styles.rotatingimage}
+          src="/images/pizza/pizza.png"
+          alt="Pizza"
+          style={{ zIndex: '-1' }}
+        />
       </div>
-    <div>
-      <img
-        className={Styles.rotatingimage}
-        src="/images/pizza/pizza.png" 
-        alt="Pizza"
-        style={{zIndex:'-1' }}
-      />
-    </div>
-    <div style={{
-        position: 'absolute',
-        right: 40,
-        border: '2px solid black', 
-        width: '400px',
-        height: '200px',
-        zIndex: 1,
-        backgroundColor: 'rgba(51, 172, 203, 0.5)',
-      }}>
 
-      </div>
+      {/* Le pizzette che cadono dall'alto e girano contemporaneamente */}
+      <div className={Styles.pizzettesContainer}>{pizzettes}</div>
     </Container>
   );
 };

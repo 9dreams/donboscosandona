@@ -1,14 +1,46 @@
 .rotatingimage {
-    width: 400px; /* Modifica le dimensioni come preferisci */
+    width: 400px; 
     height: 400px;
-    animation: rotate 7s linear infinite; /* Definisci l'animazione "rotate" */
+    animation: rotate 7s linear infinite; 
   }
   
   @keyframes rotate {
     from {
-      transform: rotate(0deg); /* Angolo di rotazione iniziale */
+      transform: rotate(0deg); 
     }
     to {
-      transform: rotate(360deg); /* Angolo di rotazione finale (una rotazione completa) */
+      transform: rotate(360deg);
     }
+  }
+
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-20vh);
+      opacity: 1; /* Inizia invisibile */
+    }
+    100% {
+      transform: translateY(110vh);
+      opacity: 1; /* Diventa visibile */
+    }
+  }
+  
+  @keyframes fallRotate {
+    0% {
+      transform: translateY(-20vh) rotate(0deg);
+      opacity: 1; /* Inizia invisibile */
+    }
+    100% {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 1; /* Diventa visibile */
+    }
+  }
+  
+  .pizzette {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: fallRotate 10s linear infinite; /* Regola la durata dell'animazione */
   }

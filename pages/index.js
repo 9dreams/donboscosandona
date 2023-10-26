@@ -191,7 +191,6 @@ export default function Home({ data }) {
         cardWidthXs={14}
         aspectRatio={'3.5 / 2'}
       />
-      <Torneo/>
       <SwiperNews title='News' data={data} limit={12} />
       <Products
         title='I settori'
