@@ -15,7 +15,7 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <img
-        src='/images/informatico/settore-informatico.jpg'
+        src='/images/informatico/settore-informatico.png'
         style={{ width: '100%' }}
       />
       <Paragraph
@@ -53,7 +53,6 @@ export default function Home({ data }) {
       <Paragraph
         title='Tecnico Informatico'
         subtitle='Diploma Professionale Quadriennale in Sistema Duale con indirizzo Sviluppo soluzioni ICT'
-        leftImageUrl='https://archive.donboscosandona.it/img/ck/ef718d5f3b16b5b074f7305e4bf7bad73ede5378.jpeg'
       >
         Il Tecnico informatico interviene con autonomia - nelle specifiche
         assegnate - al presidio dei processi relativi ai sistemi, reti, data
@@ -282,7 +281,7 @@ let secondo_anno = [
   {
     title: 'Raspberry',
     description: 'Hai presente Arduino visto in prima? Raspberry è una sua evoluzione e ti permette di controllare ingressi e uscite collegati al mondo reale con un vero e proprio computer che sta nel palmo di una mano. Un ottimo banco di prova per le tue conoscenze di Linux e della programmazione.',
-    immagineUrl: '/images/informatico/raspberry.png',
+    immagineUrl: '/images/informatico/rasp-berry.png',
   },
   {
     title: 'Versioning',

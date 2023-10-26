@@ -64,7 +64,7 @@ export default function MyCarousel({
             />
             <Container maxWidth='lg'>
               <Grid container>
-                <Grid item md={6}>
+                <Grid item md={8}>
                   <Box
                     sx={{
                       position: {xs: 'absolute', md: 'relative'},
