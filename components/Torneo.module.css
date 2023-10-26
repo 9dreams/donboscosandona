@@ -1,0 +1,14 @@
+.rotatingimage {
+    width: 400px; /* Modifica le dimensioni come preferisci */
+    height: 400px;
+    animation: rotate 7s linear infinite; /* Definisci l'animazione "rotate" */
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg); /* Angolo di rotazione iniziale */
+    }
+    to {
+      transform: rotate(360deg); /* Angolo di rotazione finale (una rotazione completa) */
+    }
+  }

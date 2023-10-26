@@ -1,24 +1,15 @@
-import React, { useState } from 'react';
+import Styles from './Torneo.module.css'; // Assicurati di creare questo file CSS
+
 
 const Torneo = () => {
-  const [rotation, setRotation] = useState(0);
-
-  const rotatePizza = () => {
-    setRotation(rotation + 1);
-    requestAnimationFrame(rotatePizza);
-  };
-
-  // Inizia l'animazione quando il componente si monta
-  React.useEffect(() => {
-    rotatePizza();
-  }, []);
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <img
-        url="/components/pizza.png" // Assumi che tu abbia un'immagine di una pizza nella cartella pubblica
+        className={Styles.rotatingimage}
+        src="/images/pizza.png" // Assumi che tu abbia un'immagine di una pizza nella cartella pubblica
         alt="Pizza"
-        style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 0.1s' }}
+        style={{ }}
       />
     </div>
   );
