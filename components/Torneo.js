@@ -3,22 +3,20 @@ import Styles from "./Torneo.module.css";
 import { Container } from "@mui/material";
 
 const Torneo = () => {
-
-  const [rotatePizza, setRotatePizza] = useState(false); 
+  const [rotatePizza, setRotatePizza] = useState(false);
   const [activePizza, setActivePizza] = useState(false);
 
-    const toggleRotatePizza = () => {
-      if (activePizza) {
-        setActivePizza(false);
-        setRotatePizza(false)
-      } else {
-        setRotatePizza(true); 
-        setTimeout(() => {
-          setActivePizza(true); 
-        }, 1500); 
-        
-      }
-    };
+  const toggleRotatePizza = () => {
+    if (activePizza) {
+      setActivePizza(false);
+      setRotatePizza(false);
+    } else {
+      setRotatePizza(true);
+      setTimeout(() => {
+        setActivePizza(true);
+      }, 1250);
+    }
+  };
 
   const numPizzettes = 15;
   const numPizzettes1 = 15;
@@ -51,7 +49,6 @@ const Torneo = () => {
     />
   ));
 
-
   return (
     <Container
       maxWidth
@@ -70,28 +67,53 @@ const Torneo = () => {
     >
       <div>
         <img
-           className={`${Styles.rotatingImages} ${
+          className={`${Styles.rotatingImages} ${
             rotatePizza ? Styles.pizzaPodio : ""
           }`}
-          src={activePizza ? "/images/pizza/pizzadietro.png" : "/images/pizza/pizza.png"}
+          src={
+            activePizza
+              ? "/images/pizza/pizzadietro.png"
+              : "/images/pizza/pizza.png"
+          }
           alt="Pizza"
           style={{ zIndex: "1" }}
         />
         {activePizza && (
-          <div className={Styles.punteggio}>
-            <h3 style={{textAlign: 'center',}}>Podio</h3>
-            <p alt='2 posto' style={{paddingLeft: '55px'}}>3F</p>
-            <p alt='1 posto' style={{paddingLeft:'120px', position: 'absolute', top: 42,}}>2D</p>
-            <p alt='3 posto' style={{paddingLeft:'190px', position: 'absolute', top: 60,}}>2F</p>
-          </div>
-        )}
+        <div
+          className={` ${
+            activePizza ? Styles.punteggio : ""
+          }`}
+        >
+          <h3 style={{ textAlign: "center" }}>Podio</h3>
+          <p alt="2 posto" style={{ paddingLeft: "55px" }}>
+            3F
+          </p>
+          <p
+            alt="1 posto"
+            style={{
+              paddingLeft: "120px",
+              position: "absolute",
+              top: 42,
+            }}
+          >
+            2D
+          </p>
+          <p
+            alt="3 posto"
+            style={{
+              paddingLeft: "190px",
+              position: "absolute",
+              top: 60,
+            }}
+          >
+            2F
+          </p>
+        </div>)}
       </div>
 
-      
       <div>
         <button onClick={toggleRotatePizza}>Gira Pizza</button>
       </div>
-      
 
       <div>{pizzettes}</div>
       <div>{pizzettes1}</div>
