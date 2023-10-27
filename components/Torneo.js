@@ -73,10 +73,18 @@ const Torneo = () => {
            className={`${Styles.rotatingImages} ${
             rotatePizza ? Styles.pizzaPodio : ""
           }`}
-          src={activePizza ? "/images/pizza/pizza2.png" : "/images/pizza/pizza.png"}
+          src={activePizza ? "/images/pizza/pizzadietro.png" : "/images/pizza/pizza.png"}
           alt="Pizza"
           style={{ zIndex: "1" }}
         />
+        {activePizza && (
+          <div className={Styles.punteggio}>
+            <h3 style={{textAlign: 'center',}}>Podio</h3>
+            <p alt='2 posto' style={{paddingLeft: '55px'}}>3F</p>
+            <p alt='1 posto' style={{paddingLeft:'120px', position: 'absolute', top: 42,}}>2D</p>
+            <p alt='3 posto' style={{paddingLeft:'190px', position: 'absolute', top: 60,}}>2F</p>
+          </div>
+        )}
       </div>
 
       
