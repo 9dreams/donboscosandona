@@ -10,6 +10,7 @@ const Torneo = () => {
     const toggleRotatePizza = () => {
       if (activePizza) {
         setActivePizza(false);
+        setRotatePizza(false)
       } else {
         setRotatePizza(true); 
         setTimeout(() => {
@@ -72,7 +73,7 @@ const Torneo = () => {
            className={`${Styles.rotatingImages} ${
             rotatePizza ? Styles.pizzaPodio : ""
           }`}
-          src={activePizza ? "/images/pizza/pizza2.png" : "/images/pizza/pizza.png?v=1"}
+          src={activePizza ? "/images/pizza/pizza2.png" : "/images/pizza/pizza.png"}
           alt="Pizza"
           style={{ zIndex: "1" }}
         />
