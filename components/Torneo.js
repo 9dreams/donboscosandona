@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
-import Styles from './Torneo.module.css';
-import { Container } from '@mui/material';
+import React, { useState } from "react";
+import Styles from "./Torneo.module.css";
+import { Container } from "@mui/material";
 
 const Torneo = () => {
+
+  const [rotatePizza, setRotatePizza] = useState(false); 
+  const [activePizza, setActivePizza] = useState(false);
+
+    const toggleRotatePizza = () => {
+      if (activePizza) {
+        setActivePizza(false);
+      } else {
+        setRotatePizza(true); 
+        setTimeout(() => {
+          setActivePizza(true); 
+        }, 1500); 
+        
+      }
+    };
+
   const numPizzettes = 15;
   const numPizzettes1 = 15;
 
   const createRandomPosition = () => {
-    const randomX = Math.floor(Math.random() * 100) + 'vw'; 
-    const randomY = Math.floor(Math.random() * 100) + 'vh'; 
+    const randomX = Math.floor(Math.random() * 100) + "vw";
+    const randomY = Math.floor(Math.random() * 100) + "vh";
     return { left: randomX, top: randomY };
   };
 
@@ -34,40 +50,39 @@ const Torneo = () => {
     />
   ));
 
-  function Example() {
-     const [count, setCount] = useState(0);
-  }
-
 
   return (
     <Container
-    maxWidth
-    disableGutters={true}
+      maxWidth
+      disableGutters={true}
       style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '80vh',
-        backgroundColor: '#588fe8',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        position: 'relative',
-        overflow: 'hidden', 
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "80vh",
+        backgroundColor: "#588fe8",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
       <div>
         <img
-          className={Styles.rotatingimage}
-          src="/images/pizza/pizza.png"
+           className={`${Styles.rotatingImages} ${
+            rotatePizza ? Styles.pizzaPodio : ""
+          }`}
+          src={activePizza ? "/images/pizza/pizza2.png" : "/images/pizza/pizza.png?v=1"}
           alt="Pizza"
-          style={{ zIndex: '-1' }}
+          style={{ zIndex: "1" }}
         />
       </div>
-       
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-10:         Click me
-11:   </button>
+
+      
+      <div>
+        <button onClick={toggleRotatePizza}>Gira Pizza</button>
+      </div>
+      
 
       <div>{pizzettes}</div>
       <div>{pizzettes1}</div>
@@ -75,8 +90,4 @@ const Torneo = () => {
   );
 };
 
-
-
-
 export default Torneo;
-
