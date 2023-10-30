@@ -6,15 +6,21 @@ const Torneo = () => {
   const [rotatePizza, setRotatePizza] = useState(false);
   const [activePizza, setActivePizza] = useState(false);
 
+  const [activePizza1, setActivePizza1] = useState(false);
+
   const toggleRotatePizza = () => {
     if (activePizza) {
       setActivePizza(false);
       setRotatePizza(false);
+      setActivePizza1(false)
     } else {
       setRotatePizza(true);
       setTimeout(() => {
         setActivePizza(true);
       }, 1250);
+      setTimeout(() => {
+        setActivePizza1(true)
+      }, 2450);
     }
   };
 
@@ -78,10 +84,10 @@ const Torneo = () => {
           alt="Pizza"
           style={{ zIndex: "1" }}
         />
-        {activePizza && (
+        {activePizza1 && (
         <div
           className={` ${
-            activePizza ? Styles.punteggio : ""
+            activePizza1 ? Styles.punteggio : ""
           }`}
         >
           <h3 style={{ textAlign: "center" }}>Podio</h3>
