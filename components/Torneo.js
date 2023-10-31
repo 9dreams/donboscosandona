@@ -91,17 +91,18 @@ const Torneo = () => {
           }`}
         ><Grid item xs={6} sx={{textAlign:'center'}}><h3>Podio</h3></Grid>
           <Grid container>
-          <Grid item xs={3} >
-            
+          <Grid item xs={3} ></Grid>
+
+            <Grid item xs={3} sx={{paddingTop: '30px',}}>
+              <Typography variant="body1">2F</Typography>
             </Grid>
-            <Grid item xs={3} sx={{textAlign:'center'}}>
+
+            <Grid item  xs={3} sx={{paddingTop: '10px'}}>
               <Typography variant="body1">3F</Typography>
             </Grid>
-            <Grid item  xs={3} sx={{paddingTop: '15px'}}>
-              <Typography variant="body1">3F</Typography>
-            </Grid>
-            <Grid item  >
-              <Typography variant="body1">3F</Typography>
+
+            <Grid item sx={{paddingTop: '40px'}}>
+              <Typography variant="body1">2D</Typography>
             </Grid>
             
           </Grid>
