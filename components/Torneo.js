@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Styles from "./Torneo.module.css";
-import { Container } from "@mui/material";
+import { Container, Grid,Typography } from "@mui/material";
 
 const Torneo = () => {
   const [rotatePizza, setRotatePizza] = useState(false);
@@ -78,7 +78,7 @@ const Torneo = () => {
           }`}
           src={
             activePizza
-              ? "/images/pizza/pizzadietro.png"
+              ? "/images/pizza/pizzadietro1.png"
               : "/images/pizza/pizza.png"
           }
           alt="Pizza"
@@ -89,32 +89,24 @@ const Torneo = () => {
           className={` ${
             activePizza1 ? Styles.punteggio : ""
           }`}
-        >
-          <h3 style={{ textAlign: "center" }}>Podio</h3>
-          <p alt="2 posto" style={{ paddingLeft: "55px" }}>
-            3F
-          </p>
-          <p
-            alt="1 posto"
-            style={{
-              paddingLeft: "120px",
-              position: "absolute",
-              top: 42,
-            }}
-          >
-            2D
-          </p>
-          <p
-            alt="3 posto"
-            style={{
-              paddingLeft: "190px",
-              position: "absolute",
-              top: 60,
-            }}
-          >
-            2F
-          </p>
-        </div>)}
+        ><Grid item xs={6} sx={{textAlign:'center'}}><h3>Podio</h3></Grid>
+          <Grid container>
+          <Grid item xs={3} >
+            
+            </Grid>
+            <Grid item xs={3} sx={{textAlign:'center'}}>
+              <Typography variant="body1">3F</Typography>
+            </Grid>
+            <Grid item  xs={3} sx={{paddingTop: '15px'}}>
+              <Typography variant="body1">3F</Typography>
+            </Grid>
+            <Grid item  >
+              <Typography variant="body1">3F</Typography>
+            </Grid>
+            
+          </Grid>
+        </div>
+        )}
       </div>
 
       <div>

@@ -1,14 +1,14 @@
 .rotatingImages {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   animation: rotate 7s linear infinite;
   position: relative;
   z-index: 1;
 }
 
 .pizzaPodio {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   animation: rotateY 3s linear ;
   position: relative;
   transform: rotateY(180deg);
@@ -68,12 +68,12 @@
     display: block;
     font-size: large;
     position: absolute;
-    top: 300px;
-    left: 42%;
+    top: 280px;
+    left: 39%;
     z-index: 2;
     background-image: url('/images/pizza/podio.jpg');
-    width: 250px;
-    height: 150px;
+    width: 350px;
+    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 30px;
