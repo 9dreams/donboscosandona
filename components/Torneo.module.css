@@ -1,3 +1,40 @@
+
+@keyframes fallRotate {
+  0% {
+    transform: translateY(-20vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .rotatingImages {
   width: 600px;
   height: 600px;
@@ -15,67 +52,85 @@
   z-index: 0;
 }
 
-@keyframes rotate {
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-  
+.pizzette,
+.pizzette1 {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fallRotate 10s linear infinite;
 }
 
-  @keyframes fallRotate {
-    0% {
-      transform: translateY(-20vh) rotate(0deg);
-    }
-    100% {
-      transform: translateY(110vh) rotate(360deg);
-    }
+.punteggio {
+  display: block;
+  font-size: large;
+  position: absolute;
+  top: 45%;
+  left: 49%;
+  transform: translate(-50%, -50%); /* Centra il contenuto verticalmente ed orizzontalmente */
+  z-index: 2;
+  background-image: url('/images/pizza/podio.jpg');
+  width: 370px;
+  height: 210px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in forwards;
+}
+
+
+.button {
+  background-color: red;
+  font-size: 16px;
+  border-radius: 50px;
+  border: gold 5px solid;
+  padding: 5px;
+  width: 150px;
+  color: white;
+  z-index: 4;
+  left: 35%
+}
+
+.button:hover {
+  background-color: rgb(131, 33, 33);
+  font-size: 16px;
+  border-radius: 50px;
+  border: rgb(177, 154, 26) 5px solid;
+  padding: 5px;
+  width: 150px;
+  color: rgb(172, 164, 164);
+}
+
+/* Stili per dispositivi di larghezza inferiore a 600px (dispositivi mobili) */
+@media (max-width: 600px) {
+  .rotatingImages,
+  .pizzaPodio {
+    width: 350px;
+    height: 350px;
   }
 
-  @keyframes rotateY {
-    0%{
-      transform: rotateY(0deg);
-    }
-    100%{
-      transform: rotateY(180deg);
-    }
-  }
-
-  .pizzette {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    animation: fallRotate 10s linear infinite;
-  }
-
+  .pizzette,
   .pizzette1 {
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    animation: fallRotate 10s linear infinite; 
+    width: 30px;
+    height: 30px;
   }
 
-
-
-  
   .punteggio {
-    display: block;
-    font-size: large;
-    position: absolute;
-    top: 280px;
-    left: 39%;
+    width: 370px;
+    height: 210px;
+    top: 22%; /* Regola la posizione verticale */
+    left: 50%; /* Centra orizzontalmente */
+    transform: translateX(-74%); /* Centra orizzontalmente */
     z-index: 2;
     background-image: url('/images/pizza/podio.jpg');
-    width: 350px;
-    height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 30px;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
+    scale: 0.7 0.7;
   }
-  
+  .button{
+    left: 30%
+  }
+}
