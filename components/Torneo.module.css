@@ -66,9 +66,9 @@
   display: block;
   font-size: large;
   position: absolute;
-  top: 45%;
+  top: 46%;
   left: 49%;
-  transform: translate(-50%, -50%); /* Centra il contenuto verticalmente ed orizzontalmente */
+  transform: translate(-50%, -50%); 
   z-index: 2;
   background-image: url('/images/pizza/podio.jpg');
   width: 370px;
@@ -77,6 +77,7 @@
   background-repeat: no-repeat;
   opacity: 0;
   animation: fadeInAnimation 2s ease-in forwards;
+  border-radius: 30px;
 }
 
 
@@ -102,7 +103,7 @@
   color: rgb(172, 164, 164);
 }
 
-/* Stili per dispositivi di larghezza inferiore a 600px (dispositivi mobili) */
+
 @media (max-width: 600px) {
   .rotatingImages,
   .pizzaPodio {
@@ -119,9 +120,9 @@
   .punteggio {
     width: 370px;
     height: 210px;
-    top: 22%; /* Regola la posizione verticale */
-    left: 50%; /* Centra orizzontalmente */
-    transform: translateX(-74%); /* Centra orizzontalmente */
+    top: 19%; 
+    left: 50%; 
+    transform: translateX(-74%);
     z-index: 2;
     background-image: url('/images/pizza/podio.jpg');
     background-size: cover;
@@ -132,5 +133,8 @@
   }
   .button{
     left: 30%
+  }
+  .container{
+    min-height: 160vh;
   }
 }
