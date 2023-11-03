@@ -99,7 +99,7 @@ const Torneo = () => {
               </Grid>
               <Grid
                 container
-                sx={{ top: 90, position: "absolute", left: 60, zIndex: 5 }}
+                sx={{ top: 90, position: "absolute", left: 54, zIndex: 5 }}
               >
                 <Grid item xs={1}></Grid>
                 <Grid item xs={3}>
@@ -145,7 +145,7 @@ const Torneo = () => {
                 <Grid item xs={3}>
                   <Typography
                     variant="body1"
-                    sx={{ color: "black", fontSize: "18px", backgroundColor:'#274E13', width: '40px', pl:'10px', borderRadius: '30px'}}
+                    sx={{ color: "black", fontSize: "18px", backgroundColor:'#357214', width: '40px', pl:'10px', borderRadius: '30px'}}
                   >
                     264
                   </Typography>
@@ -173,9 +173,8 @@ const Torneo = () => {
           </div>
         </Grid>
 
-        <Grid item xs={12} sm={4}>
-          <Typography>Colonna 3</Typography>
-          <table style={{ border: "black 2px solid", width: '100%', textAlign: 'center',  }}>
+        <Grid item xs={12} sm={4} >
+          <table style={{  width: '100%', textAlign: 'center',backgroundColor: 'white'  }}>
             <tr>
               <th>Classe</th>
               <th>Punteggi</th>
