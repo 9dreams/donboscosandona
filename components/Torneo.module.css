@@ -41,6 +41,7 @@
   animation: rotate 7s linear infinite;
   position: relative;
   z-index: 1;
+  
 }
 
 .pizzaPodio {
@@ -67,7 +68,7 @@
   font-size: large;
   position: absolute;
   top: 46%;
-  left: 49%;
+  left: 41%;
   transform: translate(-50%, -50%); 
   z-index: 2;
   background-image: url('/images/pizza/podio.jpg');
@@ -120,7 +121,7 @@
   .punteggio {
     width: 370px;
     height: 210px;
-    top: 19%; 
+    top: 14%; 
     left: 50%; 
     transform: translateX(-74%);
     z-index: 2;

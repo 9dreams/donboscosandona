@@ -67,10 +67,7 @@ const Torneo = () => {
       className={Styles.container}
     >
       <Grid container sx={{ marginTop: 10 }}>
-        <Grid item xs={12} sm={4} sx={{ paddingLeft: 10 }}>
-          <Typography>Colonna 1</Typography>
-
-          
+        <Grid item xs={12} sm={3} sx={{ paddingLeft: 10 }}>
         </Grid>
 
         <Grid item xs={12} sm={4}>
@@ -107,7 +104,7 @@ const Torneo = () => {
                     variant="body1"
                     sx={{ paddingTop: 2, fontSize: "18px" }}
                   >
-                    2F
+                    1B {/*secondo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={3}>
@@ -115,7 +112,7 @@ const Torneo = () => {
                     variant="body1"
                     sx={{ color: "black", fontSize: "18px" }}
                   >
-                    2D
+                    1F {/* primo posto*/}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
@@ -123,42 +120,65 @@ const Torneo = () => {
                     variant="body1"
                     sx={{ paddingTop: 3, fontSize: "18px" }}
                   >
-                    3F
+                    2F {/* terzo posto*/}
                   </Typography>
                 </Grid>
-
               </Grid>
               <Grid
-               container
-               xs={12}
-               sx={{ position: 'absolute', left: 40, top: 180, textDecoration: 'duoble'}}
+                container
+                xs={12}
+                sx={{
+                  position: "absolute",
+                  left: 40,
+                  top: 180,
+                  textDecoration: "duoble",
+                }}
               >
                 <Grid item xs={1}></Grid>
                 <Grid item xs={3}>
                   <Typography
                     variant="body1"
-                    sx={{  fontSize: "18px", backgroundColor:'#6AA850', width: '40px', pl:'10px', borderRadius: '30px'}}
+                    sx={{
+                      fontSize: "18px",
+                      backgroundColor: "#6AA850",
+                      width: "40px",
+                      pl: "10px",
+                      borderRadius: "30px",
+                    }}
                   >
-                    230
+                    230 {/*secondo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={3}>
                   <Typography
                     variant="body1"
-                    sx={{ color: "black", fontSize: "18px", backgroundColor:'#357214', width: '40px', pl:'10px', borderRadius: '30px'}}
+                    sx={{
+                      color: "black",
+                      fontSize: "18px",
+                      backgroundColor: "#357214",
+                      width: "40px",
+                      pl: "10px",
+                      borderRadius: "30px",
+                    }}
                   >
-                    264
+                    263 {/*primo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   <Typography
                     variant="body1"
-                    sx={{  fontSize: "18px", backgroundColor:'#D9EAD3', width: '40px', pl:'10px', borderRadius: '30px' }}
+                    sx={{
+                      fontSize: "18px",
+                      backgroundColor: "#D9EAD3",
+                      width: "40px",
+                      pl: "10px",
+                      borderRadius: "30px",
+                    }}
                   >
-                    224
+                    224 {/*terzo posto */}
                   </Typography>
                 </Grid>
-                </Grid>
+              </Grid>
             </div>
           )}
 
@@ -173,11 +193,11 @@ const Torneo = () => {
           </div>
         </Grid>
 
-        <Grid item xs={12} sm={4} >
-          <table style={{  width: '100%', textAlign: 'center',backgroundColor: 'white'  }}>
+        <Grid item xs={12} sm={4}>
+          <table style={{ textAlign: "center" }}>
             <tr>
-              <th>Classe</th>
-              <th>Punteggi</th>
+              <th id="th1">Classe</th>
+              <th id="th2">Punteggi</th>
             </tr>
 
             {sezioni.map((sezione) => (
@@ -190,14 +210,35 @@ const Torneo = () => {
 
           <style jsx>
             {`
-              .table-container {
-                border: 2px solid black;
-                height: 50px;
+              table {
+                width: 230px;
+                border-collapse: collapse;
+                margin: 10px auto;
               }
-              table,
-              th,
+
+              th {
+                padding: 10px;
+                background-color: slategray;
+                color: white;
+                text-align: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+              }
+
+              #th1 {
+                background-color: gold;
+              }
+
+              #th2 {
+                background-color: crimson;
+              }
+
               td {
-                border: 1px solid black;
+                padding: 5px;
+                text-align: center;
+                border-top: 1px solid black;
+                border-radius: 0;
+                background-color: white;
               }
             `}
           </style>
@@ -213,24 +254,22 @@ const Torneo = () => {
 export default Torneo;
 
 let sezioni = [
-  { classe: "1A", punti: "345", },
-  { classe: "1B", punti: "345", },
-  { classe: "1C", punti: "345", },
-  { classe: "1D", punti: "345", },
-  { classe: "1E", punti: "345", },
-  { classe: "1F", punti: "345", },
-  { classe: "2A", punti: "345", },
-  { classe: "2B", punti: "345", },
-  { classe: "2C", punti: "345", },
-  { classe: "2E", punti: "345", },
-  { classe: "3A", punti: "345", },
-  { classe: "3B", punti: "345", },
-  { classe: "3C", punti: "345", },
-  { classe: "3D", punti: "345", },
-  { classe: "3E", punti: "345", },
-  { classe: "4A", punti: "345", },
-  { classe: "4B", punti: "345", },
-
+  { classe: "1A", punti: "199" },
+  { classe: "1C", punti: "223" },
+  { classe: "1D", punti: "183" },
+  { classe: "1E", punti: "173" },
+  { classe: "2A", punti: "189" },
+  { classe: "2B", punti: "163" },
+  { classe: "2C", punti: "182" },
+  { classe: "2D", punti: "213" },
+  { classe: "2E", punti: "160" },
+  { classe: "3A", punti: "165" },
+  { classe: "3B", punti: "126" },
+  { classe: "3C", punti: "129" },
+  { classe: "3D", punti: "198" },
+  { classe: "3E", punti: "155" },
+  { classe: "3F", punti: "220" },
+  { classe: "4A", punti: "169" },
+  { classe: "4B", punti: "191" },
 ];
 
-{/*28, 74, 48, 32, 47, 74, 37,*/}
