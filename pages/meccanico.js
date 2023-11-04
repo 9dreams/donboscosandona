@@ -152,49 +152,49 @@ let primo_anno = [
   {
     title: '',
     description: 'Sicurezza',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/sicurezza.png',
   },
   {
     title: '',
     description: 'Prime conoscenze della meccanica industriale',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/primeconoscenze.png',
   },
   {
     title: '',
     description: "Spiegazione dell'utensileria di base",
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/utensileriadibase.png',
   },
   {
     title: '',
     description: 'Lettura di una tavola tecnica',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/tabelle.png',
   },
   {
     title: '',
     description:
       'Utilizzo di macchine tradizionali come tornio, fresa, trapano a colonna per lavorazioni base e saldatrice',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/tornio.png',
   },
   {
     title: '',
     description: 'Realizzazione e lettura fasi di lavoro',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/fasidilavoro.png',
   },
   {
     title: '',
     description:
       'Utilizzo di strumenti di misura e precisione quali il calibro ventesimale',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/calibro.png',
   },
   {
     title: '',
     description: 'Utilizzo minifresa CNC',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/cnc.png',
   },
   {
     title: '',
     description: 'Lettura tolleranze',
-    immagineUrl: '',
+    immagineUrl: '/images/meccanico/tolleranze.png',
   },
 ]
 
