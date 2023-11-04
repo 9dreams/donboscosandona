@@ -54,6 +54,15 @@ const Torneo = () => {
     }
   };
 
+  const idPrimoPosto = "1";
+  const idSecondoPosto = "2";
+  const idTerzoPosto = "3";
+
+  // Trova gli oggetti del podio in base all'ID
+  const primoPosto = podio.find((element) => element.id === idPrimoPosto);
+  const secondoPosto = podio.find((element) => element.id === idSecondoPosto);
+  const terzoPosto = podio.find((element) => element.id === idTerzoPosto);
+
   return (
     <Container
       maxWidth
@@ -67,7 +76,7 @@ const Torneo = () => {
       className={Styles.container}
     >
       <Grid container sx={{ marginTop: 10 }}>
-        <Grid item xs={12} sm={3} >
+        <Grid item xs={12} sm={3}>
           <h2 id="titolo">Classifica Superpizza</h2>
           <style jsx>
             {`
@@ -77,7 +86,7 @@ const Torneo = () => {
                 font-size: 50px;
                 font-family: "Kaushan Script", cursive !important;
                 letter-spacing: 0;
-                padding: .25em 0 .325em;
+                padding: 0.25em 0 0.325em;
                 display: block;
                 margin: 0 auto;
                 text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
@@ -102,8 +111,8 @@ const Torneo = () => {
                   background-position: 100% 50%;
                 }
               }
-              @media (max-width: 600px){
-                #titolo{
+              @media (max-width: 600px) {
+                #titolo {
                   font-size: 30px;
                 }
               }
@@ -145,7 +154,7 @@ const Torneo = () => {
                     variant="body1"
                     sx={{ paddingTop: 2, fontSize: "18px" }}
                   >
-                    1B {/*secondo posto */}
+                    {secondoPosto.classe} {/*secondo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={3}>
@@ -153,7 +162,7 @@ const Torneo = () => {
                     variant="body1"
                     sx={{ color: "black", fontSize: "18px" }}
                   >
-                    1F {/* primo posto*/}
+                    {primoPosto.classe} {/* primo posto*/}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
@@ -161,7 +170,7 @@ const Torneo = () => {
                     variant="body1"
                     sx={{ paddingTop: 3, fontSize: "18px" }}
                   >
-                    2F {/* terzo posto*/}
+                    {terzoPosto.classe} {/* terzo posto*/}
                   </Typography>
                 </Grid>
               </Grid>
@@ -187,7 +196,7 @@ const Torneo = () => {
                       borderRadius: "30px",
                     }}
                   >
-                    230 {/*secondo posto */}
+                    {secondoPosto.punti} {/*secondo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={3}>
@@ -202,7 +211,7 @@ const Torneo = () => {
                       borderRadius: "30px",
                     }}
                   >
-                    263 {/*primo posto */}
+                    {primoPosto.punti} {/*primo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
@@ -216,7 +225,7 @@ const Torneo = () => {
                       borderRadius: "30px",
                     }}
                   >
-                    224 {/*terzo posto */}
+                    {terzoPosto.punti} {/*terzo posto */}
                   </Typography>
                 </Grid>
               </Grid>
@@ -281,8 +290,6 @@ const Torneo = () => {
                 background-color: slategray;
                 color: black;
               }
-
-             
             `}
           </style>
         </Grid>
@@ -314,4 +321,10 @@ let sezioni = [
   { classe: "3F", punti: "220" },
   { classe: "4A", punti: "169" },
   { classe: "4B", punti: "191" },
+];
+
+let podio = [
+  { classe: "1F", punti: "263", id: "1" },
+  { classe: "1B", punti: "230", id: "2" },
+  { classe: "2F", punti: "224", id: "3" },
 ];
