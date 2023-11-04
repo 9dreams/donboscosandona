@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 @keyframes fallRotate {
   0% {
@@ -33,6 +34,12 @@
   to {
     opacity: 1;
   }
+}
+
+
+.titolo{
+  font-family: 'Kaushan Script', cursive;
+  color: linear-gradient(blue,pink)
 }
 
 .rotatingImages {
@@ -121,7 +128,7 @@
   .punteggio {
     width: 370px;
     height: 210px;
-    top: 14%; 
+    top: 20%; 
     left: 50%; 
     transform: translateX(-74%);
     z-index: 2;

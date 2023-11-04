@@ -67,7 +67,48 @@ const Torneo = () => {
       className={Styles.container}
     >
       <Grid container sx={{ marginTop: 10 }}>
-        <Grid item xs={12} sm={3} sx={{ paddingLeft: 10 }}>
+        <Grid item xs={12} sm={3} >
+          <h2 id="titolo">Classifica Superpizza</h2>
+          <style jsx>
+            {`
+              @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+              #titolo {
+                font-size: 50px;
+                font-family: "Kaushan Script", cursive !important;
+                letter-spacing: 0;
+                padding: .25em 0 .325em;
+                display: block;
+                margin: 0 auto;
+                text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+                background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png)
+                  repeat-y;
+                -webkit-background-clip: text;
+                background-clip: text;
+
+                -webkit-text-fill-color: transparent;
+                -webkit-animation: aitf 80s linear infinite;
+
+                -webkit-transform: translate3d(0, 0, 0);
+                -webkit-backface-visibility: hidden;
+              }
+
+              @-webkit-keyframes aitf {
+                0% {
+                  background-position: 0% 50%;
+                }
+                100% {
+                  background-position: 100% 50%;
+                }
+              }
+              @media (max-width: 600px){
+                #titolo{
+                  font-size: 30px;
+                }
+              }
+            `}
+          </style>
         </Grid>
 
         <Grid item xs={12} sm={4}>
@@ -218,7 +259,6 @@ const Torneo = () => {
 
               th {
                 padding: 10px;
-                background-color: slategray;
                 color: white;
                 text-align: center;
                 border-top-left-radius: 20px;
@@ -238,8 +278,11 @@ const Torneo = () => {
                 text-align: center;
                 border-top: 1px solid black;
                 border-radius: 0;
-                background-color: white;
+                background-color: slategray;
+                color: black;
               }
+
+             
             `}
           </style>
         </Grid>
@@ -272,4 +315,3 @@ let sezioni = [
   { classe: "4A", punti: "169" },
   { classe: "4B", punti: "191" },
 ];
-
