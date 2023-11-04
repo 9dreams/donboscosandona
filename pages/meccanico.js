@@ -15,7 +15,7 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <img
-        src='/images/informatico/settore-elettrico.jpg'
+        src='/images/meccanico/settore-meccanico.png'
         style={{ width: '100%' }}
       />
       <Paragraph
@@ -104,34 +104,7 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={quarto_anno}
       />
-      <SwiperNews title='News dal Settore Elettrico' data={data} limit={15} />
-      <Sponsor logos={sponsor} />
-
-      <Paragraph>
-        <Table
-          title='Piano formativo'
-          rows={[
-            ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno'],
-            ['Italiano', 3, 3, 2, 3],
-            ['Storia / Economia / Diritto', 1, 1, 1, 1],
-            ['Inglese', 2, 2, 2, 2],
-            ['Religione', 1, 1, 1, 1],
-            ['Matematica', 3, 3, 3, 2],
-            ['Fisica', 2, 2, 2, 2],
-            ['CAD', 2, 2, 2, 2],
-            ['Informatica', 2, '', '', ''],
-            ['Elettrotecnica', 3, 3, 3, ''],
-            ['Laboratorio Elettrico', 10, 12, 12, 3],
-            ['', '', '', '', ''],
-            ['ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO', '', 200, 200, 500],
-          ]}
-          backgroundImageUrl='/images/informatico/sfondo-piano-formativo.jpg'
-          backgroundColor='#003185'
-          opacity={0.8}
-          blur='0.1rem'
-          color='white'
-        />
-      </Paragraph>
+      <SwiperNews title='News dal Settore Meccanico' data={data} limit={15} />
     </Layout>
   )
 }
@@ -207,7 +180,7 @@ let secondo_anno = [
   {
     title: '',
     description: 'Utilizzo tornio e fresa CNC per lavorazioni varie',
-    immagineUrl: '/images/meccanico/cnc.jpg',
+    immagineUrl: '/images/meccanico/cnc.png',
   },
   {
     title: '',

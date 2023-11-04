@@ -10,6 +10,7 @@ export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Contatti', url: '/contatti' },
     { title: 'Informatico', url: '/informatico' },
+    { title: 'Meccanico', url: '/meccanico' },
     { title: 'Lavoro', url: '/sal' },
     { title: 'Trasparenza', url: '/trasparenza' },
     { title: 'Privacy', url: '/privacy' },
