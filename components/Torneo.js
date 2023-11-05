@@ -2,20 +2,23 @@ import React, { useState } from "react";
 import Styles from "./Torneo.module.css";
 import { Container, Grid, Typography, Button } from "@mui/material";
 
-const Torneo = () => {
+const Torneo = (props) => {
+  // settare lo stato delle classi
   const [rotatePizza, setRotatePizza] = useState(false);
   const [activePizza, setActivePizza] = useState(false);
   const [activePizza1, setActivePizza1] = useState(false);
 
-  const numPizzettes = 15;
-  const numPizzettes1 = 15;
+  const numPizzettes = props.pizzettes;
+  const numPizzettes1 = props.pizzettes1;
 
+  // funzione per creare una posizione casuale alle pizzette
   const createRandomPosition = () => {
     const randomX = Math.floor(Math.random() * 100) + "vw";
     const randomY = Math.floor(Math.random() * 100) + "vh";
     return { left: randomX, top: randomY };
   };
 
+  // serve per impostare l'immagine e darli la funzioneae per il movimento sullo schermo
   const pizzettes = Array.from({ length: numPizzettes }, (_, index) => (
     <div
       key={index}
@@ -37,7 +40,7 @@ const Torneo = () => {
       }}
     />
   ));
-
+  // funzione che dice le classi da attivare
   const toggleRotatePizza = () => {
     if (activePizza) {
       setActivePizza(false);
@@ -45,9 +48,9 @@ const Torneo = () => {
       setActivePizza1(false);
     } else {
       setRotatePizza(true);
-      setTimeout(() => {
+      setTimeout(() => { // serve per mettere del tempo di deley prima di attivare la classe
         setActivePizza(true);
-      }, 1250);
+      }, 1420);
       setTimeout(() => {
         setActivePizza1(true);
       }, 2450);
@@ -59,9 +62,9 @@ const Torneo = () => {
   const idTerzoPosto = "3";
 
   // Trova gli oggetti del podio in base all'ID
-  const primoPosto = podio.find((element) => element.id === idPrimoPosto);
-  const secondoPosto = podio.find((element) => element.id === idSecondoPosto);
-  const terzoPosto = podio.find((element) => element.id === idTerzoPosto);
+  const primoPosto = props.classi.find((element) => element.id === idPrimoPosto);
+  const secondoPosto = props.classi.find((element) => element.id === idSecondoPosto);
+  const terzoPosto = props.classi.find((element) => element.id === idTerzoPosto);
 
   return (
     <Container
@@ -121,11 +124,11 @@ const Torneo = () => {
         </Grid>
 
         <Grid item xs={12} sm={4}>
-          <img
+          <img // cambia lo stile una volta attiva la pizza
             className={`${Styles.rotatingImages} ${
               rotatePizza ? Styles.pizzaPodio : ""
             }`}
-            src={
+            src={ // una volta che si attiva la classe activePizza cambia immagine
               activePizza
                 ? "/images/pizza/pizzadietro1.png"
                 : "/images/pizza/pizza.png"
@@ -133,7 +136,7 @@ const Torneo = () => {
             alt="Pizza"
             style={{ zIndex: "1" }}
           />
-          {activePizza1 && (
+          {activePizza1 && ( // se attivato lo mostra 
             <div className={` ${activePizza1 ? Styles.punteggio : ""}`}>
               <Grid
                 item
@@ -236,6 +239,7 @@ const Torneo = () => {
             <Button
               className={Styles.button}
               style={{ marginTop: "20px" }}
+              // funzione che si attiva una volta cliccato il pulsante
               onClick={toggleRotatePizza}
             >
               Gira Pizza
@@ -250,16 +254,20 @@ const Torneo = () => {
               <th id="th2">Punteggi</th>
             </tr>
 
-            {sezioni.map((sezione) => (
+            {props.classi
+            // filtra le props se hanno un id non lo scrive
+            .filter(classe => !classe.hasOwnProperty('id'))
+            .map(classe => (
               <tr>
-                <td>{sezione.classe}</td>
-                <td>{sezione.punti}</td>
+                <td>{classe.classe}</td>
+                <td>{classe.punti}</td>
               </tr>
             ))}
-          </table>
 
+          </table>
+              
           <style jsx>
-            {`
+            {` // implementazione style css per utilizzo di id="th1"
               table {
                 width: 230px;
                 border-collapse: collapse;
@@ -303,28 +311,10 @@ const Torneo = () => {
 
 export default Torneo;
 
-let sezioni = [
-  { classe: "1A", punti: "199" },
-  { classe: "1C", punti: "223" },
-  { classe: "1D", punti: "183" },
-  { classe: "1E", punti: "173" },
-  { classe: "2A", punti: "189" },
-  { classe: "2B", punti: "163" },
-  { classe: "2C", punti: "182" },
-  { classe: "2D", punti: "213" },
-  { classe: "2E", punti: "160" },
-  { classe: "3A", punti: "165" },
-  { classe: "3B", punti: "126" },
-  { classe: "3C", punti: "129" },
-  { classe: "3D", punti: "198" },
-  { classe: "3E", punti: "155" },
-  { classe: "3F", punti: "220" },
-  { classe: "4A", punti: "169" },
-  { classe: "4B", punti: "191" },
-];
 
-let podio = [
-  { classe: "1F", punti: "263", id: "1" },
-  { classe: "1B", punti: "230", id: "2" },
-  { classe: "2F", punti: "224", id: "3" },
-];
+
+
+Torneo.defaultProps = {
+  pizzettes : "40",
+  pizzettes1 : "40",
+}
