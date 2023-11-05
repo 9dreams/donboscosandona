@@ -50,13 +50,13 @@ export default function Home() {
           </li>
           <li>
             Organismo di vigilanza (codice etico):
-            odv.rebesco@salesianinordest.it
+            odv.fp@salesianinordest.it
           </li>
           <li>
-            Amministrazione: n.caramaschi@donboscosandona.it - tel. 0421 338 988
+            Amministrazione: amministrazione.fp.sandona@salesianinordest.it  - tel. 0421 338 988
           </li>
           <li>
-            Risorse umane e qualità: a.maschio@donboscosandona.it - tel. 0421 338 988
+            Risorse umane e qualità: qualita.fp.sandona@salesianinordest.it - tel. 0421 338 988
           </li>
           <br />
           <li>

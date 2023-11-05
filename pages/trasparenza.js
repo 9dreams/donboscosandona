@@ -18,8 +18,8 @@ export default function Home({ data }) {
         imageUrl='/images/trasparenza/transparency-2.webp'
       />
       <Paragraph backgroundColor='#b4cfd6'>
-        <b>Fondazione Salesiana per la Formazione Professionale
-        <br />Ispettoria Salesiana Nordest - Impresa Sociale - SFP Don Bosco</b>
+        <b>Fondazione Salesiani per la Formazione Professionale
+        <br />Italia Nord Est - Impresa Sociale - SFP Don Bosco</b>
         <br />Via XIII Martiri 86 - 30027 San Donà di Piave
         <br />C.F. 80015710306  P.IVA 01845730306
       </Paragraph>
