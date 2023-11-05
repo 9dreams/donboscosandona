@@ -75,7 +75,7 @@
   font-size: large;
   position: absolute;
   top: 46%;
-  left: 41%;
+  left: 49.5%;
   transform: translate(-50%, -50%); 
   z-index: 2;
   background-image: url('/images/pizza/podio.jpg');
@@ -128,8 +128,8 @@
   .punteggio {
     width: 370px;
     height: 210px;
-    top: 20%; 
-    left: 50%; 
+    top: 31%; 
+    left: 51%; 
     transform: translateX(-74%);
     z-index: 2;
     background-image: url('/images/pizza/podio.jpg');
@@ -143,6 +143,6 @@
     left: 30%
   }
   .container{
-    min-height: 160vh;
+    min-height: 190vh;
   }
 }

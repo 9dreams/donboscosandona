@@ -7,7 +7,7 @@ export default function Page({ data }) {
         </div>
     )
 }
-
+// mettere id solo su quelli nel podio
 let classi = [
     { classe: "1A", punti: "199" },
     { classe: "1B", punti: "230", id: "2" },

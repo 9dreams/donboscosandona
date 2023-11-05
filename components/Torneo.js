@@ -79,8 +79,9 @@ const Torneo = (props) => {
       className={Styles.container}
     >
       <Grid container sx={{ marginTop: 10 }}>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={4}>
           <h2 id="titolo">Classifica Superpizza</h2>
+          <p>Il torneo Superpizza coinvolge tutte le classi del CFP Don Bosco. Attraverso la partecipazione alle attività proposte e l'impegno nei giochi e nei tornei, le classi accumulano punti e scalano la classifica. Alla fine dell'anno, la classe vincitrice viene proclamata e riceve come premio una mega pizza.</p>
           <style jsx>
             {`
               @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
@@ -118,6 +119,11 @@ const Torneo = (props) => {
                 #titolo {
                   font-size: 30px;
                 }
+              }
+
+              p{
+                width: 400px !important;
+                font-size: 18px
               }
             `}
           </style>
@@ -194,7 +200,7 @@ const Torneo = (props) => {
                     sx={{
                       fontSize: "18px",
                       backgroundColor: "#6AA850",
-                      width: "40px",
+                      width: "50px",
                       pl: "10px",
                       borderRadius: "30px",
                     }}
@@ -209,7 +215,7 @@ const Torneo = (props) => {
                       color: "black",
                       fontSize: "18px",
                       backgroundColor: "#357214",
-                      width: "40px",
+                      width: "50px",
                       pl: "10px",
                       borderRadius: "30px",
                     }}
@@ -223,7 +229,7 @@ const Torneo = (props) => {
                     sx={{
                       fontSize: "18px",
                       backgroundColor: "#D9EAD3",
-                      width: "40px",
+                      width: "50px",
                       pl: "10px",
                       borderRadius: "30px",
                     }}
