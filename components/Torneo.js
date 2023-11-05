@@ -78,8 +78,8 @@ const Torneo = (props) => {
       }}
       className={Styles.container}
     >
-      <Grid container sx={{ marginTop: 10 }}>
-        <Grid item xs={12} sm={4}>
+      <Grid container sx={{ marginTop: 10, }}>
+        <Grid item xs={12} sm={4} sx={{paddingLeft:{md: "40px"}}} >
           <h2 id="titolo">Classifica Superpizza</h2>
           <p>Il torneo Superpizza coinvolge tutte le classi del CFP Don Bosco. Attraverso la partecipazione alle attività proposte e l'impegno nei giochi e nei tornei, le classi accumulano punti e scalano la classifica. Alla fine dell'anno, la classe vincitrice viene proclamata e riceve come premio una mega pizza.</p>
           <style jsx>
@@ -119,11 +119,15 @@ const Torneo = (props) => {
                 #titolo {
                   font-size: 30px;
                 }
+                p{
+                  width: 350px !important;
+                }
               }
 
               p{
-                width: 400px !important;
-                font-size: 18px
+                width: 450px ;
+                font-size: 18px;
+                
               }
             `}
           </style>
