@@ -153,7 +153,7 @@ const Torneo = (props) => {
                 xs={12}
                 sx={{ top: 20, position: "absolute", left: 160 }}
               >
-                <Typography variant="h5" sx={{}}>
+                <Typography variant="h4">
                   Podio
                 </Typography>
               </Grid>
@@ -164,24 +164,24 @@ const Torneo = (props) => {
                 <Grid item xs={1}></Grid>
                 <Grid item xs={3}>
                   <Typography
-                    variant="body1"
-                    sx={{ paddingTop: 2, fontSize: "18px" }}
+                    variant="h3"
+                    sx={{ paddingTop: 2, fontSize: "22px" }}
                   >
                     {secondoPosto.classe} {/*secondo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={3}>
                   <Typography
-                    variant="body1"
-                    sx={{ color: "black", fontSize: "18px" }}
+                    variant="h3"
+                    sx={{ color: "black", fontSize: "22px" }}
                   >
                     {primoPosto.classe} {/* primo posto*/}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   <Typography
-                    variant="body1"
-                    sx={{ paddingTop: 3, fontSize: "18px" }}
+                    variant="h3"
+                    sx={{ paddingTop: 3, fontSize: "22px" }}
                   >
                     {terzoPosto.classe} {/* terzo posto*/}
                   </Typography>
