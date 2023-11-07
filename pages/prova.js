@@ -1,9 +1,10 @@
 import { Torneo } from "@/components"
+import Styles from "@/components/Torneo.module.css"
 
 export default function Page({ data }) {
     return (
         <div>
-            <Torneo classi={classi}/>
+            <h1 className={Styles.titolo1}>Ciao</h1>
         </div>
     )
 }

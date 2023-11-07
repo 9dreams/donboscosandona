@@ -18,7 +18,7 @@ const Torneo = (props) => {
     return { left: randomX, top: randomY };
   };
 
-  // serve per impostare l'immagine e darli la funzioneae per il movimento sullo schermo
+  // impostare l'immagine e darle la funzione per il movimento sullo schermo
   const pizzettes = Array.from({ length: numPizzettes }, (_, index) => (
     <div
       key={index}
@@ -48,7 +48,7 @@ const Torneo = (props) => {
       setActivePizza1(false);
     } else {
       setRotatePizza(true);
-      setTimeout(() => { // serve per mettere del tempo di deley prima di attivare la classe
+      setTimeout(() => { // serve per mettere il tempo di delay prima di attivare la classe
         setActivePizza(true);
       }, 1420);
       setTimeout(() => {
@@ -57,20 +57,14 @@ const Torneo = (props) => {
     }
   };
 
-  const idPrimoPosto = "1";
-  const idSecondoPosto = "2";
-  const idTerzoPosto = "3";
-
-  // Trova gli oggetti del podio in base all'ID
-  const primoPosto = props.classi.find((element) => element.id === idPrimoPosto);
-  const secondoPosto = props.classi.find((element) => element.id === idSecondoPosto);
-  const terzoPosto = props.classi.find((element) => element.id === idTerzoPosto);
+  // mettiamo in ordine decrescente l'array per avere i primi 3 in alto
+  props.classi.sort((a, b) =>  b.punti - a.punti);
 
   return (
     <Container
       maxWidth
       style={{
-        height: "90vh",
+        height: "100vh",
         backgroundColor: "#588fe8",
         position: "relative",
         overflow: "hidden",
@@ -94,6 +88,7 @@ const Torneo = (props) => {
                 display: block;
                 margin: 0 auto;
                 text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+                
 
                 background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png)
                   repeat-y;
@@ -144,14 +139,14 @@ const Torneo = (props) => {
                 : "/images/pizza/pizza.png"
             }
             alt="Pizza"
-            style={{ zIndex: "1" }}
+            style={{ zIndex: "1", }}
           />
-          {activePizza1 && ( // se attivato lo mostra 
+          {activePizza1 && ( // se è attivatata la classe lo mostra sulla pagina 
             <div className={` ${activePizza1 ? Styles.punteggio : ""}`}>
               <Grid
                 item
                 xs={12}
-                sx={{ top: 20, position: "absolute", left: 160 }}
+                sx={{ top: 20, position: "absolute", left: 160,}}
               >
                 <Typography variant="h4">
                   Podio
@@ -167,7 +162,8 @@ const Torneo = (props) => {
                     variant="h3"
                     sx={{ paddingTop: 2, fontSize: "22px" }}
                   >
-                    {secondoPosto.classe} {/*secondo posto */}
+                    {/* scrivo la seconda classe classificata nel podio*/}
+                    {props.classi[1].classe} {/*secondo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={3}>
@@ -175,7 +171,8 @@ const Torneo = (props) => {
                     variant="h3"
                     sx={{ color: "black", fontSize: "22px" }}
                   >
-                    {primoPosto.classe} {/* primo posto*/}
+                    {/* scrivo la prima classe classificata nel podio */}
+                    {props.classi[0].classe} {/* primo posto*/}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
@@ -183,7 +180,8 @@ const Torneo = (props) => {
                     variant="h3"
                     sx={{ paddingTop: 3, fontSize: "22px" }}
                   >
-                    {terzoPosto.classe} {/* terzo posto*/}
+                    {/* scrivo la terza classe classificata nel podio*/}
+                    {props.classi[2].classe} {/* terzo posto*/}
                   </Typography>
                 </Grid>
               </Grid>
@@ -203,13 +201,13 @@ const Torneo = (props) => {
                     variant="body1"
                     sx={{
                       fontSize: "18px",
-                      backgroundColor: "#6AA850",
+                      backgroundColor: "#FFC90E",
                       width: "50px",
                       pl: "10px",
                       borderRadius: "30px",
                     }}
                   >
-                    {secondoPosto.punti} {/*secondo posto */}
+                    {props.classi[1].punti} {/*secondo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={3}>
@@ -218,13 +216,13 @@ const Torneo = (props) => {
                     sx={{
                       color: "black",
                       fontSize: "18px",
-                      backgroundColor: "#357214",
+                      backgroundColor: "#FF5F00",
                       width: "50px",
                       pl: "10px",
                       borderRadius: "30px",
                     }}
                   >
-                    {primoPosto.punti} {/*primo posto */}
+                    {props.classi[0].punti} {/*primo posto */}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
@@ -232,13 +230,13 @@ const Torneo = (props) => {
                     variant="body1"
                     sx={{
                       fontSize: "18px",
-                      backgroundColor: "#D9EAD3",
+                      backgroundColor: "#DE6F33",
                       width: "50px",
                       pl: "10px",
                       borderRadius: "30px",
                     }}
                   >
-                    {terzoPosto.punti} {/*terzo posto */}
+                    {props.classi[2].punti} {/*terzo posto */}
                   </Typography>
                 </Grid>
               </Grid>
@@ -264,10 +262,7 @@ const Torneo = (props) => {
               <th id="th2">Punteggi</th>
             </tr>
 
-            {props.classi
-            // filtra le props se hanno un id non lo scrive
-            .filter(classe => !classe.hasOwnProperty('id'))
-            .map(classe => (
+            {props.classi.map(classe => (
               <tr>
                 <td>{classe.classe}</td>
                 <td>{classe.punti}</td>
