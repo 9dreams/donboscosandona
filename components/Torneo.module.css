@@ -74,8 +74,8 @@
   display: block;
   font-size: large;
   position: absolute;
-  top: 43%;
-  left: 49.5%;
+  top: 45%;
+  left: 50.3%;
   transform: translate(-50%, -50%); 
   z-index: 2;
   background-image: url('/images/pizza/podio.jpg');

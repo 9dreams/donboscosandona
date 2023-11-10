@@ -64,7 +64,7 @@ const Torneo = (props) => {
     <Container
       maxWidth
       style={{
-        height: "100vh",
+        height: { sm: "100vh"},
         backgroundColor: "#588fe8",
         position: "relative",
         overflow: "hidden",
@@ -72,8 +72,10 @@ const Torneo = (props) => {
       }}
       className={Styles.container}
     >
+
+      {/* =========1 colonna========= */}
       <Grid container sx={{ marginTop: 10, }}>
-        <Grid item xs={12} sm={4} sx={{paddingLeft:{md: "40px"}}} >
+        <Grid item xs={12} sm={12} lg={4} sx={{paddingLeft:{ xs:"20px", md: "20px", sm:"40px", }}} >
           <h2 id="titolo">Classifica Superpizza</h2>
           <p>Il torneo Superpizza coinvolge tutte le classi del CFP Don Bosco. Attraverso la partecipazione alle attività proposte e l'impegno nei giochi e nei tornei, le classi accumulano punti e scalano la classifica. Alla fine dell'anno, la classe vincitrice viene proclamata e riceve come premio una mega pizza.</p>
           <style jsx>
@@ -128,7 +130,9 @@ const Torneo = (props) => {
           </style>
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+
+        {/* =========2 colonna========= */}
+        <Grid item xs={12} sm={12} lg={4} sx={{paddingLeft:{ xs:"5px",  }, justifyContent: "center", alignContent: "center", alignSelf: "center"}}>
           <img // cambia lo stile una volta attiva la pizza
             className={`${Styles.rotatingImages} ${
               rotatePizza ? Styles.pizzaPodio : ""
@@ -254,8 +258,10 @@ const Torneo = (props) => {
             </Button>
           </div>
         </Grid>
+        
 
-        <Grid item xs={12} sm={4}>
+        {/* =========3 colonna========= */}
+        <Grid item xs={12} sm={4} >
           <table style={{ textAlign: "center" }}>
             <tr>
               <th id="th1">Classe</th>
