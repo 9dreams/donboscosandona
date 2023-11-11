@@ -132,6 +132,15 @@ export default function Home({ data }) {
         products={quarto_anno}
       />
       <SwiperNews title='News dal Settore Informatico' data={data} limit={15} />
+
+      <Products
+        title='I nostri progetti'
+        description='Ci piace mettere a frutto quello che impariamo a scuola, e siamo sempre aperti a nuove avventure!'
+        cardWidth={3}
+        cardWidthXs={12}
+        products={progetti}
+      />
+
       <Paragraph topImageUrl='/images/informatico/programma-scolastico.svg' />
       <Sponsor logos={sponsor} />
 
@@ -159,13 +168,6 @@ export default function Home({ data }) {
           color='white'
         />
       </Paragraph>
-      <Products
-        title='I nostri progetti'
-        description='...'
-        cardWidth={3}
-        cardWidthXs={6}
-        products={progetti}
-      />
     </Layout>
   )
 }
@@ -185,29 +187,27 @@ export async function getStaticProps() {
 let progetti = [
   {
     title: '9dreams Agency',
-    category: '...',
     description: 'La nostra agenzia di comunicazione.',
+    url: 'https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico',
     immagineUrl:
-      'http://localhost:3000/_next/image?url=%2Fimages%2Finformatico%2F9dreams.png&w=750&q=75',
+      '/images/informatico/loghi/logo_9dreams.png',
+  },
+  {
+    title: 'Assistenza Informatica',
+    description: 'Il servizio di qualità offerto dalle nostre classi a tutta la scuola.',
+    immagineUrl: 'https://computernext.it/wp-content/uploads/2017/06/assistenza-informatica.jpg',
   },
   {
     title: 'Books',
-    category: '...',
-    description: '...',
+    description: 'Gli appunti dei nostri corsi di programmazione.',
     immagineUrl: '/images/informatico/books.png',
-  },
-  {
-    title: 'Dottor Gross Academy',
-    category: '...',
-    description: 'Il canale dottorGross Academy con le nostre videolezioni',
-    immagineUrl:
-      'https://archive.donboscosandona.it/img/ck/fb02222d070f1589f6a5de9f022e9d47d32588f4.png',
+    url: 'https://books.donboscosandona.it'
   },
   {
     title: 'FreeCodeCamp',
-    category: '...',
+    url: 'https://www.freecodecamp.org/italian/',
     description:
-      'Siamo fieri di contribuire con le nostre classi alla traduzione italiana del progetto freeCodeCamp, che ha la mission di insegnare a programmare gratuitamente in tutto il mondo, rilasciando anche certificazioni di livello Universitario.',
+      'Siamo fieri di aver contribuito con le nostre classi alla traduzione italiana del progetto freeCodeCamp, dove puoi imparare a programmare gratuitamente ottenendo certificazioni di livello Universitario.',
     immagineUrl:
       'https://archive.donboscosandona.it/img/column/0355dfc4fe258cf1982ba5ac69a051d4ebd245c4.jpg?1622362155',
   },
