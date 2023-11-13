@@ -1,5 +1,5 @@
+import styles from "./Torneo.module.css";
 import React, { useState } from "react";
-import Styles from "./Torneo.module.css";
 import { Container, Grid, Typography, Button } from "@mui/material";
 
 const Torneo = (props) => {
@@ -22,7 +22,7 @@ const Torneo = (props) => {
   const pizzettes = Array.from({ length: numPizzettes }, (_, index) => (
     <div
       key={index}
-      className={Styles.pizzette}
+      className={styles.pizzette}
       style={{
         backgroundImage: 'url("/images/pizza/pizza1.png")',
         ...createRandomPosition(),
@@ -33,7 +33,7 @@ const Torneo = (props) => {
   const pizzettes1 = Array.from({ length: numPizzettes1 }, (_, index) => (
     <div
       key={index}
-      className={Styles.pizzette1}
+      className={styles.pizzette1}
       style={{
         backgroundImage: 'url("/images/pizza/pizza2.png")',
         ...createRandomPosition(),
@@ -48,7 +48,8 @@ const Torneo = (props) => {
       setActivePizza1(false);
     } else {
       setRotatePizza(true);
-      setTimeout(() => { // serve per mettere il tempo di delay prima di attivare la classe
+      setTimeout(() => {
+        // serve per mettere il tempo di delay prima di attivare la classe
         setActivePizza(true);
       }, 1420);
       setTimeout(() => {
@@ -58,24 +59,37 @@ const Torneo = (props) => {
   };
 
   // mettiamo in ordine decrescente l'array per avere i primi 3 in alto
-  props.classi.sort((a, b) =>  b.punti - a.punti);
+  props.classi.sort((a, b) => b.punti - a.punti);
 
   return (
     <Container
+      className={styles.container}
       maxWidth
-      style={{
-        height: "100vh",
+      disableGutters={true}
+      sx={{
+        height: { xs: "190vh", sm: "130vh", md: "90vh", lg: "80vh" },
         backgroundColor: "#588fe8",
         position: "relative",
         overflow: "hidden",
         display: "flex",
       }}
-      className={Styles.container}
     >
-      <Grid container sx={{ marginTop: 10, }}>
-        <Grid item xs={12} sm={4} sx={{paddingLeft:{md: "40px"}}} >
+      <Grid container className={styles.gridcontainer}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          lg={4}
+          sx={{ paddingLeft: { xs: "30px",sm: "200px", md: "20px",  } }}
+        >
           <h2 id="titolo">Classifica Superpizza</h2>
-          <p>Il torneo Superpizza coinvolge tutte le classi del CFP Don Bosco. Attraverso la partecipazione alle attività proposte e l'impegno nei giochi e nei tornei, le classi accumulano punti e scalano la classifica. Alla fine dell'anno, la classe vincitrice viene proclamata e riceve come premio una mega pizza.</p>
+          <p className={styles.p1}>
+            Il torneo Superpizza coinvolge tutte le classi del CFP Don Bosco.
+            Attraverso la partecipazione alle attività proposte e l'impegno nei
+            giochi e nei tornei, le classi accumulano punti e scalano la
+            classifica. Alla fine dell'anno, la classe vincitrice viene
+            proclamata e riceve come premio una mega pizza.
+          </p>
           <style jsx>
             {`
               @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
@@ -88,7 +102,6 @@ const Torneo = (props) => {
                 display: block;
                 margin: 0 auto;
                 text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
-                
 
                 background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png)
                   repeat-y;
@@ -114,43 +127,48 @@ const Torneo = (props) => {
                 #titolo {
                   font-size: 30px;
                 }
-                p{
+                p {
                   width: 350px !important;
                 }
               }
 
-              p{
-                width: 450px ;
+              p {
+                width: 450px;
                 font-size: 18px;
-                
               }
             `}
           </style>
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid
+          item
+          className={styles.middle}
+          xs={12}
+          sm={12}
+          lg={4}
+          sx={{ }}
+        >
           <img // cambia lo stile una volta attiva la pizza
-            className={`${Styles.rotatingImages} ${
-              rotatePizza ? Styles.pizzaPodio : ""
+            className={`${styles.rotatingImages} ${
+              rotatePizza ? styles.pizzaPodio : ""
             }`}
-            src={ // una volta che si attiva la classe activePizza cambia immagine
+            src={
+              // una volta che si attiva la classe activePizza cambia immagine
               activePizza
                 ? "/images/pizza/pizzadietro1.png"
                 : "/images/pizza/pizza.png"
             }
             alt="Pizza"
-            style={{ zIndex: "1", }}
+            style={{ zIndex: "1" }}
           />
-          {activePizza1 && ( // se è attivatata la classe lo mostra sulla pagina 
-            <div className={` ${activePizza1 ? Styles.punteggio : ""}`}>
+          {activePizza1 && ( // se è attivatata la classe lo mostra sulla pagina
+            <div className={` ${activePizza1 ? styles.punteggio : ""}`}>
               <Grid
                 item
                 xs={12}
-                sx={{ top: 20, position: "absolute", left: 160,}}
+                sx={{ top: 20, position: "absolute", left: 160 }}
               >
-                <Typography variant="h4">
-                  Podio
-                </Typography>
+                <Typography variant="h4">Podio</Typography>
               </Grid>
               <Grid
                 container
@@ -245,7 +263,7 @@ const Torneo = (props) => {
 
           <div>
             <Button
-              className={Styles.button}
+              className={styles.button}
               style={{ marginTop: "20px" }}
               // funzione che si attiva una volta cliccato il pulsante
               onClick={toggleRotatePizza}
@@ -255,24 +273,24 @@ const Torneo = (props) => {
           </div>
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={12} lg={4} >
           <table style={{ textAlign: "center" }}>
             <tr>
               <th id="th1">Classe</th>
               <th id="th2">Punteggi</th>
             </tr>
 
-            {props.classi.map(classe => (
+            {props.classi.map((classe) => (
               <tr>
                 <td>{classe.classe}</td>
                 <td>{classe.punti}</td>
               </tr>
             ))}
-
           </table>
-              
+
           <style jsx>
-            {` // implementazione style css per utilizzo di id="th1"
+            {`
+              // implementazione style css per utilizzo di id="th1"
               table {
                 width: 230px;
                 border-collapse: collapse;
@@ -316,10 +334,7 @@ const Torneo = (props) => {
 
 export default Torneo;
 
-
-
-
 Torneo.defaultProps = {
-  pizzettes : "40",
-  pizzettes1 : "40",
-}
+  pizzettes: "40",
+  pizzettes1: "40",
+};

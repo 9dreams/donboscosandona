@@ -74,8 +74,8 @@
   display: block;
   font-size: large;
   position: absolute;
-  top: 43%;
-  left: 49.5%;
+  top: 48%;
+  left: 49%;
   transform: translate(-50%, -50%); 
   z-index: 2;
   background-image: url('/images/pizza/podio.jpg');
@@ -113,11 +113,55 @@
 }
 
 
-@media (max-width: 600px) {
+@media screen and (min-width: 300px) {
+    .rotatingImages,
+    .pizzaPodio {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .pizzette,
+    .pizzette1 {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .punteggio {
+      width: 370px;
+      height: 210px;
+      top: 29%; 
+      left: 17%; 
+      z-index: 2;
+      background-image: url('/images/pizza/podio.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: fadeInAnimation 2s ease-in forwards;
+      scale: 0.5 0.5;
+    }
+
+    .middle{
+        padding-left: 20px;
+    }
+
+    .container{
+        height: 280vh;
+    }
+    .p1{
+        font-size: 5px;
+    }
+    .button{
+        left: 15%
+    }
+  
+}
+
+
+@media screen and (min-width: 350px) {
   .rotatingImages,
   .pizzaPodio {
-    width: 350px;
-    height: 350px;
+    width: 340px;
+    height: 340px;
   }
 
   .pizzette,
@@ -129,7 +173,7 @@
   .punteggio {
     width: 370px;
     height: 210px;
-    top: 30%; 
+    top: 28%; 
     left: 51%; 
     transform: translateX(-74%);
     z-index: 2;
@@ -141,12 +185,242 @@
     scale: 0.7 0.7;
   }
   .button{
-    left: 30%
+    left: 27%
   }
-  .container{
-    min-height: 220vh;
+  .middle{
+    padding-left: 1px ;
   }
 }
 
+@media (max-width: 390px){
+    .middle{
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 410px) {
+    .rotatingImages,
+    .pizzaPodio {
+      width: 350px;
+      height: 350px;
+    }
+  
+    .pizzette,
+    .pizzette1 {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .punteggio {
+      width: 370px;
+      height: 210px;
+      top: 29%; 
+      left: 48%; 
+      transform: translateX(-74%);
+      z-index: 2;
+      background-image: url('/images/pizza/podio.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: fadeInAnimation 2s ease-in forwards;
+      scale: 0.7 0.7;
+    }
+    .button{
+      left: 27%
+    }
+    .middle{
+        padding-left: 30px;
+    }
+  
+}
+
+@media screen and (min-width: 720px) {
+  .rotatingImages,
+  .pizzaPodio {
+    width: 500px;
+    height: 500px;
+  }
+
+  .pizzette,
+  .pizzette1 {
+    width: 30px;
+    height: 30px;
+  }
+
+  .punteggio {
+    width: 370px;
+    height: 210px;
+    top: 29%; 
+    left: 57%; 
+    z-index: 2;
+    background-image: url('/images/pizza/podio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
+    scale: 0.9 0.9;
+  }
+  .button{
+    left: 27%
+  }
+  .middle{
+      padding-left: 130px;
+  }
+
+  .container{
+    height: 190vh
+  }
+  .left{
+    padding-left: 0px;
+  }
+
+}
 
 
+@media screen and (min-width: 800px) {
+    .rotatingImages,
+    .pizzaPodio {
+      width: 500px;
+      height: 500px;
+    }
+  
+    .pizzette,
+    .pizzette1 {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .punteggio {
+      width: 370px;
+      height: 210px;
+      top: 29%; 
+      left: 57%; 
+      z-index: 2;
+      background-image: url('/images/pizza/podio.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: fadeInAnimation 2s ease-in forwards;
+      scale: 0.9 0.9;
+    }
+    .button{
+      left: 27%
+    }
+    .middle{
+        padding-left: 160px;
+    }
+
+    .container{
+      height: 190vh
+    }
+  
+}
+
+@media screen and (min-width: 1280px) {
+    .rotatingImages,
+    .pizzaPodio {
+      width: 400px;
+      height: 400px;
+    }
+  
+    .pizzette,
+    .pizzette1 {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .punteggio {
+      width: 370px;
+      height: 210px;
+      top: 26.5%; 
+      left: 50%; 
+      transform: translateX(-74%);
+      z-index: 2;
+      background-image: url('/images/pizza/podio.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: fadeInAnimation 2s ease-in forwards;
+      scale: 0.7 0.7;
+    }
+    .button{
+      left: 35%
+    }
+    .middle{
+        padding-left: 60px;
+    }
+    .container{
+      height: 100vh;
+    }
+  
+}
+
+@media screen and (min-width: 1300px){
+    .rotatingImages {
+        width: 600px;
+        height: 600px;
+        animation: rotate 7s linear infinite;
+        position: relative;
+        z-index: 1;
+        
+      }
+      
+      .pizzaPodio {
+        width: 600px;
+        height: 600px;
+        animation: rotateY 3s linear ;
+        position: relative;
+        transform: rotateY(180deg);
+        z-index: 0;
+      }
+      
+      .pizzette,
+      .pizzette1 {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        animation: fallRotate 10s linear infinite;
+      }
+      
+      .punteggio {
+        display: block;
+        font-size: large;
+        position: absolute;
+        top: 42%;
+        left: 52%;
+        transform: translate(-50%, -50%); 
+        z-index: 2;
+        background-image: url('/images/pizza/podio.jpg');
+        width: 370px;
+        height: 210px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0;
+        animation: fadeInAnimation 2s ease-in forwards;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 10px crimson;
+        scale: 1 1;
+      }
+      
+      
+      .button {
+        background-color: red;
+        font-size: 16px;
+        border-radius: 50px;
+        border: gold 5px solid;
+        padding: 5px;
+        width: 150px;
+        color: white;
+        z-index: 4;
+        left: 35%
+      }
+      .container{
+        height: 90vh;
+        padding-top: 40px;
+      }
+      .left{
+        padding-left: 40px;
+      }
+}
