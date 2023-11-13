@@ -234,6 +234,47 @@
   
 }
 
+@media screen and (min-width: 720px) {
+  .rotatingImages,
+  .pizzaPodio {
+    width: 500px;
+    height: 500px;
+  }
+
+  .pizzette,
+  .pizzette1 {
+    width: 30px;
+    height: 30px;
+  }
+
+  .punteggio {
+    width: 370px;
+    height: 210px;
+    top: 29%; 
+    left: 57%; 
+    z-index: 2;
+    background-image: url('/images/pizza/podio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
+    scale: 0.9 0.9;
+  }
+  .button{
+    left: 27%
+  }
+  .middle{
+      padding-left: 130px;
+  }
+
+  .container{
+    height: 190vh
+  }
+  .left{
+    padding-left: 0px;
+  }
+
+}
 
 
 @media screen and (min-width: 800px) {
@@ -307,6 +348,9 @@
     }
     .middle{
         padding-left: 60px;
+    }
+    .container{
+      height: 100vh;
     }
   
 }

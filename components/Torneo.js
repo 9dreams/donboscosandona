@@ -80,7 +80,7 @@ const Torneo = (props) => {
           xs={12}
           sm={12}
           lg={4}
-          sx={{ paddingLeft: { xs: "30px",sm: "220px", md: "20px",  } }}
+          sx={{ paddingLeft: { xs: "30px",sm: "200px", md: "20px",  } }}
         >
           <h2 id="titolo">Classifica Superpizza</h2>
           <p className={styles.p1}>
