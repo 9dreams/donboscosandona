@@ -3,6 +3,7 @@ import Head from 'next/head'
 import {
   Layout,
   LandingHero,
+  Carousel,
   Products,
   SwiperNews,
   Paragraph,
@@ -10,13 +11,18 @@ import {
   Table,
 } from '/components'
 
+let slides = [
+  {immagine:'/images/informatico/settoreinformatico.jpg'}
+]
+
+
 export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <img
-        src='/images/informatico/settore-informatico.png'
-        style={{ width: '100%' }}
+      <LandingHero
+        imageUrl='/images/informatico/settoreinformatico.jpg'
+        height={100}
       />
       <Paragraph
         title='Operatore Informatico'
@@ -188,7 +194,7 @@ let progetti = [
   {
     title: '9dreams Agency',
     description: 'La nostra agenzia di comunicazione.',
-    url: 'https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico',
+    url: '/9dreams',
     immagineUrl:
       '/images/informatico/loghi/logo_9dreams.png',
   },
