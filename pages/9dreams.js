@@ -25,7 +25,9 @@ export default function Home() {
         opacity={0}
         imageUrl="/images/informatico/9dreams.jpg"
       />
+
       {/*https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico */}
+      
      <Paragraph
         title="9dreams: l'agenzia di comunicazione del settore informatico"
         subtitle=""

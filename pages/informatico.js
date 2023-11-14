@@ -3,18 +3,12 @@ import Head from 'next/head'
 import {
   Layout,
   LandingHero,
-  Carousel,
   Products,
   SwiperNews,
   Paragraph,
   Sponsor,
   Table,
 } from '/components'
-
-let slides = [
-  {immagine:'/images/informatico/settoreinformatico.jpg'}
-]
-
 
 export default function Home({ data }) {
   return (
