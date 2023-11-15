@@ -316,7 +316,7 @@
   
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
     .rotatingImages,
     .pizzaPodio {
       width: 400px;
@@ -332,7 +332,7 @@
     .punteggio {
       width: 370px;
       height: 210px;
-      top: 26.5%; 
+      top: 16%; 
       left: 50%; 
       transform: translateX(-74%);
       z-index: 2;
@@ -350,7 +350,8 @@
         padding-left: 60px;
     }
     .container{
-      height: 100vh;
+      padding-top: 50px;
+      height: 110vh;
     }
   
 }
