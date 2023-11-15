@@ -84,7 +84,7 @@ const Torneo = (props) => {
         >
           <h2 id="titolo">Classifica Superpizza</h2>
           <p className={styles.p1}>
-            Il torneo Superpizza coinvolge tutte le classi del CFP Don Bosco.
+            Il torneo Superpizza coinvolge tutte le classi della SFP Don Bosco.
             Attraverso la partecipazione alle attività proposte e l'impegno nei
             giochi e nei tornei, le classi accumulano punti e scalano la
             classifica. Alla fine dell'anno, la classe vincitrice viene
