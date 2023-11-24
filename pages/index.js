@@ -11,7 +11,7 @@ import {
   SwiperNews,
   Featured,
   Logos,
-  Torneo
+  Torneo,
 } from '/components'
 
 // I punti di forza
@@ -175,7 +175,8 @@ let bottoni = [
   },
   {
     title: 'Lunedì 11 dicembre e lunedì 15 gennaio',
-    description: 'Prova per un pomeriggio i nostri settori dell\'Area Elettrica/Energetica/Informatica o di quella Meccanica/Motoristica.',
+    description:
+      "Prova per un pomeriggio i nostri settori dell'Area Elettrica/Energetica/Informatica o di quella Meccanica/Motoristica.",
     immagineUrl: '/images/home/lab.jpg',
     url: 'https://turni.inoratorio.it/shifts?group_id=7&key=lfdja4shjf2',
   },
@@ -193,7 +194,7 @@ export default function Home({ data }) {
         aspectRatio={'3.5 / 2'}
       />
       <SwiperNews title='News' data={data} limit={12} />
-      <Torneo classi={classi}/>
+      <Torneo classi={classi} />
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
@@ -264,26 +265,25 @@ let slides = [
   },
 ]
 
-
 let classi = [
-  { classe: "1A", punti: "199" },
-  { classe: "1B", punti: "230" },
-  { classe: "1C", punti: "223" },
-  { classe: "1D", punti: "183" },
-  { classe: "1E", punti: "173" },
-  { classe: "1F", punti: "263" },
-  { classe: "2A", punti: "189" },
-  { classe: "2B", punti: "163" },
-  { classe: "2C", punti: "182" },
-  { classe: "2D", punti: "213" },
-  { classe: "2E", punti: "160" },
-  { classe: "2F", punti: "224" },
-  { classe: "3A", punti: "165" },
-  { classe: "3B", punti: "126" },
-  { classe: "3C", punti: "129" },
-  { classe: "3D", punti: "198" },
-  { classe: "3E", punti: "155" },
-  { classe: "3F", punti: "220" },
-  { classe: "4A", punti: "169" },
-  { classe: "4B", punti: "191" },
-];
+  { classe: '1A', punti: '199' },
+  { classe: '1B', punti: '230' },
+  { classe: '1C', punti: '223' },
+  { classe: '1D', punti: '183' },
+  { classe: '1E', punti: '173' },
+  { classe: '1F', punti: '263' },
+  { classe: '2A', punti: '189' },
+  { classe: '2B', punti: '163' },
+  { classe: '2C', punti: '182' },
+  { classe: '2D', punti: '213' },
+  { classe: '2E', punti: '160' },
+  { classe: '2F', punti: '224' },
+  { classe: '3A', punti: '165' },
+  { classe: '3B', punti: '126' },
+  { classe: '3C', punti: '129' },
+  { classe: '3D', punti: '198' },
+  { classe: '3E', punti: '155' },
+  { classe: '3F', punti: '220' },
+  { classe: '4A', punti: '169' },
+  { classe: '4B', punti: '191' },
+]
