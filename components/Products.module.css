@@ -1,12 +1,12 @@
-.card{
-    margin-bottom: 25px;
+.card {
+  margin-bottom: 25px;
 }
 
-.label{
-    text-align: right;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.label {
+  text-align: right;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

@@ -6,21 +6,19 @@ import {
   CardMedia,
 } from '@mui/material'
 
-export default function NewsCard({ post }) {
+export default function NewsCard({ post, aspectRatio }) {
   return (
     <CardActionArea
       component='a'
       href={
-        (post.articolo && '/articoli/' + post.id) ||
-        post.link ||
-        post.allegato
+        (post.articolo && '/articoli/' + post.id) || post.link || post.allegato
       }
       disabled={!post.articolo && !post.link && !post.allegato}
     >
       <Card sx={{ display: 'block' }}>
         <CardMedia
           component='img'
-          sx={{ width: '100%', display: 'block' }}
+          sx={{ width: '100%', display: 'block', aspectRatio: aspectRatio }}
           image={post.immagine}
           alt={post.titolo}
         />
@@ -48,4 +46,8 @@ export default function NewsCard({ post }) {
       </Card>
     </CardActionArea>
   )
+}
+
+NewsCard.defaultProps = {
+  aspectRatio: '3 / 2',
 }
