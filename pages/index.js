@@ -166,33 +166,11 @@ let link_utili = [
   },
 ]
 
-let bottoni = [
-  {
-    title: 'Sabato 25 novembre, 16 dicembre e 13 gennaio',
-    description: 'Dalle 14.30 alle 17.30: vieni a visitare la nostra scuola!',
-    immagineUrl: '/images/home/sfp-donbosco.jpg',
-    url: 'https://forms.gle/Zney1K244XaXoV8D8',
-  },
-  {
-    title: 'Lunedì 11 dicembre e lunedì 15 gennaio',
-    description:
-      "Prova per un pomeriggio i nostri settori dell'Area Elettrica/Energetica/Informatica o di quella Meccanica/Motoristica.",
-    immagineUrl: '/images/home/lab.jpg',
-    url: 'https://turni.inoratorio.it/shifts?group_id=7&key=lfdja4shjf2',
-  },
-]
-
 export default function Home({ data }) {
   return (
     <Layout>
       <Featured data={data} />
       <Logos url='/images/home/loghi_sponsor.png' />
-      <Products
-        products={bottoni}
-        cardWidth={6}
-        cardWidthXs={14}
-        aspectRatio={'3.5 / 2'}
-      />
       <SwiperNews title='News' data={data} limit={12} />
       <Torneo classi={classi} />
       <Products
