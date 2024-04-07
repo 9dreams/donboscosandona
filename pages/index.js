@@ -76,22 +76,7 @@ export default function Home({ datiArticoli }) {
           insieme”. Buona P.E.R. 2023
         </p>
       </Paragraph>
-      <Container maxWidth='lg' sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
-        <Typography
-          style={{ textAlign: 'left', paddingBottom: '2rem' }}
-          component='h2'
-          variant='h4'
-          color='inherit'
-          gutterBottom
-        >
-          Le ultime news
-        </Typography>
-        <Grid container spacing={4}>
-          {datiArticoli.map((post) => (
-            <Post post={post} />
-          ))}
-        </Grid>
-      </Container>
+      <SwiperNews title='News' data={data} limit={12} />
       <Features
         title="La #per dell'Oratorio don Bosco è..."
         description=''
