@@ -26,7 +26,7 @@ export default function Pagina() {
         <meta name="og:image" content="/images/calendario.png" />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.3}
         title="Calendario"
         description="Il calendario dettagliato delle giornate e delle serate."
         imageUrl="/images/calendario.png"

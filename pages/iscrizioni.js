@@ -28,7 +28,7 @@ export default function Pagina() {
         <meta name='og:image' content='/images/iscrizioni.png' />
       </Head>
       <LandingHero
-        opacity={0.1}
+        opacity={0.3}
         title='Iscrizioni'
         description="Tutto quello che c'è da sapere per iscriversi alla Proposta Estate."
         imageUrl='/images/iscrizioni.png'

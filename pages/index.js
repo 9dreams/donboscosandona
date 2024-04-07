@@ -34,16 +34,16 @@ export default function Home({ data }) {
         />
         <meta
           name='og:image'
-          content='https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg'
+          content='/images/home.png'
         />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Proposta Estate Ragazzi'
-        description='Dal 15 Giugno al 14 Luglio 2023'
+        description='Dal  Giugno al  Luglio 2024'
         buttonUrl='/tema'
         buttonText='be-Real: from lie to Life'
-        imageUrl='https://www.saledellacomunita.it/wp-content/uploads/2022/12/Guillermo-del-Toro-parla-di-3-film-di-Pinocchio-in.jpg'
+        imageUrl='/images/home.png'
       />
       <Paragraph
         title='Perché il tempo spensierato non sia tempo perso'
@@ -88,8 +88,8 @@ export default function Home({ data }) {
       <Table
         title='Orario della Giornata tipo'
         backgroundImageUrl='/images/giornata.png'
-        backgroundColor='#e84393'
-        opacity={0.5}
+        backgroundColor='#3d3d3d'
+        opacity={0.6}
         blur='0.1rem'
         color='white'
         rows={[
@@ -431,7 +431,7 @@ let in_evidenza = [
     url: '/tema',
   },
   {
-    title: 'I pomeriggi',
+    title: 'Pomeriggi',
     immagineUrl: '/images/_pomeriggi.png',
     url: '/pomeriggi',
   },

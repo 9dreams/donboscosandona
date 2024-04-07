@@ -72,7 +72,7 @@ export default function Pagina() {
         <meta name="og:image" content="/images/novità.png" />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.1}
         title="Novità 2023"
         imageUrl="/images/novità.png"
       />

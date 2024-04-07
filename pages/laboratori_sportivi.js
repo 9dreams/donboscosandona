@@ -87,7 +87,7 @@ export default function Pagina() {
         <meta name='og:image' content='/images/sportivi.png' />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.2}
         title='Laboratori Sportivi'
         imageUrl='/images/sportivi.png'
       />

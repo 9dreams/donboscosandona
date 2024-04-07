@@ -25,7 +25,7 @@ export default function Pagina() {
         <meta name="og:image" content="/images/tema.png" />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.3}
         title="Be-Real"
         description="From lie to Life: il tema della Proposta Estate 2023"
         imageUrl="/images/tema.png"

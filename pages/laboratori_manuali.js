@@ -119,7 +119,7 @@ export default function Pagina() {
         <meta name='og:image' content='/images/manuali.png' />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.2}
         title='Laboratori Manuali'
         imageUrl='/images/manuali.png'
       />

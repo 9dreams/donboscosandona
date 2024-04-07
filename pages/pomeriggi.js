@@ -25,7 +25,7 @@ export default function Pagina() {
         <meta name="og:image" content="/images/pomeriggi.png" />
       </Head>
       <LandingHero
-        opacity={0.2}
+        opacity={0.3}
         title="I nostri pomeriggi"
         description="Divertimento assicurato!"
         imageUrl="/images/pomeriggi.png"
