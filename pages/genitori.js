@@ -25,9 +25,8 @@ export default function Pagina() {
         <meta name="og:image" content="/images/genitori.png" />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.2}
         title="Spazio Genitori"
-        description="Lo spazio dedicato ai genitori."
         imageUrl="/images/genitori.png"
       />
       <Paragraph

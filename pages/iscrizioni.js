@@ -30,7 +30,6 @@ export default function Pagina() {
       <LandingHero
         opacity={0.3}
         title='Iscrizioni'
-        description="Tutto quello che c'è da sapere per iscriversi alla Proposta Estate."
         imageUrl='/images/iscrizioni.png'
       />
       <Paragraph subtitle='Anche quest’anno la preiscrizione si farà direttamente da casa, tramite Internet!'>

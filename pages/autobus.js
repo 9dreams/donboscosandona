@@ -23,7 +23,7 @@ export default function Pagina() {
         <meta name='og:image' content='/images/autobus.png' />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.2}
         title='Trasporto autobus'
         imageUrl='/images/autobus.png'
       />

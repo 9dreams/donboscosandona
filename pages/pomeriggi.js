@@ -27,7 +27,6 @@ export default function Pagina() {
       <LandingHero
         opacity={0.3}
         title="I nostri pomeriggi"
-        description="Divertimento assicurato!"
         imageUrl="/images/pomeriggi.png"
       />
       <Paragraph>

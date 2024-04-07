@@ -22,9 +22,8 @@ export default function Pagina() {
         />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.2}
         title="Spazio animatori"
-        description="La pagina dedicata agli animatori."
         imageUrl="/images/animatori.png"
       />
       <Paragraph title="Spazio animatori">

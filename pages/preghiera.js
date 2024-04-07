@@ -27,7 +27,6 @@ export default function Pagina() {
       <LandingHero
         opacity={0.2}
         title="Momenti di preghiera e riflessione"
-        description="Per coltivare ogni giorno il nostro rapporto con Dio."
         imageUrl="/images/preghiera.png"
       />
       <Paragraph>

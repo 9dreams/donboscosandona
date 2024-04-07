@@ -25,9 +25,8 @@ export default function Pagina() {
         <meta name="og:image" content="/images/dlc.png" />
       </Head>
       <LandingHero
-        opacity={0.0}
+        opacity={0.2}
         title="Scuola d'Estate? Sì grazie!"
-        description="Il dopo-scuola dell'Oratorio don Bosco."
         imageUrl="/images/dlc.png"
       />
       <Paragraph title="" subtitle="">

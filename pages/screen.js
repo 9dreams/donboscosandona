@@ -26,13 +26,13 @@ export default function Schermo({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+    'https://channels.donboscosandona.it/api/posts/per'
   )
   const data = await res.json()
 
   return {
     props: { data },
-    revalidate: 1800, // In secondi: il build viene fatto al massimo una volta all'ora
+    revalidate: 600, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
 

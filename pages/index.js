@@ -133,16 +133,18 @@ export default function Home({ data }) {
           ],
         ]}
       />
-      <Products cardWidth={3} products={in_evidenza} borderRadius='50%' />
-      <Carousel slides={gite} height={70} />
+      <Products cardWidth={3} products={in_evidenza} borderRadius='50%' aspectRatio='1 / 1' />
+      <Carousel slides={gite} height={80} />
       <Products
         title='I laboratori'
         description='Scegli due laboratori per le prime due settimane di PER, e altri due per le ultime due settimane. '
         cardWidth={3}
         products={laboratori}
         borderRadius='2rem'
+        aspectRatio='1 / 1'
       />
-      <Carousel slides={serate} height={70} />
+      <Carousel slides={serate} height={80} />
+      { /*
       <Products
         title='Serate Cinema'
         description='Ogni lunedì sera sarà la serata dedicata al cinema. Le proiezioni inizieranno alle ore 20:45, con accesso alla biglietteria da via XIII Martiri, al prezzo incredibile di 4,00 € (più un euro se non hai ancora gli occhiali 3D);
@@ -152,7 +154,7 @@ export default function Home({ data }) {
         cardWidth={3}
         products={serate_cinema}
         borderRadius='5px'
-      />
+      /> */ }
       <Paragraph
         title='Stay tuned'
         subtitle='Per essere sempre aggiornato sulla PER!'
@@ -203,12 +205,12 @@ export default function Home({ data }) {
         cardWidth={4}
         imageUrl='/images/home/sfondo_giostra.jpeg'
       />
-      <Products cardWidth={3} products={altri_link} borderRadius='50%' />
+      <Products cardWidth={3} products={altri_link} borderRadius='50%' aspectRatio='1 / 1' />
       <Paragraph
         title='La Segreteria durante la PER'
-        backgroundColor='#3867d6'
+        backgroundColor='#3d3d3d'
         opacity={0.5}
-        blur='0.2rem'
+        blur='0.1rem'
         maxWidth={false}
         color='white'
         backgroundImageUrl='/images/segreteria.png'
@@ -264,7 +266,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+    'https://channels.donboscosandona.it/api/posts/per'
   )
   const data = await res.json()
 
@@ -308,48 +310,12 @@ let serate = [
     titolo: "Oratorio's Got Talent",
     descrizione:
       'Martedì 20 Giugno / Una serata dedicata ai talenti dei ragazzi della PER#23!!! Metti alla prova la tua creatività artistica, canora, di ballo, teatrale in una sfida mozzafiato!',
-    immagine: '/images/serate/talent.jpeg',
-    colore: '#e84393',
-    opacity: 0.6,
-    blur: '0.2rem',
+    immagine: '/images/espressivi.png',
+    colore: '#192a56',
+    opacity: 0.5,
+    blur: '0rem',
     buttonText: 'Vai al modulo di iscrizione',
-    buttonUrl: 'https://forms.gle/vKbDEzoJyLW7YWjG9'
-  },
-  {
-    titolo: 'Spettacolo DEKRU',
-    descrizione:
-      'Venerdì 23 Giugno / Dekru è un quartetto di giovani talentuosi mimi formatosi nel 2010 in Ucraina, a Kiev. Premiati al Festival Mondiale del Circo di Mosca e al Festival di Clown e Mimi di Odessa, sono apparsi in Italia nel 2016 nella trasmissione Tu sì que Vales.',
-    immagine: '/images/serate/dekru.jpeg',
-    colore: '#2c3e50',
-    opacity: 0.5,
-    blur: '0.2rem',
-  },
-  {
-    titolo: 'Basket Freestyle Show - DUNK',
-    descrizione:
-      "Venerdì 30 Giugno / Basket Freestyle Show per un intrattenimento assicurato ! Trampolino elastico, freestyle, acrobatica e schiacciate come non le avete mai viste! L'unico team in italia di acro dunk!",
-    immagine: '/images/serate/dunk.jpeg',
-    colore: '#f0932b',
-    opacity: 0.5,
-    blur: '0.2rem',
-  },
-  {
-    titolo: 'Serata delle Squadre',
-    descrizione:
-      'Giovedì 6 Luglio / Sfilata squadre, animazione da palco e gara di torte',
-    immagine: '/images/serate/sfilata.jpeg',
-    colore: '#44bd32',
-    opacity: 0.5,
-    blur: '0.1rem',
-  },
-  {
-    titolo: 'Serata Finale',
-    descrizione:
-      'Venerdì 14 Luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER23',
-    immagine: '/images/serate/finale.jpeg',
-    colore: '#c0392b',
-    opacity: 0.5,
-    blur: '0.1rem',
+    buttonUrl: ''
   },
 ]
 
@@ -358,37 +324,28 @@ let gite = [
     titolo: 'Porto Santa Margherita // Baia Blanca',
     descrizione:
       'Lunedì 26 Giugno con i ragazzi di quinta elementare e prima media / Venerdì 30 giugno con i ragazzi di seconda e terza media / Lunedì 3 Luglio con i ragazzi di terza e quarta elementare / Materiale: Costume di ricambio, asciugamano, ciabatte, cappellino, spuntino, bibita...',
-    immagine: '/images/gite/mare.jpeg',
+    immagine: '/images/gite/mare.png',
     colore: '#FFC312',
-    opacity: 0.5,
-    blur: '0.2rem',
+    opacity: 0.2,
+    blur: '0rem',
   },
   {
     titolo: 'Noale // Aquaestate',
     descrizione:
       'Giovedì 22 Giugno / Martedì 11 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
-    immagine: '/images/gite/noale.jpeg',
-    colore: '#e74c3c',
+    immagine: '/images/gite/noale.png',
+    colore: '#0097e6',
     opacity: 0.3,
-    blur: '0.2rem',
+    blur: '0rem',
   },
   {
     titolo: 'Valle del Gares // Escursione in montagna',
     descrizione:
       'Martedì 27 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
-    immagine: '/images/gite/val_gares.jpeg',
+    immagine: '/images/gite/montagna.png',
     colore: '#009432',
-    opacity: 0.5,
-    blur: '0.1rem',
-  },
-  {
-    titolo: 'Valeggio sul Mincio // Parco Giardino Sigurtà',
-    descrizione:
-      'Martedì 4 Luglio / La Proposta Estate 2023 si immerge nell’antica storia del “Brolo cinto de Mura” alla scoperta delle misteriose vicende di nobili ed Imperatori grazie ai giochi interattivi e alle meraviglie del Parco Giardino Sigurtà.',
-    immagine: '/images/gite/parco_sigurta.jpeg',
-    colore: '#A3CB38',
-    opacity: 0.5,
-    blur: '0.2rem',
+    opacity: 0.3,
+    blur: '0rem',
   },
 ]
 
@@ -478,7 +435,6 @@ let altri_link = [
   },
   {
     title: 'Gruppo Special',
-    description: 'Scopri la #PER23 giorno per giorno',
     immagineUrl: '/images/_special.png',
     url: '/special',
   },

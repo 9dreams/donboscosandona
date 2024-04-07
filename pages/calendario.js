@@ -28,7 +28,6 @@ export default function Pagina() {
       <LandingHero
         opacity={0.3}
         title="Calendario"
-        description="Il calendario dettagliato delle giornate e delle serate."
         imageUrl="/images/calendario.png"
       />
       <Calendar cardWidth={4} events={settimana0} />

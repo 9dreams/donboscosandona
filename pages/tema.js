@@ -27,7 +27,6 @@ export default function Pagina() {
       <LandingHero
         opacity={0.3}
         title="Be-Real"
-        description="From lie to Life: il tema della Proposta Estate 2023"
         imageUrl="/images/tema.png"
       />
       <Paragraph title="C'era una volta...">

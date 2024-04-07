@@ -25,9 +25,8 @@ export default function Pagina() {
         <meta name='og:image' content='/images/regolamento.png' />
       </Head>
       <LandingHero
-        opacity={0.1}
+        opacity={0.2}
         title='Regolamento'
-        description='Tutte le regole della Proposta Estate'
         imageUrl='/images/regolamento.png'
       />
       <Paragraph>
