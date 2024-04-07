@@ -13,9 +13,11 @@ import {
   Paragraph,
   Table,
   News,
+  SwiperNews,
   Featured,
   NavBar,
   Logos,
+  Sponsor,
 } from '/components'
 
 export default function Home({ data }) {
@@ -37,8 +39,11 @@ export default function Home({ data }) {
         events={date}
       />
       <Featured data={data} limit={4} />
-      <News title='News' data={data} limit={2} />
+      <News title='News' data={data} limit={4} />
+      <SwiperNews title='News' data={data} limit={6} />
+
       <Carousel slides={slides} />
+      
       <Products
         title='I prodotti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
@@ -52,6 +57,7 @@ export default function Home({ data }) {
         features={features}
         cardWidth={3}
       />
+      <Sponsor title='I nostri sponsor' logos={sponsor} />
       <Testimonials
         testimonials={testimonials}
         cardWidth={4}
@@ -187,15 +193,19 @@ export default function Home({ data }) {
   )
 }
 
-// This gets called on every request
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/donboscosandona'
   )
   const data = await res.json()
 
-  // Pass data to the page via props
-  return { props: { data } }
+  return {
+    props: { data },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 minutes
+    revalidate: 1800, // In secondi: il build viene fatto al massimo una volta ogni mezzora
+  }
 }
 
 // I punti di forza
@@ -237,10 +247,11 @@ let slides = [
     titolo: 'Fatti un bel giro',
     descrizione:
       'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine:
+      immagine:
       'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
     colore: '#ED4C67',
-    opacity: 0.5,
+    colore2: 'rgba(100,100,100,0)',
+    opacity: 0.8,
     blur: '0.5rem',
     buttonText: 'Scopri di più!',
     buttonUrl: 'https:...',
@@ -423,4 +434,16 @@ let date = [
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     url: '/elettrico',
   },
+]
+
+let sponsor = [
+  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
+  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
+  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
+  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
+  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
+  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
+  'https://www.comitec.it/img/logo.png?v=1.1',
+  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
 ]
