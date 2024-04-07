@@ -278,11 +278,14 @@ export default function Home({ datiArticoli }) {
 import { getDatiArticoli } from '/lib/articoli'
 
 export async function getStaticProps() {
-  const datiArticoli = getDatiArticoli()
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+  )
+  const data = await res.json()
+
   return {
-    props: {
-      datiArticoli,
-    },
+    props: { data },
+    revalidate: 10, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
 
