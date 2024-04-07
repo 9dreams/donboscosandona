@@ -7,14 +7,16 @@ import {
   Layout,
   LandingHero,
   Features,
+  Paragraph,
   Products,
+  Table,
   Testimonials,
   Team,
   Maps,
   SwiperNews,
 } from '/components'
 
-export default function Home({ datiArticoli }) {
+export default function Home({ data }) {
   return (
     <Layout>
       <Head>
@@ -259,8 +261,6 @@ export default function Home({ datiArticoli }) {
     </Layout>
   )
 }
-
-import { getDatiArticoli } from '/lib/articoli'
 
 export async function getStaticProps() {
   const res = await fetch(
