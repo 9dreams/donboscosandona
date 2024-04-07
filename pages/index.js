@@ -2,17 +2,17 @@ import Head from 'next/head'
 
 import { Button, Container, Typography, Grid } from '@mui/material'
 
-import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero.js'
-import Features from '/components/Features'
-import Carousel from '/components/Carousel'
-import Products from '/components/Products'
-import Testimonials from '/components/Testimonials'
-import Team from '/components/Team'
-import Maps from '/components/Maps'
-import Paragraph from 'components/Paragraph'
-import Table from 'components/Table'
-import Post from 'components/Post'
+import {
+  Carousel,
+  Layout,
+  LandingHero,
+  Features,
+  Products,
+  Testimonials,
+  Team,
+  Maps,
+  SwiperNews,
+} from '/components'
 
 export default function Home({ datiArticoli }) {
   return (
