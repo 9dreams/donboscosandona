@@ -7,6 +7,8 @@ import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 
+import Image from 'next/image'
+
 export default function Products({
   title,
   description,
@@ -14,7 +16,7 @@ export default function Products({
   cardWidthXs,
   products,
   borderRadius,
-  aspectRatio
+  aspectRatio,
 }) {
   return (
     <Container maxWidth='lg'>
@@ -50,22 +52,35 @@ export default function Products({
                 className={styles.card}
                 elevation={0}
               >
-                <CardContent sx={{ flex: 1 }}>
-                  <CardMedia
-                    component='img'
-                    className={styles.immagine}
+                <CardContent
+                  sx={{
+                    flex: 1,
+                  }}
+                >
+                  <Container
                     sx={{
-                      display: {
-                        xs: 'block',
-                        sm: 'block',
-                        margin: 'auto',
-                        borderRadius: borderRadius,
-                        aspectRatio: aspectRatio,
-                      },
+                      borderRadius: borderRadius,
+                      aspectRatio: aspectRatio,
+                      position: 'relative',
+                      overflow: 'hidden',
                     }}
-                    image={product.immagineUrl}
-                    alt={product.title}
-                  />
+                  >
+                    <Image
+                      src={product.immagineUrl}
+                      alt={product.title}
+                      className={styles.immagine}
+                      style={{
+                        display: {
+                          xs: 'block',
+                          sm: 'block',
+                          margin: 'auto',
+                        },
+                        objectFit: 'cover',
+                      }}
+                      fill={true}
+                    />
+                  </Container>
+
                   <Typography
                     text-align='center'
                     component='h4'
