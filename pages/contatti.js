@@ -15,7 +15,7 @@ export default function Home() {
         siteName='CFP DON BOSCO'
         title='CONTATTI'
         description='Numeri utili e indirizzi email di riferimento'
-        imageUrl='https://techprincess.it/wp-content/uploads/2021/05/penna-come-e%CC%80-cambiata.jpg'
+        imageUrl='/images/trasparenza/transparency-2.webp'
       />
 
       <Paragraph
