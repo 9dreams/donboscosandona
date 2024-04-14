@@ -1,10 +1,6 @@
-import {
-  Typography,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-} from '@mui/material'
+import { Container, Typography, Card, CardActionArea, CardContent } from '@mui/material'
+
+import Image from 'next/image'
 
 export default function NewsCard({ post, aspectRatio }) {
   return (
@@ -16,12 +12,25 @@ export default function NewsCard({ post, aspectRatio }) {
       disabled={!post.articolo && !post.link && !post.allegato}
     >
       <Card sx={{ display: 'block' }}>
-        <CardMedia
-          component='img'
-          sx={{ width: '100%', display: 'block', aspectRatio: aspectRatio }}
-          image={post.immagine}
-          alt={post.titolo}
-        />
+        <Container
+          sx={{
+            aspectRatio: aspectRatio,
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            src={post.immagine}
+            alt={post.titolo}
+            style={{
+              width: '100%',
+              display: 'block',
+              objectFit: 'cover',
+            }}
+            fill={true}
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          />
+        </Container>
         <CardContent sx={{ flex: 1 }}>
           <Typography component='h2' variant='h5'>
             {post.titolo}
