@@ -44,7 +44,7 @@ export default function Home() {
             Segreteria didattica: segreteria.fp.sandona@salesianinordest.it - tel. 0421 338
             980
           </li>
-          <li>Posta elettronica certificata: cfp.sandona@pec.it</li>
+          <li>Posta elettronica certificata: fp.donboscosandona@pec.salesianinordest.it</li>
           <li>
             Informazioni relative alla privacy: privacy@donboscosandona.it
           </li>
