@@ -32,51 +32,41 @@ export default function Home({ data }) {
           name='og:description'
           content="Il sito ufficiale della Proposta Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave (VE)"
         />
-        <meta
-          name='og:image'
-          content='/images/home.png'
-        />
+        <meta name='og:image' content='/images/home.png' />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Proposta Estate Ragazzi'
-        description='Dal  Giugno al  Luglio 2024'
+        description='Dal 13 Giugno al 12 Luglio 2024'
         buttonUrl='/tema'
-        buttonText='be-Real: from lie to Life'
+        buttonText='Re-Creation: from law to love'
         imageUrl='/images/home.png'
       />
       <Paragraph
-        title='Perché il tempo spensierato non sia tempo perso'
+        title='Perché la vostra felicità sia piena!'
         subtitle='Saluto del Direttore, don Nicola Munari'
         avatarImageUrl='/images/home/nik.png'
         columnCount={2}
       >
-        <p>
-          Quando finalmente suona l’ultima campanella dell’anno scolastico
-          inizia quel periodo tanto atteso dove finalmente si può fare ciò che
-          si vuole, senza troppi vincoli o regole, sveglie troppo mattiniere,
-          insegnanti esigenti e compiti che preoccupano. Spensieratezza! Questa
-          l’attesa più grande durante l’ultima parte dell’anno scolastico.
-          Purtroppo tanto è grande l’attesa delle vacanze, tanto è veloce il
-          tempo in cui la spensieratezza diventa noia, la libertà diventa ozio e
-          pigrizia e il tempo libero rischia di diventare tempo perso.
-        </p>
-        <p>
-          La Proposta Estate Ragazzi, da più di 40 anni, è un’occasione per
-          vivere un’Estate davvero ricca: di incontri, attività molteplici,
-          gite, escursioni, serate con le famiglie… il tutto vissuto in un clima
-          di amicizia, festa e grinta che contagiano e coinvolgono tutti.
-        </p>
-        <p>
-          Se mi domandassero perché venire alla P.E.R. 2023 direi solo questo. È
-          un’esperienza per vivere alla grande e non vivacchiare. A noi piace
-          vivere così: ogni giornata è densa perché piena di cose belle, vissute
-          con grinta ed entusiasmo. Questo l’augurio per ogni genitore, ogni
-          ragazzo e ogni educatore che vivrà questa proposta: “Che ogni giorno
-          ci veda andare a letto stanchi ,ma felici per gli incontri, per la
-          gioia condivisa e le esperienze arricchenti che potremmo fare
-          insieme”. Buona P.E.R. 2023
-        </p>
+        <p>C’è un tempo per lavorare e un tempo per riposare, un tempo per l’ansia
+        e un tempo per la gioia, un tempo per la fatica e un tempo per il
+        relax….</p><p>E’ la vita di ogni giorno, di ogni settimana e di ogni anno,
+        dove si alternano tempi segnati da situazioni diverse e anche opposte.
+        Ma il tempo è prezioso è la nostra vita che viene scandita dal tempo e
+        il tempo non deve diventare vuoto, perché vuota sarebbe la vita. Ecco il
+        perché della Proposta Estate Ragazzi, che da più di 40 anni segna
+        l’inizio delle vacanze.</p>
+      <p>Non è un’estate vuota, ma piena, significativa,
+        entusiasmante. Anche quest’anno attività, giochi, gite, personaggi e
+        serate per tutti i gusti, per dare pienezza ad un momento della vita,
+        come quello delle vacanze, che non deve essere sciupato.</p>
+        <p>A tutti i
+        ragazzi, gli animatori, i genitori auguro di essere felici, per la
+        bellezza dell’esperienza che andremo a vivere assieme, per un impegno
+        che da gusto alle giornate, per la serenità che anima i volti di chi
+        vive questa esperienza con impegno. Non abbiate paura di sudare,
+        correre, saltare, giocare con grinta, perché la sana allegria è la porta
+        per la gioia vera e la vita significativa. Buona Estate!</p>
       </Paragraph>
       <SwiperNews title='News' data={data} limit={12} />
       <Features
@@ -133,7 +123,12 @@ export default function Home({ data }) {
           ],
         ]}
       />
-      <Products cardWidth={3} products={in_evidenza} borderRadius='50%' aspectRatio='1 / 1' />
+      <Products
+        cardWidth={3}
+        products={in_evidenza}
+        borderRadius='50%'
+        aspectRatio='1 / 1'
+      />
       <Carousel slides={gite} height={80} />
       <Products
         title='I laboratori'
@@ -144,7 +139,7 @@ export default function Home({ data }) {
         aspectRatio='1 / 1'
       />
       <Carousel slides={serate} height={80} />
-      { /*
+      {/*
       <Products
         title='Serate Cinema'
         description='Ogni lunedì sera sarà la serata dedicata al cinema. Le proiezioni inizieranno alle ore 20:45, con accesso alla biglietteria da via XIII Martiri, al prezzo incredibile di 4,00 € (più un euro se non hai ancora gli occhiali 3D);
@@ -154,7 +149,7 @@ export default function Home({ data }) {
         cardWidth={3}
         products={serate_cinema}
         borderRadius='5px'
-      /> */ }
+      /> */}
       <Paragraph
         title='Stay tuned'
         subtitle='Per essere sempre aggiornato sulla PER!'
@@ -205,7 +200,12 @@ export default function Home({ data }) {
         cardWidth={4}
         imageUrl='/images/home/sfondo_giostra.jpeg'
       />
-      <Products cardWidth={3} products={altri_link} borderRadius='50%' aspectRatio='1 / 1' />
+      <Products
+        cardWidth={3}
+        products={altri_link}
+        borderRadius='50%'
+        aspectRatio='1 / 1'
+      />
       <Paragraph
         title='La Segreteria durante la PER'
         backgroundColor='#3d3d3d'
@@ -265,9 +265,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/per'
-  )
+  const res = await fetch('https://channels.donboscosandona.it/api/posts/per')
   const data = await res.json()
 
   return {
@@ -315,7 +313,7 @@ let serate = [
     opacity: 0.5,
     blur: '0rem',
     buttonText: 'Vai al modulo di iscrizione',
-    buttonUrl: ''
+    buttonUrl: '',
   },
 ]
 
@@ -507,7 +505,7 @@ let serate_cinema = [
   {
     title: '17 LUGLIO - MISSION: IMPOSSIBLE - DEAD RECKONING',
     description:
-      'Tom Cruise torna ancora una volta a vestire i panni dell’intramontabile Ethan Hunt, specialista dello spionaggio ad altro rischio. Questa volta Ethan insieme alla sua squadra dell\'IMF saranno alle prese con la sfida più pericolosa mai affrontata finora: il team dovrà riuscire a rintracciare e disinnescare una nuova e terribile arma, che si rivelerà essere una minaccia per l\'intera umanità.',
+      "Tom Cruise torna ancora una volta a vestire i panni dell’intramontabile Ethan Hunt, specialista dello spionaggio ad altro rischio. Questa volta Ethan insieme alla sua squadra dell'IMF saranno alle prese con la sfida più pericolosa mai affrontata finora: il team dovrà riuscire a rintracciare e disinnescare una nuova e terribile arma, che si rivelerà essere una minaccia per l'intera umanità.",
     immagineUrl:
       'https://image.tmdb.org/t/p/original/89j8FMC252IeF6MuzJ1wQjVbte8.jpg',
     url: 'https://cinema.donboscosandona.it',

@@ -1,63 +1,51 @@
-import Head from "next/head";
-import Layout from "/components/Layout";
-import LandingHero from "/components/LandingHero.js";
-import Paragraph from "components/Paragraph";
+import Head from 'next/head'
+import Layout from '/components/Layout'
+import LandingHero from '/components/LandingHero.js'
+import Paragraph from 'components/Paragraph'
 
 export default function Pagina() {
   return (
     <Layout>
       <Head>
         <title>Proposta Estate Ragazzi di San Donà di Piave</title>
+        <meta name='og:url' content='https://per.donboscosandona.it/tema' />
+        <meta name='og:type' content='website' />
+        <meta name='og:locale' content='it_IT' />
         <meta
-          name="og:url"
-          content="https://per.donboscosandona.it/tema"
-        />
-        <meta name="og:type" content="website" />
-        <meta name="og:locale" content="it_IT" />
-        <meta
-          name="og:title"
-          content="Proposta Estate Ragazzi di San Donà di Piave"
+          name='og:title'
+          content='Proposta Estate Ragazzi di San Donà di Piave'
         />
         <meta
-          name="og:description"
-          content="Be-Real: from lie to Life. Il tema della Proposta Estate 2023."
+          name='og:description'
+          content='Il tema della Proposta Estate Ragazzi.'
         />
-        <meta name="og:image" content="/images/tema.png" />
+        <meta name='og:image' content='/images/tema.png' />
       </Head>
       <LandingHero
         opacity={0.3}
-        title="Be-Real"
-        imageUrl="/images/tema.png"
+        title='Re-Creation'
+        description='From law to love'
+        imageUrl='/images/tema.png'
       />
-      <Paragraph title="C'era una volta...">
+      <Paragraph title='Un’altra storia fantasy?'>
         <p>
           <i>
-            «Un re!» diranno subito i miei piccoli lettori. No, ragazzi, avete
-            sbagliato. C’era una volta un pezzo di legno.
+            Ma questa non è solo una storia come tante altre! Come no? Vuoi
+            dirmi che si può andare in altri mondi attraverso anelli o armadi!
+            Forse no, hai ragione! Ma forse il nostro mondo è più di ciò che
+            sembra!
           </i>
         </p>
         <p>
-          «Mastro ciliegia è un uomo senza grilli sotto la parrucca. Attende al
-          suo lavoro e non si lascia incantare da divagazioni che tentino di
-          spingere il suo interesse oltre ciò che vede e che tocca. Non si
-          domanda neppure da parte arrivi quel pezzo di legno che, a suo dire, è
-          capitato a tempo. Per lui un pezzo di legno è solo un pezzo di legno,
-          in tutto uguale a quelli che d’inverno si mettono nelle stufe e nei
-          caminetti per accendere il fuoco e riscaldare le stanze. Sicché non
-          gli potrà toccare sorte diversa. Che se diventerà invece una gamba da
-          tavolino, questa - agli occhi di un uomo positivo come mastro Ciliegia
-          - è indubbiamente per quel legno una fortuna insperata. Un progetto
-          come questo è il massimo della fantasia e dell’ardimento che è
-          consentito al nostro tranquillo e ragionevole falegname…ma se invece
-          dentro a quel pezzo di legno vi fosse nascosto dentro qualcuno?»
-          (Card. Giacomo Biffi)
+          Digory, Polly, Peter, Susan, Edmund, Lucy e chissà quanti altri
+          ragazzi come loro hanno delle storie incredibili da raccontare… Cosa
+          le accomuna? Il mondo di Narnia, la strega Jadis e Aslan. Chissà cosa
+          avranno a che vedere tutte queste cose??? Beh, non ci resta che venire
+          alla PER e scoprirlo!
         </p>
-        <p>
-          La Proposta Estate 2023 vuole farci entusiasmare ed ispirare dalle
-          avventure di Pinocchio per riscoprire la bellezza di una vita vera da
-          portare alla luce!
-        </p>
+        <p>Il mondo di Narnia è un mondo fantastico, pieno di fauni, centauri, minotauri, animali che parlano, e per quanto code, corna e pellicce possano essere diverse da noi, poi i cuori e le menti sono gli stessi e devono sempre trovare una strada in mezzo alle complicate vicende che la vita li porta ad affrontare. Sarà il leone Aslan a vincere la battaglia o la perfida Strega Bianca?</p>
+        <p>La Proposta Estate 2024 vuole farci sognare ed ispirare attraverso i racconti delle Cronache di Narnia per riscoprire la bellezza di una vita piena di gioia!  </p>
       </Paragraph>
     </Layout>
-  );
+  )
 }
