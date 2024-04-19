@@ -63,7 +63,7 @@ export default function Pagina() {
           <li>Calcio balilla</li>
           <li>Scacchi</li>
           <li>Forza 4</li>
-          Oppure a grandi giochi al parco per ravvivare un po' la città!!!!
+          Oppure grandi giochi al parco per ravvivare un po' la città!!!!
         </p>
       </Paragraph>
     </Layout>

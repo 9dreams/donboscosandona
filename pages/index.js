@@ -112,8 +112,8 @@ export default function Home({ data }) {
           [
             '11.10',
             'Seconda ora di attività',
-            '20.45',
-            'Serate: spettacoli, tornei, animazione, film...',
+            '',
+            '',
           ],
           [
             '12.00',
@@ -139,17 +139,14 @@ export default function Home({ data }) {
         aspectRatio='1 / 1'
       />
       <Carousel slides={serate} height={80} />
-      {/*
       <Products
-        title='Serate Cinema'
-        description='Ogni lunedì sera sarà la serata dedicata al cinema. Le proiezioni inizieranno alle ore 20:45, con accesso alla biglietteria da via XIII Martiri, al prezzo incredibile di 4,00 € (più un euro se non hai ancora gli occhiali 3D);
- l’uscita invece sarà fatta dalla parte dell’Oratorio, per garantire una maggiore sicurezza dei ragazzi mentre aspettano i genitori.
- 
- Per ottenere il biglietto al prezzo speciale PER, l’acquisto deve essere fatto alla biglietteria del Cinema il lunedì mattina dalle 8.30 alle 9.30 o dalle 11.30 alle 12.30 o tutti i giorni dalle 16 alle 19. In alternativa è possibile acquistarlo online sul sito del cinema al prezzo consueto (5 € il biglietto e 2 € gli occhiali 3D): potrai scegliere con comodo il posto e ci darai un aiutino in più. '
+        title='Il Cinema don Bosco compie 90 anni'
+        description='Per tutta l’estate e fino al 3 settembre 2024 (90° anniversario della prima proiezione) gli iscritti alla PER24 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai presentarti alla cassa indossando la maglietta della PER24 e mostrando il codice che ogni settimana sarà inviato nella Community WhatsApp insieme alla programmazione del cinema!'
         cardWidth={3}
         products={serate_cinema}
+        aspectRatio='1 / 1.5'
         borderRadius='5px'
-      /> */}
+      />
       <Paragraph
         title='Stay tuned'
         subtitle='Per essere sempre aggiornato sulla PER!'
@@ -161,7 +158,7 @@ export default function Home({ data }) {
           appuntamenti importanti.
           <br />
           Animatori, ragazzi e genitori potranno così essere sempre connessi e
-          raccontare la propria esperienza usando gli hashtag #PER23{' '}
+          raccontare la propria esperienza usando gli hashtag #PER24{' '}
         </p>
         <p>
           Seguiteci su
@@ -172,7 +169,7 @@ export default function Home({ data }) {
         </p>
         <p>
           <b>
-            Anche quest’anno potrai ricevere tutte le NEWS della PER23
+            Anche quest’anno potrai ricevere tutte le NEWS della PER2
             direttamente su WhatsApp!!!
           </b>
           <br /> E' semplice e comodo... usando il tuo telefono tocca il
@@ -189,7 +186,7 @@ export default function Home({ data }) {
             target='_blank'
             color='success'
             variant='contained'
-            href='https://chat.whatsapp.com/KrecmR06m0rFcpGzmbO7C0'
+            href='https://chat.whatsapp.com/DMlTes1oBR71kwW2WxTPLv'
           >
             ISCRIVITI ALLE NEWS SU WHATSAPP
           </Button>
@@ -236,6 +233,9 @@ export default function Home({ data }) {
           il mercoledì pomeriggio.{' '}
         </p>
         <p>
+          <b>Per qualsiasi evenienza ed informazione potete mandare una mail all’indirizzo per@donboscosandona.it.</b>
+        </p>
+        <p>
           Ricordiamo che l’iscrizione alle uscite deve avvenire{' '}
           <b>
             al massimo entro le ore 12.00 di due giorni precedenti all’uscita
@@ -244,6 +244,9 @@ export default function Home({ data }) {
         </p>
         <p>
           Le liste verranno esposte verso le 18.00 nella vigilia delle gite.
+        </p>
+        <p>
+        Per potervi servire meglio e più velocemente è importante venire in segreteria con i soldi giusti.
         </p>
         <p>
           Non è necessaria la presenza del genitore per l’iscrizione alle gite.
@@ -479,35 +482,39 @@ const testimonials = [
 
 let serate_cinema = [
   {
-    title: '26 GIUGNO - THE FLASH',
+    title: 'ME CONTRO TE - OPERAZIONE SPIE',
+    category: 'Dal 1° Giugno',
     description:
-      'In The Flash i mondi si scontrano quando Barry usa i suoi superpoteri per viaggiare indietro nel tempo e cambiare gli eventi del passato. Ma quando il tentativo di salvare la sua famiglia altera inavvertitamente il futuro, Barry rimane intrappolato in una realtà in cui il generale Zod è tornato, minacciando distruzione, e senza alcun Supereroe a cui rivolgersi...',
+      "L'armonia del Pianeta è minacciata dall'alleanza dei Malvagi: il Signor S., Perfidia, Viperiana e Serpe hanno convinto il mondo intero che Sofì e Luì sono terribili criminali e solo loro, i Malvagi, sono i buoni che possono salvare l'umanità dalla cattiveria dei Me Contro Te. Ma non tutto è perduto: Sofì e Luì insieme ai loro amici dovranno trovare un modo per riportare l'armonia nel mondo.",
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/iSrDzA2PtYvSpl6IS8QJwajJe3b.jpg',
+      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b573f1ce565ab27f7bbda91e48e9dcc197187404/locandina.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: '3 LUGLIO - ELEMENTAL 3D',
-    description:
-      'In una città in cui abitanti di fuoco, acqua, terra e aria vivono insieme, un’ardente giovane donna e un ragazzo che segue la corrente stanno per scoprire qualcosa di fondamentale: quanto hanno davvero in comune.',
-    immagineUrl:
-      'https://image.tmdb.org/t/p/original//v9dZ3MnuSOU5C0ma21HP30zVGI.jpg',
-    url: 'https://cinema.donboscosandona.it',
-  },
-  {
-    title: '10 LUGLIO - INDIANA JONES E IL QUADRANTE DEL DESTINO',
-    description:
-      "Nel 1969, l'archeologo e avventuriero statunitense Indiana Jones vive sullo sfondo della corsa allo spazio. Jones è a disagio per il fatto che il governo federale degli Stati Uniti d’America abbia reclutato ex nazisti per aiutare a battere l'Unione Sovietica nella competizione per arrivare nello spazio.",
-    immagineUrl:
-      'https://image.tmdb.org/t/p/original/y4MBS0SKE0pHR57vfYBxGhrkfcv.jpg',
-    url: 'https://cinema.donboscosandona.it',
-  },
-  {
-    title: '17 LUGLIO - MISSION: IMPOSSIBLE - DEAD RECKONING',
+    title: 'BAD BOYS: RIDE OR DIE',
+    category: 'Dal 13 Giugno',
     description:
       "Tom Cruise torna ancora una volta a vestire i panni dell’intramontabile Ethan Hunt, specialista dello spionaggio ad altro rischio. Questa volta Ethan insieme alla sua squadra dell'IMF saranno alle prese con la sfida più pericolosa mai affrontata finora: il team dovrà riuscire a rintracciare e disinnescare una nuova e terribile arma, che si rivelerà essere una minaccia per l'intera umanità.",
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/89j8FMC252IeF6MuzJ1wQjVbte8.jpg',
+      'https://image.tmdb.org/t/p/original//nP6RliHjxsz4irTKsxe8FRhKZYl.jpg',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'INSIDE OUT 2',
+    category: 'Dal 19 Giugno',
+    description:
+      'Inside Out 2 racconta una nuova avventura in quella che è la testa dell\'ormai adolescente Riley, che sta per iniziare il liceo e che è alle prese con una serie di nuove Emozioni. Gioia, Tristezza, Rabbia, Paura e Disgusto, che a detta di tutti gestiscono da tempo un\'attività di successo, non sanno come comportarsi quando arriva Ansia, destinata a stravolgere tutto nel quartier generale e non solo...',
+    immagineUrl:
+      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2c7f8229d70787dbf0ce1443b1b96adcabc91f2/Inside%20Out%202.jpeg',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'CATTIVISSIMO ME 4',
+    category: 'Dal 21 Agosto',
+    description:
+      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+    immagineUrl:
+      'https://image.tmdb.org/t/p/original//hoJDI4mkP2w9WK2po5aZx3YIcLP.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
 ]

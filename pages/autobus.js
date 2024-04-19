@@ -27,6 +27,8 @@ export default function Pagina() {
         title='Trasporto autobus'
         imageUrl='/images/autobus.png'
       />
+      <Paragraph title="Pagina in costruzione." />
+      { /*
       <Table
         title='Andata'
         backgroundImageUrl='/images/autobus/02.webp'
@@ -70,7 +72,7 @@ export default function Pagina() {
           ['13:05', 'Isiata / Fermata ATVO', '19:05'],
           ['13:13', 'Palazzetto / Chiesa', '19:13'],
         ]}
-      />
+      /> */ }
       <Paragraph />
     </Layout>
   )

@@ -46,23 +46,23 @@ export default function Pagina() {
           in cappellina
         </p>
         <p>
-          DOMENICA 18 GIUGNO - FESTA DI APERTURA CON TUTTE LE FAMIGLIE Ore 9.00
+          DOMENICA 16 GIUGNO - FESTA DI APERTURA CON TUTTE LE FAMIGLIE Ore 9.00
           – S. Messa; a seguire, incontro in teatro coi genitori per alcune
           importanti comunicazioni. Nel frattempo, i ragazzi si ritroveranno con
           i loro animatori!
         </p>
         <p>
-          Venerdì 7 e Sabato 8 LUGLIO - PELLEGRINAGGIO
+          Venerdì 5 e Sabato 6 LUGLIO - PELLEGRINAGGIO
           <br />
           Il pellegrinaggio è un’esperienza fondamentale nel cammino della
           P.E.R.: dopo tanti doni ricevuti, è il momento di ringraziare, prima
           di lasciarci...
           <br />
-          IL PROGRAMMA dettagliato verrà dato durante la P.E.R.
+          IL PROGRAMMA dettagliato verrà dato durante la PER
         </p>
         <p>
-          Un gruppo partirà a piedi nel pomeriggio di venerdì 7, passerà la
-          notte in sacco a pelo e materassini, ospitati presso la parrocchia di
+          Un gruppo di ragazzi di terza media partirà a piedi nel pomeriggio di venerdì, passerà la
+          notte in sacco a pelo e materassini, ospitato presso la parrocchia di
           Grassaga. Un secondo gruppo
           partirà in bicicletta sabato mattina e raggiungerà il resto dei
           pellegrini per l’ultima tappa e il pranzo al sacco. Tutti gli altri

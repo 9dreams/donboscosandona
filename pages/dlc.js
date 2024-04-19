@@ -31,37 +31,26 @@ export default function Pagina() {
       />
       <Paragraph title="" subtitle="">
         <p>
-          Ciao ragazzi, grazie al contributo del Comune, anche quest’anno dopo
-          la Proposta Estate continueremo l’attività: “Scuola d’estate?
-          Si,grazie!”. Da lunedì 17 luglio a giovedì 3 agosto 2023, per tutti i
-          ragazzi dal secondo anno della scuola primaria al terzo anno della
-          scuola secondaria ci sarà la possibilità di svolgere i compiti delle
-          vacanze con il supporto dei nostri operatori, ma non solo!
+        Cari ragazzi,
+ 
+ con il contributo del Comune di San Dona’ di Piave, anche quest’anno – dopo il mese della Proposta Estate – riprenderanno le attività del Dopo La Campanella «Scuola d’estate? Si, grazie!».
+        </p>
+        <p>
+        Da lunedì 15 luglio a giovedì 1 agosto 2024, avrete l’opportunità di svolgere i compiti per le vacanze con l’affiancamento dei nostri operatori, dei salesiani e di alcuni giovani animatori della Proposta Estate! L’invito è rivolto a tutti i ragazzi dal secondo anno della scuola primaria al terzo anno della scuola secondaria di I grado!
+        </p>
+        <p>
+        Il nostro doposcuola alterna da sempre lo studio ai momenti di gioco in cortile! È questa la forza del carisma salesiano!! Secondo Don Bosco, infatti, la ricreazione è importante tanto quanto i compiti e l’impegno nello studio: dal cortile nascono le amicizie più belle, mentre nelle aule – studiando e imparando – ci si forma come buoni cristiani e onesti cittadini! E poi… è estate!! Una partita a calcio, a basket, a pallavolo o a ping-pong aiuterà sicuramente a rendere l’esperienza più piacevole e interessante!!!
         </p>
         <p>
           {" "}
-          Lo studio si alternerà a momenti di svago, gioco e allegria così tutto
-          diventerà più interessante e piacevole.{" "}
+          Ma non finisce qui! Dal lunedì al giovedì l’attività si svolgerà secondo gli orari indicati da calendario, ma un giovedì sarà dedicato all’uscita presso un parco acquatico…un po’ di sana spensieratezza, giusto per non soffrire troppo il caldo e per passare una giornata in compagnia!!
         </p>
-        <p>
-          Ci saranno i nostri operatori pronti ad aiutarvi, coadiuvati da alcuni
-          giovani animatori della Proposta Estate e dai salesiani del nostro
-          oratorio. Studieremo, giocheremo, ci divertiremo insieme nel vero
-          spirito salesiano!
-        </p>
-        <p>
-          {" "}
-          L’attività si svolgerà dal lunedì al giovedì, secondo gli orari
-          indicati nel calendario ed un giovedì sarà dedicato all’uscita presso
-          un parco acquatico. E’ una proposta che da anni offre l’Oratorio Don
-          Bosco e che viene accolta sempre con grande entusiasmo … non puoi
-          mancare proprio tu!
-        </p>
-        Orario della giornata tipo:
+        <p>CHE ASPETTI? NON PUOI MANCARE!</p>
+        Orari della giornata:
         <p>
           <li>09:00 Accoglienza</li>
           <li>09:30 1^ ora di compiti</li>
-          <li>10:30 Intervallo con attività ludico-ricreative</li>
+          <li>10:30 Intervallo e giochi in cortile</li>
           <li>11:00 2^ ora di compiti</li>
           <li>12:00 Tutti a casa per il pranzo</li>
           <li>14:30 Riapertura cortili per tutti</li>
@@ -69,25 +58,21 @@ export default function Pagina() {
           <li>
             <b>Medie:</b>{" "}
           </li>
-          <li>alle 15:00 3^ ora di compiti</li>
-          <li>15:45 Intervallo con attività ludico-ricreative</li>
+          <li>15:00 3^ ora di compiti</li>
+          <li>15:45 Intervallo e giochi in cortile</li>
           <li>16:15 4^ ora di compiti</li>
           <br />
           <li>
             <b>Elementari:</b>
           </li>
           <li>15:00 3^ ora di compiti</li>
-          <li>16:00 Attività ludico-ricreative con giochi organizzati</li>
+          <li>16:00 Giochi organizzati in cortile</li>
           <br />
           <li>17:00 Arrivederci a domani per tutti</li>
         </p>
       </Paragraph>
       <Paragraph title="Iscrizioni">
-        Iscrizioni a partire dal 26 giugno, secondo il calendario e l’orario che
-        trovate nel link presente nel sito http://www.inoratorio.it/dlc (tranne
-        i giorni di uscita della PER e week-end) presso l’ufficio Tutor del
-        Centro di Formazione Professionale: Andrea Pasqualetto (391 706 4430
-        oppure 0421 338 992)
+      Iscrizioni a partire dal 24 giugno, secondo il calendario e l’orario che trovate al link del sito http://www.inoratorio.it/dlc o presso l’ufficio Tutor della Scuola di Formazione Professionale (tranne i giorni di uscite della P.E.R. e i weekend): Andrea Pasqualetto (3917064430 / 0421 338992).
       </Paragraph>
     </Layout>
   );

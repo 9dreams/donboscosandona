@@ -37,19 +37,19 @@ export default function Pagina() {
       >
         Ecco gli appuntamenti della P.E.R. dove i genitori sono stra-benvenuti:
         <li>
-          Domenica 18 giugno, ore 9: Santa Messa di Apertura; a seguire incontro
+          Domenica 16 giugno, ore 9: Santa Messa di Apertura; a seguire incontro
           per delle comunicazioni in teatro.
         </li>
         <li>Tutte le serate organizzate!</li>
         <li>L’Oratorio è sempre aperto… venite a rinfrescarvi da noi!</li>
         <li>
           <strong>
-            Sabato 8 Luglio, ore 15.30: Santa Messa di Ringraziamento al
+            Sabato 6 Luglio, ore 11.00: Santa Messa di Ringraziamento al
             Santuario di Motta di Livenza... e alla fine ANGURIA PER TUTTI!!!
           </strong>
         </li>
         Per coloro che volessero regalare un po’ del proprio tempo e dare una
-        mano a Don Bosco durante la P.E.R., non esiti a contattare don Nicola.
+        mano a Don Bosco durante la P.E.R., non esitino a contattare don Nicola.
       </Paragraph>
     </Layout>
   );
