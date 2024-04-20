@@ -48,7 +48,7 @@ export default function Pagina() {
       </Head>
       <LandingHero
         opacity={0.1}
-        title='Novità 2023'
+        title='Novità 2024'
         imageUrl='/images/novità.png'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>
