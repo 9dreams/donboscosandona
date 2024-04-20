@@ -35,12 +35,6 @@ let products = [
     immagineUrl: '/images/laboratori/pallavolo.jpeg',
   },
   {
-    title: 'STREET HOCKEY',
-    category: '1ª ora elementari / 2ª ora medie',
-    description: 'Sport di squadra, versione dell\'hockey su ghiaccio giocato con o senza pattini su una superficie di asfalto. Generalmente è giocato su strade, parcheggi o campi da tennis.',
-    immagineUrl: '/images/laboratori/hockey.webp',
-  },
-  {
     title: 'PING PONG',
     category: '1ª ora elementari / 2ª ora medie',
     description:
@@ -59,13 +53,6 @@ let products = [
     category: '1ª ora elementari / 2ª ora medie',
     description: 'In collaborazione con ASD PALLAMANO MUSILE',
     immagineUrl: '/images/laboratori/pallamano.jpeg',
-  },
-  {
-    title: 'FRISBEE',
-    category: '1ª ora elementari / 2ª ora medie',
-    description:
-      'Uno sport atleticamente completo dove uomini e donne giocano assieme e dove l’arbitro e’ il Fair Play di ogni giocatore!',
-    immagineUrl: '/images/laboratori/frisbee.jpeg',
   },
 ]
 

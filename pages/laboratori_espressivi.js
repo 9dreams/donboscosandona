@@ -7,13 +7,6 @@ import { Container, ButtonGroup, Button } from '@mui/material/'
 
 let products = [
   {
-    title: 'CLOWNERIE',
-    category: '1ª ora elementari / 2ª ora medie',
-    description:
-      'Diventa anche tu un bravissimo giocoliere e fai divertire i tuoi amici!',
-    immagineUrl: '/images/laboratori/clownerie.jpeg',
-  },
-  {
     title: 'CANTO',
     category: '1ª ora elementari / 2ª ora medie',
     description:
@@ -51,17 +44,17 @@ let serata = [
     immagineUrl: '/images/laboratori/hiphop.webp',
   },
   {
-    title: 'TEATRO SKETCH',
+    title: 'TEATRO',
     category: '1ª ora medie / 2ª ora elementari',
     description:
-      'Assieme agli animatori prepariamo gli sketch comici che verranno messi in scena durante le accoglienze del pomeriggio. I più belli saranno presentati alla serata finale!!!',
+      'Essere o non essere? Questo è il dilemma...',
     immagineUrl: '/images/laboratori/sketch.jpeg',
   },
   {
     title: 'CHITARRA',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Perfezionare la tecnica o scoprire la passione per lo strumento musicale più diffuso al mondo! (se hai la chitarra è meglio... anche se alcune le possiamo fornire noi!)',
+      'Perfezionare la tecnica o scoprire la passione per lo strumento musicale più diffuso al mondo!',
     immagineUrl: '/images/laboratori/chitarra.jpeg',
   },
 ]

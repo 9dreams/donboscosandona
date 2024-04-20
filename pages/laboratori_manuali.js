@@ -13,7 +13,7 @@ let products = [
     immagineUrl: '/images/laboratori/scenografia.jpeg',
   },
   {
-    title: 'DECOUPAGES',
+    title: 'DECORAZIONI E FANTASIA',
     category: '1ª ora medie / 2ª ora elementari',
     description: 'Decora ritagliando',
     immagineUrl: '/images/laboratori/decoupages.jpeg',
@@ -22,19 +22,19 @@ let products = [
     title: 'FILI E PERLINE',
     category: '1ª ora medie / 2ª ora elementari',
     description:
-      'L’arte dell’intreccio di corde e stoffe per realizzare magnifici braccialetti … ma non solo.',
+      'L’arte dell’intreccio di corde e stoffe per realizzare magnifici braccialetti… ma non solo.',
     immagineUrl: '/images/laboratori/perline.jpeg',
   },
   {
-    title: 'STAMPA SU STOFFA',
+    title: 'CREAZIONI SU STOFFA',
     category: '1ª ora medie / 2ª ora elementari',
-    description: 'Riproduci su stoffa la tua creatività grafica',
+    description: 'Riproduci su stoffa la tua creatività',
     immagineUrl: '/images/laboratori/stampa.jpeg',
   },
   {
     title: 'TUTTO CARTA',
     category: '1ª ora medie / 2ª ora elementari',
-    description: 'La carta in 3 dimensioni',
+    description: 'La carta in 3 dimensioni e oltre',
     immagineUrl: '/images/laboratori/carta.jpeg',
   },
   {
@@ -65,14 +65,8 @@ let products = [
   {
     title: 'INFORMATICA AVANZATA',
     category: '1ª ora medie / 2ª ora medie',
-    description: 'Impara il tuo primo linguaggio di programmazione.',
+    description: 'Migliora le tue skill tecnologiche',
     immagineUrl: '/images/laboratori/informatica2.jpeg',
-  },
-  {
-    title: 'MULTIMEDIA',
-    category: '1ª ora medie / 2ª ora medie',
-    description: 'Elaborazione di foto e video in digitale',
-    immagineUrl: '/images/laboratori/multimedia.jpeg',
   },
   {
     title: 'GIOCHI DA TAVOLO',
@@ -81,14 +75,8 @@ let products = [
     immagineUrl: '/images/laboratori/giochi.jpeg',
   },
   {
-    title: 'IMPIANTI ELETTRICI',
-    category: '1ª ora medie / 2ª ora medie',
-    description: "Alla scoperta dei primi segreti dell'elettricità",
-    immagineUrl: '/images/laboratori/impianti.jpeg',
-  },
-  {
     title: 'POLLICE VERDE',
-    category: '1ª ora medie / 2ª ora elementari',
+    category: '1ª ora elementari / 2ª ora elementari',
     description: 'Se il giardinaggio è la tua passione...',
     immagineUrl: '/images/laboratori/polliceverde.jpeg',
   },
