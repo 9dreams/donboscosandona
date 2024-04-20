@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Layout from "/components/Layout";
-import LandingHero from "/components/LandingHero.js";
-import Paragraph from "components/Paragraph";
-import Calendar from "/components/Calendar.js";
+import Head from 'next/head'
+import Layout from '/components/Layout'
+import LandingHero from '/components/LandingHero.js'
+import Paragraph from 'components/Paragraph'
+import Calendar from '/components/Calendar.js'
 
 export default function Pagina() {
   return (
@@ -10,213 +10,217 @@ export default function Pagina() {
       <Head>
         <title>Proposta Estate Ragazzi di San Donà di Piave</title>
         <meta
-          name="og:url"
-          content="https://per.donboscosandona.it/calendario"
+          name='og:url'
+          content='https://per.donboscosandona.it/calendario'
         />
-        <meta name="og:type" content="website" />
-        <meta name="og:locale" content="it_IT" />
+        <meta name='og:type' content='website' />
+        <meta name='og:locale' content='it_IT' />
         <meta
-          name="og:title"
-          content="Proposta Estate Ragazzi di San Donà di Piave"
+          name='og:title'
+          content='Proposta Estate Ragazzi di San Donà di Piave'
         />
         <meta
-          name="og:description"
-          content="Il calendario dettagliato delle giornate e delle serate."
+          name='og:description'
+          content='Il calendario dettagliato delle giornate e delle serate.'
         />
-        <meta name="og:image" content="/images/calendario.png" />
+        <meta name='og:image' content='/images/calendario.png' />
       </Head>
       <LandingHero
         opacity={0.3}
-        title="Calendario"
-        imageUrl="/images/calendario.png"
+        title='Calendario'
+        imageUrl='/images/calendario.png'
       />
       <Calendar cardWidth={4} events={settimana0} />
-      <Calendar title="Prima settimana" cardWidth={3} events={settimana1} />
-      <Calendar title="Seconda settimana" cardWidth={3} events={settimana2} />
-      <Calendar title="Terza settimana" cardWidth={3} events={settimana3} />
-      <Calendar title="Quarta settimana" cardWidth={3} events={settimana4} />
+      <Calendar title='Prima settimana' cardWidth={3} events={settimana1} />
+      <Calendar title='Seconda settimana' cardWidth={3} events={settimana2} />
+      <Calendar title='Terza settimana' cardWidth={3} events={settimana3} />
+      <Calendar title='Quarta settimana' cardWidth={3} events={settimana4} />
+      <Paragraph>
+      Attenzione! TUTTE LE DATE E GLI ORARI POSSONO SUBIRE MODIFICHE: il sito sarà sempre aggiornato con le informazioni più recenti.
+      </Paragraph>
     </Layout>
-  );
+  )
 }
 
 let settimana0 = [
   {
-    date: "Giovedì 15 Giugno",
-    morning: "Inizio elementari",
-    afternoon: "Inizio medie",
-    immagineUrl: "/images/calendario/inizio.png",
+    date: 'Giovedì 13 Giugno',
+    morning: 'Inizio elementari',
+    afternoon: 'Inizio medie',
+    immagineUrl: '/images/calendario/inizio.png',
   },
   {
-    date: "Venerdì 16 Giugno",
-    morning: "Inizio attività",
-    afternoon: "Presentazione squadre e grande gioco",
-    immagineUrl: "/images/calendario/inizio2.png",
+    date: 'Venerdì 14 Giugno',
+    morning: 'Inizio attività',
+    afternoon: 'Presentazione squadre e grande gioco',
+    immagineUrl: '/images/calendario/inizio2.png',
   },
   {
-    date: "Domenica 18 Giugno",
+    date: 'Sabato 15 Giugno',
+    evening: 'Italia Albania con piade e spillatrice',
+    immagineUrl: '/images/calendario/inizio2.png',
+  },
+  {
+    date: 'Domenica 16 Giugno',
     morning:
-      "Messa di apertura, incontro con i genitori, giochi e pranzo al sacco",
-    immagineUrl: "/images/calendario/messa.png",
+      'Messa di apertura, incontro con i genitori, giochi e pranzo al sacco',
+    immagineUrl: '/images/calendario/messa.png',
   },
-];
+]
 
 let settimana1 = [
   {
-    date: "Lunedì 19 Giugno",
-    morning: "Attività regolare",
-    afternoon: "Giochi al parco e tornei",
-    evening: "ore 20.45 Film TRANSFORMERS - IL RISVEGLIO 3D",
-    immagineUrl: "/images/calendario/transformers.png",
+    date: 'Lunedì 17 Giugno',
+    morning: 'Attività regolare',
+    afternoon: 'Giochi al parco e tornei',
+    evening: 'Pizzata di squadra gialli - blu',
+    immagineUrl: '/images/calendario/transformers.png',
   },
   {
-    date: "Martedì 20 Giugno",
-    morning: "Attività regolare",
-    afternoon: "Giochi al parco e tornei",
+    date: 'Martedì 18 Giugno',
+    morning: 'Attività regolare',
+    afternoon: 'Giochi al parco e tornei',
     evening: "Oratorio's Got Talent",
-    immagineUrl: "/images/calendario/talent.png",
+    immagineUrl: '/images/calendario/talent.png',
   },
   {
-    date: "Mercoledì 21 Giugno",
-    morning: "Attività regolare",
-    afternoon: "Pit Stop animatori",
-    evening: "Tornei animatori",
-    immagineUrl: "/images/calendario/animatori.png",
+    date: 'Mercoledì 19 Giugno',
+    morning: 'Attività regolare',
+    afternoon: 'Pit Stop animatori',
+    evening: 'Tornei animatori',
+    immagineUrl: '/images/calendario/animatori.png',
   },
   {
-    date: "Giovedì 22 Giugno",
-    morning: "Gita a Noale",
-    afternoon: "Gita a Noale",
-    immagineUrl: "/images/calendario/noale.png",
+    date: 'Giovedì 20 Giugno',
+    morning: 'Gita a Noale',
+    afternoon: 'Gita a Noale',
+    evening: 'Spagna-Italia con piade e spillatrice',
+    immagineUrl: '/images/calendario/noale.png',
   },
   {
-    date: "Venerdì 23 Giugno",
-    morning: "Attività regolare",
-    afternoon: "Ospite DEKRU",
-    evening: "Spettacolo DEKRU",
-    immagineUrl: "/images/calendario/dekru.png",
+    date: 'Venerdì 21 Giugno',
+    morning: 'Attività regolare',
+    afternoon: 'Giochi al parco e tornei',
+    evening: 'Schiuma party',
+    immagineUrl: '/images/calendario/dekru.png',
   },
   {
-    date: "Sabato 24 Giugno",
-    morning: "Gita animatori",
-    immagineUrl: "/images/calendario/gita_animatori.png",
+    date: 'Sabato 22 Giugno',
+    morning: 'Gita animatori (Pioppi)',
+    immagineUrl: '/images/calendario/gita_animatori.png',
   },
-];
+]
 
 let settimana2 = [
   {
-    date: "Lunedì 26 Giugno",
-    morning: "Attività regolare",
-    afternoon: "Quinta elementare e prima media al mare",
-    evening: "ore 20.45 Film THE FLASH",
-    immagineUrl: "/images/calendario/flash.png",
+    date: 'Lunedì 24 Giugno',
+    morning: 'Attività regolare',
+    afternoon: 'Quinta elementare e prima media al mare',
+    evening: 'Croazia-Italia con piade e spillatrice',
+    immagineUrl: '/images/calendario/flash.png',
   },
   {
-    date: "Martedì 27 Giugno",
-    morning: "Gita in montagna: VALLE DEL GARES",
-    afternoon: "Gita in montagna: VALLE DEL GARES",
-    immagineUrl: "/images/calendario/gares.png",
+    date: 'Martedì 25 Giugno',
+    morning: 'Gita in montagna: CANSIGLIO',
+    afternoon: 'Gita in montagna: CANSIGLIO',
+    immagineUrl: '/images/calendario/gares.png',
   },
   {
-    date: "Mercoledì 28 Giugno",
-    morning: "Attività regolare",
-    afternoon: "Pit Stop animatori",
-    evening: "Tornei animatori",
-    immagineUrl: "/images/calendario/animatori.png",
+    date: 'Mercoledì 26 Giugno',
+    morning: 'Attività regolare',
+    afternoon: 'Pit Stop animatori',
+    evening: 'Tornei animatori',
+    immagineUrl: '/images/calendario/animatori.png',
   },
   {
-    date: "Giovedì 29 Giugno",
-    morning: "Attività regolare",
-    afternoon: "Giochi al parco e tornei",
-    immagineUrl: "/images/calendario/regolare.png",
+    date: 'Giovedì 27 Giugno',
+    morning: 'Attività regolare',
+    afternoon: 'Giochi al parco e tornei',
+    immagineUrl: '/images/calendario/regolare.png',
   },
   {
-    date: "Venerdì 30 Giugno",
-    morning: "Attività regolare",
-    afternoon: "Seconda e terza media al mare",
-    evening: "Spettacolo DUNK ITALY SHOW",
-    immagineUrl: "/images/calendario/dunk.png",
+    date: 'Venerdì 28 Giugno',
+    morning: 'Attività regolare',
+    afternoon: 'Seconda e terza media al mare',
+    evening: 'Spettacolo ETIENNE',
+    immagineUrl: '/images/calendario/dunk.png',
   },
-];
+]
 
 let settimana3 = [
   {
-    date: "Lunedì 3 Luglio",
-    morning: "Cambio attività",
-    afternoon: "Terza e quarta elementare al mare",
-    evening: "ore 20.45 Film ELEMENTAL 3D",
-    immagineUrl: "/images/calendario/elemental.png",
+    date: 'Lunedì 1 Luglio',
+    morning: 'Cambio attività',
+    afternoon: 'Terza e quarta elementare al mare',
+    evening: 'Pizzata di squadra verdi - rossi',
+    immagineUrl: '/images/calendario/elemental.png',
   },
   {
-    date: "Martedì 4 Luglio",
-    morning: "Gita al PARCO SIGURTA'",
-    afternoon: "Gita al PARCO SIGURTA'",
-    immagineUrl: "/images/calendario/sigurtà.png",
+    date: 'Martedì 2 Luglio',
+    morning: "Gita a MOVIELAND e CANEVAWORLD",
+    afternoon: "Gita a MOVIELAND e CANEVAWORLD",
+    immagineUrl: '/images/calendario/sigurtà.png',
   },
   {
-    date: "Mercoledì 5 Luglio",
-    morning: "Attività regolare",
-    afternoon: "Pit Stop animatori",
-    evening: "Tornei animatori",
-    immagineUrl: "/images/calendario/animatori.png",
+    date: 'Mercoledì 3 Luglio',
+    morning: 'Attività regolare',
+    afternoon: 'Pit Stop animatori',
+    evening: 'Tornei animatori',
+    immagineUrl: '/images/calendario/animatori.png',
   },
   {
-    date: "Giovedì 6 Luglio",
-    morning: "Attività regolare",
-    afternoon: "Giochi al parco e tornei",
-    evening: "Sfilata a squadre e giochi a stand con i genitori",
-    immagineUrl: "/images/calendario/sfilata.png",
+    date: 'Giovedì 4 Luglio',
+    morning: 'Grande gioco al parco fluviale con tutti i GREST della città',
+    afternoon: 'Giochi al parco e tornei',
+    evening: 'Sfilata a squadre e giochi a stand con i genitori',
+    immagineUrl: '/images/calendario/sfilata.png',
   },
   {
-    date: "Venerdì 7 Luglio",
-    morning: "Attività regolare",
-    afternoon: "Giochi al parco e tornei",
-    evening: "Pellegrinaggio notturno terze medie",
-    immagineUrl: "/images/calendario/regolare.png",
+    date: 'Venerdì 5 Luglio',
+    morning: 'Attività regolare',
+    afternoon: 'Giochi al parco e tornei',
+    evening: 'Pellegrinaggio notturno terze medie',
+    immagineUrl: '/images/calendario/regolare.png',
   },
   {
-    date: "Sabato 8 Luglio",
-    morning: "Pellegrinaggio",
-    immagineUrl: "/images/calendario/pellegrinaggio.png",
+    date: 'Sabato 6 Luglio',
+    morning: 'Pellegrinaggio',
+    immagineUrl: '/images/calendario/pellegrinaggio.png',
   },
-];
+]
 
 let settimana4 = [
   {
-    date: "Lunedì 10 Luglio",
-    morning: "Attività regolare",
-    afternoon: "Giochi al parco e tornei",
-    evening: "ore 20.45 Film INDIANA JONES E IL QUADRANTE DEL DESTINO",
-    immagineUrl: "/images/calendario/indiana.png",
+    date: 'Lunedì 8 Luglio',
+    morning: 'Attività regolare',
+    afternoon: 'Giochi al parco e tornei',
+    evening: 'Serata di ballo con piade e spillatrice',
+    immagineUrl: '/images/calendario/indiana.png',
   },
   {
-    date: "Martedì 11 Luglio",
-    morning: "Gita a Noale",
-    afternoon: "Gita a Noale",
-    immagineUrl: "/images/calendario/noale.png",
+    date: 'Martedì 9 Luglio',
+    morning: 'Gita a Noale',
+    afternoon: 'Gita a Noale',
+    immagineUrl: '/images/calendario/noale.png',
   },
   {
-    date: "Mercoledì 12 Luglio",
-    morning: "Attività regolare",
-    afternoon: "Pit Stop animatori",
-    evening: "Tornei animatori",
-    immagineUrl: "/images/calendario/animatori.png",
+    date: 'Mercoledì 10 Luglio',
+    morning: 'Attività regolare',
+    afternoon: 'Pit Stop animatori',
+    evening: 'Tornei animatori',
+    immagineUrl: '/images/calendario/animatori.png',
   },
   {
-    date: "Giovedì 13 Luglio",
-    morning: "Gita terze medie",
-    afternoon: "Giochi al parco e tornei",
-    immagineUrl: "/images/calendario/regolare.png",
+    date: 'Giovedì 11 Luglio',
+    morning: 'Gita terze medie',
+    afternoon: 'Giochi al parco e tornei',
+    immagineUrl: '/images/calendario/regolare.png',
   },
   {
-    date: "Venerdì 14 Luglio",
-    morning: "Attività regolare",
-    afternoon: "Giochi al parco e tornei",
-    evening: "SERATA FINALE",
-    immagineUrl: "/images/calendario/finale.png",
+    date: 'Venerdì 12 Luglio',
+    morning: 'Attività regolare',
+    afternoon: 'Giochi al parco e tornei',
+    evening: 'SERATA FINALE',
+    immagineUrl: '/images/calendario/finale.png',
   },
-  {
-    date: "Lunedì 17 Luglio",
-    evening: "ore 20.45 Film MISSION IMPOSSIBLE - DEAD RECKONING",
-    immagineUrl: "/images/calendario/mission.png",
-  },
-];
+]

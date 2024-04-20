@@ -310,7 +310,62 @@ let serate = [
   {
     titolo: "Oratorio's Got Talent",
     descrizione:
-      'Martedì 20 Giugno / Una serata dedicata ai talenti dei ragazzi della PER#23!!! Metti alla prova la tua creatività artistica, canora, di ballo, teatrale in una sfida mozzafiato!',
+      'Martedì 18 Giugno / Una serata dedicata ai talenti dei ragazzi della PER!!! Metti alla prova la tua creatività artistica, canora, di ballo, teatrale in una sfida mozzafiato!',
+    immagine: '/images/espressivi.png',
+    colore: '#192a56',
+    opacity: 0.5,
+    blur: '0rem',
+    buttonText: 'Vai al modulo di iscrizione',
+    buttonUrl: '',
+  },
+  {
+    titolo: "Schiuma Party",
+    descrizione:
+      'Venerdì 23 Giugno / ...',
+    immagine: '/images/espressivi.png',
+    colore: '#192a56',
+    opacity: 0.5,
+    blur: '0rem',
+    buttonText: 'Vai al modulo di iscrizione',
+    buttonUrl: '',
+  },
+  {
+    titolo: "Etienne e la sua crew",
+    descrizione:
+      'Venerdì 30 Giugno / ...',
+    immagine: '/images/espressivi.png',
+    colore: '#192a56',
+    opacity: 0.5,
+    blur: '0rem',
+    buttonText: 'Vai al modulo di iscrizione',
+    buttonUrl: '',
+  },
+  {
+    titolo: "Tornei animatori",
+    descrizione:
+      'Tutti i mercoledì / ...',
+    immagine: '/images/espressivi.png',
+    colore: '#192a56',
+    opacity: 0.5,
+    blur: '0rem',
+    buttonText: 'Vai al modulo di iscrizione',
+    buttonUrl: '',
+  },
+  {
+    titolo: "Serata delle squadre",
+    descrizione:
+      'Giovedì 4 luglio / Sfilata, animazione da palco e gara di torte',
+    immagine: '/images/espressivi.png',
+    colore: '#192a56',
+    opacity: 0.5,
+    blur: '0rem',
+    buttonText: 'Vai al modulo di iscrizione',
+    buttonUrl: '',
+  },
+  {
+    titolo: "Serata finale",
+    descrizione:
+      'Venerdì 12 luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER24',
     immagine: '/images/espressivi.png',
     colore: '#192a56',
     opacity: 0.5,
@@ -324,28 +379,36 @@ let gite = [
   {
     titolo: 'Porto Santa Margherita // Baia Blanca',
     descrizione:
-      'Lunedì 26 Giugno con i ragazzi di quinta elementare e prima media / Venerdì 30 giugno con i ragazzi di seconda e terza media / Lunedì 3 Luglio con i ragazzi di terza e quarta elementare / Materiale: Costume di ricambio, asciugamano, ciabatte, cappellino, spuntino, bibita...',
+      'Lunedì 24 Giugno con i ragazzi di quinta elementare e prima media / Venerdì 28 giugno con i ragazzi di seconda e terza media / Lunedì 1 Luglio con i ragazzi di terza e quarta elementare',
     immagine: '/images/gite/mare.png',
     colore: '#FFC312',
-    opacity: 0.2,
+    opacity: 0.8,
     blur: '0rem',
   },
   {
     titolo: 'Noale // Aquaestate',
     descrizione:
-      'Giovedì 22 Giugno / Martedì 11 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
+      'Giovedì 20 Giugno / Martedì 9 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
     immagine: '/images/gite/noale.png',
     colore: '#0097e6',
-    opacity: 0.3,
+    opacity: 0.8,
     blur: '0rem',
   },
   {
-    titolo: 'Valle del Gares // Escursione in montagna',
+    titolo: 'Pian del Cansiglio // Escursione in montagna',
     descrizione:
       'Martedì 27 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
     immagine: '/images/gite/montagna.png',
     colore: '#009432',
-    opacity: 0.3,
+    opacity: 0.8,
+    blur: '0rem',
+  },
+  {
+    titolo: 'Movieland // Caneva World',
+    descrizione:
+      'Martedì 2 Luglio / La Proposta Estate 2024 si immerge nei paesaggi del lago di Garda per una giornata tra giostre e acqua!',
+    colore: '#009432',
+    opacity: 0.8,
     blur: '0rem',
   },
 ]
