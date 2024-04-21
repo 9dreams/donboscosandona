@@ -30,7 +30,7 @@ export default function Pagina() {
         title='Calendario'
         imageUrl='/images/calendario.png'
       />
-      <Calendar cardWidth={4} events={settimana0} />
+      <Calendar cardWidth={3} events={settimana0} />
       <Calendar title='Prima settimana' cardWidth={3} events={settimana1} />
       <Calendar title='Seconda settimana' cardWidth={3} events={settimana2} />
       <Calendar title='Terza settimana' cardWidth={3} events={settimana3} />
@@ -41,6 +41,9 @@ export default function Pagina() {
     </Layout>
   )
 }
+
+let coloreGite = '#6ab04c'
+
 
 let settimana0 = [
   {
@@ -96,6 +99,7 @@ let settimana1 = [
     afternoon: 'Gita a Noale',
     evening: 'Spagna-Italia con piade e spillatrice',
     immagineUrl: '/images/calendario/noale.png',
+    bgcolor: coloreGite,
   },
   {
     date: 'Venerdì 21 Giugno',
@@ -108,6 +112,7 @@ let settimana1 = [
     date: 'Sabato 22 Giugno',
     morning: 'Gita animatori (Pioppi)',
     immagineUrl: '/images/calendario/gita_animatori.png',
+    bgcolor: coloreGite,
   },
 ]
 
