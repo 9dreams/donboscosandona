@@ -48,25 +48,33 @@ export default function Home({ data }) {
         avatarImageUrl='/images/home/nik.png'
         columnCount={2}
       >
-        <p>C’è un tempo per lavorare e un tempo per riposare, un tempo per l’ansia
-        e un tempo per la gioia, un tempo per la fatica e un tempo per il
-        relax….</p><p>E’ la vita di ogni giorno, di ogni settimana e di ogni anno,
-        dove si alternano tempi segnati da situazioni diverse e anche opposte.
-        Ma il tempo è prezioso è la nostra vita che viene scandita dal tempo e
-        il tempo non deve diventare vuoto, perché vuota sarebbe la vita. Ecco il
-        perché della Proposta Estate Ragazzi, che da più di 40 anni segna
-        l’inizio delle vacanze.</p>
-      <p>Non è un’estate vuota, ma piena, significativa,
-        entusiasmante. Anche quest’anno attività, giochi, gite, personaggi e
-        serate per tutti i gusti, per dare pienezza ad un momento della vita,
-        come quello delle vacanze, che non deve essere sciupato.</p>
-        <p>A tutti i
-        ragazzi, gli animatori, i genitori auguro di essere felici, per la
-        bellezza dell’esperienza che andremo a vivere assieme, per un impegno
-        che da gusto alle giornate, per la serenità che anima i volti di chi
-        vive questa esperienza con impegno. Non abbiate paura di sudare,
-        correre, saltare, giocare con grinta, perché la sana allegria è la porta
-        per la gioia vera e la vita significativa. Buona Estate!</p>
+        <p>
+          C’è un tempo per lavorare e un tempo per riposare, un tempo per
+          l’ansia e un tempo per la gioia, un tempo per la fatica e un tempo per
+          il relax….
+        </p>
+        <p>
+          E’ la vita di ogni giorno, di ogni settimana e di ogni anno, dove si
+          alternano tempi segnati da situazioni diverse e anche opposte. Ma il
+          tempo è prezioso è la nostra vita che viene scandita dal tempo e il
+          tempo non deve diventare vuoto, perché vuota sarebbe la vita. Ecco il
+          perché della Proposta Estate Ragazzi, che da più di 40 anni segna
+          l’inizio delle vacanze.
+        </p>
+        <p>
+          Non è un’estate vuota, ma piena, significativa, entusiasmante. Anche
+          quest’anno attività, giochi, gite, personaggi e serate per tutti i
+          gusti, per dare pienezza ad un momento della vita, come quello delle
+          vacanze, che non deve essere sciupato.
+        </p>
+        <p>
+          A tutti i ragazzi, gli animatori, i genitori auguro di essere felici,
+          per la bellezza dell’esperienza che andremo a vivere assieme, per un
+          impegno che da gusto alle giornate, per la serenità che anima i volti
+          di chi vive questa esperienza con impegno. Non abbiate paura di
+          sudare, correre, saltare, giocare con grinta, perché la sana allegria
+          è la porta per la gioia vera e la vita significativa. Buona Estate!
+        </p>
       </Paragraph>
       <SwiperNews title='News' data={data} limit={12} />
       <Features
@@ -78,9 +86,9 @@ export default function Home({ data }) {
       <Table
         title='Orario della Giornata tipo'
         backgroundImageUrl='/images/giornata.png'
-        backgroundColor='#3d3d3d'
-        opacity={0.6}
-        blur='0.1rem'
+        backgroundColor='#F79F1F'
+        opacity={0.8}
+        blur='0rem'
         color='white'
         rows={[
           ['Mattino', '', 'Pomeriggio', ''],
@@ -109,12 +117,7 @@ export default function Home({ data }) {
             '18.30',
             'Santa Messa (per chi lo desidera)',
           ],
-          [
-            '11.10',
-            'Seconda ora di attività',
-            '',
-            '',
-          ],
+          ['11.10', 'Seconda ora di attività', '', ''],
           [
             '12.00',
             'A casa... buon pranzo!',
@@ -129,7 +132,7 @@ export default function Home({ data }) {
         borderRadius='50%'
         aspectRatio='1 / 1'
       />
-      <Carousel slides={gite} height={80} />
+      <Carousel slides={gite} height={90} />
       <Products
         title='I laboratori'
         description='Scegli due laboratori per le prime due settimane di PER, e altri due per le ultime due settimane. '
@@ -138,7 +141,7 @@ export default function Home({ data }) {
         borderRadius='2rem'
         aspectRatio='1 / 1'
       />
-      <Carousel slides={serate} height={80} />
+      <Carousel slides={serate} height={90} />
       <Products
         title='Il Cinema don Bosco compie 90 anni'
         description='Per tutta l’estate e fino al 3 settembre 2024 (90° anniversario della prima proiezione) gli iscritti alla PER24 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai presentarti alla cassa indossando la maglietta della PER24 e mostrando il codice che ogni settimana sarà inviato nella Community WhatsApp insieme alla programmazione del cinema!'
@@ -205,9 +208,9 @@ export default function Home({ data }) {
       />
       <Paragraph
         title='La Segreteria durante la PER'
-        backgroundColor='#3d3d3d'
-        opacity={0.5}
-        blur='0.1rem'
+        backgroundColor='#6F1E51'
+        opacity={0.8}
+        blur='0rem'
         maxWidth={false}
         color='white'
         backgroundImageUrl='/images/segreteria.png'
@@ -233,7 +236,10 @@ export default function Home({ data }) {
           il mercoledì pomeriggio.{' '}
         </p>
         <p>
-          <b>Per qualsiasi evenienza ed informazione potete mandare una mail all’indirizzo per@donboscosandona.it.</b>
+          <b>
+            Per qualsiasi evenienza ed informazione potete mandare una mail
+            all’indirizzo per@donboscosandona.it.
+          </b>
         </p>
         <p>
           Ricordiamo che l’iscrizione alle uscite deve avvenire{' '}
@@ -246,7 +252,8 @@ export default function Home({ data }) {
           Le liste verranno esposte verso le 18.00 nella vigilia delle gite.
         </p>
         <p>
-        Per potervi servire meglio e più velocemente è importante venire in segreteria con i soldi giusti.
+          Per potervi servire meglio e più velocemente è importante venire in
+          segreteria con i soldi giusti.
         </p>
         <p>
           Non è necessaria la presenza del genitore per l’iscrizione alle gite.
@@ -311,64 +318,67 @@ let serate = [
     titolo: "Oratorio's Got Talent",
     descrizione:
       'Martedì 18 Giugno / Una serata dedicata ai talenti dei ragazzi della PER!!! Metti alla prova la tua creatività artistica, canora, di ballo, teatrale in una sfida mozzafiato!',
-    immagine: '/images/espressivi.png',
-    colore: '#192a56',
-    opacity: 0.5,
+    immagine: '/images/serate/talent.jpeg',
+    colore: '#182C61',
+    colore2: 'transparent',
+    opacity: 1,
+    blur: '0rem',
+    buttonText: '',
+    buttonUrl: '',
+  },
+  {
+    titolo: 'Schiuma Party',
+    descrizione: 'Venerdì 23 Giugno / ...',
+    immagine: '/images/serate/schiuma.jpeg',
+    colore: '#182C61',
+    colore2: 'transparent',
+    opacity: 1,
+    blur: '0rem',
+    buttonText: '',
+    buttonUrl: '',
+  },
+  {
+    titolo: 'Etienne e la sua crew',
+    descrizione: 'Venerdì 30 Giugno / ...',
+    immagine: '/images/serate/etienne.jpeg',
+    colore: '#182C61',
+    colore2: 'transparent',
+    opacity: 1,
+    blur: '0rem',
+    buttonText: '',
+    buttonUrl: '',
+  },
+  {
+    titolo: 'Tornei animatori',
+    descrizione: 'Tutti i mercoledì / ...',
+    immagine: '/images/serate/tornei.jpeg',
+    colore: '#182C61',
+    colore2: 'transparent',
+    opacity: 1,
     blur: '0rem',
     buttonText: 'Vai al modulo di iscrizione',
     buttonUrl: '',
   },
   {
-    titolo: "Schiuma Party",
-    descrizione:
-      'Venerdì 23 Giugno / ...',
-    immagine: '/images/espressivi.png',
-    colore: '#192a56',
-    opacity: 0.5,
-    blur: '0rem',
-    buttonText: 'Vai al modulo di iscrizione',
-    buttonUrl: '',
-  },
-  {
-    titolo: "Etienne e la sua crew",
-    descrizione:
-      'Venerdì 30 Giugno / ...',
-    immagine: '/images/espressivi.png',
-    colore: '#192a56',
-    opacity: 0.5,
-    blur: '0rem',
-    buttonText: 'Vai al modulo di iscrizione',
-    buttonUrl: '',
-  },
-  {
-    titolo: "Tornei animatori",
-    descrizione:
-      'Tutti i mercoledì / ...',
-    immagine: '/images/espressivi.png',
-    colore: '#192a56',
-    opacity: 0.5,
-    blur: '0rem',
-    buttonText: 'Vai al modulo di iscrizione',
-    buttonUrl: '',
-  },
-  {
-    titolo: "Serata delle squadre",
+    titolo: 'Serata delle squadre',
     descrizione:
       'Giovedì 4 luglio / Sfilata, animazione da palco e gara di torte',
-    immagine: '/images/espressivi.png',
-    colore: '#192a56',
-    opacity: 0.5,
+    immagine: '/images/serate/sfilata.jpeg',
+    colore: '#182C61',
+    colore2: 'transparent',
+    opacity: 1,
     blur: '0rem',
     buttonText: 'Vai al modulo di iscrizione',
     buttonUrl: '',
   },
   {
-    titolo: "Serata finale",
+    titolo: 'Serata finale',
     descrizione:
       'Venerdì 12 luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER24',
-    immagine: '/images/espressivi.png',
-    colore: '#192a56',
-    opacity: 0.5,
+    immagine: '/images/serate/finale.jpeg',
+    colore: '#182C61',
+    colore2: 'transparent',
+    opacity: 1,
     blur: '0rem',
     buttonText: 'Vai al modulo di iscrizione',
     buttonUrl: '',
@@ -382,7 +392,8 @@ let gite = [
       'Lunedì 24 Giugno con i ragazzi di quinta elementare e prima media / Venerdì 28 giugno con i ragazzi di seconda e terza media / Lunedì 1 Luglio con i ragazzi di terza e quarta elementare',
     immagine: '/images/gite/mare.png',
     colore: '#FFC312',
-    opacity: 0.8,
+    colore2: 'transparent',
+    opacity: 1,
     blur: '0rem',
   },
   {
@@ -391,6 +402,7 @@ let gite = [
       'Giovedì 20 Giugno / Martedì 9 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
     immagine: '/images/gite/noale.png',
     colore: '#0097e6',
+    colore2: 'transparent',
     opacity: 0.8,
     blur: '0rem',
   },
@@ -400,6 +412,7 @@ let gite = [
       'Martedì 27 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
     immagine: '/images/gite/montagna.png',
     colore: '#009432',
+    colore2: 'transparent',
     opacity: 0.8,
     blur: '0rem',
   },
@@ -407,7 +420,9 @@ let gite = [
     titolo: 'Movieland // Caneva World',
     descrizione:
       'Martedì 2 Luglio / La Proposta Estate 2024 si immerge nei paesaggi del lago di Garda per una giornata tra giostre e acqua!',
-    colore: '#009432',
+    immagine: '/images/gite/movieland.png',
+    colore: '#FC427B',
+    colore2: 'transparent',
     opacity: 0.8,
     blur: '0rem',
   },
@@ -418,19 +433,19 @@ let members = [
   {
     name: 'Segreteria PER',
     role: 'Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo:',
-    imageUrl: '',
+    imageUrl: '/images/call1.webp',
     email: 'per@donboscosandona.it',
   },
   {
     name: 'Dopo la Campanella',
     role: 'Dott. Andrea Pasqualetto',
-    imageUrl: '',
+    imageUrl: '/images/call2.webp',
     phone: '391 706 4430',
   },
   {
     name: 'Cinema don Bosco',
     role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero:",
-    imageUrl: '',
+    imageUrl: '/images/call3.webp',
     phone: '346 960 5687',
   },
 ]
@@ -475,7 +490,7 @@ let laboratori = [
     url: '/laboratori_manuali',
   },
   {
-    title: 'Novità 2023',
+    title: 'Novità 2024',
     immagineUrl: '/images/_novità.png',
     url: '/laboratori_new',
   },
@@ -566,7 +581,7 @@ let serate_cinema = [
     title: 'INSIDE OUT 2',
     category: 'Dal 19 Giugno',
     description:
-      'Inside Out 2 racconta una nuova avventura in quella che è la testa dell\'ormai adolescente Riley, che sta per iniziare il liceo e che è alle prese con una serie di nuove Emozioni. Gioia, Tristezza, Rabbia, Paura e Disgusto, che a detta di tutti gestiscono da tempo un\'attività di successo, non sanno come comportarsi quando arriva Ansia, destinata a stravolgere tutto nel quartier generale e non solo...',
+      "Inside Out 2 racconta una nuova avventura in quella che è la testa dell'ormai adolescente Riley, che sta per iniziare il liceo e che è alle prese con una serie di nuove Emozioni. Gioia, Tristezza, Rabbia, Paura e Disgusto, che a detta di tutti gestiscono da tempo un'attività di successo, non sanno come comportarsi quando arriva Ansia, destinata a stravolgere tutto nel quartier generale e non solo...",
     immagineUrl:
       'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2c7f8229d70787dbf0ce1443b1b96adcabc91f2/Inside%20Out%202.jpeg',
     url: 'https://cinema.donboscosandona.it',
