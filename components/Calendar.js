@@ -46,9 +46,9 @@ export default function Calendar({
               sx={{
                 display: 'flex',
                 margin: { xs: '5px', md: '0.5rem' },
-                backgroundColor: date.bgcolor || '#222f3e',
+                backgroundColor: date.bgColor || '#222f3e',
                 borderRadius: borderRadius,
-                minHeight: '27rem',
+                minHeight: '35rem',
                 boxShadow: 3,
               }}
               elevation={0}
