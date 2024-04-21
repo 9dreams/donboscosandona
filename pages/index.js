@@ -275,12 +275,12 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://channels.donboscosandona.it/api/posts/per')
+  const res = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio?q=per')
   const data = await res.json()
 
   return {
     props: { data },
-    revalidate: 10, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
+    revalidate: 600, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
 
