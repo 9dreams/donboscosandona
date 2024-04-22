@@ -87,6 +87,24 @@ let products = [
       'Un team di ciclo-meccanici pronti ad aggiustare qualsiasi guasto',
     immagineUrl: '/images/laboratori/tuttobici.jpeg',
   },
+  {
+    title: "SCACCHI",
+    description: "Impara a giocare a scacchi e sfida i tuio amici",
+    immagineUrl: "/images/laboratori/scacchi.jpeg",
+    category: "1ªora medie / 2ªora elementari",
+  },
+  {
+    title: "AGO&FILO",
+    description: "I bottoni e gli orli non saranno più un problema",
+    immagineUrl: "/images/laboratori/sartoria.jpeg",
+    category: "1ªora medie / 2ªora elementari",
+  },
+  {
+    title: "TRAFORO",
+    description: "L'intaglio del legno per dei lavori indimenticabili",
+    immagineUrl: "/images/laboratori/traforo.jpeg",
+    category: "1ªora medie / 2ªora medie",
+  },
 ]
 
 export default function Pagina() {

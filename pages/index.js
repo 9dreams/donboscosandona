@@ -503,11 +503,6 @@ let altri_link = [
     url: '/regolamento',
   },
   {
-    title: 'Servizio autobus',
-    immagineUrl: '/images/_autobus.png',
-    url: '/autobus',
-  },
-  {
     title: 'Momenti di preghiera e riflessione',
     immagineUrl: '/images/_preghiera.png',
     url: '/preghiera',
@@ -533,6 +528,14 @@ let altri_link = [
     url: '/dlc',
   },
 ]
+
+/*
+  {
+    title: 'Servizio autobus',
+    immagineUrl: '/images/_autobus.png',
+    url: '/autobus',
+  },
+*/
 
 const testimonials = [
   {
