@@ -407,7 +407,7 @@ let gite = [
     blur: '0rem',
   },
   {
-    titolo: 'Pian del Cansiglio // Escursione in montagna',
+    titolo: 'Escursione in montagna',
     descrizione:
       'Martedì 27 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
     immagine: '/images/gite/montagna.png',
