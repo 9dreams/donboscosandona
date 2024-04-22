@@ -189,7 +189,7 @@ export default function Home({ data }) {
             target='_blank'
             color='success'
             variant='contained'
-            href='https://chat.whatsapp.com/DMlTes1oBR71kwW2WxTPLv'
+            href='https://chat.whatsapp.com/LksHvahrse46fs6PmGR6lb'
           >
             ISCRIVITI ALLE NEWS SU WHATSAPP
           </Button>
