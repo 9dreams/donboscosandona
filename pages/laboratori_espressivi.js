@@ -106,8 +106,7 @@ export default function Pagina() {
       </Container>
       <Products products={products} cardWidth={3} />
       <Products
-        title='Laboratori per la serata finale'
-        description='Per questi quattro laboratori non è previsto il cambio attività a metà PER.'
+        description='Per questi quattro laboratori non è previsto il cambio attività a metà PER:'
         products={serata}
         cardWidth={3}
       />

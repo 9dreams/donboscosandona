@@ -10,7 +10,7 @@ let products = [
     title: 'BASEBALL',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      "sport di squadra in cui due squadre composte da nove giocatori si affrontano per nove inning (o riprese) in ciascuno dei quali le due squadre si alternano nella fase di attacco e di difesa.",
+      "In collaborazione con il Baseball San Donà: Sport di squadra in cui due squadre composte da nove giocatori si affrontano per nove inning (o riprese) in ciascuno dei quali le due squadre si alternano nella fase di attacco e di difesa.",
     immagineUrl: '/images/laboratori/baseball.jpeg',
   },
   {
@@ -51,7 +51,7 @@ let products = [
   {
     title: 'PALLAMANO',
     category: '1ª ora elementari / 2ª ora medie',
-    description: 'In collaborazione con ASD PALLAMANO MUSILE',
+    description: 'La pallamano è uno sport di squadra, in cui scendono in campo 7 atleti per ogni squadra. Riprende caratteristiche del calcio e della pallacanestro.',
     immagineUrl: '/images/laboratori/pallamano.jpeg',
   },
 ]

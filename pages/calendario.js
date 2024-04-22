@@ -67,7 +67,7 @@ let settimana0 = [
   },
   {
     date: 'Sabato 15 Giugno',
-    evening: 'Italia Albania con piade e spillatrice',
+    evening: 'Italia Albania',
     immagineUrl: '/images/calendario/calcio.jpeg',
     bgColor: coloreSerate,
   },
@@ -109,7 +109,7 @@ let settimana1 = [
     date: 'Giovedì 20 Giugno',
     morning: 'Gita a Noale',
     afternoon: 'Gita a Noale',
-    evening: 'Spagna-Italia con piade e spillatrice',
+    evening: 'Spagna-Italia',
     immagineUrl: '/images/calendario/noale.png',
     bgColor: coloreGite,
   },
@@ -121,12 +121,6 @@ let settimana1 = [
     immagineUrl: '/images/calendario/schiuma.jpeg',
     bgColor: coloreSerate,
   },
-  {
-    date: 'Sabato 22 Giugno',
-    morning: 'Gita animatori (Pioppi)',
-    immagineUrl: '/images/calendario/gita_animatori.png',
-    bgColor: coloreGite,
-  },
 ]
 
 let settimana2 = [
@@ -134,14 +128,14 @@ let settimana2 = [
     date: 'Lunedì 24 Giugno',
     morning: 'Attività regolare',
     afternoon: 'Quinta elementare e prima media al mare',
-    evening: 'Croazia-Italia con piade e spillatrice',
+    evening: 'Croazia-Italia',
     immagineUrl: '/images/calendario/calcio.jpeg',
     bgColor: coloreMare,
   },
   {
     date: 'Martedì 25 Giugno',
-    morning: 'Gita in montagna: CANSIGLIO',
-    afternoon: 'Gita in montagna: CANSIGLIO',
+    morning: 'Gita in montagna',
+    afternoon: 'Gita in montagna',
     immagineUrl: '/images/calendario/cansiglio.jpeg',
     bgColor: coloreGite,
   },
@@ -196,7 +190,7 @@ let settimana3 = [
   },
   {
     date: 'Giovedì 4 Luglio',
-    morning: 'Grande gioco al parco fluviale con tutti i GREST della città',
+    morning: 'Attività regolare',
     afternoon: 'Giochi al parco e tornei',
     evening: 'Sfilata a squadre e giochi a stand con i genitori',
     immagineUrl: '/images/serate/sfilata.jpeg',
@@ -223,9 +217,8 @@ let settimana4 = [
     date: 'Lunedì 8 Luglio',
     morning: 'Attività regolare',
     afternoon: 'Giochi al parco e tornei',
-    evening: 'Serata di ballo con piade e spillatrice',
-    immagineUrl: '/images/calendario/ballo.jpeg',
-    bgColor: coloreSerate,
+    immagineUrl: '/images/calendario/regolare.jpeg',
+    bgColor: coloreDefault,
   },
   {
     date: 'Martedì 9 Luglio',
