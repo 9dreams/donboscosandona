@@ -435,6 +435,7 @@ let members = [
     role: 'Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo:',
     imageUrl: '/images/call1.webp',
     email: 'per@donboscosandona.it',
+    phone: '392 464 3689',
   },
   {
     name: 'Dopo la Campanella',
