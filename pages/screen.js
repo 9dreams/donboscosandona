@@ -36,7 +36,6 @@ export async function getStaticProps() {
 
   return {
     props: { data },
-    revalidate: 1800, // In secondi: il build viene fatto al massimo una volta all'ora
+    revalidate: 600, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
-

@@ -1,5 +1,17 @@
+import Head from 'next/head'
+
+import { Button, Container, Typography, Grid } from '@mui/material'
+
 import {
+  Carousel,
   Layout,
+  LandingHero,
+  Features,
+  Paragraph,
+  Products,
+  Table,
+  Testimonials,
+  Team,
   Maps,
   SwiperNews,
   Featured,
@@ -8,44 +20,193 @@ import {
 export default function Home({ data }) {
   return (
     <Layout>
-      <Featured data={data} />
+      <Head>
+        <title>Oratorio don Bosco di San Donà di Piave</title>
+        <meta name='og:url' content='https://per.donboscosandona.it/' />
+        <meta name='og:type' content='website' />
+        <meta name='og:locale' content='it_IT' />
+        <meta
+          name='og:title'
+          content='Oratorio don Bosco di San Donà di Piave'
+        />
+        <meta
+          name='og:description'
+          content="Il sito ufficiale dell'Oratorio don Bosco di San Donà di Piave (VE)"
+        />
+        <meta name='og:image' content='/images/home.png' />
+      </Head>
+      <Featured data={data} height={100} />
       <SwiperNews title='News' data={data} limit={12} />
+      <Table
+        title='Orari delle Sante Messe'
+        backgroundImageUrl='/images/giornata.png'
+        backgroundColor='#F79F1F'
+        opacity={0.8}
+        blur='0rem'
+        color='white'
+        rows={[
+          ['Feriali', 'Sabato', 'Festivi'],
+          ['ore 7.00', 'ore 7.00', ''],
+          ['','','ore 9.00'],
+          ['','','ore 10.30'],
+          ['ore 18.30', 'ore 18.00',''],
+        ]}
+      />
+      <Products
+        cardWidth={3}
+        products={siti}
+        borderRadius='10px'
+        aspectRatio='1 / 1'
+      />
+      <Products
+        cardWidth={3}
+        products={gruppi1}
+        borderRadius='50%'
+        aspectRatio='1 / 1'
+      />
+      <Products
+        cardWidth={2}
+        products={gruppi2}
+        borderRadius='50%'
+        aspectRatio='1 / 1'
+      />
+      <Team
+        title='Contatti'
+        members={members}
+        cardWidth={4}
+      />
       <Maps
         maxWidth='100%'
         maxHeight='550px'
-        url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
+        url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.164099261905!2d12.571927!3d45.629088!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477957021a6f5e37%3A0x2767632f6958496c!2sOratorio%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1682593458374!5m2!1sit!2sit'
       />
     </Layout>
   )
 }
 
-/* // This gets called on every request
-export async function getServerSideProps() {
-  const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona'
-  )
-  const data = await res.json()
-
-  // Pass data to the page via props
-  return { props: { data } }
-} */
-
-// This function gets called at build time on server-side.
-// It may be called again, on a serverless function, if
-// revalidation is enabled and a new request comes in
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona'
-  )
+  const res = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio')
   const data = await res.json()
 
   return {
     props: { data },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 minutes
     revalidate: 600, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
 
+// Il nostro team
+let members = [
+  {
+    name: 'Segreteria PER',
+    role: 'Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo:',
+    imageUrl: '/images/call1.webp',
+    email: 'per@donboscosandona.it',
+    phone: '392 464 3689',
+  },
+  {
+    name: 'Dopo la Campanella',
+    role: 'Dott. Andrea Pasqualetto',
+    imageUrl: '/images/call2.webp',
+    phone: '391 706 4430',
+  },
+  {
+    name: 'Cinema don Bosco',
+    role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero:",
+    imageUrl: '/images/call3.webp',
+    phone: '346 960 5687',
+  },
+]
 
+let siti = [
+  {
+    title: 'Proposta Estate',
+    immagineUrl: '/images/_iscrizioni.png',
+    url: 'https://per.donboscosandona.it',
+  },
+  {
+    title: 'Cinema',
+    immagineUrl: '/images/_calendario.png',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'Scuola',
+    immagineUrl: '/images/_tema.png',
+    url: 'https://www.donboscosandona.it',
+  },
+  {
+    title: 'Soggiorno Marino',
+    immagineUrl: '/images/_pomeriggi.png',
+    url: 'https://www.soggiornodonbosco.it',
+  },
+]
+
+let gruppi1 = [
+  {
+    title: 'ADS',
+    immagineUrl: '/images/_regolamento.png',
+    url: '/regolamento',
+  },
+  {
+    title: 'Scout',
+    immagineUrl: '/images/_preghiera.png',
+    url: '/preghiera',
+  },
+  {
+    title: 'Calcio',
+    immagineUrl: '/images/_special.png',
+    url: '/special',
+  },
+  {
+    title: 'Dopo la Campanella',
+    immagineUrl: '/images/_animatori.png',
+    url: '/animatori',
+  },
+  {
+    title: 'Storia',
+    immagineUrl: '/images/_genitori.png',
+    url: '/genitori',
+  },
+  {
+    title: "Cooperatori",
+    immagineUrl: '/images/_dlc.png',
+    url: '/dlc',
+  },
+  {
+    title: "Dimensione Missionaria",
+    immagineUrl: '/images/_dlc.png',
+    url: '/dlc',
+  },
+  {
+    title: "Comunione e Liberazione",
+    immagineUrl: '/images/_dlc.png',
+    url: '/dlc',
+  },
+]
+
+let gruppi2 = [
+  {
+    title: 'Banda',
+    immagineUrl: '/images/_regolamento.png',
+    url: '/regolamento',
+  },
+  {
+    title: 'Resto d\'Israele',
+    immagineUrl: '/images/_regolamento.png',
+    url: '/regolamento',
+  },
+  {
+    title: 'Amici del Presepe',
+    immagineUrl: '/images/_regolamento.png',
+    url: '/regolamento',
+  },
+  {
+    title: 'Adulti',
+    immagineUrl: '/images/_regolamento.png',
+    url: '/regolamento',
+  },
+  {
+    title: 'Banda',
+    immagineUrl: '/images/_regolamento.png',
+    url: '/regolamento',
+  },
+]
