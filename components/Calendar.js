@@ -19,7 +19,7 @@ export default function Calendar({
   aspectRatio,
 }) {
   return (
-    <Container maxWidth='lg'>
+    <Container maxWidth='lg' sx={{ marginBottom: '2rem' }}>
       <Typography
         text-align='center'
         style={{ textAlign: 'center' }}
@@ -46,69 +46,73 @@ export default function Calendar({
               sx={{
                 display: 'flex',
                 margin: { xs: '5px', md: '0.5rem' },
-                backgroundColor: '#eee',
-                borderRadius: '10px',
+                backgroundColor: date.bgColor || '#222f3e',
+                borderRadius: borderRadius,
+                minHeight: '35rem',
+                boxShadow: 3,
               }}
               elevation={0}
             >
-              <CardContent sx={{ flex: 1 }}>
+              <CardContent sx={{ flex: 1, padding: '0px', paddingTop: '10px' }}>
                 <CardMedia
                   component='img'
                   sx={{
                     display: {
                       xs: 'block',
                       sm: 'block',
-                      margin: 'auto',
-                      borderRadius: borderRadius,
+                      margin: '0px',
+                      borderRadius: '0px',
                     },
                     aspectRatio: aspectRatio,
                   }}
                   image={date.immagineUrl}
                   alt={date.date}
                 />
-                <Typography
-                  text-align='center'
-                  component='h4'
-                  variant='h6'
-                  style={{ textAlign: 'center' }}
-                  color='inherit'
-                  gutterBottom
-                >
-                  {date.date}
-                </Typography>
-                {date.morning && (
+                <Container sx={{ paddingTop: '1.5rem' }}>
                   <Typography
-                    variant='subtitle1'
-                    style={{ padding: '1px' }}
-                    color='#e84393'
-                    paragraph
+                    text-align='center'
+                    component='h4'
+                    variant='h6'
+                    style={{ textAlign: 'center' }}
+                    color='white'
+                    gutterBottom
                   >
-                    <AccessTimeIcon />
-                    &nbsp;Mattino: {date.morning}
+                    {date.date}
                   </Typography>
-                )}
-                {date.afternoon && (
-                  <Typography
-                    variant='subtitle1'
-                    style={{ padding: '1px' }}
-                    color='#EE5A24'
-                    paragraph
-                  >
-                    <LightModeIcon />
-                    &nbsp;Pomeriggio: {date.afternoon}
-                  </Typography>
-                )}
-                {date.evening && (
-                  <Typography
-                    variant='subtitle1'
-                    style={{ padding: '1px' }}
-                    color='#1289A7'
-                    paragraph
-                  >
-                    <NightlightIcon />
-                    &nbsp;Sera: {date.evening}
-                  </Typography>
-                )}
+                  {date.morning && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ padding: '1px' }}
+                      color='white'
+                      paragraph
+                    >
+                      <AccessTimeIcon />
+                      &nbsp;Mattino: {date.morning}
+                    </Typography>
+                  )}
+                  {date.afternoon && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ padding: '1px' }}
+                      color='white'
+                      paragraph
+                    >
+                      <LightModeIcon />
+                      &nbsp;Pomeriggio: {date.afternoon}
+                    </Typography>
+                  )}
+                  {date.evening && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ padding: '1px' }}
+                      color='white'
+                      paragraph
+                    >
+                      <NightlightIcon />
+                      &nbsp;Sera: {date.evening}
+                    </Typography>
+                  )}
+                </Container>
               </CardContent>
             </Card>
           </Grid>
@@ -120,6 +124,6 @@ export default function Calendar({
 
 Calendar.defaultProps = {
   cardWidth: 3,
-  borderRadius: '10px',
-  aspectRatio: '3 / 2'
+  borderRadius: '5px',
+  aspectRatio: '3 / 2',
 }
