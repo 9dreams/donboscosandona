@@ -46,7 +46,7 @@ export default function MyCarousel({
                 right: 0,
                 left: 0,
                 opacity: slide.opacity,
-                background: `linear-gradient(${
+                background: !slide.titolo || `linear-gradient(${
                   slide.colore2 || slide.colore || 'transparent'
                 }, ${slide.colore || 'black'})`,
               }}
