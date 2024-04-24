@@ -17,7 +17,9 @@ import {
   Featured,
 } from '/components'
 
-export default function Home({ data }) {
+export default function Home({ data, movies }) {
+  console.log(movies)
+
   return (
     <Layout>
       <Head>
@@ -64,6 +66,7 @@ export default function Home({ data }) {
         borderRadius='50%'
         aspectRatio='1 / 1'
       />
+      <Featured data={movies} height={100} />
       <Products
         cardWidth={2}
         products={gruppi2}
@@ -88,8 +91,21 @@ export async function getStaticProps() {
   const res = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio')
   const data = await res.json()
 
+  const res_cinema = await fetch('https://cinema.donboscosandona.it/movie/featured.json')
+  let movie_data = await res_cinema.json()
+
+  movie_data = movie_data.filter((movie) => movie.hero_path)
+
+  const movies = movie_data.map((movie) => ({
+    titolo: movie.title,
+    abstract: movie.overview,
+    immagine: movie.hero_path.substring(0,1)=='/' ? 'https://cinema.donboscosandona.it' + movie.hero_path : movie.hero_path,
+    link: 'https://cinema.donboscosandona.it',
+    in_evidenza: true,
+  }))
+
   return {
-    props: { data },
+    props: { data, movies },
     revalidate: 600, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
