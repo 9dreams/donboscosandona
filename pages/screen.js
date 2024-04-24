@@ -26,7 +26,7 @@ export default function Schermo({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+    'https://channels.donboscosandona.it/api/posts/inoratorio'
   )
   const data = await res.json()
 

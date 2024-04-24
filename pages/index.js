@@ -219,7 +219,7 @@ export async function getServerSideProps() {
 // revalidation is enabled and a new request comes in
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+    'https://channels.donboscosandona.it/api/posts/inoratorio?q=sfp'
   )
   const data = await res.json()
 
