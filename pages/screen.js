@@ -1,5 +1,6 @@
 import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import Head from 'next/head'
 
 import {
   Featured,
@@ -11,7 +12,10 @@ export default function Schermo({ data }) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div style={{ backgroundColor: 'black', height: '100vh' }}>
+      <Head>
+        <meta http-equiv="refresh" content="600" />
+      </Head>
+      <div style={{ backgroundColor: 'black', height: '100vh', cursor: 'none' }}>
         <Featured
           data={data.map((post) => ({ ...post, in_evidenza: true }))}
           height='100'
@@ -26,7 +30,7 @@ export default function Schermo({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+    'https://channels.donboscosandona.it/api/posts/inoratorio'
   )
   const data = await res.json()
 
