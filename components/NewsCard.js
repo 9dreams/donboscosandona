@@ -3,13 +3,15 @@ import { Container, Typography, Card, CardActionArea, CardContent } from '@mui/m
 import Image from 'next/image'
 
 function readMore(string, maxWords) {
-  var strippedString = string.trim()
-  var array = strippedString.split(' ')
-  var wordCount = array.length
-  var string = array.splice(0, maxWords).join(' ')
+  if (string) {
+    var strippedString = string.trim()
+    var array = strippedString.split(' ')
+    var wordCount = array.length
+    var string = array.splice(0, maxWords).join(' ')
 
-  if (wordCount > maxWords) {
-    string += '...'
+    if (wordCount > maxWords) {
+      string += '...'
+    }
   }
 
   return string
