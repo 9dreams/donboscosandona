@@ -49,9 +49,9 @@ export default function Home({ data, movies }) {
         rows={[
           ['Feriali', 'Sabato', 'Festivi'],
           ['ore 7.00', 'ore 7.00', ''],
-          ['','','ore 9.00'],
-          ['','','ore 10.30'],
-          ['ore 18.30', 'ore 18.00',''],
+          ['', '', 'ore 9.00'],
+          ['', '', 'ore 10.30'],
+          ['ore 18.30', 'ore 18.00', ''],
         ]}
       />
       <Products
@@ -63,21 +63,22 @@ export default function Home({ data, movies }) {
       <Products
         cardWidth={3}
         products={gruppi1}
-        borderRadius='50%'
-        aspectRatio='1 / 1'
+        borderRadius='5px'
+        aspectRatio='2 / 1'
       />
-      <Featured data={movies} height={100} />
+      <Container>
+        <Featured data={movies} height={75} />
+      </Container>
+
+      <SwiperNews title='Al cinema' data={movies} limit={12} />
+
       <Products
-        cardWidth={2}
+        cardWidth={3}
         products={gruppi2}
-        borderRadius='50%'
-        aspectRatio='1 / 1'
+        borderRadius='5px'
+        aspectRatio='2 / 1'
       />
-      <Team
-        title='Contatti'
-        members={members}
-        cardWidth={4}
-      />
+      <Team title='Contatti' members={members} cardWidth={4} />
       <Maps
         maxWidth='100%'
         maxHeight='550px'
@@ -88,10 +89,14 @@ export default function Home({ data, movies }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio')
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/inoratorio'
+  )
   const data = await res.json()
 
-  const res_cinema = await fetch('https://cinema.donboscosandona.it/movie/featured.json')
+  const res_cinema = await fetch(
+    'https://cinema.donboscosandona.it/movie/featured.json'
+  )
   let movie_data = await res_cinema.json()
 
   movie_data = movie_data.filter((movie) => movie.hero_path)
@@ -99,10 +104,28 @@ export async function getStaticProps() {
   const movies = movie_data.map((movie) => ({
     titolo: movie.title,
     abstract: movie.overview,
-    immagine: movie.hero_path.substring(0,1)=='/' ? 'https://cinema.donboscosandona.it' + movie.hero_path : movie.hero_path,
+    immagine:
+      movie.hero_path.substring(0, 1) == '/'
+        ? 'https://cinema.donboscosandona.it' + movie.hero_path
+        : movie.hero_path,
+    link: 'https://cinema.donboscosandona.it',
+    in_evidenza: false,
+  }))
+
+  /*
+  movie_data = movie_data.filter((movie) => movie.hero_path)
+
+  const movies = movie_data.map((movie) => ({
+    titolo: movie.title,
+    abstract: readMore(movie.overview, 30),
+    immagine:
+      movie.hero_path.substring(0, 1) == '/'
+        ? 'https://cinema.donboscosandona.it' + movie.hero_path
+        : movie.hero_path,
     link: 'https://cinema.donboscosandona.it',
     in_evidenza: true,
   }))
+  */
 
   return {
     props: { data, movies },
@@ -135,94 +158,87 @@ let members = [
 
 let siti = [
   {
-    title: 'Proposta Estate',
-    immagineUrl: '/images/_iscrizioni.png',
+    title: 'Proposta Estate 2024',
+    immagineUrl: '/images/home/per.png',
     url: 'https://per.donboscosandona.it',
   },
   {
-    title: 'Cinema',
-    immagineUrl: '/images/_calendario.png',
+    title: 'Cinema don Bosco',
+    immagineUrl:
+      '/images/home/cinema.png',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'Scuola',
-    immagineUrl: '/images/_tema.png',
+    title: 'Scuola di Formazione Professionale',
+    immagineUrl: '/images/home/sfp.png',
     url: 'https://www.donboscosandona.it',
   },
   {
-    title: 'Soggiorno Marino',
-    immagineUrl: '/images/_pomeriggi.png',
+    title: 'Soggiorno Marino don Bosco',
+    immagineUrl:
+      '/images/home/soggiornodonbosco.png',
     url: 'https://www.soggiornodonbosco.it',
   },
 ]
 
 let gruppi1 = [
   {
-    title: 'ADS',
-    immagineUrl: '/images/_regolamento.png',
-    url: '/regolamento',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/9372c8fb969c3d9280014acd16f4d741b77915e4.jpg',
+    url: 'http://archive.inoratorio.it/ads',
   },
   {
-    title: 'Scout',
-    immagineUrl: '/images/_preghiera.png',
-    url: '/preghiera',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/5b27adfa600161e5d8aac496e3874055ed228743.jpg?1521194053',
+    url: 'http://archive.inoratorio.it/scout',
   },
   {
-    title: 'Calcio',
-    immagineUrl: '/images/_special.png',
-    url: '/special',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/b28e973c6613ac1521bd7ef934721aa402d215af.jpg?1517600704',
+    url: 'http://archive.inoratorio.it/calcio',
   },
   {
-    title: 'Dopo la Campanella',
-    immagineUrl: '/images/_animatori.png',
-    url: '/animatori',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/e4a41909932c20f3fb16eb22f12c19737eaeca17.jpg?1517600703',
+    url: 'http://archive.inoratorio.it/dlc',
   },
   {
-    title: 'Storia',
-    immagineUrl: '/images/_genitori.png',
-    url: '/genitori',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/42fbf35ed416b040e78cd4ebdb10488d52cc2694.jpg?1517600705',
+    url: 'http://archive.inoratorio.it/storia',
   },
   {
-    title: "Cooperatori",
-    immagineUrl: '/images/_dlc.png',
-    url: '/dlc',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/a68f73dc5c0a74d4a7c4187394fbe67adaa1dcc4.jpg?1517600704',
+    url: 'http://archive.inoratorio.it/cooperatori',
   },
   {
-    title: "Dimensione Missionaria",
-    immagineUrl: '/images/_dlc.png',
-    url: '/dlc',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/b6930c69b4c434215de171191ef34748eea25a4d.jpg?1517600705',
+    url: 'http://archive.inoratorio.it/missioni',
   },
   {
-    title: "Comunione e Liberazione",
-    immagineUrl: '/images/_dlc.png',
-    url: '/dlc',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/ce9cd906c4787f771a1b10e59f3e9e1ad38870db.jpg?1517600705',
+    url: 'http://archive.inoratorio.it/cl',
   },
 ]
 
 let gruppi2 = [
   {
-    title: 'Banda',
-    immagineUrl: '/images/_regolamento.png',
-    url: '/regolamento',
+    immagineUrl: 'http://archive.inoratorio.it/img/column/a44867c32c44afda8717857c72e8de2cd570beb5.jpg?1517600672',
+    url: 'http://archive.inoratorio.it/banda',
   },
   {
-    title: 'Resto d\'Israele',
-    immagineUrl: '/images/_regolamento.png',
-    url: '/regolamento',
+    immagineUrl: 'http://archive.inoratorio.it/img/column/2827044e2ccaa6dfd84f387b4413580a5bccfffa.jpg?1517600704',
+    url: 'http://archive.inoratorio.it/resto',
   },
   {
-    title: 'Amici del Presepe',
-    immagineUrl: '/images/_regolamento.png',
-    url: '/regolamento',
+    immagineUrl: 'http://archive.inoratorio.it/img/column/8610e2eaf7d5e97d99b6b1be2096c696e88b775e.jpg?1517600705',
+    url: 'http://archive.inoratorio.it/presepe',
   },
   {
-    title: 'Adulti',
-    immagineUrl: '/images/_regolamento.png',
-    url: '/regolamento',
-  },
-  {
-    title: 'Banda',
-    immagineUrl: '/images/_regolamento.png',
-    url: '/regolamento',
+    immagineUrl: 'http://archive.inoratorio.it/img/column/5e089332bd175d1306e6535d68a98e6c6eb221cf.jpg?1517600704',
+    url: 'http://archive.inoratorio.it/caio',
   },
 ]
