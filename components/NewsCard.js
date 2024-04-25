@@ -24,7 +24,7 @@ export default function NewsCard({ post, aspectRatio }) {
       }
       disabled={!post.articolo && !post.link && !post.allegato}
     >
-      <Card sx={{ display: 'block', minHeight: '30rem', }}>
+      <Card sx={{ display: 'block', minHeight: '33rem', marginBottom: '2rem' }}>
         <Container
           sx={{
             aspectRatio: aspectRatio,
