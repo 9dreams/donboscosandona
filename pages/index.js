@@ -106,7 +106,7 @@ export async function getStaticProps() {
 
   return {
     props: { data, movies },
-    revalidate: 600, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
+    revalidate: 1200, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
 
