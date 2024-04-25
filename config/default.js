@@ -14,6 +14,7 @@ export const menu = [
     { title: 'Scuola', url: 'https://www.donboscosandona.it' },
     { title: 'Soggiorno Marino', url: 'https://www.soggiornodonbosco.it' },
     { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
+    { title: 'Segnalazione illeciti', url: 'http://archive.inoratorio.it/whistleblowing' },
 ]
 
 export const logoUrl = null
@@ -35,8 +36,7 @@ export const footer = <Footer
     opacitycolor="1"
     opacity={1}
     title1="Oratorio don Bosco"
-    description1="Il sito dell'Oratorio don Bosco di San Donà di Piave. Per divertirsi insieme crescendo nella fede e nella relazione con gli altri."
-    title2="Seguici sui Social"
+    description1="via XIII Martiri, 86 - 30027 San Donà di Piave (VE) - Tel. 0421 338911"
     socials={socials}
     title3=""
     images={images}

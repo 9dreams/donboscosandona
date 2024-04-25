@@ -136,8 +136,21 @@ export async function getStaticProps() {
 // Il nostro team
 let members = [
   {
+    name: 'Centralino',
+    role: 'Per informazioni generali',
+    imageUrl: '/images/call1.webp',
+    phone: '0421 338 911 ',
+  },
+  {
+    name: 'Amministrazione',
+    role: 'Per informazioni amministrative e disponibilità degli ambienti.',
+    imageUrl: '/images/call1.webp',
+    email: 'amministrazione@donboscosandona.it',
+    phone: '0421 338 900',
+  },
+  {
     name: 'Segreteria PER',
-    role: 'Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo:',
+    role: 'Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo',
     imageUrl: '/images/call1.webp',
     email: 'per@donboscosandona.it',
     phone: '392 464 3689',
@@ -150,9 +163,16 @@ let members = [
   },
   {
     name: 'Cinema don Bosco',
-    role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero:",
+    role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero",
     imageUrl: '/images/call3.webp',
     phone: '346 960 5687',
+  },
+  {
+    name: 'Soggiorno don Bosco',
+    role: "Dal lunedì al venerdì dalle 9.00 alle 12.00",
+    imageUrl: '/images/call3.webp',
+    email: 'info@soggiornodonbosco.it',
+    phone: '0421 299 158',
   },
 ]
 
