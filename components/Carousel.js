@@ -3,13 +3,15 @@ import { Paper, Button, Box, Grid, Typography, Container } from '@mui/material'
 import styles from './Carousel.module.css'
 
 function readMore(string, maxWords) {
-  var strippedString = string.trim()
-  var array = strippedString.split(' ')
-  var wordCount = array.length
-  var string = array.splice(0, maxWords).join(' ')
+  if (string) {
+    var strippedString = string.trim()
+    var array = strippedString.split(' ')
+    var wordCount = array.length
+    var string = array.splice(0, maxWords).join(' ')
 
-  if (wordCount > maxWords) {
-    string += '...'
+    if (wordCount > maxWords) {
+      string += '...'
+    }
   }
 
   return string
