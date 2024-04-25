@@ -2,6 +2,19 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper, Button, Box, Grid, Typography, Container } from '@mui/material'
 import styles from './Carousel.module.css'
 
+function readMore(string, maxWords) {
+  var strippedString = string.trim()
+  var array = strippedString.split(' ')
+  var wordCount = array.length
+  var string = array.splice(0, maxWords).join(' ')
+
+  if (wordCount > maxWords) {
+    string += '...'
+  }
+
+  return string
+}
+
 export default function MyCarousel({
   slides,
   maxWidth,
@@ -46,9 +59,11 @@ export default function MyCarousel({
                 right: 0,
                 left: 0,
                 opacity: slide.opacity,
-                background: !slide.titolo || `linear-gradient(${
-                  slide.colore2 || slide.colore || 'transparent'
-                }, ${slide.colore || 'black'})`,
+                background:
+                  !slide.titolo ||
+                  `linear-gradient(${
+                    slide.colore2 || slide.colore || 'transparent'
+                  }, ${slide.colore || 'black'})`,
               }}
             />
             <Container
@@ -67,9 +82,9 @@ export default function MyCarousel({
                 <Grid item md={8}>
                   <Box
                     sx={{
-                      position: {xs: 'absolute', md: 'relative'},
-                      bottom: {xs: '3rem'},
-                      marginTop: {md: '12rem'},
+                      position: { xs: 'absolute', md: 'relative' },
+                      bottom: { xs: '3rem' },
+                      marginTop: { md: '12rem' },
                       p: { xs: 3, md: 6 },
                       pr: { md: 0 },
                     }}
@@ -83,7 +98,7 @@ export default function MyCarousel({
                       {slide.titolo}
                     </Typography>
                     <Typography component='h5' color='inherit' paragraph>
-                      {slide.descrizione}
+                      {readMore(slide.descrizione, 50)}
                     </Typography>
                     {slide.buttonUrl && (
                       <Button

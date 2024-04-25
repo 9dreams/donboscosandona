@@ -2,6 +2,19 @@ import { Container, Typography, Card, CardActionArea, CardContent } from '@mui/m
 
 import Image from 'next/image'
 
+function readMore(string, maxWords) {
+  var strippedString = string.trim()
+  var array = strippedString.split(' ')
+  var wordCount = array.length
+  var string = array.splice(0, maxWords).join(' ')
+
+  if (wordCount > maxWords) {
+    string += '...'
+  }
+
+  return string
+}
+
 export default function NewsCard({ post, aspectRatio }) {
   return (
     <CardActionArea
@@ -11,7 +24,7 @@ export default function NewsCard({ post, aspectRatio }) {
       }
       disabled={!post.articolo && !post.link && !post.allegato}
     >
-      <Card sx={{ display: 'block' }}>
+      <Card sx={{ display: 'block', minHeight: '30rem', }}>
         <Container
           sx={{
             aspectRatio: aspectRatio,
@@ -39,7 +52,7 @@ export default function NewsCard({ post, aspectRatio }) {
             {post.pubblicazione}
           </Typography>
           <Typography variant='subtitle1' paragraph>
-            {post.abstract}
+            {readMore(post.abstract, 40)}
           </Typography>
           {post.articolo && (
             <Typography variant='subtitle1' color='primary'>
