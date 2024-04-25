@@ -10,6 +10,8 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import NightlightIcon from '@mui/icons-material/Nightlight'
 
+import Image from 'next/image'
+
 export default function Calendar({
   title,
   description,
@@ -54,20 +56,26 @@ export default function Calendar({
               elevation={0}
             >
               <CardContent sx={{ flex: 1, padding: '0px', paddingTop: '10px' }}>
-                <CardMedia
-                  component='img'
+                <Container
                   sx={{
-                    display: {
-                      xs: 'block',
-                      sm: 'block',
-                      margin: '0px',
-                      borderRadius: '0px',
-                    },
                     aspectRatio: aspectRatio,
+                    position: 'relative',
+                    overflow: 'hidden',
                   }}
-                  image={date.immagineUrl}
-                  alt={date.date}
-                />
+                >
+                  <Image
+                    src={date.immagineUrl}
+                    alt={date.date}
+                    style={{
+                      width: '100%',
+                      display: 'block',
+                      objectFit: 'cover',
+                    }}
+                    fill={true}
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  />
+                </Container>
+
                 <Container sx={{ paddingTop: '1.5rem' }}>
                   <Typography
                     text-align='center'
