@@ -21,6 +21,7 @@ export default function Featured({
     titolo: post.titolo,
     descrizione: post.abstract,
     immagine: post.immagine,
+    immagine_mobile: post.immagine_mobile,
     colore: '#000',
     colore2: 'transparent',
     opacity: 1,
