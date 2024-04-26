@@ -44,7 +44,10 @@ export default function MyCarousel({
             className={styles.slide}
             sx={{
               position: 'relative',
-              backgroundImage: 'url(' + slide.immagine + ')',
+              backgroundImage: {
+                xs: 'url(' + (slide.immagine_mobile || slide.immagine) + ')',
+                lg: 'url(' + slide.immagine + ')',
+              },
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
