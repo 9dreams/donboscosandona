@@ -22,7 +22,7 @@ export default function Schermo({ data }) {
           limit={10}
           animation='fade'
           interval={12000}
-          defaultTag=''
+          defaultTag='scuola'
         />
       </div>
     </ThemeProvider>

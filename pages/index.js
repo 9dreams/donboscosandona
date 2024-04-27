@@ -169,9 +169,9 @@ let link_utili = [
 export default function Home({ data }) {
   return (
     <Layout>
-      <Featured data={data} />
+      <Featured data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor.png' />
-      <SwiperNews title='News' data={data} limit={12} />
+      <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
       <Torneo classi={classi} />
       <Products
         title='I settori'
@@ -219,7 +219,7 @@ export async function getServerSideProps() {
 // revalidation is enabled and a new request comes in
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/inoratorio?q=sfp'
+    'https://channels.donboscosandona.it/api/posts/inoratorio?q=scuola'
   )
   const data = await res.json()
 
