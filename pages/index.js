@@ -4,6 +4,7 @@ import { Button, Container, Typography, Grid } from '@mui/material'
 
 import {
   Carousel,
+  Featured,
   Layout,
   LandingHero,
   Features,
@@ -76,7 +77,8 @@ export default function Home({ data }) {
           è la porta per la gioia vera e la vita significativa. Buona Estate!
         </p>
       </Paragraph>
-      <SwiperNews title='News' data={data} limit={12} />
+      <Featured data={data} defaultTag='per' />
+      <SwiperNews title='News' data={data} limit={12} defaultTag='per' />
       <Features
         title="La #per dell'Oratorio don Bosco è..."
         description=''
