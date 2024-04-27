@@ -18,8 +18,6 @@ import {
 } from '/components'
 
 export default function Home({ data, movies }) {
-  console.log(movies)
-
   return (
     <Layout>
       <Head>
@@ -110,6 +108,7 @@ export async function getStaticProps() {
         : movie.hero_path,
     link: 'https://cinema.donboscosandona.it',
     in_evidenza: false,
+    tag: movie.showtimes[0].date,
   }))
 
   /*
