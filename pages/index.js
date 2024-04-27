@@ -60,9 +60,9 @@ export default function Home({ data, movies }) {
       </Container>
       <Table
         title='Orari delle Sante Messe'
-        backgroundImageUrl='/images/giornata.png'
+        backgroundImageUrl='https://wp.it.aleteia.org/wp-content/uploads/sites/8/2018/01/shutterstock_untitled-design-14.jpg'
         backgroundColor='#F79F1F'
-        opacity={0.8}
+        opacity={0.7}
         blur='0rem'
         color='white'
         rows={[
@@ -70,9 +70,15 @@ export default function Home({ data, movies }) {
           ['ore 7.00', 'ore 7.00', ''],
           ['', '', 'ore 9.00'],
           ['', '', 'ore 10.30'],
-          ['ore 18.30', 'ore 18.00', ''],
+          ['ore 18.30', '', ''],
         ]}
       />
+      <Container>
+        <p align="right">
+          <a href='https://www.duomosandona.it/orario-sante-messe/' target='_blank'>Orari delle Sante Messe nella Collaborazione Pastorale</a>
+        </p>
+      </Container>
+
       <Products
         cardWidth={3}
         products={siti}
@@ -85,18 +91,9 @@ export default function Home({ data, movies }) {
         borderRadius='5px'
         aspectRatio='2 / 1'
       />
-      <Container>
-        <Featured data={movies} height={75} />
-      </Container>
 
       <SwiperNews title='Al cinema' data={movies} limit={12} />
 
-      <Products
-        cardWidth={3}
-        products={gruppi2}
-        borderRadius='5px'
-        aspectRatio='2 / 1'
-      />
       <Team title='Contatti' members={members} cardWidth={4} />
       <Maps
         maxWidth='100%'
@@ -260,9 +257,6 @@ let gruppi1 = [
       'http://archive.inoratorio.it/img/column/ce9cd906c4787f771a1b10e59f3e9e1ad38870db.jpg?1517600705',
     url: 'http://archive.inoratorio.it/cl',
   },
-]
-
-let gruppi2 = [
   {
     immagineUrl:
       'http://archive.inoratorio.it/img/column/a44867c32c44afda8717857c72e8de2cd570beb5.jpg?1517600672',
