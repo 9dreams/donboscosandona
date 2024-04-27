@@ -88,7 +88,7 @@ export default function Home({ data, movies }) {
       <Products
         cardWidth={3}
         products={gruppi1}
-        borderRadius='5px'
+        borderRadius='20px'
         aspectRatio='2 / 1'
       />
 
