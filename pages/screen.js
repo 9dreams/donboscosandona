@@ -17,7 +17,7 @@ export default function Schermo({ data }) {
       </Head>
       <div style={{ backgroundColor: 'black', height: '100vh', cursor: 'none' }}>
         <Featured
-          data={data.map((post) => ({ ...post, in_evidenza: true, immagine: post.immagine_schermo || post.immagine }))}
+          data={data.map((post) => ({ ...post, in_evidenza: true, titolo: post.immagine_schermo ? '' : post.titolo, abstract: post.immagine_schermo ? '' : post.abstract, immagine: post.immagine_schermo || post.immagine, articolo: '', link: '', allegato: null }))}
           height='100'
           limit={10}
           animation='fade'
@@ -36,7 +36,6 @@ export async function getStaticProps() {
 
   return {
     props: { data },
-    revalidate: 1800, // In secondi: il build viene fatto al massimo una volta all'ora
+    revalidate: 1200, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
-
