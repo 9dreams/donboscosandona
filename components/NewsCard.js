@@ -26,8 +26,6 @@ function readMore(string, maxWords) {
 }
 
 export default function NewsCard({ post, aspectRatio, defaultTag }) {
-  console.log('Dt: ' + defaultTag)
-
   return (
     <CardActionArea
       component='a'
