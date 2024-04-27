@@ -84,52 +84,52 @@ export default function Products({
                       sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     />
                   </Container>
-
                   {product.title && (
-                    <>
-                      <Typography
-                        text-align='center'
-                        component='h4'
-                        variant='h6'
-                        style={{ textAlign: 'center' }}
-                        color='inherit'
-                        gutterBottom
+                    <Typography
+                      text-align='center'
+                      component='h4'
+                      variant='h6'
+                      style={{ textAlign: 'center' }}
+                      color='inherit'
+                      gutterBottom
+                    >
+                      {product.title}
+                    </Typography>
+                  )}
+                  {product.category && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ textAlign: 'center' }}
+                      color='text.secondary'
+                      paragraph
+                    >
+                      {product.category}
+                    </Typography>
+                  )}
+                  {product.description && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ padding: '10px' }}
+                      color='inherit'
+                      paragraph
+                    >
+                      {product.description}
+                    </Typography>
+                  )}
+                  {product.rif && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ padding: '10px' }}
+                      color='inherit'
+                      paragraph
+                    >
+                      <div
+                        className={styles.label}
+                        style={{ backgroundColor: product.labelColor }}
                       >
-                        {product.title}
-                      </Typography>
-
-                      <Typography
-                        variant='subtitle1'
-                        style={{ textAlign: 'center' }}
-                        color='text.secondary'
-                        paragraph
-                      >
-                        {product.category}
-                      </Typography>
-                      <Typography
-                        variant='subtitle1'
-                        style={{ padding: '10px' }}
-                        color='inherit'
-                        paragraph
-                      >
-                        {product.description}
-                      </Typography>
-                      {product.rif && (
-                        <Typography
-                          variant='subtitle1'
-                          style={{ padding: '10px' }}
-                          color='inherit'
-                          paragraph
-                        >
-                          <div
-                            className={styles.label}
-                            style={{ backgroundColor: product.labelColor }}
-                          >
-                            <p>{product.rif}</p>
-                          </div>
-                        </Typography>
-                      )}
-                    </>
+                        <p>{product.rif}</p>
+                      </div>
+                    </Typography>
                   )}
                 </CardContent>
               </Card>
