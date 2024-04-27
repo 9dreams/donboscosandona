@@ -54,7 +54,7 @@ export default function Show({ data }) {
         {data.tag && (
           <Stack direction='row' spacing={1}>
             {data.tag.split(',').map((tag) => (
-              <Chip label={tag} />
+              <Chip label={tag} color='primary' />
             ))}
           </Stack>
         )}
