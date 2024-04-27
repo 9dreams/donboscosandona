@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import { Button, Container, Typography, Grid } from '@mui/material'
 
@@ -37,6 +38,26 @@ export default function Home({ data, movies }) {
       </Head>
       <Featured data={data} height={100} />
       <SwiperNews title='News' data={data} limit={12} />
+      <Container
+        sx={{
+          aspectRatio: '16 / 9',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        <a href='https://per.donboscosandona.it'>
+          <Image
+            src='/images/home/scopri_la_per.jpeg'
+            alt='Scopri la #per24'
+            style={{
+              width: '100%',
+              display: 'block',
+              objectFit: 'cover',
+            }}
+            fill={true}
+          />
+        </a>
+      </Container>
       <Table
         title='Orari delle Sante Messe'
         backgroundImageUrl='/images/giornata.png'
@@ -168,7 +189,7 @@ let members = [
   },
   {
     name: 'Soggiorno don Bosco',
-    role: "Dal lunedì al venerdì dalle 9.00 alle 12.00",
+    role: 'Dal lunedì al venerdì dalle 9.00 alle 12.00',
     imageUrl: '/images/call3.webp',
     email: 'info@soggiornodonbosco.it',
     phone: '0421 299 158',
@@ -183,8 +204,7 @@ let siti = [
   },
   {
     title: 'Cinema don Bosco',
-    immagineUrl:
-      '/images/home/cinema.png',
+    immagineUrl: '/images/home/cinema.png',
     url: 'https://cinema.donboscosandona.it',
   },
   {
@@ -194,8 +214,7 @@ let siti = [
   },
   {
     title: 'Soggiorno Marino don Bosco',
-    immagineUrl:
-      '/images/home/soggiornodonbosco.png',
+    immagineUrl: '/images/home/soggiornodonbosco.png',
     url: 'https://www.soggiornodonbosco.it',
   },
 ]
@@ -245,19 +264,23 @@ let gruppi1 = [
 
 let gruppi2 = [
   {
-    immagineUrl: 'http://archive.inoratorio.it/img/column/a44867c32c44afda8717857c72e8de2cd570beb5.jpg?1517600672',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/a44867c32c44afda8717857c72e8de2cd570beb5.jpg?1517600672',
     url: 'http://archive.inoratorio.it/banda',
   },
   {
-    immagineUrl: 'http://archive.inoratorio.it/img/column/2827044e2ccaa6dfd84f387b4413580a5bccfffa.jpg?1517600704',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/2827044e2ccaa6dfd84f387b4413580a5bccfffa.jpg?1517600704',
     url: 'http://archive.inoratorio.it/resto',
   },
   {
-    immagineUrl: 'http://archive.inoratorio.it/img/column/8610e2eaf7d5e97d99b6b1be2096c696e88b775e.jpg?1517600705',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/8610e2eaf7d5e97d99b6b1be2096c696e88b775e.jpg?1517600705',
     url: 'http://archive.inoratorio.it/presepe',
   },
   {
-    immagineUrl: 'http://archive.inoratorio.it/img/column/5e089332bd175d1306e6535d68a98e6c6eb221cf.jpg?1517600704',
+    immagineUrl:
+      'http://archive.inoratorio.it/img/column/5e089332bd175d1306e6535d68a98e6c6eb221cf.jpg?1517600704',
     url: 'http://archive.inoratorio.it/caio',
   },
 ]
