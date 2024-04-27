@@ -9,6 +9,7 @@ export default function Featured({
   height,
   animation,
   interval,
+  defaultTag,
 }) {
   if (!data) return <div>Caricamento...</div>
   if (data && data.status == '404')
@@ -25,6 +26,7 @@ export default function Featured({
     colore: '#000',
     colore2: 'transparent',
     opacity: 1,
+    tag: post.tag,
     buttonText:
       (post.articolo && 'Continua a leggere...') ||
       (post.link && 'Scopri di più') ||
@@ -42,6 +44,7 @@ export default function Featured({
           height={height}
           animation={animation}
           interval={interval}
+          defaultTag={defaultTag}
         ></Carousel>
       )}
     </>
@@ -54,4 +57,5 @@ Featured.defaultProps = {
   height: 90,
   animation: 'slide',
   interval: 4000,
+  defaultTag: '',
 }

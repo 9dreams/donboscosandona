@@ -1,5 +1,5 @@
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button, Box, Grid, Typography, Container } from '@mui/material'
+import { Paper, Button, Box, Grid, Typography, Container, Stack, Chip } from '@mui/material'
 import styles from './Carousel.module.css'
 
 function readMore(string, maxWords) {
@@ -23,6 +23,7 @@ export default function MyCarousel({
   height,
   animation,
   interval,
+  defaultTag,
 }) {
   return (
     <Container
@@ -94,6 +95,13 @@ export default function MyCarousel({
                       pr: { md: 0 },
                     }}
                   >
+                    {slide.tag && slide.tag!=defaultTag && (
+                      <Stack direction='row' spacing={1}>
+                        {slide.tag.split(',').map((tag) => (
+                          <Chip label={tag} color="primary" />
+                        ))}
+                      </Stack>
+                    )}
                     <Typography
                       component='h2'
                       variant='h3'
@@ -135,4 +143,5 @@ MyCarousel.defaultProps = {
   height: 90,
   animation: 'fade',
   interval: 4000,
+  defaultTag: '',
 }

@@ -29,7 +29,10 @@ export default function LandingHero(props) {
       maxWidth
       disableGutters={true}
       sx={{
-        height: props.height + 'vh',
+        height: {
+            xs: '100vh',
+            lg: props.height + 'vh',
+          },
         padding: '0vh',
         margin: '0vh',
         width: '100%',
@@ -40,8 +43,14 @@ export default function LandingHero(props) {
           position: 'relative',
           color: '#fff',
           mb: 4,
-          height: props.height + 'vh',
-          backgroundImage: 'url(' + props.imageUrl + ')',
+          height: {
+            xs: '100vh',
+            lg: props.height + 'vh',
+          },
+          backgroundImage: {
+                xs: 'url(' + (props.imageMobileUrl || props.imageUrl) + ')',
+                lg: 'url(' + props.imageUrl + ')',
+              },
           padding: 0,
           margin: 0,
           backgroundRepeat: 'no-repeat',

@@ -1,4 +1,12 @@
-import { Container, Typography, Card, CardActionArea, CardContent } from '@mui/material'
+import {
+  Container,
+  Typography,
+  Card,
+  CardActionArea,
+  CardContent,
+  Chip,
+  Stack,
+} from '@mui/material'
 
 import Image from 'next/image'
 
@@ -17,7 +25,7 @@ function readMore(string, maxWords) {
   return string
 }
 
-export default function NewsCard({ post, aspectRatio }) {
+export default function NewsCard({ post, aspectRatio, defaultTag }) {
   return (
     <CardActionArea
       component='a'
@@ -47,6 +55,15 @@ export default function NewsCard({ post, aspectRatio }) {
           />
         </Container>
         <CardContent sx={{ flex: 1 }}>
+          {post.tag && post.tag != defaultTag ? (
+            <Stack direction='row' spacing={1} sx={{ marginBottom: '10px' }}>
+              {post.tag.split(',').map((tag) => (
+                <Chip label={tag} color='primary' size='small' />
+              ))}
+            </Stack>
+          ) : (
+            <Container sx={{ height: '2rem' }} />
+          )}
           <Typography component='h2' variant='h5'>
             {post.titolo}
           </Typography>
