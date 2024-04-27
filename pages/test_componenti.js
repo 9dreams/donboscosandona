@@ -38,9 +38,9 @@ export default function Home({ data }) {
         cardWidth={3}
         events={date}
       />
-      <Featured data={data} limit={4} />
+      <Featured data={data} limit={4} defaultTag='scuola' />
       <News title='News' data={data} limit={4} />
-      <SwiperNews title='News' data={data} limit={6} />
+      <SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
 
       <Carousel slides={slides} />
       
