@@ -11,6 +11,8 @@ import { getIdArticoli } from '../../lib/articoli'
 export default function Show({ data }) {
   if (!data) return <div>Caricamento...</div>
 
+  console.log(data)
+
   return (
     <Layout>
       <Head>
@@ -30,6 +32,7 @@ export default function Show({ data }) {
         title={data.titolo}
         description={data.abstract}
         imageUrl={data.immagine}
+        imageMobileUrl={data.immagine_mobile}
         buttonText={
           (data.link && 'Scopri di più') ||
           (data.allegato && "Scarica l'allegato")
