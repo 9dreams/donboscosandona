@@ -38,18 +38,32 @@ export default function Home({ data }) {
         cardWidth={3}
         events={date}
       />
-      <Featured data={data} limit={4} />
+      <Featured data={data} limit={4} defaultTag='scuola' />
       <News title='News' data={data} limit={4} />
-      <SwiperNews title='News' data={data} limit={6} />
+      <SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
 
       <Carousel slides={slides} />
-      
+
       <Products
         title='I prodotti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
         cardWidthXs={12}
         products={prodotti}
+      />
+      <Products
+        title='Prodotti con sole immagini'
+        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
+        cardWidth={4}
+        cardWidthXs={12}
+        aspectRatio='2.5 / 1'
+        products={prodotti2}
+      />
+      <Products
+        cardWidth={4}
+        cardWidthXs={12}
+        aspectRatio='2.5 / 1'
+        products={prodotti2}
       />
       <Features
         title='I nostri punti di forza'
@@ -247,7 +261,7 @@ let slides = [
     titolo: 'Fatti un bel giro',
     descrizione:
       'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-      immagine:
+    immagine:
       'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
     colore: '#ED4C67',
     colore2: 'rgba(100,100,100,0)',
@@ -357,6 +371,14 @@ const testimonials = [
     name: 'Pino West',
     text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
     social: '@PINOWEST',
+  },
+]
+
+let prodotti2 = [
+  {
+    immagineUrl:
+      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    url: 'https://cinema.donboscosandona.it',
   },
 ]
 

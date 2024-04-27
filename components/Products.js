@@ -19,25 +19,29 @@ export default function Products({
 }) {
   return (
     <Container maxWidth='lg'>
-      <Typography
-        text-align='center'
-        style={{ textAlign: 'center' }}
-        component='h3'
-        variant='h3'
-        color='inherit'
-        gutterBottom
-      >
-        {title}
-      </Typography>
-      <Typography
-        variant='subtitle1'
-        style={{ textAlign: 'center', padding: '10px' }}
-        text-align='center'
-        color='text.secondary'
-        paragraph
-      >
-        {description}
-      </Typography>
+      {title && (
+        <Typography
+          text-align='center'
+          style={{ textAlign: 'center' }}
+          component='h3'
+          variant='h3'
+          color='inherit'
+          gutterBottom
+        >
+          {title}
+        </Typography>
+      )}
+      {description && (
+        <Typography
+          variant='subtitle1'
+          style={{ textAlign: 'center', padding: '10px' }}
+          text-align='center'
+          color='text.secondary'
+          paragraph
+        >
+          {description}
+        </Typography>
+      )}
       <Grid container>
         {products.map((product) => (
           <Grid item xs={cardWidthXs} sm={4} md={cardWidth}>
@@ -77,36 +81,41 @@ export default function Products({
                         objectFit: 'cover',
                       }}
                       fill={true}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     />
                   </Container>
-
-                  <Typography
-                    text-align='center'
-                    component='h4'
-                    variant='h6'
-                    style={{ textAlign: 'center' }}
-                    color='inherit'
-                    gutterBottom
-                  >
-                    {product.title}
-                  </Typography>
-                  <Typography
-                    variant='subtitle1'
-                    style={{ textAlign: 'center' }}
-                    color='text.secondary'
-                    paragraph
-                  >
-                    {product.category}
-                  </Typography>
-                  <Typography
-                    variant='subtitle1'
-                    style={{ padding: '10px' }}
-                    color='inherit'
-                    paragraph
-                  >
-                    {product.description}
-                  </Typography>
+                  {product.title && (
+                    <Typography
+                      text-align='center'
+                      component='h4'
+                      variant='h6'
+                      style={{ textAlign: 'center' }}
+                      color='inherit'
+                      gutterBottom
+                    >
+                      {product.title}
+                    </Typography>
+                  )}
+                  {product.category && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ textAlign: 'center' }}
+                      color='text.secondary'
+                      paragraph
+                    >
+                      {product.category}
+                    </Typography>
+                  )}
+                  {product.description && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ padding: '10px' }}
+                      color='inherit'
+                      paragraph
+                    >
+                      {product.description}
+                    </Typography>
+                  )}
                   {product.rif && (
                     <Typography
                       variant='subtitle1'

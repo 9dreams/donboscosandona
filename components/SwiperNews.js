@@ -6,7 +6,7 @@ import 'swiper/css/bundle'
 
 import NewsCard from '/components/NewsCard'
 
-export default function News({ title, data, limit }) {
+export default function News({ title, data, limit, defaultTag }) {
   if (!data) return <div>Caricamento...</div>
   if (data && data.status == '404')
     return <div>Errore: il canale specificato per le News è inesistente.</div>
@@ -44,7 +44,7 @@ export default function News({ title, data, limit }) {
       >
         {data.map((post) => (
           <SwiperSlide>
-            <NewsCard post={post} />
+            <NewsCard post={post} defaultTag={defaultTag} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -55,4 +55,5 @@ export default function News({ title, data, limit }) {
 News.defaultProps = {
   title: 'News',
   limit: 6,
+  defaultTag: '',
 }
