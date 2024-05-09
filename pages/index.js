@@ -172,7 +172,7 @@ export default function Home({ data }) {
       <Featured data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor.png' />
       <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
-      <Torneo classi={classi} />
+      {/* <Torneo classi={classi} /> */}
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
