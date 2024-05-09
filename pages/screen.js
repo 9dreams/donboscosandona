@@ -22,6 +22,7 @@ export default function Schermo({ data }) {
           limit={10}
           animation='fade'
           interval={12000}
+          duration={0}
           defaultTag=''
         />
       </div>

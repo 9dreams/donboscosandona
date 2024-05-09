@@ -9,6 +9,7 @@ export default function Featured({
   height,
   animation,
   interval,
+  duration,
   defaultTag,
 }) {
   if (!data) return <div>Caricamento...</div>
@@ -44,6 +45,7 @@ export default function Featured({
           height={height}
           animation={animation}
           interval={interval}
+          duration={duration}
           defaultTag={defaultTag}
         ></Carousel>
       )}
@@ -56,6 +58,7 @@ Featured.defaultProps = {
   maxWidth: false,
   height: 90,
   animation: 'slide',
-  interval: 4000,
+  interval: 7000,
+  duration: 3000,
   defaultTag: '',
 }
