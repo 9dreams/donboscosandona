@@ -23,6 +23,7 @@ export default function MyCarousel({
   height,
   animation,
   interval,
+  duration,
   defaultTag,
 }) {
   return (
@@ -37,6 +38,7 @@ export default function MyCarousel({
       <Carousel
         className={styles.carousel}
         interval={interval}
+        duration={duration}
         animation={animation}
         sx={{ height: height + 'vh' }}
       >
@@ -141,7 +143,8 @@ export default function MyCarousel({
 MyCarousel.defaultProps = {
   maxWidth: false,
   height: 90,
-  animation: 'fade',
-  interval: 4000,
+  animation: 'slide',
+  interval: 7000,
+  duration: 3000,
   defaultTag: '',
 }
