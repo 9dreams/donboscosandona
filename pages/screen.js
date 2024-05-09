@@ -20,9 +20,9 @@ export default function Schermo({ data }) {
           data={data.map((post) => ({ ...post, in_evidenza: true, titolo: post.immagine_schermo ? '' : post.titolo, abstract: post.immagine_schermo ? '' : post.abstract, immagine: post.immagine_schermo || post.immagine, articolo: '', link: '', allegato: null }))}
           height='100'
           limit={10}
-          animation='slide'
+          animation='fade'
           interval={12000}
-          duration={5000}
+          duration={0}
           defaultTag=''
         />
       </div>
