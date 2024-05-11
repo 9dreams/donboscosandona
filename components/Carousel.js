@@ -40,6 +40,7 @@ export default function MyCarousel({
         interval={interval}
         duration={duration}
         animation={animation}
+        stopAutoPlayOnHover={false}
         sx={{ height: height + 'vh' }}
       >
         {slides.map((slide) => (
