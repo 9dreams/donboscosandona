@@ -571,7 +571,7 @@ let serate_cinema = [
     description:
       "L'armonia del Pianeta è minacciata dall'alleanza dei Malvagi: il Signor S., Perfidia, Viperiana e Serpe hanno convinto il mondo intero che Sofì e Luì sono terribili criminali e solo loro, i Malvagi, sono i buoni che possono salvare l'umanità dalla cattiveria dei Me Contro Te. Ma non tutto è perduto: Sofì e Luì insieme ai loro amici dovranno trovare un modo per riportare l'armonia nel mondo.",
     immagineUrl:
-      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b573f1ce565ab27f7bbda91e48e9dcc197187404/locandina.jpg',
+      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d8cff7cf2935460e3218ca8486a8e06ccb8e32f9/Me%20contro%20te%205.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
