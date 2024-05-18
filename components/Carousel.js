@@ -99,7 +99,7 @@ export default function MyCarousel({
                     }}
                   >
                     {slide.tag && slide.tag!=defaultTag && (
-                      <Stack direction='row' spacing={1}>
+                      <Stack direction='row' spacing={1} marginBottom={2}>
                         {slide.tag.split(',').map((tag) => (
                           <Chip label={tag} color="primary" />
                         ))}
