@@ -166,7 +166,7 @@ let link_utili = [
   },
 ]
 
-export default function Home({ data }) {
+export default function Home({ data, movies }) {
   return (
     <Layout>
       <Featured data={data} defaultTag='scuola' />
@@ -187,6 +187,7 @@ export default function Home({ data }) {
         features={features}
         cardWidth={3}
       />
+      <SwiperNews title='Al cinema' data={movies} limit={12} />
       <Products cardWidth={3} products={link_utili} aspectRatio='4 / 2' />
       <Testimonials
         testimonials={testimonials}
