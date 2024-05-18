@@ -223,8 +223,27 @@ export async function getStaticProps() {
   )
   const data = await res.json()
 
+  const res_cinema = await fetch(
+    'https://cinema.donboscosandona.it/movie/featured.json'
+  )
+  let movie_data = await res_cinema.json()
+
+  movie_data = movie_data.filter((movie) => movie.hero_path)
+
+  const movies = movie_data.map((movie) => ({
+    titolo: movie.title,
+    abstract: movie.overview,
+    immagine:
+      movie.hero_path.substring(0, 1) == '/'
+        ? 'https://cinema.donboscosandona.it' + movie.hero_path
+        : movie.hero_path,
+    link: 'https://cinema.donboscosandona.it',
+    in_evidenza: false,
+    tag: movie.showtimes[0].date,
+  }))
+
   return {
-    props: { data },
+    props: { data, movies },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 minutes
