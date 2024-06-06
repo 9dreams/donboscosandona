@@ -116,9 +116,9 @@ let settimana1 = [
   {
     date: 'Venerdì 21 Giugno',
     morning: 'Attività regolare',
-    afternoon: 'Giochi al parco e tornei',
-    evening: 'Schiuma party',
-    immagineUrl: '/images/calendario/schiuma.jpeg',
+    afternoon: 'Incontro con Etienne',
+    evening: 'Spettacolo ETIENNE',
+    immagineUrl: '/images/serate/etienne.jpeg',
     bgColor: coloreSerate,
   },
 ]
@@ -158,8 +158,8 @@ let settimana2 = [
     date: 'Venerdì 28 Giugno',
     morning: 'Attività regolare',
     afternoon: 'Seconda e terza media al mare',
-    evening: 'Spettacolo ETIENNE',
-    immagineUrl: '/images/serate/etienne.jpeg',
+    evening: 'Schiuma party',
+    immagineUrl: '/images/calendario/schiuma.jpeg',
     bgColor: coloreSerate,
   },
 ]
