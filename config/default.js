@@ -17,7 +17,7 @@ export const menu = [
     { title: 'Segnalazione illeciti', url: 'http://archive.inoratorio.it/whistleblowing' },
 ]
 
-export const logoUrl = null
+export const logoUrl = '/images/logo_inoratorio.png'
 export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 
 const menuFooter = menu
