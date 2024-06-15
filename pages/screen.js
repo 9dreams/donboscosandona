@@ -23,7 +23,7 @@ export default function Schermo({ data }) {
             titolo: post.immagine_schermo ? '' : post.titolo,
             abstract: post.immagine_schermo ? '' : post.abstract,
             immagine: post.immagine_schermo || post.immagine,
-            tag: post.immagine_schermo ? [] : post.tag,
+            tag: post.immagine_schermo ? '' : post.tag,
             articolo: '',
             link: '',
             allegato: null,
