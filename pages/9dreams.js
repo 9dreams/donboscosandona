@@ -92,7 +92,7 @@ export default function Home() {
         clienti immaginari come in una simulazione d'impresa, è stata quasi
         immediatamente superata dall'illuminazione che <strong> noi i "clienti" reali li
         abbiamo già, ed è la nostra realtà Salesiana di San Donà</strong>: la Scuola
-        Professionale, l'Oratorio, il Cinema, il Soggiorno Marino...
+        Professionale, l'Oratorio, il Cinema, il Soggiorno Marino....
         <br />
         <br />
         Da qui l'idea di metterci a disposizione con dei nuovi servizi di tipo
