@@ -15,7 +15,7 @@ export default function Schermo({data0}) {
   useEffect(() => {
     const interval = setInterval(() => {
       const fetchData = async () => {
-        const response = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio')
+        const response = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio?q=per')
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
