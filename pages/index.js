@@ -177,7 +177,7 @@ export default function Home({ data, movies }) {
         backgroundColor="#c7ecee"
         avatarImageUrl="https://i.postimg.cc/JnhxT748/image.png"
       >
-        I nuovi allievi potranno chiedere al loro rivenditore un normale iPad (non serve che sia Pro; mini non va bene) di decima generazione (2022), con 64 GB di memoria. E' richiesta anche una custodia per proteggerlo. Il pennino potrebbe essere utile ma non è obbligatorio.
+        I nuovi allievi potranno chiedere al loro rivenditore un normale Apple iPad (non serve che sia Pro; mini non va bene) di decima generazione (2022), con 64 GB di memoria. E' richiesta anche una custodia per proteggerlo. Il pennino potrebbe essere utile ma non è obbligatorio.
       </Paragraph>
       <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
       {/* <Torneo classi={classi} /> */}
