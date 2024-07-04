@@ -8,8 +8,8 @@ import { Featured } from '/components'
 
 const theme = createTheme()
 
-export default function Schermo() {
-  const [data, setData] = useState([])
+export default function Schermo({data0}) {
+  const [data, setData] = useState(data0)
 
   // rilegge i dati dal backend dopo l'intervallo di tempo specificato
   useEffect(() => {
@@ -64,16 +64,14 @@ export default function Schermo() {
   )
 }
 
-/*
 export async function getStaticProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio'
   )
-  const data = await res.json()
+  const data0 = await res.json()
 
   return {
-    props: { data },
+    props: { data0 },
     revalidate: 1200, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
   }
 }
-*/
