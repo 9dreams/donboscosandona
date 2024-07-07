@@ -11,8 +11,8 @@ import {
   SwiperNews,
   Featured,
   Logos,
-  Torneo,
   Paragraph,
+  Elements,
 } from '/components'
 
 // I punti di forza
@@ -167,18 +167,17 @@ let link_utili = [
   },
 ]
 
-export default function Home({ data, movies }) {
+export default function Home({ data, movies, elementi }) {
   return (
     <Layout>
       <Featured data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor.png' />
-      <Paragraph
-        subtitle="Modello di iPad da acquistare"
-        backgroundColor="#c7ecee"
-        avatarImageUrl="https://i.postimg.cc/JnhxT748/image.png"
-      >
-        I nuovi allievi potranno chiedere al loro rivenditore un normale Apple iPad (non serve che sia Pro; mini non va bene) di decima generazione (2022), con 64 GB di memoria. E' richiesta anche una custodia per proteggerlo. Il pennino potrebbe essere utile ma non è obbligatorio.
-      </Paragraph>
+      <Featured
+        data={elementi}
+        limit={4}
+        defaultTag='scuola'
+        height={90}
+      />
       <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
       {/* <Torneo classi={classi} /> */}
       <Products
@@ -227,16 +226,15 @@ export async function getServerSideProps() {
 // It may be called again, on a serverless function, if
 // revalidation is enabled and a new request comes in
 export async function getStaticProps() {
-  const res = await fetch(
+  let res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio?q=scuola'
   )
   const data = await res.json()
 
-  const res_cinema = await fetch(
+  res = await fetch(
     'https://cinema.donboscosandona.it/movie/featured.json'
   )
-  let movie_data = await res_cinema.json()
-
+  let movie_data = await res.json()
   movie_data = movie_data.filter((movie) => movie.hero_path)
 
   const movies = movie_data.map((movie) => ({
@@ -250,9 +248,14 @@ export async function getStaticProps() {
     in_evidenza: false,
     tag: movie.showtimes[0].date,
   }))
+  
+  res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona_elements'
+  )
+  const elementi = await res.json()
 
   return {
-    props: { data, movies },
+    props: { data, movies, elementi },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 minutes
