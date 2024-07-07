@@ -21,6 +21,8 @@ export { default as NewsCard } from './NewsCard'
 export { default as Featured } from './Featured'
 export { default as NavBar } from './NavBar'
 export { default as Sponsor } from './Sponsor'
+export { default as Elements } from './Elements'
+export { default as ElementsCard } from './ElementsCard'
 
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder
