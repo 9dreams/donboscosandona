@@ -1,8 +1,8 @@
 import Footer from '/components/Footer'
 import NavBar from '/components/NavBar'
 
-export const siteName = 'CFP DON BOSCO'
-export const siteTitle = 'CFP DON BOSCO - San Donà di Piave'
+export const siteName = 'PLAN YOUR LIFE'
+export const siteTitle = 'PLAN YOUR LIFE'
 export const siteDescription =
   'Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave'
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
