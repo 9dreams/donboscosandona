@@ -24,60 +24,47 @@ import {
 export default function Home({ data, elementi }) {
   return (
     <Layout>
-      <LandingHero
-        opacity={0.5}
-        title='Progetto educativo'
-        description='Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!'
-        buttonUrl='j'
-        buttonText='Guarda il video'
-        imageUrl='https://source.unsplash.com/random'
-      />
-      <Logos url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png' />
-      <Calendar
-        title='Una settimana di allegria'
-        description='Scopri tutti gli eventi'
-        cardWidth={3}
-        events={date}
-      />
-      <Featured data={data} limit={4} defaultTag='scuola' />
-      <Featured
-        data={elementi}
-        limit={4}
-        defaultTag='scuola'
-        height={90}
-      />
-      <News title='News' data={data} limit={4} />
-      <Elements
-        data={elementi}
+      <Featured data={data} limit={4} defaultTag='' />
+      <Paragraph
+        title='Mi presento'
+        avatarImageUrl='/images/martina.png'
+      >
+        Sono Martina Dianese, Orientatrice Asnor, Educatrice e Pedagogista
+        Clinico , operativa nei riguardi di tutti coloro che devono fronteggiare
+        scelte di vita, come l’indirizzo scolastico o universitario futuro,
+        oppure lavorativo, di inserimento o reinserimento lavorativo per
+        inoccupati, disoccupati di breve o lunga durata. Per più di dieci anni
+        ho collaborato con un Centro di Formazione professionale che mi ha vista
+        responsabile dell’orientamento in entrata, in itinere ed in uscita di
+        giovani, ma anche operatrice dei Servizi al Lavoro. Nel corso degli anni
+        ho seguito diversi progetti nella rete di Orientamento e Territorio
+        gestendo spazi ascolto e laboratori di orientamento individuale. Ho
+        seguito il Programma FIxO – di Italia Lavoro s.p.a. – Progetto
+        Formazione ed Innovazione per l’Occupazione – Azioni in favore dei
+        giovani NEET in transizione istruzione-lavoro e volte al sostegno dello
+        sviluppo di placement nelle scuole, università e nei centri di
+        formazione professionale. Il mio obiettivo è quello di mettere in atto
+        una vera azione orientativa nei confronti degli utenti, comprendendone i
+        bisogni, i contesti, le competenze ed i progetti. Stabilire cioè una
+        relazione educativo-formativa con gli individui coinvolti in questo
+        percorso e stimolare un atteggiamento critico-riflessivo e
+        autoriflessivo nel loro percorso emancipatorio.
+      </Paragraph>
+      <SwiperNews
+        title='Articoli recenti'
+        data={data}
         limit={6}
-        md={4}
-        aspectRatio='3 / 2'
-        borderRadius='10px'
+        defaultTag=''
       />
-      <SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
 
       <Carousel slides={slides} />
 
       <Products
-        title='I prodotti'
+        title='Servizi offerti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
         cardWidthXs={12}
         products={prodotti}
-      />
-      <Products
-        title='Prodotti con sole immagini'
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
-        cardWidth={4}
-        cardWidthXs={12}
-        aspectRatio='2.5 / 1'
-        products={prodotti2}
-      />
-      <Products
-        cardWidth={4}
-        cardWidthXs={12}
-        aspectRatio='2.5 / 1'
-        products={prodotti2}
       />
       <Features
         title='I nostri punti di forza'
@@ -85,129 +72,14 @@ export default function Home({ data, elementi }) {
         features={features}
         cardWidth={3}
       />
-      <Sponsor title='I nostri sponsor' logos={sponsor} />
+      <Sponsor title='Abbiamo lavorato con...' logos={sponsor} />
       <Testimonials
         testimonials={testimonials}
         cardWidth={4}
         imageUrl='https://images8.alphacoders.com/948/948649.jpg'
       />
-      <Paragraph
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-        avatarImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
-        l’ultima campanella dell’anno scolastico inizia quel periodo tanto
-        atteso dove finalmente si può fare ciò che si vuole, senza troppi
-        vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
-        compiti che preoccupano. Spensieratezza! Questa l’attesa più grande
-        durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande
-        l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza
-        diventa noia, la libertà diventa ozio e pigrizia e il tempo libero
-        rischia di diventare tempo perso.
-      </Paragraph>
-      <Paragraph
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-        leftImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
-        l’ultima campanella dell’anno scolastico inizia quel periodo tanto
-        atteso dove finalmente si può fare ciò che si vuole, senza troppi
-        vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
-        compiti che preoccupano. Spensieratezza! Questa l’attesa più grande
-        durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande
-        l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza
-        diventa noia, la libertà diventa ozio e pigrizia e il tempo libero
-        rischia di diventare tempo perso.
-      </Paragraph>
-      <Paragraph
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-        rightImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
-        l’ultima campanella dell’anno scolastico inizia quel periodo tanto
-        atteso dove finalmente si può fare ciò che si vuole, senza troppi
-        vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
-        compiti che preoccupano. Spensieratezza! Questa l’attesa più grande
-        durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande
-        l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza
-        diventa noia, la libertà diventa ozio e pigrizia e il tempo libero
-        rischia di diventare tempo perso.
-      </Paragraph>
-      <Paragraph
-        topImageUrl='https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg'
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-        columnCount={2}
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso.
-      </Paragraph>
-      <Paragraph
-        backgroundImageUrl='https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg'
-        backgroundColor='orange'
-        opacity={0.8}
-        blur='0.2rem'
-        color='white'
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso.
-      </Paragraph>
-      <Table
-        title='Titolo della tabella'
-        subtitle='Sottotitolo della tabella'
-        backgroundImageUrl='https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg'
-        backgroundColor='#EE5A24'
-        opacity={0.8}
-        blur='0.2rem'
-        color='white'
-        rows={[
-          ['Cognome', 'Nome', 'Età'],
-          ['Paoletti', 'Vigilio', 75],
-          ['Scaroletti', 'Emma', 45],
-          ['Anselmi', 'Ada', 32],
-        ]}
-      />
       <Team
         title='Contatti'
-        description='Formatori che ti aiutano a crescere con il cuore di don Bosco'
         members={members}
         cardWidth={3}
       />
@@ -216,14 +88,13 @@ export default function Home({ data, elementi }) {
         maxHeight='550px'
         url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
       />
-      <Certifications cardWidth={3} certifications={certifications} />
     </Layout>
   )
 }
 
 export async function getStaticProps() {
   let res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/inoratorio'
+    'https://channels.donboscosandona.it/api/posts/planyourlife'
   )
   const data = await res.json()
 
@@ -300,72 +171,33 @@ let slides = [
 // Il nostro team
 let members = [
   {
-    name: 'don Nicola Munari',
-    role: 'DIRETTORE / CATECHISTA',
+    name: 'Martina Dianese',
+    role: 'Orientatrice',
     description: 'And I love you like Kanye',
     description1: 'loves Kanye. We need to restart the human foundation',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    email: 'c.coso@donboscosandona.it',
+      '/images/martina.png',
+    email: 'info@planyourlife.it',
     phone: '0421 3388949874950',
-  },
-  {
-    name: 'Alessandro Cappelletto',
-    role: 'PRESIDE',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-  },
-  {
-    name: 'Alessandro Ferro',
-    role: 'VICE-PRESIDE / TUTOR DIGITALE',
-    description1:
-      'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-
-    email: 'a.ferro@donboscosandona.it',
-    phone: '0421 111 222',
-  },
-  {
-    name: "Anna Maria D'Ambrosio",
-    role: 'RESPONSABILE DELLA DISCIPLINA',
-    description1:
-      'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    email: 'l.hdggfd@donboscosandona.it',
-    phone: '12365598445',
   },
 ]
 
 let prodotti = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: 'Orientamento scolastico',
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+      'Come orientarsi nella scelta della scuola superiore? Quando iniziare a guardarsi intorno? Come fare a capire se la scelta che sto facendo è quella giusta?',
     immagineUrl:
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
   },
   {
-    title: 'Energia',
+    title: 'Servizio 2',
     category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
     description:
       "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
     immagineUrl:
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     url: '/energia',
-  },
-  {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
-    description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/informatico',
   },
 ]
 

@@ -15,10 +15,11 @@ export const menu = [
   { title: 'Trasparenza', url: '/trasparenza' },
 ]
 
-export const logoUrl =
-  'https://i.postimg.cc/zvqYsPKD/SFP-DON-BOSCO-SAN-DONA-BIANCO.png'
+export const logoUrl = ''
 
-export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
+export const header = (
+  <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
+)
 
 const menuFooter = [
   { title: 'Informatico', url: '/informatico' },
