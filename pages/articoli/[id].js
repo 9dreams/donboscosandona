@@ -11,8 +11,6 @@ import { getIdArticoli } from '../../lib/articoli'
 export default function Show({ data }) {
   if (!data) return <div>Caricamento...</div>
 
-  console.log(data)
-
   return (
     <Layout>
       <Head>
@@ -76,7 +74,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const paths = await getIdArticoli()
-  console.log(paths)
+
   return {
     paths,
     fallback: 'blocking',
