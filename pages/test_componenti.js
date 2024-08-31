@@ -40,13 +40,12 @@ export default function Home({ data, elementi }) {
         events={date}
       />
       <Featured data={data} limit={4} defaultTag='scuola' />
-      <Featured
-        data={elementi}
-        limit={4}
-        defaultTag='scuola'
-        height={90}
-      />
+      <Featured data={elementi} limit={4} defaultTag='scuola' height={90} />
       <News title='News' data={data} limit={4} />
+      <Container>
+        <h1 className='bg-teal-500 text-yellow-500 p-6 text-3xl font-bold underline'>Prova Tailwind</h1>
+      </Container>
+
       <Elements
         data={elementi}
         limit={6}
