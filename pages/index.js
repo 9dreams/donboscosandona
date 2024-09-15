@@ -57,36 +57,10 @@ export default function Home({ data, elementi }) {
         defaultTag=''
       />
 
-      <Carousel slides={slides} />
-
-      <Products
-        title='Servizi offerti'
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
-        cardWidth={4}
-        cardWidthXs={12}
-        products={prodotti}
-      />
-      <Features
-        title='I nostri punti di forza'
-        description='Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!'
-        features={features}
-        cardWidth={3}
-      />
-      <Sponsor title='Abbiamo lavorato con...' logos={sponsor} />
-      <Testimonials
-        testimonials={testimonials}
-        cardWidth={4}
-        imageUrl='https://images8.alphacoders.com/948/948649.jpg'
-      />
-      <Team
-        title='Contatti'
-        members={members}
-        cardWidth={3}
-      />
       <Maps
         maxWidth='100%'
         maxHeight='550px'
-        url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
+        url='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1069.8936552382524!2d12.5636879111439!3d45.63104334408461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sit!2sit!4v1726416979794!5m2!1sit!2sit'
       />
     </Layout>
   )

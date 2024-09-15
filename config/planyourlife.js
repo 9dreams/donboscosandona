@@ -7,7 +7,7 @@ export const siteDescription =
   'Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave'
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
-export const menu0 = [
+export const menu = [
   { title: 'Chi siamo', url: '/chi-siamo' },
   { title: 'Contatti', url: '/contatti' },
   { title: 'Dove siamo', url: '/dove-siamo' },
@@ -15,17 +15,20 @@ export const menu0 = [
   { title: 'Trasparenza', url: '/trasparenza' },
 ]
 
-export const menu = []
-
 export const logoUrl = ''
 
 export const header = (
   <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 )
 
-const menuFooter = []
+const menuFooter = [
+  { title: 'Informatico', url: '/informatico' },
+  { title: 'Energie', url: '/energie' },
+  { title: 'Elettrico', url: '/elettrico' },
+  { title: 'Trasparenza', url: '/trasparenza' },
+]
 
-const socials0 = [
+const socials = [
   {
     title: 'Facebook',
     imageUrl:
@@ -52,9 +55,12 @@ const socials0 = [
   },
 ]
 
-let socials = []
-
-let images = []
+let images = [
+  { title: '', imageUrl: 'https://source.unsplash.com/random' },
+  { title: '', imageUrl: 'https://source.unsplash.com/random' },
+  { title: '', imageUrl: 'https://source.unsplash.com/random' },
+  { title: '', imageUrl: 'https://source.unsplash.com/random' },
+]
 
 export const footer = (
   <Footer
@@ -62,13 +68,15 @@ export const footer = (
     color='#272727'
     opacitycolor='1'
     opacity={1}
-    title1='Chi sono'
-    description1='Sono Orientatrice Asnor e pedagogista clinico, principalmente mi occupo di orientamento scolastico e professionale, guidando non solo gli studenti nella scelta di percorsi che rispecchiano le loro aspirazioni, interessi, che sono anche realistici e sostenibili nel lungo termine, ma anche aiutando le persone a prendere decisioni informate riguardo alla loro carriera, ai percorsi formativi necessari e alle opportunità professionali disponibili. Questo processo è utile sia per i giovani che stanno entrando nel mondo del lavoro sia per chi sta pensando di cambiare carriera.'
-    title2='Social'
+    title1='About Us'
+    description1="Footer che apparirà sul fondo di tutte le pagine del sito. Sarà possibile passare al componente un'immagine di sfondo opzionale oppure un colore di sfondo. L'attributo opaciy permetterà di sovrapporre all'immagine un Box con il colore di sfondo e un'opacità regolabile.
+La prima colonna sarà destinata a un testo descrittivo, la seconda ai social, la terza a un menù di navigazione grafico (che porta ad es. ai settori).
+"
+    title2='Social Feed'
     socials={socials}
-    title3=''
+    title3='I Settori'
     images={images}
     menu={menuFooter}
-    copyright='Site by 9dreams Agency'
+    copyright='Copyright (C) 2023 9dreams Agency.'
   />
 )
