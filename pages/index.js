@@ -25,10 +25,7 @@ export default function Home({ data, elementi }) {
   return (
     <Layout>
       <Featured data={data} limit={4} defaultTag='' />
-      <Paragraph
-        title='Mi presento'
-        avatarImageUrl='/images/martina.png'
-      >
+      <Paragraph title='Chi sono' avatarImageUrl='/images/martina.png'>
         Sono Martina Dianese, Orientatrice Asnor, Educatrice e Pedagogista
         Clinico , operativa nei riguardi di tutti coloro che devono fronteggiare
         scelte di vita, come l’indirizzo scolastico o universitario futuro,
@@ -49,6 +46,19 @@ export default function Home({ data, elementi }) {
         relazione educativo-formativa con gli individui coinvolti in questo
         percorso e stimolare un atteggiamento critico-riflessivo e
         autoriflessivo nel loro percorso emancipatorio.
+      </Paragraph>
+      <Paragraph title='Cosa faccio'>
+        Come Orientatrice Asnor, il mio scopo è quello di diffondere e sostenere
+        la cultura dell’orientamento nel mondo della scuola, dell’università e
+        del lavoro, secondo il principio che ogni persona è una risorsa per sé e
+        per il mondo. Utilizzando strumenti appartenenti alla mia professione
+        con attività individuali e di gruppo, la persona da orientare viene
+        accompagnata in un processo di autoconsapevolezza fino alla costruzione
+        di una propria visione di vita individuale. La finalità dell’orientatore
+        è quello insomma di sostenere la persona, di qualsiasi età, nelle fasi
+        di transizione, quando cioè si trova di fronte alla necessità di
+        prendere decisioni importanti quali il percorso scolastico,
+        universitario o professionale.
       </Paragraph>
       <SwiperNews
         title='Articoli recenti'
@@ -149,8 +159,7 @@ let members = [
     role: 'Orientatrice',
     description: 'And I love you like Kanye',
     description1: 'loves Kanye. We need to restart the human foundation',
-    imageUrl:
-      '/images/martina.png',
+    imageUrl: '/images/martina.png',
     email: 'info@planyourlife.it',
     phone: '0421 3388949874950',
   },
