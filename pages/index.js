@@ -28,7 +28,7 @@ export default function Home({ data, elementi }) {
       <Paragraph
         title='Chi sono'
         avatarImageUrl='/images/martina.png'
-        rightImageUrl='/images/logo.png'
+        rightImageUrl='/images/Logo.png'
         backgroundImageUrl='/images/scrivania_martina.jpg'
         backgroundColor='#fff'
         opacity={0.7}
