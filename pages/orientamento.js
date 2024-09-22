@@ -24,7 +24,7 @@ export default function Pagina() {
         razionalizzazione del lavoro imposte dall’avvento della cultura
         industriale.
       </Paragraph>
-      <Paragraph subtitle="I principi dell'orientamento">
+      <Paragraph subtitle="I principi dell'orientamento" topImageUrl='/images/5_steps.png'>
         <ul>
           <li>1. L’orientamento è un processo continuo</li>
           <li>2. È strettamente legato al processo produttivo</li>
@@ -33,7 +33,7 @@ export default function Pagina() {
           <li>5. Necessita di un approccio disciplinare</li>
         </ul>
       </Paragraph>
-      <Paragraph subtitle='Le istituzioni di riferimento e gli utenti destinatari del servizio'>
+      <Paragraph subtitle='Le istituzioni di riferimento e gli utenti destinatari del servizio' rightImageUrl='/images/istituzioni.jpg'>
         <ul>
           <li>● Le scuole</li>
           <li>● I CPIA (centro provinciale istruzione per adulti)</li>
@@ -49,7 +49,7 @@ export default function Pagina() {
           <li>● I CAV (Centri antiviolenza per le donne)</li>
         </ul>
       </Paragraph>
-      <Paragraph subtitle="I destinatari dell'orientamento">
+      <Paragraph subtitle="I destinatari dell'orientamento" leftImageUrl='/images/people.jpg'>
         <ul>
           <li>
             ● Gli studenti di diverso grado di istruzione i quali devono

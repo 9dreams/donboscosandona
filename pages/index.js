@@ -121,6 +121,7 @@ export default function Home({ data, elementi }) {
         description=''
         products={strumenti}
         cardWidth={4}
+        cardWidthXs={12}
         borderRadius={8}
       />
       
