@@ -123,12 +123,16 @@ export default function Home({ data, elementi }) {
         cardWidth={4}
         borderRadius={8}
       />
-
-      <Maps
-        maxWidth='100%'
-        maxHeight='550px'
-        url='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1069.8936552382524!2d12.5636879111439!3d45.63104334408461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sit!2sit!4v1726416979794!5m2!1sit!2sit'
+      
+      <Products
+        title='Certificazioni'
+        description=''
+        products={certificazioni}
+        cardWidth={3}
+        borderRadius='50%'
+        aspectRatio='1 / 1'
       />
+      
       <Paragraph
         title='Contatti'
         leftImageUrl='/images/contatti.jpg'
@@ -166,6 +170,12 @@ export default function Home({ data, elementi }) {
           P. IVA 04876460272
         </p>
       </Paragraph>
+      
+      <Maps
+        maxWidth='100%'
+        maxHeight='550px'
+        url='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1069.8936552382524!2d12.5636879111439!3d45.63104334408461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sit!2sit!4v1726416979794!5m2!1sit!2sit'
+      />
     </Layout>
   )
 }
@@ -244,40 +254,26 @@ let strumenti = [
   },
 ]
 
-let certifications = [
+let certificazioni = [
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'ISO 9001:2015',
-    text2: 'Reg. n. 2593-A - Settore EA: 37',
+    title: 'Bilancio di competenze attraverso il Metodo Retravailler',
+    category: 'Rilasciato da Asnor',
+    immagineUrl:
+      '/images/logo_asnor.jpg',
+      url: '/docs/attestato_asnor.pdf'
   },
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1:
-      'Progettazione ed erogazione di attività formative e di orientamento',
+    title: 'Il Metodo LabyrinthWay',
+    category: 'Rilasciato da ISFAR',
+    immagineUrl:
+      '/images/logo_isfar.png',
+      url: '/docs/attestato_isfar.pdf'
   },
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Authorised Training Center',
+    title: 'Abilitazione allo strumento Evolution',
+    category: 'Rilasciato da PerformanSe Italia',
+    immagineUrl:
+      '/images/logo_performanse.png',
+      url: 'https://app.myopenbadge.com/verify/vaRVNK'
   },
-  {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Cod. A033 - Formazione Iniziale,',
-    text2: 'Superiore e Orientamento',
-  },
-]
-
-let sponsor = [
-  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
-  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
-  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
-  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
-  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
-  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
-  'https://www.comitec.it/img/logo.png?v=1.1',
-  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
 ]
