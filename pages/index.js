@@ -66,6 +66,13 @@ export default function Home({ data, elementi }) {
         limit={6}
         defaultTag=''
       />
+      <Products
+        title='Servizi offerti'
+        description=''
+        cardWidth={4}
+        cardWidthXs={12}
+        products={servizi}
+      />
 
       <Maps
         maxWidth='100%'
@@ -165,22 +172,27 @@ let members = [
   },
 ]
 
-let prodotti = [
+let servizi = [
   {
-    title: 'Orientamento scolastico',
+    title: 'Orientamento Professionale',
     description:
-      'Come orientarsi nella scelta della scuola superiore? Quando iniziare a guardarsi intorno? Come fare a capire se la scelta che sto facendo è quella giusta?',
+      'Il Career Guidance è ciò che guida la persona nella presa di consapevolezza delle proprie abilità personali e competenze e lo sostiene nella ricerca attiva del lavoro. Attraverso strumenti propri dell’orientamento si costruisce un profilo professionale personalizzato, con i propri punti di forza e di debolezza, si chiarifica il tipo di lavoro ed azienda adeguato al tale profilo, quali sono le priorità lavorative e la propria concezione di lavoro. Si stabilisce insomma una tabella di marcia per il raggiungimento dei propri obiettivi e si acquisiscono le conoscenze necessarie per la crescita professionale Si viene affiancati nella stesura del cv, nella preparazione al colloquio di lavoro e nella sua ricerca attiva nel territorio.',
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      '/images/orientamento_professionale.jpg',
   },
   {
-    title: 'Servizio 2',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Orientamento Scolastico',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      'Come orientarsi nella scelta della scuola superiore? Quando iniziare a guardarsi intorno ? Come fare a capire se la scelta che sto facendo è quella giusta? Queste e molte altre sono domande che ogni giorno mi vengono rivolte e dare la risposta è il risultato di un percorso complesso , che porta bambini e studenti ad acquisire una corretta visione di sé, delle proprie potenzialità ed attitudini al fine di fare una scelta consapevole ed in linea con le proprie risorse personali. Questo tipo di attività aiuta non solo a chiarire le opzioni educative disponibili, ma può anche impedire che vengano fatte scelte sbagliate che potrebbero portare frustrazione e conseguente dispersione scolastica. I ragazzi vengono incoraggiati  ad esplorare le proprie capacità accademiche e non, aprendosi a nuove opportunità ed idee per arrivare alla costruzione di un progetto di vita ad hoc.',
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/energia',
+      '/images/orientamento_scolastico.png',
+  },
+  {
+    title: 'Orientamento Universitario',
+    description:
+      'L’orientamento universitario è una tappa cruciale che concretizza sempre di più il percorso di vita della persona e pertanto deve essere fatta con adeguata consapevolezza ed attenzione. Non si tratta soltanto di scegliere una facoltà, ma si colloca all’interno del percorso di formazione continua che caratterizza ciascun individuo. E’ un fondamentale collegamento tra la scuola superiore ed il futuro professionale, pertanto deve assumere un adeguato significato. La finalità dell’orientamento universitario è la medesima di tutti i luoghi dell’orientamento: consentire alla persona di acquisire sempre maggior consapevolezza del proprio valore e del proprio essere.',
+    immagineUrl:
+      '/images/orientamento_universitario.png',
   },
 ]
 

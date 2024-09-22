@@ -7,15 +7,10 @@ export const siteDescription =
   'Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave'
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
-export const menu0 = [
-  { title: 'Chi siamo', url: '/chi-siamo' },
-  { title: 'Contatti', url: '/contatti' },
-  { title: 'Dove siamo', url: '/dove-siamo' },
-  { title: 'Privacy', url: '/privacy' },
-  { title: 'Trasparenza', url: '/trasparenza' },
+export const menu = [
+  { title: 'Home', url: '/' },
+  { title: 'Orientamento', url: '/orientamento' },
 ]
-
-export const menu = []
 
 export const logoUrl = ''
 
@@ -23,7 +18,7 @@ export const header = (
   <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 )
 
-const menuFooter = []
+const menuFooter = menu
 
 const socials0 = [
   {
