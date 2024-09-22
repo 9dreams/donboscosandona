@@ -9,7 +9,7 @@ export default function Pagina() {
       <LandingHero
         opacity={0.2}
         title='Orientamento'
-        imageUrl='/images/genitori.png'
+        imageUrl='/images/orientamento.png'
       />
       <Paragraph>
         Il termine orientamento deriva da Oriente, uno dei quattro punti

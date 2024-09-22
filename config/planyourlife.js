@@ -8,27 +8,19 @@ export const siteDescription =
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
 export const menu = [
-  { title: 'Chi siamo', url: '/chi-siamo' },
-  { title: 'Contatti', url: '/contatti' },
-  { title: 'Dove siamo', url: '/dove-siamo' },
-  { title: 'Privacy', url: '/privacy' },
-  { title: 'Trasparenza', url: '/trasparenza' },
+  { title: 'Home', url: '/' },
+  { title: 'Orientamento', url: '/orientamento' },
 ]
 
-export const logoUrl = ''
+export const logoUrl = '/images/logo_grigio.png'
 
 export const header = (
   <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 )
 
-const menuFooter = [
-  { title: 'Informatico', url: '/informatico' },
-  { title: 'Energie', url: '/energie' },
-  { title: 'Elettrico', url: '/elettrico' },
-  { title: 'Trasparenza', url: '/trasparenza' },
-]
+const menuFooter = menu
 
-const socials = [
+const socials0 = [
   {
     title: 'Facebook',
     imageUrl:
@@ -55,12 +47,16 @@ const socials = [
   },
 ]
 
-let images = [
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
+let socials = [
+  {
+    title: 'Instagram',
+    imageUrl:
+      'https:///archive.donboscosandona.it/img/ck/5c1c2a74750c62b3349df0d555ea9a26d1c6e8af.png',
+    url: 'https://www.instagram.com/martinadianese',
+  },
 ]
+
+let images = []
 
 export const footer = (
   <Footer
@@ -68,15 +64,13 @@ export const footer = (
     color='#272727'
     opacitycolor='1'
     opacity={1}
-    title1='About Us'
-    description1="Footer che apparirà sul fondo di tutte le pagine del sito. Sarà possibile passare al componente un'immagine di sfondo opzionale oppure un colore di sfondo. L'attributo opaciy permetterà di sovrapporre all'immagine un Box con il colore di sfondo e un'opacità regolabile.
-La prima colonna sarà destinata a un testo descrittivo, la seconda ai social, la terza a un menù di navigazione grafico (che porta ad es. ai settori).
-"
-    title2='Social Feed'
+    title1='Chi sono'
+    description1='Sono Orientatrice Asnor e pedagogista clinico, principalmente mi occupo di orientamento scolastico e professionale, guidando non solo gli studenti nella scelta di percorsi che rispecchiano le loro aspirazioni, interessi, che sono anche realistici e sostenibili nel lungo termine, ma anche aiutando le persone a prendere decisioni informate riguardo alla loro carriera, ai percorsi formativi necessari e alle opportunità professionali disponibili. Questo processo è utile sia per i giovani che stanno entrando nel mondo del lavoro sia per chi sta pensando di cambiare carriera.'
+    title2='Social'
     socials={socials}
-    title3='I Settori'
+    title3=''
     images={images}
     menu={menuFooter}
-    copyright='Copyright (C) 2023 9dreams Agency.'
+    copyright='Site by 9dreams Agency'
   />
 )

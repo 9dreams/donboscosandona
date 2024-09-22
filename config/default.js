@@ -12,7 +12,7 @@ export const menu = [
   { title: 'Orientamento', url: '/orientamento' },
 ]
 
-export const logoUrl = ''
+export const logoUrl = '/images/logo_grigio.png'
 
 export const header = (
   <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
@@ -47,7 +47,14 @@ const socials0 = [
   },
 ]
 
-let socials = []
+let socials = [
+  {
+    title: 'Instagram',
+    imageUrl:
+      'https:///archive.donboscosandona.it/img/ck/5c1c2a74750c62b3349df0d555ea9a26d1c6e8af.png',
+    url: 'https://www.instagram.com/martinadianese',
+  },
+]
 
 let images = []
 
