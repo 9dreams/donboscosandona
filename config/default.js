@@ -4,8 +4,8 @@ import NavBar from '/components/NavBar'
 export const siteName = 'PLAN YOUR LIFE'
 export const siteTitle = 'PLAN YOUR LIFE'
 export const siteDescription =
-  'Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave'
-export const siteBaseUrl = 'https://dev.donboscosandona.it'
+  'Centro di orientamento scolastico e professionale'
+export const siteBaseUrl = 'https://www.planyourlife.it'
 
 export const menu = [
   { title: 'Home', url: '/' },
