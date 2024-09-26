@@ -25,7 +25,7 @@ const socials0 = [
     title: 'Facebook',
     imageUrl:
       'https://archive.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png',
-    url: 'https://www.facebook.com/donboscosandona/?fref=ts',
+    url: 'https://www.facebook.com/profile.php?id=61566531746026',
   },
   {
     title: 'Instagram',
@@ -53,6 +53,12 @@ let socials = [
     imageUrl:
       'https:///archive.donboscosandona.it/img/ck/5c1c2a74750c62b3349df0d555ea9a26d1c6e8af.png',
     url: 'https://www.instagram.com/martinadianese',
+  },
+  {
+    title: 'Facebook',
+    imageUrl:
+      'https://archive.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png',
+    url: 'https://www.facebook.com/profile.php?id=61566531746026',
   },
 ]
 
