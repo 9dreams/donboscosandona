@@ -206,7 +206,7 @@ let servizi = [
     title: 'Orientamento Professionale',
     description:
       'Il Career Guidance è ciò che guida la persona nella presa di consapevolezza delle proprie abilità personali e competenze e lo sostiene nella ricerca attiva del lavoro. Attraverso strumenti propri dell’orientamento si costruisce un profilo professionale personalizzato, con i propri punti di forza e di debolezza, si chiarifica il tipo di lavoro ed azienda adeguato al tale profilo, quali sono le priorità lavorative e la propria concezione di lavoro. Si stabilisce insomma una tabella di marcia per il raggiungimento dei propri obiettivi e si acquisiscono le conoscenze necessarie per la crescita professionale Si viene affiancati nella stesura del cv, nella preparazione al colloquio di lavoro e nella sua ricerca attiva nel territorio.',
-    immagineUrl: '/images/orientamento_professionale.jpg',
+    immagineUrl: '/images/orientamento_professionale.png',
   },
   {
     title: 'Orientamento Scolastico',
