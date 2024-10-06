@@ -103,6 +103,13 @@ export default function Home({ data }) {
           </li>
         </ol>
       </Paragraph>
+      <Paragraph
+        title='Full Stack Developer'
+        subtitle='Percorso post-diploma IFTS (Istruzione Formazione Tecnico Superiore)'
+      >
+        Il Full Stack Developer è un programmatore che si occupa della progettazione e della realizzazione dell'intero stack di un'applicazione web o mobile: dalla memorizzazione ed elaborazione dei dati lato server (Back End) al suo interfacciamento con il lato utente (Front End), alla definizione di un'interfaccia utente accattivante. Interfacciandosi con il grafico, lavora sull'aspetto visivo di un sito web o di un'applicazione, e fa in modo che l'esperienza utente sia ottimale anche su piattaforme differenti, secondo i fondamenti dello User Experience Design (UXD). Per fare questo ha una conoscenza dei principali linguaggi di programmazione e framework usati nel web (HTML, CSS, JavaScript, Bootstrap, ReactJS) e nella realizzazione di applicazioni mobile (React Native, Flutter) oltre a quelli necessari per realizzare e gestire il Back End (Ruby on Rails, PostgreSQL, JSON) ed è in grado di apprenderne di nuovi in un contesto di continua evoluzione e rinnovamento. Gli sbocchi professionali vanno dall'impiego in multinazionali, software house, agenzie pubblicitarie a imprese non necessariamente del settore ICT che desiderino mantenere internamente il proprio sito web o la propria applicazione.
+        <p><a href='https://www.donboscosandona.it/articoli/172'>Per saperne di più...</a></p>
+      </Paragraph>
       <Products
         title='Primo anno'
         description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e al Coding grazie al laboratorio Internet of Things: imparerai a conoscere i componenti elettronici e a farli comunicare con il mondo esterno."
@@ -141,7 +148,7 @@ export default function Home({ data }) {
         products={progetti}
       />
 
-      <Paragraph topImageUrl='/images/informatico/programma-scolastico.svg' />
+      {/* <Paragraph topImageUrl='/images/informatico/programma-scolastico.svg' /> */}
       <Sponsor logos={sponsor} />
 
       <Paragraph>
@@ -174,7 +181,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona?q=informatico'
+    'https://channels.donboscosandona.it/api/posts/inoratorio?q=informatico'
   )
   const data = await res.json()
 
@@ -374,7 +381,7 @@ let terzo_anno = [
   {
     title: 'MongoDB',
     description: 'Un esempio di database noSQL, che non memorizza i dati in forma di tabelle e righe come fanno i normali database, ma sotto forma di documenti complessi.',
-    immagineUrl: 'images/informatico/mongodb.png',
+    immagineUrl: '/images/informatico/mongodb.png',
   },
   {
     title: 'Ruby on Rails',
