@@ -138,6 +138,14 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={quarto_anno}
       />
+      <Products
+        title='IFTS'
+        description="500 ore a scuola e 500 in azienda nel nostro percorso di Istruzione e Formazione Tecnica Superiore, che apre le porte agli ITS Academy."
+        cardWidth={4}
+        cardWidthXs={6}
+        products={ifts}
+      />
+
       <SwiperNews title='News dal Settore Informatico' data={data} limit={15} />
 
       <Products
@@ -155,18 +163,18 @@ export default function Home({ data }) {
         <Table
           title='Piano formativo'
           rows={[
-            ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno'],
-            ['Italiano', 3, 3, 2, 3],
-            ['Storia / Economia / Diritto', 1, 1, 1, 1],
-            ['Inglese', 2, 2, 2, 2],
-            ['Religione', 1, 1, 1, 1],
-            ['Matematica', 3, 3, 3, 2],
-            ['Fisica', 2, 2, 2, 2],
-            ['CAD', 2, 2, 2, 2],
-            ['Teoria Sistemi e reti', 5, 3, 3, ''],
-            ['Laboratorio Sistemi e Programmazione', 10, 12, 12, 3],
-            ['', '', '', '', ''],
-            ['ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO', '', 200, 200, 500],
+            ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno', 'IFTS'],
+            ['Italiano', 3, 3, 2, 3, 1],
+            ['Storia / Economia / Diritto', 1, 1, 1, 1, 1],
+            ['Inglese', 2, 2, 2, 2, 1],
+            ['Religione', 1, 1, 1, 1, null],
+            ['Matematica', 3, 3, 3, 2, 1],
+            ['Fisica', 2, 2, 2, 2, 1],
+            ['CAD', 2, 2, 2, 2, null],
+            ['Teoria Sistemi e reti', 5, 3, 3, null, null],
+            ['Laboratorio Sistemi e Programmazione', 10, 12, 12, 3, 10],
+            [null, null, null, null, null, null],
+            ['ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO', '', 200, 200, 500, 500],
           ]}
           backgroundImageUrl='/images/informatico/sfondo-piano-formativo.jpg'
           backgroundColor='#003185'
@@ -425,6 +433,39 @@ let quarto_anno = [
     title: 'Test Sistematici',
     description: 'Al giorno d\'oggi non si sviluppa un\'applicazione di qualsiasi tipo senza dotarla di una serie di test automatici, che permettano di identificare al volo eventuali bug inseriti nel codice tra una versione e l\'altra.',
     immagineUrl: '/images/informatico/test-sistematici.png',
+  },
+]
+
+let ifts = [
+  {
+    title: 'JavaScript',
+    description: 'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
+    immagineUrl: '/images/informatico/javascript.png',
+  },
+  {
+    title: 'React e NextJS',
+    description: 'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
+    immagineUrl: '/images/informatico/nextjs.png',
+  },
+  {
+    title: 'Database relazionali',
+    description: 'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
+    immagineUrl: '/images/informatico/sql.png',
+  },
+  {
+    title: 'TailWind CSS',
+    description: 'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
+    immagineUrl: '/images/informatico/tailwind-css.jpeg',
+  },
+  {
+    title: 'Figma',
+    description: 'Progettazione della User Interface e della User Experience',
+    immagineUrl: '/images/informatico/figma.png',
+  },
+  {
+    title: 'Ruby on Rails',
+    description: 'Costruzione di applicazioni web full-stack complete: strutturazione del backend (database, autenticazione, permessi...) e creazione dell\'interfaccia grafica visibile all\'utente nel frontend.',
+    immagineUrl: '/images/informatico/ruby-rails.png',
   },
 ]
 
