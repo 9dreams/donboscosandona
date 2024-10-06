@@ -79,7 +79,7 @@ export default function Home({ data, elementi }) {
         <h1>Attività</h1>
         <p>
           <ul>
-            <li>● Metodo di studio, stile di apprendimento, motivazione</li>
+            <li>● Metodo di studio, stile di apprendimento, motivazione, gruppi di studio</li>
             <li>
               ● Analisi capacità ed interessi per la scelta della scuola
               superiore
