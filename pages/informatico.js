@@ -112,7 +112,7 @@ export default function Home({ data }) {
       </Paragraph>
       <Products
         title='Primo anno'
-        description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e al Coding grazie al laboratorio Internet of Things: imparerai a conoscere i componenti elettronici e a farli comunicare con il mondo esterno."
+        description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e alla programmazione."
         cardWidth={4}
         cardWidthXs={6}
         products={primo_anno}
@@ -146,7 +146,7 @@ export default function Home({ data }) {
         products={ifts}
       />
 
-      <SwiperNews title='News dal Settore Informatico' data={data} limit={15} />
+      <SwiperNews title='News dal Settore Informatico' data={data} limit={15} defaultTag='scuola,informatico' />
 
       <Products
         title='I nostri progetti'
@@ -245,9 +245,9 @@ let primo_anno = [
     immagineUrl: '/images/informatico/sistemi-operativi.png',
   },
   {
-    title: 'LEGO Mindstorms',
-    description: 'Imparare a programmare divertendosi: dopo aver costruito il tuo robot LEGO imparerai a programmarlo in modo che riconosca gli ostacoli ed esegua dei compiti nel mondo reale.',
-    immagineUrl: '/images/informatico/legomindstorms.jfif',
+    title: 'HTML',
+    description: 'HTML è un linguaggio basato sui tag che è alla base di qualsiasi applicazione web. Puoi considerarlo lo scheletro dell\'applicazione.',
+    immagineUrl: '/images/informatico/html.png',
   },
   {
     title: 'Arduino',
@@ -255,9 +255,9 @@ let primo_anno = [
     immagineUrl: '/images/informatico/arduino.png',
   },
   {
-    title: 'C++',
-    description: 'Imparerai le basi della programmazione con quello che è tuttora uno dei più veloci linguaggi di programmazione al mondo: non per niente i videogiochi 3D più impegnativi sono scritti in C++. Sarà un ottimo fondamento sul quale costruire la tua conoscenza di tutti gli altri linguaggi di programmazione.',
-    immagineUrl: '/images/informatico/cpp.png',
+    title: 'Java',
+    description: 'Imparerai le basi della programmazione divertendoti a istruire con i tuoi compagni di squadra un robot simulato che dovrà gareggiare con tutti gli altri.',
+    immagineUrl: '/images/informatico/robocode.jpg',
   },
 ]
 
@@ -304,11 +304,6 @@ let secondo_anno = [
     immagineUrl: '/images/informatico/versioning.png',
   },
   {
-    title: 'HTML',
-    description: 'HTML è un linguaggio basato sui tag che è alla base di qualsiasi applicazione web. Puoi considerarlo lo scheletro dell\'applicazione.',
-    immagineUrl: '/images/informatico/html.png',
-  },
-  {
     title: 'CSS',
     description: 'Usato insieme ad HTML, CSS permette di curare l\'aspetto grafico della tua applicazione... proprio come quando applichi diversi temi allo stesso programma.',
     immagineUrl: '/images/informatico/css.png',
@@ -332,11 +327,6 @@ let secondo_anno = [
     title: 'NextJS',
     description: 'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci. Anche questo sito è creato con React e NextJS.',
     immagineUrl: '/images/informatico/nextjs.png',
-  },
-  {
-    title: '.NET',
-    description: 'È il framework alla base di tutte le applicazioni del mondo Microsoft: imparerai ad utilizzarlo programmando in C#.',
-    immagineUrl: '/images/informatico/net.png',
   },
 ]
 
@@ -377,6 +367,16 @@ let terzo_anno = [
     immagineUrl: '/images/informatico/sicurezza-informatica.png',
   },
   {
+    title: 'Figma',
+    description: 'Con questo stumento potrai disegnare l\'interfaccia utente della tua applicazione: realizzerai un progetto grafico e di comunicazione sul quale poi basare lo sviluppo vero e proprio.',
+    immagineUrl: '/images/informatico/figma.png',
+  },
+  {
+    title: 'TailWind CSS',
+    description: 'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
+    immagineUrl: '/images/informatico/tailwind-css.jpeg',
+  },
+  {
     title: 'SQL',
     description: 'È il linguaggio usato per interrogare i database, per inserire nuovi dati e per fare ricerche tra di essi.',
     immagineUrl: '/images/informatico/sql.png',
@@ -397,11 +397,6 @@ let terzo_anno = [
     immagineUrl: '/images/informatico/ruby-rails.png',
   },
   {
-    title: 'Figma',
-    description: 'Con questo stumento potrai disegnare l\'interfaccia utente della tua applicazione: realizzerai un progetto grafico e di comunicazione sul quale poi basare lo sviluppo vero e proprio.',
-    immagineUrl: '/images/informatico/figma.png',
-  },
-  {
     title: 'Fotoritocco',
     description: 'Imparerai a scattare foto e a curarle nei dettagli, perché al centro di ogni buon sito ci sono sempre le immagini.',
     immagineUrl: '/images/informatico/fotoritocco.png',
@@ -411,28 +406,23 @@ let terzo_anno = [
     description: 'Con i tuoi compagni avrai a disposizione una squadriglia di quattro droni per scattare foto e girare clip video dall\'alto o comunque con inquadrature spettacolari.',
     immagineUrl: '/images/informatico/drone.png',
   },
-  {
-    title: 'Montaggio video',
-    description: 'Imparerai a mettere insieme le clip video per realizzare dei video dal forte impatto che saranno proiettati nel grande schermo all\'ingresso della scuola e distribuiti tramite i nostri social.',
-    immagineUrl: '/images/informatico/montaggio-video.png',
-  },
-  {
-    title: 'Unreal Engine 5',
-    description: 'Una vera chicca: programmare è bello, ma farlo per realizzare uno spettacolare videogioco 3D lo è ancora di più. Conoscerai questo potentissimo motore grafico imparando al contempo le basi del potentissimo linguaggio C++.',
-    immagineUrl: '/images/informatico/unreal-engine5.png',
-  },
 ]
 
 let quarto_anno = [
   {
     title: 'React Native',
     description: 'Potrai mettere a frutto la conoscenza di ReactJS fatta negli anni precedenti per realizzare applicazioni native per iOS e Android. Sarai tu a sviluppare la prossima app virale negli store?',
-    immagineUrl: '/images/informatico/react.png',
+    immagineUrl: '/images/informatico/react_native.png',
   },
   {
-    title: 'Test Sistematici',
-    description: 'Al giorno d\'oggi non si sviluppa un\'applicazione di qualsiasi tipo senza dotarla di una serie di test automatici, che permettano di identificare al volo eventuali bug inseriti nel codice tra una versione e l\'altra.',
-    immagineUrl: '/images/informatico/test-sistematici.png',
+    title: 'Flutter',
+    description: 'Flutter ti permette di creare splendide applicazioni multipiattaforma: Android, iOS, Windows, MacOS, Linux, web e dispositivi intelligenti di ogni tipo.',
+    immagineUrl: '/images/informatico/flutter.webp',
+  },
+  {
+    title: '.NET MAUI',
+    description: 'Il framework di Microsoft per creare applicazioni multipiattaforma con C# e XAML ci darà la possibilità di mettere a confronto diverse tecnologie.',
+    immagineUrl: '/images/informatico/maui.png',
   },
 ]
 
