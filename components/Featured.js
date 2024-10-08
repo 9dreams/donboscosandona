@@ -59,6 +59,6 @@ Featured.defaultProps = {
   height: 90,
   animation: 'slide',
   interval: 7000,
-  duration: 3000,
+  duration: 1000,
   defaultTag: '',
 }
