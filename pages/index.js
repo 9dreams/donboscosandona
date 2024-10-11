@@ -52,6 +52,7 @@ let settori = [
   {
     title: 'Elettrico',
     category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    url: '/elettrico',
     description:
       'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
     immagineUrl:
@@ -60,6 +61,7 @@ let settori = [
   {
     title: 'Energia',
     category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    url: '/energia',
     description:
       "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
     immagineUrl:
@@ -87,6 +89,7 @@ let settori = [
   {
     title: 'Motoristico / Carrozzeria',
     category: 'QUALIFICA DI OPERATORE ALLA RIPARAZIONE DI VEICOLI A MOTORE',
+    url: '/motoristico',
     description:
       "Effettua riparazioni e manutenzione dei motori e dell'autoveicolo in tutte le sue parti. Effettua diagnosi e prove sui gas di scarico intervenendo per risolvere le anomalie.",
     immagineUrl:

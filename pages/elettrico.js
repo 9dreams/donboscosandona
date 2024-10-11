@@ -21,7 +21,7 @@ export default function Home({ data }) {
       <Paragraph
         title='Operatore Elettrico'
         subtitle='Qualifica triennale'
-        rightImageUrl='https://archive.donboscosandona.it/img/ck/9957d0b12e8146011f93c1de45aaf2012a2d30fa.png'
+        rightImageUrl='/images/codici_progetti.png'
       >
         L’operatore elettrico interviene nel processo di progettazione,
         installazione e manutenzione degli impianti elettrici civili e

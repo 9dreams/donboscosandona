@@ -21,7 +21,7 @@ export default function Home({ data }) {
       <Paragraph
         title='Operatore Informatico'
         subtitle='Qualifica triennale'
-        rightImageUrl='https://archive.donboscosandona.it/img/ck/168ae5996c23866c9a579f8c6d948f441cb0697e.png'
+        rightImageUrl='/images/codici_progetti.png'
       >
         L'Operatore informatico interviene nel processo di sviluppo e gestione
         di prodotti e servizi informatici. Supporta operativamente sistemi, reti

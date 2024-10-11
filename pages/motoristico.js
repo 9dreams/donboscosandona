@@ -15,11 +15,11 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <img
-        src='/images/meccanico/settore-meccanico.png'
+        src=''
         style={{ width: '100%' }}
       />
       <Paragraph
-        title='Operatore Meccanico'
+        title='Operatore Motoristico'
         subtitle='Qualifica triennale'
         rightImageUrl='/images/codici_progetti.png'
       >
@@ -104,14 +104,14 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={quarto_anno}
       />
-      <SwiperNews title='News dal Settore Meccanico' data={data} limit={15} />
+      <SwiperNews title='News dal Settore Motoristico' data={data} limit={15} />
     </Layout>
   )
 }
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/inoratorio?q=meccanico'
+    'https://channels.donboscosandona.it/api/posts/inoratorio?q=motoristico'
   )
   const data = await res.json()
 
