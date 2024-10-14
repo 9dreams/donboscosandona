@@ -255,9 +255,9 @@ let primo_anno = [
     immagineUrl: '/images/informatico/arduino.png',
   },
   {
-    title: 'Java',
-    description: 'Imparerai le basi della programmazione divertendoti a istruire con i tuoi compagni di squadra un robot simulato che dovrà gareggiare con tutti gli altri.',
-    immagineUrl: '/images/informatico/robocode.jpg',
+    title: 'C# E UNITY',
+    description: 'Unity è un potente motore di gioco che ti permette di creare mondi virtuali straordinari. Mentre C Sharp  è un linguaggio di programmazione multi-paradigma che supporta tutti i concetti della programmazione orientata agli oggetti. ',
+    immagineUrl: '/images/informatico/csharpeunity.jpg',
   },
 ]
 
