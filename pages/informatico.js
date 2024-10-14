@@ -256,7 +256,7 @@ let primo_anno = [
   },
   {
     title: 'C# E UNITY',
-    description: 'Unity è un potente motore di gioco che ti permette di creare mondi virtuali straordinari. Mentre C Sharp  è un linguaggio di programmazione multi-paradigma che supporta tutti i concetti della programmazione orientata agli oggetti. ',
+    description: 'Unity è un potente motore di gioco che ti permette di creare mondi virtuali straordinari: sarà l\'occasione per familiarizzare con C#, un moderno linguaggio di programmazione a oggetti. ',
     immagineUrl: '/images/informatico/csharpeunity.jpg',
   },
 ]
