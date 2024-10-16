@@ -177,28 +177,28 @@ let primo_anno = [
   {
     title: 'Forbici e cacciaviti',
     description: 'Imparare l’uso di forbici, cacciaviti e pinze',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/forbici-cacciaviti.jpg',
   },
   {
     title: 'Tubo e scatole',
     description:
       'Installare e montare gli elementi di supporto all’impianto',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/tubo-e-scatole.jpg',
   },
   {
     title: 'Lavorazione',
     description: 'Lavorazione specifica del materiale trattato (guarnitura con canapa o teflon, bicchieratura, pressatura)',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/lavorazione.jpg',
   },
   {
     title: 'Trasformazione',
     description: 'Trasformazione di un impianto da tradizionale a smart',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/trasformazione.jpg',
   },
   {
     title: 'Configurazione Smart',
     description: 'Configurazione dei dispositivi smart con app dedicate',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/configurazzione-smart.jpg',
   },
 ]
 
@@ -206,43 +206,43 @@ let secondo_anno = [
   {
     title: 'Impianti tradizionali',
     description: 'Installazione di impianti su box di simulazione',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/impianti-tradizionali.jpg',
   },
   {
     title: 'Impianti Smart',
     description: 'Installazione e configurazione di impianti smart',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/impianti-smart.jpg',
   },
   {
     title: 'Simulazione',
     description:
       'Utilizzo di software per la simulazione di impianti industriali',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/simulazione.jpg',
   },
   {
     title: 'Quadri',
     description: 'Montaggio di quadri di comando',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/quadri.jpg',
   },
   {
     title: 'Dispositivi industriali',
     description: 'Installazione e cablaggio di dispositivi industriali',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/dispositivi-industriali.jpg',
   },
   {
     title: 'Climatizzatori',
     description: 'Installazione di generatori di calore e climatizzatori',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/climatizzatori.jpg',
   },
   {
     title: 'Manutenzione',
     description: 'Manutenzione generatori di calore e climatizzatori',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/manutenzione.jpg',
   },
   {
     title: 'Relè programmabili',
     description: 'Introduzione all’utilizzo di dispositivi logici per termoregolazione',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/rele-programmabili.jpg',
   },
 ]
 
@@ -250,35 +250,35 @@ let terzo_anno = [
   {
     title: 'Disegno di schemi',
     description: 'Disegno di schemi son AutoCAD',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/disegno-di-schemi.jpg',
   },
   {
     title: 'Inverter',
     description: 'Utilizzo degli inverter per il comando elettronico dei motori elettrici',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/inverter.jpg',
   },
   {
     title: 'Controllori',
     description:
       'Cablaggio e installazione dei controllori elettronici',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/controllori.jpg',
   },
   {
     title: 'Programmazione',
     description:
       'Programmazione dei termocontrollori',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/programmazione.jpg',
   },
   {
     title: 'Quadri di comando',
     description: 'Cablaggio di quadri di comando di macchine frigorifere',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/quadri-di-comando.jpg',
   },
   {
     title: 'Manutenzione',
     description:
       'Operazioni di vuoto, carica, ricerca guasti e smaltimento impianti di refrigerazione',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/manutenzione-di-rifrigerazione.jpg',
   },
 ]
 
@@ -286,17 +286,17 @@ let quarto_anno = [
   {
     title: 'PLC',
     description: 'Programmazione di Controllori Logici Programmabili',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/plc.jpg',
   },
   {
     title: 'Refrigerazione Avanzata',
     description: 'Programmazione sistemi di refrigerazione industriali complessi',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/refrigerazione-industriale.jpg',
   },
   {
     title: 'Impianti Frigo',
     description: 'Riparazione e manutenzione di impianti frigo commerciali',
-    immagineUrl: '',
+    immagineUrl: '/images/energia/impianti-refrigerazione.jpg',
   },
 ]
 
