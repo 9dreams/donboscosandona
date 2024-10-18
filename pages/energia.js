@@ -15,7 +15,7 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <img
-        src='/images/informatico/settore-elettrico.jpg'
+        src='/images/energia/home_energetico.jpg'
         style={{ width: '100%' }}
       />
       <Paragraph
