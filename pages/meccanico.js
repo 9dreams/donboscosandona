@@ -15,7 +15,7 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <img
-        src='/images/meccanico/settore-meccanico.png'
+        src='/images/meccanico/home_meccanico.jpg'
         style={{ width: '100%' }}
       />
       <Paragraph
