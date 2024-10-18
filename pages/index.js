@@ -24,13 +24,16 @@ import {
 export default function Home({ data, elementi }) {
   return (
     <Layout>
-      <LandingHero
-        opacity={0.5}
-        title='Profumeria Shent of a Woman'
+            <Carousel slides={slides}/>
+           
+      <Products
+        title='I prodotti In evidenza'
         description='Un angolo di eleganza, dove ogni profumo racconta una storia unica di femminilità.'
-        imageUrl='https://www.pngplay.com/image/91459'
-        height='100vh'
+        cardWidth={4}
+        cardWidthXs={12}
+        products={prodotti}
       />
+
     </Layout>
   )
 }
@@ -91,22 +94,23 @@ const features = [
 // slides per il carousel
 let slides = [
   {
-    titolo: 'Fatti un bel giro',
+    titolo: 'Profumeria',
     descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+      'Scopri tutti i nostri profumi per donne',
     immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
+      'https://media-assets.vanityfair.it/photos/6643a34e9953de97c0fbce6e/master/w_1600%2Cc_limit/l_am_les_extraits_2023_iris%2520pallida.jpg',
     colore: '#ED4C67',
     colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
-    blur: '0.5rem',
+    opacity: 0,
+    blur: '0 rem',
     buttonText: 'Scopri di più!',
     buttonUrl: 'https:...',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
+    titolo: '',
+    immagine:"https://www.donnamoderna.com/content/uploads/2023/05/i-profumi-da-donna-piu-amati-e-seducenti-del-2018-tutte-le-novita-500728145616x23391200x500.jpeg",
     descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+      "I profumi migliori di tutta San Donà di Piave",
     colore: '#22aa22',
   },
 ]
@@ -156,29 +160,26 @@ let members = [
 
 let prodotti = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: "Eclissi d' Autunno",
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+      "Eclissi d'Autunno è un profumo avvolgente e misterioso, che cattura l'essenza dei giorni che si accorciano e dei colori caldi delle foglie che cadono. All'apertura, si percepiscono note fresche di bergamotto e mela verde, che evocano l'aria frizzante delle prime mattine di ottobre. Man mano che si sviluppa, il cuore rivela un bouquet di fiori di violetta e rosa selvatica, accompagnato da un tocco di cannella, che aggiunge calore e profondità.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://i0.wp.com/blog.cliomakeup.com/wp-content/uploads/2022/10/cliomakeup-profumi-autunno-2022-foliage-1-copertina.jpg?fit=1024%2C532&ssl=1',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: "Ombra di Mare",
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Ombra di Mare è un profumo che evoca l’essenza di una fresca brezza marina all’imbrunire. Le note di testa sono un frizzante mix di agrumi, con limone e pompelmo che danzano insieme, creando un’apertura energica e vivace.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://www.extrait.it/wp-content/uploads/2021/06/fb-megamare-orto-parisi-profumi.jpg',
     url: '/energia',
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'Luce di Luna',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Luce di Luna è un profumo etereo e incantevole, che cattura la magia di una notte stellata. Le note di testa si aprono con fresche sfumature di bergamotto e pera, creando un inizio fruttato e luminoso.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://brameprofumi.it/wp-content/uploads/2024/06/foto-larghe-brame-9.png',
     url: '/informatico',
   },
 ]
