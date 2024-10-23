@@ -14,9 +14,9 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <img
-        src='/images/elettrico/home_elettrico.jpg'
-        style={{ width: '100%' }}
+      <LandingHero
+        imageUrl="/images/elettrico/home_elettrico.png"
+        height={100}
       />
       <Paragraph
         title='Operatore Elettrico'

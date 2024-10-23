@@ -14,9 +14,9 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <img
-        src='/images/energia/home_energetico.jpg'
-        style={{ width: '100%' }}
+      <LandingHero
+        imageUrl='/images/energia/home_energetico.png'
+        height={100}
       />
       <Paragraph
         title='Operatore Termoidraulico'
