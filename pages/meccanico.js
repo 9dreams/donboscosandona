@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 import {
   Layout,
@@ -8,20 +8,21 @@ import {
   Paragraph,
   Sponsor,
   Table,
-} from '/components'
+} from "/components";
 
 export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <img
-        src='/images/meccanico/home_meccanico.jpg'
-        style={{ width: '100%' }}
+      <LandingHero
+        imageUrl="/images/meccanico/home_meccanico.png"
+        height={100}
       />
+      
       <Paragraph
-        title='Operatore Meccanico'
-        subtitle='Qualifica triennale'
-        rightImageUrl='/images/codici_progetti.png'
+        title="Operatore Meccanico"
+        subtitle="Qualifica triennale"
+        rightImageUrl="/images/codici_progetti.png"
       >
         L'operatore meccanico interviene, a livello esecutivo, nel processo di
         produzione meccanica con autonomia e responsabilità limitate a ciò che
@@ -45,8 +46,8 @@ export default function Home({ data }) {
         </ol>
       </Paragraph>
       <Paragraph
-        title='Tecnico Meccanico'
-        subtitle='Diploma Professionale Quadriennale in Sistema Duale con indirizzo Programmazione e Gestione di Impianti di Produzione'
+        title="Tecnico Meccanico"
+        subtitle="Diploma Professionale Quadriennale in Sistema Duale con indirizzo Programmazione e Gestione di Impianti di Produzione"
       >
         Il Tecnico per la programmazione e la gestione di impianti di produzione
         interviene con autonomia, nel quadro di azione stabilito e delle
@@ -77,232 +78,231 @@ export default function Home({ data }) {
         </ol>
       </Paragraph>
       <Products
-        title='Primo anno'
-        description=''
+        title="Primo anno"
+        description=""
         cardWidth={4}
         cardWidthXs={6}
         products={primo_anno}
       />
       <Products
-        title='Secondo anno'
-        description=''
+        title="Secondo anno"
+        description=""
         cardWidth={3}
         cardWidthXs={6}
         products={secondo_anno}
       />
       <Products
-        title='Terzo anno'
-        description=''
+        title="Terzo anno"
+        description=""
         cardWidth={3}
         cardWidthXs={6}
         products={terzo_anno}
       />
       <Products
-        title='Quarto anno'
-        description=''
+        title="Quarto anno"
+        description=""
         cardWidth={4}
         cardWidthXs={6}
         products={quarto_anno}
       />
-      <SwiperNews title='News dal Settore Meccanico' data={data} limit={15} />
+      <SwiperNews title="News dal Settore Meccanico" data={data} limit={15} />
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/inoratorio?q=meccanico'
-  )
-  const data = await res.json()
+    "https://channels.donboscosandona.it/api/posts/inoratorio?q=meccanico"
+  );
+  const data = await res.json();
 
   return {
     props: { data },
     revalidate: 3600, // I dati vengono ricaricati al massimo una volta all'ora
-  }
+  };
 }
 
 let primo_anno = [
   {
-    title: '',
-    description: 'Sicurezza',
-    immagineUrl: '/images/meccanico/sicurezza.png',
+    title: "",
+    description: "Sicurezza",
+    immagineUrl: "/images/meccanico/sicurezza.png",
   },
   {
-    title: '',
-    description: 'Prime conoscenze della meccanica industriale',
-    immagineUrl: '/images/meccanico/primeconoscenze.png',
+    title: "",
+    description: "Prime conoscenze della meccanica industriale",
+    immagineUrl: "/images/meccanico/primeconoscenze.png",
   },
   {
-    title: '',
+    title: "",
     description: "Spiegazione dell'utensileria di base",
-    immagineUrl: '/images/meccanico/utensileriadibase.png',
+    immagineUrl: "/images/meccanico/utensileriadibase.png",
   },
   {
-    title: '',
-    description: 'Lettura di una tavola tecnica',
-    immagineUrl: '/images/meccanico/tabelle.png',
+    title: "",
+    description: "Lettura di una tavola tecnica",
+    immagineUrl: "/images/meccanico/tabelle.png",
   },
   {
-    title: '',
+    title: "",
     description:
-      'Utilizzo di macchine tradizionali come tornio, fresa, trapano a colonna per lavorazioni base e saldatrice',
-    immagineUrl: '/images/meccanico/tornio.png',
+      "Utilizzo di macchine tradizionali come tornio, fresa, trapano a colonna per lavorazioni base e saldatrice",
+    immagineUrl: "/images/meccanico/tornio.png",
   },
   {
-    title: '',
-    description: 'Realizzazione e lettura fasi di lavoro',
-    immagineUrl: '/images/meccanico/fasidilavoro.png',
+    title: "",
+    description: "Realizzazione e lettura fasi di lavoro",
+    immagineUrl: "/images/meccanico/fasidilavoro.png",
   },
   {
-    title: '',
+    title: "",
     description:
-      'Utilizzo di strumenti di misura e precisione quali il calibro ventesimale',
-    immagineUrl: '/images/meccanico/calibro.png',
+      "Utilizzo di strumenti di misura e precisione quali il calibro ventesimale",
+    immagineUrl: "/images/meccanico/calibro.png",
   },
   {
-    title: '',
-    description: 'Utilizzo minifresa CNC',
-    immagineUrl: '/images/meccanico/cnc.png',
+    title: "",
+    description: "Utilizzo minifresa CNC",
+    immagineUrl: "/images/meccanico/cnc.png",
   },
   {
-    title: '',
-    description: 'Lettura tolleranze',
-    immagineUrl: '/images/meccanico/tolleranze.png',
+    title: "",
+    description: "Lettura tolleranze",
+    immagineUrl: "/images/meccanico/tolleranze.png",
   },
-]
+];
 
 let secondo_anno = [
   {
-    title: '',
-    description: 'Programmazione di macchine a Controllo Numerico (CNC)',
-    immagineUrl: '/images/meccanico/controll numerico cnc.jpg',
+    title: "",
+    description: "Programmazione di macchine a Controllo Numerico (CNC)",
+    immagineUrl: "/images/meccanico/controll numerico cnc.jpg",
   },
   {
-    title: '',
-    description: 'Utilizzo tornio e fresa CNC per lavorazioni varie',
-    immagineUrl: '/images/meccanico/cnc.png',
+    title: "",
+    description: "Utilizzo tornio e fresa CNC per lavorazioni varie",
+    immagineUrl: "/images/meccanico/cnc.png",
   },
   {
-    title: '',
-    description: 'Disegno con AutoCAD',
-    immagineUrl: '/images/meccanico/disegno autocad.jpg',
+    title: "",
+    description: "Disegno con AutoCAD",
+    immagineUrl: "/images/meccanico/disegno autocad.jpg",
   },
   {
-    title: '',
+    title: "",
     description:
-      'Realizzazione di varie tipologie di pezzi complicati per le lavorazioni',
-    immagineUrl: '/images/meccanico/pezzi complicati.jpg',
+      "Realizzazione di varie tipologie di pezzi complicati per le lavorazioni",
+    immagineUrl: "/images/meccanico/pezzi complicati.jpg",
   },
   {
-    title: '',
-    description: 'Simulazione al PC per tornio CNC',
-    immagineUrl: '/images/meccanico/simualzione cnc.jpg',
+    title: "",
+    description: "Simulazione al PC per tornio CNC",
+    immagineUrl: "/images/meccanico/simualzione cnc.jpg",
   },
   {
-    title: '',
-    description: 'Uso del micrometro',
-    immagineUrl: '/images/meccanico/micrometro.jpg',
+    title: "",
+    description: "Uso del micrometro",
+    immagineUrl: "/images/meccanico/micrometro.jpg",
   },
   {
-    title: '',
-    description: 'Saldatura TIG-MIG-MAG',
-    immagineUrl: '/images/meccanico/saldatura.jpg',
+    title: "",
+    description: "Saldatura TIG-MIG-MAG",
+    immagineUrl: "/images/meccanico/saldatura.jpg",
   },
   {
-    title: '',
-    description: 'Realizzazione accoppiamenti',
-    immagineUrl: '/images/meccanico/accoppiamewnti.jpg',
+    title: "",
+    description: "Realizzazione accoppiamenti",
+    immagineUrl: "/images/meccanico/accoppiamewnti.jpg",
   },
   {
-    title: '',
-    description: 'Utilizzo della stampante 3D a filo continuo',
-    immagineUrl: '/images/meccanico/stampa3d.jpg',
+    title: "",
+    description: "Utilizzo della stampante 3D a filo continuo",
+    immagineUrl: "/images/meccanico/stampa3d.jpg",
   },
   {
-    title: '',
-    description: 'Manutenzione alle macchine utensili tradizionali',
-    immagineUrl: '/images/meccanico/macchine tradizionali.jpg',
+    title: "",
+    description: "Manutenzione alle macchine utensili tradizionali",
+    immagineUrl: "/images/meccanico/macchine tradizionali.jpg",
   },
   {
-    title: '',
-    description: 'Lubrificazione con olio refrigerante dei macchinari',
-    immagineUrl: '/images/meccanico/olio lubrificante.jpg',
+    title: "",
+    description: "Lubrificazione con olio refrigerante dei macchinari",
+    immagineUrl: "/images/meccanico/olio lubrificante.jpg",
   },
-]
-
-
+];
 
 let terzo_anno = [
   {
-    title: '',
-    description: 'Utilizzo di Inventor per disegni 3D e messa in tavola',
-    immagineUrl: '/images/meccanico/3dmessaintavola.jpg',
+    title: "",
+    description: "Utilizzo di Inventor per disegni 3D e messa in tavola",
+    immagineUrl: "/images/meccanico/3dmessaintavola.jpg",
   },
   {
-    title: '',
-    description: 'Utilizzo CAD-CAM',
-    immagineUrl: '/images/meccanico/cadmeccanico.jpg',
+    title: "",
+    description: "Utilizzo CAD-CAM",
+    immagineUrl: "/images/meccanico/cadmeccanico.jpg",
   },
   {
-    title: '',
-    description: 'Progettazione di pezzi meccanici',
-    immagineUrl: '/images/meccanico/progmec.png',
+    title: "",
+    description: "Progettazione di pezzi meccanici",
+    immagineUrl: "/images/meccanico/progmec.png",
   },
   {
-    title: '',
-    description: 'Utilizzo tolleranze per pezzi di maggior precisione',
-    immagineUrl: '/images/meccanico/tolleranza.png',
+    title: "",
+    description: "Utilizzo tolleranze per pezzi di maggior precisione",
+    immagineUrl: "/images/meccanico/tolleranza.png",
   },
   {
-    title: '',
-    description: 'Prototipazione rapida con stampante 3D',
-    immagineUrl: '/images/meccanico/fsi-stampa-3d.png',
+    title: "",
+    description: "Prototipazione rapida con stampante 3D",
+    immagineUrl: "/images/meccanico/fsi-stampa-3d.png",
   },
-]
+];
 
 let quarto_anno = [
   {
-    title: '',
-    description: 'Utilizzo Inventor per modellazione 3D',
-    immagineUrl: '/images/meccanico/inventormodellazione3d.jpg',
+    title: "",
+    description: "Utilizzo Inventor per modellazione 3D",
+    immagineUrl: "/images/meccanico/inventormodellazione3d.jpg",
   },
   {
-    title: '',
+    title: "",
     description:
-      'Utilizzo software CAD-CAM per la gestione di macchine utensili',
-    immagineUrl: '/images/meccanico/cadcam2.png',
+      "Utilizzo software CAD-CAM per la gestione di macchine utensili",
+    immagineUrl: "/images/meccanico/cadcam2.png",
   },
   {
-    title: '',
-    description: 'CNC con utilizzo di utensili motorizzati',
-    immagineUrl: '/images/meccanico/macchine-cnc.jpg',
+    title: "",
+    description: "CNC con utilizzo di utensili motorizzati",
+    immagineUrl: "/images/meccanico/macchine-cnc.jpg",
   },
   {
-    title: '',
-    description: 'Gestione cicli-fasi di lavoro',
-    immagineUrl: '/images/meccanico/1_meccanica.jpg',
+    title: "",
+    description: "Gestione cicli-fasi di lavoro",
+    immagineUrl: "/images/meccanico/1_meccanica.jpg",
   },
   {
-    title: '',
-    description: 'Sistemi di produzione',
-    immagineUrl: '/images/meccanico/software-mes-produzione-1024x640.jpg',
+    title: "",
+    description: "Sistemi di produzione",
+    immagineUrl: "/images/meccanico/software-mes-produzione-1024x640.jpg",
   },
   {
-    title: '',
-    description: 'Stampa 3D di complessivi meccanici',
-    immagineUrl: '/images/meccanico/stampa3dmetallo.jpg.9948dab902dafe72fe3c04f7de37cd28.jpg',
+    title: "",
+    description: "Stampa 3D di complessivi meccanici",
+    immagineUrl:
+      "/images/meccanico/stampa3dmetallo.jpg.9948dab902dafe72fe3c04f7de37cd28.jpg",
   },
-]
+];
 
 let sponsor = [
-  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
-  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
-  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
-  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
-  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
-  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
-  'https://www.comitec.it/img/logo.png?v=1.1',
-  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
-  'https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png',
-]
+  "https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg",
+  "https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png",
+  "https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png",
+  "https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png",
+  "https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png",
+  "https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png",
+  "https://www.comitec.it/img/logo.png?v=1.1",
+  "https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png",
+  "https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png",
+];
