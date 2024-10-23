@@ -28,3 +28,26 @@ body {
   padding: 0 !important;
   font-family: 'Figtree', sans-serif !important;
 }
+
+
+.testo {
+  background-color: #f9f9f9; /* Colore di sfondo chiaro */
+  border: 2px solid #1976d2; /* Bordo colorato */
+  border-radius: 10px; /* Angoli arrotondati */
+  padding: 20px; /* Spaziatura interna */
+  margin-top: 20px; /* Spaziatura superiore */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+  text-align: center; /* Testo centrato */
+  margin-bottom: 2rem;
+}
+
+.testo p {
+  font-size: 18px; /* Dimensione del font */
+  color: #333; /* Colore del testo */
+  line-height: 1.6; /* Altezza della linea */
+  font-family: 'Arial', sans-serif; /* Font */
+}
+
+.margin {
+  margin-bottom: 3rem;
+}

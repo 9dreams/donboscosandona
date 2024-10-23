@@ -13,6 +13,7 @@ import {
   Paragraph,
   Table,
   News,
+  NewsCard,
   SwiperNews,
   Featured,
   NavBar,
@@ -23,15 +24,45 @@ import {
 
 export default function Home({ data, elementi }) {
   return (
-    <Layout>
-      <LandingHero
-        opacity={0.5}
-        title='Pet Shop Best Friends'
-        description='Pet Shop Best Friends: dove ogni coda scodinzola e ogni cuore trova un amico.'
-        imageUrl='https://h2o-digital.com/wp-content/uploads/2015/09/websites-why-you-should-never-use-under-construction-pages.jpg'
-        height='100vh'
-      />
-    </Layout>
+<Layout>
+  <Carousel
+    slides={slides}
+    height={100}
+    animation='slide'
+    interval={5000}
+    duration={1000}
+  />
+<Container>
+        <div className="testo">
+          <p>Scopri il mondo degli animali domestici con noi! Offriamo una vasta selezione di animali, accessori e prodotti per rendere felici i tuoi amici a quattro zampe.</p>
+        </div>
+        <div className='margin'>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 4 }}>
+          I nostri prodotti in vendita
+        </Typography>
+        <Grid container spacing={4} justifyContent="center">
+          {prodotti.map((prodotto) => (
+            <Grid item xs={12} sm={6} md={4} key={prodotto.id}>
+              <NewsCard post={prodotto} />
+            </Grid>
+          ))}
+        </Grid>
+        
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 4 }}>
+  I nostri servizi
+</Typography>
+<Grid container spacing={4} justifyContent="center">
+  {servizi.map((servizio) => (
+    <Grid item xs={12} sm={6} md={4} key={servizio.id}>
+      <NewsCard post={servizio} />
+    </Grid>
+  ))}
+</Grid>
+
+        </div>
+</Container>
+</Layout>
+
   )
 }
 
@@ -88,28 +119,70 @@ const features = [
   },
 ]
 
+let servizi = [
+  {
+    id: 1,
+    titolo: 'Toelettatura',
+    immagine: 'https://img.pgol.it/meta/0124-Toelettatura.jpg',
+    pubblicazione: 'Disponibile ora',
+    abstract: 'Servizio professionale di toelettatura per tutti i tipi di animali.',
+  },
+  {
+    id: 2,
+    titolo: 'Servizio di adozione',
+    immagine: 'https://www.comunecoriglianorossano.eu/wp-content/uploads/2021/08/cani-min.jpg',
+    pubblicazione: 'Sempre attivo',
+    abstract: 'Adotta un amico a quattro zampe e cambia la sua vita!',
+  },
+  {
+    id: 3,
+    titolo: 'Consulenza veterinaria',
+    immagine: 'https://naturopet.it/wp-content/uploads/2019/03/consulenza-veterinaria-Naturopet.png',
+    pubblicazione: 'Disponibile su appuntamento',
+    abstract: 'Consulenze veterinarie professionali per la salute del tuo animale.',
+  },
+];
+
+
 // slides per il carousel
 let slides = [
   {
     titolo: 'Fatti un bel giro',
     descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+      'Scopri tutti i segreti del nostro Petshop con il tour virtuale!',
     immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
+      'https://www.purina.it/sites/default/files/2022-01/cane-e-gatto-una-convivenza-felice.jpg',
     colore: '#ED4C67',
     colore2: 'rgba(100,100,100,0)',
     opacity: 0.8,
     blur: '0.5rem',
     buttonText: 'Scopri di più!',
-    buttonUrl: 'https:...',
+    buttonUrl: 'https://www.petshop.com/tour',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
+    titolo: 'I nostri amici a quattro zampe',
     descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+      'Scopri la vasta selezione di animali domestici: cani, gatti, conigli e tanto altro! Ogni animale è pronto per trovare una nuova famiglia.',
+    immagine:
+      'https://www.nostrofiglio.it/images/2019/12/13/conigli-e-bambini-orig.jpg',
     colore: '#22aa22',
+    colore2: 'rgba(100,100,100,0)',
+    buttonText: 'Adotta ora!',
+    buttonUrl: 'https://www.petshop.com/adoptions',
   },
-]
+  {
+    titolo: 'Accessori e prodotti',
+    descrizione:
+      'Dai cibi alle lettiere, dai giocattoli agli accessori: tutto ciò di cui hai bisogno per i tuoi animali domestici in un unico posto!',
+    immagine:
+      'https://www.ilverdemondo.it/public/catalog/categorie/original/accessori-per-cani-it-000.jpg',
+    colore: '#3498db',
+    colore2: 'rgba(100,100,100,0)',
+    buttonText: 'Scopri i prodotti!',
+    buttonUrl: 'https://www.petshop.com/products',
+  },
+];
+
 
 // Il nostro team
 let members = [
@@ -156,32 +229,33 @@ let members = [
 
 let prodotti = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
-    description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    id: 1,
+    titolo: 'Cibo per Cani',
+    immagine: 'https://www.zooplus.it/magazine/wp-content/uploads/2020/05/1-30.jpg',
+    pubblicazione: 'Disponibile ora',
+    abstract: 'Cibo di alta qualità per cani di tutte le razze.',
+    articolo: true,
+    tag: 'Cibo, Cani',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
-    description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/energia',
+    id: 2,
+    titolo: 'Giocattolo per Gatti',
+    immagine: 'https://www.zooplus.it/magazine/wp-content/uploads/2020/10/1-44-768x512.jpg',
+    pubblicazione: 'Nuovo!',
+    abstract: 'Giocattolo divertente per stimolare il tuo gatto.',
+    articolo: true,
+    tag: 'Giocattolo, Gatti',
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
-    description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/informatico',
+    id: 3,
+    titolo: 'Lettiere Eco-Friendly',
+    immagine: 'https://croci.net/cdn/shop/files/Lettiera_gatti_agglomerante_Eco_Clean_Croci.jpg?v=1696854729&width=850',
+    pubblicazione: 'Sconto 20%',
+    abstract: 'Lettiera biodegradabile per una scelta ecologica.',
+    articolo: true,
+    tag: 'Lettiera',
   },
-]
+];
 
 const testimonials = [
   {
