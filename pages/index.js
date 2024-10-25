@@ -20,6 +20,7 @@ import {
   Sponsor,
   Elements,
 } from '/components'
+import { Gif } from '@mui/icons-material'
 
 export default function Home({ data, elementi }) {
   return (
@@ -31,7 +32,6 @@ export default function Home({ data, elementi }) {
       <br></br><br></br><br></br>
       <Carousel slides={slides} />
 <SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
-
       <Products
         title='I prodotti'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
@@ -162,14 +162,17 @@ let slides = [
     titolo: 'Fatti un bel giro',
     descrizione:
       'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
-    colore: '#ED4C67',
+      imageUrl:'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
+    colore: '#9182C4',
     colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
+    opacity: 0.9,
     blur: '0.5rem',
-    buttonText: 'Scopri di più!',
-    buttonUrl: 'https:...',
+  },
+  {
+    titolo: 'Concorso nazionale settore elettrico',
+    descrizione:
+      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+    colore: '#9182C4',
   },
   {
     titolo: 'Concorso nazionale settore elettrico',
@@ -182,42 +185,41 @@ let slides = [
 // Il nostro team
 let members = [
   {
-    name: 'don Nicola Munari',
-    role: 'DIRETTORE / CATECHISTA',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    name: ' Nicola Munari',
+    role: 'DIRETTORE ',
+    description: 'Credo fermamente nel potenziale di ciascuno di voi e sono sicuro che insieme raggiungeremo grandi risultati.',
     imageUrl:
       'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    email: 'c.coso@donboscosandona.it',
+    email: 'd.munari@hotelbenessere.it',
     phone: '0421 3388949874950',
   },
   {
     name: 'Alessandro Cappelletto',
-    role: 'PRESIDE',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    role: 'ADETTO ALLE ASSUNZIONI',
+    description: 'Cerchiamo persone appassionate e determinate per entrare a far parte del nostro team dinamico',
+    email: 'c.coso@hotelbenessere.it',
     imageUrl:
       'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
   },
   {
     name: 'Alessandro Ferro',
-    role: 'VICE-PRESIDE / TUTOR DIGITALE',
+    role: ' TUTOR DIGITALE / TECNICO INFORMATICO',
     description1:
       'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
     imageUrl:
       'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
 
-    email: 'a.ferro@donboscosandona.it',
+    email: 'a.ferro@hotelbenessere.it',
     phone: '0421 111 222',
   },
   {
     name: "Anna Maria D'Ambrosio",
-    role: 'RESPONSABILE DELLA DISCIPLINA',
+    role: 'RESPONSABILE DELLA ATTIVITA ',
     description1:
       'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
     imageUrl:
       'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    email: 'l.hdggfd@donboscosandona.it',
+    email: 'AnnaMaria@hotelbenessere.it',
     phone: '12365598445',
   },
 ]
