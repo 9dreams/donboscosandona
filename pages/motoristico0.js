@@ -14,12 +14,97 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <LandingHero
-        imageUrl='https://moveo.telepass.com/wp-content/uploads/2023/09/riparazione-carrozzeria-auto.jpg'
-        title='Settore Motoristico'
-        description='Pagina in costruzione'
-        height={100}
+      <img
+        src=''
+        style={{ width: '100%' }}
       />
+      <Paragraph
+        title='Operatore Motoristico'
+        subtitle='Qualifica triennale'
+        rightImageUrl='/images/codici_progetti.png'
+      >
+        L'operatore meccanico interviene, a livello esecutivo, nel processo di
+        produzione meccanica con autonomia e responsabilità limitate a ciò che
+        prevedono le procedure e le metodiche della sua operatività. La
+        qualificazione nell'applicazione/utilizzo di metodologie di base, di
+        strumenti e di informazioni gli consente di svolgere attività relative
+        alle lavorazioni di pezzi e complessivi meccanici, al montaggio e
+        all'adattamento in opera di gruppi, sottogruppi e particolari meccanici,
+        con competenze nell'approntamento e conduzione delle macchine e delle
+        attrezzature, nel controllo e verifica di conformità delle lavorazioni
+        assegnate, proprie della produzione meccanica.
+        <h3>Competenze sviluppate nel corso dei tre anni:</h3>
+        <ol>
+          <li>Lavorazione meccanica per asportazione e deformazione</li>
+          <li>Saldatura e giunzione dei componenti</li>
+          <li>Montaggio componenti mecccanici</li>
+          <li>
+            Fabbricazione e montaggio/installazione di infissi, telai e
+            serramenti
+          </li>
+        </ol>
+      </Paragraph>
+      <Paragraph
+        title='Tecnico Meccanico'
+        subtitle='Diploma Professionale Quadriennale in Sistema Duale con indirizzo Programmazione e Gestione di Impianti di Produzione'
+      >
+        Il Tecnico per la programmazione e la gestione di impianti di produzione
+        interviene con autonomia, nel quadro di azione stabilito e delle
+        specifiche assegnate, contribuendo - in rapporto ai diversi ambiti di
+        esercizio – al presidio del processo di produzione realizzato con
+        sistemi CNC, sistemi automatizzati CAD-CAM e linee robotizzate,
+        attraverso la partecipazione all'individuazione delle risorse
+        strumentali e tecnologiche, la collaborazione nell'organizzazione
+        operativa delle lavorazioni, l'implementazione di procedure di
+        miglioramento continuo, il monitoraggio e la valutazione del risultato.
+        Possiede competenze funzionali - in rapporto ai diversi indirizzi - alla
+        produzione di documentazione tecnica e alla programmazione, conduzione,
+        manutenzione.
+        <ol>
+          <h3>Competenze del tecnico meccanico:</h3>
+          <li>
+            Operare in sicurezza e nel rispetto delle norme di igiene e di
+            salvaguardia ambientale, identificando e prevenendo situazioni di
+            rischio per sé, per gli altri e per l'ambiente
+          </li>
+          <li>
+            Provvedere al monitoraggio e controllo del ciclo di lavorazione
+            effettuando rilevazioni con macchine di misura e producendo
+            documentazione tecnica di avanzamento e valutazione relativa alle
+            lavorazioni svolte
+          </li>
+          <li>Realizzaredi modelli tridimensionali con software CAD 3D</li>
+        </ol>
+      </Paragraph>
+      <Products
+        title='Primo anno'
+        description=''
+        cardWidth={4}
+        cardWidthXs={6}
+        products={primo_anno}
+      />
+      <Products
+        title='Secondo anno'
+        description=''
+        cardWidth={3}
+        cardWidthXs={6}
+        products={secondo_anno}
+      />
+      <Products
+        title='Terzo anno'
+        description=''
+        cardWidth={3}
+        cardWidthXs={6}
+        products={terzo_anno}
+      />
+      <Products
+        title='Quarto anno'
+        description=''
+        cardWidth={4}
+        cardWidthXs={6}
+        products={quarto_anno}
+      />
+      <SwiperNews title='News dal Settore Motoristico' data={data} limit={15} />
     </Layout>
   )
 }
@@ -145,6 +230,8 @@ let secondo_anno = [
   },
 ]
 
+
+
 let terzo_anno = [
   {
     title: '',
@@ -203,8 +290,7 @@ let quarto_anno = [
   {
     title: '',
     description: 'Stampa 3D di complessivi meccanici',
-    immagineUrl:
-      '/images/meccanico/stampa3dmetallo.jpg.9948dab902dafe72fe3c04f7de37cd28.jpg',
+    immagineUrl: '/images/meccanico/stampa3dmetallo.jpg.9948dab902dafe72fe3c04f7de37cd28.jpg',
   },
 ]
 
