@@ -28,3 +28,13 @@ body {
   padding: 0 !important;
   font-family: 'Figtree', sans-serif !important;
 }
+
+.text-center{
+  font-size:6ch
+}
+
+.text{
+  text-align: center;
+  font-size: 2ch;
+}
+

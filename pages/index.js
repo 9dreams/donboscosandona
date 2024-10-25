@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material'
+import { Container, Grid, Typography, Item } from '@mui/material'
 import {
   Carousel,
   Certifications,
@@ -20,20 +20,28 @@ import {
   Sponsor,
   Elements,
 } from '/components'
+import { CarRental } from '@mui/icons-material'
 
 export default function Home({ data, elementi }) {
   return (
     <Layout>
-      <LandingHero
-        opacity={0.7}
-        title='Libreria di Topi Biblioteca'
-        description='Qui i libri sono un formaggio irresistibile!'
-        buttonUrl='j'
-        buttonText='Guarda il video'
-        imageUrl='https://michaelsglaspie.com/wp-content/uploads/2023/11/25511-scaled.jpg'
-        height='100vh'
+      <Carousel slides={slides}/>
+      <h1 className='text-center'>✨ Benvenuti alla Libreria Topi! 📚</h1> <br/>
+      <h1 className="text">
+      Siamo un rifugio per gli amanti dei libri, un luogo dove le storie prendono vita e l’immaginazione non ha limiti. La nostra libreria è un angolo accogliente,<br/> 
+      ricco di volumi che spaziano dai romanzi avvincenti ai saggi illuminanti, dalle opere per bambini ai classici intramontabili.<br/>
+      Ogni scaffale racconta una storia, e ogni libro è un viaggio pronto a essere intrapreso. Ci impegniamo a creare un ambiente caloroso e stimolante,<br/> 
+      dove ogni visitatore possa trovare non solo un libro, ma anche un’esperienza unica.<br/>
+      Organizziamo eventi, presentazioni e incontri con autori, perché crediamo che i libri uniscano le persone. Siamo qui per offrirvi consigli personalizzati e guidarvi<br/>
+      nella scoperta di nuove letture. La Libreria Topi non è solo un luogo di acquisto, ma una comunità di appassionati,<br/> un posto dove si condividono idee e sogni. Venite a trovarci e <br/>lasciate che la magia delle parole vi avvolga!<br/>.
+      </h1>
+      <Products
+        title='  Categorie '
+        description="Un'ampia scelta di categorie: scopri quello che ti accende di più!"
+        cardWidth={3}
+        cardWidthXs={6}
+        products={prodotti}
       />
-     
     </Layout>
   )
 }
@@ -94,23 +102,27 @@ const features = [
 // slides per il carousel
 let slides = [
   {
-    titolo: 'Fatti un bel giro',
+    titolo: '✨ Benvenuti alla Libreria Topi! 📚',
     descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+  " Scoprite un mondo di storie e avventure con una vasta scelta di romanzi e saggi. Partecipate a eventi speciali e incontri con autori. Venite a trovarci e lasciatevi guidare dai libri in un viaggio straordinario. Vi aspettiamo! 🐭✨",
+    
+  colore: '',
     immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
-    colore: '#ED4C67',
+'images/sbibero.jpg',
     colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
-    blur: '0.5rem',
+    opacity: 0.9,
+    blur: '0.2rem',
     buttonText: 'Scopri di più!',
     buttonUrl: 'https:...',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
+    titolo: '📢 Novità alla Libreria Topi! 📚✨',
     descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#22aa22',
+      "Siamo entusiasti di annunciare l'apertura di un nuovo settore dedicato ai libri illustrati e ai fumetti! Venite a scoprire una selezione di opere grafiche, dai classici ai contemporanei. Non vediamo l'ora di condividere questa nuova avventura con voi! 🐭",
+    immagine:
+      'images/sbibero.jpg',
+      opacity: 0.9,
+      blur: '0.2rem',
   },
 ]
 
@@ -159,29 +171,38 @@ let members = [
 
 let prodotti = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: 'Romanzi Storici',
+    category: '📜 Immergiti nel Passato!',
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+      'Scopri storie che ti porteranno indietro nel tempo, facendoti vivere epoche affascinanti e eventi cruciali della storia. Ogni pagina è un viaggio unico!',
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      '/images/romanzostorico.png',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Romanzi di Formazione',
+    category: '🌱 Crescita e Scoperta!',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Leggi racconti di crescita personale, dalle sfide dell’adolescenza alla scoperta di sé. Questi romanzi offrono emozioni e insegnamenti preziosi.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      "/images/romanzoformazione.png",
     url: '/energia',
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'Fantasy e Fantascienza',
+    category: '🪄 Fuggi nella Fantasia!',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Lasciati trasportare in mondi magici e futuristici, tra avventure straordinarie e creature fantastiche. Ogni libro è un’esperienza unica!",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      '/images/romanzofantascienza.png',
+    url: '/informatico',
+  },
+  {
+    title: 'Gialli e Thriller',
+    category: '🔍 Mistero e Suspense!',
+    description:
+      "Se ami il colpo di scena, immergiti in trame intricate e suspense avvincente. Ogni pagina ti terrà con il fiato sospeso fino all’ultimo capitolo!",
+    immagineUrl:
+      '/images/romanzogiallo.png',
     url: '/informatico',
   },
 ]
