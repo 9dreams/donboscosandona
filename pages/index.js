@@ -59,11 +59,7 @@ export default function Home({ data, elementi }) {
         features={features}
         cardWidth={3}
       />
-      <Testimonials
-        testimonials={testimonials}
-        cardWidth={4}
-        imageUrl='https://images8.alphacoders.com/948/948649.jpg'
-      />
+      
       
       <Table
         title='I Nostri orari della recepsion'
@@ -74,11 +70,21 @@ export default function Home({ data, elementi }) {
         blur='0.1rem'
         color='white'
         rows={[
-          ['GIORNI', 'Nome', 'Età'],
-          ['Lunedi', 'Vigilio', 75],
-          ['Martedi', 'Emma', 45],
-          ['Mercoledi', 'Ada', 32],
+          ['GIORNI', '', ''],
+          ['Lunedi', '7:30-12:30','13:00-20:30' ],
+          ['Martedi', '8:30-12:30','13:30-20:10' ],
+          ['Mercoledi', 'Chiusa',],
+          ['Giovedi', '7:30-12:10','13:20-20:40' ],
+          ['Venerdi', '7:30-12:00','14:00-20:20' ],
+          ['Sabato', '7:30-12:30','13:40-20:00' ],
+          ['Domenica', '7:30-12:30', '14:00-21:30'],
         ]}
+      />
+      <br></br>
+      <Testimonials
+        testimonials={testimonials}
+        cardWidth={4}
+        imageUrl='https://images8.alphacoders.com/948/948649.jpg'
       />
       <Team
         title='Contatti'
@@ -249,13 +255,13 @@ const testimonials = [
   {
     name: 'Michele Venturato',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://de.web.img3.acsta.net/c_310_420/pictures/14/07/24/17/14/366516.jpg',
     text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
     social: '@Google',
   },
   {
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://media-assets.vanityfair.it/photos/6715ff3b92c599e446bd5d25/16:9/w_2560%2Cc_limit/2077303212',
     name: 'Daniele Mladenovic',
     text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
     social: '@BOBTEK',
@@ -300,57 +306,6 @@ let certifications = [
       'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
     text1: 'Cod. A033 - Formazione Iniziale,',
     text2: 'Superiore e Orientamento',
-  },
-]
-
-let date = [
-  {
-    date: '15 Giugno',
-    afternoon: 'Inizio medie',
-    evening: 'Serata film',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    evening: 'Serata film',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-    bgColor: '#ee5253',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
   },
 ]
 
