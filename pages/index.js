@@ -27,8 +27,8 @@ export default function Home({ data, elementi }) {
             <Carousel slides={slides}/>
            
       <Products
-        title='I prodotti In evidenza'
-        description='Un angolo di eleganza, dove ogni profumo racconta una storia unica di femminilità.'
+        title=''
+        description=''
         cardWidth={4}
         cardWidthXs={12}
         products={prodotti}
@@ -94,11 +94,11 @@ const features = [
 // slides per il carousel
 let slides = [
   {
-    titolo: 'Profumeria',
+    titolo: 'Fioreria',
     descrizione:
-      'Scopri tutti i nostri profumi per donne',
+      " Una fioreria è un negozio specializzato nella vendita di fiori e piante. Offre una vasta selezione di composizioni floreali per occasioni speciali, come matrimoni, compleanni e funerali, oltre a bouquet personalizzati e decorazioni per eventi.",
     immagine:
-      'https://media-assets.vanityfair.it/photos/6643a34e9953de97c0fbce6e/master/w_1600%2Cc_limit/l_am_les_extraits_2023_iris%2520pallida.jpg',
+      'https://farmagricolaweb.com/img/cms/Orchidee.jpg',
     colore: '#ED4C67',
     colore2: 'rgba(100,100,100,0)',
     opacity: 0,
@@ -108,9 +108,9 @@ let slides = [
   },
   {
     titolo: '',
-    immagine:"https://www.donnamoderna.com/content/uploads/2023/05/i-profumi-da-donna-piu-amati-e-seducenti-del-2018-tutte-le-novita-500728145616x23391200x500.jpeg",
+    immagine:"https://www.rosai-e-piante-meilland.it/media/catalog/category/6-COULEURS---TOUS-LES-PRODUITS_1.jpg",
     descrizione:
-      "I profumi migliori di tutta San Donà di Piave",
+      "I fiori migliori di tutta San Donà di Piave",
     colore: '#22aa22',
   },
 ]
@@ -160,26 +160,26 @@ let members = [
 
 let prodotti = [
   {
-    title: "Eclissi d' Autunno",
+    title: "giacinto",
     description:
-      "Eclissi d'Autunno è un profumo avvolgente e misterioso, che cattura l'essenza dei giorni che si accorciano e dei colori caldi delle foglie che cadono. All'apertura, si percepiscono note fresche di bergamotto e mela verde, che evocano l'aria frizzante delle prime mattine di ottobre. Man mano che si sviluppa, il cuore rivela un bouquet di fiori di violetta e rosa selvatica, accompagnato da un tocco di cannella, che aggiunge calore e profondità.",
+      "Ha un profumo intenso e i suoi fiori compatti possono essere di vari colori, come blu, rosa e bianco. È spesso associato alla primavera e simboleggia la bellezza e la dolcezza.",
     immagineUrl:
-      'https://i0.wp.com/blog.cliomakeup.com/wp-content/uploads/2022/10/cliomakeup-profumi-autunno-2022-foliage-1-copertina.jpg?fit=1024%2C532&ssl=1',
+      'https://www.rosai-e-piante-meilland.it/media/catalog/category/BULBES-AUTOMNE---JACINTHES.jpg',
   },
   {
-    title: "Ombra di Mare",
+    title: "l'ibisco",
     description:
-      "Ombra di Mare è un profumo che evoca l’essenza di una fresca brezza marina all’imbrunire. Le note di testa sono un frizzante mix di agrumi, con limone e pompelmo che danzano insieme, creando un’apertura energica e vivace.",
+      " Caratterizzato dai suoi grandi petali e colori vivaci, l'ibisco è spesso associato a climi tropicali e simboleggia bellezza e ospitalità. È anche usato in infusi e preparazioni culinarie in molte culture.",
     immagineUrl:
-      'https://www.extrait.it/wp-content/uploads/2021/06/fb-megamare-orto-parisi-profumi.jpg',
+      'https://www.compo.de/dam/jcr:8e46e6b2-43c9-4b4e-92ac-bf54e08bde2c/Hibiskusbluete_Rot.jpg?x=59&y=50',
     url: '/energia',
   },
   {
-    title: 'Luce di Luna',
+    title: 'papavero',
     description:
-      "Luce di Luna è un profumo etereo e incantevole, che cattura la magia di una notte stellata. Le note di testa si aprono con fresche sfumature di bergamotto e pera, creando un inizio fruttato e luminoso.",
+      "Con i suoi petali rossi vivaci e il centro nero, il papavero è spesso simbolo di pace e memoria. È famoso anche per la sua associazione con il Memorial Day in molte culture.",
     immagineUrl:
-      'https://brameprofumi.it/wp-content/uploads/2024/06/foto-larghe-brame-9.png',
+      'https://www.erboristeriadeifrati.it/wp-content/uploads/PAPAVERO-1200x897.jpg',
     url: '/informatico',
   },
 ]
