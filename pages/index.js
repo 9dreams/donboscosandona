@@ -13,6 +13,7 @@ import {
   Paragraph,
   Table,
   News,
+  NewsCard,
   SwiperNews,
   Featured,
   NavBar,
@@ -23,15 +24,44 @@ import {
 
 export default function Home({ data, elementi }) {
   return (
-    <Layout>
-      <LandingHero
-        opacity={0.5}
-        title='Canoa Club Orion'
-        description='Dove la passione per la canoa incontra la bellezza della natura.'
-        imageUrl='https://h2o-digital.com/wp-content/uploads/2015/09/websites-why-you-should-never-use-under-construction-pages.jpg'
-        height='100vh'
-      />
-    </Layout>
+<Layout>
+  <Carousel
+    slides={slides}
+    height={100}
+    animation='slide'
+    interval={5000}
+    duration={1000}
+  />
+<Container>
+        <div className='margin'>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 4 }}>
+LE NOSTRE GITE IN CANOA
+</Typography>
+<Grid container spacing={4} justifyContent="center">
+  {servizi.map((servizio) => (
+    <Grid item xs={12} sm={6} md={4} key={servizio.id}>
+      <NewsCard post={servizio} />
+    </Grid>
+  ))}
+</Grid>
+
+        </div>
+        
+        <div className='margin'>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 4 }}>
+Prodotti
+</Typography>
+<Grid container spacing={4} justifyContent="center">
+  {prodotti.map((prodotti) => (
+    <Grid item xs={12} sm={6} md={4} key={prodotti.id}>
+      <NewsCard post={prodotti} />
+    </Grid>
+  ))}
+  </Grid>
+  </div>
+</Container>
+</Layout>
+
   )
 }
 
@@ -55,7 +85,6 @@ export async function getStaticProps() {
   }
 }
 
-// I punti di forza
 const features = [
   {
     title: 'Progetto educativo',
@@ -88,28 +117,75 @@ const features = [
   },
 ]
 
+let servizi = [
+  {
+    id: 1,
+    titolo: 'GITA 1',
+    immagine: 'https://www.majellando.it/_default_upload_bucket/image-thumb__2320__header-mobile_auto_fc0b20ad420aac8fa712f9fe86cabbb0/canoa%20sul%20lago%20di%20scanno%20in%20abruzzo%20adatta%20a%20tutti.jpg',
+    pubblicazione:'Gita data 2/11/2024',
+    abstract: 'Scopri di più',
+  },
+  {
+    id: 2,
+    titolo: 'GITA 2',
+    immagine: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp3oDgwOVQBqsJCtoaSi7QOSf4rqVddwAeqQ&s',
+    pubblicazione: 'Gita data 27/10/2024',
+    abstract: 'Scopri di più',
+  },
+  {
+    id: 3,
+    titolo: 'GITA 3',
+    immagine: 'https://visitlakeiseo.info/wp-content/uploads/2020/05/copertina-escurisone-canoa.jpg',
+    pubblicazione: 'Gita data 27/10/2024',
+    abstract: 'Scopri di più',
+  },
+];
+let prodotti = [
+  {
+    id: 1,
+    titolo: 'Naiad',
+    immagine: 'https://ss-pics.s3.eu-west-1.amazonaws.com/files/2576101/large-ACQUAPRIMA-ROSSO-FISHING.jpg?1688117887',
+    pubblicazione:'canoa per gite tranquelle',
+    abstract: 'Buy',
+  },
+  {
+    id: 2,
+    titolo: 'Shadowfax',
+    immagine: 'https://canoashop.com/wp-content/uploads/2013/11/1460-thickbox_default-Apache-16-Rainbow.jpg',
+    pubblicazione: 'canoa per chi ha competeza media',
+    abstract: 'Buy',
+  },
+  {
+    id: 3,
+    titolo: 'Lohengrin',
+    immagine: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaQnHoT9m94fTzZxI7IWtNTGQFSpQSQkmaugMKfZzr9e7nhMOtLAfusN4f2-f_PydFq8o&usqp=CAU',
+    pubblicazione: 'canoa per professionisti',
+    abstract: 'Buy',
+  },
+];
+
+
 // slides per il carousel
+
 let slides = [
   {
-    titolo: 'Fatti un bel giro',
+    titolo: 'Scopri di più',
     descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
-    colore: '#ED4C67',
+      'Scopri tutti le nostre avventure in canoa',
+    immagine:'https://contents.mediadecathlon.com/s1045836/k$4f83b95e42b77111e9e2cae1d328514c?format=auto&f=3000x0',
     colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
-    blur: '0.5rem',
     buttonText: 'Scopri di più!',
-    buttonUrl: 'https:...',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
+    titolo: 'Avventura e Relax',
     descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#22aa22',
+      'Rilassti in canoa con una fantastica avventura',
+    immagine:
+      'https://www.bertonistore.it/img/cms/migliore-canoa-per-mare.jpg',
+    colore2: 'rgba(100,100,100,0)',
+    buttonText: 'Adotta ora!',
   },
-]
+];
 
 // Il nostro team
 let members = [
@@ -154,34 +230,6 @@ let members = [
   },
 ]
 
-let prodotti = [
-  {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
-    description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-  },
-  {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
-    description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/energia',
-  },
-  {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
-    description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/informatico',
-  },
-]
 
 const testimonials = [
   {
