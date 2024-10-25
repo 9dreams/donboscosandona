@@ -33,29 +33,26 @@ export default function Home({ data, elementi }) {
 <SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
 
       <Products
-        title='I prodotti'
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
+        title='I nostri servizi'
+        description="un ampia scelta di servizi con cui puoi ritrovare il tuo benessere in men'che non si dica"
         cardWidth={4}
         cardWidthXs={12}
         products={prodotti}
+       
       />
       <Products
         title='Prodotti con sole immagini'
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
+        description="scopri i nostri prodotti con cui puoi trovare il tuo benessere anche a casa!"
         cardWidth={4}
         cardWidthXs={12}
         aspectRatio='2.5 / 1'
         products={prodotti2}
       />
-      <Products
-        cardWidth={4}
-        cardWidthXs={12}
-        aspectRatio='2.5 / 1'
-        products={prodotti2}
-      />
+     
+      
       <Features
         title='I nostri punti di forza'
-        description='Scopri perché il CFP DON BOSCO è davvero la scuola che fa al caso tuo!'
+        description='Scopri perché il centro benessere, Andreus Resorts fa al caso tuo!'
         features={features}
         cardWidth={3}
       />
@@ -224,31 +221,31 @@ let members = [
 
 let prodotti = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: 'SPA',
+    category: 'SCOPRI LA NOSTRA SPA',
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'Scopri la tua spa domestica: un rifugio di benessere con vasca idromassaggio, angolo massaggi e atmosfere rilassanti. Piante verdi, candele profumate e un area lounge per gustare tisane creano il perfetto spazio per ricaricare le energie e ritrovare il relax.',
+    immagineUrl:'https://lh4.googleusercontent.com/proxy/nnrqMtI855tI-BiNdflImdCXMk0zdoYRKqqfDo5RqMHBbzQDy4k_si03LBt_YqETzVP6YmEV5rYXQfQOpctBBmI6VUS7h5ZQgxXjYGIBQOzpa3FI0YExT_2RD-sizEV1FsKE9TlrL_A',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Equitazione',
+    category: 'CAVALCA I NOSTRI CAVALLI',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Scopri il tuo rifugio per l'equitazione, con una scuderia accogliente e piste immerse nella natura. Lezioni guidate da istruttori esperti e spazi attrezzati garantiscono il benessere dei cavalli. Un angolo ideale per vivere la passione per l'equitazione e rafforzare il legame con il tuo cavallo.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2863671',
     url: '/energia',
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'golf',
+    category: 'GIOCA A GOLF!',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
     url: '/informatico',
   },
+  
 ]
 
 const testimonials = [
@@ -277,9 +274,31 @@ const testimonials = [
 
 let prodotti2 = [
   {
+    title: 'golf',
+    category: 'GIOCA A GOLF!',
+    description:
+      "Scopri iawrttrerrtwerrtwerrto angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: 'https://cinema.donboscosandona.it',
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+    url: '/informatico',
+  }, 
+  {
+    title: 'golf',
+    category: 'GIOCA A GOLF!',
+    description:
+      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
+    immagineUrl:
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+    url: '/informatico',
+  },
+  {
+    title: 'golf',
+    category: 'GIOCA A GOLF!',
+    description:
+      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
+    immagineUrl:
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+    url: '/informatico',
   },
 ]
 
