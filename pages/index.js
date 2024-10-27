@@ -24,16 +24,17 @@ import {
 export default function Home({ data, elementi }) {
   return (
     <Layout>
-     <LandingHero
- opacity={0.5}
- title='Fioreria Chiar di Luna'
- description='Il tuo giardino fiorito, a portata di mano!'
- buttonUrl='j'
- buttonText='Guarda il video'
- imageUrl='https://static.vecteezy.com/system/resources/thumbnails/001/970/338/small_2x/building-under-construction-site-free-vector.jpg'
- height='100vh'
- />
- </Layout>
+            <Carousel slides={slides}/>
+           
+      <Products
+        title=''
+        description=''
+        cardWidth={4}
+        cardWidthXs={12}
+        products={prodotti}
+      />
+
+    </Layout>
   )
 }
 
@@ -93,22 +94,23 @@ const features = [
 // slides per il carousel
 let slides = [
   {
-    titolo: 'Fatti un bel giro',
+    titolo: 'Fioreria',
     descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
+      " Una fioreria è un negozio specializzato nella vendita di fiori e piante. Offre una vasta selezione di composizioni floreali per occasioni speciali, come matrimoni, compleanni e funerali, oltre a bouquet personalizzati e decorazioni per eventi.",
     immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
+      'https://farmagricolaweb.com/img/cms/Orchidee.jpg',
     colore: '#ED4C67',
     colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
-    blur: '0.5rem',
+    opacity: 0,
+    blur: '0 rem',
     buttonText: 'Scopri di più!',
     buttonUrl: 'https:...',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
+    titolo: '',
+    immagine:"https://www.rosai-e-piante-meilland.it/media/catalog/category/6-COULEURS---TOUS-LES-PRODUITS_1.jpg",
     descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
+      "I fiori migliori di tutta San Donà di Piave",
     colore: '#22aa22',
   },
 ]
@@ -158,29 +160,26 @@ let members = [
 
 let prodotti = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: "giacinto",
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+      "Ha un profumo intenso e i suoi fiori compatti possono essere di vari colori, come blu, rosa e bianco. È spesso associato alla primavera e simboleggia la bellezza e la dolcezza.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://www.rosai-e-piante-meilland.it/media/catalog/category/BULBES-AUTOMNE---JACINTHES.jpg',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: "l'ibisco",
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      " Caratterizzato dai suoi grandi petali e colori vivaci, l'ibisco è spesso associato a climi tropicali e simboleggia bellezza e ospitalità. È anche usato in infusi e preparazioni culinarie in molte culture.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://www.compo.de/dam/jcr:8e46e6b2-43c9-4b4e-92ac-bf54e08bde2c/Hibiskusbluete_Rot.jpg?x=59&y=50',
     url: '/energia',
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'papavero',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Con i suoi petali rossi vivaci e il centro nero, il papavero è spesso simbolo di pace e memoria. È famoso anche per la sua associazione con il Memorial Day in molte culture.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://www.erboristeriadeifrati.it/wp-content/uploads/PAPAVERO-1200x897.jpg',
     url: '/informatico',
   },
 ]
