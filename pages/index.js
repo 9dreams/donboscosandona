@@ -26,12 +26,16 @@ export default function Home({ data, elementi }) {
   return (
     <Layout>
       <LandingHero
-        opacity={0.4}
-        imageUrl='https://benessere-montagna.it/wp-content/uploads/2021/06/Andreus-benessere-spa-hotel-slide-01.jpg'
+        opacity={0.5}
+        title='Progetto educativo'
+        description='Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!'
+        buttonUrl=''
+        buttonText='Guarda il video'
+        imageUrl='https://source.unsplash.com/random'
       />
+      
       <br></br><br></br><br></br>
       <Carousel slides={slides} />
-<SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
       <Products
         title='I nostri servizi'
         description="un ampia scelta di servizi con cui puoi ritrovare il tuo benessere in men'che non si dica"
@@ -152,11 +156,7 @@ let slides = [
     titolo: 'Fatti un bel giro',
     descrizione:
       'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-      imageUrl:'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
-    colore: '#9182C4',
-    colore2: 'rgba(100,100,100,0)',
-    opacity: 0.9,
-    blur: '0.5rem',
+      Url:'https://cf.bstatic.com/xdata/images/hotel/max1024x768/473150764.jpg',
   },
   {
     titolo: 'Concorso nazionale settore elettrico',
