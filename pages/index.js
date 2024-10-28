@@ -26,16 +26,12 @@ export default function Home({ data, elementi }) {
   return (
     <Layout>
       <LandingHero
-        opacity={0.5}
-        title='Progetto educativo'
-        description='Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!'
-        buttonUrl=''
-        buttonText='Guarda il video'
-        imageUrl='https://source.unsplash.com/random'
+        opacity={0.4}
+        imageUrl='https://benessere-montagna.it/wp-content/uploads/2021/06/Andreus-benessere-spa-hotel-slide-01.jpg'
       />
-      
       <br></br><br></br><br></br>
       <Carousel slides={slides} />
+<SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
       <Products
         title='I nostri servizi'
         description="un ampia scelta di servizi con cui puoi ritrovare il tuo benessere in men'che non si dica"
@@ -85,6 +81,13 @@ export default function Home({ data, elementi }) {
         members={members}
         cardWidth={3}
       />
+      <Maps
+        maxWidth='100%'
+        maxHeight='550px'
+        url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
+      />
+      <Certifications cardWidth={3} certifications={certifications} />
+
     </Layout>
   )
 }
@@ -109,6 +112,38 @@ export async function getStaticProps() {
   }
 }
 
+// I punti di forza
+const features = [
+  {
+    title: 'terme ',
+    imageUrl:
+      'https://img.lovepik.com/element/40242/0848.png_1200.png',
+    description:
+      'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'Didattica attiva',
+    imageUrl:
+      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description:
+      'Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.',
+  },
+  {
+    title: 'Laboratori',
+    imageUrl:
+      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description:
+      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
+  },
+  {
+    title: 'Servizi al lavoro',
+    imageUrl:
+      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description:
+      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
+  },
+]
 
 // slides per il carousel
 let slides = [
@@ -116,7 +151,11 @@ let slides = [
     titolo: 'Fatti un bel giro',
     descrizione:
       'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-      Url:'https://cf.bstatic.com/xdata/images/hotel/max1024x768/473150764.jpg',
+      imageUrl:'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
+    colore: '#9182C4',
+    colore2: 'rgba(100,100,100,0)',
+    opacity: 0.9,
+    blur: '0.5rem',
   },
   {
     titolo: 'Concorso nazionale settore elettrico',
@@ -139,7 +178,7 @@ let members = [
     role: 'DIRETTORE ',
     description: 'Credo fermamente nel potenziale di ciascuno di voi e sono sicuro che insieme raggiungeremo grandi risultati.',
     imageUrl:
-      'https://www.fondazioneluigieinaudi.it/wp-content/uploads/2016/08/1372678397603porro-Copia.jpg',
+      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
     email: 'd.munari@hotelbenessere.it',
     phone: '0421 3388949874950',
   },
@@ -147,9 +186,9 @@ let members = [
     name: 'Alessandro Cappelletto',
     role: 'ADETTO ALLE ASSUNZIONI',
     description: 'Cerchiamo persone appassionate e determinate per entrare a far parte del nostro team dinamico',
-    email: 'a.capelletto@hotelbenessere.it',
+    email: 'c.coso@hotelbenessere.it',
     imageUrl:
-      'https://www.venetoreport.it/wp-content/uploads/2024/10/Alessandro-Basciano-venetoreport.it-26102024.jpg',
+      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
   },
   {
     name: 'Alessandro Ferro',
@@ -157,7 +196,7 @@ let members = [
     description1:
       'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
     imageUrl:
-      'https://www.21secolo.news/wp-content/uploads/2020/08/Alessandro-Borghese-2.jpg',
+      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
 
     email: 'a.ferro@hotelbenessere.it',
     phone: '0421 111 222',
@@ -168,7 +207,7 @@ let members = [
     description1:
       'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
     imageUrl:
-      'https://media.licdn.com/dms/image/v2/D4E03AQHK9EDurewPyA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676375448528?e=2147483647&v=beta&t=Bp7OORcspyrBGV2e40DwcIW6vuODOysYS0VcwNsRN3c',
+      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
     email: 'AnnaMaria@hotelbenessere.it',
     phone: '12365598445',
   },
@@ -205,28 +244,54 @@ let prodotti = [
 
 const testimonials = [
   {
-    name: 'Dwayne Johnson',
+    name: 'Michele Venturato',
     imageUrl:
       'https://de.web.img3.acsta.net/c_310_420/pictures/14/07/24/17/14/366516.jpg',
-    text: "Esperienza fantastica! Personale gentile e professionale, ambiente rilassante e pulito. Massaggio super rilassante",
-    social: '@DwayneJohnson',
+    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
+    social: '@Google',
   },
   {
     imageUrl:
       'https://media-assets.vanityfair.it/photos/6715ff3b92c599e446bd5d25/16:9/w_2560%2Cc_limit/2077303212',
-    name: 'Jennifer Lawrence',
-    text: "Centro benessere accogliente e curato nei dettagli. Trattamenti personalizzati e di alta qualità. Tornerò sicuramente!",
-    social: '@Jennifer Lawrence',
+    name: 'Daniele Mladenovic',
+    text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
+    social: '@BOBTEK',
   },
   {
     imageUrl:
-      'https://www.rdeditore.it/it/wp-content/uploads/2024/07/logo_-bonolis.jpg',
-    name: 'Paolo Bonolis',
-    text: "Ho provato il percorso benessere e sono rimasta incantata. Un'oasi di pace nel cuore della città. Consigliatissimo!",
-    social:"@PaoloBonolis"
+      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    name: 'Pino West',
+    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
+    social: '@PINOWEST',
   },
 ]
 
+
+let certifications = [
+  {
+    logoUrl:
+      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
+    text1: 'ISO 9001:2015',
+    text2: 'Reg. n. 2593-A - Settore EA: 37',
+  },
+  {
+    logoUrl:
+      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
+    text1:
+      'Progettazione ed erogazione di attività formative e di orientamento',
+  },
+  {
+    logoUrl:
+      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
+    text1: 'Authorised Training Center',
+  },
+  {
+    logoUrl:
+      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
+    text1: 'Cod. A033 - Formazione Iniziale,',
+    text2: 'Superiore e Orientamento',
+  },
+]
 
 
 
