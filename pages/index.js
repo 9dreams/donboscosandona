@@ -44,15 +44,7 @@ export default function Home({ data, elementi }) {
         products={prodotti}
        
       />
-      <Products
-        title='Prodotti con sole immagini'
-        description="scopri i nostri prodotti con cui puoi trovare il tuo benessere anche a casa!"
-        cardWidth={4}
-        cardWidthXs={12}
-        aspectRatio='2.5 / 1'
-        products={prodotti2}
-      />
-     
+    
       
       <Features
         title='I nostri punti di forza'
@@ -117,38 +109,6 @@ export async function getStaticProps() {
   }
 }
 
-// I punti di forza
-const features = [
-  {
-    title: 'Progetto educativo',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
-    url: 'https://cinema.donboscosandona.it',
-  },
-  {
-    title: 'Didattica attiva',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      'Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.',
-  },
-  {
-    title: 'Laboratori',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
-  },
-  {
-    title: 'Servizi al lavoro',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
-  },
-]
 
 // slides per il carousel
 let slides = [
@@ -267,35 +227,6 @@ const testimonials = [
   },
 ]
 
-let prodotti2 = [
-  {
-    title: 'golf',
-    category: 'GIOCA A GOLF!',
-    description:
-      "Scopri iawrttrerrtwerrtwerrto angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
-    immagineUrl:
-      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
-    url: '/informatico',
-  }, 
-  {
-    title: 'golf',
-    category: 'GIOCA A GOLF!',
-    description:
-      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
-    immagineUrl:
-      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
-    url: '/informatico',
-  },
-  {
-    title: 'golf',
-    category: 'GIOCA A GOLF!',
-    description:
-      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
-    immagineUrl:
-      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
-    url: '/informatico',
-  },
-]
 
 
 
