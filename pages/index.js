@@ -120,43 +120,51 @@ const features = [
 let servizi = [
   {
     id: 1,
-    titolo: 'Personal Treiner',
+    titolo: 'Personal Trainer',
     immagine: 'https://www.stevensportingclub.it/wp-content/uploads/2023/01/18.jpg',
-    abstract: 'Scopri di più',
+    pubblicazione: '',
+    abstract: 'Scopri come un personal trainer può aiutarti a raggiungere i tuoi obiettivi di fitness, fornendo supporto personalizzato e motivazione.',
   },
   {
     id: 2,
-    titolo: 'Arrezzi alla avanguardia',
+    titolo: 'Attrezzature all\'avanguardia',
     immagine: 'https://www.fitnessway.it/wp-content/uploads/2022/06/aprire-una-palestra.jpg',
-    abstract: 'Scopri di più',
+    pubblicazione: '',
+    abstract: 'Utilizziamo attrezzature moderne e sicure per offrirti la migliore esperienza di allenamento possibile.',
   },
   {
     id: 3,
-    titolo: 'Professionalita',
+    titolo: 'Professionalità',
     immagine: 'https://www.robur.com/hubfs/referenze-it/ROBUR_referenze_Palestra-futura-Voghera.jpg',
-    abstract: 'Scopri di più',
+    pubblicazione: '',
+    abstract: 'Il nostro team di esperti è sempre disponibile per guidarti e supportarti in ogni fase del tuo percorso di fitness.',
   },
 ];
+
 let prodotti = [
   {
     id: 1,
-    titolo: 'Maubri',
+    titolo: 'Manubri',
     immagine: 'https://cdns3.fitfit.fitness/it/media/items/originals/18778-Palestra-New-Genesi-Gym-MlEc1.jpg',
-    abstract: 'Buy',
+    pubblicazione: '',
+    abstract: 'Acquista manubri di alta qualità per allenarti a casa o in palestra.',
   },
   {
     id: 2,
     titolo: 'Integratori',
     immagine: 'https://www.superpalestra.it/wp-content/uploads/2017/09/integratori-palestra.jpg',
-    abstract: 'Buy',
+    pubblicazione: '',
+    abstract: 'Scopri la nostra selezione di integratori per supportare la tua dieta e migliorare le performance.',
   },
   {
     id: 3,
-    titolo: 'Le nostredivise',
+    titolo: 'Divise personalizzate',
     immagine: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0HWVOjU-MSeOGtqLxP4ygGib9BObCQYxmNQ&s',
-    abstract: 'Buy',
+    pubblicazione: '',
+    abstract: 'Scegli la nostra linea di divise personalizzate per sentirti parte del nostro team.',
   },
 ];
+
 
 
 // slides per il carousel
@@ -164,22 +172,19 @@ let prodotti = [
 let slides = [
   {
     titolo: 'Scopri di più',
-    descrizione:
-      'Scopri tutti i nostri servizi',
-    immagine:'https://quifinanza.it/wp-content/uploads/sites/5/2023/01/consigli-palestra.jpg',
+    descrizione: 'Esplora la nostra gamma di servizi dedicati al fitness e al benessere.',
+    immagine: 'https://quifinanza.it/wp-content/uploads/sites/5/2023/01/consigli-palestra.jpg',
     colore2: 'rgba(100,100,100,0)',
     buttonText: 'Scopri di più!',
   },
   {
     titolo: 'Allenati',
-    descrizione:
-      'Allenati in modo professinale qui nella nostra Palestra',
-    immagine:
-      'https://www.fitnessway.it/wp-content/uploads/2022/06/maxi-guida-25-palestre.jpg',
+    descrizione: 'Allenati in modo professionale nella nostra palestra, con il supporto di esperti.',
+    immagine: 'https://www.fitnessway.it/wp-content/uploads/2022/06/maxi-guida-25-palestre.jpg',
     colore2: 'rgba(100,100,100,0)',
-    
   },
 ];
+
 
 // Il nostro team
 let members = [
