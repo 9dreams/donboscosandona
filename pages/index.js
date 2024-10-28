@@ -25,13 +25,12 @@ import { Gif } from '@mui/icons-material'
 export default function Home({ data, elementi }) {
   return (
     <Layout>
+   
       <LandingHero
         opacity={0.5}
-        title='Progetto educativo'
-        description='Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!'
-        buttonUrl=''
+        buttonUrl='https://www.andreus-resorts.it/media/82905/andreus-homepage-horizontal-1920x1080-2961841.mp4'
         buttonText='Guarda il video'
-        imageUrl='https://source.unsplash.com/random'
+        imageUrl='https://www.dolomiticlass.it/storage/property/44960/conversions/esterno_estivo_andreus-desktop.jpg'
       />
       
       <br></br><br></br><br></br>
@@ -44,7 +43,15 @@ export default function Home({ data, elementi }) {
         products={prodotti}
        
       />
-    
+      <Products
+        title='Prodotti con sole immagini'
+        description="scopri i nostri prodotti con cui puoi trovare il tuo benessere anche a casa!"
+        cardWidth={4}
+        cardWidthXs={12}
+        aspectRatio='2.5 / 1'
+        products={prodotti2}
+      />
+     
       
       <Features
         title='I nostri punti di forza'
@@ -109,27 +116,55 @@ export async function getStaticProps() {
   }
 }
 
+// I punti di forza
+const features = [
+  {
+    title: 'Progetto educativo',
+    imageUrl:
+      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description:
+      'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'Didattica attiva',
+    imageUrl:
+      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description:
+      'Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.',
+  },
+  {
+    title: 'Laboratori',
+    imageUrl:
+      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description:
+      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
+  },
+  {
+    title: 'Servizi al lavoro',
+    imageUrl:
+      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description:
+      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
+  },
+]
 
 // slides per il carousel
 let slides = [
   {
-    titolo: 'Fatti un bel giro',
-    descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-      Url:'https://cf.bstatic.com/xdata/images/hotel/max1024x768/473150764.jpg',
+    blur: '0.0.1rem',
+    opacity: 0.2,
+    immagine:'https://lh3.googleusercontent.com/p/AF1QipMCAwKxE0JeISbc98kYTZ6wgSS46W3nvzRJD40J=s680-w680-h510',
   },
-  {
-    titolo: 'Concorso nazionale settore elettrico',
-    descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#9182C4',
+  { blur: '0.0.1rem',
+    opacity: 0.2,
+    immagine:'https://www.andreus-resorts.it/%28cms%29/media/resize/size=920x620%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841633',
   },
-  {
-    titolo: 'Concorso nazionale settore elettrico',
-    descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#22aa22',
-  },
+  { blur: '0.0.1rem',
+    opacity: 0.2,
+    immagine:'https://lh3.googleusercontent.com/p/AF1QipO_2jKRhe9x1_SXIXpcWRcU_WNG2veJ6r6jivon=s680-w680-h510',
+  }
+  
 ]
 
 // Il nostro team
@@ -227,6 +262,35 @@ const testimonials = [
   },
 ]
 
+let prodotti2 = [
+  {
+    title: 'golf',
+    category: 'GIOCA A GOLF!',
+    description:
+      "Scopri iawrttrerrtwerrtwerrto angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
+    immagineUrl:
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+    url: '/informatico',
+  }, 
+  {
+    title: 'golf',
+    category: 'GIOCA A GOLF!',
+    description:
+      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
+    immagineUrl:
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+    url: '/informatico',
+  },
+  {
+    title: 'golf',
+    category: 'GIOCA A GOLF!',
+    description:
+      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
+    immagineUrl:
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+    url: '/informatico',
+  },
+]
 
 
 
