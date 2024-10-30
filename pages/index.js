@@ -13,6 +13,7 @@ import {
   Paragraph,
   Table,
   News,
+  NewsCard,
   SwiperNews,
   Featured,
   NavBar,
@@ -23,16 +24,43 @@ import {
 
 export default function Home({ data, elementi }) {
   return (
-    <Layout>
-      <LandingHero
-        opacity={0.5}
-        title='Articoli sportivi Tecathlon'
-        description='Libertà di movimento, massimo comfort.'
-        imageUrl='https://www.marshaffinity.it/anuu/Images/underconstruction.jpg'
-        height='100vh'
-      />
-      
-    </Layout>
+<Layout>
+  <Carousel
+    slides={slides}
+    height={100}
+    animation='slide'
+    interval={5000}
+    duration={1000}
+  />
+<Container>
+        <div className='margin'>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 4 }}>
+Servizi
+</Typography>
+<Grid container spacing={4} justifyContent="center">
+  {servizi.map((servizio) => (
+    <Grid item xs={12} sm={6} md={4} key={servizio.id}>
+      <NewsCard post={servizio} />
+    </Grid>
+  ))}
+</Grid>
+
+        </div>
+        
+        <div className='margin'>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 4 }}>
+Prodotti
+</Typography>
+<Grid container spacing={4} justifyContent="center">
+  {prodotti.map((prodotti) => (
+    <Grid item xs={12} sm={6} md={4} key={prodotti.id}>
+      <NewsCard post={prodotti} />
+    </Grid>
+  ))}
+  </Grid>
+  </div>
+</Container>
+</Layout>
   )
 }
 
@@ -49,194 +77,174 @@ export async function getStaticProps() {
 
   return {
     props: { data, elementi },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 minutes
-    revalidate: 1800, // In secondi: il build viene fatto al massimo una volta ogni mezzora
+    revalidate: 1800,
   }
 }
 
-// I punti di forza
 const features = [
   {
-    title: 'Progetto educativo',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
+    title: 'Attrezzature sportive',
+    imageUrl: 'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description: 'Una vasta gamma di attrezzature per ogni sport, dal calcio al trekking.',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'Didattica attiva',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      'Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.',
+    title: 'Consulenza esperta',
+    imageUrl: 'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description: 'I nostri esperti sono pronti ad aiutarti a trovare il prodotto giusto per te.',
   },
   {
-    title: 'Laboratori',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
+    title: 'Eventi sportivi',
+    imageUrl: 'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description: 'Partecipa a eventi e competizioni per mettere alla prova le tue abilità.',
   },
   {
-    title: 'Servizi al lavoro',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
+    title: 'Community attiva',
+    imageUrl: 'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
+    description: 'Unisciti a una community di appassionati per condividere esperienze e consigli.',
   },
 ]
 
+let servizi = [
+  {
+    id: 1,
+    titolo: 'Assistenza personalizzata',
+    immagine: 'https://www.pambianconews.com/wp-content/uploads/2020/02/Decathlon.jpg',
+    abstract: 'I nostri esperti ti guideranno nella scelta dei prodotti migliori per le tue esigenze sportive.',
+  },
+  {
+    id: 2,
+    titolo: 'Rimborso garantito',
+    immagine: 'https://patatofriendly.com/wp-content/uploads/2019/11/Annotazione-2019-11-21-133027.jpg',
+    abstract: 'Se non sei soddisfatto, hai 30 giorni per restituire i prodotti acquistati.',
+  },
+  {
+    id: 3,
+    titolo: 'Attività per bambini',
+    immagine: 'https://contents.mediadecathlon.com/p2224837/k$5d9a8b89e25d769c4d0762dd2bdba49b/1920x0/4096pt2734/8192xcr5468/default.jpg?format=auto',
+    abstract: 'Scopri i nostri programmi sportivi pensati per bambini e ragazzi, per farli divertire e muoversi.',
+  },
+];
+
+let prodotti = [
+  {
+    id: 1,
+    titolo: 'Scarpe da corsa',
+    immagine: 'https://contents.mediadecathlon.com/p2599017/k$c681369622729d6857acd7cf1f0e5b34/picture.jpg',
+    abstract: 'Trova le scarpe perfette per il tuo running, con supporto e comfort ottimali.',
+  },
+  {
+    id: 2,
+    titolo: 'Attrezzatura da campeggio',
+    immagine: 'https://contents.mediadecathlon.com/p2634993/k$22ed824d3b3fa3851bad1c3dfbde2432/picture.jpg',
+    abstract: 'Preparati per la tua avventura all’aperto con tende, sacchi a pelo e accessori di alta qualità.',
+  },
+  {
+    id: 3,
+    titolo: 'Set di yoga',
+    immagine: 'https://contents.mediadecathlon.com/p2210691/k$ea21e008f1f6c789badfb222f47ce8ae?format=auto&f=3000x0',
+    abstract: 'Scopri il nostro set di yoga, ideale per migliorare la tua flessibilità e concentrazione.',
+  },
+];
+
 // slides per il carousel
+
 let slides = [
   {
-    titolo: 'Fatti un bel giro',
-    descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
-    colore: '#ED4C67',
+    titolo: 'Tecathlon',
+    descrizione: 'Esplora la nostra gamma di attrezzature sportive.',
+    immagine: 'https://mail.google.com/mail/u/0?ui=2&ik=e12e6e61be&attid=0.1&permmsgid=msg-f:1814328783786486862&th=192dca6a875c2c4e&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ80HIXFXtaEO1hlZEW1XHjnYaqhDOWUsBNHJ83axwCovd8M7zEeKBYmTeonrTL1cSujbnrI5kWqQjYKC4PRnenvXpryMLkCbZmEq1gbIxryYcjsJzX9CUB9zwg&disp=emb&realattid=ii_m2vnabko0',
     colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
-    blur: '0.5rem',
     buttonText: 'Scopri di più!',
-    buttonUrl: 'https:...',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
-    descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#22aa22',
+    titolo: 'Sport per tutti',
+    descrizione: 'Unisciti a noi e scopri il tuo sport preferito!',
+    immagine: 'https://contents.mediadecathlon.com/p2501272/k$66ed4af7acfe5b4491694b24f252b16d/1920x0/4372pt2938/7618xcr3411/sports-decathlon.jpg?format=auto',
+    colore2: 'rgba(100,100,100,0)',
   },
-]
+];
 
 // Il nostro team
 let members = [
   {
     name: 'don Nicola Munari',
     role: 'DIRETTORE / CATECHISTA',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    description: 'Appassionato di sport e educazione.',
+    description1: 'Guida la nostra community verso uno stile di vita attivo.',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
     email: 'c.coso@donboscosandona.it',
     phone: '0421 3388949874950',
   },
   {
     name: 'Alessandro Cappelletto',
     role: 'PRESIDE',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    description: 'Leader della nostra scuola sportiva.',
+    description1: 'Promuove l’importanza dell’educazione fisica.',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
   },
   {
     name: 'Alessandro Ferro',
     role: 'VICE-PRESIDE / TUTOR DIGITALE',
-    description1:
-      'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-
+    description1: 'Specialista in tecnologie per il fitness.',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
     email: 'a.ferro@donboscosandona.it',
     phone: '0421 111 222',
   },
   {
     name: "Anna Maria D'Ambrosio",
     role: 'RESPONSABILE DELLA DISCIPLINA',
-    description1:
-      'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    description1: 'Gestisce le attività sportive e la disciplina.',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
     email: 'l.hdggfd@donboscosandona.it',
     phone: '12365598445',
-  },
-]
-
-let prodotti = [
-  {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
-    description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-  },
-  {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
-    description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/energia',
-  },
-  {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
-    description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/informatico',
   },
 ]
 
 const testimonials = [
   {
     name: 'Michele Venturato',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    text: "Decathlon offre una vasta selezione di prodotti di qualità a prezzi accessibili. Consiglio vivamente di visitare il negozio!",
     social: '@Google',
   },
   {
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'Daniele Mladenovic',
-    text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
+    text: "L'ampia scelta e l'assistenza disponibile sono senza pari. Ho trovato tutto ciò che cercavo per il mio sport preferito!",
     social: '@BOBTEK',
   },
   {
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    imageUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
     name: 'Pino West',
-    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
+    text: "Un'esperienza fantastica! Ho acquistato attrezzatura da trekking e non potrei essere più soddisfatto. Grazie Decathlon!",
     social: '@PINOWEST',
   },
 ]
 
 let prodotti2 = [
   {
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    immagineUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     url: 'https://cinema.donboscosandona.it',
   },
 ]
 
 let certifications = [
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
+    logoUrl: 'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
     text1: 'ISO 9001:2015',
     text2: 'Reg. n. 2593-A - Settore EA: 37',
   },
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1:
-      'Progettazione ed erogazione di attività formative e di orientamento',
+    logoUrl: 'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
+    text1: 'Progettazione ed erogazione di attività formative e di orientamento',
   },
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
+    logoUrl: 'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
     text1: 'Authorised Training Center',
   },
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
+    logoUrl: 'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
     text1: 'Cod. A033 - Formazione Iniziale,',
     text2: 'Superiore e Orientamento',
   },
@@ -245,51 +253,45 @@ let certifications = [
 let date = [
   {
     date: '15 Giugno',
-    afternoon: 'Inizio medie',
-    evening: 'Serata film',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
+    afternoon: 'Inizio corsi di nuoto',
+    evening: 'Serata giochi',
+    immagineUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    url: '/nuoto',
   },
   {
     date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    evening: 'Serata film',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
+    morning: 'Inizio corsi di calcio',
+    afternoon: 'Inizio corsi di nuoto',
+    evening: 'Serata giochi',
+    immagineUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    url: '/calcio',
     bgColor: '#ee5253',
   },
   {
     date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
+    morning: 'Inizio corsi di ciclismo',
+    afternoon: 'Inizio corsi di nuoto',
+    immagineUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    url: '/ciclismo',
   },
   {
     date: '15 Giugno',
-    morning: 'Inizio elementari',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
+    morning: 'Inizio corsi di ginnastica',
+    immagineUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    url: '/ginnastica',
   },
   {
     date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
+    morning: 'Inizio corsi di yoga',
+    afternoon: 'Inizio corsi di nuoto',
+    immagineUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    url: '/yoga',
   },
   {
     date: '15 Giugno',
-    morning: 'Inizio elementari',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
+    morning: 'Inizio corsi di atletica',
+    immagineUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    url: '/atletica',
   },
 ]
 
