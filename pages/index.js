@@ -27,14 +27,13 @@ export default function Home({ data, elementi }) {
     <Layout>
    
       <LandingHero
-        opacity={0.5}
+        opacity={0.8}
         buttonUrl='https://www.andreus-resorts.it/media/82905/andreus-homepage-horizontal-1920x1080-2961841.mp4'
         buttonText='Guarda il video'
         imageUrl='https://www.dolomiticlass.it/storage/property/44960/conversions/esterno_estivo_andreus-desktop.jpg'
       />      
       <br></br><br></br><br></br>
       <Carousel slides={slides} />
-      <SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
       <Products
         title='I nostri servizi'
         description="un ampia scelta di servizi con cui puoi ritrovare il tuo benessere in men'che non si dica"
@@ -44,7 +43,7 @@ export default function Home({ data, elementi }) {
        
       />
       <Products
-        title='Prodotti con sole immagini'
+        title=' I Nostri Prodotti '
         description="scopri i nostri prodotti con cui puoi trovare il tuo benessere anche a casa!"
         cardWidth={4}
         cardWidthXs={12}
@@ -52,13 +51,6 @@ export default function Home({ data, elementi }) {
         products={prodotti2}
       />
      
-      
-      <Features
-        title='I nostri punti di forza'
-        description='Scopri perché il centro benessere, Andreus Resorts fa al caso tuo!'
-        features={features}
-        cardWidth={3}
-      />
       
       
       <Table
@@ -92,11 +84,7 @@ export default function Home({ data, elementi }) {
         members={members}
         cardWidth={3}
       />
-            <Maps
-        maxWidth='100%'
-        maxHeight='550px'
-        url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
-      />
+
     </Layout>
   )
 }
@@ -156,18 +144,11 @@ const features = [
 
 // slides per il carousel
 let slides = [
-  {
-    blur: '0.1rem',
-    opacity: 0.2,
-    immagine:'https://lh3.googleusercontent.com/p/AF1QipMCAwKxE0JeISbc98kYTZ6wgSS46W3nvzRJD40J=s680-w680-h510',
+  {immagine:'https://www.hladinia.it/wp-content/uploads/2022/12/idromassaggio-sera-1-scaled-e1671393919141.jpeg',
   },
-  { blur: '0.1rem',
-    opacity: 0.2,
-    immagine:'https://www.andreus-resorts.it/%28cms%29/media/resize/size=920x620%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841633',
+  { immagine:'https://benessere-montagna.it/wp-content/uploads/2021/06/Andreus-benessere-spa-hotel-slide-01.jpg'
   },
-  { blur: '0.0.1rem',
-    opacity: 0.2,
-    immagine:'https://lh3.googleusercontent.com/p/AF1QipO_2jKRhe9x1_SXIXpcWRcU_WNG2veJ6r6jivon=s680-w680-h510',
+  { immagine:'https://www.hotelmaryvico.com/assets/images/contents/acqualia.jpg',
   }
 
   
@@ -248,13 +229,13 @@ const testimonials = [
   {
     name: 'Dwayne Johnson',
     imageUrl:
-      'https://de.web.img3.acsta.net/c_310_420/pictures/14/07/24/17/14/366516.jpg',
+      'https://www.oggi.it/attualita/wp-content/uploads/sites/2/nggallery/le-incredibili-immagini-di-persone-create-dallintelligenza-artificiale/persone-fatte-dal-pc1.jpg',
     text: "Esperienza fantastica! Personale gentile e professionale, ambiente rilassante e pulito. Massaggio super rilassante",
     social: '@DwayneJohnson',
   },
   {
     imageUrl:
-      'https://media-assets.vanityfair.it/photos/6715ff3b92c599e446bd5d25/16:9/w_2560%2Cc_limit/2077303212',
+      'https://media-assets.wired.it/photos/615dbfaf63226426238bdee6/master/w_320%2Cc_limit/b9ee5023-7a23-4909-80c5-2af6afaa5075.png',
     name: 'Jennifer Lawrence',
     text: "Centro benessere accogliente e curato nei dettagli. Trattamenti personalizzati e di alta qualità. Tornerò sicuramente!",
     social: '@Jennifer Lawrence',
@@ -270,30 +251,57 @@ const testimonials = [
 
 let prodotti2 = [
   {
-    title: 'golf',
-    category: 'GIOCA A GOLF!',
+    title: 'Ebrand Italia',
+    category: 'creme e oli essenziali',
     description:
-      "Scopri iawrttrerrtwerrtwerrto angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
+      "La crema di oli essenziali è un prodotto cosmetico che combina una base cremosa con oli essenziali naturali, noti per le loro proprietà terapeutiche e aromatiche. ",
     immagineUrl:
-      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+      'https://www.ebranditalia.com/media/img/img/Linea-cosmetica.png',
     url: '/informatico',
   }, 
   {
-    title: 'golf',
-    category: 'GIOCA A GOLF!',
+    title: 'Elicriso',
+    category: 'doccia shampoo',
     description:
-      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
+      "Il Doccia Shampoo Elicriso è un prodotto ideale per l’uso quotidiano, progettato per offrire una detersione delicata su corpo e capelli. Formulato senza tensioattivi chimici aggressivi, è arricchito con ingredienti naturali che rispettano l’equilibrio della pelle e del cuoio capelluto, rendendolo ideale anche per chi ha pelle sensibile o soggetta a rossori.",
     immagineUrl:
-      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+      'https://www.erbedisardegna.com/wp-content/uploads/2022/07/linea-elicriso-1.jpg',
     url: '/informatico',
   },
   {
-    title: 'golf',
-    category: 'GIOCA A GOLF!',
+    title: 'Naturaequa',
+    category: 'doccia balsamo',
     description:
-      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
+      "Capelli da sogno, morbidi, nutriti, dal tocco setoso? Con il Balsamo Supernutriente grazie all’Olio di Baobab (biologico e solidale), usato da millenni in Africa, il tuo sogno diventa realtà! Una formulazione molto ricca e supernutriente e districant",
     immagineUrl:
-      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
+      'https://www.naturaequa.com/easyAdmin/upload/ViewImage.asp?crop=1&f=/easyUp/store/zoom/10_balsbao_901d_z.jpg&w=550&h=550',
+    url: '/informatico',
+  },
+  {
+    title: 'Kiko Milano',
+    category: 'trucchi per Occhi Viso e Labbra',
+    description:
+      "Rinnova la tua pelle con la nostra esclusiva crema a base di oli essenziali puri. Formulata per idratare, nutrire e rigenerare, questa crema è un vero trattamento di bellezza per il tuo viso e corpo.",
+    immagineUrl:
+      'https://angelparfum.it/wp-content/uploads/2024/04/img-W5O6AP0wURnhPrDRYhRpgFPK.png',
+    url: '/informatico',
+  }, 
+  {
+    title: 'La saponeria',
+    category: 'maschera viso purificante',
+    description:
+      "La sua speciale formula ricca di attivi purificanti e decongestionanti combatte l’eccesso di sebo e ti farà dire addio ad imperfezioni e pelle lucida, lasciandoti la pelle vellutata e purificata. Un concentrato di attivi che svolgerà una vera e propria azione d’urto, senza mai essere aggressiva.",
+    immagineUrl:
+      'https://www.lasaponaria.it/4453-home_default/maschera-viso-purificante-per-pelli-miste-e-imperfezioni-bye-bye-impurita.jpg',
+    url: '/informatico',
+  },
+  {
+    title: 'prodotti per rilassarsi',
+    category: 'minerali con le roccie',
+    description:
+      "La roccia è classificata, in prima istanza, sulla base dei soli minerali sialici riportando a 100 la somma di quarzo, feldspato alcalino e plagioclasio. Il punto di intersezione, nel triangolo classificativo, ottenuto in base ai valori percentuali dei vari minerali, individua il nome della roccia in esame. ",
+    immagineUrl:
+      'https://www.orthobenessere.com/wp-content/uploads/2020/10/Geology-in-Formation-of-Minerals-1024x704.jpg',
     url: '/informatico',
   },
 ]

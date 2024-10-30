@@ -1,30 +1,26 @@
 import Footer from '/components/Footer'
 import NavBar from '/components/NavBar'
 
-export const siteName = 'CFP DON BOSCO'
-export const siteTitle = 'CFP DON BOSCO - San Donà di Piave'
+export const siteName = 'Andreus Resort'
+export const siteTitle = 'Andreus Resort - Merano'
 export const siteDescription =
-  'Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave'
+  'Sito ufficiale del centro benessere Andreus Resort - Merano '
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
 export const menu = [
   { title: 'Chi siamo', url: '/chi-siamo' },
   { title: 'Contatti', url: '/contatti' },
   { title: 'Dove siamo', url: '/dove-siamo' },
-  { title: 'Privacy', url: '/privacy' },
-  { title: 'Trasparenza', url: '/trasparenza' },
+  { title: 'Richieste', url: '/privacy' },
 ]
 
 export const logoUrl =
-  'https://i.postimg.cc/zvqYsPKD/SFP-DON-BOSCO-SAN-DONA-BIANCO.png'
+  'https://www.andreus-resorts.it/media/81689/andreus-resorts-logo-small-gray-2776563.svg'
 
 export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 
 const menuFooter = [
-  { title: 'Informatico', url: '/informatico' },
-  { title: 'Energie', url: '/energie' },
-  { title: 'Elettrico', url: '/elettrico' },
-  { title: 'Trasparenza', url: '/trasparenza' },
+
 ]
 
 const socials = [
@@ -55,10 +51,9 @@ const socials = [
 ]
 
 let images = [
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
+  { imageUrl: 'https://www.andreus-resorts.it/media/81689/logo-andreus-white-2769577.svg' },
+  { imageUrl: 'https://www.andreus-resorts.it/media/81689/logo-white-golf-lodge-2769575.svg' },
+  { imageUrl: 'https://www.andreus-resorts.it/media/81689/logo-white-sonnenalm-2769573.svg' },
 ]
 
 export const footer = (
@@ -73,7 +68,6 @@ La prima colonna sarà destinata a un testo descrittivo, la seconda ai social, l
 "
     title2='Social Feed'
     socials={socials}
-    title3='I Settori'
     images={images}
     menu={menuFooter}
     copyright='Copyright (C) 2023 9dreams Agency.'
