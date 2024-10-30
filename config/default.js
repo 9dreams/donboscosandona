@@ -63,8 +63,7 @@ export const footer = (
     opacitycolor='1'
     opacity={1}
     title1='About Us'
-    description1="Footer che apparirà sul fondo di tutte le pagine del sito. Sarà possibile passare al componente un'immagine di sfondo opzionale oppure un colore di sfondo. L'attributo opaciy permetterà di sovrapporre all'immagine un Box con il colore di sfondo e un'opacità regolabile.
-La prima colonna sarà destinata a un testo descrittivo, la seconda ai social, la terza a un menù di navigazione grafico (che porta ad es. ai settori).
+    description1="Un concetto unico vi attende negli Andreus Resort, dove ognuno dei nostri 3 hotel propone una propria offerta completa. Approfittate dei singoli vantaggi dell’hotel che avete scelto: su richiesta, potete anche utilizzare l’area benessere e fitness ricca di varietà dell’Andreus Hotel. Attività come escursioni guidate, tour in bicicletta e golf sono aperte a tutti gli ospiti. Scoprite la varietà degli Andreus Resort e godetevi appieno la vostra vacanza.
 "
     title2='Social Feed'
     socials={socials}
