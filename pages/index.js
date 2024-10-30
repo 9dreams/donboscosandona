@@ -20,16 +20,71 @@ import {
   Sponsor,
   Elements,
 } from '/components'
+import { Gif } from '@mui/icons-material'
 
 export default function Home({ data, elementi }) {
   return (
     <Layout>
+   
       <LandingHero
+        opacity={0.8}
+        buttonUrl='https://www.andreus-resorts.it/media/82905/andreus-homepage-horizontal-1920x1080-2961841.mp4'
+        buttonText='Guarda il video'
+        imageUrl='https://www.dolomiticlass.it/storage/property/44960/conversions/esterno_estivo_andreus-desktop.jpg'
+      />      
+      <br></br><br></br><br></br>
+      <Carousel slides={slides} />
+      <Products
+        title='I nostri servizi'
+        description="un ampia scelta di servizi con cui puoi ritrovare il tuo benessere in men'che non si dica"
+        cardWidth={4}
+        cardWidthXs={12}
+        products={prodotti}
+       
+      />
+      <Products
+        title=' I Nostri Prodotti '
+        description="scopri i nostri prodotti con cui puoi trovare il tuo benessere anche a casa!"
+        cardWidth={4}
+        cardWidthXs={12}
+        aspectRatio='2.5 / 1'
+        products={prodotti2}
+      />
+     
+      
+      
+      <Table
+        title='I Nostri orari della recepsion'
+        subtitle=''
+        backgroundImageUrl='https://www.hotel.bz.it/contents/images/list_point/7008/22-Andreus-Golf-Logde-269.jpg'
+        backgroundColor='#303841'
         opacity={0.5}
-        title='Centro beneseere Acque di Rosalina'
-        description='Acque di Rosalia la natura ti aspetta.'
-        imageUrl='https://static.vecteezy.com/system/resources/thumbnails/001/970/338/small_2x/building-under-construction-site-free-vector.jpg'
-        />
+        blur='0.1rem'
+        color='white'
+        rows={[
+          ['GIORNI', '', ''],
+          ['Lunedi', '7:30-12:30','13:00-20:30' ],
+          ['Martedi', '8:30-12:30','13:30-20:10' ],
+          ['Mercoledi', 'Chiusa',],
+          ['Giovedi', '7:30-12:10','13:20-20:40' ],
+          ['Venerdi', '7:30-12:00','14:00-20:20' ],
+          ['Sabato', '7:30-12:30','13:40-20:00' ],
+          ['Domenica', '7:30-12:30', '14:00-21:30'],
+        ]}
+      />
+      <br></br>
+      <Testimonials
+        testimonials={testimonials}
+        cardWidth={4}
+        imageUrl='https://images8.alphacoders.com/948/948649.jpg'
+      />
+      <Team
+        title='Contatti'
+        description='Formatori che ti aiutano a crescere con il cuore di don Bosco'
+        members={members}
+        cardWidth={3}
+      />
+
     </Layout>
   )
 }
@@ -89,216 +144,171 @@ const features = [
 
 // slides per il carousel
 let slides = [
-  {
-    titolo: 'Fatti un bel giro',
-    descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
-    colore: '#ED4C67',
-    colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
-    blur: '0.5rem',
-    buttonText: 'Scopri di più!',
-    buttonUrl: 'https:...',
+  {immagine:'https://www.hladinia.it/wp-content/uploads/2022/12/idromassaggio-sera-1-scaled-e1671393919141.jpeg',
   },
-  {
-    titolo: 'Concorso nazionale settore elettrico',
-    descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#22aa22',
+  { immagine:'https://benessere-montagna.it/wp-content/uploads/2021/06/Andreus-benessere-spa-hotel-slide-01.jpg'
   },
+  { immagine:'https://www.hotelmaryvico.com/assets/images/contents/acqualia.jpg',
+  }
+
+  
 ]
 
 // Il nostro team
 let members = [
   {
-    name: 'don Nicola Munari',
-    role: 'DIRETTORE / CATECHISTA',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    name: ' Nicola Munari',
+    role: 'DIRETTORE ',
+    description: 'Credo fermamente nel potenziale di ciascuno di voi e sono sicuro che insieme raggiungeremo grandi risultati.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    email: 'c.coso@donboscosandona.it',
+      'https://www.fondazioneluigieinaudi.it/wp-content/uploads/2016/08/1372678397603porro-Copia.jpg',
+    email: 'd.munari@hotelbenessere.it',
     phone: '0421 3388949874950',
   },
   {
     name: 'Alessandro Cappelletto',
-    role: 'PRESIDE',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    role: 'ADETTO ALLE ASSUNZIONI',
+    description: 'Cerchiamo persone appassionate e determinate per entrare a far parte del nostro team dinamico',
+    email: 'a.capelletto@hotelbenessere.it',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://www.venetoreport.it/wp-content/uploads/2024/10/Alessandro-Basciano-venetoreport.it-26102024.jpg',
   },
   {
     name: 'Alessandro Ferro',
-    role: 'VICE-PRESIDE / TUTOR DIGITALE',
+    role: ' TUTOR DIGITALE / TECNICO INFORMATICO',
     description1:
       'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://www.21secolo.news/wp-content/uploads/2020/08/Alessandro-Borghese-2.jpg',
 
-    email: 'a.ferro@donboscosandona.it',
+    email: 'a.ferro@hotelbenessere.it',
     phone: '0421 111 222',
   },
   {
     name: "Anna Maria D'Ambrosio",
-    role: 'RESPONSABILE DELLA DISCIPLINA',
+    role: 'RESPONSABILE DELLA ATTIVITA ',
     description1:
       'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    email: 'l.hdggfd@donboscosandona.it',
+      'https://media.licdn.com/dms/image/v2/D4E03AQHK9EDurewPyA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1676375448528?e=2147483647&v=beta&t=Bp7OORcspyrBGV2e40DwcIW6vuODOysYS0VcwNsRN3c',
+    email: 'AnnaMaria@hotelbenessere.it',
     phone: '12365598445',
   },
 ]
 
 let prodotti = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: 'SPA',
+    category: 'SCOPRI LA NOSTRA SPA',
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'Scopri la tua spa domestica: un rifugio di benessere con vasca idromassaggio, angolo massaggi e atmosfere rilassanti. Piante verdi, candele profumate e un area lounge per gustare tisane creano il perfetto spazio per ricaricare le energie e ritrovare il relax.',
+    immagineUrl:'https://lh4.googleusercontent.com/proxy/nnrqMtI855tI-BiNdflImdCXMk0zdoYRKqqfDo5RqMHBbzQDy4k_si03LBt_YqETzVP6YmEV5rYXQfQOpctBBmI6VUS7h5ZQgxXjYGIBQOzpa3FI0YExT_2RD-sizEV1FsKE9TlrL_A',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Equitazione',
+    category: 'CAVALCA I NOSTRI CAVALLI',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Scopri il tuo rifugio per l'equitazione, con una scuderia accogliente e piste immerse nella natura. Lezioni guidate da istruttori esperti e spazi attrezzati garantiscono il benessere dei cavalli. Un angolo ideale per vivere la passione per l'equitazione e rafforzare il legame con il tuo cavallo.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2863671',
     url: '/energia',
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'golf',
+    category: 'GIOCA A GOLF!',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Scopri il tuo angolo di golf: un campo ben curato e spazi per la pratica, come driving range e putting green. Con istruttori esperti a disposizione, è il luogo ideale per migliorare le tue abilità e goderti il gioco in un'atmosfera rilassata.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'https://www.andreus-resorts.it/%28cms%29/media/resize/size=1600x0%2Cscale=crop%2Cinterlace=1%2Cquality=70/2841787',
     url: '/informatico',
   },
+  
 ]
 
 const testimonials = [
   {
-    name: 'Michele Venturato',
+    name: 'Dwayne Johnson',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
-    social: '@Google',
+      'https://www.oggi.it/attualita/wp-content/uploads/sites/2/nggallery/le-incredibili-immagini-di-persone-create-dallintelligenza-artificiale/persone-fatte-dal-pc1.jpg',
+    text: "Esperienza fantastica! Personale gentile e professionale, ambiente rilassante e pulito. Massaggio super rilassante",
+    social: '@DwayneJohnson',
   },
   {
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    name: 'Daniele Mladenovic',
-    text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
-    social: '@BOBTEK',
+      'https://media-assets.wired.it/photos/615dbfaf63226426238bdee6/master/w_320%2Cc_limit/b9ee5023-7a23-4909-80c5-2af6afaa5075.png',
+    name: 'Jennifer Lawrence',
+    text: "Centro benessere accogliente e curato nei dettagli. Trattamenti personalizzati e di alta qualità. Tornerò sicuramente!",
+    social: '@Jennifer Lawrence',
   },
   {
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    name: 'Pino West',
-    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
-    social: '@PINOWEST',
+      'https://www.rdeditore.it/it/wp-content/uploads/2024/07/logo_-bonolis.jpg',
+    name: 'Paolo Bonolis',
+    text: "Ho provato il percorso benessere e sono rimasta incantata. Un'oasi di pace nel cuore della città. Consigliatissimo!",
+    social:"@PaoloBonolis"
   },
 ]
 
 let prodotti2 = [
   {
+    title: 'Ebrand Italia',
+    category: 'creme e oli essenziali',
+    description:
+      "La crema di oli essenziali è un prodotto cosmetico che combina una base cremosa con oli essenziali naturali, noti per le loro proprietà terapeutiche e aromatiche. ",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: 'https://cinema.donboscosandona.it',
+      'https://www.ebranditalia.com/media/img/img/Linea-cosmetica.png',
+    url: '/informatico',
+  }, 
+  {
+    title: 'Elicriso',
+    category: 'doccia shampoo',
+    description:
+      "Il Doccia Shampoo Elicriso è un prodotto ideale per l’uso quotidiano, progettato per offrire una detersione delicata su corpo e capelli. Formulato senza tensioattivi chimici aggressivi, è arricchito con ingredienti naturali che rispettano l’equilibrio della pelle e del cuoio capelluto, rendendolo ideale anche per chi ha pelle sensibile o soggetta a rossori.",
+    immagineUrl:
+      'https://www.erbedisardegna.com/wp-content/uploads/2022/07/linea-elicriso-1.jpg',
+    url: '/informatico',
+  },
+  {
+    title: 'Naturaequa',
+    category: 'doccia balsamo',
+    description:
+      "Capelli da sogno, morbidi, nutriti, dal tocco setoso? Con il Balsamo Supernutriente grazie all’Olio di Baobab (biologico e solidale), usato da millenni in Africa, il tuo sogno diventa realtà! Una formulazione molto ricca e supernutriente e districant",
+    immagineUrl:
+      'https://www.naturaequa.com/easyAdmin/upload/ViewImage.asp?crop=1&f=/easyUp/store/zoom/10_balsbao_901d_z.jpg&w=550&h=550',
+    url: '/informatico',
+  },
+  {
+    title: 'Kiko Milano',
+    category: 'trucchi per Occhi Viso e Labbra',
+    description:
+      "Rinnova la tua pelle con la nostra esclusiva crema a base di oli essenziali puri. Formulata per idratare, nutrire e rigenerare, questa crema è un vero trattamento di bellezza per il tuo viso e corpo.",
+    immagineUrl:
+      'https://angelparfum.it/wp-content/uploads/2024/04/img-W5O6AP0wURnhPrDRYhRpgFPK.png',
+    url: '/informatico',
+  }, 
+  {
+    title: 'La saponeria',
+    category: 'maschera viso purificante',
+    description:
+      "La sua speciale formula ricca di attivi purificanti e decongestionanti combatte l’eccesso di sebo e ti farà dire addio ad imperfezioni e pelle lucida, lasciandoti la pelle vellutata e purificata. Un concentrato di attivi che svolgerà una vera e propria azione d’urto, senza mai essere aggressiva.",
+    immagineUrl:
+      'https://www.lasaponaria.it/4453-home_default/maschera-viso-purificante-per-pelli-miste-e-imperfezioni-bye-bye-impurita.jpg',
+    url: '/informatico',
+  },
+  {
+    title: 'prodotti per rilassarsi',
+    category: 'minerali con le roccie',
+    description:
+      "La roccia è classificata, in prima istanza, sulla base dei soli minerali sialici riportando a 100 la somma di quarzo, feldspato alcalino e plagioclasio. Il punto di intersezione, nel triangolo classificativo, ottenuto in base ai valori percentuali dei vari minerali, individua il nome della roccia in esame. ",
+    immagineUrl:
+      'https://www.orthobenessere.com/wp-content/uploads/2020/10/Geology-in-Formation-of-Minerals-1024x704.jpg',
+    url: '/informatico',
   },
 ]
 
-let certifications = [
-  {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'ISO 9001:2015',
-    text2: 'Reg. n. 2593-A - Settore EA: 37',
-  },
-  {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1:
-      'Progettazione ed erogazione di attività formative e di orientamento',
-  },
-  {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Authorised Training Center',
-  },
-  {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Cod. A033 - Formazione Iniziale,',
-    text2: 'Superiore e Orientamento',
-  },
-]
 
-let date = [
-  {
-    date: '15 Giugno',
-    afternoon: 'Inizio medie',
-    evening: 'Serata film',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    evening: 'Serata film',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-    bgColor: '#ee5253',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    afternoon: 'Inizio medie',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-  {
-    date: '15 Giugno',
-    morning: 'Inizio elementari',
-    immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: '/elettrico',
-  },
-]
 
-let sponsor = [
-  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
-  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
-  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
-  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
-  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
-  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
-  'https://www.comitec.it/img/logo.png?v=1.1',
-  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
-]
+
+
+
+
