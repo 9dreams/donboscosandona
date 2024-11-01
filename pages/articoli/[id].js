@@ -5,6 +5,7 @@ import { Container, Typography, Chip, Stack } from '@mui/material'
 
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
+import Paragraph from '/components/Paragraph'
 
 import { getIdArticoli } from '../../lib/articoli'
 
@@ -49,6 +50,7 @@ export default function Show({ data }) {
           {data.pubblicazione}
         </Typography>
         <div dangerouslySetInnerHTML={{ __html: data.content }} />
+        <p>&nbsp;</p>
         {data.tag && (
           <Stack direction='row' spacing={1}>
             {data.tag.split(',').map((tag) => (
