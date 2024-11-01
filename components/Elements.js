@@ -1,8 +1,8 @@
 import { Container, Grid, Typography } from '@mui/material'
 
-import NewsCard from '/components/NewsCard'
+import ElementsCard from '/components/ElementsCard'
 
-export default function News({ title, data, limit, defaultTag, aspectRatio }) {
+export default function Elements({ data, limit, defaultTag, aspectRatio, borderRadius, xs, sm, md }) {
   if (!data) return <div>Caricamento...</div>
   if (data && data.status=='404') return <div>Errore: il canale specificato per le News è inesistente.</div>
   
@@ -11,19 +11,10 @@ export default function News({ title, data, limit, defaultTag, aspectRatio }) {
 
   return (
     <Container maxWidth='lg' sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
-      <Typography
-        style={{ textAlign: 'left', paddingBottom: '2rem' }}
-        component='h2'
-        variant='h4'
-        color='inherit'
-        gutterBottom
-      >
-        { title }
-      </Typography>
       <Grid container spacing={4}>
         {data.map((post) => (
-          <Grid item xs={12} sm={6} md={4}>
-            <NewsCard post={post} defaultTag={defaultTag} aspectRatio={aspectRatio} />
+          <Grid item xs={xs} sm={sm} md={md}>
+            <ElementsCard post={post} defaultTag={defaultTag} aspectRatio={aspectRatio} borderRadius={borderRadius} />
           </Grid>
         ))}
       </Grid>
@@ -31,8 +22,10 @@ export default function News({ title, data, limit, defaultTag, aspectRatio }) {
   )
 }
 
-News.defaultProps = {
-  title: 'News',
+Elements.defaultProps = {
   limit: 6,
   defaultTag: '',
+  xs: 12,
+  sm: 6,
+  md: 4,
 }
