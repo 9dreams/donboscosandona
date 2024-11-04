@@ -68,9 +68,9 @@ export default function Home({ data, movies }) {
         rows={[
           ['Feriali', 'Sabato', 'Festivi'],
           ['ore 7.00', 'ore 7.00', ''],
-          ['', 'ore 18.00', 'ore 9.00'],
+          ['', '', 'ore 9.00'],
           ['', '', 'ore 10.30'],
-          ['ore 18.30', '', ''],
+          ['ore 18.30', 'ore 18.00', ''],
         ]}
       />
       <Container>
