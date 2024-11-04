@@ -18,9 +18,10 @@ import {
   NavBar,
   Logos,
   Sponsor,
+  Elements,
 } from '/components'
 
-export default function Home({ data }) {
+export default function Home({ data, elementi }) {
   return (
     <Layout>
       <LandingHero
@@ -39,7 +40,19 @@ export default function Home({ data }) {
         events={date}
       />
       <Featured data={data} limit={4} defaultTag='scuola' />
+      <Featured data={elementi} limit={4} defaultTag='scuola' height={90} />
       <News title='News' data={data} limit={4} />
+      <Container>
+        <h1 className='bg-teal-500 text-yellow-500 p-6 text-3xl font-bold underline'>Prova Tailwind</h1>
+      </Container>
+
+      <Elements
+        data={elementi}
+        limit={6}
+        md={4}
+        aspectRatio='3 / 2'
+        borderRadius='10px'
+      />
       <SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
 
       <Carousel slides={slides} />
@@ -208,13 +221,18 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(
+  let res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio'
   )
   const data = await res.json()
 
+  res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona_elements'
+  )
+  const elementi = await res.json()
+
   return {
-    props: { data },
+    props: { data, elementi },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 minutes
