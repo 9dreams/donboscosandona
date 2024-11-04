@@ -33,7 +33,7 @@ export default function Home({ data, elementi }) {
         buttonText='Guarda il video'
         imageUrl='https://source.unsplash.com/random'
       />
-      
+
       <Logos url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png' />
       <Calendar
         title='Una settimana di allegria'
@@ -45,7 +45,9 @@ export default function Home({ data, elementi }) {
       <Featured data={elementi} limit={4} defaultTag='scuola' height={90} />
       <News title='News' data={data} limit={4} />
       <Container>
-        <h1 className='bg-teal-500 text-yellow-500 p-6 text-3xl font-bold underline'>Prova Tailwind</h1>
+        <h1 className='bg-teal-500 text-yellow-500 p-6 text-3xl font-bold underline'>
+          Prova Tailwind
+        </h1>
       </Container>
 
       <Elements
@@ -218,11 +220,10 @@ export default function Home({ data, elementi }) {
         url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
       />
       <Certifications cardWidth={3} certifications={certifications} />
-      
-      <div className="m-10">
-            <Credits />
-        </div>
-      
+
+      <div className='m-10'>
+        <Credits />
+      </div>
     </Layout>
   )
 }
