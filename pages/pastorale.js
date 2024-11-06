@@ -5,6 +5,7 @@ import LandingHero from '/components/LandingHero.js'
 import Products from '/components/Products'
 import Paragraph from '@/components/Paragraph'
 import { Typography } from '@mui/material'
+import Image from 'next/image';
 
 
 // Voci del menù per il componente LandingHero
@@ -59,57 +60,92 @@ export default function Home() {
                 description="Per diventare come insegna don Bosco ''buoni cristiani e onesti cittadini!''"
                 buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
                 buttonText="Guarda il video"
-                imageUrl="https://www.famigliasalesiana.org/public/Pagine/RETTOR-MAGGIORE.jpg"
+                 imageUrl="/images/pastorale/locandina.jpg"
                />
-                <LandingHero
-                opacity={0.1}
-                siteName="CFP DON BOSCO"
-                imageUrl="/images/pastorale/locandina.jpg"
- />
- 
 
-            {/*             <LandingHero
-        opacity={0.5}
-        siteName="CFP DON BOSCO"
-        title="Centro di Formazione Professionale don Bosco"
-        description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
-        buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
-        buttonText="Guarda il video"
-        imageUrl="/images/privacy/imgsfondo.webp"
-        menu={menu}
-    /> */}
             <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
                 
             </Container> 
               
-<Products
-        cardWidth={4}
-        cardWidthXs={6}
-        products={prodotti}
-      />
 
-/>
+            <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '50vh',
+      margin: 0,
+    }}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center', 
+        width: '80%',
+        textAlign: 'center',
+      }}>
+        <div>
+          <img 
+            src="/images/pastorale/timeline.jpg" 
+            alt="Immagine 1" 
+            style={{
+              width: '50%',
+              height: 'auto',
+              borderRadius: '8px'
+            }} 
+          />
+          <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>Timeline</h3>
+        </div>
+
+        <div>
+          <img 
+            src="/images/pastorale/beyou.jpg" 
+            alt="Immagine 2" 
+            style={{
+              width: '65%',
+              height: 'auto',
+              borderRadius: '8px'
+            }} 
+          />
+          <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>be you</h3>
+        </div>
+
+        <div>
+          <img 
+            src="/images/pastorale/Musica.jpeg" 
+            alt="Immagine 3" 
+            style={{
+              width: '80%',
+              height: 'auto',
+              borderRadius: '8px'
+            }} 
+          />
+          <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>progetto musica</h3>
+          <p style={{ fontSize: '14px', color: '#555' }}>Il progetto Musica offre corsi gratuiti per imparare le basi di uno strumento musicale, rendendo l'accesso alla musica possibile per tutti. Un'opportunità per sviluppare competenze e passione, senza costi.</p>
+        </div>
+        </div>
+        </div>
+
+<div style={styles.container}>
+      <img 
+        src="/images/pastorale/Partner.png" 
+        alt="Immagine centrata" 
+        style={styles.image} 
+      />
+    </div>
         </Layout>
     )
 
 }
 
-let prodotti = [
-    {
-     
-      immagineUrl:
-        '/images/pastorale/timeline.jpg',
-    },
-    {
-      
-      immagineUrl:'/images/pastorale/beyou.jpg',
-    },
-    {
-      title: 'Progetto musica',
-      description:
-        "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
-      immagineUrl:
-        '/images/pastorale/Musica.jpeg',
-      url: '/informatico',
-    },
-  ]
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '50vh',
+    margin: 0,
+  },
+  image: {
+    maxWidth: '170%',
+    height: 'auto',
+  },
+}
