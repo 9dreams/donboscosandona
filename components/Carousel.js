@@ -60,10 +60,6 @@ export default function MyCarousel({
             sx={{
               position: 'relative',
               overflow: 'hidden',
-              ssssbackgroundImage: {
-                xs: 'url(' + (slide.immagine_mobile || slide.immagine) + ')',
-                lg: 'url(' + slide.immagine + ')',
-              },
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -93,7 +89,7 @@ export default function MyCarousel({
                   objectFit: 'cover',
                 }}
                 fill={true}
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw'
+                sizes='100vw'
               />
             </Container>
             <Container
@@ -117,7 +113,7 @@ export default function MyCarousel({
                   objectFit: 'cover',
                 }}
                 fill={true}
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw'
+                sizes='100vw'
               />
             </Container>
             <Box

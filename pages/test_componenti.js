@@ -20,6 +20,7 @@ import {
   Sponsor,
   Elements,
   Credits,
+  Test,
 } from '/components'
 
 export default function Home({ data, elementi }) {
@@ -33,8 +34,9 @@ export default function Home({ data, elementi }) {
         buttonText='Guarda il video'
         imageUrl='https://source.unsplash.com/random'
       />
-      
+
       <Logos url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png' />
+      <Test domande={domande_test} />
       <Calendar
         title='Una settimana di allegria'
         description='Scopri tutti gli eventi'
@@ -45,7 +47,9 @@ export default function Home({ data, elementi }) {
       <Featured data={elementi} limit={4} defaultTag='scuola' height={90} />
       <News title='News' data={data} limit={4} />
       <Container>
-        <h1 className='bg-teal-500 text-yellow-500 p-6 text-3xl font-bold underline'>Prova Tailwind</h1>
+        <h1 className='bg-teal-500 text-yellow-500 p-6 text-3xl font-bold underline'>
+          Prova Tailwind
+        </h1>
       </Container>
 
       <Elements
@@ -218,11 +222,10 @@ export default function Home({ data, elementi }) {
         url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
       />
       <Certifications cardWidth={3} certifications={certifications} />
-      
-      <div className="m-10">
-            <Credits />
-        </div>
-      
+
+      <div className='m-10'>
+        <Credits />
+      </div>
     </Layout>
   )
 }
@@ -359,7 +362,7 @@ let prodotti = [
     title: 'Energia',
     category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energia, anche grazie alla building automation.",
     immagineUrl:
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     url: '/energia',
@@ -494,4 +497,91 @@ let sponsor = [
   'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
   'https://www.comitec.it/img/logo.png?v=1.1',
   'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
+]
+
+let domande_test = [
+  {
+    domanda: 'Se sulla strada vedi delle strisce pedonali dipinte male...',
+    immagine: '',
+    a: {
+      risposta: 'Le evito',
+      elettrico: 1,
+      energia: 0,
+      informatico: 0,
+      meccanico: 0,
+      motoristico: 0,
+    },
+    b: {
+      risposta: 'Uso il bianchetto per sistemarle',
+      elettrico: 0,
+      energia: 1,
+      informatico: 0,
+      meccanico: 0,
+      motoristico: 0,
+    },
+    c: {
+      risposta: 'Chiudo gli occhi e passo',
+      elettrico: 0,
+      energia: 0,
+      informatico: 1,
+      meccanico: 0,
+      motoristico: 0,
+    },
+  },
+  {
+    domanda: 'Seconda domanda',
+    immagine: '',
+    a: {
+      risposta: 'aaaaa',
+      elettrico: 1,
+      energia: 0,
+      informatico: 0,
+      meccanico: 0,
+      motoristico: 0,
+    },
+    b: {
+      risposta: 'bbb',
+      elettrico: 0,
+      energia: 1,
+      informatico: 0,
+      meccanico: 0,
+      motoristico: 0,
+    },
+    c: {
+      risposta: 'ccccc',
+      elettrico: 0,
+      energia: 0,
+      informatico: 1,
+      meccanico: 0,
+      motoristico: 0,
+    },
+  },
+  {
+    domanda: 'Terza domanda',
+    immagine: '',
+    a: {
+      risposta: 'aaaaa',
+      elettrico: 1,
+      energia: 0,
+      informatico: 0,
+      meccanico: 0,
+      motoristico: 0,
+    },
+    b: {
+      risposta: 'bbbbb',
+      elettrico: 0,
+      energia: 1,
+      informatico: 0,
+      meccanico: 0,
+      motoristico: 0,
+    },
+    c: {
+      risposta: 'ccccc',
+      elettrico: 0,
+      energia: 0,
+      informatico: 1,
+      meccanico: 0,
+      motoristico: 0,
+    },
+  },
 ]
