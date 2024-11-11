@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 
 import Container from '@mui/material/Container'
@@ -28,32 +27,55 @@ export default function Test(props) {
     setIndice(indice + 1)
   }
 
+  function reset() {
+    setElettrico(0)
+    setEnergia(0)
+    setInformatico(0)
+    setMeccanico(0)
+    setMotoristico(0)
+
+    setIndice(0)
+  }
+
   let totale = elettrico + energia + informatico + meccanico + motoristico
   function percentuale(punti) {
     if (totale > 0) {
-      return punti / totale * 100
-    }
-    else {
-      return 0
+      return ((punti / totale) * 100).toFixed(1)
+    } else {
+      return '0'
     }
   }
 
   return (
-
     <Container class='bg-slate-300' maxWidth='lg'>
-      {    (indice < n) ? (<>
-      <p><b>Domanda {indice + 1}/{n}: {item.domanda}</b></p>
-      <hr />
-      <p><button onClick={() => scelta(item.a)}>a: {item.a.risposta}</button></p>
-      <p><button onClick={() => scelta(item.b)}>b: {item.b.risposta}</button></p>
-      <p><button onClick={() => scelta(item.c)}>c: {item.c.risposta}</button></p>
-      <hr /></>) : (<h1>Complimenti!</h1>)}
+      {indice < n ? (
+        <>
+          <p>
+            <b>
+              Domanda {indice + 1}/{n}: {item.domanda}
+            </b>
+          </p>
+          <hr />
+          <p>
+            <button onClick={() => scelta(item.a)}>a: {item.a.risposta}</button>
+          </p>
+          <p>
+            <button onClick={() => scelta(item.b)}>b: {item.b.risposta}</button>
+          </p>
+          <p>
+            <button onClick={() => scelta(item.c)}>c: {item.c.risposta}</button>
+          </p>
+          <hr />
+        </>
+      ) : (
+        <>
+          <h1>Complimenti!</h1> <button onClick={reset}>Ricomincia</button>
+        </>
+      )}
       <p>
-        Elettrico: {percentuale(elettrico)}% -
-        Energia: {percentuale(energia)}% -
-        Informatico: {percentuale(informatico)}% -
-        Meccanico: {percentuale(meccanico)}% - 
-        Motoristico: {percentuale(motoristico)}%
+        Elettrico: {percentuale(elettrico)}% - Energia: {percentuale(energia)}%
+        - Informatico: {percentuale(informatico)}% - Meccanico:{' '}
+        {percentuale(meccanico)}% - Motoristico: {percentuale(motoristico)}%
       </p>
     </Container>
   )
