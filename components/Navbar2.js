@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaServicestack,
+  FaPhone,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 
 const Navbar2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,70 +18,66 @@ const Navbar2 = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white shadow-lg">
-      <div className="flex justify-between items-center h-20 px-6">
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 text-gray-800 rounded-xl px-4 mt-4 shadow-md backdrop-blur-lg bg-opacity-70 bg-white border-2 border-gray-400 mx-4 md:mx-auto max-w-screen-xl"
+      style={{
+        marginTop: "20px",
+      }}
+    >
+      <div className="flex justify-between items-center h-20 px-6 mx-auto">
         <div className="flex items-center">
           <Link href="/">
-            <img
+            <motion.img
               src="https://lh6.googleusercontent.com/proxy/oB-C1yTTEIvCEBRz_5dj7s7WhvPVWE4K2C8MG6iKieYD3YGrLKkp4Lv2P9eJNG6uiCff_RXkYhYKkdaD"
               alt="Logo"
-              className="h-10"
+              className="h-12 w-auto"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
             />
           </Link>
         </div>
-        <div className="hidden md:block">
-          <ul className="flex space-x-6">
-            {["Home", "About", "Services", "Contact"].map((item) => (
-              <li key={item}>
-                <Link
-                  href={`/${item.toLowerCase()}`}
-                  className="hover:text-green-400 py-4 transition duration-300"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* Desktop Links */}
+        <div className="hidden md:flex space-x-6">
+          {[
+            { label: "Home", icon: <FaHome /> },
+            { label: "About", icon: <FaInfoCircle /> },
+            { label: "Services", icon: <FaServicestack /> },
+            { label: "Contact", icon: <FaPhone /> },
+          ].map((item) => (
+            <motion.li
+              key={item.label}
+              className="flex items-center space-x-2 hover:text-green-500 transition-all duration-200"
+              whileHover={{ scale: 1.1, color: "#68d391" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2, delay: 0.05 }}
+            >
+              <Link href={`/${item.label.toLowerCase()}`}>
+                <div className="flex items-center space-x-2">
+                  {item.icon}
+                  <span>{item.label}</span>
+                </div>
+              </Link>
+            </motion.li>
+          ))}
         </div>
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
             className="focus:outline-none focus:ring-2 focus:ring-white"
             aria-label="Toggle Menu"
           >
-            <motion.svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              initial={{ rotate: 0 }}
-              animate={{ rotate: isOpen ? 45 : 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {isOpen ? (
-                <motion.path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                  initial={{ opacity: 1 }}
-                  animate={{ opacity: isOpen ? 1 : 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-              ) : (
-                <motion.path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              )}
-            </motion.svg>
+            {isOpen ? (
+              <FaTimes className="w-6 h-6" />
+            ) : (
+              <FaBars className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
 
+      {/* Mobile Links */}
       <motion.div
         className={`md:hidden ${isOpen ? "block" : "hidden"}`}
         initial={{ opacity: 0, height: 0 }}
@@ -89,15 +93,21 @@ const Navbar2 = () => {
         }}
         style={{ overflow: "hidden" }}
       >
-        <ul className="flex flex-col items-center space-y-2 bg-gray-700 py-4">
-          {["Home", "About", "Services", "Contact"].map((item) => (
-            <li key={item}>
+        <ul className="flex flex-col items-center space-y-4">
+          {[
+            { label: "Home", icon: <FaHome size={24} /> },
+            { label: "About", icon: <FaInfoCircle size={24} /> },
+            { label: "Services", icon: <FaServicestack size={24} /> },
+            { label: "Contact", icon: <FaPhone size={24} /> },
+          ].map((item) => (
+            <li key={item.label} className="flex items-center space-x-3">
               <Link
-                href={`/${item.toLowerCase()}`}
-                className="block px-6 py-2 hover:text-green-400 transition duration-300"
+                href={`/${item.label.toLowerCase()}`}
+                className="block px-8 py-2 hover:text-green-500 transition duration-200 flex items-center space-x-3"
                 onClick={toggleMenu}
               >
-                {item}
+                <span>{item.icon}</span>
+                <span className="text-lg font-medium">{item.label}</span>
               </Link>
             </li>
           ))}

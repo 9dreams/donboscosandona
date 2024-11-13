@@ -1,5 +1,3 @@
-// pages/index.js
-
 import Navbar2 from "@/components/Navbar2"; // Importa il componente Navbar2
 import Footer2 from "@/components/Footer2"; // Importa il componente Footer2
 import {
@@ -57,7 +55,8 @@ const news = [
   },
   {
     title: "Campagna di sensibilizzazione",
-    description: "Unisciti a noi nella campagna per la sensibilizzazione sulla disabilità.",
+    description:
+      "Unisciti a noi nella campagna per la sensibilizzazione sulla disabilità.",
   },
 ];
 
@@ -65,7 +64,8 @@ const news = [
 const resources = [
   {
     title: "Risorse Utili",
-    description: "Materiali e link utili per famiglie e persone con disabilità.",
+    description:
+      "Materiali e link utili per famiglie e persone con disabilità.",
   },
   {
     title: "Come Aiutare",
@@ -75,9 +75,9 @@ const resources = [
 
 export default function Home() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className=" min-h-screen">
       <Navbar2 /> {/* Aggiungi la Navbar2 qui */}
-      <Container maxWidth="lg" sx={{ paddingY: 4 }}>
+      <Container maxWidth="lg" sx={{ paddingY: 4, marginTop: "80px" }}>
         {/* Sezione di Benvenuto */}
         <Box className="text-center my-8">
           <Typography
@@ -208,7 +208,11 @@ export default function Home() {
                       </Typography>
                       <Typography
                         variant="body2"
-                        sx={{ color: "#2e7d32", textAlign: "right", fontWeight: "bold" }}
+                        sx={{
+                          color: "#2e7d32",
+                          textAlign: "right",
+                          fontWeight: "bold",
+                        }}
                       >
                         - {testimonial.author}
                       </Typography>
