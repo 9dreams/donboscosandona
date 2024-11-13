@@ -1,133 +1,315 @@
-import Navbar2 from "@/components/Navbar2";
-import Footer2 from "@/components/Footer2";
-import Header from "@/components/Header";
-import MyCarousel from "@/components/Carousel";
-import MyTable from "@/components/Table";
-import Team from "@/components/Team";
-import Post from "@/components/Post";
 import {
-  Container,
-  Typography,
-  Grid,
-  Box,
-  Button,
-} from "@mui/material";
-import Link from "next/link";
+  Carousel,
+  Certifications,
+  Layout,
+  LandingHero,
+  Features,
+  Products,
+  Testimonials,
+  Team,
+  Maps,
+  SwiperNews,
+  Featured,
+  Logos,
+  Paragraph,
+  Elements,
+  Navbar2,
+} from "/components";
 
-const carouselSlides = [
+// I punti di forza
+const features = [
   {
-    immagine: "/path/to/image1.jpg",
-    titolo: "Benvenuti in Anffas San Donà di Piave",
-    descrizione: "Sosteniamo persone con disabilità intellettive e le loro famiglie.",
-    buttonText: "Scopri di più",
-    buttonUrl: "#chi-siamo",
-    colore: "#000000",
-    opacity: 0.5,
-    blur: "2px",
+    title: "Progetto educativo",
+    imageUrl:
+      "https://archive.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png",
+    description:
+      "Un progetto chiaro e affidabile per far crescere e diventare uomini. ",
   },
   {
-    immagine: "/path/to/image2.jpg",
-    titolo: "Laboratori Settimanali",
-    descrizione: "Offriamo corsi di autonomia, musicoterapia, cucina e molto altro.",
-    buttonText: "Esplora i Laboratori",
-    buttonUrl: "#laboratori",
-    colore: "#000000",
-    opacity: 0.5,
-    blur: "2px",
-  },
-];
-
-const tableRows = [
-  ["Giorno", "Orario", "Attività"],
-  ["Lunedì", "9:00 - 12:00", "Laboratori di Potenziamento Cognitivo"],
-  ["Martedì", "15:00 - 18:00", "Corso di Cucina"],
-  // Aggiungi altre righe come necessario
-];
-
-const posts = [
-  {
-    id: "1",
-    title: "Nuove Iniziative per l'Inclusione Sociale",
-    date: "2024-01-10",
-    abstract: "Scopri le nostre nuove attività dedicate all'inclusione sociale.",
-    imageUrl: "/path/to/post1.jpg",
+    title: "Didattica attiva",
+    imageUrl:
+      "https://archive.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png",
+    description:
+      "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.",
   },
   {
-    id: "2",
-    title: "Inaugurazione del Mercatino Solidale",
-    date: "2024-02-15",
-    abstract: "Visita il nostro mercatino con i lavori dei nostri ragazzi.",
-    imageUrl: "/path/to/post2.jpg",
+    title: "Laboratori",
+    imageUrl:
+      "https://archive.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.png",
+    description:
+      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
+  },
+  {
+    title: "Servizi al lavoro",
+    imageUrl:
+      "https://archive.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png",
+    description:
+      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
+    url: "/sal",
   },
 ];
 
-export default function Home() {
+let laboratoriSettimali = [
+  {
+    title: "Potenziamento cognitivo",
+    description:
+      "Tenuto dalla psicologa Marianna Trevisiol, mira all'acquisizione delle potenzialità cognitive nei più giovani e al mantenimento negli associati più anziani.",
+  },
+  {
+    title: "Autonomia",
+    description:
+      "Con questo laboratorio vengono insegnate abilità per migliorare l’indipendenza degli associati.",
+  },
+  {
+    title: "Musigiocando",
+    description:
+      "Laboratorio espressivo in cui i ragazzi sperimentano e scoprono nuove sensazioni e modi di suonare tramite strumenti, anche inusuali, specialmente per chi ha un linguaggio non verbale.",
+  },
+  {
+    title: "Sessualità",
+    description:
+      "Laboratorio di affettività che aiuta a comprendere le sensazioni e stimoli del corpo quando si sviluppano amicizia o affetto verso un’altra persona.",
+  },
+  {
+    title: "Cucina",
+    description:
+      "Creazione di ricette sempre nuove, con la soddisfazione di portare a casa e condividere con la famiglia ciò che si è cucinato.",
+  },
+  {
+    title: "Manualità",
+    description:
+      "Stimolo della creatività e uso della manualità fine, in base alle proprie capacità.",
+  },
+  {
+    title: "Canto",
+    description:
+      "Un laboratorio per liberare la voglia di esprimersi e di farsi sentire dal mondo intero.",
+  },
+  {
+    title: "Ballo",
+    description:
+      "Attività in cui ci si scatena nei movimenti e si ascoltano le belle sensazioni del corpo attraverso la danza.",
+  },
+  {
+    title: "Shiatsu Qi-gong",
+    description:
+      "Laboratorio di rilassamento ed ascolto del proprio corpo. Gli associati vengono trattati dalle insegnanti e a turno trattano i compagni per beneficio reciproco.",
+  },
+  {
+    title: "Nordic Walking",
+    description:
+      "Camminare con i bastoncini seguendo il ritmo dell'istruttore, ammirando la natura e l'aria aperta.",
+  },
+  {
+    title: "Musica Band",
+    description:
+      "Laboratorio musicale che stimola il cervello isolando un suono e componendo assieme ai compagni un brano musicale.",
+  },
+  {
+    title: "Fotografia",
+    description:
+      "Laboratorio per imparare a fare foto e osservare il mondo circostante, migliorando l'autonomia degli associati.",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Michele Venturato",
+    imageUrl:
+      "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.png",
+    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
+    social: "@Google",
+  },
+  {
+    imageUrl: "/images/home/recensioni/bob.png",
+    name: "Daniele M.",
+    text: "Ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
+    social: "@BOBTEK",
+  },
+  {
+    imageUrl: "/images/home/recensioni/giacomo.png",
+    name: "Giacomo P.",
+    text: "In questi anni il don Bosco mi ha dato molto: gli insegnati lavorano con passione e trattano i propri alunni come dei veri amici, per qualsiasi tipo di problema sono sempre al tuo fianco ed è una cosa da non dare per nulla per scontata. La scuola aiuta molto ad inserirsi anche nel mondo del lavoro grazie alle esperienze acquisite nei vari laboratori ma soprattutto grazie alle esperienze di stage offerte. In questi anni ho ricevuto una formazione completa formandomi come lavoratore ma soprattutto come uomo.",
+    social: "@PISTO",
+  },
+];
+
+let certifications = [
+  {
+    logoUrl: "/images/certification/iso.png",
+    text1: "ISO 9001:2015",
+    text2: "Reg. n. 2593-A - Settore EA: 37",
+  },
+  {
+    logoUrl: "/images/certification/kiwa.png",
+    text1:
+      "Progettazione ed erogazione di attività formative e di orientamento",
+  },
+  {
+    logoUrl: "/images/certification/knx.png",
+    text1: "Authorised Training Center",
+  },
+  {
+    logoUrl: "/images/certification/regioneveneto.png",
+    text1: "Cod. A033 - Formazione Iniziale,",
+    text2: "Superiore e Orientamento",
+  },
+];
+
+let link_utili = [
+  {
+    title: "Regolamento",
+    description:
+      "Il regolamento sottoscritto a inizio anno, che tutti gli allievi si impegnano a rispettare.",
+    immagineUrl: "/images/home/regolamento.png",
+    url: "https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96c2ed50875db2d6bc536633e55dab4b1d4c1288/Regolamento%20San%20Dona%CC%80%20Settembre%202023.pdf",
+  },
+  {
+    title: "ScuolaOnLine",
+    description: "Accesso al registro elettronico per genitori e allievi.",
+    immagineUrl: "/images/home/scuolaonline.png",
+    url: "https://scuolaonline.soluzione-web.it/SOL_0264/",
+  },
+  {
+    title: "ORATORIO DON BOSCO",
+    description:
+      "La SFP DON BOSCO sorge all'interno dell'Oratorio don Bosco: visita il sito.",
+    immagineUrl: "/images/home/inoratorio.png",
+    url: "https://cinema.donboscosandona.it",
+  },
+  {
+    description:
+      "La nostra Scuola ha anche un Cinema: scopri la programmazione.",
+    immagineUrl: "/images/home/cinema_don_bosco.png",
+    url: "https://cinema.donboscosandona.it",
+  },
+];
+
+export default function Home({ data, movies, elementi }) {
   return (
-    <div className="min-h-screen">
-      <Navbar2 />
-      
-      {/* Header con sezioni principali */}
-
-      {/* Carousel */}
-      <MyCarousel slides={carouselSlides} maxWidth="lg" height={60} />
-
-      <Container maxWidth="lg" sx={{ paddingY: 4 }}>
-        {/* Sezione Chi Siamo */}
-        <Box id="chi-siamo" my={10}>
-          <Typography variant="h4" component="h2" sx={{ fontWeight: "bold" }}>
-            Chi Siamo
-          </Typography>
-          <Typography variant="body1" mt={2}>
-            Anffas San Donà di Piave APS è un ente locale dell'Anffas Nazionale, presente dal 1974. L'associazione sostiene persone con disabilità intellettive e le loro famiglie, promuovendo l'inclusione sociale e lavorativa.
-          </Typography>
-        </Box>
-
-        {/* Sezione Laboratori Settimanali con Tabella */}
-        <Box id="laboratori" my={10}>
-          <Typography variant="h4" component="h2" sx={{ fontWeight: "bold" }}>
-            I Laboratori Settimanali
-          </Typography>
-          <MyTable 
-            rows={tableRows} 
-            title="Orari dei Laboratori" 
-            maxWidth="md" 
-            color="#333"
-            backgroundColor="rgba(255, 255, 255, 0.8)"
-          />
-        </Box>
-
-        {/* Sezione Articoli Recenti */}
-        <Box id="articoli" my={10}>
-          <Typography variant="h4" component="h2" sx={{ fontWeight: "bold" }}>
-            Articoli Recenti
-          </Typography>
-          <Grid container spacing={4}>
-            {posts.map((post) => (
-              <Post key={post.id} post={post} />
-            ))}
-          </Grid>
-        </Box>
-
-        {/* Sezione Contatti */}
-        <Box id="contatti" my={10}>
-          <Typography variant="h4" component="h2" sx={{ fontWeight: "bold" }}>
-            Contattaci
-          </Typography>
-          <Typography variant="body1">
-            Via Cima XI, N.47, 30027 San Donà di Piave (VE)
-          </Typography>
-          <Typography variant="body1">Tel. Direzione  339-3101429
-
-</Typography>
-          <Typography variant="body1">Tel. Segreteria: 335-4349556</Typography>
-          <Typography variant="body1">Email: anffasonlussandonadipiave@gmail.com</Typography>
-          <Link href="https://www.facebook.com/AnffasSanDona" passHref>
-            <Button variant="contained" sx={{ marginTop: 2 }}>Pagina Facebook</Button>
-          </Link>
-        </Box>
-      </Container>
-
-      <Footer2 />
-    </div>
+    <Layout>
+      <Featured data={data} defaultTag="scuola" />
+      <Logos url="/images/home/loghi_sponsor.png" />
+      <Featured data={elementi} limit={4} defaultTag="scuola" height={90} />
+      <SwiperNews title="News" data={data} limit={12} defaultTag="scuola" />
+      <Elements
+        data={elementi}
+        limit={6}
+        md={4}
+        aspectRatio="3 / 2"
+        borderRadius="10px"
+      />
+      <Products
+        title="I laboratori settimanali"
+        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
+        cardWidth={4}
+        cardWidthXs={12}
+        products={laboratoriSettimali}
+      />
+      <Carousel slides={slides} />
+      <Features
+        title="I nostri punti di forza"
+        description="Scopri perché SFP DON BOSCO è davvero la scuola che fa al caso tuo!"
+        features={features}
+        cardWidth={3}
+      />
+      <SwiperNews title="Al cinema" data={movies} limit={12} />
+      <Products cardWidth={3} products={link_utili} aspectRatio="4 / 2" />
+      <Testimonials
+        testimonials={testimonials}
+        cardWidth={4}
+        imageUrl="/images/home/recensioni/sfondo.jpg"
+      />
+      <Maps
+        maxWidth="100%"
+        maxHeight="550px"
+        url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit"
+      />
+      <Certifications cardWidth={3} certifications={certifications} />
+    </Layout>
   );
 }
+
+/* // This gets called on every request
+export async function getServerSideProps() {
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/donboscosandona'
+  )
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+} */
+
+// This function gets called at build time on server-side.
+// It may be called again, on a serverless function, if
+// revalidation is enabled and a new request comes in
+export async function getStaticProps() {
+  let res = await fetch(
+    "https://channels.donboscosandona.it/api/posts/inoratorio?q=scuola"
+  );
+  const data = await res.json();
+
+  res = await fetch("https://cinema.donboscosandona.it/movie/featured.json");
+  let movie_data = await res.json();
+  movie_data = movie_data.filter((movie) => movie.hero_path);
+
+  const movies = movie_data.map((movie) => ({
+    titolo: movie.title,
+    abstract: movie.overview,
+    immagine:
+      movie.hero_path.substring(0, 1) == "/"
+        ? "https://cinema.donboscosandona.it" + movie.hero_path
+        : movie.hero_path,
+    link: "https://cinema.donboscosandona.it",
+    in_evidenza: false,
+    tag: movie.showtimes[0].date,
+  }));
+
+  res = await fetch(
+    "https://channels.donboscosandona.it/api/posts/donboscosandona_elements"
+  );
+  const elementi = await res.json();
+
+  return {
+    props: { data, movies, elementi },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every 10 minutes
+    revalidate: 1200, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
+  };
+}
+
+let slides = [
+  {
+    titolo: "Visita virtuale",
+    descrizione:
+      "Scopri tutti i segreti della nostra Scuola con il tour virtuale!",
+    immagine: "/images/home/vr.webp",
+    buttonText: "Inizia il tour",
+    buttonUrl: "https://archive.donboscosandona.it/virtual-tour/index.htm",
+  },
+];
+
+let classi = [
+  { classe: "1A", punti: "538" },
+  { classe: "1B", punti: "548" },
+  { classe: "1C", punti: "528" },
+  { classe: "1D", punti: "487" },
+  { classe: "1E", punti: "531" },
+  { classe: "1F", punti: "567" },
+  { classe: "2A", punti: "502" },
+  { classe: "2B", punti: "441" },
+  { classe: "2C", punti: "460" },
+  { classe: "2D", punti: "532" },
+  { classe: "2E", punti: "434" },
+  { classe: "2F", punti: "529" },
+  { classe: "3A", punti: "460" },
+  { classe: "3B", punti: "452" },
+  { classe: "3C", punti: "390" },
+  { classe: "3D", punti: "552" },
+  { classe: "3E", punti: "481" },
+  { classe: "3F", punti: "569" },
+  { classe: "4A", punti: "490" },
+  { classe: "4B", punti: "486" },
+];

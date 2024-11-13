@@ -16,7 +16,7 @@ export const menu = [
 ]
 
 export const logoUrl =
-  'https://i.postimg.cc/zvqYsPKD/SFP-DON-BOSCO-SAN-DONA-BIANCO.png'
+  '/images/logo-semplice.jpg'
 
 export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 
