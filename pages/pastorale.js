@@ -111,7 +111,7 @@ export default function Home() {
         textAlign: 'center',
       }}>
  <div>
-  <a href="https://www.tuo-link.com" target="_blank" rel="noopener noreferrer">
+  <a href="" target="_blank" rel="noopener noreferrer">
     <img 
       src="/images/pastorale/timeline.jpg" 
       alt="Immagine 1" 
@@ -126,7 +126,7 @@ export default function Home() {
 </div>
 
         <div>
-  <a href="https://skillypig.donboscosandona.it/home/student?course_id=45" target="_blank" rel="noopener noreferrer">
+  <a href="" target="_blank" rel="noopener noreferrer">
     <img 
       src="/images/pastorale/beyou.jpg" 
       alt="Immagine 2" 
