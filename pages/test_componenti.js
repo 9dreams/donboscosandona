@@ -36,7 +36,9 @@ export default function Home({ data, elementi }) {
       />
 
       <Logos url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png' />
+      <div>
       <Test domande={domande_test} />
+      </div>
       <Calendar
         title='Una settimana di allegria'
         description='Scopri tutti gli eventi'
