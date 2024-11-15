@@ -1,4 +1,5 @@
 import { Container, Grid, Typography } from '@mui/material'
+import React from 'react'
 import {
   Carousel,
   Certifications,
@@ -23,18 +24,20 @@ import {
 export default function Home({ data }) {
   return (
     <Layout>
-       <Featured data={data} limit={4} defaultTag='scuola' />
-      <News title='News' data={data} limit={4} />
-      <SwiperNews title='News' data={data} limit={6} defaultTag='scuola' />
-
-    <Carousel slides={slides} />
-
+      <Carousel slides={slides} />
+      <center><h1>Questa pagina è gestita dall'Associazione AGESCI GRUPPO SAN DONA' DI PIAVE 1 </h1></center>
       <Products
-        title='I prodotti'
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
         cardWidth={4}
         cardWidthXs={12}
         products={prodotti}
+      />
+       <LandingHero
+        opacity={0.5}
+        title='Progetto educativo'
+        description='Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!'
+        buttonUrl='j'
+        buttonText='Guarda il video'
+        imageUrl='https://source.unsplash.com/random'
       />
       <Products
         title='Prodotti con sole immagini'
@@ -62,105 +65,6 @@ export default function Home({ data }) {
         cardWidth={4}
         imageUrl='https://images8.alphacoders.com/948/948649.jpg'
       />
-      <Paragraph
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-        avatarImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
-        l’ultima campanella dell’anno scolastico inizia quel periodo tanto
-        atteso dove finalmente si può fare ciò che si vuole, senza troppi
-        vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
-        compiti che preoccupano. Spensieratezza! Questa l’attesa più grande
-        durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande
-        l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza
-        diventa noia, la libertà diventa ozio e pigrizia e il tempo libero
-        rischia di diventare tempo perso.
-      </Paragraph>
-      <Paragraph
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-        leftImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
-        l’ultima campanella dell’anno scolastico inizia quel periodo tanto
-        atteso dove finalmente si può fare ciò che si vuole, senza troppi
-        vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
-        compiti che preoccupano. Spensieratezza! Questa l’attesa più grande
-        durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande
-        l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza
-        diventa noia, la libertà diventa ozio e pigrizia e il tempo libero
-        rischia di diventare tempo perso.
-      </Paragraph>
-      <Paragraph
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-        rightImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
-        l’ultima campanella dell’anno scolastico inizia quel periodo tanto
-        atteso dove finalmente si può fare ciò che si vuole, senza troppi
-        vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
-        compiti che preoccupano. Spensieratezza! Questa l’attesa più grande
-        durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande
-        l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza
-        diventa noia, la libertà diventa ozio e pigrizia e il tempo libero
-        rischia di diventare tempo perso.
-      </Paragraph>
-      <Paragraph
-        topImageUrl='https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg'
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-        columnCount={2}
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso.
-      </Paragraph>
-      <Paragraph
-        backgroundImageUrl='https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg'
-        backgroundColor='orange'
-        opacity={0.8}
-        blur='0.2rem'
-        color='white'
-        title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
-      >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso.
-      </Paragraph>
       <Table
         title='Titolo della tabella'
         subtitle='Sottotitolo della tabella'
@@ -243,25 +147,33 @@ const features = [
 // slides per il carousel
 let slides = [
   {
-    titolo: 'Fatti un bel giro',
-    descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
     immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
-    colore: '#ED4C67',
-    colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
-    blur: '0.5rem',
-    buttonText: 'Scopri di più!',
-    buttonUrl: 'https:...',
+      'http://archive.inoratorio.it/img/column/30211472303b1645d1cc12c0b503416a79219df9.jpg?1665322182',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
-    descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#22aa22',
+    immagine:
+      'http://archive.inoratorio.it/img/column/b41dd3b003f0eeef7f195fc1f9e4c2d4814a69c7.jpg?1634159948',
   },
+  {
+    immagine:
+      'http://archive.inoratorio.it/img/column/6cfd0ee28b4e543860f59597dd0510dae98b2416.jpg?1665321888',
+  },
+  {
+    immagine:
+      'http://archive.inoratorio.it/img/column/9b3d72396bee3cc873722302f24aec00e3cf162d.jpg?1634159658',
+  },
+  {
+    immagine:
+      'http://archive.inoratorio.it/img/column/fea4a85745f8307bfff4906a807f1af9e382c893.jpg?1634158926',
+  },
+  {
+    immagine:
+      'http://archive.inoratorio.it/img/column/cb5129068d2fa21e287c5eebc0beefb7d344ee63.jpg?1634159425',
+  },
+  
 ]
+
+
 
 // Il nostro team
 let members = [
@@ -308,32 +220,55 @@ let members = [
 
 let prodotti = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
-    description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+    title: 'Il Clan alla comunità di Marango !',
+    description:"Quest'anno il Clan ha partecipato al Triduo Pasquale con la comunità di Marango, passando tre giorni intrisi di spiritualità e testimonianze...",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'http://archive.inoratorio.it/img/column/3b4d5d12fd49d1f3468accaf4ea709c605597591.jpg?1713518833',
+      url: '/energia',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Nuove amicizie per il Clan !',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Abbiamo avuto la fortuna di ospitare un Clan proveniente da...",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      'http://archive.inoratorio.it/img/column/3ac4ab8c7107c11f143e15d564166b8165433572.jpg?1708362939',
     url: '/energia',
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
-    description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+    title: 'La Comunità Capi in cammino su progettualità e condivisione',
+    description:'',
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    'http://archive.inoratorio.it/img/column/edd7c6737d36471dc3a86a295dc2d8283b503491.jpg?1707810839',
+    url: '/informatico',
+  },
+  {
+    title: 'chi siamo',
+    description:
+      "Visione e condivisione: il progetto del capo, un filo che unisce la Co.Ca.",
+    immagineUrl:
+      'https://www.cesarelanza.com/wp/wp-content/uploads/2019/01/domanda-omino.jpg',
+    url: '/informatico',
+  },
+  {
+    title: 'storia',
+    description:
+      "Visione e condivisione: il progetto del capo, un filo che unisce la Co.Ca.",
+    immagineUrl:
+      'https://www.meteoweb.eu/wp-content/uploads/2017/01/STORIA.jpg',
+    url: '/informatico',
+  },
+  {
+    title: 'La Comunità Capi in cammino su progettualità e condivisione',
+    description:
+      "Visione e condivisione: il progetto del capo, un filo che unisce la Co.Ca.",
+    immagineUrl:
+      'https://static.vecteezy.com/ti/vettori-gratis/p1/3720498-icona-telefono-icona-telefono-simbolo-per-app-e-messenger-vettoriale.jpg',
     url: '/informatico',
   },
 ]
+
+
+
 
 const testimonials = [
   {

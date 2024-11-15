@@ -60,6 +60,7 @@ export default function MyCarousel({
             }}
             elevation={5}
           >
+            
             <Box
               sx={{
                 position: 'absolute',

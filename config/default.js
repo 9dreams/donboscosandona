@@ -9,12 +9,12 @@ export const siteBaseUrl = 'https://www.inoratorio.it'
 
 export const menu = [
     { title: 'Home', url: '/' },
-    { title: 'Proposta Estate', url: 'https://per.donboscosandona.it' },
-    { title: 'Cinema', url: 'https://cinema.donboscosandona.it' },
-    { title: 'Scuola', url: 'https://www.donboscosandona.it' },
-    { title: 'Soggiorno Marino', url: 'https://www.soggiornodonbosco.it' },
-    { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
-    { title: 'Segnalazione illeciti', url: 'http://archive.inoratorio.it/whistleblowing' },
+    { title: 'Chi siamo', url: 'https://per.donboscosandona.it' },
+    { title: 'La nostra storia', url: 'https://cinema.donboscosandona.it' },
+    { title: 'Oratorio', url: 'https://www.donboscosandona.it' },
+    { title: 'Scuola', url: 'https://www.soggiornodonbosco.it' },
+    { title: 'Cinema', url: 'http://archive.inoratorio.it/privacy-policy' },
+    { title: 'Contatti', url: 'http://archive.inoratorio.it/whistleblowing' },
 ]
 
 export const logoUrl = '/images/logo_inoratorio.png'
