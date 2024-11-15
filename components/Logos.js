@@ -7,6 +7,7 @@ export default function TheLogo(props) {
       backgroundColor='props.color'
       sx={{ padding: { xs: '1rem',lg: '2rem' } }}
     >
+      
       <Grid container spacing={2}>
         <Grid item xs={12} lg={12}>
           <img src={props.url} width='100%' />
