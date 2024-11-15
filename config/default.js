@@ -55,10 +55,11 @@ const socials = [
 ]
 
 let images = [
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
+  { title: '', imageUrl: 'https://archive.donboscosandona.it/img/column/42480c58c90ada8ff75c443fdde83ae71fea75ac.jpg?1539529685' },
+  { title: '', imageUrl: 'https://archive.donboscosandona.it/img/column/417afaa0f0697f0f0aabf9ccf61030769cb76f14.jpg?1539529180' },
+  { title: '', imageUrl: 'https://archive.donboscosandona.it/img/column/97f264e9d16a0856dd2cb973630af1cac4426f73.jpg?1539529314' },
+  { title: '', imageUrl: 'https://archive.donboscosandona.it/img/column/b0bd034769ac3471bf375239f1e64e39f5684aa6.jpg?1539523300' },
+  { title: '', imageUrl: 'https://archive.donboscosandona.it/img/column/342f349c6bb5bbf9a37b95353df2bee2309b9792.jpg?1539524741' },
 ]
 
 export const footer = (
@@ -67,9 +68,8 @@ export const footer = (
     color='#272727'
     opacitycolor='1'
     opacity={1}
-    title1='About Us'
-    description1="Footer che apparirà sul fondo di tutte le pagine del sito. Sarà possibile passare al componente un'immagine di sfondo opzionale oppure un colore di sfondo. L'attributo opaciy permetterà di sovrapporre all'immagine un Box con il colore di sfondo e un'opacità regolabile.
-La prima colonna sarà destinata a un testo descrittivo, la seconda ai social, la terza a un menù di navigazione grafico (che porta ad es. ai settori).
+    title1='CHI SIAMO'
+    description1="La SFP “don Bosco” di San Donà di Piave (VE) è una scuola della formazione professionale salesiana che prepara i giovani al mondo del lavoro, accompagnandoli in un percorso integrale di crescita umana e professionale..
 "
     title2='Social Feed'
     socials={socials}
