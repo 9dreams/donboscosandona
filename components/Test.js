@@ -73,7 +73,7 @@ export default function Test(props) {
       {indice < n ? (
         <>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-            {item.immagine} 
+           <img src={item.immagine}/>
             
           </div>
 

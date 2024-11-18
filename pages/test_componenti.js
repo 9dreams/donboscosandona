@@ -504,7 +504,7 @@ let sponsor = [
 let domande_test = [
   {
     domanda: 'Se sulla strada vedi delle strisce pedonali dipinte male...',
-    immagine: <img src='images/strisce.jpg' /> ,
+    immagine: 'images/strisce.jpg' ,
     a: {
       risposta: 'Le evito',
       elettrico: 1,
@@ -532,7 +532,7 @@ let domande_test = [
   },
   {
     domanda: 'Seconda domanda',
-    immagine: <img src='images/mike.jpg' /> ,
+    immagine:' images/mike.jpg',
     a: {
       risposta: 'aaaaa',
       elettrico: 1,
@@ -560,7 +560,7 @@ let domande_test = [
   },
   {
     domanda: 'Terza domanda',
-    immagine: <img src='images/scimmia.jpg' /> ,
+    immagine: 'images/scimmia.jpg' ,
     a: {
       risposta: 'aaaaa',
       elettrico: 1,
