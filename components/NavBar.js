@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   FaHome,
@@ -17,6 +16,13 @@ const Navbar2 = () => {
     setIsOpen(!isOpen);
   };
 
+  const links = [
+    { label: "Home", icon: <FaHome />, href: "#home" },
+    { label: "Chi siamo", icon: <FaInfoCircle />, href: "#chi-siamo" },
+    { label: "Laboratori", icon: <FaServicestack />, href: "#laboratori" },
+    { label: "Contattaci", icon: <FaPhone />, href: "#contattaci" },
+  ];
+
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 text-gray-800 rounded-xl px-4 mt-4 shadow-md backdrop-blur-lg bg-opacity-70 bg-white border-2 border-gray-400 mx-4 md:mx-auto max-w-screen-xl"
@@ -26,38 +32,30 @@ const Navbar2 = () => {
     >
       <div className="flex justify-between items-center h-20 px-6 mx-auto">
         <div className="flex items-center">
-          <Link href="/">
-            <motion.img
-              src="/images/logo_no_background.png"
-              alt="Logo"
-              className="h-12 w-auto"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.3 }}
-            />
-          </Link>
+          {/* Aggiungi il logo senza Link di Next.js */}
+          <motion.img
+            src="/images/logo_anffas_no_background.png"
+            alt="Logo"
+            className="h-12 w-auto"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          />
         </div>
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6">
-          {[
-            { label: "Home", icon: <FaHome /> },
-            { label: "Chi siamo", icon: <FaInfoCircle /> },
-            { label: "Laboratori", icon: <FaServicestack /> },
-            { label: "Contattaci", icon: <FaPhone /> },
-          ].map((item) => (
+          {links.map((item) => (
             <motion.li
               key={item.label}
               className="flex items-center space-x-2 hover:text-green-500 transition-all duration-200"
-              whileHover={{ scale: 1.1, color: "#68d391" }}
+              whileHover={{ scale: 1.1, color: "#223E91" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.2, delay: 0.05 }}
             >
-              <Link href={`/${item.label.toLowerCase()}`}>
-                <div className="flex items-center space-x-2">
-                  {item.icon}
-                  <span>{item.label}</span>
-                </div>
-              </Link>
+              <a href={item.href} className="flex items-center space-x-2">
+                {item.icon}
+                <span>{item.label}</span>
+              </a>
             </motion.li>
           ))}
         </div>
@@ -94,21 +92,16 @@ const Navbar2 = () => {
         style={{ overflow: "hidden" }}
       >
         <ul className="flex flex-col items-center space-y-4">
-          {[
-            { label: "Home", icon: <FaHome size={24} /> },
-            { label: "Chi siamo", icon: <FaInfoCircle size={24} /> },
-            { label: "Laboratori", icon: <FaServicestack size={24} /> },
-            { label: "Contattaci", icon: <FaPhone size={24} /> },
-          ].map((item) => (
+          {links.map((item) => (
             <li key={item.label} className="flex items-center space-x-3">
-              <Link
-                href={`/${item.label.toLowerCase()}`}
+              <a
+                href={item.href}
                 className="block px-8 py-2 hover:text-green-500 transition duration-200 flex items-center space-x-3"
                 onClick={toggleMenu}
               >
                 <span>{item.icon}</span>
                 <span className="text-lg font-medium">{item.label}</span>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

@@ -19,6 +19,7 @@ import { motion } from "framer-motion";
 export default function Footer2() {
   return (
     <Box
+    id="contattaci"
       sx={{
         backgroundColor: "#f5f5f5",
         paddingY: 4,

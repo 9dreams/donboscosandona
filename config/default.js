@@ -1,11 +1,12 @@
 import Footer from '/components/Footer'
 import NavBar from '/components/NavBar'
 
-export const siteName = 'CFP DON BOSCO'
-export const siteTitle = 'CFP DON BOSCO - San Donà di Piave'
+export const siteName = 'ANFFAS San Donà di Piave';
+export const siteTitle = 'ANFFAS - San Donà di Piave';
 export const siteDescription =
-  'Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave'
-export const siteBaseUrl = 'https://dev.donboscosandona.it'
+  'Sito ufficiale di ANFFAS San Donà di Piave, associazione di famiglie di persone con disabilità intellettive e del neuro-sviluppo';
+export const siteBaseUrl = 'https://dev.donboscosandona.it';
+
 
 export const menu = [
   { title: 'Chi siamo', url: '/chi-siamo' },
