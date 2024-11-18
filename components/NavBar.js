@@ -1,142 +1,113 @@
-import * as React from 'react'
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Divider from '@mui/material/Divider'
-import Drawer from '@mui/material/Drawer'
-import IconButton from '@mui/material/IconButton'
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemText from '@mui/material/ListItemText'
-import MenuIcon from '@mui/icons-material/Menu'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaServicestack,
+  FaPhone,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 
-import styles from './NavBar.module.css'
+const Navbar2 = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-// import { siteName, menu, logoUrl } from '/config/default'
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-const drawerWidth = 240
-
-export default function DrawerAppBar({
-  menu,
-  siteName,
-  logoUrl,
-  bgcolor,
-  drawerBgcolor,
-  drawerTextColor,
-  color,
-  elevation,
-  textShadow,
-}) {
-  const [mobileOpen, setMobileOpen] = React.useState(false)
-
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState)
-  }
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant='h6' sx={{ my: 2, color: drawerTextColor }}>
-        {logoUrl ? (
-          <img src={logoUrl} style={{ width: '100%', padding: '1rem'}} />
-        ) : (
-          <h2>{siteName}</h2>
-        )}
-      </Typography>
-      <List>
-        {menu.map((item) => (
-          <ListItem key={item.title} disablePadding>
-            <ListItemButton
-              sx={{ textAlign: 'center', color: drawerTextColor }}
-              href={item.url}
-            >
-              <ListItemText primary={item.title} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  )
-
-  const container = undefined
+  const links = [
+    { label: "Home", icon: <FaHome />, href: "#home" },
+    { label: "Chi siamo", icon: <FaInfoCircle />, href: "#chi-siamo" },
+    { label: "Laboratori", icon: <FaServicestack />, href: "#laboratori" },
+    { label: "Contattaci", icon: <FaPhone />, href: "#contattaci" },
+  ];
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar component='nav' sx={{ bgcolor: bgcolor }} elevation={elevation}>
-        <Toolbar>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 text-gray-800 rounded-xl px-4 mt-4 shadow-md backdrop-blur-lg bg-opacity-70 bg-white border-2 border-gray-400 mx-4 md:mx-auto max-w-screen-xl"
+      style={{
+        marginTop: "20px",
+      }}
+    >
+      <div className="flex justify-between items-center h-20 px-6 mx-auto">
+        <div className="flex items-center">
+          {/* Aggiungi il logo senza Link di Next.js */}
+          <motion.img
+            src="/images/logo_anffas_no_background.png"
+            alt="Logo"
+            className="h-12 w-auto"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+        {/* Desktop Links */}
+        <div className="hidden md:flex space-x-6">
+          {links.map((item) => (
+            <motion.li
+              key={item.label}
+              className="flex items-center space-x-2 hover:text-green-500 transition-all duration-200"
+              whileHover={{ scale: 1.1, color: "#223E91" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2, delay: 0.05 }}
+            >
+              <a href={item.href} className="flex items-center space-x-2">
+                {item.icon}
+                <span>{item.label}</span>
+              </a>
+            </motion.li>
+          ))}
+        </div>
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="focus:outline-none focus:ring-2 focus:ring-white"
+            aria-label="Toggle Menu"
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant='h6'
-            component='div'
-            sx={{ flexGrow: 1, textAlign: {xs: 'right', md: 'left'}, display: { xs: 'block', sm: 'block' } }}
-          >
-            {logoUrl ? (
-              <img src={logoUrl} className={styles.logo} style={{ padding: '1rem', align: 'right'}} />
+            {isOpen ? (
+              <FaTimes className="w-6 h-6" />
             ) : (
-              <h2>{siteName}</h2>
+              <FaBars className="w-6 h-6" />
             )}
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {menu.map((item) => (
-              <Button
-                key={item.title}
-                className={styles.link}
-                sx={{
-                  color: { color },
-                  textShadow: textShadow,
-                  fontSize: '1.1rem',
-                }}
-                href={item.url}
-              >
-                {item.title}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <Box component='nav'>
-        <Drawer
-          container={container}
-          variant='temporary'
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': {
-              boxSizing: 'border-box',
-              width: drawerWidth,
-              bgcolor: drawerBgcolor,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-    </Box>
-  )
-}
+          </button>
+        </div>
+      </div>
 
-DrawerAppBar.defaultProps = {
-  siteName: '',
-  menu: [],
-  logoUrl: '',
-  bgcolor: 'transparent',
-  drawerBgcolor: '#1289A7',
-  drawerTextColor: '#fff',
-  color: '#ccc',
-  elevation: 0,
-  textShadow: '', // '1px 1px 3px #000',
-}
+      {/* Mobile Links */}
+      <motion.div
+        className={`md:hidden ${isOpen ? "block" : "hidden"}`}
+        initial={{ opacity: 0, height: 0 }}
+        animate={{
+          opacity: isOpen ? 1 : 0,
+          height: isOpen ? "auto" : 0,
+          transition: { duration: 0.3, ease: "easeInOut" },
+        }}
+        exit={{
+          opacity: 0,
+          height: 0,
+          transition: { duration: 0.3, ease: "easeInOut" },
+        }}
+        style={{ overflow: "hidden" }}
+      >
+        <ul className="flex flex-col items-center space-y-4">
+          {links.map((item) => (
+            <li key={item.label} className="flex items-center space-x-3">
+              <a
+                href={item.href}
+                className="block px-8 py-2 hover:text-green-500 transition duration-200 flex items-center space-x-3"
+                onClick={toggleMenu}
+              >
+                <span>{item.icon}</span>
+                <span className="text-lg font-medium">{item.label}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
+    </nav>
+  );
+};
+
+export default Navbar2;

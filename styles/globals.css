@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300&family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Bebas Neue', cursive !important;
+  font-family: "Onest", cursive !important;
 }
 
 h5,
@@ -19,12 +18,16 @@ a,
 p,
 th,
 td {
-  font-family: 'Figtree', sans-serif !important;
+  font-family: "Onest", sans-serif !important;
+}
+
+/* Aggiungi questa parte per applicare Onest */
+.navbar-logo {
+  font-family: "Onest", sans-serif !important; /* Applica Onest al logo */
 }
 
 html,
 body {
-  margin: 0 !important;
-  padding: 0 !important;
-  font-family: 'Figtree', sans-serif !important;
+  font-family: "Onest", sans-serif !important;
+  background-color: #f1f5f9;
 }
