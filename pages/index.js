@@ -5,10 +5,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 const carouselImages = [
-    '/images/carouselbirra.jpg',
-    '/images/carouselbirra.jpg',
-    '/images/carouselbirra.jpg',
-    '/images/carouselbirra.jpg'
+    '/images/carouselbirra1.jpg',
+    '/images/carouselbirra2.jpg',
+    '/images/carouselbirra3.jpg',
+    '/images/carouselbirra4.jpg'
 ];
 
 const cardData = [
@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <div>
       
-      <AppBar position="static" class='bg-yellow-700'>
+      <AppBar position="static" class='bg-yellow-600'>
         <Toolbar>
           <Typography variant="h4">Birreria Salesiani</Typography>
         </Toolbar>
@@ -68,7 +68,7 @@ export default function Home() {
       <Container sx={{ marginTop: 5 }}>
         <Grid container spacing={6} justifyContent="center">
           {cardData.map((card, index) => (
-            <Grid item xs={12} sm={7} md={6} key={index}>
+            <Grid item xs={12} sm={7} md={6} key={index} >
               <Card>
                 <CardMedia
                   component="img"
