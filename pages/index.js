@@ -354,7 +354,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: 'Un potente computer connesso a internet.',
+      risposta: 'Un set di chiavi inglesi di ogni dimensione.',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -446,7 +446,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: ' La creazione di software innovativi. ',
+      risposta: 'La produzione di energia da fonti rinnovabili.',
       elettrico: 0,
       energia: 3,
       informatico: 0,
@@ -458,7 +458,7 @@ let domande_test = [
     domanda: 'Se potessi avere un superpotere, quale sceglieresti?',
     immagine: '/images/test/6.jpg',
     a: {
-      risposta: 'Se potessi avere un superpotere, quale sceglieresti?  ',
+      risposta: 'Controllare ogni macchina con la mente',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -474,7 +474,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: 'Teletrasportarmi in qualsiasi circuito elettrico ',
+      risposta: 'Hackerare qualsiasi sistema con un battito di ciglia',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -698,7 +698,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: '  Un hacker che si infiltra nei sistemi informatici più protetti ',
+      risposta: 'Un pilota di Formula 1 che sfreccia a velocità supersonica',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -850,7 +850,7 @@ let domande_test = [
     domanda: 'Quale problema ti piacerebbe contribuire a risolvere?',
     immagine: '/images/test/20.jpg',
     a: {
-      risposta: ' Quale problema ti piacerebbe contribuire a risolvere?  ',
+      risposta: 'La riduzione delle emissioni inquinanti nel settore dei trasporti ',
       elettrico: 0,
       energia: 2,
       informatico: 0,
@@ -866,7 +866,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: '  Il miglioramento dell^efficienza energetica degli elettrodomestici  ',
+      risposta: 'Lo sviluppo di sistemi di intelligenza artificiale per la sicurezza informatica',
       elettrico: 0,
       energia: 0,
       informatico: 3,
