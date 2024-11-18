@@ -105,7 +105,7 @@ export default function Test(props) {
               </b>
             </p>
             <Typography variant='h5' gutterBottom>
-              Domanda {indice + 1}/{n}:<b>{item.domanda}</b>
+              Domanda {indice + 1}/{n}: <b>{item.domanda}</b>
             </Typography>
             <TableContainer component={Paper} sx={{ marginBottom: 2 }}>
               <Table>
