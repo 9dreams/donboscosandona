@@ -469,5 +469,6 @@ let sponsor = [
   'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
   'https://www.comitec.it/img/logo.png?v=1.1',
   'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
-  'https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png',
+  'https://images.squarespace-cdn.com/content/v1/5a9651691137a60b454560da/1520306528003-SNVBGH088XW7W7NM8F06/11340-oculus-logo-hero-vertical-447x362.png',
+  'https://framerusercontent.com/images/LUfj3Wtf4rSkQ19ocMokPTaCJI.svg',
 ]
