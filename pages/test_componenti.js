@@ -36,7 +36,9 @@ export default function Home({ data, elementi }) {
       />
 
       <Logos url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png' />
+      <div>
       <Test domande={domande_test} />
+      </div>
       <Calendar
         title='Una settimana di allegria'
         description='Scopri tutti gli eventi'
@@ -502,7 +504,7 @@ let sponsor = [
 let domande_test = [
   {
     domanda: 'Se sulla strada vedi delle strisce pedonali dipinte male...',
-    immagine: '',
+    immagine: 'images/strisce.jpg' ,
     a: {
       risposta: 'Le evito',
       elettrico: 1,
@@ -530,7 +532,7 @@ let domande_test = [
   },
   {
     domanda: 'Seconda domanda',
-    immagine: '',
+    immagine:' images/mike.jpg',
     a: {
       risposta: 'aaaaa',
       elettrico: 1,
@@ -558,7 +560,7 @@ let domande_test = [
   },
   {
     domanda: 'Terza domanda',
-    immagine: '',
+    immagine: 'images/scimmia.jpg' ,
     a: {
       risposta: 'aaaaa',
       elettrico: 1,
