@@ -1,5 +1,5 @@
 import { Container, Grid, Typography, Box } from '@mui/material'
-import { Layout, NewsCard } from '/components'
+import { Layout, NewsCard, Credits } from '/components'
 import { AccessTime, Info, Group, Star } from '@mui/icons-material'
 
 export default function Home({ data, elementi }) {
@@ -149,6 +149,9 @@ export default function Home({ data, elementi }) {
           </Grid>
         </Box>
       </Container>
+      <div className='m-10'>
+        <Credits />
+      </div>
     </Layout>
   )
 }
