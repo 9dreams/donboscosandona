@@ -13,6 +13,9 @@ export const menu = [
   { title: 'Dove siamo', url: '/dove-siamo' },
   { title: 'Privacy', url: '/privacy' },
   { title: 'Trasparenza', url: '/trasparenza' },
+  { title: 'Trasparenza', url: '/meccanico' },
+  { title: 'Trasparenza', url: '/lavoro' },
+  
 ]
 
 export const logoUrl =
@@ -25,6 +28,8 @@ const menuFooter = [
   { title: 'Energie', url: '/energie' },
   { title: 'Elettrico', url: '/elettrico' },
   { title: 'Trasparenza', url: '/trasparenza' },
+  { title: 'Meccanico', url: '/meccanico' },
+  { title: 'Lavoro', url: '/lavoro' },
 ]
 
 const socials = [
@@ -71,7 +76,7 @@ export const footer = (
     title1='CHI SIAMO'
     description1="La SFP “don Bosco” di San Donà di Piave (VE) è una scuola della formazione professionale salesiana che prepara i giovani al mondo del lavoro, accompagnandoli in un percorso integrale di crescita umana e professionale..
 "
-    title2='Social Feed'
+    title2='Social'
     socials={socials}
     title3='I Settori'
     images={images}
