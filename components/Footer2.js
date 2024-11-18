@@ -1,144 +1,135 @@
-// components/Footer2.js
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
 
-import {
-    Container,
-    Grid,
-    Typography,
-    TextField,
-    Button,
-    Box,
-    IconButton,
-  } from "@mui/material";
-  import FacebookIcon from "@mui/icons-material/Facebook";
-  import TwitterIcon from "@mui/icons-material/Twitter";
-  import InstagramIcon from "@mui/icons-material/Instagram";
-  import { motion } from "framer-motion";
-  
-  export default function Footer2() {
-    return (
+export default function Footer(props) {
+  return (
+    <Container maxWidth={true} disableGutters={true}>
       <Box
         sx={{
-          backgroundColor: "#f5f5f5", // Sfondo grigio chiaro
-          paddingY: 4,
-          paddingBottom: 0, // Rimosso il padding inferiore
-          borderTop: "5px solid #388e3c", // Bordo verde
+          position: "relative",
+          top: 0,
+          bottom: 0,
+          right: 0,
+          left: 0,
+          backgroundColor: props.color,
         }}
       >
         <Container maxWidth="lg">
-          <Grid container spacing={4}>
-            {/* Sezione Informazioni */}
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" fontWeight="bold" sx={{ color: "#2e7d32" }}>
-                Chi Siamo
+          <Grid container spacing={3}>
+            {/* Chi siamo */}
+            <Grid item xs={12} lg={4}>
+              <Typography component="h1" color="White" paddingBottom="2rem">
+                {props.title1}
               </Typography>
-              <Typography variant="body2" paragraph>
-                Anffas Nazionale è un'organizzazione che si impegna a difendere i diritti e il benessere delle persone con disabilità intellettive e delle loro famiglie.
-              </Typography>
-            </Grid>
-  
-            {/* Sezione Link Utili */}
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" fontWeight="bold" sx={{ color: "#2e7d32" }}>
-                Link Utili
-              </Typography>
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Typography component="a" href="/" color="inherit" underline="hover">Home</Typography>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Typography component="a" href="/services" color="inherit" underline="hover">Servizi</Typography>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Typography component="a" href="/events" color="inherit" underline="hover">Eventi</Typography>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <Typography component="a" href="/contact" color="inherit" underline="hover">Contatti</Typography>
-              </motion.div>
-            </Grid>
-  
-            {/* Sezione Servizi Offerti */}
-            <Grid item xs={12} md={4}>
-              <Typography variant="h6" fontWeight="bold" sx={{ color: "#2e7d32" }}>
-                I Nostri Servizi
-              </Typography>
-              <Typography variant="body2" paragraph>
-                - Tutela dei diritti
-                <br />
-                - Supporto ai familiari
-                <br />
-                - Formazione e sensibilizzazione
-                <br />
-                - Inclusione sociale
+              <Typography component="h5" color="darkgrey" paragraph>
+                {props.description1}
               </Typography>
             </Grid>
-          </Grid>
-  
-          {/* Sezione Contatti e Social */}
-          <Grid container spacing={4} marginTop={2}>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" fontWeight="bold" sx={{ color: "#2e7d32" }}>
-                Contatti
+
+            {/* Social Feed */}
+            <Grid item xs={12} lg={4}>
+              <Typography component="h1" color="White" paddingBottom="2rem">
+                {props.title2}
               </Typography>
-              <Typography variant="body2" paragraph>
-                Email: info@anffasnazionale.it
+              <Typography component="h1" color="White">
+                {props.socials.map((social) => (
+                  <Container sx={{ padding: "0.5rem" }}>
+                    <Link
+                      color="inherit"
+                      noWrap
+                      key={social.title}
+                      variant="body2"
+                      href={social.url}
+                      sx={{ p: 1, flexShrink: 0 }}
+                    >
+                      <img src={social.imageUrl} width="20" />
+                      {social.title}
+                    </Link>
+                  </Container>
+                ))}
               </Typography>
-              <Typography variant="body2">
-                Telefono: +39 123 456 789
-              </Typography>
-              <Box marginTop={2}>
-                <IconButton href="https://www.facebook.com/" target="_blank" color="inherit">
-                  <FacebookIcon sx={{ color: "#2e7d32" }} />
-                </IconButton>
-                <IconButton href="https://twitter.com/" target="_blank" color="inherit">
-                  <TwitterIcon sx={{ color: "#2e7d32" }} />
-                </IconButton>
-                <IconButton href="https://www.instagram.com/" target="_blank" color="inherit">
-                  <InstagramIcon sx={{ color: "#2e7d32" }} />
-                </IconButton>
-              </Box>
             </Grid>
-  
-            {/* Sezione Iscrizione alla Newsletter */}
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" fontWeight="bold" sx={{ color: "#2e7d32" }}>
-                Iscriviti alla Newsletter
+
+            {/* Immagini */}
+            <Grid item xs={12} lg={4}>
+              <Typography component="h1" color="White" paddingBottom="2rem">
+                {props.title3}
               </Typography>
-              <TextField
-                label="La tua Email"
-                variant="outlined"
-                fullWidth
-                sx={{ marginTop: 1, backgroundColor: "white" }}
-              />
-              <Button
-                variant="contained"
+              <Grid container spacing={2} minHeight={160}>
+                {props.images.map((image) => (
+                  <Grid
+                    item
+                    xs={4}
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <Link
+                      color="inherit"
+                      noWrap
+                      variant="body2"
+                      sx={{ p: 1, flexShrink: 3 }}
+                    >
+                      <img src={image.imageUrl} width="120" />
+                    </Link>
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+
+            {/* Linea */}
+            <Grid item xs={12}>
+              <Typography component="h1">
+                <hr />
+              </Typography>
+            </Grid>
+
+            {/* Menù */}
+            <Grid item xs={12} lg={8}>
+              <Toolbar
+                component="nav"
+                variant="dense"
                 sx={{
-                  marginTop: 2,
-                  backgroundColor: "#2e7d32",
-                  color: "white",
-                  "&:hover": {
-                    backgroundColor: "#388e3c",
-                    transform: "scale(1.05)",
-                  },
-                  transition: "transform 0.3s",
+                  overflowX: "auto",
+                  float: "right",
+                  color: "#fff",
                 }}
               >
-                Iscriviti
-              </Button>
+                <Grid container sx={{ marginBottom: "10px", pb: "10px" }}>
+                  {props.menu.map((link) => (
+                    <Button
+                      color="inherit"
+                      noWrap
+                      key={link.title}
+                      variant="body2"
+                      href={link.url}
+                      sx={{ p: 1, flexShrink: 0, marginRight: "20px" }}
+                    >
+                      {link.title}
+                    </Button>
+                  ))}
+                </Grid>
+              </Toolbar>
+            </Grid>
+
+            {/* Copyright */}
+            <Grid item xs={12} lg={4}>
+              <Typography
+                component="h1"
+                color="White"
+                sx={{ marginLeft: "27px", marginBottom: "15px" }}
+              >
+                {props.copyright}
+              </Typography>
             </Grid>
           </Grid>
         </Container>
-        <Box
-          sx={{
-            textAlign: "center",
-            marginTop: 4,
-            padding: 2,
-            backgroundColor: "#e0f2f1", // Sfondo grigio chiaro per il copyright
-          }}
-        >
-          <Typography variant="body2">
-            © 2024 Anffas Nazionale. Tutti i diritti riservati.
-          </Typography>
-        </Box>
       </Box>
-    );
-  }
-  
+    </Container>
+  );
+}

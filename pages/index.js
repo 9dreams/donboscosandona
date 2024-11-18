@@ -1,3 +1,4 @@
+import { Container, Grid, Typography } from "@mui/material";
 import {
   Carousel,
   Certifications,
@@ -5,266 +6,127 @@ import {
   LandingHero,
   Features,
   Products,
+  Calendar,
   Testimonials,
   Team,
   Maps,
+  Paragraph,
+  Table,
+  News,
+  NewsCard,
   SwiperNews,
   Featured,
+  NavBar,
+  NavBar2,
   Logos,
-  Paragraph,
+  Sponsor,
   Elements,
-  Navbar2,
+  Footer2,
 } from "/components";
 
-// I punti di forza
-const features = [
-  {
-    title: "Progetto educativo",
-    imageUrl:
-      "https://archive.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png",
-    description:
-      "Un progetto chiaro e affidabile per far crescere e diventare uomini. ",
-  },
-  {
-    title: "Didattica attiva",
-    imageUrl:
-      "https://archive.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png",
-    description:
-      "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.",
-  },
-  {
-    title: "Laboratori",
-    imageUrl:
-      "https://archive.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.png",
-    description:
-      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
-  },
-  {
-    title: "Servizi al lavoro",
-    imageUrl:
-      "https://archive.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png",
-    description:
-      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
-    url: "/sal",
-  },
-];
-
-let laboratoriSettimali = [
-  {
-    title: "Potenziamento cognitivo",
-    description:
-      "Tenuto dalla psicologa Marianna Trevisiol, mira all'acquisizione delle potenzialità cognitive nei più giovani e al mantenimento negli associati più anziani.",
-  },
-  {
-    title: "Autonomia",
-    description:
-      "Con questo laboratorio vengono insegnate abilità per migliorare l’indipendenza degli associati.",
-  },
-  {
-    title: "Musigiocando",
-    description:
-      "Laboratorio espressivo in cui i ragazzi sperimentano e scoprono nuove sensazioni e modi di suonare tramite strumenti, anche inusuali, specialmente per chi ha un linguaggio non verbale.",
-  },
-  {
-    title: "Sessualità",
-    description:
-      "Laboratorio di affettività che aiuta a comprendere le sensazioni e stimoli del corpo quando si sviluppano amicizia o affetto verso un’altra persona.",
-  },
-  {
-    title: "Cucina",
-    description:
-      "Creazione di ricette sempre nuove, con la soddisfazione di portare a casa e condividere con la famiglia ciò che si è cucinato.",
-  },
-  {
-    title: "Manualità",
-    description:
-      "Stimolo della creatività e uso della manualità fine, in base alle proprie capacità.",
-  },
-  {
-    title: "Canto",
-    description:
-      "Un laboratorio per liberare la voglia di esprimersi e di farsi sentire dal mondo intero.",
-  },
-  {
-    title: "Ballo",
-    description:
-      "Attività in cui ci si scatena nei movimenti e si ascoltano le belle sensazioni del corpo attraverso la danza.",
-  },
-  {
-    title: "Shiatsu Qi-gong",
-    description:
-      "Laboratorio di rilassamento ed ascolto del proprio corpo. Gli associati vengono trattati dalle insegnanti e a turno trattano i compagni per beneficio reciproco.",
-  },
-  {
-    title: "Nordic Walking",
-    description:
-      "Camminare con i bastoncini seguendo il ritmo dell'istruttore, ammirando la natura e l'aria aperta.",
-  },
-  {
-    title: "Musica Band",
-    description:
-      "Laboratorio musicale che stimola il cervello isolando un suono e componendo assieme ai compagni un brano musicale.",
-  },
-  {
-    title: "Fotografia",
-    description:
-      "Laboratorio per imparare a fare foto e osservare il mondo circostante, migliorando l'autonomia degli associati.",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Michele Venturato",
-    imageUrl:
-      "https://i.postimg.cc/3NMjxmcp/Screenshot-2023-03-19-alle-16-36-15.png",
-    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
-    social: "@Google",
-  },
-  {
-    imageUrl: "/images/home/recensioni/bob.png",
-    name: "Daniele M.",
-    text: "Ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
-    social: "@BOBTEK",
-  },
-  {
-    imageUrl: "/images/home/recensioni/giacomo.png",
-    name: "Giacomo P.",
-    text: "In questi anni il don Bosco mi ha dato molto: gli insegnati lavorano con passione e trattano i propri alunni come dei veri amici, per qualsiasi tipo di problema sono sempre al tuo fianco ed è una cosa da non dare per nulla per scontata. La scuola aiuta molto ad inserirsi anche nel mondo del lavoro grazie alle esperienze acquisite nei vari laboratori ma soprattutto grazie alle esperienze di stage offerte. In questi anni ho ricevuto una formazione completa formandomi come lavoratore ma soprattutto come uomo.",
-    social: "@PISTO",
-  },
-];
-
-let certifications = [
-  {
-    logoUrl: "/images/certification/iso.png",
-    text1: "ISO 9001:2015",
-    text2: "Reg. n. 2593-A - Settore EA: 37",
-  },
-  {
-    logoUrl: "/images/certification/kiwa.png",
-    text1:
-      "Progettazione ed erogazione di attività formative e di orientamento",
-  },
-  {
-    logoUrl: "/images/certification/knx.png",
-    text1: "Authorised Training Center",
-  },
-  {
-    logoUrl: "/images/certification/regioneveneto.png",
-    text1: "Cod. A033 - Formazione Iniziale,",
-    text2: "Superiore e Orientamento",
-  },
-];
-
-let link_utili = [
-  {
-    title: "Regolamento",
-    description:
-      "Il regolamento sottoscritto a inizio anno, che tutti gli allievi si impegnano a rispettare.",
-    immagineUrl: "/images/home/regolamento.png",
-    url: "https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96c2ed50875db2d6bc536633e55dab4b1d4c1288/Regolamento%20San%20Dona%CC%80%20Settembre%202023.pdf",
-  },
-  {
-    title: "ScuolaOnLine",
-    description: "Accesso al registro elettronico per genitori e allievi.",
-    immagineUrl: "/images/home/scuolaonline.png",
-    url: "https://scuolaonline.soluzione-web.it/SOL_0264/",
-  },
-  {
-    title: "ORATORIO DON BOSCO",
-    description:
-      "La SFP DON BOSCO sorge all'interno dell'Oratorio don Bosco: visita il sito.",
-    immagineUrl: "/images/home/inoratorio.png",
-    url: "https://cinema.donboscosandona.it",
-  },
-  {
-    description:
-      "La nostra Scuola ha anche un Cinema: scopri la programmazione.",
-    immagineUrl: "/images/home/cinema_don_bosco.png",
-    url: "https://cinema.donboscosandona.it",
-  },
-];
-
-export default function Home({ data, movies, elementi }) {
+export default function Home({ data, elementi }) {
   return (
     <Layout>
-      <Featured data={data} defaultTag="scuola" />
-      <Logos url="/images/home/loghi_sponsor.png" />
-      <Featured data={elementi} limit={4} defaultTag="scuola" height={90} />
-      <SwiperNews title="News" data={data} limit={12} defaultTag="scuola" />
-      <Elements
-        data={elementi}
-        limit={6}
-        md={4}
-        aspectRatio="3 / 2"
-        borderRadius="10px"
-      />
-      <Products
-        title="I laboratori settimanali"
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
-        cardWidth={4}
-        cardWidthXs={12}
-        products={laboratoriSettimali}
-      />
-      <Carousel slides={slides} />
-      <Features
-        title="I nostri punti di forza"
-        description="Scopri perché SFP DON BOSCO è davvero la scuola che fa al caso tuo!"
-        features={features}
-        cardWidth={3}
-      />
-      <SwiperNews title="Al cinema" data={movies} limit={12} />
-      <Products cardWidth={3} products={link_utili} aspectRatio="4 / 2" />
-      <Testimonials
-        testimonials={testimonials}
-        cardWidth={4}
-        imageUrl="/images/home/recensioni/sfondo.jpg"
-      />
-      <Maps
-        maxWidth="100%"
-        maxHeight="550px"
-        url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit"
-      />
-      <Certifications cardWidth={3} certifications={certifications} />
+      <div style={{ width: "100%", position: "relative" }}>
+        <video width="100%" height="auto" controls autoPlay loop muted>
+          <source src="/images/A_VIDEO PRESENTAZIONE.mov" type="video/mp4" />
+          Il tuo browser non supporta il tag video.
+        </video>
+      </div>
+      <Container>
+        <div className="testo" style={{ marginTop: "2rem" }}>
+          <Typography
+            variant="h3"
+            gutterBottom
+            align="center"
+            sx={{ fontWeight: "bold" }}
+          >
+            Chi Siamo
+          </Typography>
+          <Typography variant="body1" paragraph>
+            <strong>Anffas San Donà di Piave APS</strong>, ente locale di Anffas
+            Nazionale, Associazione di famiglie di persone con disabilità
+            intellettive e del neuro-sviluppo, è un Ente del Terzo Settore
+            presente nel territorio sandonatese dal 1974, con quasi 100 famiglie
+            iscritte, provenienti dai comuni dell’Asl 4 Veneto Orientale.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            Le finalità associative sono la tutela e la promozione della persona
+            con disabilità intellettiva, promuovendo l’inclusione sociale nei
+            vari ambiti: inclusione scolastica, inserimento inclusivo nel
+            proprio contesto sociale e nel mondo del lavoro. Le attività che
+            Anffas offre ai propri aderenti, familiari ed anche ai non iscritti
+            all’Associazione, includono:
+          </Typography>
+          <ul style={{ paddingLeft: "1.5rem", margin: "1rem 0" }}>
+            <li>Consulenza ed informazione alle famiglie</li>
+            <li>Assistenza per le pratiche burocratiche</li>
+            <li>Sostegno e consulenza psicologica</li>
+            <li>Informazioni legali</li>
+          </ul>
+          <Typography variant="body1" paragraph>
+            Ogni settimana, oltre 70 persone con disabilità di tutte le età
+            frequentano la sede, partecipando a numerosi laboratori, tra cui:
+          </Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <ul>
+                <li>Informatica</li>
+                <li>Percorsi di autonomia</li>
+                <li>Musicoterapia</li>
+                <li>Corso di musica</li>
+                <li>Potenziamento cognitivo</li>
+              </ul>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <ul>
+                <li>Fotografia</li>
+                <li>Cucina ed autonomia domestica</li>
+                <li>Manualità</li>
+                <li>Balli latinoamericani</li>
+                <li>Shiatsu-qi gong</li>
+              </ul>
+            </Grid>
+          </Grid>
+          <Typography variant="body1" paragraph>
+            Durante l’estate, proponiamo un centro estivo e il progetto
+            campeggio. Nei fine settimana, organizziamo feste, momenti di
+            ritrovo, attività ludico-motorie e collaborazioni con enti e altre
+            associazioni del territorio. I corsi sono tenuti da personale
+            specializzato, dipendenti, collaboratori e numerosi volontari.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            <strong>Orari:</strong> La struttura è aperta dal lunedì al venerdì,
+            dalle 8:00 alle 12:30 e dalle 15:00 alle 18:30.
+          </Typography>
+        </div>
+        <div className="margin">
+          <Typography
+            variant="h4"
+            gutterBottom
+            align="center"
+            sx={{ marginTop: 4 }}
+          >
+            I nostri laboratori
+          </Typography>
+          <Grid container spacing={4} justifyContent="center">
+            {prodotti.map((prodotto) => (
+              <Grid item xs={12} sm={6} md={4} key={prodotto.id}>
+                <NewsCard post={prodotto} />
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+      </Container>
     </Layout>
   );
 }
 
-/* // This gets called on every request
-export async function getServerSideProps() {
-  const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona'
-  )
-  const data = await res.json()
-
-  // Pass data to the page via props
-  return { props: { data } }
-} */
-
-// This function gets called at build time on server-side.
-// It may be called again, on a serverless function, if
-// revalidation is enabled and a new request comes in
 export async function getStaticProps() {
   let res = await fetch(
-    "https://channels.donboscosandona.it/api/posts/inoratorio?q=scuola"
+    "https://channels.donboscosandona.it/api/posts/inoratorio"
   );
   const data = await res.json();
-
-  res = await fetch("https://cinema.donboscosandona.it/movie/featured.json");
-  let movie_data = await res.json();
-  movie_data = movie_data.filter((movie) => movie.hero_path);
-
-  const movies = movie_data.map((movie) => ({
-    titolo: movie.title,
-    abstract: movie.overview,
-    immagine:
-      movie.hero_path.substring(0, 1) == "/"
-        ? "https://cinema.donboscosandona.it" + movie.hero_path
-        : movie.hero_path,
-    link: "https://cinema.donboscosandona.it",
-    in_evidenza: false,
-    tag: movie.showtimes[0].date,
-  }));
 
   res = await fetch(
     "https://channels.donboscosandona.it/api/posts/donboscosandona_elements"
@@ -272,44 +134,233 @@ export async function getStaticProps() {
   const elementi = await res.json();
 
   return {
-    props: { data, movies, elementi },
+    props: { data, elementi },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 minutes
-    revalidate: 1200, // In secondi: il build viene fatto al massimo una volta ogni dieci minuti
+    revalidate: 1800, // In secondi: il build viene fatto al massimo una volta ogni mezzora
   };
 }
 
-let slides = [
+// I punti di forza
+const features = [
   {
-    titolo: "Visita virtuale",
-    descrizione:
-      "Scopri tutti i segreti della nostra Scuola con il tour virtuale!",
-    immagine: "/images/home/vr.webp",
-    buttonText: "Inizia il tour",
-    buttonUrl: "https://archive.donboscosandona.it/virtual-tour/index.htm",
+    title: "Progetto educativo",
+    imageUrl:
+      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    description:
+      "Un progetto chiaro e affidabile per far crescere e diventare uomini. ",
+    url: "https://cinema.donboscosandona.it",
+  },
+  {
+    title: "Didattica attiva",
+    imageUrl:
+      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    description:
+      "Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.",
+  },
+  {
+    title: "Laboratori",
+    imageUrl:
+      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    description:
+      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
+  },
+  {
+    title: "Servizi al lavoro",
+    imageUrl:
+      "https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png",
+    description:
+      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
   },
 ];
 
-let classi = [
-  { classe: "1A", punti: "538" },
-  { classe: "1B", punti: "548" },
-  { classe: "1C", punti: "528" },
-  { classe: "1D", punti: "487" },
-  { classe: "1E", punti: "531" },
-  { classe: "1F", punti: "567" },
-  { classe: "2A", punti: "502" },
-  { classe: "2B", punti: "441" },
-  { classe: "2C", punti: "460" },
-  { classe: "2D", punti: "532" },
-  { classe: "2E", punti: "434" },
-  { classe: "2F", punti: "529" },
-  { classe: "3A", punti: "460" },
-  { classe: "3B", punti: "452" },
-  { classe: "3C", punti: "390" },
-  { classe: "3D", punti: "552" },
-  { classe: "3E", punti: "481" },
-  { classe: "3F", punti: "569" },
-  { classe: "4A", punti: "490" },
-  { classe: "4B", punti: "486" },
+let servizi = [
+  {
+    id: 1,
+    titolo: "Toelettatura",
+    immagine: "https://img.pgol.it/meta/0124-Toelettatura.jpg",
+    pubblicazione: "Disponibile ora",
+    abstract:
+      "Servizio professionale di toelettatura per tutti i tipi di animali.",
+  },
+  {
+    id: 2,
+    titolo: "Servizio di adozione",
+    immagine:
+      "https://www.comunecoriglianorossano.eu/wp-content/uploads/2021/08/cani-min.jpg",
+    pubblicazione: "Sempre attivo",
+    abstract: "Adotta un amico a quattro zampe e cambia la sua vita!",
+  },
+  {
+    id: 3,
+    titolo: "Consulenza veterinaria",
+    immagine:
+      "https://naturopet.it/wp-content/uploads/2019/03/consulenza-veterinaria-Naturopet.png",
+    pubblicazione: "Disponibile su appuntamento",
+    abstract:
+      "Consulenze veterinarie professionali per la salute del tuo animale.",
+  },
+];
+
+// slides per il carousel
+let slides = [
+  {
+    titolo: "Fatti un bel giro",
+    descrizione:
+      "Scopri tutti i segreti del nostro centro con il tour virtuale!",
+    immagine:
+      "https://www.anffas.net/wp-content/uploads/2021/06/anffas-sandon%C3%A0-di-piave-sede-1.jpg",
+    colore: "#ED4C67",
+    colore2: "rgba(100,100,100,0)",
+    opacity: 0.8,
+    blur: "0.5rem",
+    buttonText: "Scopri di più!",
+    buttonUrl: "https://www.anffas.net/sede",
+  },
+  {
+    titolo: "I nostri laboratori",
+    descrizione:
+      "Scopri i nostri laboratori settimanali per persone con disabilità intellettive e del neuro-sviluppo.",
+    immagine:
+      "https://www.anffas.net/wp-content/uploads/2021/06/anffas-sandon%C3%A0-di-piave-laboratori-1.jpg",
+    colore: "#22aa22",
+    colore2: "rgba(100,100,100,0)",
+    buttonText: "Scopri i laboratori!",
+    buttonUrl: "https://www.anffas.net/laboratori",
+  },
+  {
+    titolo: "Sostieni Anffas",
+    descrizione:
+      "Sostieni Anffas San Donà di Piave donando il tuo 5xmille, a te non costa niente e per noi è importante!",
+    immagine:
+      "https://www.anffas.net/wp-content/uploads/2021/06/anffas-sandon%C3%A0-di-piave-donazioni-1.jpg",
+    colore: "#3498db",
+    colore2: "rgba(100,100,100,0)",
+    buttonText: "Donazione",
+    buttonUrl: "https://www.anffas.net/donazioni",
+  },
+];
+
+let prodotti = [
+  {
+    id: 1,
+    titolo: "Potenziamento cognitivo",
+    immagine: "/images/potenziamento_cognitivo.jpg",
+    pubblicazione: "Tenuto dalla psicologa Marianna Trevisiol",
+    abstract:
+      "Mira all'acquisizione delle potenzialità cognitive negli associati più giovani ed al mantenimento in quelli più anziani.",
+    articolo: true,
+    tag: "Cognitivo, Psicologia",
+  },
+  {
+    id: 2,
+    titolo: "Autonomia",
+    immagine: "",
+    pubblicazione: "Laboratorio di sviluppo personale",
+    abstract:
+      "Con questo laboratorio vengono insegnate competenze per l'autonomia.",
+    articolo: true,
+    tag: "Autonomia, Sviluppo personale",
+  },
+  {
+    id: 3,
+    titolo: "Musigiocando",
+    immagine: "",
+    pubblicazione: "Laboratorio espressivo",
+    abstract:
+      "I ragazzi sperimentano e scoprono, tramite l'uso di strumenti, anche inusuali, nuove sensazioni e modi di esprimersi.",
+    articolo: true,
+    tag: "Musica, Espressione",
+  },
+  {
+    id: 4,
+    titolo: "Sessualità",
+    immagine: "",
+    pubblicazione: "Laboratorio di affettività",
+    abstract:
+      "Obiettivo di rendere comprensibili le sensazioni e gli stimoli che il corpo emette nelle relazioni interpersonali.",
+    articolo: true,
+    tag: "Affettività, Educazione",
+  },
+  {
+    id: 5,
+    titolo: "Cucina",
+    immagine: "/images/cucina.jpg",
+    pubblicazione: "Laboratorio creativo",
+    abstract:
+      "Si creano ricette nuove con la soddisfazione di portare a casa ciò che si è fatto e condividerlo con la famiglia.",
+    articolo: true,
+    tag: "Cucina, Creatività",
+  },
+  {
+    id: 6,
+    titolo: "Manualità",
+    immagine: "/images/manualità.jpg",
+    pubblicazione: "Laboratorio creativo",
+    abstract:
+      "Stimolo della creatività e uso della manualità fine limitatamente alle proprie potenzialità.",
+    articolo: true,
+    tag: "Manualità, Creatività",
+  },
+  {
+    id: 7,
+    titolo: "Canto",
+    immagine: "/images/musicaband.jpg",
+    pubblicazione: "Laboratorio musicale",
+    abstract:
+      "Liberiamo la nostra voglia di farci sentire ed ascoltare al mondo intero!",
+    articolo: true,
+    tag: "Canto, Musica",
+  },
+  {
+    id: 8,
+    titolo: "Ballo",
+    immagine: "/images/ballo.jpg",
+    pubblicazione: "Laboratorio di movimento",
+    abstract:
+      "Scateniamoci nel movimento ed ascoltiamo le belle sensazioni che il corpo riceve tramite la danza.",
+    articolo: true,
+    tag: "Ballo, Movimento",
+  },
+  {
+    id: 9,
+    titolo: "Shiatsu qi-gong",
+    immagine: "/images/SHIATSU.jpg",
+    pubblicazione: "Laboratorio di rilassamento",
+    abstract:
+      "Rilassamento ed ascolto del proprio corpo, con trattamenti reciproci tra i partecipanti.",
+    articolo: true,
+    tag: "Shiatsu, Rilassamento",
+  },
+  {
+    id: 10,
+    titolo: "Nordic Walking",
+    immagine: "",
+    pubblicazione: "Attività all'aria aperta",
+    abstract:
+      "Camminare con i bastoncini al ritmo dell'istruttore e nel contempo poter stare all'aria aperta ammirando la bellezza della natura.",
+    articolo: true,
+    tag: "Nordic Walking, Natura",
+  },
+  {
+    id: 11,
+    titolo: "Musica Band",
+    immagine: "/images/bandmusicale.jpg",
+    pubblicazione: "Laboratorio musicale",
+    abstract:
+      "Con particolari strumenti, permette di stimolare attivamente il cervello aumentando la capacità di isolare un singolo suono e comporre assieme ai compagni un brano musicale.",
+    articolo: true,
+    tag: "Musica, Band",
+  },
+  {
+    id: 12,
+    titolo: "Fotografia",
+    immagine: "",
+    pubblicazione: "Laboratorio creativo",
+    abstract:
+      "Impariamo a fare delle belle foto ed osservare il mondo che ci sta attorno al fine di potenziare l'autonomia!",
+    articolo: true,
+    tag: "Fotografia, Autonomia",
+  },
 ];

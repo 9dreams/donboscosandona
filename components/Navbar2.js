@@ -28,7 +28,7 @@ const Navbar2 = () => {
         <div className="flex items-center">
           <Link href="/">
             <motion.img
-              src="https://lh6.googleusercontent.com/proxy/oB-C1yTTEIvCEBRz_5dj7s7WhvPVWE4K2C8MG6iKieYD3YGrLKkp4Lv2P9eJNG6uiCff_RXkYhYKkdaD"
+              src="/images/logo_no_bg.png"
               alt="Logo"
               className="h-12 w-auto"
               whileHover={{ scale: 1.1 }}
