@@ -2,10 +2,8 @@ import { useState } from 'react';
 import { Container, Typography, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 
 export default function Test(props) {
-  // numero di domande presenti
   let n = props.domande.length;
 
-  // stato contenente l'indice della domanda corrente
   const [indice, setIndice] = useState(0);
   const [elettrico, setElettrico] = useState(0);
   const [energia, setEnergia] = useState(0);
@@ -43,7 +41,6 @@ export default function Test(props) {
     }
   }
 
-  // Funzione per ottenere il nome e il colore del settore con la percentuale più alta
   function categorieConPercentualePiuAlta() {
     const categorie = {
       Elettrico: elettrico,
@@ -63,19 +60,23 @@ export default function Test(props) {
     return percentuali.filter(item => parseFloat(item.percentuale) === maxPercentuale);
   }
 
-  // Mappa dei colori per i settori
   const coloriSettori = {
-    Elettrico: 'yellow',
-    Energia: 'orange',
-    Informatico: 'yellow',
-    Meccanico: 'green',
-    Motoristico: 'red',
+    Elettrico: '#add8e6',
+    Energia: '#ffcc80',
+    Informatico: '#ffeb3b',
+    Meccanico: '#98fb98',
+    Motoristico: '#f08080',
   };
 
   return (
     <Container maxWidth="lg" sx={{ backgroundColor: 'whitesmoke', padding: 2 }}>
       {indice < n ? (
         <>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+            {item.immagine} 
+            
+          </div>
+
           <Typography variant="h5" gutterBottom>
             <b>Domanda {indice + 1}/{n}: {item.domanda}</b>
           </Typography>
@@ -121,42 +122,41 @@ export default function Test(props) {
         </>
       )}
 
-      {/* Mostra la tabella delle percentuali solo dopo che tutte le domande sono state risposte */}
       {indice === n && (
         <TableContainer component={Paper} sx={{ marginTop: 3 }}>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell><b>Categoria</b></TableCell>
-                <TableCell align="right"><b>Punteggio</b></TableCell>
-                <TableCell align="right"><b>Percentuale</b></TableCell>
+                <TableCell sx={{ fontSize: '1.2rem' }}><b>Categoria</b></TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.2rem' }}><b>Punteggio</b></TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.2rem' }}><b>Percentuale</b></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               <TableRow style={{ backgroundColor: coloriSettori.Elettrico }}>
-                <TableCell>Elettrico</TableCell>
-                <TableCell align="right">{elettrico}</TableCell>
-                <TableCell align="right">{percentuale(elettrico)}%</TableCell>
+                <TableCell sx={{ fontSize: '1.1rem' }}>Elettrico</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{elettrico}</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{percentuale(elettrico)}%</TableCell>
               </TableRow>
               <TableRow style={{ backgroundColor: coloriSettori.Energia }}>
-                <TableCell>Energia</TableCell>
-                <TableCell align="right">{energia}</TableCell>
-                <TableCell align="right">{percentuale(energia)}%</TableCell>
+                <TableCell sx={{ fontSize: '1.1rem' }}>Energia</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{energia}</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{percentuale(energia)}%</TableCell>
               </TableRow>
               <TableRow style={{ backgroundColor: coloriSettori.Informatico }}>
-                <TableCell>Informatico</TableCell>
-                <TableCell align="right">{informatico}</TableCell>
-                <TableCell align="right">{percentuale(informatico)}%</TableCell>
+                <TableCell sx={{ fontSize: '1.1rem' }}>Informatico</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{informatico}</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{percentuale(informatico)}%</TableCell>
               </TableRow>
               <TableRow style={{ backgroundColor: coloriSettori.Meccanico }}>
-                <TableCell>Meccanico</TableCell>
-                <TableCell align="right">{meccanico}</TableCell>
-                <TableCell align="right">{percentuale(meccanico)}%</TableCell>
+                <TableCell sx={{ fontSize: '1.1rem' }}>Meccanico</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{meccanico}</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{percentuale(meccanico)}%</TableCell>
               </TableRow>
               <TableRow style={{ backgroundColor: coloriSettori.Motoristico }}>
-                <TableCell>Motoristico</TableCell>
-                <TableCell align="right">{motoristico}</TableCell>
-                <TableCell align="right">{percentuale(motoristico)}%</TableCell>
+                <TableCell sx={{ fontSize: '1.1rem' }}>Motoristico</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{motoristico}</TableCell>
+                <TableCell align="right" sx={{ fontSize: '1.1rem' }}>{percentuale(motoristico)}%</TableCell>
               </TableRow>
             </TableBody>
           </Table>
