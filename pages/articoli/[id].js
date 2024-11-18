@@ -5,13 +5,12 @@ import { Container, Typography, Chip, Stack } from '@mui/material'
 
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
+import Paragraph from '/components/Paragraph'
 
 import { getIdArticoli } from '../../lib/articoli'
 
 export default function Show({ data }) {
   if (!data) return <div>Caricamento...</div>
-
-  console.log(data)
 
   return (
     <Layout>
@@ -51,6 +50,7 @@ export default function Show({ data }) {
           {data.pubblicazione}
         </Typography>
         <div dangerouslySetInnerHTML={{ __html: data.content }} />
+        <p>&nbsp;</p>
         {data.tag && (
           <Stack direction='row' spacing={1}>
             {data.tag.split(',').map((tag) => (
@@ -76,7 +76,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const paths = await getIdArticoli()
-  console.log(paths)
+
   return {
     paths,
     fallback: 'blocking',

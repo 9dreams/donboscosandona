@@ -21,7 +21,7 @@ export default function Home({ data }) {
       <Paragraph
         title='Operatore Informatico'
         subtitle='Qualifica triennale'
-        rightImageUrl='https://archive.donboscosandona.it/img/ck/168ae5996c23866c9a579f8c6d948f441cb0697e.png'
+        rightImageUrl='/images/codici_progetti.png'
       >
         L'Operatore informatico interviene nel processo di sviluppo e gestione
         di prodotti e servizi informatici. Supporta operativamente sistemi, reti
@@ -255,9 +255,9 @@ let primo_anno = [
     immagineUrl: '/images/informatico/arduino.png',
   },
   {
-    title: 'Java',
-    description: 'Imparerai le basi della programmazione divertendoti a istruire con i tuoi compagni di squadra un robot simulato che dovrà gareggiare con tutti gli altri.',
-    immagineUrl: '/images/informatico/robocode.jpg',
+    title: 'C# E UNITY',
+    description: 'Unity è un potente motore di gioco che ti permette di creare mondi virtuali straordinari: sarà l\'occasione per familiarizzare con C#, un moderno linguaggio di programmazione a oggetti. ',
+    immagineUrl: '/images/informatico/csharpeunity.jpg',
   },
 ]
 
@@ -469,5 +469,6 @@ let sponsor = [
   'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
   'https://www.comitec.it/img/logo.png?v=1.1',
   'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
-  'https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png',
+  'https://images.squarespace-cdn.com/content/v1/5a9651691137a60b454560da/1520306528003-SNVBGH088XW7W7NM8F06/11340-oculus-logo-hero-vertical-447x362.png',
+  'https://framerusercontent.com/images/LUfj3Wtf4rSkQ19ocMokPTaCJI.svg',
 ]

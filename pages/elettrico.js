@@ -14,14 +14,14 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <img
-        src='/images/informatico/settore-elettrico.jpg'
-        style={{ width: '100%' }}
+      <LandingHero
+        imageUrl="/images/elettrico/home_elettrico.png"
+        height={100}
       />
       <Paragraph
         title='Operatore Elettrico'
         subtitle='Qualifica triennale'
-        rightImageUrl='https://archive.donboscosandona.it/img/ck/9957d0b12e8146011f93c1de45aaf2012a2d30fa.png'
+        rightImageUrl='/images/codici_progetti.png'
       >
         L’operatore elettrico interviene nel processo di progettazione,
         installazione e manutenzione degli impianti elettrici civili e
@@ -152,7 +152,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona?q=elettrico'
+    'https://channels.donboscosandona.it/api/posts/inoratorio?q=elettrico'
   )
   const data = await res.json()
 
@@ -166,27 +166,27 @@ let primo_anno = [
   {
     title: 'Forbici e cacciaviti',
     description: 'Imparare l’uso di forbici e cacciaviti',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/forbici-cacciaviti.jpg',
   },
   {
     title: 'Tubo e scatole',
     description: 'Installazione e montaggio degli elementi di supporto all’impianto',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/tubo-e-scatole.jpg',
   },
   {
     title: 'Cablaggio',
     description: 'Passaggio fili e cablaggio dei dispositivi',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/cablaggio.jpg',
   },
   {
     title: 'Trasformazione',
     description: 'Trasformazione di un impianto da tradizionale a smart',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/da-tradizzionale-a-smart-traformazione.jpg',
   },
   {
     title: 'Configurazione Smart',
     description: 'Configurazione dei dispositivi smart con app dedicate',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/configurazzione-smart.jpg',
   },
 ]
 
@@ -194,42 +194,42 @@ let secondo_anno = [
   {
     title: 'Impianti tradizionali',
     description: 'Installazione di impianti su box di simulazione',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/impianti-tradizionali.jpg',
   },
   {
     title: 'Impianti domotici',
     description: 'Installazione e configurazione di impianti domotici',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/impianti-domotici.jpg',
   },
   {
     title: 'Simulazione',
     description: 'Utilizzo di software per la simulazione di impianti industriali',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/simulazione.jpg',
   },
   {
     title: 'Quadri',
     description: 'Montaggio di quadri di comando',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/quadri.jpg',
   },
   {
     title: 'Dispositivi industriali',
     description: 'Installazione e cablaggio di dispositivi industriali',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/dispositivi-industriali.jpeg',
   },
   {
     title: 'Motori',
     description: 'Comando di motori elettrici',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/motori-elettrici.jpg',
   },
   {
     title: 'Impianti pneumatici',
     description: 'Realizzazione di impianti ad aria compressa',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/Impianto-pneumatico.jpg',
   },
   {
     title: 'Relè programmabili',
     description: 'Introduzione all’utilizzo di dispositivi logici',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/relè-programmabile.jpg',
   },
 ]
 
@@ -237,32 +237,32 @@ let terzo_anno = [
   {
     title: 'SPAC Automazione',
     description: 'Disegno di schemi son SPAC Automazione',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/spac-automazione.jpg',
   },
   {
     title: 'Functional Safety',
     description: 'Studio e utilizzo dei sistemi di sicurezza funzionale',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/functional-safety.jpg',
   },
   {
     title: 'Inverter',
     description: 'Utilizzo degli inverter per il comando elettronico dei motori elettrici',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/inverter.jpg',
   },
   {
     title: 'PLC',
     description: 'Cablaggio e installazione dei Controllori Logici Programmabili',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/plc.jpg',
   },
   {
     title: 'Programmazione',
     description: 'Programmazione PLC e HMI',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/programmazione-plc-hmi.jpg',
   },
   {
     title: 'KNX',
     description: 'Configurazione e programmazione di sistemi di building automation basati su tecnologia Konnex',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/knx-terzo-anno.jpg',
   },
 ]
 
@@ -270,27 +270,27 @@ let quarto_anno = [
   {
     title: 'PLC Avanzato',
     description: 'Programmazione PLC in TIA Portal',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/plc-avanzato.jpg',
   },
   {
     title: 'HMI Avanzato',
     description: 'Programmazione HMI in TIA Portal',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/hmi.jpg',
   },
   {
     title: 'Sistemi',
     description: 'Programmazione di sistemi industriali complessi',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/sistemi.jpg',
   },
   {
     title: 'KNX',
     description: 'Installazione componenti impianti KNX',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/knx.jpg',
   },
   {
     title: 'ETS',
     description: 'Programmazione di sistemi KNX con software ETS',
-    immagineUrl: '',
+    immagineUrl: '/images/elettrico/ets.jpg',
   },
 ]
 
