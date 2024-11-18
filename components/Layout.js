@@ -20,7 +20,7 @@ export default function Layout({ children }) {
           <title>{siteTitle}</title>
           <meta name="description" content={siteDescription} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="images/favicon.png" />
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
         </Head>
 
         <CookieBanner
