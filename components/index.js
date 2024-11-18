@@ -1,3 +1,5 @@
+export { default as Attivita } from './Attivita'
+export { default as Newsora } from './Newsora'
 export { default as Calendar } from './Calendar'
 export { default as Carousel } from './Carousel'
 export { default as Certifications } from './Certifications'
