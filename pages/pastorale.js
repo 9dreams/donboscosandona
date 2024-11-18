@@ -5,6 +5,8 @@ import LandingHero from '/components/LandingHero.js'
 import Products from '/components/Products'
 import Paragraph from '@/components/Paragraph'
 import { Typography } from '@mui/material'
+import Image from 'next/image';
+
 
 // Voci del menù per il componente LandingHero
 
@@ -54,83 +56,131 @@ export default function Home() {
             <LandingHero
                 opacity={0.5}
                 siteName="CFP DON BOSCO"
-                title="Centro Pastorale"
-                description="Per diventare come insegna don Bosco ''buoni cristiani e onesti cittadini!''"
+                title="Proposta formativa 24/25"
+                description="buoni cristiani e onesti cittadini!"
                 buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
                 buttonText="Guarda il video"
-                imageUrl="https://www.famigliasalesiana.org/public/Pagine/RETTOR-MAGGIORE.jpg"
-                menu={menu} />
+                 imageUrl="/images/pastorale/locandina.jpg"
+               />
 
-            {/*             <LandingHero
-        opacity={0.5}
-        siteName="CFP DON BOSCO"
-        title="Centro di Formazione Professionale don Bosco"
-        description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
-        buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
-        buttonText="Guarda il video"
-        imageUrl="/images/privacy/imgsfondo.webp"
-        menu={menu}
-    /> */}
             <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
+                
+            </Container> 
+              
+            <div style={{ textAlign: 'center' }}>
 
+  <h3 style={{ fontWeight: 'bold', marginTop: '0px', fontSize: '30px' }}>Proposta educativa 2024|2025</h3>
+  <p style={{ fontSize: '20px', color: '#555', marginTop: '0', marginBottom: '10px' }}>
+    Scuola di Volo, Scuola di Vita<br/><br/>
+    ”Il motore è il cuore di un aereo, ma il pilota è la sua anima.”<br/> 
+    Magg. Andrea Rossi - Solista PAN<br/><br/>
+    Questa massima ci aiuta a presentare la nostra proposta formativa.<br/><br/>
+    Ma che cos'è la proposta formativa?<br/> 
+    La proposta formativa è il centro dell’azione educativa. È la modalità con cui ci impegniamo ad educare, formare, animare i giovani della scuola con una molteplicità di iniziative.<br/><br/>
+    Buongiorno<br/> 
+    Ritiri spirituali ed esperienziali<br/> 
+    Attività formative su temi come: Affettività, Volontariato, Amicizia, Dipendenze, Animazione…<br/> 
+    Tornei e giochi<br/> 
+    Feste<br/> 
+    Gite e visite tecniche<br/> 
+    Incontri<br/> 
+    …e molto altro<br/><br/>
+    Ad ispirare la proposta di quest’anno allora, saranno proprio gli aerei!<br/> 
+    Abbiamo infatti pensato di metterli sotto i riflettori e di farne metafora utile a riflettere sulla vita di tutti i giorni, naturalmente con ottica cristiana ma con un’attenzione universale.<br/><br/>
+    Per formare così:<br/>
+    Buoni Cristiani, Onesti Cittadini<br/> 
+    e Professionisti Preparati.<br/><br/>
+    E allora… Allacciate le cinture, chiudete il tavolino davanti a voi e PREPARIAMOCI al DECOLLO!
+  </p>
+</div>
+           <br/> 
+           <br/> 
 
+            <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '50vh',
+      margin: 0,
+    }}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center', 
+        width: '80%',
+        textAlign: 'center',
+      }}>
+ <div>
+  <a href="" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="/images/pastorale/timeline.jpg" 
+      alt="Immagine 1" 
+      style={{
+        width: '50%',
+        height: 'auto',
+        borderRadius: '8px'
+      }} 
+    />
+    <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>Timeline</h3>
+  </a>
+</div>
 
-                <br />
-                <br />
+        <div>
+  <a href="" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="/images/pastorale/beyou.jpg" 
+      alt="Immagine 2" 
+      style={{
+        width: '65%',
+        height: 'auto',
+        borderRadius: '8px'
+      }} 
+    />
+    <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>be you</h3>
+  </a>
+</div>
 
+        <div>
+  <a href="https://www.donboscosandona.it/articoli/201" target="_blank" rel="noopener noreferrer">
+    <img 
+      src="/images/pastorale/Musica.jpeg" 
+      alt="Immagine 3" 
+      style={{
+        width: '80%',
+        height: 'auto',
+        borderRadius: '8px'
+      }} 
+    />
+  </a>
+  <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>progetto musica</h3>
+  <p style={{ fontSize: '14px', color: '#555' }}>Il progetto Musica offre corsi gratuiti per imparare le basi di uno strumento musicale, rendendo l'accesso alla musica possibile per tutti. Un'opportunità per sviluppare competenze e passione, senza costi.</p>
+</div>
 
-                <h1>Obiettivi educativi: la crescita integrale della persona</h1>
-                <p>
-                    <font size="4">
-                        Il progetto educativo del CFP Don Bosco mette al centro il giovane per favorire la sua formazione integrale; lo rende soggetto attivo della sua maturazione coinvolgendolo consapevolmente in un programma di crescita che mira ad una vita piena e gioiosa; lo apre alla dimensione sociale rendendolo capace di contribuire alla crescita della società nella ricerca del bene comune.
-                    </font>
-                </p>
+        </div>
+        </div>
 
-
-                <br />
-
-
-                <h1>La formazione religiosa</h1>
-                <font size="4">
-                    La dimensione etico religiosa viene veicolata attraverso l’insegnamento della religione, le feste, le celebrazioni, gli incontri di preghiera, le giornate di amicizia e riflessione, i ritiri, le manifestazioni giovanili, le esperienze di volontariato, la missionarietà.
-                </font>
-
-
-                <br />
-                <br />
-
-
-                <h1>La formazione della coscienza</h1>
-                <font size="4">
-                    L’educazione impartita in un CFP salesiano rimanda ad un modello di vita e di uomo che deriva dall’antropologia cristiana. Pertanto, il CFP si riserva di: presentare proposte culturali, sociali e civili coerenti con il messaggio cristiano; esprimere una valutazione critica dei modelli in contrasto con tali valori; difendere, nel mondo del lavoro, i diritti dei più deboli.
-                </font>
-
-
-                <br />
-                <br />
-
-
-                <h1>L'educazione dell'affettività</h1>
-                <font size="4">
-                    È fondamentale creare attorno ai giovani un clima educativo ricco di scambi comunicativo-affettivi. II sentirsi accolto, riconosciuto, stimato e amato è, per ogni individuo, la migliore lezione sull’amore.
-                    Allo stesso modo, il confronto con persone che vivono l’amore come forma di rispetto verso sé e gli altri ha la forza della testimonianza. Una vocazione matrimoniale vissuta con convinzione e aperta alla procreazione responsabile, si riverbera sui giovani favorendo l'apertura seria e serena all'amore. La testimonianza del religioso, che vive in modo limpido e lieto la sua donazione nella castità, fa percepire al giovane la possibilità di vivere una simile esperienza d'amore.
-                    Il servizio fraterno ai piccoli ed ai poveri e il contatto guidato con situazioni di sofferenza educa all’amore gratuito.
-                </font>
-
-
-                <br />
-                <br />
-
-
-                <h1>Il Coordinatore Pastorale (Catechista)</h1>
-                <font size="4">
-                    E’ responsabile dell'animazione delle attività pastorali del CFP; organizza i momenti di preghiera, le celebrazioni, le giornate di ritiro e la partecipazione dei giovani ai sacramenti della Riconciliazione e dell’Eucaristia; in collaborazione con il direttore, cura la formazione spirituale salesiana ed educativa dei docenti/formatori; assicura la relazione della CEP con la pastorale della Chiesa locale e con altre istituzioni educative del territorio; garantisce la disponibilità per la direzione spirituale, per i colloqui, per gli incontri personali con i ragazzi; promuove una particolare attenzione ai giovani in difficoltà o non inseriti in un contesto parrocchiale; coordina le iniziative di animazione vocazionale; favorisce il dialogo tra fede e cultura nelle diverse aree di insegnamento; segue l’animazione del tempo libero e delle attività complementari, con particolare attenzione all’associazionismo.
-                </font>
-            </Container><Products
-                title=""
-                description=""
-                cardWidth={4}
-                products={pastorale} />
+<div style={styles.container}>
+      <img 
+        src="/images/pastorale/Partner.png" 
+        alt="Immagine centrata" 
+        style={styles.image} 
+      />
+    </div>
         </Layout>
     )
+
+}
+
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '50vh',
+    margin: 0,
+  },
+  image: {
+    maxWidth: '170%',
+    height: 'auto',
+  },
 }
