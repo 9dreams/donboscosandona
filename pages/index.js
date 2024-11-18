@@ -6,10 +6,7 @@ export default function Home({ data, elementi }) {
   return (
     <Layout>
       <Box id="home" sx={{ position: "relative", width: "100%", mb: 4 }}>
-        <video width="100%" height="auto" controls autoPlay loop muted>
-          <source src="/images/A_VIDEO PRESENTAZIONE.mov" type="video/mp4" />
-          Il tuo browser non supporta il tag video.
-        </video>
+        <img src="images/initial_image.jpg" width="100%" height="100vh"></img>
       </Box>
       <Container>
         <Box sx={{ textAlign: "center", mb: 4 }}>
