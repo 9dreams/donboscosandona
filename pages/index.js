@@ -16,6 +16,7 @@ import {
   Maps,
   SwiperNews,
   Featured,
+  Credits,
 } from '/components'
 
 export default function Home({ data, movies }) {
@@ -70,7 +71,7 @@ export default function Home({ data, movies }) {
           ['ore 7.00', 'ore 7.00', ''],
           ['', '', 'ore 9.00'],
           ['', '', 'ore 10.30'],
-          ['ore 18.30', '', ''],
+          ['ore 18.30', 'ore 18:00', ''],
         ]}
       />
       <Container>
@@ -100,6 +101,9 @@ export default function Home({ data, movies }) {
         maxHeight='550px'
         url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.164099261905!2d12.571927!3d45.629088!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477957021a6f5e37%3A0x2767632f6958496c!2sOratorio%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1682593458374!5m2!1sit!2sit'
       />
+      <div className='m-10'>
+        <Credits />
+      </div>
     </Layout>
   )
 }

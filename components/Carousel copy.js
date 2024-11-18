@@ -1,17 +1,6 @@
 import Carousel from 'react-material-ui-carousel'
-import {
-  Paper,
-  Button,
-  Box,
-  Grid,
-  Typography,
-  Container,
-  Stack,
-  Chip,
-} from '@mui/material'
+import { Paper, Button, Box, Grid, Typography, Container, Stack, Chip } from '@mui/material'
 import styles from './Carousel.module.css'
-
-import Image from 'next/image'
 
 function readMore(string, maxWords) {
   if (string) {
@@ -59,7 +48,10 @@ export default function MyCarousel({
             className={styles.slide}
             sx={{
               position: 'relative',
-              overflow: 'hidden',
+              backgroundImage: {
+                xs: 'url(' + (slide.immagine_mobile || slide.immagine) + ')',
+                lg: 'url(' + slide.immagine + ')',
+              },
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
@@ -68,54 +60,6 @@ export default function MyCarousel({
             }}
             elevation={5}
           >
-            <Container
-              className='hidden lg:block'
-              maxWidth={false}
-              sx={{
-                position: 'absolute',
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                src={slide.immagine}
-                alt={slide.titolo}
-                style={{
-                  width: '100%',
-                  display: 'block',
-                  objectFit: 'cover',
-                }}
-                fill={true}
-                sizes='100vw'
-              />
-            </Container>
-            <Container
-              className='block lg:hidden'
-              maxWidth={false}
-              sx={{
-                position: 'absolute',
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                src={(slide.immagine_mobile || slide.immagine)}
-                alt={slide.titolo}
-                style={{
-                  width: '100%',
-                  display: 'block',
-                  objectFit: 'cover',
-                }}
-                fill={true}
-                sizes='100vw'
-              />
-            </Container>
             <Box
               sx={{
                 position: 'absolute',
@@ -154,10 +98,10 @@ export default function MyCarousel({
                       pr: { md: 0 },
                     }}
                   >
-                    {slide.tag && slide.tag != defaultTag && (
+                    {slide.tag && slide.tag!=defaultTag && (
                       <Stack direction='row' spacing={1} marginBottom={2}>
                         {slide.tag.split(',').map((tag) => (
-                          <Chip label={tag} color='primary' />
+                          <Chip label={tag} color="primary" />
                         ))}
                       </Stack>
                     )}
