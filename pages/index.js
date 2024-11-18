@@ -65,8 +65,8 @@ export default function Home() {
         </Typography>
       </Container>
 
-      <Container sx={{ marginTop: 5 }}>
-        <Grid container spacing={6} justifyContent="center">
+      <Container sx={{ marginTop: 5 }} >
+        <Grid container spacing={6} justifyContent="center" >
           {cardData.map((card, index) => (
             <Grid item xs={12} sm={7} md={6} key={index} >
               <Card>
@@ -77,10 +77,10 @@ export default function Home() {
                   alt={card.title}
                 />
                 <CardContent>
-                  <Typography variant="h5" gutterBottom>
+                  <Typography variant="h5" gutterBottom >
                     {card.title}
                   </Typography>
-                  <Typography variant="body2" color="textSecondary">
+                  <Typography variant="body2" color="textSecondary" >
                     {card.description}
                   </Typography>
                 </CardContent>
