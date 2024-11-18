@@ -281,7 +281,7 @@ let prodotti = [
     pubblicazione: "Tenuto dalla psicologa Marianna Trevisiol",
     abstract:
       "Mira all'acquisizione delle potenzialità cognitive negli associati più giovani ed al mantenimento in quelli più anziani.",
-    articolo: true,
+    articolo: false,
     tag: "Cognitivo, Psicologia",
   },
   {
@@ -291,7 +291,7 @@ let prodotti = [
     pubblicazione: "Laboratorio di sviluppo personale",
     abstract:
       "Con questo laboratorio vengono insegnate competenze per l'autonomia.",
-    articolo: true,
+    articolo: false,
     tag: "Autonomia, Sviluppo personale",
   },
   {
@@ -301,7 +301,7 @@ let prodotti = [
     pubblicazione: "Laboratorio espressivo",
     abstract:
       "I ragazzi sperimentano e scoprono, tramite l'uso di strumenti, anche inusuali, nuove sensazioni e modi di esprimersi.",
-    articolo: true,
+    articolo: false,
     tag: "Musica, Espressione",
   },
   {
@@ -311,7 +311,7 @@ let prodotti = [
     pubblicazione: "Laboratorio di affettività",
     abstract:
       "Obiettivo di rendere comprensibili le sensazioni e gli stimoli che il corpo emette nelle relazioni interpersonali.",
-    articolo: true,
+    articolo: false,
     tag: "Affettività, Educazione",
   },
   {
@@ -321,7 +321,7 @@ let prodotti = [
     pubblicazione: "Laboratorio creativo",
     abstract:
       "Si creano ricette nuove con la soddisfazione di portare a casa ciò che si è fatto e condividerlo con la famiglia.",
-    articolo: true,
+    articolo: false,
     tag: "Cucina, Creatività",
   },
   {
@@ -331,7 +331,7 @@ let prodotti = [
     pubblicazione: "Laboratorio creativo",
     abstract:
       "Stimolo della creatività e uso della manualità fine limitatamente alle proprie potenzialità.",
-    articolo: true,
+    articolo: false,
     tag: "Manualità, Creatività",
   },
   {
@@ -341,7 +341,7 @@ let prodotti = [
     pubblicazione: "Laboratorio musicale",
     abstract:
       "Liberiamo la nostra voglia di farci sentire ed ascoltare al mondo intero!",
-    articolo: true,
+    articolo: false,
     tag: "Canto, Musica",
   },
   {
@@ -351,7 +351,7 @@ let prodotti = [
     pubblicazione: "Laboratorio di movimento",
     abstract:
       "Scateniamoci nel movimento ed ascoltiamo le belle sensazioni che il corpo riceve tramite la danza.",
-    articolo: true,
+    articolo: false,
     tag: "Ballo, Movimento",
   },
   {
@@ -361,7 +361,7 @@ let prodotti = [
     pubblicazione: "Laboratorio di rilassamento",
     abstract:
       "Rilassamento ed ascolto del proprio corpo, con trattamenti reciproci tra i partecipanti.",
-    articolo: true,
+    articolo: false,
     tag: "Shiatsu, Rilassamento",
   },
   {
@@ -371,7 +371,7 @@ let prodotti = [
     pubblicazione: "Attività all'aria aperta",
     abstract:
       "Camminare con i bastoncini al ritmo dell'istruttore e nel contempo poter stare all'aria aperta ammirando la bellezza della natura.",
-    articolo: true,
+    articolo: false,
     tag: "Nordic Walking, Natura",
   },
   {
@@ -381,7 +381,7 @@ let prodotti = [
     pubblicazione: "Laboratorio musicale",
     abstract:
       "Con particolari strumenti, permette di stimolare attivamente il cervello aumentando la capacità di isolare un singolo suono e comporre assieme ai compagni un brano musicale.",
-    articolo: true,
+    articolo: false,
     tag: "Musica, Band",
   },
   {
@@ -391,7 +391,7 @@ let prodotti = [
     pubblicazione: "Laboratorio creativo",
     abstract:
       "Impariamo a fare delle belle foto ed osservare il mondo che ci sta attorno al fine di potenziare l'autonomia!",
-    articolo: true,
+    articolo: false,
     tag: "Fotografia, Autonomia",
   },
 ];
