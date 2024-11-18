@@ -48,7 +48,7 @@ export default function Home() {
       <Carousel>
         {carouselImages.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Carousel Image`} />
+            <img src={image} alt={`Carousel Image`}/>
           </div>
         ))}
       </Carousel>
