@@ -6,7 +6,7 @@ export default function Home({ data, elementi }) {
   return (
     <Layout>
       <Box id="home" sx={{ position: "relative", width: "100%", mb: 4 }}>
-        <img src="images/initial_image.jpg" width="100%" height="100vh"></img>
+        <img src="images/fotoragazzi.jpg" width="100%" height="100vh"></img>
       </Box>
       <Container>
         <Box sx={{ textAlign: "center", mb: 4 }}>
