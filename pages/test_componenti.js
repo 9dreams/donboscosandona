@@ -162,14 +162,15 @@ export default function Home({ data, elementi }) {
         subtitle='Saluto del Direttore'
         columnCount={2}
       >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso.
+       Con l'acquisto del dominio e la definizione del logo, è da oggi operativa 9dreams, la divisione creativa del settore informatico...
+
+Nel settore informatico del CFP DON BOSCO di San Donà di Piave abbiamo sempre portato avanti lo studio di Photoshop, il programma di fotoritocco per eccellenza ma come spesso capita a scuola, quando si relega una cosa a dei semplici esercizi, non si innesca quella scintilla che fa esplodere la passione e apre nuovi orizzonti.
+
+Di questo noi del settore abbiamo una lunga e fortunata esperienza, perché abbiamo scoperto come l'affidare ai nostri allievi l'assistenza informatica di tutto il Centro ci ha permesso da una parte di lavorare su problemi quotidiani reali, rendendo l'esperienza di laboratorio più vicina a quella di una vera azienda, dall'altra di sviluppare quelle competenze relazionali di interazione col cliente che vengono subito riconosciute quando gli allievi entrano in stage.
+
+Quando a novembre in via sperimentale abbiamo acquistato un drone per fare riprese aeree, come insegnante ho avuto la gioia di sbalordirmi di fronte all'esplosione di creatività che questo ha innescato nei miei allievi: non mi vergogno di dire che io non sarei riuscito a pensare con tanta freschezza e vivacità quello che i ragazzi hanno prodotto in pochi giorni... e se questo è solo l'inizio, chissà cosa vedremo quando questa esperienza sarà maturata!
+
+Così un po' alla volta i droni sono diventati due, si sono aggiunti una reflex, una fotocamera a 360°, tre caschi per la realtà virtuale, e chissà cos'altro verrà: ma tornando al discorso introduttivo, i mezzi e la creatività sono niente se non vengono messi al servizio di uno scopo!
       </Paragraph>
       <Paragraph
         backgroundImageUrl='https://www.donnamoderna.com/content/uploads/2020/05/ecoterapia.jpg'
@@ -178,16 +179,16 @@ export default function Home({ data, elementi }) {
         blur='0.2rem'
         color='white'
         title='Perché il tempo spensierato non sia tempo perso'
-        subtitle='Saluto del Direttore'
       >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso.
+      Con l'acquisto del dominio e la definizione del logo, è da oggi operativa 9dreams, la divisione creativa del settore informatico...
+
+Nel settore informatico del CFP DON BOSCO di San Donà di Piave abbiamo sempre portato avanti lo studio di Photoshop, il programma di fotoritocco per eccellenza, ma come spesso capita a scuola, quando si relega una cosa a dei semplici esercizi, non si innesca quella scintilla che fa esplodere la passione e apre nuovi orizzonti.
+
+Di questo noi del settore abbiamo una lunga e fortunata esperienza, perché abbiamo scoperto come l'affidare ai nostri allievi l'assistenza informatica di tutto il Centro ci ha permesso da una parte di lavorare su problemi quotidiani reali, rendendo l'esperienza di laboratorio più vicina a quella di una vera azienda, dall'altra di sviluppare quelle competenze relazionali di interazione col cliente che vengono subito riconosciute quando gli allievi entrano in stage.
+
+Quando a novembre in via sperimentale abbiamo acquistato un drone per fare riprese aeree, come insegnante ho avuto la gioia di sbalordirmi di fronte all'esplosione di creatività che questo ha innescato nei miei allievi: non mi vergogno di dire che io non sarei riuscito a pensare con tanta freschezza e vivacità quello che i ragazzi hanno prodotto in pochi giorni... e se questo è solo l'inizio, chissà cosa vedremo quando questa esperienza sarà maturata!
+
+Così un po' alla volta i droni sono diventati due, si sono aggiunti una reflex, una fotocamera a 360°, tre caschi per la realtà virtuale, e chissà cos'altro verrà: ma tornando al discorso introduttivo, i mezzi e la creatività sono niente se non vengono messi al servizio di uno scopo!
       </Paragraph>
       <Table
         title='Titolo della tabella'
