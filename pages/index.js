@@ -318,7 +318,7 @@ let domande_test = [
     domanda: 'Cosa faresti se trovassi un robot rotto?',
     immagine: '/images/test/1.jpg',
     a: {
-      risposta: ' Lo riparerei immediatamente usando il mio fidato cacciavite sonico!',
+      risposta: 'Lo riparerei immediatamente usando il mio fidato cacciavite sonico!',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -334,7 +334,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: ' Lo collegherei a una presa di corrente ad alta tensione per vedere cosa succede.',
+      risposta: 'Lo collegherei a una presa di corrente ad alta tensione per vedere cosa succede.',
       elettrico: 3,
       energia: 1,
       informatico: 0,
@@ -346,7 +346,7 @@ let domande_test = [
     domanda: 'Qual è il tuo strumento preferito?',
     immagine: '/images/test/2.jpg',
     a: {
-      risposta: 'Un potente computer connesso a internet.',
+      risposta: 'Un potente computer connesso a Internet.',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -374,7 +374,7 @@ let domande_test = [
     domanda: 'Cosa ti piace fare nel tempo libero?',
     immagine: '/images/test/3.jpg',
     a: {
-      risposta: 'Smontare e rimontare motori di auto e moto. ',
+      risposta: 'Smontare e rimontare motori di auto e moto.',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -402,7 +402,7 @@ let domande_test = [
     domanda: 'Quale di queste materie ti piace di più?',
     immagine: '/images/test/4.jpg',
     a: {
-      risposta: 'Fisica, con particolare attenzione all^elettromagnetismo.  ',
+      risposta: 'Fisica, con particolare attenzione all^elettromagnetismo.',
       elettrico: 3,
       energia: 1,
       informatico: 0,
@@ -410,7 +410,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: ' Informatica, con particolare attenzione alla programmazione.',
+      risposta: 'Informatica, con particolare attenzione alla programmazione.',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -418,7 +418,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: 'Meccanica, con particolare attenzione al disegno tecnico. ',
+      risposta: 'Meccanica, con particolare attenzione al disegno tecnico.',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -430,7 +430,7 @@ let domande_test = [
     domanda: 'Cosa ti affascina di più?',
     immagine: '/images/test/5.jpg',
     a: {
-      risposta: 'Il funzionamento di motori a combustione interna.  ',
+      risposta: 'Il funzionamento di motori a combustione interna.',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -438,7 +438,7 @@ let domande_test = [
       motoristico: 3,
     },
     b: {
-      risposta: '  La creazione di software innovativi.',
+      risposta: 'La creazione di software innovativi.',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -466,7 +466,7 @@ let domande_test = [
       motoristico: 3,
     },
     b: {
-      risposta: ' Teletrasportarmi in qualsiasi circuito elettrico',
+      risposta: 'Teletrasportarmi in qualsiasi circuito elettrico',
       elettrico: 3,
       energia: 0,
       informatico: 0,
@@ -486,7 +486,7 @@ let domande_test = [
     domanda: 'Qual è il tuo gioco da tavolo preferito?',
     immagine: '/images/test/7.jpg',
     a: {
-      risposta: ' Scacchi, per le sue strategie complesse   ',
+      risposta: 'Scacchi, per le sue strategie complesse',
       elettrico: 0,
       energia: 1,
       informatico: 2,
@@ -494,7 +494,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: ' Monopoli, per la gestione oculata delle risorse ',
+      risposta: 'Monopoli, per la gestione oculata delle risorse',
       elettrico: 0,
       energia: 2,
       informatico: 1,
@@ -502,7 +502,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: 'Meccano, per costruire incredibili strutture ',
+      risposta: 'Meccano, per costruire incredibili strutture',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -514,7 +514,7 @@ let domande_test = [
     domanda: 'Dove ti piacerebbe fare un viaggio?',
     immagine: '/images/test/8.jpg',
     a: {
-      risposta: ' In una centrale elettrica all^avanguardia   ',
+      risposta: 'In una centrale elettrica all^avanguardia',
       elettrico: 0,
       energia: 3,
       informatico: 0,
@@ -522,7 +522,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: '  Alla Silicon Valley per visitare le aziende tech più famose',
+      risposta: 'Alla Silicon Valley per visitare le aziende tech più famose',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -530,7 +530,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: 'A Maranello per vedere da vicino la produzione di auto sportive ',
+      risposta: 'A Maranello per vedere da vicino la produzione di auto sportive',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -542,7 +542,7 @@ let domande_test = [
     domanda: 'Quale animale ti rappresenta meglio?',
     immagine: '/images/test/9.jpg',
     a: {
-      risposta: ' Un^aquila, per la sua vista acuta che individua ogni dettaglio   ',
+      risposta: 'Un\'aquila, per la sua vista acuta che individua ogni dettaglio',
       elettrico: 1,
       energia: 0,
       informatico: 0,
@@ -550,7 +550,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: ' Un formichiere, instancabile e preciso nel suo lavoro ',
+      risposta: 'Un formichiere, instancabile e preciso nel suo lavoro',
       elettrico: 2,
       energia: 1,
       informatico: 0,
@@ -558,7 +558,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: 'Un delfino, che comunica con i suoi simili in modo efficiente ',
+      risposta: 'Un delfino, che comunica con i suoi simili in modo efficiente',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -570,7 +570,7 @@ let domande_test = [
     domanda: 'Come ti descriveresti?',
     immagine: '/images/test/10.jpg',
     a: {
-      risposta: ' Curioso e con la passione per capire come funzionano le cose  ',
+      risposta: 'Curioso e con la passione per capire come funzionano le cose',
       elettrico: 2,
       energia: 0,
       informatico: 0,
@@ -578,7 +578,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: ' Logico e analitico, con la capacità di risolvere problemi complessi',
+      risposta: 'Logico e analitico, con la capacità di risolvere problemi complessi',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -586,7 +586,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: ' Creativo e con la voglia di sperimentare nuove soluzioni ',
+      risposta: 'Creativo e con la voglia di sperimentare nuove soluzioni',
       elettrico: 0,
       energia: 2,
       informatico: 0,
@@ -598,7 +598,7 @@ let domande_test = [
     domanda: 'Cosa faresti se vincessi un milione di euro?',
     immagine: '/images/test/11.jpg',
     a: {
-      risposta: '  Investirei in un^officina super accessoriata  ',
+      risposta: 'Investirei in un^officina super accessoriata',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -606,7 +606,7 @@ let domande_test = [
       motoristico: 2,
     },
     b: {
-      risposta: ' Creerei una startup innovativa nel settore tecnologico',
+      risposta: 'Creerei una startup innovativa nel settore tecnologico',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -614,7 +614,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: '  Finanziererei la ricerca sulle energie rinnovabili  ',
+      risposta: 'Finanziererei la ricerca sulle energie rinnovabili',
       elettrico: 0,
       energia: 3,
       informatico: 0,
@@ -626,7 +626,7 @@ let domande_test = [
     domanda: 'Quale film ti è piaciuto di più?',
     immagine: '/images/test/12.jpg',
     a: {
-      risposta: '  "Fast and Furious", per le scene di corse adrenaliniche  ',
+      risposta: '"Fast and Furious", per le scene di corse adrenaliniche',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -634,7 +634,7 @@ let domande_test = [
       motoristico: 3,
     },
     b: {
-      risposta: '  "The Matrix", per gli effetti speciali e la realtà virtuale ',
+      risposta: '"The Matrix", per gli effetti speciali e la realtà virtuale',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -642,7 +642,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: '  "Iron Man", per le invenzioni tecnologiche del protagonista ',
+      risposta: '"Iron Man", per le invenzioni tecnologiche del protagonista',
       elettrico: 2,
       energia: 0,
       informatico: 0,
@@ -654,7 +654,7 @@ let domande_test = [
     domanda: 'Cosa ti appassiona di più del futuro?',
     immagine: '/images/test/13.jpg',
     a: {
-      risposta: '  L^evoluzione dei motori e dei sistemi di trasporto  ',
+      risposta: 'L\'evoluzione dei motori e dei sistemi di trasporto',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -662,7 +662,7 @@ let domande_test = [
       motoristico: 3,
     },
     b: {
-      risposta: ' Lo sviluppo dell^intelligenza artificiale',
+      risposta: 'Lo sviluppo dell^intelligenza artificiale',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -670,7 +670,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: '  La diffusione delle smart city e delle case intelligenti  ',
+      risposta: 'La diffusione delle smart city e delle case intelligenti',
       elettrico: 2,
       energia: 2,
       informatico: 0,
@@ -682,7 +682,7 @@ let domande_test = [
     domanda: 'Se fossi un personaggio di un videogioco, quale saresti?',
     immagine: '/images/test/14.jpg',
     a: {
-      risposta: ' Un ingegnere che costruisce robot giganti  ',
+      risposta: 'Un ingegnere che costruisce robot giganti',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -690,7 +690,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: '  Un hacker che si infiltra nei sistemi informatici più protetti',
+      risposta: 'Un hacker che si infiltra nei sistemi informatici più protetti',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -710,7 +710,7 @@ let domande_test = [
     domanda: 'Qual è il tuo motto?',
     immagine: '/images/test/15.jpg',
     a: {
-      risposta: '  "Se non funziona, smontalo e rimontalo!"   ',
+      risposta: '"Se non funziona, smontalo e rimontalo!"',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -718,7 +718,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: '  "C^è sempre una soluzione, basta trovare il codice giusto!"',
+      risposta: '"C\'è sempre una soluzione, basta trovare il codice giusto!"',
       elettrico: 0,
       energia: 0,
       informatico: 3,
@@ -726,7 +726,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: '  "Il futuro è energia pulita e innovazione!"  ',
+      risposta: '"Il futuro è energia pulita e innovazione!"',
       elettrico: 0,
       energia: 3,
       informatico: 0,
@@ -738,7 +738,7 @@ let domande_test = [
     domanda: 'Quale di queste attività ti attira di più?',
     immagine: '/images/test/16.jpg',
     a: {
-      risposta: '  Progettare e costruire un sistema di irrigazione automatico per un giardino  ',
+      risposta: 'Progettare e costruire un sistema di irrigazione automatico per un giardino',
       elettrico: 2,
       energia: 0,
       informatico: 0,
@@ -746,7 +746,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: '  Sviluppare un^app per monitorare i consumi energetici di una casa',
+      risposta: 'Sviluppare un^app per monitorare i consumi energetici di una casa',
       elettrico: 0,
       energia: 2,
       informatico: 2,
@@ -754,7 +754,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: '  Riparare un motore diesel di ultima generazione ',
+      risposta: 'Riparare un motore diesel di ultima generazione',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -774,7 +774,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: ' Gestione efficiente dell^energia negli edifici ',
+      risposta: 'Gestione efficiente dell\'energia negli edifici',
       elettrico: 0,
       energia: 3,
       informatico: 0,
@@ -782,7 +782,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: ' Diagnostica avanzata per motori a combustione interna ',
+      risposta: 'Diagnostica avanzata per motori a combustione interna',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -794,7 +794,7 @@ let domande_test = [
     domanda: 'Cosa ti piacerebbe costruire con le tue mani?',
     immagine: '/images/test/18.jpg',
     a: {
-      risposta: ' Un robot in grado di svolgere compiti domestici  ',
+      risposta: 'Un robot in grado di svolgere compiti domestici',
       elettrico: 0,
       energia: 0,
       informatico: 2,
@@ -802,7 +802,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: '  Un impianto fotovoltaico per la produzione di energia pulita',
+      risposta: 'Un impianto fotovoltaico per la produzione di energia pulita',
       elettrico: 1,
       energia: 3,
       informatico: 0,
@@ -810,7 +810,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: '  Un modellino di auto da corsa perfettamente funzionante ',
+      risposta: 'Un modellino di auto da corsa perfettamente funzionante',
       elettrico: 0,
       energia: 0,
       informatico: 0,
@@ -822,7 +822,7 @@ let domande_test = [
     domanda: 'In quale di questi ambienti ti vedi a lavorare in futuro?',
     immagine: '/images/test/19.jpg',
     a: {
-      risposta: '  In un^azienda che si occupa di progettazione di software per la domotica   ',
+      risposta: 'In un\'azienda che si occupa di progettazione di software per la domotica',
       elettrico: 2,
       energia: 0,
       informatico: 2,
@@ -830,7 +830,7 @@ let domande_test = [
       motoristico: 0,
     },
     b: {
-      risposta: '  In un laboratorio di ricerca sulle nuove tecnologie energetiche',
+      risposta: 'In un laboratorio di ricerca sulle nuove tecnologie energetiche',
       elettrico: 0,
       energia: 3,
       informatico: 0,
@@ -838,7 +838,7 @@ let domande_test = [
       motoristico: 0,
     },
     c: {
-      risposta: ' In un^officina specializzata nella riparazione di veicoli elettrici ',
+      risposta: 'In un\'officina specializzata nella riparazione di veicoli elettrici',
       elettrico: 2,
       energia: 0,
       informatico: 0,
@@ -850,7 +850,7 @@ let domande_test = [
     domanda: 'Quale problema ti piacerebbe contribuire a risolvere?',
     immagine: '/images/test/20.jpg',
     a: {
-      risposta: 'La riduzione delle emissioni inquinanti nel settore dei trasporti ',
+      risposta: 'La riduzione delle emissioni inquinanti nel settore dei trasporti',
       elettrico: 0,
       energia: 2,
       informatico: 0,
@@ -858,7 +858,7 @@ let domande_test = [
       motoristico: 2,
     },
     b: {
-      risposta: '  Il miglioramento dell^efficienza energetica degli elettrodomestici ',
+      risposta: 'Il miglioramento dell^efficienza energetica degli elettrodomestici',
       elettrico: 2,
       energia: 2,
       informatico: 0,
