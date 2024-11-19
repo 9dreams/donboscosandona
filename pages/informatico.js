@@ -18,6 +18,9 @@ export default function Home({ data }) {
         imageUrl='/images/informatico/settoreinformatico.jpg'
         height={100}
       />
+      
+      <SwiperNews title='News dal Settore Informatico' data={data} limit={15} defaultTag='scuola,informatico' />
+
       <Paragraph
         title='Operatore Informatico'
         subtitle='Qualifica triennale'
@@ -145,8 +148,6 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={ifts}
       />
-
-      <SwiperNews title='News dal Settore Informatico' data={data} limit={15} defaultTag='scuola,informatico' />
 
       <Products
         title='I nostri progetti'
@@ -340,6 +341,12 @@ let terzo_anno = [
     title: 'Server Linux',
     description: 'Oltre ai server Windows imparerai a gestire quelli con il sistema operativo Linux, ampiamente utilizzati per ospitare le applicazioni web, ma anche mille altre servizi legati all\'Internet delle cose.',
     immagineUrl: '/images/informatico/server-linux.png',
+  },
+  {
+    title: 'UptimeRobot',
+    description: 'UptimeRobot è un servizio online che controlla continuamente la disponibilità dei tuoi servizi online: verifica costantemente se i tuoi server rispondono e se i tuoi siti web sono raggiungibili.',
+    immagineUrl: '/images/informatico/uptime-robot.png',
+    url: 'https://uptimerobot.com/',
   },
   {
     title: 'Virtualizzazione',
