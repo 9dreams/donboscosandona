@@ -18,8 +18,13 @@ export default function Home({ data }) {
         imageUrl='/images/informatico/settoreinformatico.jpg'
         height={100}
       />
-      
-      <SwiperNews title='News dal Settore Informatico' data={data} limit={15} defaultTag='scuola,informatico' />
+
+      <SwiperNews
+        title='News dal Settore Informatico'
+        data={data}
+        limit={15}
+        defaultTag='scuola,informatico'
+      />
 
       <Paragraph
         title='Operatore Informatico'
@@ -109,10 +114,42 @@ export default function Home({ data }) {
       <Paragraph
         title='Full Stack Developer'
         subtitle='Percorso post-diploma IFTS (Istruzione Formazione Tecnico Superiore)'
+        topImageUrl='https://channels.donboscosandona.it/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc3dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a45437c361f9bbeb1bc4ce6529b980225d896118/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--aaf4fdd54bf27deaa59aaccef6c956f74cfaab5c/image.png'
       >
-        Il Full Stack Developer è un programmatore che si occupa della progettazione e della realizzazione dell'intero stack di un'applicazione web o mobile: dalla memorizzazione ed elaborazione dei dati lato server (Back End) al suo interfacciamento con il lato utente (Front End), alla definizione di un'interfaccia utente accattivante. Interfacciandosi con il grafico, lavora sull'aspetto visivo di un sito web o di un'applicazione, e fa in modo che l'esperienza utente sia ottimale anche su piattaforme differenti, secondo i fondamenti dello User Experience Design (UXD). Per fare questo ha una conoscenza dei principali linguaggi di programmazione e framework usati nel web (HTML, CSS, JavaScript, Bootstrap, ReactJS) e nella realizzazione di applicazioni mobile (React Native, Flutter) oltre a quelli necessari per realizzare e gestire il Back End (Ruby on Rails, PostgreSQL, JSON) ed è in grado di apprenderne di nuovi in un contesto di continua evoluzione e rinnovamento. Gli sbocchi professionali vanno dall'impiego in multinazionali, software house, agenzie pubblicitarie a imprese non necessariamente del settore ICT che desiderino mantenere internamente il proprio sito web o la propria applicazione.
-        <p><a href='https://www.donboscosandona.it/articoli/172'>Per saperne di più...</a></p>
+        Il Full Stack Developer è un programmatore che si occupa della
+        progettazione e della realizzazione dell'intero stack di un'applicazione
+        web o mobile: dalla memorizzazione ed elaborazione dei dati lato server
+        (Back End) al suo interfacciamento con il lato utente (Front End), alla
+        definizione di un'interfaccia utente accattivante. Interfacciandosi con
+        il grafico, lavora sull'aspetto visivo di un sito web o di
+        un'applicazione, e fa in modo che l'esperienza utente sia ottimale anche
+        su piattaforme differenti, secondo i fondamenti dello User Experience
+        Design (UXD). Per fare questo ha una conoscenza dei principali linguaggi
+        di programmazione e framework usati nel web (HTML, CSS, JavaScript,
+        Bootstrap, ReactJS) e nella realizzazione di applicazioni mobile (React
+        Native, Flutter) oltre a quelli necessari per realizzare e gestire il
+        Back End (Ruby on Rails, PostgreSQL, JSON) ed è in grado di apprenderne
+        di nuovi in un contesto di continua evoluzione e rinnovamento. Gli
+        sbocchi professionali vanno dall'impiego in multinazionali, software
+        house, agenzie pubblicitarie a imprese non necessariamente del settore
+        ICT che desiderino mantenere internamente il proprio sito web o la
+        propria applicazione.
+        <p>
+          <a href='https://www.donboscosandona.it/articoli/172'>
+            Per saperne di più...
+          </a>
+        </p>
       </Paragraph>
+      <LandingHero
+        opacity={0.3}
+        title='ITS ACADEMY: PERCHÉ È UNA SPLENDIDA NOTIZIA'
+        description='Sul sito di ITS Digital Academy Mario Volpato è apparsa la nuova sede di San Donà, con indirizzo Web Developer Full Stack... scopri nel nostro articolo perché questa è una splendida notizia per i nostri allievi... e non solo!'
+        buttonUrl='http://localhost:3000/articoli/227'
+        buttonText="Leggi l'articolo"
+        imageUrl='/images/informatico/sfondo_its.jpg'
+      />
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
       <Products
         title='Primo anno'
         description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e alla programmazione."
@@ -143,7 +180,7 @@ export default function Home({ data }) {
       />
       <Products
         title='IFTS'
-        description="500 ore a scuola e 500 in azienda nel nostro percorso di Istruzione e Formazione Tecnica Superiore, che apre le porte agli ITS Academy."
+        description='500 ore a scuola e 500 in azienda nel nostro percorso di Istruzione e Formazione Tecnica Superiore, che apre le porte agli ITS Academy.'
         cardWidth={4}
         cardWidthXs={6}
         products={ifts}
@@ -175,7 +212,14 @@ export default function Home({ data }) {
             ['Teoria Sistemi e reti', 5, 3, 3, null, null],
             ['Laboratorio Sistemi e Programmazione', 10, 12, 12, 3, 10],
             [null, null, null, null, null, null],
-            ['ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO', '', 200, 200, 500, 500],
+            [
+              'ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO',
+              '',
+              200,
+              200,
+              500,
+              500,
+            ],
           ]}
           backgroundImageUrl='/images/informatico/sfondo-piano-formativo.jpg'
           backgroundColor='#003185'
@@ -205,19 +249,20 @@ let progetti = [
     title: '9dreams Agency',
     description: 'La nostra agenzia di comunicazione.',
     url: '/9dreams',
-    immagineUrl:
-      '/images/informatico/loghi/logo_9dreams.png',
+    immagineUrl: '/images/informatico/loghi/logo_9dreams.png',
   },
   {
     title: 'Assistenza Informatica',
-    description: 'Il servizio di qualità offerto dalle nostre classi a tutta la scuola.',
-    immagineUrl: 'https://computernext.it/wp-content/uploads/2017/06/assistenza-informatica.jpg',
+    description:
+      'Il servizio di qualità offerto dalle nostre classi a tutta la scuola.',
+    immagineUrl:
+      'https://computernext.it/wp-content/uploads/2017/06/assistenza-informatica.jpg',
   },
   {
     title: 'Books',
     description: 'Gli appunti dei nostri corsi di programmazione.',
     immagineUrl: '/images/informatico/books.png',
-    url: 'https://books.donboscosandona.it'
+    url: 'https://books.donboscosandona.it',
   },
   {
     title: 'FreeCodeCamp',
@@ -232,32 +277,38 @@ let progetti = [
 let primo_anno = [
   {
     title: 'Sicurezza',
-    description: 'Lavorare in sicurezza è fondamentale per qualsiasi professione. Imparerai la normativa, l\'uso corretto degli attrezzi manuali e delle sostanze chimiche, quali sono i dispositivi di protezione da indossare, le procedure antincendio e la lettura dei vari cartelli.',
+    description:
+      "Lavorare in sicurezza è fondamentale per qualsiasi professione. Imparerai la normativa, l'uso corretto degli attrezzi manuali e delle sostanze chimiche, quali sono i dispositivi di protezione da indossare, le procedure antincendio e la lettura dei vari cartelli.",
     immagineUrl: '/images/informatico/sicurezza.png',
   },
   {
     title: 'Assemblaggio PC',
-    description: 'Scheda madre, processore, dissipatore, RAM, alimentatore, SSD: imparerai a riconoscere i vari componenti del computer e ad assemblarli in modo corretto, per dare vita a un pc funzionante.',
+    description:
+      'Scheda madre, processore, dissipatore, RAM, alimentatore, SSD: imparerai a riconoscere i vari componenti del computer e ad assemblarli in modo corretto, per dare vita a un pc funzionante.',
     immagineUrl: '/images/informatico/assemblaggio-pc.png',
   },
   {
     title: 'Sistemi Operativi',
-    description: 'Dopo aver assemblato il tuo pc imparerai a dargli vita installando e configurando le principali versioni dei sistemi operativi Windows e Linux.',
+    description:
+      'Dopo aver assemblato il tuo pc imparerai a dargli vita installando e configurando le principali versioni dei sistemi operativi Windows e Linux.',
     immagineUrl: '/images/informatico/sistemi-operativi.png',
   },
   {
     title: 'HTML',
-    description: 'HTML è un linguaggio basato sui tag che è alla base di qualsiasi applicazione web. Puoi considerarlo lo scheletro dell\'applicazione.',
+    description:
+      "HTML è un linguaggio basato sui tag che è alla base di qualsiasi applicazione web. Puoi considerarlo lo scheletro dell'applicazione.",
     immagineUrl: '/images/informatico/html.png',
   },
   {
     title: 'Arduino',
-    description: 'Arduino è una piccola scheda elettronica che ti permette di collegare dei sensori e scrivere un programma che legge il loro valore e comanda degli attuatori nel mondo reale: un\'ottima introduzione alla programmazione e all\'elettronica.',
+    description:
+      "Arduino è una piccola scheda elettronica che ti permette di collegare dei sensori e scrivere un programma che legge il loro valore e comanda degli attuatori nel mondo reale: un'ottima introduzione alla programmazione e all'elettronica.",
     immagineUrl: '/images/informatico/arduino.png',
   },
   {
     title: 'C# E UNITY',
-    description: 'Unity è un potente motore di gioco che ti permette di creare mondi virtuali straordinari: sarà l\'occasione per familiarizzare con C#, un moderno linguaggio di programmazione a oggetti. ',
+    description:
+      "Unity è un potente motore di gioco che ti permette di creare mondi virtuali straordinari: sarà l'occasione per familiarizzare con C#, un moderno linguaggio di programmazione a oggetti. ",
     immagineUrl: '/images/informatico/csharpeunity.jpg',
   },
 ]
@@ -266,67 +317,79 @@ let secondo_anno = [
   {
     title: 'Assistenza al cliente',
     description:
-      'Nella nostra scuola l\'assistenza informatica è fornita dagli allievi informatici di seconda: 500 iPad, 6 aule informatiche, apparecchiature di ogni tipo e svariati uffici bisognosi di cure ogni giorno.',
+      "Nella nostra scuola l'assistenza informatica è fornita dagli allievi informatici di seconda: 500 iPad, 6 aule informatiche, apparecchiature di ogni tipo e svariati uffici bisognosi di cure ogni giorno.",
     immagineUrl: '/images/informatico/assistenza-al-cliente.png',
   },
   {
     title: 'Scelta dei componenti',
-    description: 'Dopo aver visto come assemblarli, dedicherai del tempo a capire quali sono i criteri per capire quali componenti sono compatibili con gli altri, e a sceglierli correttamente per ottenere un pc con prestazioni ottimali.',
+    description:
+      'Dopo aver visto come assemblarli, dedicherai del tempo a capire quali sono i criteri per capire quali componenti sono compatibili con gli altri, e a sceglierli correttamente per ottenere un pc con prestazioni ottimali.',
     immagineUrl: '/images/informatico/cambio-componenti.png',
   },
   {
     title: 'Benchmark e Test',
-    description: 'Utilizzerai gli strumenti hardware e software a disposizione per verificare che tutte le parti del pc stiano operando correttamente, senza surriscaldamenti o perdite di dati.',
+    description:
+      'Utilizzerai gli strumenti hardware e software a disposizione per verificare che tutte le parti del pc stiano operando correttamente, senza surriscaldamenti o perdite di dati.',
     immagineUrl: '/images/informatico/benchmark-test.png',
   },
   {
     title: 'Apparati di rete',
-    description: 'Imparerai a connettere tra di loro i pc in una rete locale utilizzando switch, router, access point e altre apparecchiature di rete.',
+    description:
+      'Imparerai a connettere tra di loro i pc in una rete locale utilizzando switch, router, access point e altre apparecchiature di rete.',
     immagineUrl: '/images/informatico/apparati-di-rete.png',
   },
   {
     title: 'Shell Linux',
-    description: 'Sempre più dispositivi e servizi sono basati sul sistema operativo Linux, che permette un controllo potente senza l\'appesantimento di un\'interfaccia grafica. Imparerai ad usare i comandi fondamentali della linea di comando e a gestire i vari processi del Sistema Operativo.',
+    description:
+      "Sempre più dispositivi e servizi sono basati sul sistema operativo Linux, che permette un controllo potente senza l'appesantimento di un'interfaccia grafica. Imparerai ad usare i comandi fondamentali della linea di comando e a gestire i vari processi del Sistema Operativo.",
     immagineUrl: '/images/informatico/shell-linux.png',
   },
   {
     title: 'Python',
-    description: 'Python è un linguaggio di programmazione che viene impiegato sempre più nelle applicazioni web, nella scienza dei dati e nel Machine Learning. Vale la pena di fare la sua conoscenza.',
+    description:
+      'Python è un linguaggio di programmazione che viene impiegato sempre più nelle applicazioni web, nella scienza dei dati e nel Machine Learning. Vale la pena di fare la sua conoscenza.',
     immagineUrl: '/images/informatico/python.png',
   },
   {
     title: 'Raspberry',
-    description: 'Hai presente Arduino visto in prima? Raspberry è una sua evoluzione e ti permette di controllare ingressi e uscite collegati al mondo reale con un vero e proprio computer che sta nel palmo di una mano. Un ottimo banco di prova per le tue conoscenze di Linux e della programmazione.',
+    description:
+      'Hai presente Arduino visto in prima? Raspberry è una sua evoluzione e ti permette di controllare ingressi e uscite collegati al mondo reale con un vero e proprio computer che sta nel palmo di una mano. Un ottimo banco di prova per le tue conoscenze di Linux e della programmazione.',
     immagineUrl: '/images/informatico/rasp-berry.png',
   },
   {
     title: 'Versioning',
-    description: 'Git e GitHub sono strumenti utilizzati quotidianamente dagli sviluppatori di tutto il mondo per gestire il loro codice: imparerai a mantenere diverse versioni di uno stesso programma, e a collaborare con altri sviluppatori in modo che il codice scritto da ognuno vada a fondersi con quello scritto dagli altri senza creare problemi.',
+    description:
+      'Git e GitHub sono strumenti utilizzati quotidianamente dagli sviluppatori di tutto il mondo per gestire il loro codice: imparerai a mantenere diverse versioni di uno stesso programma, e a collaborare con altri sviluppatori in modo che il codice scritto da ognuno vada a fondersi con quello scritto dagli altri senza creare problemi.',
     immagineUrl: '/images/informatico/versioning.png',
   },
   {
     title: 'CSS',
-    description: 'Usato insieme ad HTML, CSS permette di curare l\'aspetto grafico della tua applicazione... proprio come quando applichi diversi temi allo stesso programma.',
+    description:
+      "Usato insieme ad HTML, CSS permette di curare l'aspetto grafico della tua applicazione... proprio come quando applichi diversi temi allo stesso programma.",
     immagineUrl: '/images/informatico/css.png',
   },
   {
     title: 'Bootstrap',
-    description: 'Bootstrap ti permetterà di strutturare velocemente le tue pagine web in modo che si adattino senza problemi anche agli schermi di smartphone e tablet.',
+    description:
+      'Bootstrap ti permetterà di strutturare velocemente le tue pagine web in modo che si adattino senza problemi anche agli schermi di smartphone e tablet.',
     immagineUrl: '/images/informatico/bootstrap.png',
   },
   {
     title: 'JavaScript',
-    description: 'Dopo aver curato l\'aspetto della tua pagina, potrai darle vita e renderla attiva usando JavaScript.',
+    description:
+      "Dopo aver curato l'aspetto della tua pagina, potrai darle vita e renderla attiva usando JavaScript.",
     immagineUrl: '/images/informatico/javascript.png',
   },
   {
     title: 'ReactJS',
-    description: 'React è una libreria creata dagli sviluppatori di Facebook che viene usata in tutto il mondo per costruire velocemente applicazioni basate su componenti creati da te o da altri sviluppatori.',
+    description:
+      'React è una libreria creata dagli sviluppatori di Facebook che viene usata in tutto il mondo per costruire velocemente applicazioni basate su componenti creati da te o da altri sviluppatori.',
     immagineUrl: '/images/informatico/reactjs.png',
   },
   {
     title: 'NextJS',
-    description: 'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci. Anche questo sito è creato con React e NextJS.',
+    description:
+      'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci. Anche questo sito è creato con React e NextJS.',
     immagineUrl: '/images/informatico/nextjs.png',
   },
 ]
@@ -334,83 +397,99 @@ let secondo_anno = [
 let terzo_anno = [
   {
     title: 'Server Windows',
-    description: 'Dopo aver visto nel dettaglio come si gestiscono i personal computer, in terza imparerai a gestire i server, che con i loro servizi sono il cuore di tutte le reti locali di computer.',
+    description:
+      'Dopo aver visto nel dettaglio come si gestiscono i personal computer, in terza imparerai a gestire i server, che con i loro servizi sono il cuore di tutte le reti locali di computer.',
     immagineUrl: '/images/informatico/windows-server.png',
   },
   {
     title: 'Server Linux',
-    description: 'Oltre ai server Windows imparerai a gestire quelli con il sistema operativo Linux, ampiamente utilizzati per ospitare le applicazioni web, ma anche mille altre servizi legati all\'Internet delle cose.',
+    description:
+      "Oltre ai server Windows imparerai a gestire quelli con il sistema operativo Linux, ampiamente utilizzati per ospitare le applicazioni web, ma anche mille altre servizi legati all'Internet delle cose.",
     immagineUrl: '/images/informatico/server-linux.png',
   },
   {
     title: 'UptimeRobot',
-    description: 'UptimeRobot è un servizio online che controlla continuamente la disponibilità dei tuoi servizi online: verifica costantemente se i tuoi server rispondono e se i tuoi siti web sono raggiungibili.',
+    description:
+      'UptimeRobot è un servizio online che controlla continuamente la disponibilità dei tuoi servizi online: verifica costantemente se i tuoi server rispondono e se i tuoi siti web sono raggiungibili.',
     immagineUrl: '/images/informatico/uptime-robot.png',
     url: 'https://uptimerobot.com/',
   },
   {
     title: 'Virtualizzazione',
-    description: 'Un unico server fisico può ospitare molti server virtuali, che possono essere accesi, duplicati, spostati all\'occorrenza.',
+    description:
+      "Un unico server fisico può ospitare molti server virtuali, che possono essere accesi, duplicati, spostati all'occorrenza.",
     immagineUrl: '/images/informatico/virtualizzazione.png',
   },
   {
     title: 'Domini Active Directory',
-    description: 'Le reti aziendali, con centinaia o migliaia di utenti, sono per lo più basate su domini Active Directory: imparerai a gestire gli utenti e i loro spazi, a concedere i permessi, insomma ad avere il potere dell\'Amministratore di Rete.',
+    description:
+      "Le reti aziendali, con centinaia o migliaia di utenti, sono per lo più basate su domini Active Directory: imparerai a gestire gli utenti e i loro spazi, a concedere i permessi, insomma ad avere il potere dell'Amministratore di Rete.",
     immagineUrl: '/images/informatico/domini-active-directory.png',
   },
   {
     title: 'Router',
-    description: 'In ogni nodo della rete Internet, ma anche a casa tua, c\'è un router, un dispositivo che permette di instradare il traffico di rete in modo che prenda la direzione più opportuna per raggiungere l\'indirizzo richiesto, che sia a due passi come dall\'altra parte del mondo.',
+    description:
+      "In ogni nodo della rete Internet, ma anche a casa tua, c'è un router, un dispositivo che permette di instradare il traffico di rete in modo che prenda la direzione più opportuna per raggiungere l'indirizzo richiesto, che sia a due passi come dall'altra parte del mondo.",
     immagineUrl: '/images/informatico/router.png',
   },
   {
     title: 'Cisco Packet Tracer',
-    description: 'Con questo strumento imparerai a simulare il funzionamento di reti complesse, collegando tra loro diversi dispositivi virtuali e analizzando il traffico dei dati.',
+    description:
+      'Con questo strumento imparerai a simulare il funzionamento di reti complesse, collegando tra loro diversi dispositivi virtuali e analizzando il traffico dei dati.',
     immagineUrl: '/images/informatico/cisco-packet.png',
   },
   {
     title: 'Sicurezza Informatica',
-    description: 'La sicurezza informatica non è solo questione di film: ogni giono nel mondo migliaia di persone o aziende perdono i loro dati, sono truffate o messe nei guai dai criminali informatici. Imparerai le tecniche di base per difendere il server o la rete che gestisci da questi attacchi.',
+    description:
+      'La sicurezza informatica non è solo questione di film: ogni giono nel mondo migliaia di persone o aziende perdono i loro dati, sono truffate o messe nei guai dai criminali informatici. Imparerai le tecniche di base per difendere il server o la rete che gestisci da questi attacchi.',
     immagineUrl: '/images/informatico/sicurezza-informatica.png',
   },
   {
     title: 'Figma',
-    description: 'Con questo stumento potrai disegnare l\'interfaccia utente della tua applicazione: realizzerai un progetto grafico e di comunicazione sul quale poi basare lo sviluppo vero e proprio.',
+    description:
+      "Con questo stumento potrai disegnare l'interfaccia utente della tua applicazione: realizzerai un progetto grafico e di comunicazione sul quale poi basare lo sviluppo vero e proprio.",
     immagineUrl: '/images/informatico/figma.png',
   },
   {
     title: 'TailWind CSS',
-    description: 'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
+    description:
+      'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
     immagineUrl: '/images/informatico/tailwind-css.jpeg',
   },
   {
     title: 'SQL',
-    description: 'È il linguaggio usato per interrogare i database, per inserire nuovi dati e per fare ricerche tra di essi.',
+    description:
+      'È il linguaggio usato per interrogare i database, per inserire nuovi dati e per fare ricerche tra di essi.',
     immagineUrl: '/images/informatico/sql.png',
   },
   {
     title: 'NodeJS',
-    description: 'Permette di creare dei servizi superveloci, ai quali poi le applicazioni web o dai dispositivi mobili possono collegarsi per ricevere i dati da mostrare all\'utente.',
+    description:
+      "Permette di creare dei servizi superveloci, ai quali poi le applicazioni web o dai dispositivi mobili possono collegarsi per ricevere i dati da mostrare all'utente.",
     immagineUrl: '/images/informatico/nodejs.png',
   },
   {
     title: 'MongoDB',
-    description: 'Un esempio di database noSQL, che non memorizza i dati in forma di tabelle e righe come fanno i normali database, ma sotto forma di documenti complessi.',
+    description:
+      'Un esempio di database noSQL, che non memorizza i dati in forma di tabelle e righe come fanno i normali database, ma sotto forma di documenti complessi.',
     immagineUrl: '/images/informatico/mongodb.png',
   },
   {
     title: 'Ruby on Rails',
-    description: 'È un framework che permette di creare rapidamente complesse applicazioni web full-stack, e cioè sia la parte lato server, sia quella visibile all\'utente.',
+    description:
+      "È un framework che permette di creare rapidamente complesse applicazioni web full-stack, e cioè sia la parte lato server, sia quella visibile all'utente.",
     immagineUrl: '/images/informatico/ruby-rails.png',
   },
   {
     title: 'Fotoritocco',
-    description: 'Imparerai a scattare foto e a curarle nei dettagli, perché al centro di ogni buon sito ci sono sempre le immagini.',
+    description:
+      'Imparerai a scattare foto e a curarle nei dettagli, perché al centro di ogni buon sito ci sono sempre le immagini.',
     immagineUrl: '/images/informatico/fotoritocco.png',
   },
   {
     title: 'Droni',
-    description: 'Con i tuoi compagni avrai a disposizione una squadriglia di quattro droni per scattare foto e girare clip video dall\'alto o comunque con inquadrature spettacolari.',
+    description:
+      "Con i tuoi compagni avrai a disposizione una squadriglia di quattro droni per scattare foto e girare clip video dall'alto o comunque con inquadrature spettacolari.",
     immagineUrl: '/images/informatico/drone.png',
   },
 ]
@@ -418,17 +497,20 @@ let terzo_anno = [
 let quarto_anno = [
   {
     title: 'React Native',
-    description: 'Potrai mettere a frutto la conoscenza di ReactJS fatta negli anni precedenti per realizzare applicazioni native per iOS e Android. Sarai tu a sviluppare la prossima app virale negli store?',
+    description:
+      'Potrai mettere a frutto la conoscenza di ReactJS fatta negli anni precedenti per realizzare applicazioni native per iOS e Android. Sarai tu a sviluppare la prossima app virale negli store?',
     immagineUrl: '/images/informatico/react_native.png',
   },
   {
     title: 'Flutter',
-    description: 'Flutter ti permette di creare splendide applicazioni multipiattaforma: Android, iOS, Windows, MacOS, Linux, web e dispositivi intelligenti di ogni tipo.',
+    description:
+      'Flutter ti permette di creare splendide applicazioni multipiattaforma: Android, iOS, Windows, MacOS, Linux, web e dispositivi intelligenti di ogni tipo.',
     immagineUrl: '/images/informatico/flutter.webp',
   },
   {
     title: '.NET MAUI',
-    description: 'Il framework di Microsoft per creare applicazioni multipiattaforma con C# e XAML ci darà la possibilità di mettere a confronto diverse tecnologie.',
+    description:
+      'Il framework di Microsoft per creare applicazioni multipiattaforma con C# e XAML ci darà la possibilità di mettere a confronto diverse tecnologie.',
     immagineUrl: '/images/informatico/maui.png',
   },
 ]
@@ -436,22 +518,26 @@ let quarto_anno = [
 let ifts = [
   {
     title: 'JavaScript',
-    description: 'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
+    description:
+      'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
     immagineUrl: '/images/informatico/javascript.png',
   },
   {
     title: 'React e NextJS',
-    description: 'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
+    description:
+      'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
     immagineUrl: '/images/informatico/nextjs.png',
   },
   {
     title: 'Database relazionali',
-    description: 'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
+    description:
+      'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
     immagineUrl: '/images/informatico/sql.png',
   },
   {
     title: 'TailWind CSS',
-    description: 'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
+    description:
+      'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
     immagineUrl: '/images/informatico/tailwind-css.jpeg',
   },
   {
@@ -461,7 +547,8 @@ let ifts = [
   },
   {
     title: 'Ruby on Rails',
-    description: 'Costruzione di applicazioni web full-stack complete: strutturazione del backend (database, autenticazione, permessi...) e creazione dell\'interfaccia grafica visibile all\'utente nel frontend.',
+    description:
+      "Costruzione di applicazioni web full-stack complete: strutturazione del backend (database, autenticazione, permessi...) e creazione dell'interfaccia grafica visibile all'utente nel frontend.",
     immagineUrl: '/images/informatico/ruby-rails.png',
   },
 ]
