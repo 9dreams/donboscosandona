@@ -144,7 +144,7 @@ export default function Home({ data }) {
         opacity={0.3}
         title='ITS ACADEMY: PERCHÉ È UNA SPLENDIDA NOTIZIA'
         description='Sul sito di ITS Digital Academy Mario Volpato è apparsa la nuova sede di San Donà, con indirizzo Web Developer Full Stack... scopri nel nostro articolo perché questa è una splendida notizia per i nostri allievi... e non solo!'
-        buttonUrl='http://localhost:3000/articoli/227'
+        buttonUrl='https://www.donboscosandona.it/articoli/227'
         buttonText="Leggi l'articolo"
         imageUrl='/images/informatico/sfondo_its.jpg'
       />
