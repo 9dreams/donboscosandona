@@ -1,6 +1,7 @@
 import Footer from '/components/Footer'
 import NavBar from '/components/NavBar'
 
+
 export const siteName = 'PLAN YOUR LIFE'
 export const siteTitle = 'PLAN YOUR LIFE'
 export const siteDescription =
