@@ -41,38 +41,38 @@ export default function Home() {
             Informazioni generali: info@donboscosandona.it - tel. 0421 338 980
           </li>
           <li>
-            Segreteria didattica: segreteria.fp.sandona@salesianinordest.it - tel. 0421 338
-            980
+            Segreteria didattica: segreteria.fp.sandona@salesianinordest.it -
+            tel. 0421 338 980
           </li>
-          <li>Posta elettronica certificata: fp.donboscosandona@pec.salesianinordest.it</li>
+          <li>
+            Posta elettronica certificata:
+            fp.donboscosandona@pec.salesianinordest.it
+          </li>
           <li>
             Informazioni relative alla privacy: privacy@donboscosandona.it
           </li>
           <li>
-            Organismo di vigilanza (codice etico):
-            odv.fp@salesianinordest.it
+            Organismo di vigilanza (codice etico): odv.fp@salesianinordest.it
           </li>
           <li>
-            Amministrazione: amministrazione.fp.sandona@salesianinordest.it  - tel. 0421 338 988
+            Amministrazione/Risorse umane:
+            amministrazione.fp.sandona@salesianinordest.it - tel. 0421 338 988
           </li>
           <li>
-            Risorse umane e qualità: qualita.fp.sandona@salesianinordest.it - tel. 0421 338 988
+            Referente qualità: qualita.fp.sandona@salesianinordest.it - tel.
+            0421 338 990
           </li>
           <br />
           <li>
             Direttore Generale: don Nicola Munari - direzione@donboscosandona.it
           </li>
           <li>
-            Direttore della Scuola: dott. Alessandro Cappelletto -
+            Direttore della Scuola: Alessandro Ferro -
             direzione.fp.sandona@salesianinordest.it
           </li>
           <li>
-            Vicedirettore: Alessandro Ferro - a.ferro@donboscosandona.it - tel.
-            0421 338 968
-          </li>
-          <li>
-            Responsabile stage e tirocini formativi: Francesco Cicogna -
-            f.cicogna@donboscosandona.it - tel. 0421 338 992
+            Vicedirettrice: Anna Maria D'Ambrosio -
+            a.dambrosio@donboscosandona.it
           </li>
           <br />
           <li>
@@ -80,16 +80,19 @@ export default function Home() {
             a.pasqualetto@donboscosandona.it - tel. 0421 338 992
           </li>
           <li>
-            Orientamento in uscita: Martina Dianese -
-            m.dianese@donboscosandona.it - tel. 0421 338 971
-          </li>
-          <li>
-            Servizi al lavoro: Martina Dianese - m.dianese@donboscosandona.it -
+            Orientamento in uscita: Giorgia Seno - g.seno@donboscosandona.it -
             tel. 0421 338 971
           </li>
           <li>
-            Corsi per adulti: Francesco Cicogna - f.cicogna@donboscosandona.it -
-            tel. 0421 338 969
+            Ufficio stage e tirocini: Francesco Cicogna -
+            f.cicogna@donboscosandona.it - tel. 0421 338 969
+            <br />
+            &nbsp;&nbsp;&nbsp;Greta Caliman - g.caliman@donboscosandona.it -
+            tel. 0421 338 968
+          </li>
+          <li>
+            Servizi al lavoro e corsi per adulti: Francesco Cicogna -
+            f.cicogna@donboscosandona.it - tel. 0421 338 969
           </li>
           <li>
             Pastorale: Daniele Zanutto - d.zanutto@donboscosandona.it - tel.
@@ -99,22 +102,19 @@ export default function Home() {
             Settore Elettrico/Energia: Diego Cuzzolin -
             d.cuzzolin@donboscosandona.it - tel. 0421 338 991
           </li>
+          <li>Settore Informatico: Andrea Ros - a.ros@donboscosandona.it</li>
           <li>
-            Settore Informatico: Andrea Ros - a.ros@donboscosandona.it- tel.
-            0421 338 987
+            Settore Meccanico: Lorenzo Faggiotto -
+            l.faggiotto@donboscosandona.it - tel. 0421 338 986
           </li>
           <li>
-            Settore Meccanico: Ivan Muccignatto -
-            i.muccignatto@donboscosandona.it - tel. 0421 338 986
-          </li>
-          <li>
-            Settore Motoristico/Carrozzeria: Roberto Partata -
-            r.partata@donboscosandona.it - tel. 0421 338 985
+            Settore Automotive: Roberto Partata - r.partata@donboscosandona.it -
+            tel. 0421 338 985
           </li>
         </ul>
         <br />
         Per i colloqui con gli insegnanti utilizzare il servizio di prenotazione
-        disponibile su <Link>ScuolaOnline</Link>
+        disponibile su ScuolaOnline
         <br />
         <br />
         Per colloqui con il Direttore o il Vicedirettore prendere appuntamento
