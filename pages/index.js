@@ -177,6 +177,13 @@ export default function Home({ data, movies, elementi }) {
     <Layout>
       <Featured data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor.png' />
+      <Elements
+        data={elementi}
+        limit={6}
+        md={4}
+        aspectRatio='3 / 2'
+        borderRadius='10px'
+      />
       <Test domande={domande_test} />
       <Featured
         data={elementi}
@@ -185,13 +192,6 @@ export default function Home({ data, movies, elementi }) {
         height={90}
       />
       <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
-      <Elements
-        data={elementi}
-        limit={6}
-        md={4}
-        aspectRatio='3 / 2'
-        borderRadius='10px'
-      />
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
