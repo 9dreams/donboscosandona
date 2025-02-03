@@ -4,7 +4,7 @@ import NavBar from "/components/NavBar";
 export const siteName = "ANFFAS San Donà di Piave";
 export const siteTitle = "ANFFAS - San Donà di Piave";
 export const siteDescription =
-  "Sito ufficiale di ANFFAS San Donà di Piave, associazione di famiglie di persone con disabilità intellettive e del neuro-sviluppo";
+  "Sito ufficiale di ANFFAS San Donà di Piave, associazione di famiglie di persone con disabilità intellettive e del neuro-sviluppo.";
 export const siteBaseUrl = "https://dev.donboscosandona.it";
 
 export const menu = [
