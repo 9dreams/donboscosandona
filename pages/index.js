@@ -5,6 +5,7 @@ import { AccessTime, Info, Group, Star } from '@mui/icons-material'
 export default function Home({ data, elementi }) {
   return (
     <Layout>
+      <div class='h-28 md:hidden'></div>
       <Box id='home' sx={{ position: 'relative', width: '100%', mb: 4 }}>
         <img src='images/fotoragazzi.jpg' width='100%' height='100vh'></img>
       </Box>
