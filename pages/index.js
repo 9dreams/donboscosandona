@@ -1,14 +1,14 @@
 import { Container, Grid, Typography, Box } from '@mui/material'
 import { Layout, NewsCard, Credits } from '/components'
 import { AccessTime, Info, Group, Star } from '@mui/icons-material'
+import {Featured, SwiperNews} from '/components'
 
-export default function Home({ data, elementi }) {
+export default function Home({ data }) {
   return (
     <Layout>
       <div class='h-28 md:hidden'></div>
-      <Box id='home' sx={{ position: 'relative', width: '100%', mb: 4 }}>
-        <img src='images/fotoragazzi.jpg' width='100%' height='100vh'></img>
-      </Box>
+      <Featured data={data} defaultTag='scuola' />
+      <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
       <Container>
         <Box sx={{ textAlign: 'center', mb: 4 }}>
           <Typography
@@ -159,21 +159,16 @@ export default function Home({ data, elementi }) {
 
 export async function getStaticProps() {
   let res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/inoratorio'
+    'https://channels.donboscosandona.it/api/posts/anffas'
   )
   const data = await res.json()
 
-  res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona_elements'
-  )
-  const elementi = await res.json()
-
   return {
-    props: { data, elementi },
+    props: { data },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 minutes
-    revalidate: 1800, // In secondi: il build viene fatto al massimo una volta ogni mezzora
+    revalidate: 1200, // In secondi: il build viene fatto al massimo una volta ogni mezzora
   }
 }
 
