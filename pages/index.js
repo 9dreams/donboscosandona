@@ -75,14 +75,10 @@ prof. Andrea Ros
 
       </Paragraph>
 
-      <Paragraph
-        backgroundImageUrl=''
-        backgroundColor='green'
-        opacity={0.8}
-        blur='0.2rem'
-        color='black'
-        title='SIAMO ANCHE DISPONIBILI A REALIZZARE GRATUITAMENTE SITI WEB PER ASSOCIAZIONI NO-PROFIT DEL TERRITORIO'
-      ></Paragraph>
+      <div class='max-w-5xl mx-auto mb-10'>
+        <img src='/images/noprofit.png' class='w-full' />
+      </div>
+     
 
     </Layout>
   )
