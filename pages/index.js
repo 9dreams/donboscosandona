@@ -89,7 +89,7 @@ let settori = [
       '/images/settori/meccanico.png',
   },
   {
-    title: 'Motoristico / Carrozzeria',
+    title: 'Automotive',
     category: 'QUALIFICA DI OPERATORE ALLA RIPARAZIONE DI VEICOLI A MOTORE',
     url: '/motoristico',
     description:
