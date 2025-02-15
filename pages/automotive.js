@@ -16,7 +16,7 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <Container maxWidth="xl">
-        <img src="/images/settori/automotive2.png" />
+        <img src="/images/settori/Automotive2.png" />
       </Container>
       <Paragraph
         title='Pagina in costruzione'

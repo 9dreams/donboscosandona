@@ -16,7 +16,7 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <Container maxWidth="xl">
-        <img src="/images/settori/informatico2.png" />
+        <img src="/images/settori/Informatico2.png" />
       </Container>
 
       <SwiperNews

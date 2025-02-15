@@ -16,7 +16,7 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <Container maxWidth="xl">
-        <img src="/images/settori/energia2.png" />
+        <img src="/images/settori/Energia2.png" />
       </Container>
       <Paragraph
         title='Operatore Termoidraulico'

@@ -16,7 +16,7 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <Container maxWidth="xl">
-        <img src="/images/settori/meccanico2.png" />
+        <img src="/images/settori/Meccanico2.png" />
       </Container>
       
       <Paragraph
