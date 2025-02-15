@@ -184,6 +184,13 @@ export default function Home({ data, movies, elementi }) {
         aspectRatio='3 / 2'
         borderRadius='10px'
       />
+      <Products
+        title='I settori'
+        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
+        cardWidth={4}
+        cardWidthXs={12}
+        products={settori}
+      />
       <Test domande={domande_test} />
       <Featured
         data={elementi}
@@ -192,13 +199,6 @@ export default function Home({ data, movies, elementi }) {
         height={90}
       />
       <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
-      <Products
-        title='I settori'
-        description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
-        cardWidth={4}
-        cardWidthXs={12}
-        products={settori}
-      />
       <Carousel slides={slides} />
       <Features
         title='I nostri punti di forza'
