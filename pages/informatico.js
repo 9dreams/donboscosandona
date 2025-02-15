@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Container from '@mui/material/Container'
 
 import {
   Layout,
@@ -14,10 +15,9 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <LandingHero
-        imageUrl='/images/informatico/settoreinformatico.jpg'
-        height={100}
-      />
+      <Container maxWidth="xl">
+        <img src="/images/settori/informatico2.png" />
+      </Container>
 
       <SwiperNews
         title='News dal Settore Informatico'

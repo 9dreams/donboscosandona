@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Container from '@mui/material/Container'
 
 import {
   Layout,
@@ -14,10 +15,9 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <LandingHero
-        imageUrl="/images/elettrico/home_elettrico.png"
-        height={100}
-      />
+      <Container maxWidth="xl">
+        <img src="/images/settori/elettrico2.png" />
+      </Container>
       <Paragraph
         title='Operatore Elettrico'
         subtitle='Qualifica triennale'

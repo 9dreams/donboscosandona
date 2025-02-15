@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Container from '@mui/material/Container'
 
 import {
   Layout,
@@ -14,10 +15,9 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <LandingHero
-        imageUrl="/images/meccanico/home_meccanico.png"
-        height={100}
-      />
+      <Container maxWidth="xl">
+        <img src="/images/settori/meccanico2.png" />
+      </Container>
       
       <Paragraph
         title="Operatore Meccanico"

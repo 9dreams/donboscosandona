@@ -91,7 +91,7 @@ let settori = [
   {
     title: 'Automotive',
     category: 'QUALIFICA DI OPERATORE ALLA RIPARAZIONE DI VEICOLI A MOTORE',
-    url: '/motoristico',
+    url: '/automotive',
     description:
       "Effettua riparazioni e manutenzione dei motori e dell'autoveicolo in tutte le sue parti. Effettua diagnosi e prove sui gas di scarico intervenendo per risolvere le anomalie.",
     immagineUrl:
@@ -177,13 +177,6 @@ export default function Home({ data, movies, elementi }) {
     <Layout>
       <Featured data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor.png' />
-      <Elements
-        data={elementi}
-        limit={6}
-        md={4}
-        aspectRatio='3 / 2'
-        borderRadius='10px'
-      />
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
@@ -197,6 +190,13 @@ export default function Home({ data, movies, elementi }) {
         limit={4}
         defaultTag='scuola'
         height={90}
+      />
+      <Elements
+        data={elementi}
+        limit={6}
+        md={4}
+        aspectRatio='3 / 2'
+        borderRadius='10px'
       />
       <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
       <Carousel slides={slides} />

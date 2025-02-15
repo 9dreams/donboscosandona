@@ -9,9 +9,11 @@ export const siteBaseUrl = 'https://dev.donboscosandona.it'
 export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Contatti', url: '/contatti' },
+    { title: 'Elettrico', url: '/elettrico' },
+    { title: 'Energia', url: '/energia' },
     { title: 'Informatico', url: '/informatico' },
     { title: 'Meccanico', url: '/meccanico' },
-    { title: 'Lavoro', url: '/sal' },
+    { title: 'Automotive', url: '/automotive' },
     { title: 'Trasparenza', url: '/trasparenza' },
     { title: 'Privacy', url: '/privacy' },
 ]
@@ -31,11 +33,11 @@ const socials = [
 ]
 
 let images = [
-    { imageUrl: 'https://archive.donboscosandona.it/img/column/42480c58c90ada8ff75c443fdde83ae71fea75ac.jpg?1539529685', },
-    { imageUrl: 'https://archive.donboscosandona.it/img/column/417afaa0f0697f0f0aabf9ccf61030769cb76f14.jpg?1539529180', },
-    { imageUrl: 'https://archive.donboscosandona.it/img/column/97f264e9d16a0856dd2cb973630af1cac4426f73.jpg?1539529314', },
-    { imageUrl: 'https://archive.donboscosandona.it/img/column/b0bd034769ac3471bf375239f1e64e39f5684aa6.jpg?1539523300', },
-    { imageUrl: 'https://archive.donboscosandona.it/img/column/342f349c6bb5bbf9a37b95353df2bee2309b9792.jpg?1539524741', },
+    { imageUrl: '/images/settori/elettrico.png', },
+    { imageUrl: '/images/settori/energia.png', },
+    { imageUrl: '/images/settori/informatico.png', },
+    { imageUrl: '/images/settori/meccanico.png', },
+    { imageUrl: '/images/settori/automotive.png', },
 ]
 
 export const footer = <Footer

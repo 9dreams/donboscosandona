@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Container from '@mui/material/Container'
 
 import {
   Layout,
@@ -14,12 +15,13 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <LandingHero
-        imageUrl='https://moveo.telepass.com/wp-content/uploads/2023/09/riparazione-carrozzeria-auto.jpg'
-        title='Settore Motoristico'
-        description='Pagina in costruzione'
-        height={100}
-      />
+      <Container maxWidth="xl">
+        <img src="/images/settori/automotive2.png" />
+      </Container>
+      <Paragraph
+        title='Pagina in costruzione'
+        rightImageUrl='/images/codici_progetti.png'
+      ></Paragraph>
     </Layout>
   )
 }
