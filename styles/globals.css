@@ -9,7 +9,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Bebas Neue', cursive !important;
+  font-family: 'Poppins', serif !important;
 }
 
 h5,
@@ -19,14 +19,14 @@ a,
 p,
 th,
 td {
-  font-family: 'Figtree', sans-serif !important;
+  font-family: 'Poppins', serif !important;
 }
 
 html,
 body {
   margin: 0 !important;
   padding: 0 !important;
-  font-family: 'Figtree', sans-serif !important;
+  font-family: 'Poppins', serif !important;
 }
 
 .poppins-thin {
