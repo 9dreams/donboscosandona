@@ -69,7 +69,7 @@ export default function Dovesiamo() {
           </div>
         </div>
 
-        <div className="w-full 2xl:w-1/2 h-full lg:ml-20 rounded-lg overflow-hidden">
+        <div className="w-full 2xl:w-1/4 h-full lg:ml-20 rounded-lg overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2790.1100741537025!2d12.573169000000002!3d45.628525!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956ffcb4f6c53%3A0xdccf27df858e4453!2sVia%20Molina%2C%2025%2C%2030027%20San%20Don%C3%A0%20di%20Piave%20VE%2C%20Italia!5e0!3m2!1sit!2sus!4v1739350953518!5m2!1sit!2sus"
             width="100%"
@@ -79,13 +79,13 @@ export default function Dovesiamo() {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-xl mt-16 flex flex-col lg:flex-row p-8 w-full md:w-[1800px]">
-        <div className="flex flex-col w-full lg:w-1/2 space-y-6">
+      <div className="bg-white rounded-2xl shadow-xl flex flex-col 2xl:flex-row p-8 w-full justify-center">
+        <div className="flex flex-col w-[100%] 2xl:w-6/12 space-y-6">
           <h2 className="text-4xl md:text-5xl text-center text-[#99006e]">
-            Centro di Ascolto B. F. OZANAM
+            Emporio Solidale del Basso Piave
           </h2>
           <p className="text-gray-700 text-center font-bold text-xl md:text-2xl">
-            Casa Saretta
+            Progetto Regione Veneto
           </p>
 
           <div>
@@ -94,15 +94,15 @@ export default function Dovesiamo() {
               <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img className="w-20" src="images/map.png" alt="mappa"></img>
                 <span className="text-lg mt-6 text-gray-600">
-                  Casa Saretta, via Pralungo, 12 - S. Donà di Piave (VE)
+                  S. Donà di Piave - Via Molina, 25 -
                 </span>
               </div>
             </div>
           </div>
 
-          <div>
+          <div className="flex-col flex justify-center w-full">
             <h3 className="text-lg text-center text-[#99006e]">Come contattarci</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-8">
+            <div className="flex flex-col lg:flex-row 2xl:gap-8 lg:gap-8 mt-8 justify-between">
               <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img className="w-20" src="images/telephone.png" alt="telefono"></img>
                 <span className="text-lg mt-6 text-gray-600">Tel. 0421-332697</span>
@@ -116,16 +116,16 @@ export default function Dovesiamo() {
               <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img className="w-20" src="images/mail.png" alt="email"></img>
                 <span className="text-lg mt-6 text-gray-600">
-                  sanvincenzodepaolisandonadipiave@yahoo.it
+                  emporiosolidalebassopiave@gmail.com
                 </span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 h-full lg:ml-20 rounded-lg overflow-hidden">
+        <div className="w-full 2xl:w-1/4 h-full lg:ml-20 rounded-lg overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1394.8981816638263!2d12.564621!3d45.634827!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477950f899f1fa0d%3A0xdaaabb44b27b7c57!2sCasa%20Saretta!5e0!3m2!1sit!2sus!4v1739351381767!5m2!1sit!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2790.1100741537025!2d12.573169000000002!3d45.628525!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956ffcb4f6c53%3A0xdccf27df858e4453!2sVia%20Molina%2C%2025%2C%2030027%20San%20Don%C3%A0%20di%20Piave%20VE%2C%20Italia!5e0!3m2!1sit!2sus!4v1739350953518!5m2!1sit!2sus"
             width="100%"
             height="400"
             className="rounded-lg"
