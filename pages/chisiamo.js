@@ -132,6 +132,44 @@ export default function Chisiamo() {
       </div>
     </div>
   </div>
+
+  <footer class="bg-[#780202] text-white w-full">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <div class="flex justify-center md:justify-start">
+        <a href="#">
+          <img src="/images/Logo_emporio.png" class="h-24" alt="Emporio Logo" />
+        </a>
+      </div>
+      <div class="text-center md:text-left">
+        <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
+        <ul class="text-gray-300">
+          <li class="mb-2"><a href="#" class="hover:underline">Emporio solidale</a></li>
+          <li><a href="#" class="hover:underline">Del basso Piave</a></li>
+        </ul>
+      </div>
+      <div class="text-center md:text-left">
+        <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
+        <ul class="text-gray-300">
+          <li class="mb-2"><a href="#" class="hover:underline">emporiosolidalebassopiave@gmail.com</a></li>
+          <li class="mb-2"><a href="#" class="hover:underline">0421-332697</a></li>
+          <li><a href="#" class="hover:underline">344 3851626</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-6 border-gray-500" />
+    <div class="flex flex-col sm:flex-row items-center justify-between">
+      <span class="text-sm text-gray-300">© 2025 <a href="#" class="hover:underline">Emporio Solidale™</a></span>
+      <div class="mt-4 sm:mt-0">
+        <a href="#" class="text-gray-300 hover:text-white">
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 </div>
 
   );
