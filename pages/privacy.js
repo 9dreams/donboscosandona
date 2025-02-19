@@ -44,7 +44,7 @@ export default function Page({ data }) {
         <br />
         30174 Venezia - Mestre (VENEZIA)
         <br />
-        e-mail: marco.bernabe@ordineavvocativicenza.it
+        e-mail: dpo.fp@salesianinordest.it
         <br />
         tel. 392 154 9739
       </Paragraph>
