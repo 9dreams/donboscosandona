@@ -162,95 +162,146 @@ export default function Dovesiamo() {
         </div>
       </div>
 
-      <div className="flex justify-center w-full mt-12">
-        <div className="flex flex-col items-center p-8 w-full max-w-6xl">
-          <h2 className="text-4xl md:text-5xl text-center text-[#780202] font-bold mb-6">
-            Documenti Necessari per l'Assistenza
-          </h2>
-          <p className="text-gray-700 text-center text-lg md:text-xl mb-8">
-            Per ottenere l'assistenza è necessario presentare i seguenti
-            documenti:
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
-            {[
-              { img: "images/ci.jpg", text: "Carta di Identità" },
-              {
-                img: "https://www.yumpu.com/it/image/facebook/25681498.jpg",
-                text: "Stato di Famiglia",
-              },
-              {
-                img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.studiocommercialemarconi.com%2Fwp-content%2Fuploads%2F2012%2F10%2Fcapire-busta-paga.jpg&f=1&nofb=1&ipt=fe0a1d98dbbe7c9517da2f70496247c33745f8fc7d4536414ea54cfc09b87bd2&ipo=images",
-                text: "Busta paga/Pensione",
-              },
-              {
-                img: "https://www.cmdataweb.it/submenu/gestione-personale/Moduli/autocertificazione_disoccupazione.jpg",
-                text: "Certificato Disoccupazione",
-              },
-              {
-                img: "https://www.tpi.it/app/uploads/2019/02/isee-2019-1.jpg",
-                text: "Modulo ISEE",
-              },
-              {
-                img: "http://www.laziodisco.it/wp-content/uploads/2022/11/ricevuta-affitto.jpg",
-                text: "Ricevuta Affitto",
-              },
-              {
-                img: "https://blog.solignani.it/wp-content/uploads/2018/02/documenti.jpg",
-                text: "Altri Documenti",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow"
-              >
-                <img className="w-96 h-80" src={item.img} alt={item.text} />
-                <span className="text-lg mt-4 text-gray-600 text-center">
-                  {item.text}
-                </span>
-              </div>
-            ))}
+      <div className="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20">
+        <div className="flex flex-col w-full 2xl:w-11/12">
+          <h1 className="font-semibold text-3xl text-[#780202] mb-10 text-center">
+            I NOSTRI PARTNER
+          </h1>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 text-gray-700 gap-5 items-center">
+            <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+              <img
+                src="images/ci.jpg"
+                class="w-full h-80 object-contain mb-3"
+              />
+              <h1 class="text-md text-center">Carta di Identità</h1>
+            </div>
+            <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+              <img
+                src="https://www.yumpu.com/it/image/facebook/25681498.jpg"
+                class="w-full h-80 object-contain mb-3"
+              />
+              <h1 class="text-md text-center">
+                <strong>A.i.t.s.a.m.</strong>Stato di FamigliaStato di Famiglia
+              </h1>
+            </div>
+            <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+              <img
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.studiocommercialemarconi.com%2Fwp-content%2Fuploads%2F2012%2F10%2Fcapire-busta-paga.jpg&f=1&nofb=1&ipt=fe0a1d98dbbe7c9517da2f70496247c33745f8fc7d4536414ea54cfc09b87bd2&ipo=images"
+                class="w-full h-80 object-contain mb-3"
+              />
+              <h1 class="text-md text-center">
+                Busta paga/PensioneBusta paga/Pensione
+              </h1>
+            </div>
+            <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+              <img
+                src="https://www.cmdataweb.it/submenu/gestione-personale/Moduli/autocertificazione_disoccupazione.jpg"
+                class="w-full h-80 object-contain mb-3"
+              />
+              <h1 class="text-md text-center">
+                Certificato DisoccupazioneCertificato Disoccupazione
+              </h1>
+            </div>
+            <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+              <img
+                src="https://www.tpi.it/app/uploads/2019/02/isee-2019-1.jpg"
+                class="w-full h-80 object-contain mb-3"
+              />
+              <h1 class="text-md text-center">Modulo ISEEModulo ISEE</h1>
+            </div>
+            <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+              <img
+                src="http://www.laziodisco.it/wp-content/uploads/2022/11/ricevuta-affitto.jpg"
+                class="w-full h-80 object-contain mb-3"
+              />
+              <h1 class="text-md text-center">
+                Ricevuta AffittoRicevuta Affitto
+              </h1>
+            </div>
+            <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+              <img
+                src="https://blog.solignani.it/wp-content/uploads/2018/02/documenti.jpg"
+                class="w-full h-80 object-contain mb-3"
+              />
+              <h1 class="text-md text-center">
+                Altri DocumentiAltri Documenti
+              </h1>
+            </div>
           </div>
         </div>
       </div>
 
-      <footer class="bg-[#780202] text-white">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-      <div class="flex justify-center md:justify-start">
-        <a href="#">
-          <img src="/images/Logo_emporio.png" class="h-24" alt="Emporio Logo" />
-        </a>
-      </div>
-      <div class="text-center md:text-left">
-        <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
-        <ul class="text-gray-300">
-          <li class="mb-2"><a href="#" class="hover:underline">Emporio solidale</a></li>
-          <li><a href="#" class="hover:underline">Del basso Piave</a></li>
-        </ul>
-      </div>
-      <div class="text-center md:text-left">
-        <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
-        <ul class="text-gray-300">
-          <li class="mb-2"><a href="#" class="hover:underline">emporiosolidalebassopiave@gmail.com</a></li>
-          <li class="mb-2"><a href="#" class="hover:underline">0421-332697</a></li>
-          <li><a href="#" class="hover:underline">344 3851626</a></li>
-        </ul>
-      </div>
-    </div>
-    <hr class="my-6 border-gray-500" />
-    <div class="flex flex-col sm:flex-row items-center justify-between">
-      <span class="text-sm text-gray-300">© 2025 <a href="#" class="hover:underline">Emporio Solidale™</a></span>
-      <div class="mt-4 sm:mt-0">
-        <a href="#" class="text-gray-300 hover:text-white">
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
-            <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-
+      <footer class="bg-[#780202] text-white w-full">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="flex justify-center md:justify-start">
+              <a href="#">
+                <img
+                  src="/images/Logo_emporio.png"
+                  class="h-24"
+                  alt="Emporio Logo"
+                />
+              </a>
+            </div>
+            <div class="text-center md:text-left">
+              <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
+              <ul class="text-gray-300">
+                <li class="mb-2">
+                  <a href="#" class="hover:underline">
+                    Emporio solidale
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">
+                    Del basso Piave
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="text-center md:text-left">
+              <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
+              <ul class="text-gray-300">
+                <li class="mb-2">
+                  <a href="#" class="hover:underline">
+                    0421-332697
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">
+                    344 3851626
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr class="my-6 border-gray-500" />
+          <div class="flex flex-col sm:flex-row items-center justify-between">
+            <span class="text-sm text-gray-300">
+              © 2025{" "}
+              <a href="#" class="hover:underline">
+                Emporio Solidale™
+              </a>
+            </span>
+            <div class="mt-4 sm:mt-0">
+              <a href="#" class="text-gray-300 hover:text-white">
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 8 19"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
