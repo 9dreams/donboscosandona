@@ -29,7 +29,7 @@ export default function Chisiamo() {
       </div>
       
       <div className='flex flex-col w-full 2xl:w-6/12'>
-        <h3 className='font-semibold text-3xl text-gray-800 text-center'>DOCUMENTI</h3>
+        <h3 className='font-semibold text-3xl text-gray-800 text-center'>DOCUMENTI:</h3>
         
         
       </div>
@@ -201,7 +201,6 @@ export default function Chisiamo() {
         <div class="text-center md:text-left">
           <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
           <ul class="text-gray-300">
-            <li class="mb-3"><a href="#" class="hover:underline">emporiosolidalebassopiave@gmail.com</a></li>
             <li class="mb-3"><a href="#" class="hover:underline">0421-332697</a></li>
             <li><a href="#" class="hover:underline">344 3851626</a></li>
           </ul>
