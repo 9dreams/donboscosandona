@@ -1,15 +1,15 @@
 export default function Dovesiamo() {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between mb-10">
-        <div className="flex justify-center md:ml-10">
+    <div class="flex flex-col">
+      <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between mb-10">
+        <div class="flex justify-center md:ml-10">
           <img
             src="/images/Logo_emporio.png"
-            className="w-24 md:w-[140px] rounded-full"
+            class="w-24 md:w-[140px] rounded-full"
             alt="Logo"
           />
         </div>
-        <div className="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
+        <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
           {[
             "Home Page",
             "Chi Siamo",
@@ -19,68 +19,68 @@ export default function Dovesiamo() {
           ].map((item, index) => (
             <p
               key={index}
-              className="font-bold text-white hover:text-[#C7AE6A] cursor-pointer"
+              class="font-bold text-white hover:text-[#C7AE6A] cursor-pointer"
             >
               {item}
             </p>
           ))}
         </div>
-        <div className="mt-3 md:mt-0 md:mr-10 flex justify-center items-center w-full md:w-auto">
+        <div class="mt-3 md:mt-0 md:mr-10 flex justify-center items-center w-full md:w-auto">
           <input
             type="text"
             placeholder="Ricerca"
-            className="shadow-lg rounded-md placeholder:text-white placeholder:font-bold p-2 text-white font-semibold bg-[#8f1d1d] w-full md:w-auto"
+            class="shadow-lg rounded-md placeholder:text-white placeholder:font-bold p-2 text-white font-semibold bg-[#8f1d1d] w-full md:w-auto"
           />
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-xl flex flex-col 2xl:flex-row p-8 w-full justify-center">
-        <div className="flex flex-col w-[100%] 2xl:w-6/12 space-y-6">
-          <h2 className="text-4xl md:text-5xl text-center font-bold  text-[#780202]">
+      <div class="bg-white rounded-2xl shadow-xl flex flex-col 2xl:flex-row p-8 w-full justify-center">
+        <div class="flex flex-col w-[100%] 2xl:w-6/12 space-y-6">
+          <h2 class="text-4xl md:text-5xl text-center font-bold  text-[#780202]">
             Emporio Solidale del Basso Piave
           </h2>
-          <p className="text-[#dfb031] text-center font-bold text-xl md:text-2xl">
+          <p class="text-[#dfb031] text-center font-bold text-xl md:text-2xl">
             Progetto Regione Veneto
           </p>
 
           <div>
-            <h3 className="text-lg text-center text-[#780202]">
+            <h3 class="text-lg text-center text-[#780202]">
               Dove trovarci
             </h3>
-            <div className="grid grid-cols-1 gap-12 mt-8">
-              <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
-                <img className="w-20" src="images/map.png" alt="mappa"></img>
-                <span className="text-lg mt-6 text-gray-600">
+            <div class="grid grid-cols-1 gap-12 mt-8">
+              <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
+                <img class="w-20" src="images/map.png" alt="mappa"></img>
+                <span class="text-lg mt-6 text-gray-600">
                   S. Donà di Piave - Via Molina, 25 -
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="flex-col flex justify-center w-full">
-            <h3 className="text-lg text-center text-[#780202]">
+          <div class="flex-col flex justify-center w-full">
+            <h3 class="text-lg text-center text-[#780202]">
               Come contattarci
             </h3>
-            <div className="flex flex-col lg:flex-row 2xl:gap-8 lg:gap-8 mt-8 justify-between">
-              <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
+            <div class="flex flex-col lg:flex-row 2xl:gap-8 lg:gap-8 mt-8 justify-between">
+              <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img
-                  className="w-20"
+                  class="w-20"
                   src="images/telephone.png"
                   alt="telefono"
                 ></img>
-                <span className="text-lg mt-6 text-gray-600">0421-332697</span>
+                <span class="text-lg mt-6 text-gray-600">0421-332697</span>
               </div>
-              <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
+              <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img
-                  className="w-20"
+                  class="w-20"
                   src="images/smartphone.png"
                   alt="cellulare"
                 ></img>
-                <span className="text-lg mt-6 text-gray-600">344 3851626</span>
+                <span class="text-lg mt-6 text-gray-600">344 3851626</span>
               </div>
-              <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
-                <img className="w-20" src="images/mail.png" alt="email"></img>
-                <span className="text-lg mt-6 text-gray-600">
+              <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
+                <img class="w-20" src="images/mail.png" alt="email"></img>
+                <span class="text-lg mt-6 text-gray-600">
                   emporiosolidalebassopiave@gmail.com
                 </span>
               </div>
@@ -88,63 +88,63 @@ export default function Dovesiamo() {
           </div>
         </div>
 
-        <div className="w-full 2xl:w-1/4 h-full lg:ml-20 rounded-lg overflow-hidden">
+        <div class="w-full 2xl:w-1/4 h-full lg:ml-20 rounded-lg overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2790.1100741537025!2d12.573169000000002!3d45.628525!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956ffcb4f6c53%3A0xdccf27df858e4453!2sVia%20Molina%2C%2025%2C%2030027%20San%20Don%C3%A0%20di%20Piave%20VE%2C%20Italia!5e0!3m2!1sit!2sus!4v1739350953518!5m2!1sit!2sus"
             width="100%"
             height="400"
-            className="rounded-lg"
+            class="rounded-lg"
           ></iframe>
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl mt-52 shadow-xl flex flex-col 2xl:flex-row p-8 w-full justify-center">
-        <div className="flex flex-col w-[100%] 2xl:w-6/12 space-y-6">
-          <h2 className="text-4xl md:text-5xl text-center font-bold text-[#780202]">
+      <div class="bg-white rounded-2xl mt-52 shadow-xl flex flex-col 2xl:flex-row p-8 w-full justify-center">
+        <div class="flex flex-col w-[100%] 2xl:w-6/12 space-y-6">
+          <h2 class="text-4xl md:text-5xl text-center font-bold text-[#780202]">
             Centro di Ascolto B. F. OZANAM
           </h2>
-          <p className="text-[#dfb031] text-center font-bold text-xl md:text-2xl">
+          <p class="text-[#dfb031] text-center font-bold text-xl md:text-2xl">
             Casa Saretta
           </p>
 
           <div>
-            <h3 className="text-lg text-center text-[#780202]">
+            <h3 class="text-lg text-center text-[#780202]">
               Dove trovarci
             </h3>
-            <div className="grid grid-cols-1 gap-12 mt-8">
-              <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
-                <img className="w-20" src="images/map.png" alt="mappa"></img>
-                <span className="text-lg mt-6 text-gray-600">
+            <div class="grid grid-cols-1 gap-12 mt-8">
+              <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
+                <img class="w-20" src="images/map.png" alt="mappa"></img>
+                <span class="text-lg mt-6 text-gray-600">
                   Casa Saretta, via Pralungo, 12 - S. Donà di Piave (VE)
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="flex-col flex justify-center w-full">
-            <h3 className="text-lg text-center text-[#780202]">
+          <div class="flex-col flex justify-center w-full">
+            <h3 class="text-lg text-center text-[#780202]">
               Come contattarci
             </h3>
-            <div className="flex flex-col lg:flex-row 2xl:gap-8 lg:gap-8 mt-8 justify-between">
-              <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
+            <div class="flex flex-col lg:flex-row 2xl:gap-8 lg:gap-8 mt-8 justify-between">
+              <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img
-                  className="w-20"
+                  class="w-20"
                   src="images/telephone.png"
                   alt="telefono"
                 ></img>
-                <span className="text-lg mt-6 text-gray-600">0421-332697</span>
+                <span class="text-lg mt-6 text-gray-600">0421-332697</span>
               </div>
-              <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
+              <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img
-                  className="w-20"
+                  class="w-20"
                   src="images/smartphone.png"
                   alt="cellulare"
                 ></img>
-                <span className="text-lg mt-6 text-gray-600">344 3851626</span>
+                <span class="text-lg mt-6 text-gray-600">344 3851626</span>
               </div>
-              <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
-                <img className="w-20" src="images/mail.png" alt="email"></img>
-                <span className="text-lg mt-6 text-gray-600">
+              <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
+                <img class="w-20" src="images/mail.png" alt="email"></img>
+                <span class="text-lg mt-6 text-gray-600">
                   sanvincenzodepaolisandonadipiave@yahoo.it
                 </span>
               </div>
@@ -152,20 +152,20 @@ export default function Dovesiamo() {
           </div>
         </div>
 
-        <div className="w-full 2xl:w-1/4 h-full lg:ml-20 rounded-lg overflow-hidden">
+        <div class="w-full 2xl:w-1/4 h-full lg:ml-20 rounded-lg overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2790.1100741537025!2d12.573169000000002!3d45.628525!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956ffcb4f6c53%3A0xdccf27df858e4453!2sVia%20Molina%2C%2025%2C%2030027%20San%20Don%C3%A0%20di%20Piave%20VE%2C%20Italia!5e0!3m2!1sit!2sus!4v1739350953518!5m2!1sit!2sus"
             width="100%"
             height="400"
-            className="rounded-lg"
+            class="rounded-lg"
           ></iframe>
         </div>
       </div>
 
-      <div className="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20">
-        <div className="flex flex-col w-full 2xl:w-11/12">
-          <h1 className="font-semibold text-3xl text-[#780202] mb-10 text-center">
-            I NOSTRI PARTNER
+      <div class="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20">
+        <div class="flex flex-col w-full 2xl:w-11/12">
+          <h1 class="font-semibold text-3xl text-[#780202] mb-10 text-center">
+          Per avere l'assistenza è necessario presentare i seguenti documenti:
           </h1>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 text-gray-700 gap-5 items-center">
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
