@@ -22,7 +22,7 @@ export default function Chisiamo() {
     <div className='flex flex-col 2xl:flex-col justify-center items-center text-center w-11/12 md:w-7/12 gap-5 mb-10'>
       <div className='flex flex-col w-full 2xl:w-8/12'>
         <h1 className='font-semibold text-4xl text-gray-800 mb-8 text-center '>EMPORIO SOLIDALE</h1>
-        <h2 className='font-semibold text-2xl  mb-5 text-center text-[#8f1d1d]'>Trasparenza</h2>
+        <h2 className='font-semibold text-3xl  mb-5 text-center text-[#dfb031]'>Trasparenza</h2>
         <p className='font-normal text-md text-gray-800 mb-3'>
         Scarica i documenti dell'Emporio per visualizzare l'andamento delle nostre attività. La trasparenza e la rendicontazione del nostro operato è molto importante per la gestione delle risorse e del sostegno che riceviamo. 
         </p>
@@ -38,145 +38,145 @@ export default function Chisiamo() {
     <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 md:w-7/12  gap-5 items-center mb-20'>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Analisi bilanci da 2016 2019 Emporio.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>1 07 Rendiconto raccolta pubblica di fondi.doc</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>BILANCIO 2021 EMPORIO SOLIDALE.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>2 07 Rendiconto raccolta pubblica di fondi.doc</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>BILANCIO 2021 FIRMATO.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>3 07 Rendiconto raccolta pubblica di fondi.doc</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Bilancio al 31 dicembre 2018 (1).pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>A 07 Rendiconto raccolta pubblica di fondi.doc</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Bilancio al 31 dicembre 2018.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>B 07 Rendiconto raccolta pubblica di fondi 2.doc</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Bilancio al 31 dicembre 2019.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Bilancio 2023 Emporio Solidale.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Bilancio analitico 2022 Emporio Solidale.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>BILANCIO 2023 MOD D Emporio Solidale.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Bilancio Preventivo 2023 Emporio Solidale.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Bilancio Preventivo 2024 Emporio Solidale.xlsx</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Emporio - Bilancio finanziario 2020.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Relazione di missione bilancio 2023 (3).docx</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Legge sulla Trasparenza.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>RENDICONTO ATTIVITA' 2023.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>RELAZIONE 2021 FIRMATO.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>RENDICONTO FINANZIARIO 2023.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Relazione di missione bilancio 2022.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <h1 class='text-md text-center mb-3'>Trasparenza 2020-2019.pdf</h1>
-          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A]'>
+          <button class='bg-[#8f1d1d] p-3 rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12'>
             SCARICA QUI IL DOCUMENTO
           </button>
         </div>
