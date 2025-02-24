@@ -21,8 +21,8 @@ export default function Chisiamo() {
 
   <div className='flex flex-col 2xl:flex-row w-11/12 md:w-7/12 gap-5 mb-40'>
     <div className='flex flex-col w-full 2xl:w-8/12'>
-      <h1 className='font-semibold text-3xl text-gray-800 mb-6 text-center md:text-left'>EMPORIO SOLIDALE DEL BASSO PIAVE</h1>
-      <h2 className='font-semibold text-2xl text-gray-800 mb-4 text-center md:text-left'>PROGETTO REGIONE VENETO</h2>
+      <h1 className='font-semibold text-3xl text-gray-800 mb-8 text-center md:text-left'>EMPORIO SOLIDALE DEL BASSO PIAVE</h1>
+      <h2 className='font-semibold text-2xl text-gray-800 mb-5 text-center md:text-left'>PROGETTO REGIONE VENETO</h2>
       <p className='font-normal text-md text-gray-800 mb-3'>
         Siamo una rete di <strong>Associazioni di Volontariato</strong> con l’obbiettivo di una progettazione partecipe. Il <strong>Progetto Emporio Solidale</strong> ha portato varie Associazioni con diverse competenze a investire risorse e professionalità in una rete condivisa con istituzioni e Servizi Sociali.
       </p>
@@ -94,7 +94,7 @@ export default function Chisiamo() {
           <h1 class='text-md text-center'>Associazione Insieme Si Fa</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://lh5.googleusercontent.com/proxy/ac9B3pI5i70sH_e3zAnm3KHKrmkGCKsHOOnr2Dpv2b-wfOQfzh9M3qQwhP9mHDYm_i5-DR4jcFfM-hTu3JUHgSO18VdaXVKAKlMD7XLoIl20M9AG0lARppTE4oxkNrs_1DqN9UdZfphMOI0' class='w-full h-80 object-contain mb-3'/>
+          <img src='https://scontent-mxp2-1.xx.fbcdn.net/v/t39.30808-6/309361171_461379999366556_5931093882090883052_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=JrGeJjxlm-8Q7kNvgGUWNm3&_nc_oc=AdgfM4H5PODbpvg9VczG7XqfF9otT2R23r9P7Hq0w67M8Cez-fr0DssUuVcRR39DYjg&_nc_zt=23&_nc_ht=scontent-mxp2-1.xx&_nc_gid=ATfe2wbj6k5CqFKWcLo-2iH&oh=00_AYCSXZhQYc1dL3Rb-BYBfw6bvLQh5XB5Y-vnFQ3lwCPmDQ&oe=67C1FDA7' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Associazione San Vincenzo de Paoli Santi LIberale e Bartolomea</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
