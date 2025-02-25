@@ -75,7 +75,7 @@ export default function Chisiamo() {
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <img src='https://www.eraclea.com/wp-content/uploads/2017/07/casa_accoglienza_eraclea_inaugurazione.jpg' class='w-full h-80 object-contain mb-3'/>
-          <h1 class='text-md text-center'>A.p.h.e. Centro Casa dell’Accoglienza Eraclea</h1>
+          <h1 class='text-md text-center'><strong>A.p.h.e.</strong> Centro Casa dell’Accoglienza Eraclea</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG_ZO1rRLx0u0PHjwxn3BSx7EHlPzHaY0IjA&s' class='w-full h-80 object-contain mb-3'/>
@@ -115,7 +115,7 @@ export default function Chisiamo() {
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <img src='https://lh6.googleusercontent.com/-SgJCrGjAULs/S8wzbDYBMBI/AAAAAAAABts/Ftu2GLCl4VM/s293/Centro_di_Aiuto_alla_Vita.jpg' class='w-full h-80 object-contain mb-3'/>
-          <h1 class='text-md text-center'>C.A.V. Centro Aiuto alla Vita</h1>
+          <h1 class='text-md text-center'><strong>C.A.V.</strong> Centro Aiuto alla Vita</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
           <img src='https://www.consorzioinsieme.com/wp-content/uploads/2021/09/Consorzio-insieme-Logo-color.png.png' class='w-full h-80 object-contain mb-3'/>
