@@ -47,7 +47,7 @@ export default function Servizi() {
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 text-gray-700 gap-5 items-center">
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3918093/volontariato.jpg/cd25fe84-6956-d948-01fd-a7153a62451e?t=1575477910201&download=true"
+                src="images/formazione-volontari.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4">
@@ -65,7 +65,7 @@ export default function Servizi() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3918093/attenzione+e+curiosit%C3%A0.jpg/b9b9e0d9-66f6-ad81-703b-acfc8181d8d3?t=1575477906796&download=true"
+                src="images/inserimento-socio-collaborativo.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4">
@@ -82,7 +82,7 @@ export default function Servizi() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3918093/volontari.jpg/0027cdd7-c05e-469c-8451-376d3cee3fc5?t=1575477909848&download=true"
+                src="images/corso-economia-domestica.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4 ">
@@ -100,7 +100,7 @@ export default function Servizi() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3926454/abstract%20corso%20cucito.jpg/ac3c653a-011e-aec2-f078-deb04fdc5dae?t=1575549135562&download=true"
+                src="images/corso-cucito.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4">
@@ -117,7 +117,7 @@ export default function Servizi() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3918089/copertina%20corso%20psico3.png/4f47f976-2169-bc19-5536-49d9ba1718bf?t=1575477875808&download=true"
+                src="images/centro-ascolto.png"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold mb-4 text-[#dfb031]">
@@ -137,7 +137,7 @@ export default function Servizi() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3928054/IMG_4207.jpg/9af8321d-4c86-041c-2ede-4b3a6cf3b65a?t=1575554949561&download=true"
+                src="images/emporio-per-la-spesa.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4">
