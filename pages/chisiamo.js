@@ -114,7 +114,7 @@ export default function Chisiamo() {
           <h1 class='text-md text-center'>Caritas Parrocchia Duomo S. Maria delle Grazie - San Donà di Piave</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://lh6.googleusercontent.com/-SgJCrGjAULs/S8wzbDYBMBI/AAAAAAAABts/Ftu2GLCl4VM/s293/Centro_di_Aiuto_alla_Vita.jpg' class='w-full h-80 object-contain mb-3'/>
+          <img src='https://www.rossosantena.it/wp-content/uploads/2022/01/cav.jpg' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'><strong>C.A.V.</strong> Centro Aiuto alla Vita</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
