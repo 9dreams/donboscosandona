@@ -68,7 +68,7 @@ export default function Calendar({ title, description }) {
                   boxShadow: 5,
                   padding: "20px",
                   textAlign: "center",
-                  height: "100%",
+                  height: "420px",
                   transition: "0.3s",
                   display: "flex",
                   flexDirection: "column",

@@ -18,13 +18,21 @@ export default function LandingHero({ imageUrl, imageMobileUrl, opacity, title, 
         }}
       >
         {/* Overlay scuro per migliorare leggibilità */}
-        <Box sx={{ position: "absolute", top: 0, bottom: 0, right: 0, left: 0, backgroundColor: `rgba(0,0,0,${opacity})` }} />
+        <Box sx={{ 
+          position: "absolute", 
+          top: 0, 
+          bottom: 0, 
+          right: 0, 
+          left: 0, 
+          backgroundColor: `rgba(0,0,0,${opacity})`, 
+          zIndex: 1
+        }} />
 
         {/* Contenuto principale */}
         <Grid container sx={{ height: "100%", alignItems: "center", justifyContent: "center" }}>
           <Grid item md={8} xs={10} sx={{ textAlign: "center" }}>
-            {/* Titolo con animazione */}
-            <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
+            {/* Titolo con z-index maggiore per stare sopra alla box */}
+            <motion.div initial={{ y: -20 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
               <Typography
                 component="h1"
                 variant="h3"
@@ -34,20 +42,30 @@ export default function LandingHero({ imageUrl, imageMobileUrl, opacity, title, 
                   fontSize: { xs: "2.5rem", sm: "3.5rem" },
                   lineHeight: 1.2,
                   textShadow: "2px 2px 10px rgba(0,0,0,0.7)",
+                  zIndex: 2,
+                  position: "relative",
                 }}
               >
                 {title}
               </Typography>
             </motion.div>
 
-            {/* Descrizione con animazione */}
+            {/* Descrizione con animazione e maggiore opacità */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
-              <Typography component="h5" sx={{ fontSize: "1.1rem", letterSpacing: "1px", opacity: 0.8 }}>
+              <Typography 
+                component="h5" 
+                sx={{ 
+                  fontSize: "1.1rem", 
+                  letterSpacing: "1px", 
+                  zIndex: 2,
+                  position: "relative",
+                }}
+              >
                 {description}
               </Typography>
             </motion.div>
 
-            {/* Pulsante opzionale con animazione */}
+            {/* Pulsante opzionale con animazione e maggiore opacità */}
             {buttonUrl && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }}>
                 <Button
@@ -61,6 +79,8 @@ export default function LandingHero({ imageUrl, imageMobileUrl, opacity, title, 
                     transition: "all 0.3s ease",
                     backgroundColor: "#780202",
                     "&:hover": { backgroundColor: "#5a0101", transform: "scale(1.05)" },
+                    zIndex: 2,
+                  position: "relative", 
                   }}
                 >
                   {buttonText}
