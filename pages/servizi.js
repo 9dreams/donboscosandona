@@ -11,18 +11,23 @@ export default function Servizi() {
         </div>
         <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
           {[
-            "Home Page",
-            "Chi Siamo",
-            "Dove Siamo",
-            "Trasparenza",
-            "Servizi",
+            { name: "Home Page", link: "#home", class: "text-white" },
+            { name: "Chi Siamo", link: "chisiamo", class: "text-white" },
+            { name: "Dove Siamo", link: "dovesiamo", class: "text-white" },
+            { name: "Trasparenza", link: "trasparenza", class: "text-white" },
+            {
+              name: "Servizi",
+              link: "servizi",
+              class: "text-[#C7AE6A]",
+            },
           ].map((item, index) => (
-            <p
+            <a
               key={index}
-              class="font-bold text-white hover:text-[#C7AE6A] cursor-pointer"
+              href={item.link}
+              class={`font-bold hover:text-[#C7AE6A] cursor-pointer ${item.class}`}
             >
-              {item}
-            </p>
+              {item.name}
+            </a>
           ))}
         </div>
         <div class="mt-3 md:mt-0 md:mr-10 flex justify-center items-center w-full md:w-auto">
@@ -55,7 +60,7 @@ export default function Servizi() {
                 di fragilità.
               </h1>
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
@@ -72,7 +77,7 @@ export default function Servizi() {
                 sociale ed imprenditoriale,
               </h1>
               <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
@@ -90,7 +95,7 @@ export default function Servizi() {
                 quella abituale.
               </h1>
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
@@ -107,7 +112,7 @@ export default function Servizi() {
                 con l’ausilio di volontarie e personale specializzato.
               </h1>
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A]">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
@@ -127,7 +132,7 @@ export default function Servizi() {
                 religione.
               </h1>
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A]">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
