@@ -201,7 +201,7 @@ export default function Chisiamo() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/471251101_583770417632504_5887413515959198536_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_rxNnCXXgN4Q7kNvgFRKbfi&_nc_oc=Adihwhcygs0nupD34bzFUIFGC38ut9v9HrUkem3PLJc4-zVKBcOTRuBCN0UtrSf1juA&_nc_zt=23&_nc_ht=scontent-fco2-1.xx&_nc_gid=ADac5mke2po7-altCzon4GT&oh=00_AYCjA1HGPUX9KWd3CaF_RPWjsKLmqeXtFipd4o0RJmetTg&oe=67BB7C35"
+                src="images/scuolamaterna.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center">
@@ -210,7 +210,7 @@ export default function Chisiamo() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/308476570_460958519407889_7637449687006246554_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=cILzTayRc-UQ7kNvgHDYcFE&_nc_oc=AdjzXdvFHJ3Inl4FPC4zRyM_l9yUhmS4pz3yzorjvh_k_j-IjZPuuBvAeP4aGlfSnNs&_nc_zt=23&_nc_ht=scontent-fco2-1.xx&_nc_gid=AICA76pZWB4oFYQS0sM_2-B&oh=00_AYACVAay69ytcLgXXj3t1jnO-nRDk5Zb_yw0eJGNHgRSbA&oe=67BB8C31"
+                src="images/sanpiox.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center">
@@ -219,7 +219,7 @@ export default function Chisiamo() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/417439277_717067103924648_4477952060480115277_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=hKuLVgMeXwEQ7kNvgFZqwgt&_nc_oc=AdijSSr9MWDsl3kiLV2X18AxvehPHf2LlWS3CAUbcLbeqmYzp4wawxt9ymHrIwPhBMU&_nc_zt=23&_nc_ht=scontent-fco2-1.xx&_nc_gid=AHUrnn-spqjVNpehD80VDmK&oh=00_AYBaEq4hgffwHLwAoI72iwL4uG5e_-p_6wdYMlvPz3PIOQ&oe=67BB7BB5"
+                src="images/dicembre79.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center">
@@ -228,7 +228,7 @@ export default function Chisiamo() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/447188138_771948328465092_4022831559887833283_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=eI30neAD6MYQ7kNvgEkc6DF&_nc_oc=AdjTR1MycMb-KMKApolLh7W5mr1FgwcWFuLMBDT8pkyv6UGooYRSz8gqgYYjzM12NKw&_nc_zt=23&_nc_ht=scontent-fco2-1.xx&_nc_gid=ARHdjnuoW6M7jFV2YBHqgWP&oh=00_AYAiL_DoTPAUcb3cWRnivvOhv3ZvWvLxLAuGenwqcs0zsQ&oe=67BB5EE0"
+                src="images/duomosan.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center">
@@ -256,7 +256,7 @@ export default function Chisiamo() {
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/327183438_851842029379437_3716390394788203806_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=SDmVCmEZnI4Q7kNvgGk4181&_nc_oc=AdgZABGDaDXVh1RLCZhn0vDLaoldMKlbeL6kJvKggNEI96X2WLA-6AX9yA2hG-HIvEY&_nc_zt=23&_nc_ht=scontent-fco2-1.xx&_nc_gid=AMCiuGBuGLKFVVXGgNqbctG&oh=00_AYBraDVMOVTXlGp1-HFiY09gZXiOIM968Rm56-a0GkZ5xg&oe=67BB7EC2"
+                src="images/crocerossa.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center">
