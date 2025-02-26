@@ -39,7 +39,7 @@ export default function Servizi() {
         </div>
       </div>
 
-      <div class="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20">
+      <div class="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20 mx-auto">
         <div class="flex flex-col w-full 2xl:w-11/12">
           <h1 class="font-semibold text-3xl text-[#780202] mb-10 text-center">
             I nostri servizi
