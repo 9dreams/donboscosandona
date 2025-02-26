@@ -66,35 +66,35 @@ export default function Chisiamo() {
       <h1 className='font-semibold text-3xl text-gray-800 mb-10 text-center'>I nostri partner</h1>
       <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 items-center'>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://welfarex.it/img/loghi/Stemma_Citt_di_San_Don_di_Piave_20221221142628_870.png' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/comunesan.jpg' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Comune di San Donà di Piave</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://imagecdn.spazioweb.it/e3/6f/e36f8277-b39e-45a6-b775-982067283840.png' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/aitsamlogo.jpg' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'><strong>A.i.t.s.a.m.</strong> Associazione italiana Tutela Salute Mentale</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://www.eraclea.com/wp-content/uploads/2017/07/casa_accoglienza_eraclea_inaugurazione.jpg' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/apheeraclea.jpg' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'><strong>A.p.h.e.</strong> Centro Casa dell’Accoglienza Eraclea</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG_ZO1rRLx0u0PHjwxn3BSx7EHlPzHaY0IjA&s' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/alpontecop.png' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Al Ponte Coop. Sociale</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://www.amicodelpopolo.it/wp-content/uploads/2023/11/coltivare-condividendo-copia.jpg' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/condividendoass.jpg' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Associazione Condividendo</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://www.holyart.it/blog/wp-content/uploads/sites/17/2022/06/maria-madre-della-chiesa.jpg' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/assmariaeraclea.jpg' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Associazione In Cammino con Maria, Eraclea</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://www.politerapica.it/wp-content/uploads/Insieme-si-puo.-Insieme-funziona..png' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/assinsieme.png' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Associazione Insieme Si Fa</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://scontent-mxp2-1.xx.fbcdn.net/v/t39.30808-6/309361171_461379999366556_5931093882090883052_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=JrGeJjxlm-8Q7kNvgGUWNm3&_nc_oc=AdgfM4H5PODbpvg9VczG7XqfF9otT2R23r9P7Hq0w67M8Cez-fr0DssUuVcRR39DYjg&_nc_zt=23&_nc_ht=scontent-mxp2-1.xx&_nc_gid=ATfe2wbj6k5CqFKWcLo-2iH&oh=00_AYCSXZhQYc1dL3Rb-BYBfw6bvLQh5XB5Y-vnFQ3lwCPmDQ&oe=67C1FDA7' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/asssanvincenzo.jpg' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Associazione San Vincenzo de Paoli Santi LIberale e Bartolomea</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
@@ -114,11 +114,11 @@ export default function Chisiamo() {
           <h1 class='text-md text-center'>Caritas Parrocchia Duomo S. Maria delle Grazie - San Donà di Piave</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://www.rossosantena.it/wp-content/uploads/2022/01/cav.jpg' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/cavaiuto.jpg' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'><strong>C.A.V.</strong> Centro Aiuto alla Vita</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://www.consorzioinsieme.com/wp-content/uploads/2021/09/Consorzio-insieme-Logo-color.png.png' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/consorzioinsieme.png' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Consorzio Insieme Soc. Coop. Sociale</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
@@ -126,7 +126,7 @@ export default function Chisiamo() {
           <h1 class='text-md text-center'>Croce Rossa Italiana Comitato di Ve Onlus</h1>
         </div>
         <div class='flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full'>
-          <img src='https://upload.wikimedia.org/wikipedia/commons/f/f7/Masci_logo.png' class='w-full h-80 object-contain mb-3'/>
+          <img src='images/mascimovimento.png' class='w-full h-80 object-contain mb-3'/>
           <h1 class='text-md text-center'>Masci Movimento Adulti Scout Cattolici Italiani</h1>
         </div>
       </div>
