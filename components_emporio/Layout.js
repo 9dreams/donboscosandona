@@ -42,9 +42,9 @@ export default function Layout({ children }) {
           }}
         />
 
-        <Navbar /> {/* Usa solo la Navbar */}
+        <Navbar />
         <main>{children}</main>
-        <Footer /> {/* Aggiunto nuovamente il Footer */}
+        <Footer />
       </div>
     </ThemeProvider>
   )

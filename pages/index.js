@@ -49,7 +49,12 @@ export default function Home({ data, elementi }) {
         />
         <News title="News" data={data} limit={4} />
         <Download />
-        <Anziani />
+        
+        {/* Contenitore con maggiore padding per evitare sovrapposizioni */}
+        <div className="relative z-10 mt-12">
+          <Anziani />
+        </div>
+
         <Collab />
       </div>
     </Layout>

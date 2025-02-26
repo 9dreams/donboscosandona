@@ -40,7 +40,7 @@ export default function Anziani() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage:
             "url(https://149797850.v2.pressablecdn.com/wp-content/uploads/2024/04/Website-Photos-14.png)",
@@ -48,7 +48,7 @@ export default function Anziani() {
       />
 
       {/* Main Content */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-black z-10 px-6 py-12">
+      <div className="relative z-10 px-6 py-12 flex flex-col justify-center items-center text-black overflow-y-auto">
         {/* Heading with Animation */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
