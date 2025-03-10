@@ -36,7 +36,7 @@ export default function Home({ data, elementi }) {
         description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
         buttonUrl="j"
         buttonText="Documentazioni"
-        imageUrl="https://www.radio-food.it/wp-content/uploads/2020/03/carrello_spesa_cw70e0.jpg" 
+        imageUrl="images/landing.jpg" 
       />
 
       {/* Aggiunto padding e sfondo per testare Tailwind */}
