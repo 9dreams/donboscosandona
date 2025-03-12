@@ -154,7 +154,7 @@ export default function Home({ data, elementi }) {
         grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
         grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
         spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
+        tempo libero rischia di diventare tempo perso. Quando finalmente suon
         l’ultima campanella dell’anno scolastico inizia quel periodo tanto
         atteso dove finalmente si può fare ciò che si vuole, senza troppi
         vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
