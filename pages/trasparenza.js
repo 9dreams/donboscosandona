@@ -11,7 +11,7 @@ export default function Chisiamo() {
         </div>
         <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
           {[
-            { name: "Home Page", link: "#home", class: "text-white" },
+            { name: "Home Page", link: "/", class: "text-white" },
             { name: "Chi siamo", link: "chisiamo", class: "text-white" },
             { name: "Dove Siamo", link: "dovesiamo", class: "text-white" },
             {
