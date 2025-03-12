@@ -11,18 +11,23 @@ export default function Dovesiamo() {
         </div>
         <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
           {[
-            "Home Page",
-            "Chi Siamo",
-            "Dove Siamo",
-            "Trasparenza",
-            "Servizi",
+            { name: "Home Page", link: "#home", class: "text-white" },
+            { name: "Chi Siamo", link: "chisiamo", class: "text-white" },
+            {
+              name: "Dove Siamo",
+              link: "dovesiamo",
+              class: "text-[#C7AE6A]",
+            },
+            { name: "Trasparenza", link: "trasparenza", class: "text-white" },
+            { name: "Servizi", link: "servizi", class: "text-white" },
           ].map((item, index) => (
-            <p
+            <a
               key={index}
-              class="font-bold text-white hover:text-[#C7AE6A] cursor-pointer"
+              href={item.link}
+              class={`font-bold hover:text-[#C7AE6A] cursor-pointer ${item.class}`}
             >
-              {item}
-            </p>
+              {item.name}
+            </a>
           ))}
         </div>
         <div class="mt-3 md:mt-0 md:mr-10 flex justify-center items-center w-full md:w-auto">
@@ -44,9 +49,7 @@ export default function Dovesiamo() {
           </p>
 
           <div>
-            <h3 class="text-lg text-center text-[#780202]">
-              Dove trovarci
-            </h3>
+            <h3 class="text-lg text-center text-[#780202]">Dove trovarci</h3>
             <div class="grid grid-cols-1 gap-12 mt-8">
               <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img class="w-20" src="images/map.png" alt="mappa"></img>
@@ -58,9 +61,7 @@ export default function Dovesiamo() {
           </div>
 
           <div class="flex-col flex justify-center w-full">
-            <h3 class="text-lg text-center text-[#780202]">
-              Come contattarci
-            </h3>
+            <h3 class="text-lg text-center text-[#780202]">Come contattarci</h3>
             <div class="flex flex-col lg:flex-row 2xl:gap-8 lg:gap-8 mt-8 justify-between">
               <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img
@@ -108,9 +109,7 @@ export default function Dovesiamo() {
           </p>
 
           <div>
-            <h3 class="text-lg text-center text-[#780202]">
-              Dove trovarci
-            </h3>
+            <h3 class="text-lg text-center text-[#780202]">Dove trovarci</h3>
             <div class="grid grid-cols-1 gap-12 mt-8">
               <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img class="w-20" src="images/map.png" alt="mappa"></img>
@@ -122,9 +121,7 @@ export default function Dovesiamo() {
           </div>
 
           <div class="flex-col flex justify-center w-full">
-            <h3 class="text-lg text-center text-[#780202]">
-              Come contattarci
-            </h3>
+            <h3 class="text-lg text-center text-[#780202]">Come contattarci</h3>
             <div class="flex flex-col lg:flex-row 2xl:gap-8 lg:gap-8 mt-8 justify-between">
               <div class="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow">
                 <img
@@ -165,7 +162,7 @@ export default function Dovesiamo() {
       <div class="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20">
         <div class="flex flex-col w-full 2xl:w-11/12">
           <h1 class="font-semibold text-3xl text-[#780202] mb-10 text-center">
-          Per avere l'assistenza è necessario presentare i seguenti documenti:
+            Per avere l'assistenza è necessario presentare i seguenti documenti:
           </h1>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 text-gray-700 gap-5 items-center">
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">

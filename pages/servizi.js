@@ -11,18 +11,23 @@ export default function Servizi() {
         </div>
         <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
           {[
-            "Home Page",
-            "Chi Siamo",
-            "Dove Siamo",
-            "Trasparenza",
-            "Servizi",
+            { name: "Home Page", link: "#home", class: "text-white" },
+            { name: "Chi Siamo", link: "chisiamo", class: "text-white" },
+            { name: "Dove Siamo", link: "dovesiamo", class: "text-white" },
+            { name: "Trasparenza", link: "trasparenza", class: "text-white" },
+            {
+              name: "Servizi",
+              link: "servizi",
+              class: "text-[#C7AE6A]",
+            },
           ].map((item, index) => (
-            <p
+            <a
               key={index}
-              class="font-bold text-white hover:text-[#C7AE6A] cursor-pointer"
+              href={item.link}
+              class={`font-bold hover:text-[#C7AE6A] cursor-pointer ${item.class}`}
             >
-              {item}
-            </p>
+              {item.name}
+            </a>
           ))}
         </div>
         <div class="mt-3 md:mt-0 md:mr-10 flex justify-center items-center w-full md:w-auto">
@@ -34,7 +39,7 @@ export default function Servizi() {
         </div>
       </div>
 
-      <div class="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20">
+      <div class="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20 mx-auto">
         <div class="flex flex-col w-full 2xl:w-11/12">
           <h1 class="font-semibold text-3xl text-[#780202] mb-10 text-center">
             I nostri servizi
@@ -42,7 +47,7 @@ export default function Servizi() {
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 text-gray-700 gap-5 items-center">
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3918093/volontariato.jpg/cd25fe84-6956-d948-01fd-a7153a62451e?t=1575477910201&download=true"
+                src="images/formazione-volontari.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4">
@@ -55,12 +60,12 @@ export default function Servizi() {
                 di fragilità.
               </h1>
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3918093/attenzione+e+curiosit%C3%A0.jpg/b9b9e0d9-66f6-ad81-703b-acfc8181d8d3?t=1575477906796&download=true"
+                src="images/inserimento-socio-collaborativo.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4">
@@ -72,12 +77,12 @@ export default function Servizi() {
                 sociale ed imprenditoriale,
               </h1>
               <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3918093/volontari.jpg/0027cdd7-c05e-469c-8451-376d3cee3fc5?t=1575477909848&download=true"
+                src="images/corso-economia-domestica.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4 ">
@@ -90,12 +95,12 @@ export default function Servizi() {
                 quella abituale.
               </h1>
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3926454/abstract%20corso%20cucito.jpg/ac3c653a-011e-aec2-f078-deb04fdc5dae?t=1575549135562&download=true"
+                src="images/corso-cucito.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4">
@@ -107,12 +112,12 @@ export default function Servizi() {
                 con l’ausilio di volontarie e personale specializzato.
               </h1>
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A]">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3918089/copertina%20corso%20psico3.png/4f47f976-2169-bc19-5536-49d9ba1718bf?t=1575477875808&download=true"
+                src="images/centro-ascolto.png"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold mb-4 text-[#dfb031]">
@@ -127,12 +132,12 @@ export default function Servizi() {
                 religione.
               </h1>
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A]">
-              SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
-                src="https://www.emporiosolidalebassopiave.it/documents/3870210/3928054/IMG_4207.jpg/9af8321d-4c86-041c-2ede-4b3a6cf3b65a?t=1575554949561&download=true"
+                src="images/emporio-per-la-spesa.jpg"
                 class="w-full h-80 object-contain mb-3"
               />
               <h1 class="text-md text-center text-3xl font-bold text-[#dfb031] mb-4">
