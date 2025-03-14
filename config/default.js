@@ -1,10 +1,10 @@
 import Footer from '/components/Footer'
 import NavBar from '/components/NavBar'
 
-export const siteName = 'CFP DON BOSCO'
-export const siteTitle = 'CFP DON BOSCO - San Donà di Piave'
+export const siteName = 'Emporio Solidale Basso Piave'
+export const siteTitle = 'Emporio Solidale del Basso Piave'
 export const siteDescription =
-  'Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave'
+  'Emporio Solidale del Basso Piave'
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
 export const menu = [

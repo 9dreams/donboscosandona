@@ -5,8 +5,9 @@ import News from '../components_emporio/News';
 import Download from '../components_emporio/Download';
 import Anziani from '../components_emporio/Anziani';
 import Collab from '../components_emporio/Collab';
+import Featured from '../components/Featured'
 
-export default function Home({ data, elementi }) {
+export default function Home({ data }) {
   const date = [
     {
       date: '15 Giugno',
@@ -32,12 +33,11 @@ export default function Home({ data, elementi }) {
     <Layout>
       <LandingHero
         opacity={0.5}
-        title="Emporio Solidale"
-        description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
-        buttonUrl="j"
-        buttonText="Documentazioni"
+        title="Emporio Solidale Basso Piave"
+        description="Scopri un mondo  "
         imageUrl="images/landing.jpg" 
       />
+      <Featured data={data} limit={4} defaultTag='scuola' />
 
       {/* Aggiunto padding e sfondo per testare Tailwind */}
       <div className="bg-gray-100 py-10">
@@ -47,7 +47,7 @@ export default function Home({ data, elementi }) {
           cardWidth={3}
           events={date}
         />
-        <News title="News" data={data} limit={4} />
+        <News title="News" data={data} limit={6} />
         <Download />
         
         {/* Contenitore con maggiore padding per evitare sovrapposizioni */}
@@ -67,13 +67,8 @@ export async function getStaticProps() {
   );
   const data = await res.json();
 
-  res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/donboscosandona_elements'
-  );
-  const elementi = await res.json();
-
   return {
-    props: { data, elementi },
+    props: { data },
     revalidate: 1800, // Rigenera la pagina ogni 30 minuti
   };
 }
