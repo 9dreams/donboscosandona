@@ -138,7 +138,7 @@ let certifications = [
   },
   {
     logoUrl: '/images/certification/regioneveneto.png',
-    text1: 'Formazione iniziale, ',
+    text1: 'Formazione iniziale, continua, ',
     text2: 'superiore e orientamento',
   },
 ]
