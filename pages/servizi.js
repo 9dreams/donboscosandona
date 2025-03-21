@@ -8,6 +8,8 @@ export default function Servizi() {
             class="w-24 md:w-[140px] rounded-full"
             alt="Logo"
           />
+          <title>Servizi - Emporio Solidale</title>
+          <link rel='icon' href='/images/servizi_favicon/favicon.ico' />
         </div>
         <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
           {[
@@ -59,9 +61,11 @@ export default function Servizi() {
                 varie problematiche delle persone che stanno vivendo un momento
                 di fragilità.
               </h1>
+              <a href="/servizi/corso-volontari-2019">
               <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
                 SCOPRI I DETTAGLI DI QUESTO SERVIZIO
               </button>
+              </a>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
@@ -76,11 +80,11 @@ export default function Servizi() {
                 inserimento lavorativo attraverso il sostegno della cooperazione
                 sociale ed imprenditoriale,
               </h1>
-              <a href="URL_DESTINAZIONE">
-  <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-    SCOPRI I DETTAGLI DI QUESTO SERVIZIO
-  </button>
-</a>
+              <a href="/servizi/inserimento-socio-collaborativo">
+                <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
+                  SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                </button>
+              </a>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
@@ -96,9 +100,11 @@ export default function Servizi() {
                 gestire l' integrazione dei figli in una quotidianità diversa da
                 quella abituale.
               </h1>
-              <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
-              </button>
+              <a href="/servizi/economia-domestica">
+                <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
+                  SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                </button>
+              </a>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
@@ -113,9 +119,11 @@ export default function Servizi() {
                 tecniche di taglio e cucito, rammendo, uso di macchine da cucire
                 con l’ausilio di volontarie e personale specializzato.
               </h1>
-              <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A]">
-                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
-              </button>
+              <a href="/servizi/corso-di-cucito">
+                <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
+                  SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                </button>
+              </a>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
@@ -133,9 +141,11 @@ export default function Servizi() {
                 sofferenza indipendentemente dalla razza, dal sesso e dalla
                 religione.
               </h1>
-              <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A]">
-                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
-              </button>
+              <a href="/servizi/centro-di-ascolto">
+                <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
+                  SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                </button>
+              </a>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
@@ -151,9 +161,11 @@ export default function Servizi() {
                 cura dei bisogni primari di chi in un periodo difficile della
                 propria vita chiede aiuto.
               </h1>
-              <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A]">
-                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
-              </button>
+              <a href="/servizi/emporio-solidale-per-la-spesa">
+                <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
+                  SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                </button>
+              </a>
             </div>
           </div>
         </div>
