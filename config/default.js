@@ -1,5 +1,5 @@
 import NavBar from '/components/NavBar'
-import Footer from '/components/Footer'
+import Footer from '/cc/Footer'
 
 export const siteName = "SFP DON BOSCO"
 export const siteTitle = "SFP DON BOSCO - San Donà di Piave"
@@ -26,11 +26,13 @@ export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} 
 const menuFooter = menu
 
 const socials = [
-    { title: 'Facebook', imageUrl: 'https://archive.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png', url: 'https://www.facebook.com/donboscosandona/?fref=ts' },
-    { title: 'Instagram', imageUrl: 'https://archive.donboscosandona.it/img/ck/5c1c2a74750c62b3349df0d555ea9a26d1c6e8af.png', url: 'https://www.instagram.com/donboscosandona/' },
-    { title: 'Youtube', imageUrl: 'https://archive.donboscosandona.it/img/ck/36189d32ee9d4be0a612c292a430106948c85bfc.png', url: 'https://www.youtube.com/channel/UCZ2sxe9w7Yf9lP4nl65oAvg' },
-    { title: 'Linkedin', imageUrl: 'https://archive.donboscosandona.it/img/ck/55ed185e94be2aa2a1d854487273a4d139e5475f.png', url: 'https://www.linkedin.com/company/c-f-p-don-bosco/' },
+    { title: 'Facebook', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/667px-2023_Facebook_icon.svg.png', url: 'https://www.facebook.com/donboscosandona/?fref=ts' },
+    { title: 'Instagram', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/640px-Instagram_icon.png', url: 'https://www.instagram.com/donboscosandona/' },
+    { title: 'Youtube', imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-youtube-logo-icon-download-in-svg-png-gif-file-formats--social-media-70-flat-icons-color-pack-logos-432560.png', url: 'https://www.youtube.com/channel/UCZ2sxe9w7Yf9lP4nl65oAvg' },
+    { title: 'Linkedin', imageUrl: 'https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png', url: 'https://www.linkedin.com/company/c-f-p-don-bosco/' },
+    { title: 'TikTok', imageUrl: 'https://seeklogo.com/images/T/tiktok-logo-1F4A5DCD45-seeklogo.com.png', url: 'https://www.tiktok.com/@sfpdonbosco' },
 ]
+
 
 let images = [
     { imageUrl: '/images/settori/elettrico.png', },
