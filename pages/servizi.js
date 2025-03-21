@@ -76,9 +76,11 @@ export default function Servizi() {
                 inserimento lavorativo attraverso il sostegno della cooperazione
                 sociale ed imprenditoriale,
               </h1>
-              <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
-              </button>
+              <a href="URL_DESTINAZIONE">
+  <button class="bg-[#8f1d1d] mt-10 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
+    SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+  </button>
+</a>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
               <img
