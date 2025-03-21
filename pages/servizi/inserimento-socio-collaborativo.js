@@ -9,7 +9,7 @@ export default function Servizi() {
           <div class="flex justify-center md:ml-0 lg:ml-10 mb-2 md:mb-0">
             <img
               src="/images/Logo_emporio.png"
-              class="w-20 md:w-[120px] lg:w-[140px] rounded-full" 
+              class="w-20 md:w-[120px] lg:w-[140px] rounded-full"
               alt="Logo"
             />
           </div>
@@ -34,7 +34,7 @@ export default function Servizi() {
               </a>
             ))}
           </div>
-          <div class="mt-3 md:mt-0 md:mr-0 lg:mr-10 flex justify-center items-center w-full md:w-auto"> 
+          <div class="mt-3 md:mt-0 md:mr-0 lg:mr-10 flex justify-center items-center w-full md:w-auto">
             <input
               type="text"
               placeholder="Ricerca"

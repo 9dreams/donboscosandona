@@ -45,13 +45,13 @@ export default function Servizi() {
         {/* Fine NavBar */}
         {/*  */}
         <div className="w-screen bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
-        <div className="flex flex-row p-20 pb-[31rem]">
-          <a href="/">
-            <p className="text-sm text-white">Emporio Solidale</p>
-          </a>
+          <div className="flex flex-row p-20 pb-[31rem]">
+            <a href="/">
+              <p className="text-sm text-white">Emporio Solidale</p>
+            </a>
             <p className="ml-24 text-sm color-[#272833]">Corso Volontari 2019</p>
           </div>
-          
+
         </div>
 
         {/* Inizio Footer */}
