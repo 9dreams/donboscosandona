@@ -57,7 +57,7 @@ export default function Anziani() {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-red-500">
-            Benvenuti al Nostro Programma
+            I servizi che offriamo - Inizia il tuo viaggio con noi nel mondo della solidarietà
           </h1>
           <p className="text-lg md:text-xl text-red-500">
             Inizia il tuo viaggio con noi oggi!
