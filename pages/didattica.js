@@ -1,21 +1,13 @@
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import Paragraph from '@/components/Paragraph';
 
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '/components/Layout';
 import LandingHero from '/components/LandingHero.js';
-import Features from '/components/Features';
-import Carousel from '/components/Carousel';
-import PostInEvidenza from '/components/PostInEvidenza';
-import Products from '/components/Products';
-import Testimonials from '/components/Testimonials';
-import Team from '/components/Team';
-import Post from '/components/Post';
+
 import { Button, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import Link from 'next/link';
+
 
 let menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
