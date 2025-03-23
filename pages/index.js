@@ -32,6 +32,7 @@ const features = [
       'https://archive.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png',
     description:
       'Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.',
+      url: '/didattica'
   },
   {
     title: 'Laboratori',

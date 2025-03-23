@@ -25,7 +25,6 @@ export default function Home({ datiArticoli }) {
                 title="Didattica Attiva: Imparare è un'Esperienza!"
                 description="Stanco delle solite lezioni noiose? Scopri un nuovo modo di imparare!"
                 imageUrl="/images/didattica/principale.jpg"
-                menu={menu}
             />
             <Paragraph
                 title="Didattica Attiva: Protagonisti del Tuo Apprendimento"
