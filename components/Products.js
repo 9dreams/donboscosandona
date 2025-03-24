@@ -142,7 +142,7 @@ export default function Products({
 }
 
 Products.defaultProps = {
-  cardWidth: 3,
+  cardWidth: 5,
   cardWidthXs: 6,
   borderRadius: '10px',
   aspectRatio: '3 / 2',

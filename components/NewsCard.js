@@ -28,7 +28,7 @@ function readMore(string, maxWords) {
 export default function NewsCard({ post, aspectRatio, defaultTag }) {
   return (
     <CardActionArea
-      component='a'
+      component='A'
       href={
         (post.articolo && '/articoli/' + post.id) || post.link || post.allegato
       }
