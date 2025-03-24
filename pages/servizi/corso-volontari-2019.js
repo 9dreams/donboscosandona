@@ -5,23 +5,23 @@ export default function Servizi() {
       <link rel="icon" href="/images/servizi_favicon/favicon.ico" />
 
       <div class="flex flex-col">
-        <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
-          <div class="flex justify-center md:ml-10">
+      <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
+          <div class="flex justify-center md:ml-0 lg:ml-10 mb-2 md:mb-0">
             <img
               src="/images/Logo_emporio.png"
-              class="w-24 md:w-[140px] rounded-full"
+              class="w-20 md:w-[120px] lg:w-[140px] rounded-full"
               alt="Logo"
             />
           </div>
           <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
             {[
               { name: "Home Page", link: "/", class: "text-white" },
-              { name: "Chi Siamo", link: "chisiamo", class: "text-white" },
-              { name: "Dove Siamo", link: "dovesiamo", class: "text-white" },
-              { name: "Trasparenza", link: "trasparenza", class: "text-white" },
+              { name: "Chi Siamo", link: "../chisiamo", class: "text-white" },
+              { name: "Dove Siamo", link: "../dovesiamo", class: "text-white" },
+              { name: "Trasparenza", link: "../trasparenza", class: "text-white" },
               {
                 name: "Servizi",
-                link: "servizi",
+                link: "../servizi",
                 class: "text-[#C7AE6A]",
               },
             ].map((item, index) => (
@@ -34,7 +34,7 @@ export default function Servizi() {
               </a>
             ))}
           </div>
-          <div class="mt-3 md:mt-0 md:mr-10 flex justify-center items-center w-full md:w-auto">
+          <div class="mt-3 md:mt-0 md:mr-0 lg:mr-10 flex justify-center items-center w-full md:w-auto">
             <input
               type="text"
               placeholder="Ricerca"
@@ -42,64 +42,114 @@ export default function Servizi() {
             />
           </div>
         </div>
-        {/* Fine NavBar */}
-        {/*  */}
+
         <div className="w-screen bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
+
           <div className="flex flex-row p-20 pb-[31rem]">
             <a href="/">
               <p className="text-sm text-white">Emporio Solidale</p>
             </a>
-            <p className="ml-24 text-sm color-[#272833]">Corso Volontari 2019</p>
+            <p className="ml-24 text-sm color-[#272833]">
+              Corso Volontari 2019
+            </p>
           </div>
-
         </div>
 
-        {/* Inizio Footer */}
         <footer class="bg-[#780202] text-white w-full">
-          <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div class="w-full max-w-screen-xl p-4 py-6 lg:py-8 h-auto md:h-[25rem] mx-auto flex flex-col justify-center items-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start w-full">
               <div class="flex justify-center md:justify-start">
                 <a href="#">
                   <img
                     src="/images/Logo_emporio.png"
-                    class="h-24"
+                    class="h-20 md:h-24"
                     alt="Emporio Logo"
                   />
                 </a>
               </div>
+
               <div class="text-center md:text-left">
-                <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
+                <h2 class="mb-4 text-sm font-semibold uppercase">
+                  Corso di cucito
+                </h2>
+                <hr class="mb-2 border-gray-500" />
                 <ul class="text-gray-300">
                   <li class="mb-2">
-                    <a href="#" class="hover:underline">
-                      Emporio solidale
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="hover:underline">
-                      Del basso Piave
+                    <a
+                      href="./corso-di-cucito"
+                      class="hover:underline text-cyan-400"
+                    >
+                      Vai al corso
                     </a>
                   </li>
                 </ul>
               </div>
+
               <div class="text-center md:text-left">
-                <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
+                <h2 class="mb-4 text-sm font-semibold uppercase">
+                  Economia domestica
+                </h2>
+                <hr class="mb-2 border-gray-500" />
                 <ul class="text-gray-300">
                   <li class="mb-2">
-                    <a href="#" class="hover:underline">
-                      0421-332697
+                    <a
+                      href="./economia-domestica"
+                      class="hover:underline text-cyan-400"
+                    >
+                      Approfondimenti
                     </a>
                   </li>
-                  <li>
-                    <a href="#" class="hover:underline">
-                      344 3851626
+                </ul>
+              </div>
+
+              <div class="text-center md:text-left">
+                <h2 class="mb-4 text-sm font-semibold uppercase">
+                  Centro di ascolto
+                </h2>
+                <hr class="mb-2 border-gray-500" />
+                <ul class="text-gray-300">
+                  <li class="mb-2">
+                    <a
+                      href="./centro-di-ascolto"
+                      class="hover:underline text-cyan-400"
+                    >
+                      Presentazione del servizio
                     </a>
                   </li>
+                </ul>
+              </div>
+
+              <div class="text-center md:text-left">
+                <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
+                <hr class="mb-2 border-gray-500" />
+                <ul class="text-gray-300">
+                  <li class="mb-2">Emporio Solidale del Basso</li>
+                  <li class="mb-2">Piave San Donà di Piave (VE)</li>
+                </ul>
+              </div>
+
+              <div class="text-center md:text-left">
+                <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
+                <hr class="mb-2 border-gray-500" />
+                <ul class="text-gray-300">
+                  <li class="mb-2">
+                    e-mail:{" "}
+                    <a
+                      href="mailto:emporiosolidalebassopiave@gmail.com"
+                      class="hover:underline text-cyan-400"
+                    >
+                      emporiosolidalebassopiave@gmail.com
+                    </a>
+                  </li>
+                  <li class="mb-2">Fax e Telefono: 0421-332697</li>
+                  <li class="mb-2">Cellulare: 344 3851626</li>
                 </ul>
               </div>
             </div>
-            <hr class="my-6 border-gray-500" />
-            <div class="flex flex-col sm:flex-row items-center justify-between">
+
+            <hr class="my-6 border-gray-500 w-full" />
+
+            <div class="flex flex-col sm:flex-row items-center justify-between w-full">
               <span class="text-sm text-gray-300">
                 © 2025{" "}
                 <a href="#" class="hover:underline">

@@ -9,7 +9,7 @@ export default function Servizi() {
             alt="Logo"
           />
           <title>Servizi - Emporio Solidale</title>
-          <link rel='icon' href='/images/servizi_favicon/favicon.ico' />
+          <link rel="icon" href="/images/servizi_favicon/favicon.ico" />
         </div>
         <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
           {[
@@ -62,9 +62,9 @@ export default function Servizi() {
                 di fragilità.
               </h1>
               <a href="/servizi/corso-volontari-2019">
-              <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
-                SCOPRI I DETTAGLI DI QUESTO SERVIZIO
-              </button>
+                <button class="bg-[#8f1d1d] mt-4 p-3 rounded-2xl text-white hover:text-[#C7AE6A] mb-4">
+                  SCOPRI I DETTAGLI DI QUESTO SERVIZIO
+                </button>
               </a>
             </div>
             <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
@@ -172,50 +172,100 @@ export default function Servizi() {
       </div>
 
       <footer class="bg-[#780202] text-white w-full">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="w-full max-w-screen-xl p-4 py-6 lg:py-8 h-auto md:h-[25rem] mx-auto flex flex-col justify-center items-center">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start w-full">
             <div class="flex justify-center md:justify-start">
               <a href="#">
                 <img
                   src="/images/Logo_emporio.png"
-                  class="h-24"
+                  class="h-20 md:h-24"
                   alt="Emporio Logo"
                 />
               </a>
             </div>
+
             <div class="text-center md:text-left">
-              <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
+              <h2 class="mb-4 text-sm font-semibold uppercase">
+                Corso di cucito
+              </h2>
+              <hr class="mb-2 border-gray-500" />
               <ul class="text-gray-300">
                 <li class="mb-2">
-                  <a href="#" class="hover:underline">
-                    Emporio solidale
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="hover:underline">
-                    Del basso Piave
+                  <a
+                    href="/servizi/corso-di-cucito"
+                    class="hover:underline text-cyan-400"
+                  >
+                    Vai al corso
                   </a>
                 </li>
               </ul>
             </div>
+
             <div class="text-center md:text-left">
-              <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
+              <h2 class="mb-4 text-sm font-semibold uppercase">
+                Economia domestica
+              </h2>
+              <hr class="mb-2 border-gray-500" />
               <ul class="text-gray-300">
                 <li class="mb-2">
-                  <a href="#" class="hover:underline">
-                    0421-332697
+                  <a
+                    href="/servizi/economia-domestica"
+                    class="hover:underline text-cyan-400"
+                  >
+                    Approfondimenti
                   </a>
                 </li>
-                <li>
-                  <a href="#" class="hover:underline">
-                    344 3851626
+              </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+              <h2 class="mb-4 text-sm font-semibold uppercase">
+                Centro di ascolto
+              </h2>
+              <hr class="mb-2 border-gray-500" />
+              <ul class="text-gray-300">
+                <li class="mb-2">
+                  <a
+                    href="/servizi/centro-di-ascolto"
+                    class="hover:underline text-cyan-400"
+                  >
+                    Presentazione del servizio
                   </a>
                 </li>
+              </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+              <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
+              <hr class="mb-2 border-gray-500" />
+              <ul class="text-gray-300">
+                <li class="mb-2">Emporio Solidale del Basso</li>
+                <li class="mb-2">Piave San Donà di Piave (VE)</li>
+              </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+              <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
+              <hr class="mb-2 border-gray-500" />
+              <ul class="text-gray-300">
+                <li class="mb-2">
+                  e-mail:{" "}
+                  <a
+                    href="mailto:emporiosolidalebassopiave@gmail.com"
+                    class="hover:underline text-cyan-400"
+                  >
+                    emporiosolidalebassopiave@gmail.com
+                  </a>
+                </li>
+                <li class="mb-2">Fax e Telefono: 0421-332697</li>
+                <li class="mb-2">Cellulare: 344 3851626</li>
               </ul>
             </div>
           </div>
-          <hr class="my-6 border-gray-500" />
-          <div class="flex flex-col sm:flex-row items-center justify-between">
+
+          <hr class="my-6 border-gray-500 w-full" />
+
+          <div class="flex flex-col sm:flex-row items-center justify-between w-full">
             <span class="text-sm text-gray-300">
               © 2025{" "}
               <a href="#" class="hover:underline">
