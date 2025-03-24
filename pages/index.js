@@ -20,21 +20,26 @@ import {
   Sponsor,
   Elements,
 } from '/components'
+import { images } from '@/next.config'
 
 export default function Home({ data, elementi }) {
   return (
     <Layout>
-      <Featured data={data} limit={4} defaultTag='scuola' />
-      <Featured data={elementi} limit={4} defaultTag='scuola' height={90} />
-      <center><News title='I nostri servizi' data={data} limit={2} /></center>
-      <Elements
-        data={elementi}
-        limit={6}
-        md={4}
-        aspectRatio='3 / 2'
-        borderRadius='10px'
-      />
-      <SwiperNews title='sotto' data={data} limit={6} defaultTag='scuola' />
+      <Carousel slides={slides} />
+      <Paragraph 
+        rightImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
+      ><center>
+        <h1>Tra verde e azzurro</h1>
+        <br></br>
+        <p>Il Soggiorno Marino Don Bosco e la Casa Domenico Savio sono <br></br>immersi in un ampio giardino fronte mare, con accesso diretto alla<br></br> spiaggia privata in località Duna Verde, 
+        nei pressi di Caorle,<br></br> caratteristica cittadina di mare e di pescatori. Duna Verde si trova a <br></br>metà strada tra le splendide campagne venete e la 
+        città di Venezia,<br></br> meta prediletta del turismo internazionale.<br></br>
+A pochi chilometri di distanza numerose località turistiche e città di <br></br>interesse artistico sono 
+mete ideali per le vostre escursioni e gite<br></br> fuori porta. La riviera e il lido si accendono di sera di iniziative e feste.</p></center>
+      </Paragraph>
+      
+     
+      
       <Products
         title='I nostri servizi'
         cardWidth={6}
@@ -107,7 +112,7 @@ export default function Home({ data, elementi }) {
         url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
       />
       <br></br>
-      <Certifications cardWidth={3} certifications={certifications} />
+     <br></br>
     </Layout>
   )
 }
@@ -132,59 +137,19 @@ export async function getStaticProps() {
   }
 }
 
-// I punti di forza
-const features = [
-  {
-    title: 'Progetto educativo',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
-    url: 'https://cinema.donboscosandona.it',
-  },
-  {
-    title: 'Didattica attiva',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      'Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.',
-  },
-  {
-    title: 'Laboratori',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
-  },
-  {
-    title: 'Servizi al lavoro',
-    imageUrl:
-      'https://teamtrex.com.au/wp-content/uploads/2021/06/Strength-icon.png',
-    description:
-      "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
-  },
-]
-
 // slides per il carousel
 let slides = [
   {
     titolo: 'Fatti un bel giro',
     descrizione:
       'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    immagine:
-      'https://www.wallpapermania.eu/images/lthumbs/2013-01/4170_Love-between-animals-true-love.jpg',
-    colore: '#ED4C67',
-    colore2: 'rgba(100,100,100,0)',
-    opacity: 0.8,
-    blur: '0.5rem',
-    buttonText: 'Scopri di più!',
-    buttonUrl: 'https:...',
+    imageUrl:'https://resc.deskline.net/images/TRN/1/04117527-0133-446a-9636-08118b4fac8b/99/image.jpg',
   },
   {
     titolo: 'Concorso nazionale settore elettrico',
     descrizione:
       "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-    colore: '#22aa22',
+imageUrl:'https://resc.deskline.net/images/TRN/1/04117527-0133-446a-9636-08118b4fac8b/99/image.jpg'
   },
 ]
 
@@ -212,7 +177,7 @@ let members = [
     description1:
       'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://resc.deskline.net/images/TRN/1/04117527-0133-446a-9636-08118b4fac8b/99/image.jpg',
 
   },
   {
@@ -298,7 +263,7 @@ let prodotti = [
     description:
       'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+      '',
   },
   {
     title: 'Energia',
@@ -385,16 +350,4 @@ let certifications = [
     text1: 'Cod. A033 - Formazione Iniziale,',
     text2: 'Superiore e Orientamento',
   },
-]
-
-let sponsor = [
-  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
-  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
-  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
-  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
-  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
-  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
-  'https://www.comitec.it/img/logo.png?v=1.1',
-  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
 ]
