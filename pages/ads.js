@@ -21,24 +21,28 @@ import {
   Sponsor,
   Elements,
 } from '/components'
-
+const slides = [
+  {
+    titolo: 'ADS',
+    descrizione: 'Vieni a trovarci al Oratorio don Bosco - San Donà di Piave (VE)',
+    immagine: '/images/ads/images/ads1.jpg',
+    colore2: 'rgba(100,100,100,0)',
+    buttonText: 'Scopri di più!',
+  },
+  
+];
 export default function Home({ data, elementi }) {
   return (
     <Layout>
-      <img src='http://archive.inoratorio.it/img/column/fb2ff0298dbd69ce6c294d5a7206b3fd72cd5e0f.jpg?1544451475'/>
+      <Carousel
+              slides={slides}
+              height={100}
+              animation="slide"
+              interval={5000}
+              duration={1000}
+            />
       <Container>
-        <div className='margin'>
-          <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            Progetti
-          </Typography>
-          <Grid container spacing={5} justifyContent="center">
-            {servizi.map((servizio) => (
-              <Grid item xs={12} sm={6} md={3} key={servizio.id}>
-                <NewsCard post={servizio} />
-              </Grid>
-            ))}
-          </Grid>
-        </div>
+   
         
         <div className='margin'>
           <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
@@ -52,13 +56,109 @@ export default function Home({ data, elementi }) {
             ))}
           </Grid>
         </div>
-
         <div className='margin'>
         <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
             
           </Typography>
           <Grid container spacing={4} justifyContent="center">
-                <img src='http://archive.inoratorio.it/img/column/164c3888d366ea8ea64345b3c53197baa3e7f98a.jpg?1545142666'/>
+                <img src='/images/ads/cads4.jpg'/>
+                <p>L’iniziatore degli Amici di Domenico Savio in Italia è un salesiano: Don Edi Pezzetta, il quale fondò l’Associazione nel 1954 a Torino Valdocco. L’intuizione però risale già al Beato Filippo Rinaldi terzo successore di Don Bosco. Negli stessi anni gruppi di ADS erano già presenti negli Stati Uniti, Inghilterra ed Irlanda.
+
+L’appartenenza era strutturata attorno ad una promessa, che si può riassumere nel trinomio: Pietà - Purezza - Apostolato ed era ordinata da un regolamento approvato dal Consiglio Superiore della Congregazione Salesiana. C’era anche un giornalino di collegamento/animazione: Amici di San Domenico Savio, che raggiunse la tiratura di ben 29.000 copie. Nel 1967 il Centro nazionale ADS si trasferì da Torino Valdocco a Torino Leumann (coordinatore Don Zulian), poi a Peveragno di Cuneo (coordinatore Don Rosa), a Roma (coordinatore Don Clementel) ed a Catania (coordinatore Don Falzone). Anche il giornalino assunse diverse testate: Reazione a catena (1967- 1970), Radar ADS, Mondo Erre / Speciale ADS (1973-1981).
+
+Il 5 maggio 1979 (50 della canonizzazione di San Domenico Savio), 30.000 ragazzi/e si incontrarono a Roma con Giovanni Paolo II.
+
+Dal 1981 l’Associazione, per una decina d’anni, continuò una discreta attività soprattutto a livello locale, ma con un debole coordinamento nazionale. Dal luglio 1992 la Presidenza degli Ispettori Salesiani d’Italia (CISI) affidò il coordinamento nazionale degli ADS ad un confratello incaricato, associandolo all’Ufficio Orientamento/Vocazioni.
+
+Dal 2003 si è avvertito nel Triveneto Salesiano la necessità di confrontarsi tra i diversi gruppi per tentare di strutturare un itinerario formativo recuperando la grossa esperienza accumulata in tante opere salesiane. Dopo i primi incontri di confronto assieme anche agli animatori, si è avvertita la necessità di attuare una vera e propria riflessione sulla identità e la struttura degli ADS cercando di mettere a confronto le varie esperienze e di raccoglierne gli elementi comuni.
+
+Si decise di partire prima di tutto con un momento celebrativo forte recandosi a Torino per una tre giorni di formazione ma soprattutto per il solenne affidamento degli ADS alla Beata Vergine Immacolata e Aiuto dei cristiani nella chiesa di San Francesco di Sales in Valdocco.
+
+Al ritorno un gruppetto di incaricati dell’oratorio si è messo al lavoro per la rielaborazione del materiale raccolto. Al termine ne uscì:<br/>
+
+a) una serie di punti fermi del cammino ADS;<br/>
+
+b) una griglia di riferimento della struttura;<br/>
+
+c) una bozza del metodo e degli elementi metodologici a partire dalla nostra identità;<br/>
+
+d) un piccolo regolamento.<br/>
+
+È stato quindi chiesto ad una équipe (composta sia da Salesiani che da Figlie di Maria Ausiliatrice) di rivedere il materiale elaborato in questi anni e di stendere un progetto omogeneo e unitario. Il lavoro si è articolato in diversi momenti:
+
+a) definizione dell’obiettivo educativo pastorale a cui tendere attraverso la partecipazione ai gruppi ADS;<br/>
+
+b) ricerca dei fondamenti a livello storico (vita di Domenico Savio e fondazione della Compagnia dell’Immacolata) e teologico;<br/>
+
+c) rivisitazione del progetto con chiarificazione del progetto sulla base della ricerca svolta.</p>
+                <br></br>
+              </Grid>
+        </div>
+        <div className='margin'>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
+            
+          </Typography>
+          <Grid container spacing={4} justifyContent="center">
+                <img src='/images/ads/cads3.jpg'/>
+                <p>CARDINI DELL’ITINERARIO FORMATIVO ADS
+
+a) Pietà: Eucarestia domenicale e feriale; Adorazione; Parola di Dio; rosario; 3 Ave Maria; esame di coscienza al termine della giornata; preghiera personale ed unione con Dio (giaculatorie); consacrazione a Maria;
+
+b) Apostolato/Evangelizzazione: «Guadagnare anime a Dio», entusiasmo e gusto di incontrare chiunque per condividere la gioia di una umanità più grande. Dimensioni:
+
+- Caritativa;
+
+- Missionaria;
+
+- Culturale (mentalità e giudizio cristiano);
+
+- liturgica;
+
+- oratoriana (animazione diretta con i ragazzi);
+
+- Presenza ed inserimento negli ambienti: famiglia, scuola, oratorio, parrocchia (catechismo e altre esigenze), mondo giovanile e sue espressioni, ambiente lavorativo e società civile;
+
+c) Purezza: personalizzazione del cammino di amore verso Dio e verso i fratelli: impegno personale, colloquio, schiettezza, tensione verso la limpidezza nelle relazioni affettive.</p>
+                <br></br>
+              </Grid>
+        </div>
+        <div className='margin'>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
+            
+          </Typography>
+          <Grid container spacing={4} justifyContent="center">
+                <img src='/images/ads/cads2.jpg'/>
+                <p>
+
+                NUCLEI TEMATICI<br></br>
+
+a) L’Associazione ADS si propone, nell’insieme delle proposte dell’Opera Salesiana, come esperienza di vita cristiana secondo la spiritualità di Don Bosco;
+
+b) Ha la sua origine dalla Compagnia dell’Immacolata fondata da S. Domenico Savio a Valdocco. La sua santità è modello ispiratore della vita dell’associazione e di ciascuno dei suoi membri. Un cammino, quindi, che attraverso Maria conduce a Gesù, facilitandone l’incontro, perché l’umano che è in noi sia pieno e profondo;
+
+c) La vita di Domenico Savio è stata contrassegnata da risoluzioni precise
+
+- nella pietà (incontro e dialogo con il Signore)
+
+- nell’apostolato-evangelizzazione (dimensione di servizio) 
+
+- nella purezza
+
+Connotata da una particolare appartenenza all’ambiente salesiano e all’animazione dello stesso;
+
+d) L’associazione offre a tutti un cammino basato sull’incontro tra il primato della grazia di Dio e l’impegno personale, tenendo conto delle possibilità umane proprie di ogni età;
+
+e) L’appartenenza all’associazione è confermata da una promessa pubblica che ogni ADS, dopo un congruo cammino, emette insieme ai suoi amici e animatori. L’appartenenza è resa visibile da un «Fazzolettone» che cambia il colore per ogni fascia di età.</p>
+                <br></br>
+              </Grid>
+        </div>
+        
+        <div className='margin'>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
+            
+          </Typography>
+          <Grid container spacing={4} justifyContent="center">
+                <img src='images/ads/ads5.jpg'/>
                 <p>Itinerario di 3 anni: dalla 3a alla 5a elementare.
 
 Obiettivi
@@ -116,7 +216,7 @@ b) gioco: favorire la partecipazione ai giochi salesiani e ai giochi di gruppo; 
             
           </Typography>
           <Grid container spacing={4} justifyContent="center">
-                <img src='http://archive.inoratorio.it/img/column/5c5f95983bb79d204f5686510b31f06d19a09400.jpg?1539364408'/>
+                <img src='/images/ads/ads4.jpg'/>
                 <p>Itinerario di 3 anni: dalla 1 alla 3 media.
 
 Obiettivi
@@ -205,7 +305,7 @@ b) gioco: favorire il coinvolgimento attivo ai giochi salesiani e ai giochi di g
             
           </Typography>
           <Grid container spacing={4} justifyContent="center">
-                <img src='http://archive.inoratorio.it/img/column/a2fa7898046913cc13c88e0c8425412210688b7d.jpg?1539364806'/>
+                <img src='/images/ads/ads3.jpg'/>
                 <p>Itinerario di 5 anni: dalla 1a alla 5a superiore. (sarebbe opportuno distinguere tra biennio e triennio)
 
 Obiettivi
@@ -290,7 +390,7 @@ b) gioco: favorire il coinvolgimento attivo ai giochi salesiani e ai giochi di g
             
           </Typography>
           <Grid container spacing={4} justifyContent="center">
-                <img src='http://archive.inoratorio.it/img/column/adcd094c0e85e1aca4dec862d4ae4dbb8d762600.jpg?1539365037'/>
+                <img src='images/ads/ads2.jpg'/>
                 <p>La Comunità Animatori (fino ai 25 anni) è guidata da un responsabile Salesiano o una Figlia di Maria Ausiliatrice, insieme ad un adulto (oltre 25 anni) cresciuto nell’associazione, che abbia maturato scelte vocazionali stabili.
 
 Obiettivi
@@ -361,37 +461,6 @@ export async function getStaticProps() {
     revalidate: 1800,
   }
 }
-
-const servizi = [
-  {
-    id: 1,
-    titolo: 'Cenni Storici',
-    immagine: 'http://archive.inoratorio.it/img/column/288da623b7f399084c590bcccd2754e61779bdfe.jpg?1539359427',
-    abstract: 'Fondata nel 1954 da Don Edi Pezzetta a Torino, l\'ADS promuove Pietà, Purezza e Apostolato. Negli anni, ha evoluto la sua missione con un focus sulla formazione e sull\'identità dei gruppi.',
-    
-  },
-  {
-    id: 2,
-    titolo: 'Cardini Itinerario',
-    immagine: 'http://archive.inoratorio.it/img/column/d6a020536086ed52c9c29374ff2d9df26af9a119.jpg?1539359532',
-    abstract: 'L\'itinerario ADS si fonda su Pietà (preghiera e Eucarestia), Apostolato (carità e evangelizzazione) e Purezza (relazioni limpide e amore verso Dio e gli altri).',
-},
-{
-  id: 3,
-  titolo: 'Nuclei Tematici',
-  immagine: 'http://archive.inoratorio.it/img/column/cfab6bf6737c75191d07115db7bc53a9736d2790.jpg?1539359601',
-  abstract: 'L\'Associazione ADS vive la spiritualità di Don Bosco, ispirata da S. Domenico Savio. Promuove incontri con Dio, servizio e purezza, con una promessa pubblica e simboli distintivi per ogni età.',
-},
-{
-  id: 4,
-  titolo: 'Calendario',
-  immagine: 'http://archive.inoratorio.it/img/column/2ec78bce9310040f9985bfe68da3a03b55495755.jpg?1541492190',
-  abstract: 'Orari indicativi per il 4 novembre 2024: KB (3^ - 5^ elem.),GeN (1^ - 3^ medie),NF (1^ - 5^ sup.),GR (universitari),GrS (riunioni),Gruppo Leader (3^ media),G.O. (biennio sup.),GxG (triennio sup.),GrRic (dalla 5^ sup.).',
-}
-
-];
-
-
 
 let Newss= [
   {
