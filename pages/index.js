@@ -25,6 +25,7 @@ import { images } from '@/next.config'
 export default function Home({ data, elementi }) {
   return (
     <Layout>
+     
       <Carousel slides={slides} />
       <Paragraph 
         rightImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
@@ -48,58 +49,31 @@ mete ideali per le vostre escursioni e gite<br></br> fuori porta. La riviera e i
       />
       <Paragraph
         title='da mettere titolo'
-        rightImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
+        rightImageUrl='/images/imgomb.png'
       >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
-        l’ultima campanella dell’anno scolastico inizia quel periodo tanto
-        atteso dove finalmente si può fare ciò che si vuole, senza troppi
-        vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
-        compiti che preoccupano. Spensieratezza! Questa l’attesa più grande
-        durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande
-        l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza
-        diventa noia, la libertà diventa ozio e pigrizia e il tempo libero
-        rischia di diventare tempo perso.
       </Paragraph>
       <Paragraph
         title='da mattere il titolo'
         leftImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
       >
-        Quando finalmente suona l’ultima campanella dell’anno scolastico inizia
-        quel periodo tanto atteso dove finalmente si può fare ciò che si vuole,
-        senza troppi vincoli o regole, sveglie troppo mattiniere, insegnanti
-        esigenti e compiti che preoccupano. Spensieratezza! Questa l’attesa più
-        grande durante l’ultima parte dell’anno scolastico. Purtroppo tanto è
-        grande l’attesa delle vacanze, tanto è veloce il tempo in cui la
-        spensieratezza diventa noia, la libertà diventa ozio e pigrizia e il
-        tempo libero rischia di diventare tempo perso. Quando finalmente suona
-        l’ultima campanella dell’anno scolastico inizia quel periodo tanto
-        atteso dove finalmente si può fare ciò che si vuole, senza troppi
-        vincoli o regole, sveglie troppo mattiniere, insegnanti esigenti e
-        compiti che preoccupano. Spensieratezza! Questa l’attesa più grande
-        durante l’ultima parte dell’anno scolastico. Purtroppo tanto è grande
-        l’attesa delle vacanze, tanto è veloce il tempo in cui la spensieratezza
-        diventa noia, la libertà diventa ozio e pigrizia e il tempo libero
-        rischia di diventare tempo perso.
+        
       </Paragraph>
-      <Products
+        <Products
         cardWidth={6}
         cardWidthXs={12}
-        products={prodotti}
+        products={prodotti2}
       /> 
-      
-      <Products
-        title='I luoghi da visitire'
+       <Products
         cardWidth={6}
         cardWidthXs={12}
-        products={prodotti}
-      />
+        products={prodotti3}
+      /> 
+      <Products
+        cardWidth={4}
+        cardWidthXs={6}
+        products={prodotti4}
+      /> 
+     
       <Team
         title='I servizi a disposizione'
         description='Formatori che ti aiutano a crescere con il cuore di don Bosco'
@@ -109,10 +83,11 @@ mete ideali per le vostre escursioni e gite<br></br> fuori porta. La riviera e i
       <Maps
         maxWidth='100%'
         maxHeight='550px'
-        url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.05343317009!2d12.5710658!3d45.6301996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477956fe076b4157%3A0x29fb231d47465883!2sCnos%20Fap%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1680507660807!5m2!1sit!2sit'
-      />
+        url='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.502961533332!2d12.78848457670082!3d45.56032337107574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477bfa012626aba9%3A0xc17f19394464ca38!2sSoggiorno%20Marino%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1742978889848!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      />z
       <br></br>
      <br></br>
+     
     </Layout>
   )
 }
@@ -156,103 +131,87 @@ images:'marespiagge.png'
 // Il nostro team
 let members = [
   {
-    name: 'don Nicola Munari',
-    role: 'DIRETTORE / CATECHISTA',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    
+    name: 'Spiaggia privata',
+    description: 'Una spiaggia riservata agli ospiti del soggiorno garantisce la tranquillità di cui la tua famiglia ha bisogno.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/images/log1.png',
   },
   {
-    name: 'Alessandro Cappelletto',
-    role: 'PRESIDE',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    name: 'Ombrelloni e sdraio',
+    description: 'Ogni camera ha in dotazione un ombrellone con sdraio e lettino.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/images/log2.png',
   },
   {
-    name: 'Alessandro Ferro',
-    role: 'VICE-PRESIDE / TUTOR DIGITALE',
+    name: 'Guardiaspiaggia',
     description1:
-      'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
+      'Nel periodo estivo la balneazione è sorvegliata in determinati orari.',
     imageUrl:
-      'https://resc.deskline.net/images/TRN/1/04117527-0133-446a-9636-08118b4fac8b/99/image.jpg',
+      '/images/log3.png',
+
 
   },
   {
-    name: "Anna Maria D'Ambrosio",
-    role: 'RESPONSABILE DELLA DISCIPLINA',
+    name: "Ascensore",
     description1:
-      'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
+      'I piani superiori sono raggiungibili da tutti grazie a un comodo ascensore',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/images/log4.png',
   },
   {
-    name: 'don Nicola Munari',
-    role: 'DIRETTORE / CATECHISTA',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    name: 'Aria condizionata',
+    description1: 'Il relax in camera è garantito da un moderno impianto di condizionamento.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/images/log5.png',
   },
   {
-    name: 'Alessandro Cappelletto',
-    role: 'PRESIDE',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    name: 'Bagno interno',
+    description1: 'Tutte le camere sono dotate di servizi igienici riservati e asciugacapelli.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/images/log6.png',
   },
   {
-    name: 'Alessandro Ferro',
-    role: 'VICE-PRESIDE / TUTOR DIGITALE',
+    name: 'Free Wifi',
     description1:
-      'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
+    'La navigazione dai tuoi dispositivi mobili è garantita da una moderna connessione in fibra ottica.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+     '/images/log7.png',
 
   },
   {
-    name: "Anna Maria D'Ambrosio",
-    role: 'RESPONSABILE DELLA DISCIPLINA',
+    name: "Capella",
     description1:
-      'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
+      'Il Soggiorno è dotato di una cappella per chi desidera coltivare il suo rapporto con il Signore. Nel periodo estivo un sacerdote garantisce la Santa Messa quotidiana.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+     '/images/log8.png',
   },
   {
-    name: 'don Nicola Munari',
-    role: 'DIRETTORE / CATECHISTA',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    name: 'bar',
+    description: 'Nella comoda hall del Soggiorno è sempre a disposizione un servizio bar.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+     '/images/log9.png',
   },
   {
-    name: 'Alessandro Cappelletto',
-    role: 'PRESIDE',
-    description: 'And I love you like Kanye',
-    description1: 'loves Kanye. We need to restart the human foundation',
+    name: 'Sala conferenze',
+    description: 'I gruppi che prenotano la casa possono usufruire della sala conferenze per i loro momenti di studio.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/images/log10.png',
   },
   {
-    name: 'Alessandro Ferro',
-    role: 'VICE-PRESIDE / TUTOR DIGITALE',
+    name: 'Parcheggio privato',
     description1:
-      'Vicepreside, gestione organizzazione scolastica e pastorale, insegnamento area scientifica ',
+      "All'interno dell'area recintata del Soggiorno un comodo parcheggio privato è riservato agli ospiti.",
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/images/log11.png',
 
   },
   {
-    name: "Anna Maria D'Ambrosio",
-    role: 'RESPONSABILE DELLA DISCIPLINA',
+    name: "Bandiera Blu",
     description1:
-      'Gestione disciplina,organizzazione scolastica e insegnamento are cultura',
+      'La Bandiera Blu è sinonimo di acque pulite, di spiagge ben curate, di attenzione per le esigenze ambientali e di sensibilizzazione verso le tematiche ecologiche.',
     imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      '/images/log12.png',
   },
 ]
 
@@ -270,7 +229,7 @@ let prodotti = [
     description:
       "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+      'https://www.forniturealberghiereonline.it/images/prima-colazione-bb-norme-somministrazione-cibi-bevande.jpg'
   },
   {
     title: 'Informatico',
@@ -278,7 +237,7 @@ let prodotti = [
     description:
       "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+      '/images/family.time.png'
   },
   {
     title: 'Informatico',
@@ -286,64 +245,83 @@ let prodotti = [
     description:
       "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+      '/images/regalavacanzanonni.png'
   },
 ]
-
-const testimonials = [
-  {
-    name: 'Michele Venturato',
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    text: "Grande scuola. Una vera scuola professionale e morale. Sforna ogni anno moltissimi tecnici aggiornati con I tempi e in grado di integrarsi con facilita' nel mondo del lavoro. Complimenti a tutto il sistema.",
-    social: '@Google',
-  },
-  {
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    name: 'Daniele Mladenovic',
-    text: "Ho trascorso alcuni anni presso il CFP e ho trovato l'ambiente molto accogliente e confortevole, grazie alla disponibilità di tutto il personale. In particolare, ho apprezzato la passione degli insegnanti, che si sono dimostrati molto competenti. Inoltre, ho avuto l'opportunità di partecipare ad attività extracurricolari e progetti che mi hanno permesso di sviluppare le mie capacità. Infine, consiglio questo istituto sottolineando l'importanza dello sviluppo e della scoperta dei propri talenti che è ciò che ci rende unici.",
-    social: '@BOBTEK',
-  },
-  {
-    imageUrl:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    name: 'Pino West',
-    text: "Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione Qui c'è una belissima descrizione ",
-    social: '@PINOWEST',
-  },
-]
-
 let prodotti2 = [
   {
+    title: 'Elettrico',
+    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    description:
+      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+    immagineUrl:'/images/cani.png',
+  },
+  {
+    title: 'Energia',
+    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    description:
+      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
     immagineUrl:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    url: 'https://cinema.donboscosandona.it',
+      '/images/baby.png'
+  },
+  {
+    title: 'Informatico',
+    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    description:
+      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+    immagineUrl:
+      '/images/fettebisco.png'
+  },
+  {
+    title: 'Informatico',
+    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    description:
+      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+    immagineUrl:
+      '/images/cozze.png'
   },
 ]
-
-let certifications = [
+let prodotti3 = [
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'ISO 9001:2015',
-    text2: 'Reg. n. 2593-A - Settore EA: 37',
+    title: 'Elettrico',
+    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    description:
+      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+    immagineUrl:'/images/caorle1.png',
   },
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1:
-      'Progettazione ed erogazione di attività formative e di orientamento',
+    title: 'Energia',
+    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    description:
+      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+    immagineUrl:
+      '/images/bici.png'
+  },
+  
+]
+let prodotti4 = [
+  {
+    title: 'Elettrico',
+    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    description:
+      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+    immagineUrl:'/images/ospitalità.png',
   },
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Authorised Training Center',
+    title: 'Energia',
+    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    description:
+      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+    immagineUrl:
+      '/images/servizio.png'
   },
   {
-    logoUrl:
-      'https://seeklogo.com/images/C/CERMET_SINCERT-logo-129ABB30BE-seeklogo.com.png',
-    text1: 'Cod. A033 - Formazione Iniziale,',
-    text2: 'Superiore e Orientamento',
+    title: 'Energia',
+    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    description:
+      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+    immagineUrl:
+      '/images/atvo3.png'
   },
+  
 ]
