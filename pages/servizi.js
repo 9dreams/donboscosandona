@@ -1,5 +1,9 @@
 export default function Servizi() {
   return (
+    <>
+    <title>Servizi - Emporio Solidale</title>
+    <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
+
     <div class="flex flex-col">
       <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between mb-10">
         <div class="flex justify-center md:ml-10">
@@ -8,8 +12,6 @@ export default function Servizi() {
             class="w-24 md:w-[140px] rounded-full"
             alt="Logo"
           />
-          <title>Servizi - Emporio Solidale</title>
-          <link rel="icon" href="/images/servizi_favicon/favicon.ico" />
         </div>
         <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
           {[
@@ -293,5 +295,6 @@ export default function Servizi() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

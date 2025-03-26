@@ -2,10 +2,10 @@ export default function Servizi() {
   return (
     <>
       <title>Emporio solidale per la spesa - Emporio Solidale</title>
-      <link rel="icon" href="/images/servizi_favicon/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
 
       <div class="flex flex-col">
-      <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
+        <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
           <div class="flex justify-center md:ml-0 lg:ml-10 mb-2 md:mb-0">
             <img
               src="/images/Logo_emporio.png"
@@ -18,7 +18,11 @@ export default function Servizi() {
               { name: "Home Page", link: "/", class: "text-white" },
               { name: "Chi Siamo", link: "../chisiamo", class: "text-white" },
               { name: "Dove Siamo", link: "../dovesiamo", class: "text-white" },
-              { name: "Trasparenza", link: "../trasparenza", class: "text-white" },
+              {
+                name: "Trasparenza",
+                link: "../trasparenza",
+                class: "text-white",
+              },
               {
                 name: "Servizi",
                 link: "../servizi",
@@ -44,37 +48,91 @@ export default function Servizi() {
         </div>
 
         <div className="w-full bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
-          <div className="flex flex-col md:flex-row pt-10 md:pt-20 px-5 md:px-10 lg:pl-64">
+          <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
             <a href="/" className="mb-4 md:mb-0">
               <p className="text-sm text-white">Emporio Solidale</p>
             </a>
-            <p className="ml-0 md:ml-12 lg:ml-24 text-sm text-black">Emporio solidale per la spesa</p>
+            <p className="ml-0 md:ml-12 lg:ml-24 text-sm text-black">
+              Emporio solidale per la spesa
+            </p>
           </div>
-          <div className="flex flex-col px-5 md:px-10 lg:pl-64 pt-8 md:pt-14 pb-10 md:pb-20 gap-y-4 w-full md:w-4/5 lg:w-1/2">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl text-white">Emporio solidale per la spesa</h1>
-            <p className="text-sm md:text-md text-white">È un centro di distribuzione fatto di persone per le persone, dove tanti volontari con impegno e responsabilità, si prendono cura dei bisogni primari di chi in un periodo difficile della propria vita chiede aiuto.</p>
-            <p className="text-sm md:text-md text-white">Dal 2016 si propone di dare una risposta immediata ai bisogni più urgenti delle famiglie in momentanea difficoltà, mettendo a disposizione generi alimentari attraverso una vasta rete di solidarietà, coinvolgendo le molteplici Associazioni del territorio, nel rispetto dei diritti umani e della qualità della vita.</p>
-            <p className="text-sm md:text-md text-white">Un vero supermercato all’interno del quale si possono reperire gratuitamente prodotti alimentari e per l’igiene della persona, raccolti attraverso la “Colletta Alimentare” e “Il Banco Alimentare”. Inoltre prodotti freschi, frutta e verdura, vengono donati dai supermercati convenzionati con l’Emporio nel rispetto della legge 166 del 2016 contro gli sprechi alimentari. L’Emporio Solidale è aperto martedì e giovedì dalle 15.00 alle 17.00 e il sabato dalle 10.00 alle 12.00.</p>
-            <h2 className="text-xl md:text-2xl text-white">Come funziona il servizio?</h2>
-            <p className="text-sm md:text-md text-white">Viene erogata una spesa mensile alle persone in difficoltà.</p>
-            <h2 className="text-xl md:text-2xl text-white">Cosa devo fare?</h2>
-            <p className="text-sm md:text-md text-white">Devi recarti al centro di ascolto Beato Federico Ozanam in via Pralungo, 12 a San Donà di Piave (presso casa Saretta) con i seguenti documenti:</p>
-            <ul className="text-sm md:text-md text-white list-disc pl-5">
-              <li>Fotocopia carta di identità</li>
-              <li>Stato famiglia (rilasciato dal comune “USO ONLUS”)</li>
-              <li>Busta paga e/o pensione dei componenti</li>
-              <li>Certificato di disoccupazione recente</li>
-              <li>Modello ISEE (rilasciato dal comune di residenza o il CAF)</li>
-              <li>Ricevuta d’affitto pagato nell’ultimo mese</li>
-              <li>Ogni altro documento che dimostri lo stato economico di necessità</li>
-            </ul>
-            <h2 className="text-xl md:text-2xl text-white">Quando Il centro di ascolto è aperto?</h2>
-            <p className="text-sm md:text-md text-white">Il centro è aperto secondo i seguenti orari:</p>
-            <ul className="text-sm md:text-md text-white list-disc pl-5">
-              <li>Mercoledì dalle 15 alle 17</li>
-              <li>Giovedì dalle 10 alle 12</li>
-              <li>Venerdì dalle 15 alle 17</li>
-            </ul>
+
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="flex flex-col px-5 md:px-10 lg:pl-64 pt-8 md:pt-14 pb-10 md:pb-20 gap-y-4 w-full lg:w-1/2">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl text-white hover:text-gray-300 transition-colors duration-200">
+                Emporio solidale per la spesa
+              </h1>
+              <p className="text-sm md:text-md text-white leading-relaxed">
+                È un centro di distribuzione fatto di persone per le persone,
+                dove tanti volontari con impegno e responsabilità, si prendono
+                cura dei bisogni primari di chi in un periodo difficile della
+                propria vita chiede aiuto.
+              </p>
+              <p className="text-sm md:text-md text-white leading-relaxed">
+                Dal 2016 si propone di dare una risposta immediata ai bisogni
+                più urgenti delle famiglie in momentanea difficoltà, mettendo a
+                disposizione generi alimentari attraverso una vasta rete di
+                solidarietà, coinvolgendo le molteplici Associazioni del
+                territorio, nel rispetto dei diritti umani e della qualità della
+                vita.
+              </p>
+              <p className="text-sm md:text-md text-white leading-relaxed">
+                Un vero supermercato all’interno del quale si possono reperire
+                gratuitamente prodotti alimentari e per l’igiene della persona,
+                raccolti attraverso la “Colletta Alimentare” e “Il Banco
+                Alimentare”. Inoltre prodotti freschi, frutta e verdura, vengono
+                donati dai supermercati convenzionati con l’Emporio nel rispetto
+                della legge 166 del 2016 contro gli sprechi alimentari.
+                L’Emporio Solidale è aperto martedì e giovedì dalle 15.00 alle
+                17.00 e il sabato dalle 10.00 alle 12.00.
+              </p>
+              <h2 className="text-xl md:text-2xl text-white">
+                Come funziona il servizio?
+              </h2>
+              <p className="text-sm md:text-md text-white leading-relaxed">
+                Viene erogata una spesa mensile alle persone in difficoltà.
+              </p>
+              <h2 className="text-xl md:text-2xl text-white">
+                Cosa devo fare?
+              </h2>
+              <p className="text-sm md:text-md text-white leading-relaxed">
+                Devi recarti al centro di ascolto Beato Federico Ozanam in via
+                Pralungo, 12 a San Donà di Piave (presso casa Saretta) con i
+                seguenti documenti:
+              </p>
+              <ul className="text-sm md:text-md text-white list-disc pl-5">
+                <li>Fotocopia carta di identità</li>
+                <li>Stato famiglia (rilasciato dal comune “USO ONLUS”)</li>
+                <li>Busta paga e/o pensione dei componenti</li>
+                <li>Certificato di disoccupazione recente</li>
+                <li>
+                  Modello ISEE (rilasciato dal comune di residenza o il CAF)
+                </li>
+                <li>Ricevuta d’affitto pagato nell’ultimo mese</li>
+                <li>
+                  Ogni altro documento che dimostri lo stato economico di
+                  necessità
+                </li>
+              </ul>
+              <h2 className="text-xl md:text-2xl text-white">
+                Quando Il centro di ascolto è aperto?
+              </h2>
+              <p className="text-sm md:text-md text-white leading-relaxed">
+                Il centro è aperto secondo i seguenti orari:
+              </p>
+              <ul className="text-sm md:text-md text-white list-disc pl-5">
+                <li>Mercoledì dalle 15 alle 17</li>
+                <li>Giovedì dalle 10 alle 12</li>
+                <li>Venerdì dalle 15 alle 17</li>
+              </ul>
+            </div>
+            <div className="lg:w-1/2 flex justify-center items-center px-5 md:px-10 lg:pr-64 py-4">
+              <img
+                className="rounded-2xl shadow-md object-cover max-w-full h-auto md:h-96 lg:h-auto"
+                src="/images/emporio-solidale-per-la-spesa.jpeg"
+                alt="Emporio Solidale Per La Spesa"
+              />
+            </div>
           </div>
         </div>
 

@@ -2,7 +2,7 @@ export default function Servizi() {
   return (
     <>
       <title>Centro di ascolto - Emporio Solidale</title>
-      <link rel="icon" href="/images/servizi_favicon/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
 
       <div class="flex flex-col">
         <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
@@ -50,10 +50,10 @@ export default function Servizi() {
         <div className="w-full bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
           <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
             <a href="/" className="mb-4 md:mb-0">
-              <p className="text-sm text-white">Centro di ascolto</p>
+              <p className="text-sm text-white">Emporio solidale</p>
             </a>
             <p className="ml-0 md:ml-12 lg:ml-24 text-sm text-black">
-              Economia domestica
+              Centro di ascolto
             </p>
           </div>
 
@@ -96,8 +96,8 @@ export default function Servizi() {
             </div>
             <div className="lg:w-1/2 flex justify-center items-center px-5 md:px-10 lg:pr-64 py-4">
               <img
-                className="rounded-lg shadow-md object-cover max-w-full h-auto md:h-96 lg:h-auto"
-                src="/images/solidarieta.jpeg"
+                className="rounded-2xl shadow-md object-cover max-w-full h-auto md:h-96 lg:h-auto"
+                src="/images/centro_ascolto.jpeg"
                 alt="Solidarietà"
               />
             </div>

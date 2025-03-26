@@ -2,10 +2,10 @@ export default function Servizi() {
   return (
     <>
       <title>Corso Volontari 2019 - Emporio Solidale</title>
-      <link rel="icon" href="/images/servizi_favicon/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
 
       <div class="flex flex-col">
-      <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
+        <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
           <div class="flex justify-center md:ml-0 lg:ml-10 mb-2 md:mb-0">
             <img
               src="/images/Logo_emporio.png"
@@ -18,7 +18,11 @@ export default function Servizi() {
               { name: "Home Page", link: "/", class: "text-white" },
               { name: "Chi Siamo", link: "../chisiamo", class: "text-white" },
               { name: "Dove Siamo", link: "../dovesiamo", class: "text-white" },
-              { name: "Trasparenza", link: "../trasparenza", class: "text-white" },
+              {
+                name: "Trasparenza",
+                link: "../trasparenza",
+                class: "text-white",
+              },
               {
                 name: "Servizi",
                 link: "../servizi",
@@ -44,7 +48,6 @@ export default function Servizi() {
         </div>
 
         <div className="w-screen bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
-
           <div className="flex flex-row p-20 pb-[31rem]">
             <a href="/">
               <p className="text-sm text-white">Emporio Solidale</p>

@@ -2,7 +2,7 @@ export default function Servizi() {
   return (
     <>
       <title>Corso di cucito - Emporio Solidale</title>
-      <link rel="icon" href="/images/servizi_favicon/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
 
       <div class="flex flex-col">
         <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
@@ -48,13 +48,7 @@ export default function Servizi() {
         </div>
 
         <div className="w-full bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
-          <div className="flex">
-            <img
-              className="w-[200px] h-auto items-center "
-              src="/images/aiutoreciproco.jpg"
-            ></img>
-          </div>
-          <div className="flex flex-col md:flex-row pt-10 md:pt-20 px-5 md:px-10 lg:pl-64">
+          <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
             <a href="/" className="mb-4 md:mb-0">
               <p className="text-sm text-white">Emporio Solidale</p>
             </a>
@@ -62,23 +56,33 @@ export default function Servizi() {
               Corso di cucito
             </p>
           </div>
-          <div className="flex flex-col px-5 md:px-10 lg:pl-64 pt-8 md:pt-14 pb-10 md:pb-20 gap-y-4 w-full md:w-4/5 lg:w-1/2">
-            <a href="/">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl text-white">
-                Corso di cucito
-              </h1>
-            </a>
-            <p className="text-sm md:text-md text-white">
-              E’ un laboratorio base di formazione per imparare le primarie
-              tecniche di taglio e cucito, rammendo, uso di macchine da cucire
-              con l’ausilio di volontarie e personale specializzato.
-            </p>
-            <p className="text-sm md:text-md text-white">
-              E’ un progetto di aiuto specifico, rispettoso delle potenzialità e
-              della dignità delle donne che decidono di frequentarlo,
-              contribuendo anche a creare relazioni e stimolare scambi culturali
-              per una buona convivenza sociale.
-            </p>
+
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="flex flex-col px-5 md:px-10 lg:pl-64 pt-8 md:pt-14 pb-10 md:pb-20 gap-y-4 w-full lg:w-1/2">
+              <a href="/">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl text-white hover:text-gray-300 transition-colors duration-200">
+                  Corso di cucito
+                </h1>
+              </a>
+              <p className="text-sm md:text-md text-white leading-relaxed">
+                E’ un laboratorio base di formazione per imparare le primarie
+                tecniche di taglio e cucito, rammendo, uso di macchine da cucire
+                con l’ausilio di volontarie e personale specializzato.
+              </p>
+              <p className="text-sm md:text-md text-white leading-relaxed">
+                E’ un progetto di aiuto specifico, rispettoso delle potenzialità
+                e della dignità delle donne che decidono di frequentarlo,
+                contribuendo anche a creare relazioni e stimolare scambi
+                culturali per una buona convivenza sociale.
+              </p>
+            </div>
+            <div className="lg:w-1/2 flex justify-center items-center px-5 md:px-10 lg:pr-64 py-4">
+              <img
+                className="rounded-2xl shadow-md object-cover max-w-full h-auto md:h-96 lg:h-auto"
+                src="/images/corso-di-cucito.jpeg"
+                alt="Corso di Cucito"
+              />
+            </div>
           </div>
         </div>
 
