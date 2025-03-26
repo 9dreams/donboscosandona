@@ -6,27 +6,46 @@ import {
   LandingHero,
   Products,
   SwiperNews,
-  Paragraph,
   Sponsor,
   Table,
 } from '/components'
+import { dividerClasses } from '@mui/material'
 
 export default function Home({ data }) {
   return (
     <Layout>
-      <Head />
-      <Container maxWidth="xl">
-        <img src="/images/progetto.jpg" />
-      </Container>
-      <Paragraph
-  title='Pagina in costruzione'
-  style={{ color: 'black' }} // Aggiunto lo stile per il testo nero
->
-  Il Progetto Educativo del CNOS-FAP CFP Don Bosco si propone come risposta alle richieste dei genitori e alle esigenze di formazione dei giovani di un ampio contesto territoriale. È uno strumento che mette in luce l’identità del Centro, una guida che delinea le strategie e gli strumenti finalizzati al raggiungimento del successo scolastico, un testo che presenta quei valori umani e cristiani nei quali la Comunità Educativa si riconosce. Conformemente all’insegnamento di don Bosco, offre un disegno di educazione al futuro che investe sull’intelligenza (anche quella delle mani) e sulle potenzialità di ciascuno.
-</Paragraph>
+      <div className="absolute top-0 right-0 p-4 pb-22">
+        <img src="/images/loghi.png" alt="Loghi" className="w-30 h-16" />
+      </div>
+      <div className="mt-24"> {/* Regola il margine superiore in base all'altezza della navbar */}
+        <Head />
+        <Container maxWidth="xl">
+          <img src="/images/scimmia.jpg" alt="Progetto" />
+        </Container>
+        <Paragraph
+          title="Pagina in costruzione"
+          style={{ color: 'black' }}
+        >
+          Il Progetto Educativo del CNOS-FAP CFP Don Bosco si propone come risposta alle richieste dei genitori e alle esigenze di formazione dei giovani di un ampio contesto territoriale. È uno strumento che mette in luce l’identità del Centro, una guida che delinea le strategie e gli strumenti finalizzati al raggiungimento del successo scolastico, un testo che presenta quei valori umani e cristiani nei quali la Comunità Educativa si riconosce. Conformemente all’insegnamento di don Bosco, offre un disegno di educazione al futuro che investe sull’intelligenza (anche quella delle mani) e sulle potenzialità di ciascuno.
+        </Paragraph>
+      </div>
     </Layout>
-  )
+  );
 }
+
+function Paragraph({ title, style, children }) {
+  return (
+    <div style={style}>
+      <h2>{title}</h2>
+      <p>{children}</p>
+    </div>
+  );
+}
+
+
+
+
+
 
 export async function getStaticProps() {
   const res = await fetch(
