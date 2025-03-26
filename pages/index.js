@@ -224,17 +224,16 @@ let gruppi1 = [
   {
     immagineUrl:
       'http://archive.inoratorio.it/img/column/9372c8fb969c3d9280014acd16f4d741b77915e4.jpg',
-    url: 'http://archive.inoratorio.it/ads',
+    url: '/ads',
   },
   {
     immagineUrl:
       'http://archive.inoratorio.it/img/column/5b27adfa600161e5d8aac496e3874055ed228743.jpg?1521194053',
-    url: 'http://archive.inoratorio.it/scout',
+    url: '/scout',
   },
   {
     immagineUrl:
       'http://archive.inoratorio.it/img/column/b28e973c6613ac1521bd7ef934721aa402d215af.jpg?1517600704',
-    url: 'http://archive.inoratorio.it/calcio',
   },
   {
     immagineUrl:
