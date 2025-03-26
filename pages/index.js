@@ -20,6 +20,14 @@ import {
 // I punti di forza
 const features = [
   {
+    title: 'Pastorale',
+    imageUrl:
+      'https://archive.donboscosandona.it/img/ck/8a32ae923c77551e17262820251ee646d2b41fce.png',
+    description:
+      'Per diventare come insegna don Bosco "buoni cristiani e onesti cittadini".',
+      url: '/pastorale'
+  },
+  {
     title: 'Progetto educativo',
     imageUrl:
       'https://archive.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png',
