@@ -5,8 +5,8 @@ import LandingHero from '/components/LandingHero.js'
 import Products from '/components/Products'
 import Paragraph from '@/components/Paragraph'
 import { Typography } from '@mui/material'
-import Image from 'next/image';
-
+import Image from 'next/image'
+import {SwiperNews} from '/components';
 
 // Voci del menù per il componente LandingHero
 
@@ -49,10 +49,11 @@ let pastorale = [
 
 
 
-export default function Home() {
+export default function Home({ data }) {
     return (
         <Layout>
             <Head />
+           
             <LandingHero
                 opacity={0.5}
                 siteName="CFP DON BOSCO"
@@ -63,13 +64,20 @@ export default function Home() {
                  imageUrl="/images/pastorale/locandina.jpg"
                />
 
+
             <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
                 
             </Container> 
               
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center' }}> 
+              <SwiperNews
+                title='News Pastorali'
+                data={data}
+                limit={15}
+                defaultTag='pastorale'
+              />
 
-  <h3 style={{ fontWeight: 'bold', marginTop: '0px', fontSize: '30px' }}>Proposta educativa 2024|2025</h3>
+  <h1 style={{ fontWeight: 'bold', marginTop: '0px', fontSize: '30px' }}>Proposta educativa 2024|2025</h1>
   <p style={{ fontSize: '20px', color: '#555', marginTop: '0', marginBottom: '10px' }}>
     Scuola di Volo, Scuola di Vita<br/><br/>
     ”Il motore è il cuore di un aereo, ma il pilota è la sua anima.”<br/> 
@@ -95,70 +103,52 @@ export default function Home() {
 </div>
            <br/> 
            <br/> 
-
+           <div style={{ textAlign: 'center', fontSize: '20px' }}> 
+<h3 style={{ fontWeight: 'bold', marginTop: '10px',}}>Timeline</h3>
+</div>
             <div style={{
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '50vh',
-      margin: 0,
+      margin: '0',
     }}>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center', 
-        width: '80%',
-        textAlign: 'center',
-      }}>
- <div>
-  <a href="" target="_blank" rel="noopener noreferrer">
+      <a href="/images/pastorale/timeline completa.jpg" target="_blank">
     <img 
       src="/images/pastorale/timeline.jpg" 
       alt="Immagine 1" 
       style={{
-        width: '50%',
-        height: 'auto',
-        borderRadius: '8px'
+        width: '600px',
       }} 
     />
-    <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>Timeline</h3>
-  </a>
-</div>
+    <p className='text-center'>Clicca l'immagine per estenderla</p>
+    </a>
+    <div>
+   </div>
+   </div>
 
-        <div>
-  <a href="" target="_blank" rel="noopener noreferrer">
-    <img 
-      src="/images/pastorale/beyou.jpg" 
-      alt="Immagine 2" 
-      style={{
-        width: '65%',
-        height: 'auto',
-        borderRadius: '8px'
-      }} 
-    />
-    <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>be you</h3>
-  </a>
-</div>
+          
 
-        <div>
-  <a href="https://www.donboscosandona.it/articoli/201" target="_blank" rel="noopener noreferrer">
-    <img 
-      src="/images/pastorale/Musica.jpeg" 
-      alt="Immagine 3" 
-      style={{
-        width: '80%',
-        height: 'auto',
-        borderRadius: '8px'
-      }} 
-    />
-  </a>
-  <h3 style={{ fontWeight: 'bold', marginTop: '10px' }}>progetto musica</h3>
-  <p style={{ fontSize: '14px', color: '#555' }}>Il progetto Musica offre corsi gratuiti per imparare le basi di uno strumento musicale, rendendo l'accesso alla musica possibile per tutti. Un'opportunità per sviluppare competenze e passione, senza costi.</p>
-</div>
+  
 
+
+      
+        
+        <div style={{ textAlign: 'center' }}>
+        <h3 style={{ fontWeight: 'bold', marginTop: '0px', fontSize: '30px' }}>L'equipe</h3>
+        <p style={{ fontSize: '20px', color: '#555', marginTop: '0', marginBottom: '10px' }}>
+        Con piacere vi presentiamo l'équipe per la pastorale scolastica:
+
+don Nicola Munari, Sacerdote Salesiano, Direttore dell’opera Salesiana di San Donà, assistente spirituale dell’equipe,<br/> 
+Alessandro Ferro, Direttore della SFP, insegnante di informatica esperto in didattica e digitale<br/> 
+Daniele Zanutto; incaricato per la pastorale della scuola, insegnante nel settore motoristico e carrozzeria.<br/> 
+Martina Talon; insegnante d’inglese con esperienza in ambito educativo…<br/> 
+Francesco Dal Molin; insegnante di matematica e fisica, scout ed esperto in tecniche di animazione<br/> 
+Francesca Cadamuro, educatrice e tutor d’aula, con esperienza in ambito educativo e pastorale.<br/> 
+
+Un gruppo di insegnanti che con entusiasmo e passione si dedicano alla cura e all'accompagnamento dei nostri studenti, attraverso proposte educative e di crescita nella fede.
+</p>
         </div>
-        </div>
-
+        
 <div style={styles.container}>
       <img 
         src="/images/pastorale/Partner.png" 
@@ -170,7 +160,17 @@ export default function Home() {
     )
 
 }
+export async function getStaticProps() {
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/inoratorio?q=pastorale'
+  )
+  const data = await res.json()
 
+  return {
+    props: { data },
+    revalidate: 3600, // I dati vengono ricaricati al massimo una volta all'ora
+  }
+}
 const styles = {
   container: {
     display: 'flex',
