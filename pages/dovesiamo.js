@@ -1,5 +1,9 @@
 export default function Dovesiamo() {
   return (
+    <>
+    <title>Dove siamo - Emporio Solidale</title>
+    <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
+
     <div class="flex flex-col">
       <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between mb-10">
         <div class="flex justify-center md:ml-10">
@@ -229,50 +233,100 @@ export default function Dovesiamo() {
       </div>
 
       <footer class="bg-[#780202] text-white w-full">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="w-full max-w-screen-xl p-4 py-6 lg:py-8 h-auto md:h-[25rem] mx-auto flex flex-col justify-center items-center">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start w-full">
             <div class="flex justify-center md:justify-start">
               <a href="#">
                 <img
                   src="/images/Logo_emporio.png"
-                  class="h-24"
+                  class="h-20 md:h-24"
                   alt="Emporio Logo"
                 />
               </a>
             </div>
+
             <div class="text-center md:text-left">
-              <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
+              <h2 class="mb-4 text-sm font-semibold uppercase">
+                Corso di cucito
+              </h2>
+              <hr class="mb-2 border-gray-500" />
               <ul class="text-gray-300">
                 <li class="mb-2">
-                  <a href="#" class="hover:underline">
-                    Emporio solidale
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="hover:underline">
-                    Del basso Piave
+                  <a
+                    href="/servizi/corso-di-cucito"
+                    class="hover:underline text-cyan-400"
+                  >
+                    Vai al corso
                   </a>
                 </li>
               </ul>
             </div>
+
             <div class="text-center md:text-left">
-              <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
+              <h2 class="mb-4 text-sm font-semibold uppercase">
+                Economia domestica
+              </h2>
+              <hr class="mb-2 border-gray-500" />
               <ul class="text-gray-300">
                 <li class="mb-2">
-                  <a href="#" class="hover:underline">
-                    0421-332697
+                  <a
+                    href="/servizi/economia-domestica"
+                    class="hover:underline text-cyan-400"
+                  >
+                    Approfondimenti
                   </a>
                 </li>
-                <li>
-                  <a href="#" class="hover:underline">
-                    344 3851626
+              </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+              <h2 class="mb-4 text-sm font-semibold uppercase">
+                Centro di ascolto
+              </h2>
+              <hr class="mb-2 border-gray-500" />
+              <ul class="text-gray-300">
+                <li class="mb-2">
+                  <a
+                    href="/servizi/centro-di-ascolto"
+                    class="hover:underline text-cyan-400"
+                  >
+                    Presentazione del servizio
                   </a>
                 </li>
+              </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+              <h2 class="mb-4 text-sm font-semibold uppercase">Recapiti</h2>
+              <hr class="mb-2 border-gray-500" />
+              <ul class="text-gray-300">
+                <li class="mb-2">Emporio Solidale del Basso</li>
+                <li class="mb-2">Piave San Donà di Piave (VE)</li>
+              </ul>
+            </div>
+
+            <div class="text-center md:text-left">
+              <h2 class="mb-4 text-sm font-semibold uppercase">Contatti</h2>
+              <hr class="mb-2 border-gray-500" />
+              <ul class="text-gray-300">
+                <li class="mb-2">
+                  e-mail:{" "}
+                  <a
+                    href="mailto:emporiosolidalebassopiave@gmail.com"
+                    class="hover:underline text-cyan-400"
+                  >
+                    emporiosolidalebassopiave@gmail.com
+                  </a>
+                </li>
+                <li class="mb-2">Fax e Telefono: 0421-332697</li>
+                <li class="mb-2">Cellulare: 344 3851626</li>
               </ul>
             </div>
           </div>
-          <hr class="my-6 border-gray-500" />
-          <div class="flex flex-col sm:flex-row items-center justify-between">
+
+          <hr class="my-6 border-gray-500 w-full" />
+
+          <div class="flex flex-col sm:flex-row items-center justify-between w-full">
             <span class="text-sm text-gray-300">
               © 2025{" "}
               <a href="#" class="hover:underline">
@@ -300,5 +354,6 @@ export default function Dovesiamo() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
