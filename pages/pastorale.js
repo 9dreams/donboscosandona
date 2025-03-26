@@ -71,7 +71,7 @@ export default function Home({ data }) {
               
             <div style={{ textAlign: 'center' }}> 
               <SwiperNews
-                title='News Pastorali'
+                title={null}
                 data={data}
                 limit={15}
                 defaultTag='pastorale'
