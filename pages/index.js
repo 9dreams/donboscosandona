@@ -326,7 +326,7 @@ let prodotti = [
   {
     id: 6,
     titolo: 'Manualità',
-    immagine: '/images/manualità.jpg',
+    immagine: '/images/Manualità.jpeg',
     pubblicazione: 'Laboratorio creativo',
     abstract:
       'Stimolo della creatività e uso della manualità fine limitatamente alle proprie potenzialità.',
@@ -335,8 +335,8 @@ let prodotti = [
   },
   {
     id: 7,
-    titolo: 'Canto',
-    immagine: '/images/canto.jpg',
+    titolo: 'Canto di gruppo',
+    immagine: '/images/Canto gruppo.jpeg',
     pubblicazione: 'Laboratorio musicale',
     abstract:
       'Liberiamo la nostra voglia di farci sentire ed ascoltare al mondo intero!',
@@ -355,8 +355,8 @@ let prodotti = [
   },
   {
     id: 9,
-    titolo: 'Shiatsu qi-gong',
-    immagine: '/images/SHIATSU.jpg',
+    titolo: 'Shiatsu',
+    immagine: '/images/Shiatsu6.jpeg',
     pubblicazione: 'Laboratorio di rilassamento',
     abstract:
       'Rilassamento ed ascolto del proprio corpo, con trattamenti reciproci tra i partecipanti.',
@@ -366,7 +366,7 @@ let prodotti = [
   {
     id: 10,
     titolo: 'Nordic Walking',
-    immagine: '/images/nordicwalking.jpg',
+    immagine: '/images/Nordic Walking2.jpeg',
     pubblicazione: "Attività all'aria aperta",
     abstract:
       "Camminare con i bastoncini al ritmo dell'istruttore e nel contempo poter stare all'aria aperta ammirando la bellezza della natura.",
@@ -386,11 +386,12 @@ let prodotti = [
   {
     id: 12,
     titolo: 'Fotografia',
-    immagine: '/images/fotografia.jpg',
+    immagine: '/images/Fotografia1.jpeg',
     pubblicazione: 'Laboratorio creativo',
     abstract:
       "Impariamo a fare delle belle foto ed osservare il mondo che ci sta attorno al fine di potenziare l'autonomia!",
     articolo: false,
     tag: 'Fotografia, Autonomia',
   },
+  
 ]
