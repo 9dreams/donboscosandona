@@ -14,15 +14,15 @@ import { dividerClasses } from '@mui/material'
 export default function Home({ data }) {
   return (
     <Layout>
-      <div className="absolute top-0 right-0 p-4 pb-22">
-        <img src="/images/loghi.png" alt="Loghi" className="w-30 h-16" />
-      </div>
       <div className="mt-24"> {/* Regola il margine superiore in base all'altezza della navbar */}
         <Head />
         <Container maxWidth="xl">
-          <img src="/images/scimmia.jpg" alt="Progetto" />
+         
         </Container>
-        <Paragraph
+        <div className="w-full h-[600px] overflow-hidden">
+  <img src="/images/home.jpg" alt="Progetto" className="w-full h-full object-cover" />
+</div>
+        <Paragraph 
           title="Pagina in costruzione"
           style={{ color: 'black' }}
         >
