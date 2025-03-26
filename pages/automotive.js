@@ -105,14 +105,14 @@ avanzamento e valutazione relativa alle lavorazioni svolte ed interazione con il
               cardWidthXs={6}
               products={quarto_anno}
             />
-            <SwiperNews title="News dal Settore Meccanico" data={data} limit={15} />
+            <SwiperNews title="News dal Settore Automotive" data={data} limit={15} />
     </Layout>
   )
 }
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/inoratorio?q=motoristico'
+    'https://channels.donboscosandona.it/api/posts/inoratorio?q=automotive'
   )
   const data = await res.json()
 
