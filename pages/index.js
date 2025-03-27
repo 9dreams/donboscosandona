@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material'
+import { buttonClasses, Container, Grid, Typography } from '@mui/material'
 import {
   Carousel,
   Certifications,
@@ -21,6 +21,7 @@ import {
   Elements,
 } from '/components'
 import { images } from '@/next.config'
+import { Description } from '@mui/icons-material'
 
 export default function Home({ data, elementi }) {
   return (
@@ -37,6 +38,7 @@ export default function Home({ data, elementi }) {
         città di Venezia,<br></br> meta prediletta del turismo internazionale.<br></br>
 A pochi chilometri di distanza numerose località turistiche e città di <br></br>interesse artistico sono 
 mete ideali per le vostre escursioni e gite<br></br> fuori porta. La riviera e il lido si accendono di sera di iniziative e feste.</p></center>
+      
       </Paragraph>
       
      
@@ -48,20 +50,33 @@ mete ideali per le vostre escursioni e gite<br></br> fuori porta. La riviera e i
         products={prodotti}
       />
       <Paragraph
-        title='da mettere titolo'
         rightImageUrl='/images/imgomb.png'
-      >
+        ><center>
+        <h1>Le offerte dell'estate 2025</h1>
+        <br></br>
+        <p>Esplora le nostre incredibili offerte per la tua vacanza presso il Soggiorno Marino Don Bosco! Con tariffe speciali e pacchetti su misura, rendiamo il tuo viaggio ancora più indimenticabile. Approfitta dei nostri pacchetti per una fuga improvvisata o risparmia grazie alla promo.
+Con una varietà di opzioni tra cui scegliere, c'è sempre un'offerta che soddisfa le tue esigenze di viaggio. Scopri le nostre promozioni attuali e prenota ora per un'esperienza memorabile.
+</p></center>
       </Paragraph>
-      <Paragraph
-        title='da mattere il titolo'
+      <Paragraph 
         leftImageUrl='https://i.postimg.cc/L8LTXskg/Screenshot-2023-04-15-alle-17-23-23.png'
-      >
+        ><center>
+        <h1>La nostra esperienza di villeggiatura</h1>
+        <br></br>
+        <p>Entrando nella nostra struttura fronte mare sarete accolti dallo Staff in un’atmosfera familiare che vi farà sentire subito i benvenuti: con le nostre offerte ci impegniamo a regalarvi giornate indimenticabili di sole e di mare e un’esperienza rilassante per una vacanza all’insegna del relax. Al vostro risveglio sarete accolti dai profumi provenienti dalla nostra cucina: la colazione prevede, infatti, un ricchissimo buffet che spazia dai cibi dietetici alle proposte più golose. Il nostro chef saprà deliziarvi con portate gustose che vi faranno riscoprire il piacere di sentirvi accolti e di essere serviti.
+</p></center>
         
       </Paragraph>
         <Products
         cardWidth={6}
         cardWidthXs={12}
-        products={prodotti2}
+        products={prodotti2}  
+        
+        style={{ textAlign: 'left', paddingBottom: '2rem' }}
+        component='h2'
+        variant='h4'
+        color='inherit'
+        gutterBottom 
       /> 
        <Products
         cardWidth={6}
@@ -111,31 +126,38 @@ export async function getStaticProps() {
     revalidate: 1800, // In secondi: il build viene fatto al massimo una volta ogni mezzora
   }
 }
-
 // slides per il carousel
 let slides = [
-  {
-    titolo: 'Fatti un bel giro',
-    descrizione:
-      'Scopri tutti i segreti del nostro Centro con il tour virtuale!',
-    imageUrl:'https://resc.deskline.net/images/TRN/1/04117527-0133-446a-9636-08118b4fac8b/99/image.jpg',
+  { 
+    immagine:'https://www.soggiornodonbosco.it/img/column/9e82fdf883cb657f226a7ef0e7c557dc00fe9139.jpg?1618415352',
   },
   {
-    titolo: 'Concorso nazionale settore elettrico',
-    descrizione:
-      "A maggio il nostro Centro avrà l'onore di ospitare il Concorso Nazionale del Settore Elettrico: tutti i Centri di Formazione Professionale salesiani d'Italia invieranno i loro campioni per una settimana di sfida e condivisione professionale...",
-images:'marespiagge.png'
+   immagine:'https://www.soggiornodonbosco.it/img/column/a3d20dcea77ac6ea1c063044368f0d48d03a5305.jpg?1618415335',
+  },
+  { immagine:'https://www.soggiornodonbosco.it/img/column/a187066a971484f07d4989b7c5ffdeb4107d1fe9.jpg?1618413011',
+  },
+  {
+   immagine:'https://www.soggiornodonbosco.it/img/column/5719aafa5b8e25301f1db13d47ec9a01df7b7a0b.jpg?1618412984',
+  },
+  { immagine:'https://www.soggiornodonbosco.it/img/column/5b1f45d71f33102a9bac4a2cc33e23e4d5f1fbd8.jpg?1618413047',
+  },
+  {
+   immagine:'https://www.soggiornodonbosco.it/img/column/5719aafa5b8e25301f1db13d47ec9a01df7b7a0b.jpg?1618412984',
+  },
+  { immagine:'',
+  },
+  {
+   immagine:'',
   },
 ]
 
 // Il nostro team
 let members = [
   {
-    
     name: 'Spiaggia privata',
     description: 'Una spiaggia riservata agli ospiti del soggiorno garantisce la tranquillità di cui la tua famiglia ha bisogno.',
     imageUrl:
-      '/images/log1.png',
+      '/images/log1.png',      
   },
   {
     name: 'Ombrelloni e sdraio',
@@ -170,6 +192,7 @@ let members = [
     description1: 'Tutte le camere sono dotate di servizi igienici riservati e asciugacapelli.',
     imageUrl:
       '/images/log6.png',
+      
   },
   {
     name: 'Free Wifi',
@@ -216,110 +239,96 @@ let members = [
 ]
 
 let prodotti = [
-  {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+  {  
+    
+    title: 'Servizio all-inclusive',
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
-    immagineUrl:'/images/marespiagge.png',
+      'Il nostro servizio di ospitalità classica, della durata di una settimana, da sabato a sabato...',
+   immagineUrl:'/images/marespiagge.png',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Bed & Breakfast',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Per tutti gli amanti delle gite fuori porta, la nostra formula che offre un soggiorno con camera e prima colazione a partire da 31 € a persona...",
     immagineUrl:
       'https://www.forniturealberghiereonline.it/images/prima-colazione-bb-norme-somministrazione-cibi-bevande.jpg'
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'Family Time',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Regala alla tua famiglia un tempo di qualità per stare assieme in un ambiente di serenità e pace, dove costruire ricordi indimenticabili che cementano legami indissolubili...",
     immagineUrl:
       '/images/family.time.png'
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'Regala una vacanza ai tuoi nonni',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Quest'anno regala ai tuoi nonni una vacanza al mare all'insegna del riposto e della tranquillità in un ambiente sicuro e protetto...",
     immagineUrl:
       '/images/regalavacanzanonni.png'
   },
 ]
 let prodotti2 = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: 'Piccoli amici',
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+      'Porta pure in vacanza con te i tuoi piccoli amici che godranno di un trattamento dedicato e di uno spazio riservato in sala da pranzo e in spiaggia...',
     immagineUrl:'/images/cani.png',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Servizio Baby Club',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Dedicata ai bambini dai 4 ai 12 anni, per rendere indimenticabile la loro vacanza, con le nostre esperte animatrici...",
     immagineUrl:
       '/images/baby.png'
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'Gli appuntamenti della settimana',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Il tempo quasi magico che vivrai con noi sarà scandito da momenti speciali per stare insieme in allegria nei nostri ambienti dedicati ai momenti conviviali...",
     immagineUrl:
       '/images/fettebisco.png'
   },
   {
-    title: 'Informatico',
-    category: 'DIPLOMA DI TECNICO INFORMATICO',
+    title: 'La nostra cucina',
     description:
-      "Installa e configura hardware e software, esegue la manutenzione di sistemi, reti e terminali utente, fornisce assistenza tecnica, effettua l'elaborazione e la manutenzione di dati su archivi digitali. Con il quarto anno in Sistema Duale diventa tecnico sviluppatore di Soluzioni Software.",
+      "Una delizia per gli occhi e per il palato, la nostra cucina ti farà sentire in famiglia con l'aggiunta del beneficio di trovare sempre tutto pronto...",
     immagineUrl:
       '/images/cozze.png'
   },
 ]
 let prodotti3 = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: 'Alla scoperta di Caorle',
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+      'Immaginate diciotto chilometri di spiaggia sabbiosa color oro, mare pulito adatto ai bambini, limpido, pescoso e pieno di tesori sommersi, per la gioia dei pescatori e amanti delle immersioni e degli sport acquatici, e poi le dune, la natura incontaminata, il borgo storico sul mare, le eccellenze enogastronomiche del territorio...',
     immagineUrl:'/images/caorle1.png',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
-    description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
-    immagineUrl:
-      '/images/bici.png'
+    title: 'Itinerari in bicicletta',
+   description:"Con il servizio bici gratuito offerto dal Soggiorno Marino don Bosco, fare un'uscita in bicicletta è uno dei modi migliori per vivere la natura nei dintorni di Caorle. Scegli il percorso più adatto a te o provane uno diverso ogni giorno...e parti per l'avventura  Caorle e i suoi territori incontamininati ti stanno aspettando! ",
+    immagineUrl:'/images/bici.png'
   },
   
 ]
 let prodotti4 = [
   {
-    title: 'Elettrico',
-    category: 'QUALIFICA DI OPERATORE ELETTRICO',
+    title: 'Ospitalità per gruppi',
     description:
-      'Installa ed effettua la manutenzione di impianti civili e industriali, sia con tecnologie tradizionali che automatizzate. Realizza la programmazione dei componenti domotici e dei controllori programmabili industriali.',
+      "Per soggiorni di almeno 40 ospiti, siamo a tua disposizione nei periodi dedicati all'ospitalità per i gruppi...",
     immagineUrl:'/images/ospitalità.png',
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Servizio bici gratuito',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Biciclette su prenotazione gratuita per splendide scampagnate alla scoperta di Caorle e dintorni.",
     immagineUrl:
       '/images/servizio.png'
   },
   {
-    title: 'Energia',
-    category: 'QUALIFICA DI OPERATORE DI IMPIANTI TERMO-IDRAULICI',
+    title: 'Atvo',
     description:
-      "Interviene nell'installazione, collaudo e manutenzione di impianti termici, idraulici, di condizionamento e fotovoltaici, con una particolare attenzione al risparmio energetico, anche grazie alla building automation.",
+      "Una comoda fermata degli autobus di fronte al Soggiorno Marino ti permetterà di viaggiare sulle linee ATVO: 4a / Aeroporto Marco Polo di Venezia - Caorle - P.S.Margherita - Lido Altanea - Duna Verde       97 / Caorle - Porto S. Margherita - Duna Verde Anche i biglietti possono essere acquistati comodamente all'interno del Soggiorno.",
     immagineUrl:
       '/images/atvo3.png'
   },
