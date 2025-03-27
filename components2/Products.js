@@ -1,0 +1,149 @@
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import Grid from '@mui/material/Grid'
+import styles from '/components/Products.module.css'
+import Card from '@mui/material/Card'
+import CardActionArea from '@mui/material/CardActionArea'
+import CardContent from '@mui/material/CardContent'
+
+import Image from 'next/image'
+
+export default function Products({
+  title,
+  description,
+  cardWidth,
+  cardWidthXs,
+  products,
+  borderRadius,
+  aspectRatio,
+}) {
+  return (
+    <Container maxWidth='lg'>
+      {title && (
+        <Typography
+          text-align='center'
+          style={{ textAlign: 'center' }}
+          component='h3'
+          variant='h3'
+          color='inherit'
+          gutterBottom
+        >
+          {title}
+        </Typography>
+      )}
+      {description && (
+        <Typography
+          variant='subtitle1'
+          style={{ textAlign: 'center', padding: '10px' }}
+          text-align='center'
+          color='text.secondary'
+          paragraph
+        >
+          {description}
+        </Typography>
+      )}
+      <Grid container>
+        {products.map((product) => (
+          <Grid item xs={cardWidthXs} sm={4} md={cardWidth}>
+            <CardActionArea
+              component='a'
+              href={product.url}
+              disabled={!product.url}
+            >
+              <Card
+                sx={{ display: 'flex' }}
+                className={styles.card}
+                elevation={0}
+              >
+                <CardContent
+                  sx={{
+                    flex: 1,
+                  }}
+                >
+                  <Container
+                    sx={{
+                      borderRadius: borderRadius,
+                      aspectRatio: aspectRatio,
+                      position: 'relative',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <Image
+                      src={product.immagineUrl}
+                      alt={product.title}
+                      className={styles.immagine}
+                      style={{
+                        display: {
+                          xs: 'block',
+                          sm: 'block',
+                          margin: 'auto',
+                        },
+                        objectFit: 'cover',
+                      }}
+                      fill={true}
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    />
+                  </Container>
+                  {product.title && (
+                    <Typography
+                      text-align='center'
+                      component='h4'
+                      variant='h6'
+                      style={{ textAlign: 'center' }}
+                      color='inherit'
+                      gutterBottom
+                    >
+                      {product.title}
+                    </Typography>
+                  )}
+                  {product.category && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ textAlign: 'center' }}
+                      color='text.secondary'
+                      paragraph
+                    >
+                      {product.category}
+                    </Typography>
+                  )}
+                  {product.description && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ padding: '10px' }}
+                      color='inherit'
+                      paragraph
+                    >
+                      {product.description}
+                    </Typography>
+                  )}
+                  {product.rif && (
+                    <Typography
+                      variant='subtitle1'
+                      style={{ padding: '10px' }}
+                      color='inherit'
+                      paragraph
+                    >
+                      <div
+                        className={styles.label}
+                        style={{ backgroundColor: product.labelColor }}
+                      >
+                        <p>{product.rif}</p>
+                      </div>
+                    </Typography>
+                  )}
+                </CardContent>
+              </Card>
+            </CardActionArea>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  )
+}
+
+Products.defaultProps = {
+  cardWidth: 3,
+  cardWidthXs: 6,
+  borderRadius: '10px',
+  aspectRatio: '3 / 2',
+}

@@ -1,0 +1,11 @@
+.carousel {
+    width: 100%;
+}
+
+.carousel .slide {
+    overflow: hidden;
+}
+
+.carousel .slide * {
+    color: white;
+}

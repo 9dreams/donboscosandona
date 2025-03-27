@@ -43,7 +43,7 @@ export default function Home({ data, elementi }) {
         title='Una settimana di allegria'
         description='Scopri tutti gli eventi'
         cardWidth={3}
-        events={date}
+        events={date} 
       />
       <Featured data={data} limit={4} defaultTag='scuola' />
       <Featured data={elementi} limit={4} defaultTag='scuola' height={90} />
@@ -502,88 +502,88 @@ let sponsor = [
 ]
 
 let domande_test = [
-  {
-    domanda: 'Se sulla strada vedi delle strisce pedonali dipinte male...',
-    immagine: 'images/strisce.jpg' ,
-    a: {
-      risposta: 'Le evito',
-      elettrico: 1,
-      energia: 0,
-      informatico: 0,
-      meccanico: 0,
-      motoristico: 0,
+    {
+      domanda: 'Se sulla strada vedi delle strisce pedonali dipinte male...',
+      immagine: 'images/strisce.jpg' ,
+      a: {
+        risposta: 'Le evito',
+        elettrico: 1,
+        energia: 0,
+        informatico: 0,
+        meccanico: 0,
+        motoristico: 0,
+      },
+      b: {
+        risposta: 'Uso il bianchetto per sistemarle',
+        elettrico: 0,
+        energia: 1,
+        informatico: 0,
+        meccanico: 0,
+        motoristico: 0,
+      },
+      c: {
+        risposta: 'Chiudo gli occhi e passo',
+        elettrico: 0,
+        energia: 0,
+        informatico: 1,
+        meccanico: 0,
+        motoristico: 0,
+      },
     },
-    b: {
-      risposta: 'Uso il bianchetto per sistemarle',
-      elettrico: 0,
-      energia: 1,
-      informatico: 0,
-      meccanico: 0,
-      motoristico: 0,
+    {
+      domanda: 'Seconda domanda',
+      immagine:' images/mike.jpg',
+      a: {
+        risposta: 'aaaaa',
+        elettrico: 1,
+        energia: 0,
+        informatico: 0,
+        meccanico: 0,
+        motoristico: 0,
+      },
+      b: {
+        risposta: 'bbb',
+        elettrico: 0,
+        energia: 1,
+        informatico: 0,
+        meccanico: 0,
+        motoristico: 0,
+      },
+      c: {
+        risposta: 'ccccc',
+        elettrico: 0,
+        energia: 0,
+        informatico: 1,
+        meccanico: 0,
+        motoristico: 0,
+      },
     },
-    c: {
-      risposta: 'Chiudo gli occhi e passo',
-      elettrico: 0,
-      energia: 0,
-      informatico: 1,
-      meccanico: 0,
-      motoristico: 0,
+    {
+      domanda: 'Terza domanda',
+      immagine: 'images/scimmia.jpg' ,
+      a: {
+        risposta: 'aaaaa',
+        elettrico: 1,
+        energia: 0,
+        informatico: 0,
+        meccanico: 0,
+        motoristico: 0,
+      },
+      b: {
+        risposta: 'bbbbb',
+        elettrico: 0,
+        energia: 1,
+        informatico: 0,
+        meccanico: 0,
+        motoristico: 0,
+      },
+      c: {
+        risposta: 'ccccc',
+        elettrico: 0,
+        energia: 0,
+        informatico: 1,
+        meccanico: 0,
+        motoristico: 0,
+      },
     },
-  },
-  {
-    domanda: 'Seconda domanda',
-    immagine:' images/mike.jpg',
-    a: {
-      risposta: 'aaaaa',
-      elettrico: 1,
-      energia: 0,
-      informatico: 0,
-      meccanico: 0,
-      motoristico: 0,
-    },
-    b: {
-      risposta: 'bbb',
-      elettrico: 0,
-      energia: 1,
-      informatico: 0,
-      meccanico: 0,
-      motoristico: 0,
-    },
-    c: {
-      risposta: 'ccccc',
-      elettrico: 0,
-      energia: 0,
-      informatico: 1,
-      meccanico: 0,
-      motoristico: 0,
-    },
-  },
-  {
-    domanda: 'Terza domanda',
-    immagine: 'images/scimmia.jpg' ,
-    a: {
-      risposta: 'aaaaa',
-      elettrico: 1,
-      energia: 0,
-      informatico: 0,
-      meccanico: 0,
-      motoristico: 0,
-    },
-    b: {
-      risposta: 'bbbbb',
-      elettrico: 0,
-      energia: 1,
-      informatico: 0,
-      meccanico: 0,
-      motoristico: 0,
-    },
-    c: {
-      risposta: 'ccccc',
-      elettrico: 0,
-      energia: 0,
-      informatico: 1,
-      meccanico: 0,
-      motoristico: 0,
-    },
-  },
-]
+  ]
