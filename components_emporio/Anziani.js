@@ -27,7 +27,7 @@ const scrollableContent = [
     link: "/servizi/economia-domestica",
   },
   {
-    title: "Corso di cucito",
+    title: "Corso di cucito", 
     description:
       "E’ un laboratorio base di formazione per imparare le primarie tecniche di taglio e cucito, rammendo, uso di macchine da cucire con l’ausilio di volontarie e personale specializzato.",
     image: "/images/corso-cucito.jpg",
