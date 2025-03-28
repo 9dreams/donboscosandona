@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
 const scrollableContent = [
   {
     title: "Formazione per volontari",
@@ -27,7 +26,7 @@ const scrollableContent = [
     link: "/servizi/economia-domestica",
   },
   {
-    title: "Corso di cucito", 
+    title: "Corso di cucito",
     description:
       "E’ un laboratorio base di formazione per imparare le primarie tecniche di taglio e cucito, rammendo, uso di macchine da cucire con l’ausilio di volontarie e personale specializzato.",
     image: "/images/corso-cucito.jpg",
@@ -52,10 +51,9 @@ const scrollableContent = [
     description:
       "Aiuti verso gli “anziani” ovvero chi è prima della pensione e ha bisogno di trovare lavoro viene aiutato a trovare un lavoro / progetti stipendiati per dargli una minima entrata per esempio progetto nonni vigili",
     image: "https://qdpnews.it/wp-content/uploads/2018/08/Nonno-vigile.jpg",
-    link: "/nonni-vigili",
+    link: "/servizi/",
   },
 ];
-
 export default function Anziani() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-black">
