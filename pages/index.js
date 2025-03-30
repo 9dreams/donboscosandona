@@ -27,12 +27,11 @@ export default function Home({ data, elementi }) {
   return (
     <Layout>
       <Carousel slides={slides} maxWidth={false} />
-      <div class="flex flex-row justify-">
-        <div class="flex flex-col p-20 m-6 bg-white px-8 py-4 rounded-lg w-2/4 space-y-4 pb-4">
+      <div class="flex flex-row ">
+        <div class="w-1/2 p-2">
           <Carousel slides={slides} maxWidth={"sm"} />
-        </div>
-      </div>
-      <Paragraph>
+          </div>
+          <div class="w-1/2 p-2">
         <center>
           <h1>Tra verde e azzurro</h1>
           <br></br>
@@ -50,9 +49,8 @@ export default function Home({ data, elementi }) {
             e feste.
           </p>
         </center>
-      </Paragraph>
-
-      
+       </div>
+      </div>
       <Products
         title="I nostri servizi"
         cardWidth={6}
