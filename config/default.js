@@ -1,10 +1,10 @@
 import Footer from '/components/Footer'
 import NavBar from '/components/NavBar'
 
-export const siteName = 'CFP DON BOSCO'
-export const siteTitle = 'CFP DON BOSCO - San Donà di Piave'
+export const siteName = 'Soggiorno Don Bosco'
+export const siteTitle = 'Soggiorno Don Bosco - Duna Verde'
 export const siteDescription =
-  'Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave'
+  ''
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
 export const menu = [
@@ -21,10 +21,10 @@ export const logoUrl =
 export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 
 const menuFooter = [
-  { title: 'Informatico', url: '/informatico' },
-  { title: 'Energie', url: '/energie' },
-  { title: 'Elettrico', url: '/elettrico' },
-  { title: 'Trasparenza', url: '/trasparenza' },
+  { title: '', url: '/informatico' },
+  { title: '', url: '/energie' },
+  { title: '', url: '/elettrico' },
+  { title: '', url: '/trasparenza' },
 ]
 
 const socials = [
@@ -32,10 +32,7 @@ const socials = [
 ]
 
 let images = [
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
-  { title: '', imageUrl: 'https://source.unsplash.com/random' },
+  { title: '', imageUrl: 'https://www.soggiornodonbosco.it/img/ck/1e1d8514786de1acf318b387c6daa2c5c9449fe3.png w-300'  },
 ]
 
 export const footer = (
@@ -55,10 +52,12 @@ PRIVACY POLICY
 "
     title2='Social Feed'
     socials={socials}
-    title3='I Settori'
     images={images}
     menu={menuFooter}
     copyright='Copyright (C) 2023 9dreams Agency.'
+    title3=''
+    description2=''
+
   />
   
 )

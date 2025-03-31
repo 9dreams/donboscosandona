@@ -27,75 +27,134 @@ export default function Home({ data, elementi }) {
   return (
     <Layout>
       <Carousel slides={slides} maxWidth={false} />
-      <div class="flex flex-row ">
-        <div class="w-1/2 p-2">
-          <Carousel slides={slides} maxWidth={"sm"} />
-          </div>
-          <div class="w-1/2 p-2">
-        <center>
-          <h1>Tra verde e azzurro</h1>
-          <br></br>
-          <p>
-            Il Soggiorno Marino Don Bosco e la Casa Domenico Savio sono{" "}
-            <br></br>immersi in un ampio giardino fronte mare, con accesso
-            diretto alla<br></br> spiaggia privata in località Duna Verde, nei
-            pressi di Caorle,<br></br> caratteristica cittadina di mare e di
-            pescatori. Duna Verde si trova a <br></br>metà strada tra le
-            splendide campagne venete e la città di Venezia,<br></br> meta
-            prediletta del turismo internazionale.<br></br>A pochi chilometri di
-            distanza numerose località turistiche e città di <br></br>interesse
-            artistico sono mete ideali per le vostre escursioni e gite<br></br>{" "}
-            fuori porta. La riviera e il lido si accendono di sera di iniziative
-            e feste.
-          </p>
+      <div class="container mx-auto p-4">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 p-4">
+      <center>
+        <h2 class="text-blue-600 text-lg mb-2">
+          Soggiorno Marino Don Bosco
+        </h2>
+        <h1 class="text-3xl font-bold mb-4">
+        Tra verde e azzurro
+        </h1>
+        <hr class="border-t-2 border-blue-600 mb-4"/>
+        <p class="text-gray-700 mb-4">
+          Entrando nella nostra struttura fronte mare sarete accolti dallo
+          Staff in un’atmosfera familiare che vi farà sentire subito i
+          benvenuti: con le nostre offerte ci impegniamo a regalarvi giornate
+          indimenticabili di sole e di mare e un’esperienza rilassante per una
+          vacanza all’insegna del relax. Al vostro risveglio sarete accolti
+          dai profumi provenienti dalla nostra cucina: la colazione prevede,
+          infatti, un ricchissimo buffet che spazia dai cibi dietetici alle
+          proposte più golose. Il nostro chef saprà deliziarvi con portate
+          gustose che vi faranno riscoprire il piacere di sentirvi accolti e
+          di essere serviti.
+        </p>
+        <a class="text-blue-600 font-bold hover:text-blue-800 transition-colors" href="#">
+          SCOPRI LA STRUTTURA &gt;
+        </a>
         </center>
-       </div>
       </div>
+      <div class="w-full md:w-1/2 p-4">
+        <img alt=""
+          class="w-full h-auto"
+          src="https://storage.googleapis.com/a1aa/image/okSYmShYedpIfKUqf5fAawXNYU4geZnL7ekv0OVRWMM.jpg"
+          height="400"
+          width="600"
+        />
+      </div>
+      
+    </div>
+  </div>
       <Products
         title="I nostri servizi"
         cardWidth={6}
         cardWidthXs={12}
         products={prodotti}
       />
-      <div class="flex flex-row">
-  <div class="w-1/2 p-2">
-    <Carousel slides={slides2} maxWidth={"sm"} />
-  </div>
-  <div class="w-1/2 p-2">
-  <h1>Le offerte dell'estate 2025</h1>
-          <br></br>
-          <p>
-            Esplora le nostre incredibili offerte per la tua vacanza presso il
-            Soggiorno Marino Don Bosco! Con tariffe speciali e pacchetti su
-            misura, rendiamo il tuo viaggio ancora più indimenticabile.
-            Approfitta dei nostri pacchetti per una fuga improvvisata o
-            risparmia grazie alla promo. Con una varietà di opzioni tra cui
-            scegliere, c'è sempre un'offerta che soddisfa le tue esigenze di
-            viaggio. Scopri le nostre promozioni attuali e prenota ora per
-            un'esperienza memorabile.
-          </p>
-  </div>
-</div>
-      
-  
-      <Paragraph>
-        <center>
-          <h1>La nostra esperienza di villeggiatura</h1>
-          <br></br>
-          <p>
-            Entrando nella nostra struttura fronte mare sarete accolti dallo
-            Staff in un’atmosfera familiare che vi farà sentire subito i
-            benvenuti: con le nostre offerte ci impegniamo a regalarvi giornate
-            indimenticabili di sole e di mare e un’esperienza rilassante per una
-            vacanza all’insegna del relax. Al vostro risveglio sarete accolti
-            dai profumi provenienti dalla nostra cucina: la colazione prevede,
-            infatti, un ricchissimo buffet che spazia dai cibi dietetici alle
-            proposte più golose. Il nostro chef saprà deliziarvi con portate
-            gustose che vi faranno riscoprire il piacere di sentirvi accolti e
-            di essere serviti.
-          </p>
+
+    
+<div class="container mx-auto p-4">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 p-4">
+      <center>
+        <h2 class="text-blue-600 text-lg mb-2">
+          Soggiorno Marino Don Bosco
+        </h2>
+        <h1 class="text-3xl font-bold mb-4">
+          La nostra esperienza di villeggiatura
+        </h1>
+        <hr class="border-t-2 border-blue-600 mb-4"/>
+        <p class="text-gray-700 mb-4">
+          Entrando nella nostra struttura fronte mare sarete accolti dallo
+          Staff in un’atmosfera familiare che vi farà sentire subito i
+          benvenuti: con le nostre offerte ci impegniamo a regalarvi giornate
+          indimenticabili di sole e di mare e un’esperienza rilassante per una
+          vacanza all’insegna del relax. Al vostro risveglio sarete accolti
+          dai profumi provenienti dalla nostra cucina: la colazione prevede,
+          infatti, un ricchissimo buffet che spazia dai cibi dietetici alle
+          proposte più golose. Il nostro chef saprà deliziarvi con portate
+          gustose che vi faranno riscoprire il piacere di sentirvi accolti e
+          di essere serviti.
+        </p>
+        <a class="text-blue-600 font-bold hover:text-blue-800 transition-colors" href="#">
+          SCOPRI LA STRUTTURA &gt;
+        </a>
         </center>
-      </Paragraph>
+      </div>
+      <div class="w-full md:w-1/2 p-4">
+        <img alt="Beach with red and white striped umbrellas and chairs"
+          class="w-full h-auto"
+          src="https://www.soggiornodonbosco.it/img/column/406ff78e8e06b0d1e42b5cf8260160a17e14499d.jpg?1709802233"
+          height="400"
+          width="600"
+        />
+      </div>
+      
+    </div>
+  </div>
+
+
+<div class="container mx-auto p-4 md:p-8">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 p-4">
+        <img alt="Beach with red and white striped umbrellas and chairs"
+          class="w-full h-auto max-w-full"
+          height="400"
+          src="https://www.soggiornodonbosco.it/img/column/c31c1507c0bd0a132ba982c169c5b4ebd36a1055.jpg?1709802154"
+          width="600"
+        />
+      </div>
+<div class="w-full md:w-1/2 p-4">
+<center>
+        <h2 class="text-blue-600 text-lg mb-2">
+          Soggiorno Marino Don Bosco
+        </h2>
+        <h1 class="text-3xl font-bold mb-4">
+          La nostra esperienza di villeggiatura
+        </h1>
+        <hr class="border-t-2 border-blue-600 mb-4"/>
+        <p class="text-gray-700 mb-4">
+          Entrando nella nostra struttura fronte mare sarete accolti dallo
+          Staff in un’atmosfera familiare che vi farà sentire subito i
+          benvenuti: con le nostre offerte ci impegniamo a regalarvi giornate
+          indimenticabili di sole e di mare e un’esperienza rilassante per una
+          vacanza all’insegna del relax. Al vostro risveglio sarete accolti
+          dai profumi provenienti dalla nostra cucina: la colazione prevede,
+          infatti, un ricchissimo buffet che spazia dai cibi dietetici alle
+          proposte più golose. Il nostro chef saprà deliziarvi con portate
+          gustose che vi faranno riscoprire il piacere di sentirvi accolti e
+          di essere serviti.
+        </p>
+        <a class="text-blue-600 font-bold hover:text-blue-800 transition-colors" href="">
+          SCOPRI LA STRUTTURA &gt;
+        </a>
+        </center>
+      </div>
+      </div>
+      </div>
+
+
       <Products
         cardWidth={6}
         cardWidthXs={12}
@@ -114,12 +173,40 @@ export default function Home({ data, elementi }) {
         members={members}
         cardWidth={3}
       />
+      <div class="container mx-auto p-2">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 p-4">
+      <center>
+        <h1 class="text-3xl font-bold mb-4">
+        Contatti
+        </h1>
+       
+        <p class="text-gray-700 mb-4">
+   
+SOGGIORNO MARINO DON BOSCO
+Tel. +39 0421 299 158
+info@soggiornodonbosco.it
+via Selva Rosata, 81
+30021 Caorle - Venezia
+        </p>
+        <a class="text-red-600 font-bold hover:text--800 transition-colors" href="#">
+        Seguici su Facebook
+        </a>
+        <br></br>
+        <a class="text--600 font-bold hover:text--800 transition-colors" href="#">
+        Seguici su Instagram
+        </a>
+        </center>
+      </div>
       <Maps
         maxWidth="100%"
         maxHeight="550px"
         url='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.502961533332!2d12.78848457670082!3d45.56032337107574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477bfa012626aba9%3A0xc17f19394464ca38!2sSoggiorno%20Marino%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1742978889848!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
       />
-      z<br></br>
+      
+    </div>
+  </div>
+      <br></br>
       <br></br>
     </Layout>
   );
@@ -147,7 +234,7 @@ export async function getStaticProps() {
 // slides per il carousel
 let slides = [
   {
-    immagine: "/images/caro2.png",
+    immagine: "/images/carosu2.png",
   },
   {
     immagine: "/images/caro3.png",
@@ -163,18 +250,15 @@ let slides = [
 ];
 let slides2 = [
   {
-    immagine: "/images/caro2.png",
-  },
-  {
-    immagine: "/images/caro3.png",
+    immagine: "/images/imgomb.png",
   },
 ];
 let slides3 = [
   {
-    immagine: "/images/caro2.png",
+    immagine: "/images/cibo1.png",
   },
   {
-    immagine: "/images/caro3.png",
+    immagine: "/images/",
   },
 ];
 
