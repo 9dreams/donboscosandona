@@ -29,7 +29,7 @@ export default function Home({ data, elementi }) {
       <Carousel slides={slides} maxWidth={false} />
       <div class="container mx-auto p-4">
     <div class="flex flex-col md:flex-row items-center">
-      <div class="w-full md:w-1/2 p-4">
+      <div class="w-full md:w-1/1 p-4">
       <center>
         <h2 class="text-blue-600 text-lg mb-2">
           Soggiorno Marino Don Bosco
@@ -54,6 +54,31 @@ export default function Home({ data, elementi }) {
           SCOPRI LA STRUTTURA &gt;
         </a>
         </center>
+        </div>
+
+      <div class="flex flex-row ">
+        <div class="w-1/2 p-2">
+          <Carousel slides={slides} maxWidth={"sm"} />
+        </div>
+        <div class="w-1/1 p-1">
+          <center>
+            <h1>Tra verde e azzurro</h1>
+            <br></br>
+            <p>
+              Il Soggiorno Marino Don Bosco e la Casa Domenico Savio sono{" "}
+              <br></br>immersi in un ampio giardino fronte mare, con accesso
+              diretto alla<br></br> spiaggia privata in località Duna Verde, nei
+              pressi di Caorle,<br></br> caratteristica cittadina di mare e di
+              pescatori. Duna Verde si trova a <br></br>metà strada tra le
+              splendide campagne venete e la città di Venezia,<br></br> meta
+              prediletta del turismo internazionale.<br></br>A pochi chilometri
+              di distanza numerose località turistiche e città di <br></br>
+              interesse artistico sono mete ideali per le vostre escursioni e
+              gite<br></br> fuori porta. La riviera e il lido si accendono di
+              sera di iniziative e feste.
+            </p>
+          </center>
+        </div>
       </div>
       <div class="w-full md:w-1/2 p-4">
         <img alt=""
@@ -153,8 +178,51 @@ export default function Home({ data, elementi }) {
       </div>
       </div>
       </div>
+      <div class="flex flex-row">
+        <div class="w-1/2 p-2">
+          <Carousel slides={slides2} maxWidth={"sm"} />
+        </div>
+        <div class="w-1/1 p-2">
+          <center>
+            <h1>Le offerte dell'estate 2025</h1>
+            <br></br>
 
-
+            <p>
+              Esplora le nostre incredibili offerte per la tua vacanza presso il
+              Soggiorno Marino Don Bosco! <br></br>Con tariffe speciali e
+              pacchetti su misura, rendiamo il tuo viaggio ancora più
+              indimenticabile.<br></br>
+              Approfitta dei nostri pacchetti per una fuga improvvisata o
+              risparmia grazie alla promo.<br></br> Con una varietà di opzioni
+              tra cui scegliere, c'è sempre un'offerta che soddisfa le tue
+              esigenze di viaggio.<br></br> Scopri le nostre promozioni attuali
+              e prenota ora per un'esperienza memorabile.
+            </p>
+          </center>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row">
+        <div class="w-full sm:w-1/2 p-4 flex items-center justify-center">
+          <div class="text-center sm:text-left">
+            <h1 class="text-2xl font-bold mb-4">Le offerte dell'estate 2025</h1>
+            <p class="text-lg leading-relaxed">
+              Esplora le nostre incredibili offerte per la tua vacanza presso il
+              Soggiorno Marino Don Bosco! <br />
+              Con tariffe speciali e pacchetti su misura, rendiamo il tuo
+              viaggio ancora più indimenticabile. <br />
+              Approfitta dei nostri pacchetti per una fuga improvvisata o
+              risparmia grazie alla promo. <br />
+              Con una varietà di opzioni tra cui scegliere, c'è sempre
+              un'offerta che soddisfa le tue esigenze di viaggio. <br />
+              Scopri le nostre promozioni attuali e prenota ora per
+              un'esperienza memorabile.
+            </p>
+          </div>
+        </div>
+        <div class="w-full sm:w-1/2 p-2">
+          <Carousel slides={slides3} maxWidth="sm" />
+        </div>
+      </div>
       <Products
         cardWidth={6}
         cardWidthXs={12}
@@ -203,9 +271,21 @@ via Selva Rosata, 81
         maxHeight="550px"
         url='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.502961533332!2d12.78848457670082!3d45.56032337107574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477bfa012626aba9%3A0xc17f19394464ca38!2sSoggiorno%20Marino%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1742978889848!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
       />
-      
     </div>
   </div>
+
+      <div class="display: flex; align-items: flex-start ">
+        <div class="w-1/6  h-1/1  text-align: justify;">
+          <center>
+            <br></br>
+            <p>
+              SOGGIORNO MARINO DON BOSCO Tel. +39 0421 299 158
+              info@soggiornodonbosco.it via Selva Rosata, 81 30021 Caorle -
+              Venezia Seguici su Facebook Seguici su Instagram
+            </p>
+          </center>
+        </div>
+      </div>
       <br></br>
       <br></br>
     </Layout>
@@ -254,11 +334,10 @@ let slides2 = [
   },
 ];
 let slides3 = [
-  {
-    immagine: "/images/cibo1.png",
+  {immagine: "/images/cibo1.png",
   },
-  {
-    immagine: "/images/",
+  {immagine: "/images/",
+immagine: "/images/carro3.png",
   },
 ];
 
