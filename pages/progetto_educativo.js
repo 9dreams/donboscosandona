@@ -1,245 +1,114 @@
-import Head from 'next/head'
-import Container from '@mui/material/Container'
-
-import {
-  Layout,
-  LandingHero,
-  Products,
-  SwiperNews,
-  Sponsor,
-  Table,
-} from '/components'
-import { dividerClasses } from '@mui/material'
+import Layout from "/components/layout";
+import Head from "next/head";
+import Container from "@mui/material/Container";
 
 export default function Home({ data }) {
   return (
     <Layout>
-      <div className="mt-24"> {/* Regola il margine superiore in base all'altezza della navbar */}
+      <div className="mt-23">
         <Head />
-        <Container maxWidth="xl">
-         
-        </Container>
-        <div className="w-full h-[600px] overflow-hidden">
-  <img src="/images/home.jpg" alt="Progetto" className="w-full h-full object-cover" />
-</div>
-        <Paragraph 
-          title="Pagina in costruzione"
-          style={{ color: 'black' }}
-        >
-          Il Progetto Educativo del CNOS-FAP CFP Don Bosco si propone come risposta alle richieste dei genitori e alle esigenze di formazione dei giovani di un ampio contesto territoriale. È uno strumento che mette in luce l’identità del Centro, una guida che delinea le strategie e gli strumenti finalizzati al raggiungimento del successo scolastico, un testo che presenta quei valori umani e cristiani nei quali la Comunità Educativa si riconosce. Conformemente all’insegnamento di don Bosco, offre un disegno di educazione al futuro che investe sull’intelligenza (anche quella delle mani) e sulle potenzialità di ciascuno.
-        </Paragraph>
+        <div className="w-full h-[800px] overflow-hidden">
+          <img
+            src="/images/progetto-educativo.png"
+            alt="Progetto"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+      <div className="p-20 flex flex-col items-center">
+        <div className="max-w-7xl w-full">
+          <p className="text-2xl text-justify">
+            Il Progetto Educativo del CNOS-FAP CFP Don Bosco si propone come
+            risposta alle richieste dei genitori e alle esigenze di formazione
+            dei giovani di un ampio contesto territoriale. È uno strumento che
+            mette in luce l’identità del Centro, una guida che delinea le
+            strategie e gli strumenti finalizzati al raggiungimento del successo
+            scolastico, un testo che presenta quei valori umani e cristiani nei
+            quali la Comunità Educativa si riconosce. Conformemente
+            all’insegnamento di don Bosco, offre un disegno di educazione al
+            futuro che investe sull’intelligenza (anche quella delle mani) e
+            sulle potenzialità di ciascuno.
+          </p>
+          <a
+            href="http://archive.donboscosandona.it/1-identita-del-centro-salesiano"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            1 Identità del Centro Salesiano
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/2-i-soggetti"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            2 I soggetti
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/3-il-coordinamento"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            3 Il coordinamento
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/4-il-patto-educativo"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            4 Il patto educativo
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/5-gli-obiettivi"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            5 Gli obiettivi
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/6-le-azioni-educative"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            6 Le azioni educative
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/7-metodologie-e-strumenti-didattici"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            7 Metodologie e strumenti didattici
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/8-il-regolamento"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            8 Il regolamento
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/9-attivita-promozionali"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            9 Attività promozionali
+          </a>
+        </div>
+        <div className="max-w-7xl w-full">
+          <a
+            href="http://archive.donboscosandona.it/10-valutazione"
+            className="text-[#0099ff] text-2xl hover:text-blue-600 block mt-10"
+          >
+            10 Valutazione
+          </a>
+        </div>
       </div>
     </Layout>
   );
 }
-
-function Paragraph({ title, style, children }) {
-  return (
-    <div style={style}>
-      <h2>{title}</h2>
-      <p>{children}</p>
-    </div>
-  );
-}
-
-
-
-
-
-
-export async function getStaticProps() {
-  const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/inoratorio?q=motoristico'
-  )
-  const data = await res.json()
-
-  return {
-    props: { data },
-    revalidate: 3600, // I dati vengono ricaricati al massimo una volta all'ora
-  }
-}
-
-let primo_anno = [
-  {
-    title: '',
-    description: 'Sicurezza',
-    immagineUrl: '/images/meccanico/sicurezza.png',
-  },
-  {
-    title: '',
-    description: 'Prime conoscenze della meccanica industriale',
-    immagineUrl: '/images/meccanico/primeconoscenze.png',
-  },
-  {
-    title: '',
-    description: "Spiegazione dell'utensileria di base",
-    immagineUrl: '/images/meccanico/utensileriadibase.png',
-  },
-  {
-    title: '',
-    description: 'Lettura di una tavola tecnica',
-    immagineUrl: '/images/meccanico/tabelle.png',
-  },
-  {
-    title: '',
-    description:
-      'Utilizzo di macchine tradizionali come tornio, fresa, trapano a colonna per lavorazioni base e saldatrice',
-    immagineUrl: '/images/meccanico/tornio.png',
-  },
-  {
-    title: '',
-    description: 'Realizzazione e lettura fasi di lavoro',
-    immagineUrl: '/images/meccanico/fasidilavoro.png',
-  },
-  {
-    title: '',
-    description:
-      'Utilizzo di strumenti di misura e precisione quali il calibro ventesimale',
-    immagineUrl: '/images/meccanico/calibro.png',
-  },
-  {
-    title: '',
-    description: 'Utilizzo minifresa CNC',
-    immagineUrl: '/images/meccanico/cnc.png',
-  },
-  {
-    title: '',
-    description: 'Lettura tolleranze',
-    immagineUrl: '/images/meccanico/tolleranze.png',
-  },
-]
-
-let secondo_anno = [
-  {
-    title: '',
-    description: 'Programmazione di macchine a Controllo Numerico (CNC)',
-    immagineUrl: '/images/meccanico/controll numerico cnc.jpg',
-  },
-  {
-    title: '',
-    description: 'Utilizzo tornio e fresa CNC per lavorazioni varie',
-    immagineUrl: '/images/meccanico/cnc.png',
-  },
-  {
-    title: '',
-    description: 'Disegno con AutoCAD',
-    immagineUrl: '/images/meccanico/disegno autocad.jpg',
-  },
-  {
-    title: '',
-    description:
-      'Realizzazione di varie tipologie di pezzi complicati per le lavorazioni',
-    immagineUrl: '/images/meccanico/pezzi complicati.jpg',
-  },
-  {
-    title: '',
-    description: 'Simulazione al PC per tornio CNC',
-    immagineUrl: '/images/meccanico/simualzione cnc.jpg',
-  },
-  {
-    title: '',
-    description: 'Uso del micrometro',
-    immagineUrl: '/images/meccanico/micrometro.jpg',
-  },
-  {
-    title: '',
-    description: 'Saldatura TIG-MIG-MAG',
-    immagineUrl: '/images/meccanico/saldatura.jpg',
-  },
-  {
-    title: '',
-    description: 'Realizzazione accoppiamenti',
-    immagineUrl: '/images/meccanico/accoppiamewnti.jpg',
-  },
-  {
-    title: '',
-    description: 'Utilizzo della stampante 3D a filo continuo',
-    immagineUrl: '/images/meccanico/stampa3d.jpg',
-  },
-  {
-    title: '',
-    description: 'Manutenzione alle macchine utensili tradizionali',
-    immagineUrl: '/images/meccanico/macchine tradizionali.jpg',
-  },
-  {
-    title: '',
-    description: 'Lubrificazione con olio refrigerante dei macchinari',
-    immagineUrl: '/images/meccanico/olio lubrificante.jpg',
-  },
-]
-
-let terzo_anno = [
-  {
-    title: '',
-    description: 'Utilizzo di Inventor per disegni 3D e messa in tavola',
-    immagineUrl: '/images/meccanico/3dmessaintavola.jpg',
-  },
-  {
-    title: '',
-    description: 'Utilizzo CAD-CAM',
-    immagineUrl: '/images/meccanico/cadmeccanico.jpg',
-  },
-  {
-    title: '',
-    description: 'Progettazione di pezzi meccanici',
-    immagineUrl: '/images/meccanico/progmec.png',
-  },
-  {
-    title: '',
-    description: 'Utilizzo tolleranze per pezzi di maggior precisione',
-    immagineUrl: '/images/meccanico/tolleranza.png',
-  },
-  {
-    title: '',
-    description: 'Prototipazione rapida con stampante 3D',
-    immagineUrl: '/images/meccanico/fsi-stampa-3d.png',
-  },
-]
-
-let quarto_anno = [
-  {
-    title: '',
-    description: 'Utilizzo Inventor per modellazione 3D',
-    immagineUrl: '/images/meccanico/inventormodellazione3d.jpg',
-  },
-  {
-    title: '',
-    description:
-      'Utilizzo software CAD-CAM per la gestione di macchine utensili',
-    immagineUrl: '/images/meccanico/cadcam2.png',
-  },
-  {
-    title: '',
-    description: 'CNC con utilizzo di utensili motorizzati',
-    immagineUrl: '/images/meccanico/macchine-cnc.jpg',
-  },
-  {
-    title: '',
-    description: 'Gestione cicli-fasi di lavoro',
-    immagineUrl: '/images/meccanico/1_meccanica.jpg',
-  },
-  {
-    title: '',
-    description: 'Sistemi di produzione',
-    immagineUrl: '/images/meccanico/software-mes-produzione-1024x640.jpg',
-  },
-  {
-    title: '',
-    description: 'Stampa 3D di complessivi meccanici',
-    immagineUrl:
-      '/images/meccanico/stampa3dmetallo.jpg.9948dab902dafe72fe3c04f7de37cd28.jpg',
-  },
-]
-
-let sponsor = [
-  'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
-  'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
-  'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
-  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
-  'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
-  'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
-  'https://www.comitec.it/img/logo.png?v=1.1',
-  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
-  'https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png',
-]
