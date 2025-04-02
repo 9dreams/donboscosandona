@@ -1,3 +1,4 @@
+import { Height } from '@mui/icons-material'
 import Footer from '/components/Footer'
 import NavBar from '/components/NavBar'
 
@@ -32,7 +33,7 @@ const socials = [
 ]
 
 let images = [
-  { title: '', imageUrl: 'https://www.soggiornodonbosco.it/img/ck/1e1d8514786de1acf318b387c6daa2c5c9449fe3.png w-300'  },
+  { title: '', imageUrl: '/images/soggiorno.png'   },
 ]
 
 export const footer = (
@@ -50,22 +51,17 @@ GRUPPI
 CARTA DEI SERVIZI
 PRIVACY POLICY
 "
-    title2='' 
-    description2=''
 
     socials={socials}
     images={images}
     menu={menuFooter}
     copyright='Copyright (C) 2023 9dreams Agency.'
-    title3='LA STRUTTURA
-LA CUCINA
-
-APPUNTAMENTI
-BABY CLUB
-
-Seguici su Facebook
-Seguici su Instagram'
-   
+       description2='+39 0421 299 158
+       info@soggiornodonbosco.it
+ 
+       via Selva Rosata, 81
+       30021 Caorle - Venezia
+       CIN IT027005B7FBR2IJIS'
   />
   
 )
