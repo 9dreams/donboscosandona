@@ -50,14 +50,22 @@ GRUPPI
 CARTA DEI SERVIZI
 PRIVACY POLICY
 "
-    title2='Social Feed'
+    title2='' 
+    description2=''
+
     socials={socials}
     images={images}
     menu={menuFooter}
     copyright='Copyright (C) 2023 9dreams Agency.'
-    title3=''
-    description2=''
+    title3='LA STRUTTURA
+LA CUCINA
 
+APPUNTAMENTI
+BABY CLUB
+
+Seguici su Facebook
+Seguici su Instagram'
+   
   />
   
 )
