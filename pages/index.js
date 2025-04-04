@@ -1,3 +1,4 @@
+ 
 import {
   Carousel,
   Certifications,
@@ -15,6 +16,10 @@ import {
   Elements,
   Credits,
   Test,
+  Banner5,
+
+
+
 } from '/components'
 
 // I punti di forza
@@ -175,6 +180,7 @@ let link_utili = [
 export default function Home({ data, movies, elementi }) {
   return (
     <Layout>
+      
       <Featured data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor.png' />
       <Products
@@ -197,7 +203,8 @@ export default function Home({ data, movies, elementi }) {
         md={4}
         aspectRatio='3 / 2'
         borderRadius='10px'
-      />
+      />  
+      <Banner5 />
       <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
       <Carousel slides={slides} />
       <Features
