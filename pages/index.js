@@ -1,3 +1,4 @@
+ 
 import {
   Carousel,
   Certifications,
@@ -16,6 +17,8 @@ import {
   Credits,
   Test,
 } from '/components'
+
+import Banner5 from '/cc/Banner5'
 
 // I punti di forza
 const features = [
@@ -184,8 +187,10 @@ let link_utili = [
 export default function Home({ data, movies, elementi }) {
   return (
     <Layout>
+      
       <Featured data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor.png' />
+      <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
@@ -206,8 +211,8 @@ export default function Home({ data, movies, elementi }) {
         md={4}
         aspectRatio='3 / 2'
         borderRadius='10px'
-      />
-      <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
+      />  
+      <Banner5 />
       <Carousel slides={slides} />
       <Features
         title='I nostri punti di forza'
