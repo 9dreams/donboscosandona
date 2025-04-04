@@ -33,6 +33,7 @@ const features = [
       'https://archive.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png',
     description:
       'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
+      url: '/progetto_educativo'
   },
   {
     title: 'Didattica attiva',
