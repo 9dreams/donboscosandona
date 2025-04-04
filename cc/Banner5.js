@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Layout from "./Layout";
+import Layout from "../components/Layout";
 import { Container } from "@mui/material";
 
 export default function Banner5() {

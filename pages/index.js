@@ -16,11 +16,9 @@ import {
   Elements,
   Credits,
   Test,
-  Banner5,
-
-
-
 } from '/components'
+
+import Banner5 from '/cc/Banner5'
 
 // I punti di forza
 const features = [
