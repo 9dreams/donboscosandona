@@ -22,12 +22,12 @@ export default function Pagina() {
           name="og:description"
           content="Momenti di preghiera e riflessione: per coltivare ogni giorno il nostro rapporto con Dio."
         />
-        <meta name="og:image" content="/images/preghiera.png" />
+        <meta name="og:image" content="/images/preghiera.webp" />
       </Head>
       <LandingHero
         opacity={0.2}
         title="Momenti di preghiera e riflessione"
-        imageUrl="/images/preghiera.png"
+        imageUrl="/images/preghiera.webp"
       />
       <Paragraph>
         <p>

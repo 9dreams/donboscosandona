@@ -34,7 +34,7 @@ export default function Home({ data }) {
           name='og:description'
           content="Il sito ufficiale della Proposta Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave (VE)"
         />
-        <meta name='og:image' content='/images/home.png' />
+        <meta name='og:image' content='/images/home.webp' />
       </Head>
       <LandingHero
         opacity={0.2}
@@ -42,7 +42,7 @@ export default function Home({ data }) {
         description='Dal 13 Giugno al 12 Luglio 2024'
         buttonUrl='/tema'
         buttonText='Re-Creation: from law to love'
-        imageUrl='/images/home.png'
+        imageUrl='/images/home.webp'
       />
       <Paragraph
         title='Perché la vostra felicità sia piena!'
@@ -80,17 +80,17 @@ export default function Home({ data }) {
       </Paragraph>
       <Featured data={data} defaultTag='per' />
       <SwiperNews title='News' data={data} limit={12} defaultTag='per' />
-      <Features
+      <Team
         title="La #per dell'Oratorio don Bosco è..."
         description=''
-        features={features}
+        members={features}
         cardWidth={3}
       />
       <Table
         title='Orario della Giornata tipo'
-        backgroundImageUrl='/images/giornata.png'
-        backgroundColor='#F79F1F'
-        opacity={0.8}
+        backgroundImageUrl='/images/giornata.webp'
+        backgroundColor='#1b1188'
+        opacity={0.7}
         blur='0rem'
         color='white'
         rows={[
@@ -211,12 +211,12 @@ export default function Home({ data }) {
       />
       <Paragraph
         title='La Segreteria durante la PER'
-        backgroundColor='#6F1E51'
-        opacity={0.8}
+        backgroundColor='#2f4700'
+        opacity={0.7}
         blur='0rem'
         maxWidth={false}
         color='white'
-        backgroundImageUrl='/images/segreteria.png'
+        backgroundImageUrl='/images/segreteria.webp'
       >
         <p>
           La segreteria sarà aperta per le iscrizioni alle varie gite e per
@@ -293,26 +293,26 @@ export async function getStaticProps() {
 // I punti di forza
 const features = [
   {
-    title: 'Una proposta cristiana',
-    imageUrl: '/images/home/proposta_cristiana.png',
+    name: 'Una proposta cristiana',
+    imageUrl: '/images/home/praying.webp',
     description:
       "Nel cuore dell'estate la PER vuol essere un'occasione per riscoprire la bellezza della fede.",
   },
   {
-    title: 'In allegria',
-    imageUrl: '/images/home/divertendosi.png',
+    name: 'In allegria',
+    imageUrl: '/images/home/happy.webp',
     description:
       'La PER è piena di allegria vissuta in compagnia in ogni momento: giochi, attività, gite, serate...',
   },
   {
-    title: 'Mettendo a frutto la creatività',
-    imageUrl: '/images/home/creativa.png',
+    name: 'Mettendo a frutto la creatività',
+    imageUrl: '/images/home/creativo.webp',
     description:
       "Nei laboratori i talenti fioriscono: in te forse c'è uno sportivo, un artista, un creativo... scegli con cura al momento della preiscrizione.",
   },
   {
-    title: 'Coltivando le relazioni',
-    imageUrl: '/images/home/esplorando.png',
+    name: 'Coltivando le relazioni',
+    imageUrl: '/images/home/relazioni.webp',
     description:
       'Durante la PER non sarai mai da solo: educatori, animatori, altri ragazzi, ospiti... ognuno è un mondo da esplorare, devi solo buttarti!',
   },
@@ -396,7 +396,7 @@ let gite = [
     titolo: 'Porto Santa Margherita // Baia Blanca',
     descrizione:
       'Lunedì 24 Giugno con i ragazzi di quinta elementare e prima media / Venerdì 28 giugno con i ragazzi di seconda e terza media / Lunedì 1 Luglio con i ragazzi di terza e quarta elementare',
-    immagine: '/images/gite/mare.png',
+    immagine: '/images/gite/mare.webp',
     colore: '#FFC312',
     colore2: 'transparent',
     opacity: 1,
@@ -406,7 +406,7 @@ let gite = [
     titolo: 'Noale // Aquaestate',
     descrizione:
       'Giovedì 20 Giugno / Martedì 9 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
-    immagine: '/images/gite/noale.png',
+    immagine: '/images/gite/noale.webp',
     colore: '#0097e6',
     colore2: 'transparent',
     opacity: 0.8,
@@ -416,7 +416,7 @@ let gite = [
     titolo: 'Escursione in montagna',
     descrizione:
       'Martedì 27 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
-    immagine: '/images/gite/montagna.png',
+    immagine: '/images/gite/montagna.webp',
     colore: '#009432',
     colore2: 'transparent',
     opacity: 0.8,
@@ -426,7 +426,7 @@ let gite = [
     titolo: 'Movieland // Caneva World',
     descrizione:
       'Martedì 2 Luglio / La Proposta Estate 2024 si immerge nei paesaggi del lago di Garda per una giornata tra giostre e acqua!',
-    immagine: '/images/gite/movieland.png',
+    immagine: '/images/gite/movieland.webp',
     colore: '#FC427B',
     colore2: 'transparent',
     opacity: 0.8,
@@ -460,22 +460,22 @@ let members = [
 let in_evidenza = [
   {
     title: 'Iscrizioni',
-    immagineUrl: '/images/_iscrizioni.png',
+    immagineUrl: '/images/iscrizioni.webp',
     url: '/iscrizioni',
   },
   {
     title: 'Calendario',
-    immagineUrl: '/images/_calendario.png',
+    immagineUrl: '/images/calendario.webp',
     url: '/calendario',
   },
   {
     title: 'Tema formativo',
-    immagineUrl: '/images/_tema.png',
+    immagineUrl: '/images/tema.webp',
     url: '/tema',
   },
   {
     title: 'Pomeriggi',
-    immagineUrl: '/images/_pomeriggi.png',
+    immagineUrl: '/images/pomeriggi.webp',
     url: '/pomeriggi',
   },
 ]
@@ -483,22 +483,22 @@ let in_evidenza = [
 let laboratori = [
   {
     title: 'Espressivi',
-    immagineUrl: '/images/_espressivi.png',
+    immagineUrl: '/images/espressivi.webp',
     url: '/laboratori_espressivi',
   },
   {
     title: 'Sportivi',
-    immagineUrl: '/images/_sportivi.png',
+    immagineUrl: '/images/sportivi.webp',
     url: '/laboratori_sportivi',
   },
   {
     title: 'Manuali',
-    immagineUrl: '/images/_manuali.png',
+    immagineUrl: '/images/manuali.webp',
     url: '/laboratori_manuali',
   },
   {
     title: 'Novità 2024',
-    immagineUrl: '/images/_novità.png',
+    immagineUrl: '/images/novità.webp',
     url: '/laboratori_new',
   },
 ]
@@ -506,32 +506,32 @@ let laboratori = [
 let altri_link = [
   {
     title: 'Regolamento',
-    immagineUrl: '/images/_regolamento.png',
+    immagineUrl: '/images/regolamento.webp',
     url: '/regolamento',
   },
   {
     title: 'Momenti di preghiera e riflessione',
-    immagineUrl: '/images/_preghiera.png',
+    immagineUrl: '/images/preghiera.webp',
     url: '/preghiera',
   },
   {
     title: 'Gruppo Special',
-    immagineUrl: '/images/_special.png',
+    immagineUrl: '/images/special.webp',
     url: '/special',
   },
   {
     title: 'Spazio animatori',
-    immagineUrl: '/images/_animatori.png',
+    immagineUrl: '/images/animatori.webp',
     url: '/animatori',
   },
   {
     title: 'Spazio genitori',
-    immagineUrl: '/images/_genitori.png',
+    immagineUrl: '/images/genitori.webp',
     url: '/genitori',
   },
   {
     title: "Scuola d'Estate? Sì grazie!",
-    immagineUrl: '/images/_dlc.png',
+    immagineUrl: '/images/dlc.png',
     url: '/dlc',
   },
 ]
@@ -570,39 +570,75 @@ const testimonials = [
 
 let serate_cinema = [
   {
-    title: 'ME CONTRO TE - OPERAZIONE SPIE',
-    category: 'Dal 1° Giugno',
+    title: 'MISSION IMPOSSIBLE - THE FINAL RECKONING',
+    category: 'Dal  Giugno',
     description:
       "L'armonia del Pianeta è minacciata dall'alleanza dei Malvagi: il Signor S., Perfidia, Viperiana e Serpe hanno convinto il mondo intero che Sofì e Luì sono terribili criminali e solo loro, i Malvagi, sono i buoni che possono salvare l'umanità dalla cattiveria dei Me Contro Te. Ma non tutto è perduto: Sofì e Luì insieme ai loro amici dovranno trovare un modo per riportare l'armonia nel mondo.",
     immagineUrl:
-      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d8cff7cf2935460e3218ca8486a8e06ccb8e32f9/Me%20contro%20te%205.jpg',
+      'https://image.tmdb.org/t/p/original//z53D72EAOxGRqdr7KXXWp9dJiDe.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'BAD BOYS: RIDE OR DIE',
-    category: 'Dal 13 Giugno',
+    title: 'DRAGON TRAINER',
+    category: 'Dal ...',
     description:
       "Tom Cruise torna ancora una volta a vestire i panni dell’intramontabile Ethan Hunt, specialista dello spionaggio ad altro rischio. Questa volta Ethan insieme alla sua squadra dell'IMF saranno alle prese con la sfida più pericolosa mai affrontata finora: il team dovrà riuscire a rintracciare e disinnescare una nuova e terribile arma, che si rivelerà essere una minaccia per l'intera umanità.",
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//nP6RliHjxsz4irTKsxe8FRhKZYl.jpg',
+      'https://image.tmdb.org/t/p/original/iLrqsG4tmqHEInjKIf6cpyQp30N.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'INSIDE OUT 2',
-    category: 'Dal 19 Giugno',
+    title: 'ELIO',
+    category: 'Dal .. Giugno',
     description:
       "Inside Out 2 racconta una nuova avventura in quella che è la testa dell'ormai adolescente Riley, che sta per iniziare il liceo e che è alle prese con una serie di nuove Emozioni. Gioia, Tristezza, Rabbia, Paura e Disgusto, che a detta di tutti gestiscono da tempo un'attività di successo, non sanno come comportarsi quando arriva Ansia, destinata a stravolgere tutto nel quartier generale e non solo...",
     immagineUrl:
-      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d2c7f8229d70787dbf0ce1443b1b96adcabc91f2/Inside%20Out%202.jpeg',
+      'https://image.tmdb.org/t/p/original//feUV7SEy9mrbp5dJUoiRoJy7u9x.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'CATTIVISSIMO ME 4',
-    category: 'Dal 21 Agosto',
+    title: 'F1',
+    category: 'Dal ... Agosto',
     description:
       'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//hoJDI4mkP2w9WK2po5aZx3YIcLP.jpg',
+      'https://image.tmdb.org/t/p/original//hfkVxu1tLhbS0FHcqleTdq0VRcn.jpg',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'JURASSIC WORLD - LA RINASCITA',
+    category: 'Dal ... Agosto',
+    description:
+      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+    immagineUrl:
+      'https://image.tmdb.org/t/p/original/gvWXhXuPbMviAJmBCcBX9L2pjLk.jpg',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'SUPERMAN',
+    category: 'Dal ... Agosto',
+    description:
+      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+    immagineUrl:
+      'https://image.tmdb.org/t/p/original//wPLysNDLffQLOVebZQCbXJEv6E6.jpg',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'I FANTASTICI 4 - GLI INIZI',
+    category: 'Dal ... Agosto',
+    description:
+      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+    immagineUrl:
+      'https://image.tmdb.org/t/p/original/d5XcniBY2LAlaTqvLOA1uVdytwW.jpg',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'TROPPO CATTIVI 2',
+    category: 'Dal ... Agosto',
+    description:
+      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+    immagineUrl:
+      'https://image.tmdb.org/t/p/original//3KE3teyf3d8m14Mrdz75w4KdNGr.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
 ]

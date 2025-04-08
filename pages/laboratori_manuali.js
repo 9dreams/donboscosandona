@@ -122,12 +122,12 @@ export default function Pagina() {
           name='og:title'
           content='Proposta Estate Ragazzi di San Donà di Piave'
         />
-        <meta name='og:image' content='/images/manuali.png' />
+        <meta name='og:image' content='/images/manuali.webp' />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Laboratori Manuali'
-        imageUrl='/images/manuali.png'
+        imageUrl='/images/manuali.webp'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>
         <ButtonGroup

@@ -44,12 +44,12 @@ export default function Pagina() {
           content='Proposta Estate Ragazzi di San Donà di Piave'
         />
         <meta name='og:description' content="Tutte le novità di quest'anno!" />
-        <meta name='og:image' content='/images/novità.png' />
+        <meta name='og:image' content='/images/novità.webp' />
       </Head>
       <LandingHero
         opacity={0.1}
         title='Novità 2024'
-        imageUrl='/images/novità.png'
+        imageUrl='/images/novità.webp'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>
         <ButtonGroup

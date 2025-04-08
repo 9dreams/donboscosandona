@@ -18,13 +18,13 @@ export default function Pagina() {
         />
         <meta
           name="og:image"
-          content="/images/animatori.png"
+          content="/images/animatori.webp"
         />
       </Head>
       <LandingHero
         opacity={0.2}
         title="Spazio animatori"
-        imageUrl="/images/animatori.png"
+        imageUrl="/images/animatori.webp"
       />
       <Paragraph title="Spazio animatori">
         Circa 200 ragazzi, dalla prima alla quarta superiore, che dopo le

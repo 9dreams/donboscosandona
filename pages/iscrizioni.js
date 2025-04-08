@@ -25,12 +25,12 @@ export default function Pagina() {
           name='og:description'
           content="Tutto quello che c'è da sapere per iscriversi alla Proposta Estate."
         />
-        <meta name='og:image' content='/images/iscrizioni.png' />
+        <meta name='og:image' content='/images/iscrizioni.webp' />
       </Head>
       <LandingHero
         opacity={0.3}
         title='Iscrizioni'
-        imageUrl='/images/iscrizioni.png'
+        imageUrl='/images/iscrizioni.webp'
       />
       <Paragraph subtitle='Anche quest’anno la preiscrizione è obbligatoria e si può fare direttamente da casa, tramite Internet!'>
       </Paragraph>

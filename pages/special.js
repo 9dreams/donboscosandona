@@ -22,12 +22,12 @@ export default function Pagina() {
           name="og:description"
           content="Gruppo Special: l'attività cucita su misura per i ragazzi di terza media!"
         />
-        <meta name="og:image" content="/images/special.png" />
+        <meta name="og:image" content="/images/special.webp" />
       </Head>
       <LandingHero
         opacity={0.2}
         title="Gruppo Special"
-        imageUrl="/images/special.png"
+        imageUrl="/images/special.webp"
       />
       <Paragraph>
         <p>

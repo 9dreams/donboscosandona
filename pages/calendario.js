@@ -23,12 +23,12 @@ export default function Pagina() {
           name='og:description'
           content='Il calendario dettagliato delle giornate e delle serate.'
         />
-        <meta name='og:image' content='/images/calendario.png' />
+        <meta name='og:image' content='/images/calendario.webp' />
       </Head>
       <LandingHero
         opacity={0.3}
         title='Calendario'
-        imageUrl='/images/calendario.png'
+        imageUrl='/images/calendario.webp'
       />
       <Calendar cardWidth={3} events={settimana0} />
       <Calendar title='Prima settimana' cardWidth={3} events={settimana1} />

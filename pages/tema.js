@@ -19,13 +19,13 @@ export default function Pagina() {
           name='og:description'
           content='Il tema della Proposta Estate Ragazzi.'
         />
-        <meta name='og:image' content='/images/tema.png' />
+        <meta name='og:image' content='/images/tema.webp' />
       </Head>
       <LandingHero
         opacity={0.3}
         title='Re-Creation'
         description='From law to love'
-        imageUrl='/images/tema.png'
+        imageUrl='/images/tema.webp'
       />
       <Paragraph title='Un’altra storia fantasy?'>
         <p>

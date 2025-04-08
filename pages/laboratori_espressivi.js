@@ -78,12 +78,12 @@ export default function Pagina() {
           name='og:description'
           content='Laboratori espressivi/musicali e preparazione della serata finale.'
         />
-        <meta name='og:image' content='/images/espressivi.png' />
+        <meta name='og:image' content='/images/espressivi.webp' />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Laboratori espressivi'
-        imageUrl='/images/espressivi.png'
+        imageUrl='/images/espressivi.webp'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>
         <ButtonGroup
