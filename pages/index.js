@@ -146,7 +146,7 @@ export default function Home({ data }) {
       />
       <Carousel slides={serate} height={90} />
       <Products
-        title='Il Cinema don Bosco compie 90 anni'
+        title='Serate cinema'
         description='Per tutta l’estate e fino al 3 settembre 2024 (90° anniversario della prima proiezione) gli iscritti alla PER24 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai presentarti alla cassa indossando la maglietta della PER24 e mostrando il codice che ogni settimana sarà inviato nella Community WhatsApp insieme alla programmazione del cinema!'
         cardWidth={3}
         products={serate_cinema}
@@ -570,73 +570,82 @@ const testimonials = [
 
 let serate_cinema = [
   {
-    title: 'MISSION IMPOSSIBLE - THE FINAL RECKONING',
-    category: 'Dal  Giugno',
+    title: 'LILO & STITCH',
+    category: '',
     description:
-      "L'armonia del Pianeta è minacciata dall'alleanza dei Malvagi: il Signor S., Perfidia, Viperiana e Serpe hanno convinto il mondo intero che Sofì e Luì sono terribili criminali e solo loro, i Malvagi, sono i buoni che possono salvare l'umanità dalla cattiveria dei Me Contro Te. Ma non tutto è perduto: Sofì e Luì insieme ai loro amici dovranno trovare un modo per riportare l'armonia nel mondo.",
+      "Una solitaria bambina hawaiana di nome Lilo, grazie all'aiuto di un fuggitivo alieno blu, riesce a riparare la sua famiglia, a cui credeva di dover dire addio per sempre...",
+    immagineUrl:
+      'https://image.tmdb.org/t/p/original/oyY4WANSpBwaBTTnN1qxWOsgmCy.jpg',
+    url: 'https://cinema.donboscosandona.it',
+  },
+  {
+    title: 'MISSION IMPOSSIBLE - THE FINAL RECKONING',
+    category: '',
+    description:
+      "Ethan e il suo team si trovano ad affrontare una nuova e pericolosa minaccia: devono rintracciare due chiavi che sbloccano un potente sistema di intelligenza artificiale, capace di causare disastri a livello mondiale, dai sabotaggi dei circuiti bancari internazionali al caos delle reti elettriche.",
     immagineUrl:
       'https://image.tmdb.org/t/p/original//z53D72EAOxGRqdr7KXXWp9dJiDe.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
     title: 'DRAGON TRAINER',
-    category: 'Dal ...',
+    category: '',
     description:
-      "Tom Cruise torna ancora una volta a vestire i panni dell’intramontabile Ethan Hunt, specialista dello spionaggio ad altro rischio. Questa volta Ethan insieme alla sua squadra dell'IMF saranno alle prese con la sfida più pericolosa mai affrontata finora: il team dovrà riuscire a rintracciare e disinnescare una nuova e terribile arma, che si rivelerà essere una minaccia per l'intera umanità.",
+      "Sulla selvaggia isola di Berk, dove vichinghi e draghi sono stati acerrimi nemici per generazioni, Hiccup è diverso dagli altri. Figlio geniale ma sottovalutato dal capo Stoick l'Immenso, Hiccup sfida secoli di tradizione stringendo un'insolita amiciza con Sdentato, un temibile drago Furia Buia...",
     immagineUrl:
       'https://image.tmdb.org/t/p/original/iLrqsG4tmqHEInjKIf6cpyQp30N.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
     title: 'ELIO',
-    category: 'Dal .. Giugno',
+    category: '',
     description:
-      "Inside Out 2 racconta una nuova avventura in quella che è la testa dell'ormai adolescente Riley, che sta per iniziare il liceo e che è alle prese con una serie di nuove Emozioni. Gioia, Tristezza, Rabbia, Paura e Disgusto, che a detta di tutti gestiscono da tempo un'attività di successo, non sanno come comportarsi quando arriva Ansia, destinata a stravolgere tutto nel quartier generale e non solo...",
+      "Elio è un bambino di undici anni con un carattere artistico, creativo e sognatore, ma ha difficoltà a integrarsi con gli altri. A causa di questo problema, il piccolo è sempre rinchiuso in casa. Nel frattempo sua madre Olga è impegnata nella direzione di un progetto militare top-secret ed è intenta a decodificare uno strano segnale giunto dallo spazio...",
     immagineUrl:
       'https://image.tmdb.org/t/p/original//feUV7SEy9mrbp5dJUoiRoJy7u9x.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
     title: 'F1',
-    category: 'Dal ... Agosto',
+    category: '',
     description:
-      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+      'La leggenda delle corse automobilistiche Sonny Hayes viene convinto a uscire dal ritiro per guidare un team di Formula 1 in difficoltà e fare da mentore a un giovane pilota promettente, mentre insegue un\'altra possibilità di gloria.',
     immagineUrl:
       'https://image.tmdb.org/t/p/original//hfkVxu1tLhbS0FHcqleTdq0VRcn.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
     title: 'JURASSIC WORLD - LA RINASCITA',
-    category: 'Dal ... Agosto',
+    category: '',
     description:
-      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+      'I dinosauri si stanno estinguendo poiché il mondo moderno è inospitale nei loro confronti e i sopravvissuti si sono rifugiati in una piccola regione dei tropici attorno all\'equatore. Ma a minacciarli interviene ancora una volta l\'essere umano, visto che un\'azienda farmaceutica spera di utilizzare il DNA di dinosauro per creare un nuovo farmaco salvavita...',
     immagineUrl:
       'https://image.tmdb.org/t/p/original/gvWXhXuPbMviAJmBCcBX9L2pjLk.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
     title: 'SUPERMAN',
-    category: 'Dal ... Agosto',
+    category: '',
     description:
-      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+      'Il film segna l\'inizio del nuovo DCU, ma non racconta una origin story sull\'Uomo d\'Acciaio. Si concentra su Superman e il suo equilibrio tra le origini kryptoniane e la sua parte umana.',
     immagineUrl:
       'https://image.tmdb.org/t/p/original//wPLysNDLffQLOVebZQCbXJEv6E6.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
     title: 'I FANTASTICI 4 - GLI INIZI',
-    category: 'Dal ... Agosto',
+    category: '',
     description:
-      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+      'Costretti a bilanciare il loro ruolo di eroi con la forza del loro legame familiare, i protagonisti devono difendere la Terra da una vorace divinità spaziale chiamata Galactus (Ralph Ineson) e dal suo enigmatico Araldo, Silver Surfer (Julia Garner). E se il piano di Galactus di divorare l\'intero pianeta e tutti i suoi abitanti non fosse già abbastanza terribile, la situazione diventa all’improvviso una questione molto personale...',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/d5XcniBY2LAlaTqvLOA1uVdytwW.jpg',
+      'https://image.tmdb.org/t/p/original/jatnqRPnxjg2Q6cFsAjmrBNhx9.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
     title: 'TROPPO CATTIVI 2',
-    category: 'Dal ... Agosto',
+    category: '',
     description:
-      'Gru e Lucy e le loro figlie - Margo, Edith e Agnes - accolgono un nuovo membro nella famiglia, Gru Jr., deciso a far disperare suo padre. Gru affronta un nuovo nemico, Maxime Le Mal e la fidanzata, la femme fatale Valentina, per cui la famiglia sarà costretta alla fuga.',
+      'Nel nuovo capitolo, i Troppo Cattivi, una banda di animali criminali, cercano di guadagnarsi fiducia e accettazione nella loro nuova vita da ""bravi ragazzi"". Tuttavia, vengono richiamati in azione per affrontare un\'ultima missione, guidati da una squadra criminale tutta al femminile.',
     immagineUrl:
       'https://image.tmdb.org/t/p/original//3KE3teyf3d8m14Mrdz75w4KdNGr.jpg',
     url: 'https://cinema.donboscosandona.it',
