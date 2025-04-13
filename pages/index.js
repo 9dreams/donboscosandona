@@ -636,7 +636,7 @@ let serate_cinema = [
     title: 'I FANTASTICI 4 - GLI INIZI',
     category: '',
     description:
-      'Costretti a bilanciare il loro ruolo di eroi con la forza del loro legame familiare, i protagonisti devono difendere la Terra da una vorace divinità spaziale chiamata Galactus (Ralph Ineson) e dal suo enigmatico Araldo, Silver Surfer (Julia Garner). E se il piano di Galactus di divorare l\'intero pianeta e tutti i suoi abitanti non fosse già abbastanza terribile, la situazione diventa all’improvviso una questione molto personale...',
+      'Costretti a bilanciare il loro ruolo di eroi con la forza del loro legame familiare, i protagonisti devono difendere la Terra da una vorace divinità spaziale chiamata Galactus e dal suo enigmatico araldo, Silver Surfer. E se il piano di Galactus di divorare l\'intero pianeta e tutti i suoi abitanti non fosse già abbastanza terribile, la situazione diventa all’improvviso una questione molto personale...',
     immagineUrl:
       'https://image.tmdb.org/t/p/original/jatnqRPnxjg2Q6cFsAjmrBNhx9.jpg',
     url: 'https://cinema.donboscosandona.it',
