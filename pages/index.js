@@ -59,7 +59,7 @@ export default function Home() {
         testoFax="Fax"
         testoEmail="E-Mail"
         testoSocial="Seguici"
-        logoUrl="/images/logo_navbar.png"
+        logoUrl="/images/logo_navbar_orizzontale.png"
       />
       <Hero
         immagineUrl="/images/hero/venice.jpg"
