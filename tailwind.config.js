@@ -6,7 +6,13 @@ module.exports = {
     "./cc/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+        mono: ["var(--font-roboto-mono)"],
+        onest: ["var(--font-onest)"],
+      },
+    },
   },
   plugins: [],
 };
