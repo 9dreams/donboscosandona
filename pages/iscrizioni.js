@@ -33,8 +33,8 @@ export default function Pagina() {
         imageUrl='/images/iscrizioni.webp'
       />
       <Paragraph>
-      <p>Le iscrizioni per i ragazzi/e che frequentano i gruppi dell’Oratorio (ADS, Dopo la Campanella, Scout San Donà 1, Banda) inizieranno lunedì 5   alle 16.00.
-Per tutti, LE ISCRIZIONI INIZIERANNO mercoledì 7 maggio alle ore 16.00.
+      <p><b>Le iscrizioni per i ragazzi/e che frequentano i gruppi dell’Oratorio (ADS, Dopo la Campanella, Scout San Donà 1, Banda) inizieranno lunedì 5   alle 16.00.<br />
+Per tutti, LE ISCRIZIONI INIZIERANNO mercoledì 7 maggio alle ore 16.00.</b>
 
         </p><br />
         <p>Le iscrizione sono previste da lunedì 5 maggio a venerdì 9 maggio dalle ore 16.00 alle 19.30.
@@ -95,7 +95,7 @@ Una volta fatto ciò si è conclusa la pre-iscrizione. <br />
 App o sito internet. Meglio installare l’app sul telefono in modo da ricevere notifiche e
 messaggi in tempo reale.
 
-        </p><br />
+        </p>
       </Paragraph>
       <Paragraph title="Pagamento">
 

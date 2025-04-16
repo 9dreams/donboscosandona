@@ -269,31 +269,31 @@ export default function Home({ data }) {
             17.30 - 18.15
           </b>
         </p>
-        <p>
+        <p><br />
           La segreteria rimarrà chiusa le mattine in cui ci saranno le gite ed
           il mercoledì pomeriggio.{' '}
         </p>
-        <p>
+        <p><br />
           <b>
             Per qualsiasi evenienza ed informazione potete mandare una mail
             all’indirizzo per@donboscosandona.it.
           </b>
         </p>
-        <p>
+        <p><br />
           Ricordiamo che l’iscrizione alle uscite deve avvenire{' '}
           <b>
             al massimo entro le ore 12.00 di due giorni precedenti all’uscita
           </b>{' '}
           (salvo eventuali altre indicazioni).
         </p>
-        <p>
+        <p><br />
           Le liste verranno esposte verso le 18.00 nella vigilia delle gite.
         </p>
-        <p>
+        <p><br />
           Per potervi servire meglio e più velocemente è importante venire in
           segreteria con i soldi giusti.
         </p>
-        <p>
+        <p><br />
           Non è necessaria la presenza del genitore per l’iscrizione alle gite.
         </p>
       </Paragraph>
