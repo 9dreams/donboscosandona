@@ -10,7 +10,7 @@ let products = [
     title: 'CANTO',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Passi ore nella doccia cantando a squarciagola davanti a un pubblico immaginario? Partecipa a questa attività, e il pubblico lo avrai davvero!',
+      '(Laboratorio per la serata finale) Passi ore nella doccia cantando a squarciagola davanti a un pubblico immaginario? Partecipa a questa attività, e il pubblico lo avrai davvero!',
     immagineUrl: '/images/laboratori/canto.jpeg',
   },
   {
@@ -22,7 +22,7 @@ let products = [
   },
   {
     title: 'DRAW UP',
-    category: '1ª ora medie / 2ª ora elementari',
+    category: '1ª ora elementari / 2ª ora medie',
     description:
       'Fai uscire l’artista che c’è in te! Realizza vere e proprie opere d’arte utilizzando le più diverse tecniche artistiche',
     immagineUrl: '/images/laboratori/drawup.jpeg',
@@ -39,7 +39,7 @@ let serata = [
   },
   {
     title: 'BALLO HIP-HOP',
-    category: '1ª ora elementari / 2ª ora medie',
+    category: '1ª ora medie / 2ª ora elementari',
     description: 'Disciplina di ballo che proviene dal movimento Hip Hop e ne conserva le caratteristiche culturali ed estetiche.',
     immagineUrl: '/images/laboratori/hiphop.webp',
   },

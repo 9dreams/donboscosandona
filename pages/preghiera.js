@@ -35,24 +35,23 @@ export default function Pagina() {
           tempo di qualità per prendersi cura di tutti gli aspetti della vita,
           compreso quello spirituale, prendendoci cura dell’amicizia tra di noi
           e con il Signore della nostra vita.
-        </p>
-        <p>
+          <br /></p>
+        <p><br />
           Tutti i giorni dalle 9.30 alle 10.00 appuntamento in chiesa o in
           teatro per iniziare la nostra giornata. Tra canti, preghiera e la
           nostra bellissima storia lanciamo l’impegno della giornata
-        </p>
-        <p>
+          <br /></p>
+        <p><br />
           Tutti i giorni, per chi vuole, alle 12:15 la preghiera dell’ora media
           in cappellina
+          <br /></p>
+        <p><br />
+        DOMENICA 15 GIUGNO - FESTA DI APERTURA CON TUTTE LE FAMIGLIE
+Ore 9.00 – S. Messa; a seguire, incontro in teatro coi genitori per alcune importanti comunicazioni. Nel frattempo, i ragazzi si ritroveranno con i loro animatori per giocare e fare festa coi gonfiabili.
+Sempre domenica mattina verranno distribuite le magliette della P.E.R. 25. 
         </p>
-        <p>
-          DOMENICA 16 GIUGNO - FESTA DI APERTURA CON TUTTE LE FAMIGLIE Ore 9.00
-          – S. Messa; a seguire, incontro in teatro coi genitori per alcune
-          importanti comunicazioni. Nel frattempo, i ragazzi si ritroveranno con
-          i loro animatori!
-        </p>
-        <p>
-          Venerdì 5 e Sabato 6 LUGLIO - PELLEGRINAGGIO
+        <p><br />
+        Venerdì 4 e Sabato 5 LUGLIO - PELLEGRINAGGIO
           <br />
           Il pellegrinaggio è un’esperienza fondamentale nel cammino della
           P.E.R.: dopo tanti doni ricevuti, è il momento di ringraziare, prima
@@ -60,15 +59,11 @@ export default function Pagina() {
           <br />
           IL PROGRAMMA dettagliato verrà dato durante la PER
         </p>
-        <p>
-          Un gruppo di ragazzi di terza media partirà a piedi nel pomeriggio di venerdì, passerà la
-          notte in sacco a pelo e materassini, ospitato presso la parrocchia di
-          Grassaga. Un secondo gruppo
-          partirà in bicicletta sabato mattina e raggiungerà il resto dei
-          pellegrini per l’ultima tappa e il pranzo al sacco. Tutti gli altri
-          (pigri, fratelli, genitori, nonni, zii e chi vuole…) sono attesi per
-          la S. Messa che sarà celebrata alle ore 11.00 al Santuario di Motta. …
-          E POI ANGURIA PER TUTTI!!!
+        <p><br />
+        Un gruppo di ragazzi di terza media partirà a piedi nel pomeriggio di venerdì 4, passerà la notte in sacco a pelo e materassini, ospitato presso una parrocchia lungo il tragitto. Un secondo gruppo partirà in bicicletta sabato mattina e raggiungerà il resto dei pellegrini per l’ultima tappa e il pranzo al sacco.
+ 
+ Tutti  gli altri (pigri, fratelli, genitori, nonni, zii e chi vuole…) sono attesi per la S. Messa che sarà celebrata alle ore 11.00 al Santuario di Motta … E POI ANGURIA PER TUTTI!!!
+ 
         </p>
       </Paragraph>
     </Layout>

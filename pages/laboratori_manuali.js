@@ -14,7 +14,7 @@ let products = [
   },
   {
     title: 'DECORAZIONI E FANTASIA',
-    category: '1ª ora medie / 2ª ora elementari',
+    category: '1ª ora elementari / 2ª ora medie',
     description: 'Decora ritagliando',
     immagineUrl: '/images/laboratori/decoupages.jpeg',
   },
@@ -27,7 +27,7 @@ let products = [
   },
   {
     title: 'CREAZIONI SU STOFFA',
-    category: '1ª ora medie / 2ª ora elementari',
+    category: '1ª ora elementari / 2ª ora medie',
     description: 'Riproduci su stoffa la tua creatività',
     immagineUrl: '/images/laboratori/stampa.jpeg',
   },
@@ -39,7 +39,7 @@ let products = [
   },
   {
     title: 'AQUILONI',
-    category: '1ª ora medie / 2ª ora elementari',
+    category: '1ª ora elementari / 2ª ora medie',
     description: 'L’attività che vi lascerà con il naso all’insù',
     immagineUrl: '/images/laboratori/aquiloni.jpeg',
   },
@@ -51,21 +51,21 @@ let products = [
   },
   {
     title: 'ECO ART',
-    category: '1ª ora medie / 2ª ora elementari',
+    category: '1ª ora elementari / 2ª ora medie',
     description: 'La creatività sostenibile',
     immagineUrl: '/images/laboratori/ecoart.jpeg',
   },
   {
     title: 'STRING ART',
-    category: '1ª ora elementari / 2ª ora elementari',
+    category: '1ª ora medie / 2ª ora elementari',
     description:
       'Cosa si può fare con una tavoletta di legno, dei chiodi e fili colorati? magnifiche opere d’arte',
     immagineUrl: '/images/laboratori/stringart.jpeg',
   },
   {
-    title: 'INFORMATICA AVANZATA',
+    title: 'INFORMATICA E VIDEOGIOCHI',
     category: '1ª ora medie / 2ª ora medie',
-    description: 'Migliora le tue skill tecnologiche',
+    description: 'Migliora le tue skill tecnologiche e divertiti',
     immagineUrl: '/images/laboratori/informatica2.jpeg',
   },
   {
@@ -75,14 +75,8 @@ let products = [
     immagineUrl: '/images/laboratori/giochi.jpeg',
   },
   {
-    title: 'POLLICE VERDE',
-    category: '1ª ora elementari / 2ª ora elementari',
-    description: 'Se il giardinaggio è la tua passione...',
-    immagineUrl: '/images/laboratori/polliceverde.jpeg',
-  },
-  {
     title: 'TUTTO BICI',
-    category: '1ª ora medie / 2ª ora elementari',
+    category: '1ª ora elementari / 2ª ora medie',
     description:
       'Un team di ciclo-meccanici pronti ad aggiustare qualsiasi guasto',
     immagineUrl: '/images/laboratori/tuttobici.jpeg',
@@ -91,11 +85,11 @@ let products = [
     title: "SCACCHI",
     description: "Impara a giocare a scacchi e sfida i tuio amici",
     immagineUrl: "/images/laboratori/scacchi.jpeg",
-    category: "1ªora medie / 2ªora elementari",
+    category: "1ªora elementari / 2ªora medie",
   },
   {
     title: "AGO&FILO",
-    description: "I bottoni e gli orli non saranno più un problema",
+    description: "Qui si che sanno metterci una pezza",
     immagineUrl: "/images/laboratori/sartoria.jpeg",
     category: "1ªora medie / 2ªora elementari",
   },
@@ -103,6 +97,12 @@ let products = [
     title: "TRAFORO",
     description: "L'intaglio del legno per dei lavori indimenticabili",
     immagineUrl: "/images/laboratori/traforo.jpeg",
+    category: "1ªora medie / 2ªora medie",
+  },
+  {
+    title: "SOPRAVVIVENZA",
+    description: "Porta a casa la pellaccia la prossima volta che gli animatori ti dimenticheranno in montagna",
+    immagineUrl: "/images/laboratori/survival.jpg",
     category: "1ªora medie / 2ªora medie",
   },
 ]

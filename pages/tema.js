@@ -23,28 +23,45 @@ export default function Pagina() {
       </Head>
       <LandingHero
         opacity={0.3}
-        title='Re-Creation'
-        description='From law to love'
+        title='SAVED TO SAVE'
+        description='Il tema della Proposta Estate Ragazzi 2025'
         imageUrl='/images/tema.webp'
       />
-      <Paragraph title='Un’altra storia fantasy?'>
+      <Paragraph>
         <p>
           <i>
-            Ma questa non è solo una storia come tante altre! Come no? Vuoi
-            dirmi che si può andare in altri mondi attraverso anelli o armadi!
-            Forse no, hai ragione! Ma forse il nostro mondo è più di ciò che
-            sembra!
+            “Cos’è questo simbolo sulla mia mano?”
+            <br />
+            “È il segno che sei un cavaliere di draghi!”
+            <br />
+            “Il tuo drago ti ha scelto, e ora avete un legame che non si può
+            spezzare! La vita dell’uno è legata a quella dell’altra.”
           </i>
         </p>
+        <br />
         <p>
-          Digory, Polly, Peter, Susan, Edmund, Lucy e chissà quanti altri
-          ragazzi come loro hanno delle storie incredibili da raccontare… Cosa
-          le accomuna? Il mondo di Narnia, la strega Jadis e Aslan. Chissà cosa
-          avranno a che vedere tutte queste cose??? Beh, non ci resta che venire
-          alla PER e scoprirlo!
+          Eragon è un ragazzo semplice, che vive con lo zio e il cugino. In
+          mezzo a giorni sempre uguali gli capita fra le mani, dal nulla, un
+          uovo, un uovo di drago. È qualcosa di inaspettato che capita nella
+          vita di Eragon e lui deve decidere cosa fare: sarà il cavaliere che
+          tanti sperano possa salvare Alagaësia o si arrenderà davanti a
+          Galbatorix e ad un futuro che sembra impossibile?
         </p>
-        <p>Il mondo di Narnia è un mondo fantastico, pieno di fauni, centauri, minotauri, animali che parlano, e per quanto code, corna e pellicce possano essere diverse da noi, poi i cuori e le menti sono gli stessi e devono sempre trovare una strada in mezzo alle complicate vicende che la vita li porta ad affrontare. Sarà il leone Aslan a vincere la battaglia o la perfida Strega Bianca?</p>
-        <p>La Proposta Estate 2024 vuole farci sognare ed ispirare attraverso i racconti delle Cronache di Narnia per riscoprire la bellezza di una vita piena di gioia!  </p>
+        <br />
+        <p>
+          In questa storia colma di tradimenti e di slanci di fiducia, la verità
+          molte volte sarà messa in discussione. Eragon sarà in grado di fare la
+          scelta giusta ed andare controcorrente? Una cosa è certa! Eragon non
+          sarà mai lasciato solo! Sarà salvato tante volte e tante volte salverà
+          altri; perché la vera forza sta nella speranza che un aiuto arrivi
+          sempre per chi combatte per il bene.
+        </p>
+        <br />
+        <p>
+          La Proposta Estate 2025 vuole farci sognare ed ispirare attraverso la
+          storia di Eragon, nel primo libro del ciclo dell’eredità per
+          riscoprire la forza che viene dalla speranza nel bene!
+        </p>
       </Paragraph>
     </Layout>
   )

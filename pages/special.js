@@ -44,7 +44,7 @@ export default function Pagina() {
 
         <p>
           Nell’iscrizione dovranno SCEGLIERE UN LABORATORIO PER LA PRIMA ORA, E
-          SEGNARSI NEL GRUPPO SPECIAL ALLA SECONDA ORA.
+          SEGNARSI NEL GRUPPO SPECIAL ALLA SECONDA ORA. (Alle volte può essere che il gruppo Special preveda non solo la seconda ora, ma anche la prima).
         </p>
 
         <p>

@@ -35,11 +35,11 @@ export default function Pagina() {
           gli animatori si “inventeranno” sempre qualcosa di simpatico e
           coinvolgente!!!
         </p>
-        <p>
+        <p><br />
           Ore 15.30: ci aspettano i super giochi a squadre che andranno ad
           assegnare parecchi punti per la classifica generale!
         </p>
-        <p>
+        <p><br />
           Quando saremo in oratorio ci sfideremo a:
           <li>
             <strong>Basket</strong>

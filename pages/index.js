@@ -15,7 +15,7 @@ import {
   Team,
   Maps,
   SwiperNews,
-  Credits
+  Credits,
 } from '/components'
 
 export default function Home({ data }) {
@@ -39,43 +39,68 @@ export default function Home({ data }) {
       <LandingHero
         opacity={0.2}
         title='Proposta Estate Ragazzi'
-        description='Dal 13 Giugno al 12 Luglio 2024'
+        description="Dal 13 Giugno all'11 Luglio 2025"
         buttonUrl='/tema'
-        buttonText='Re-Creation: from law to love'
+        buttonText='SAVED TO SAVE'
         imageUrl='/images/home.webp'
       />
       <Paragraph
-        title='Perché la vostra felicità sia piena!'
+        title='Salvato per salvare'
         subtitle='Saluto del Direttore, don Nicola Munari'
         avatarImageUrl='/images/home/nik.png'
         columnCount={2}
       >
         <p>
-          C’è un tempo per lavorare e un tempo per riposare, un tempo per
-          l’ansia e un tempo per la gioia, un tempo per la fatica e un tempo per
-          il relax….
+          Titolo interessante quello di questa Proposta Estate Ragazzi: “Salvato
+          per salvare”. Provo a mettermi nei panni di un genitore che leggerà
+          questo titolo. Un genitore cosa desidera salvare, rendere sicuro, dare
+          stabilità per la vita dei propri figli?
         </p>
         <p>
-          E’ la vita di ogni giorno, di ogni settimana e di ogni anno, dove si
-          alternano tempi segnati da situazioni diverse e anche opposte. Ma il
-          tempo è prezioso è la nostra vita che viene scandita dal tempo e il
-          tempo non deve diventare vuoto, perché vuota sarebbe la vita. Ecco il
-          perché della Proposta Estate Ragazzi, che da più di 40 anni segna
-          l’inizio delle vacanze.
+          <br />
+          Per molti, ma non per tutti, in questo periodo, sicuramente c’è la
+          necessità di salvare l’anno scolastico. Per la maggior parte è urgente
+          salvare le amicizie dei propri figli, perché siano sicure e
+          promettenti. Tutti sono preoccupati perché la salute fisica sia sempre
+          salva e salvaguardata e tutti sperano per loro un futuro sereno, senza
+          problemi economici e con una vita di successo. Mi chiedo se per
+          salvare, custodire, conservare, difendere i propri ragazzi basta avere
+          a cuore la vita fisica, la scuola, le amicizie e quant’altro.
         </p>
         <p>
-          Non è un’estate vuota, ma piena, significativa, entusiasmante. Anche
-          quest’anno attività, giochi, gite, personaggi e serate per tutti i
-          gusti, per dare pienezza ad un momento della vita, come quello delle
-          vacanze, che non deve essere sciupato.
+          <br />
+          Per i piccoli, per ogni genitore e per ogni persona, è essenziale
+          cercare e custodire un senso bello della vita, che dia significato ad
+          ogni giornata. Senza un motivo davvero forte per vivere è difficile
+          condurre un’esistenza bella e capace di superare i momenti di fatica,
+          l’ansia da prestazione, il fascino della violenta, il disorientamento
+          che quotidianamente insidia la vita di ciascuno.
         </p>
         <p>
-          A tutti i ragazzi, gli animatori, i genitori auguro di essere felici,
-          per la bellezza dell’esperienza che andremo a vivere assieme, per un
-          impegno che da gusto alle giornate, per la serenità che anima i volti
-          di chi vive questa esperienza con impegno. Non abbiate paura di
-          sudare, correre, saltare, giocare con grinta, perché la sana allegria
-          è la porta per la gioia vera e la vita significativa. Buona Estate!
+          <br />
+          La P.E.R. si propone di offrire ai Ragazzi, che ci vengono affidati,
+          un esempio di vita bella e buona, significativa e piena, spesa bene e
+          robusta di fronte alle fatiche della vita stessa. Come lo si vuol
+          fare? Mettendo accanto ai vostri figli persone adulte e giovani che
+          sanno spendersi per gli altri con gioia e gratuità.
+        </p>
+        <p>
+          <br />
+          Il Meglio della nostra proposta non sono le attività, le gite, i
+          tornei, o i punti delle squadre. Il meglio sta nelle persone
+          significative che sono la prova concreta che la vita può avere un
+          gusto, una forza e un orizzonte davvero grandi ma non per merito loro,
+          ma perché nella loro vita è presente Gesù.
+        </p>
+        <p>
+          <br />A tutti: genitori, educatori e ragazzi dico: “Non abbiamo paura
+          di credere che la nostra vita è custodita, salvaguardata, resa davvero
+          spettacolare dal Signore. Ecco il meglio, non solo dell’estate, ma di
+          tutta vita. Buona estate
+        </p>
+        <br />
+        <p>
+          <b>don Nicola</b>
         </p>
       </Paragraph>
       <Featured data={data} defaultTag='per' />
@@ -146,8 +171,8 @@ export default function Home({ data }) {
       />
       <Carousel slides={serate} height={90} />
       <Products
-        title='Serate cinema'
-        description='Per tutta l’estate e fino al 3 settembre 2024 (90° anniversario della prima proiezione) gli iscritti alla PER24 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai presentarti alla cassa indossando la maglietta della PER24 e mostrando il codice che ogni settimana sarà inviato nella Community WhatsApp insieme alla programmazione del cinema!'
+        title="Un'estate di emozioni al Cinema don Bosco"
+        description='Nei mesi di giugno, luglio e agosto gli iscritti alla PER25 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai iscriverti alla Community WhatsApp NEWS della P.E.R.25 che si trova nella sezione delle informazioni e News. Riceverai ogni settimana la programmazione insieme a un link che ti permetterà di acquistare online a prezzo scontato i biglietti per te e per i tuoi amici e familiari. Nota: non è possibile ricevere lo sconto alla cassa, ma solo acquistando i biglietti online.'
         cardWidth={3}
         products={serate_cinema}
         aspectRatio='1 / 1.5'
@@ -164,7 +189,7 @@ export default function Home({ data }) {
           appuntamenti importanti.
           <br />
           Animatori, ragazzi e genitori potranno così essere sempre connessi e
-          raccontare la propria esperienza usando gli hashtag #PER24{' '}
+          raccontare la propria esperienza usando gli hashtag #PER25{' '}
         </p>
         <p>
           Seguiteci su
@@ -192,7 +217,7 @@ export default function Home({ data }) {
             target='_blank'
             color='success'
             variant='contained'
-            href='https://chat.whatsapp.com/LksHvahrse46fs6PmGR6lb'
+            href='https://chat.whatsapp.com/F0B4dSu6LXYEEKnJYo6dUd'
           >
             ISCRIVITI ALLE NEWS SU WHATSAPP
           </Button>
@@ -210,7 +235,7 @@ export default function Home({ data }) {
         aspectRatio='1 / 1'
       />
       <Paragraph
-        title='La Segreteria durante la PER'
+        title='La Segreteria della PER'
         backgroundColor='#2f4700'
         opacity={0.7}
         blur='0rem'
@@ -219,8 +244,18 @@ export default function Home({ data }) {
         backgroundImageUrl='/images/segreteria.webp'
       >
         <p>
+          In segreteria, negli orari indicati, troverete sempre qualcuno pronto
+          a dare notizie su ciò che sta avvenendo o avverrà durante la P.E.R.
+          Ogni settimana sarete raggiunti dagli avvisi che verranno mandati per
+          comunicare orari, cambi di programma o l’andamento stesso della
+          P.E.R.. Queste comunicazioni avverranno per mail oppure attraverso la
+          notifica sull’app Squby.
+          <br />
+        </p>
+        <p>
           La segreteria sarà aperta per le iscrizioni alle varie gite e per
           qualsiasi informazione dal lunedì al venerdì nei seguenti orari:
+          <br />
         </p>
         <p align='center'>
           <b>
@@ -281,7 +316,9 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio?q=per')
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/inoratorio?q=per'
+  )
   const data = await res.json()
 
   return {
@@ -582,7 +619,7 @@ let serate_cinema = [
     title: 'MISSION IMPOSSIBLE - THE FINAL RECKONING',
     category: '',
     description:
-      "Ethan e il suo team si trovano ad affrontare una nuova e pericolosa minaccia: devono rintracciare due chiavi che sbloccano un potente sistema di intelligenza artificiale, capace di causare disastri a livello mondiale, dai sabotaggi dei circuiti bancari internazionali al caos delle reti elettriche.",
+      'Ethan e il suo team si trovano ad affrontare una nuova e pericolosa minaccia: devono rintracciare due chiavi che sbloccano un potente sistema di intelligenza artificiale, capace di causare disastri a livello mondiale, dai sabotaggi dei circuiti bancari internazionali al caos delle reti elettriche.',
     immagineUrl:
       'https://image.tmdb.org/t/p/original//z53D72EAOxGRqdr7KXXWp9dJiDe.jpg',
     url: 'https://cinema.donboscosandona.it',
@@ -600,7 +637,7 @@ let serate_cinema = [
     title: 'ELIO',
     category: '',
     description:
-      "Elio è un bambino di undici anni con un carattere artistico, creativo e sognatore, ma ha difficoltà a integrarsi con gli altri. A causa di questo problema, il piccolo è sempre rinchiuso in casa. Nel frattempo sua madre Olga è impegnata nella direzione di un progetto militare top-secret ed è intenta a decodificare uno strano segnale giunto dallo spazio...",
+      'Elio è un bambino di undici anni con un carattere artistico, creativo e sognatore, ma ha difficoltà a integrarsi con gli altri. A causa di questo problema, il piccolo è sempre rinchiuso in casa. Nel frattempo sua madre Olga è impegnata nella direzione di un progetto militare top-secret ed è intenta a decodificare uno strano segnale giunto dallo spazio...',
     immagineUrl:
       'https://image.tmdb.org/t/p/original//feUV7SEy9mrbp5dJUoiRoJy7u9x.jpg',
     url: 'https://cinema.donboscosandona.it',
@@ -609,7 +646,7 @@ let serate_cinema = [
     title: 'F1',
     category: '',
     description:
-      'La leggenda delle corse automobilistiche Sonny Hayes viene convinto a uscire dal ritiro per guidare un team di Formula 1 in difficoltà e fare da mentore a un giovane pilota promettente, mentre insegue un\'altra possibilità di gloria.',
+      "La leggenda delle corse automobilistiche Sonny Hayes viene convinto a uscire dal ritiro per guidare un team di Formula 1 in difficoltà e fare da mentore a un giovane pilota promettente, mentre insegue un'altra possibilità di gloria.",
     immagineUrl:
       'https://image.tmdb.org/t/p/original//hfkVxu1tLhbS0FHcqleTdq0VRcn.jpg',
     url: 'https://cinema.donboscosandona.it',
@@ -618,7 +655,7 @@ let serate_cinema = [
     title: 'JURASSIC WORLD - LA RINASCITA',
     category: '',
     description:
-      'I dinosauri si stanno estinguendo poiché il mondo moderno è inospitale nei loro confronti e i sopravvissuti si sono rifugiati in una piccola regione dei tropici attorno all\'equatore. Ma a minacciarli interviene ancora una volta l\'essere umano, visto che un\'azienda farmaceutica spera di utilizzare il DNA di dinosauro per creare un nuovo farmaco salvavita...',
+      "I dinosauri si stanno estinguendo poiché il mondo moderno è inospitale nei loro confronti e i sopravvissuti si sono rifugiati in una piccola regione dei tropici attorno all'equatore. Ma a minacciarli interviene ancora una volta l'essere umano, visto che un'azienda farmaceutica spera di utilizzare il DNA di dinosauro per creare un nuovo farmaco salvavita...",
     immagineUrl:
       'https://image.tmdb.org/t/p/original/gvWXhXuPbMviAJmBCcBX9L2pjLk.jpg',
     url: 'https://cinema.donboscosandona.it',
@@ -627,7 +664,7 @@ let serate_cinema = [
     title: 'SUPERMAN',
     category: '',
     description:
-      'Il film segna l\'inizio del nuovo DCU, ma non racconta una origin story sull\'Uomo d\'Acciaio. Si concentra su Superman e il suo equilibrio tra le origini kryptoniane e la sua parte umana.',
+      "Il film segna l'inizio del nuovo DCU, ma non racconta una origin story sull'Uomo d'Acciaio. Si concentra su Superman e il suo equilibrio tra le origini kryptoniane e la sua parte umana.",
     immagineUrl:
       'https://image.tmdb.org/t/p/original//wPLysNDLffQLOVebZQCbXJEv6E6.jpg',
     url: 'https://cinema.donboscosandona.it',
@@ -636,7 +673,7 @@ let serate_cinema = [
     title: 'I FANTASTICI 4 - GLI INIZI',
     category: '',
     description:
-      'Costretti a bilanciare il loro ruolo di eroi con la forza del loro legame familiare, i protagonisti devono difendere la Terra da una vorace divinità spaziale chiamata Galactus e dal suo enigmatico araldo, Silver Surfer. E se il piano di Galactus di divorare l\'intero pianeta e tutti i suoi abitanti non fosse già abbastanza terribile, la situazione diventa all’improvviso una questione molto personale...',
+      "Costretti a bilanciare il loro ruolo di eroi con la forza del loro legame familiare, i protagonisti devono difendere la Terra da una vorace divinità spaziale chiamata Galactus e dal suo enigmatico araldo, Silver Surfer. E se il piano di Galactus di divorare l'intero pianeta e tutti i suoi abitanti non fosse già abbastanza terribile, la situazione diventa all’improvviso una questione molto personale...",
     immagineUrl:
       'https://image.tmdb.org/t/p/original/jatnqRPnxjg2Q6cFsAjmrBNhx9.jpg',
     url: 'https://cinema.donboscosandona.it',

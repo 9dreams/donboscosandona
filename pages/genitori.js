@@ -31,25 +31,17 @@ export default function Pagina() {
       />
       <Paragraph
         title="Spazio genitori"
-        subtitle="L’intento dell’Oratorio Don Bosco è di essere alleati dei genitori nell’educazione dei ragazzi, non sostituti!
-        E visto che i nostri cortili non sono un parcheggio per i figli, è bello vedersi ogni tanto durante il periodo della P.E.R. per incontrarci, mettersi al servizio, scambiarci opinioni, ridere e scherzare…
-        "
       >
+        L’intento dell’Oratorio Don Bosco è di essere alleati dei genitori nell’educazione dei ragazzi, non sostituti!
+        E visto che i nostri cortili non sono un parcheggio per i figli, è bello vedersi ogni tanto durante il periodo della P.E.R. per incontrarci, mettersi al servizio, scambiarci opinioni, ridere e scherzare…
+        <br /><br />
         Ecco gli appuntamenti della P.E.R. dove i genitori sono stra-benvenuti:
-        <li>
-          Domenica 16 giugno, ore 9: Santa Messa di Apertura; a seguire incontro
-          per delle comunicazioni in teatro.
-        </li>
-        <li>Tutte le serate organizzate!</li>
-        <li>L’Oratorio è sempre aperto… venite a rinfrescarvi da noi!</li>
-        <li>
-          <strong>
-            Sabato 6 Luglio, ore 11.00: Santa Messa di Ringraziamento al
-            Santuario di Motta di Livenza... e alla fine ANGURIA PER TUTTI!!!
-          </strong>
-        </li>
-        Per coloro che volessero regalare un po’ del proprio tempo e dare una
-        mano a Don Bosco durante la P.E.R., non esitino a contattare don Nicola.
+        <br />-   	Domenica 15 giugno, ore 9: Santa Messa di Apertura; a seguire incontro per delle comunicazioni in teatro.
+        <br />-   	Tutte le serate organizzate!
+        <br />-   	l’Oratorio è sempre aperto… venite a rinfrescarvi da noi!
+        <br />-   	Sabato 5 Luglio, ore 11.00: Santa Messa di Ringraziamento al Santuario di Motta di Livenza... e alla fine ANGURIA PER TUTTI!!!
+        <br /><br />Per coloro che volessero regalare un po’ del proprio tempo e dare una
+        mano a Don Bosco durante la P.E.R., non esitino a contattare don Simone.
       </Paragraph>
     </Layout>
   );

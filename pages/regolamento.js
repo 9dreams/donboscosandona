@@ -33,26 +33,28 @@ export default function Pagina() {
         <p>
           La Proposta Estate Ragazzi è organizzata dall’Oratorio don Bosco
           presso la propria sede di San Donà di Piave nel periodo dal 13 giugno
-          al 12 luglio 2024. È un’attività di animazione educativa, ricreativa e
+          al 11 luglio 2025. È un’attività di animazione educativa, ricreativa e
           culturale che si ispira ad una visione cristiana della vita e al
           metodo educativo di don Bosco, aperta a chiunque ne condivida le
           finalità educative.
         </p>
+        <br />
         <p>
-          L’attività, per ragazzi/e dalla 3° classe elementare (anno 2015) alla
-          3ª classe delle scuole medie (anno 2010), si svolge dal lunedì al
-          venerdì, il mattino dalle h. 9:30 alle h. 12:00 ed il pomeriggio dalle
-          h. 15:00 alle h. 18:00, ad eccezione dei giorni programmati di uscita.
-          Nella giornata di mercoledì le attività si svolgeranno solo il
-          mattino, mentre il pomeriggio è riservato agli operatori ed animatori
-          per le opportune riunioni di coordinamento, programmazione e
-          formazione. All’inizio dell’attività viene fornito agli iscritti un
-          calendario dettagliato.
+          L’attività, per ragazzi/e dalla 3° classe elementare conclusa alla 3ª
+          classe delle scuole medie conclusa, si svolge dal lunedì al venerdì,
+          il mattino dalle h. 9:30 alle h. 12:00 ed il pomeriggio dalle h. 15:00
+          alle h. 18:00, ad eccezione dei giorni programmati di uscita. Nella
+          giornata di mercoledì le attività si svolgeranno solo il mattino,
+          mentre il pomeriggio è riservato agli operatori ed animatori per le
+          opportune riunioni di coordinamento, programmazione e formazione.
+          All’inizio dell’attività viene fornito agli iscritti un calendario
+          dettagliato.
         </p>
+        <br />
         <p>
-          Il direttore dell’Oratorio e responsabile dell’organizzazione,
-          coordinamento e gestione della Proposta Estate Ragazzi è don Nicola
-          Munari, il quale si avvale della collaborazione di corresponsabili,
+          L’incaricato dell’Oratorio e responsabile dell’organizzazione,
+          coordinamento e gestione della Proposta Estate Ragazzi è don Simone
+          Del Negro, il quale si avvale della collaborazione di corresponsabili,
           operatori (animatori/educatori con specifica e prolungata esperienza
           nel settore), animatori (volontari con più di un anno di esperienza)
           ed aiuto-animatori (volontari che hanno frequentato corsi di
@@ -60,16 +62,15 @@ export default function Pagina() {
           più o meno direttamente a contatto con i ragazzi, condividendo le
           modalità e finalità educative tipiche del carisma salesiano di Don
           Bosco. Gli animatori, aiuto-animatori e adulti volontari prestano la
-          loro opera in modo gratuito.
+          loro opera in modo gratuito. Tutti i collaboratori coinvolti
+          nell’attività partecipano, prima dell’avvio della stessa, a
+          particolari corsi di formazione ed aggiornamento sia interni alla
+          struttura che esterni. È estremamente gradita la collaborazione dei
+          genitori, sia nell’intento educativo esplicitamente assunto con
+          l’iscrizione del figlio, sia nella conduzione della Proposta Estate
+          Ragazzi attraverso impegni concreti.
         </p>
-        <p>
-          Tutti i collaboratori coinvolti nell’attività partecipano, prima
-          dell’avvio della stessa, a particolari corsi di formazione ed
-          aggiornamento sia interni alla struttura che esterni. È estremamente
-          gradita la collaborazione dei genitori, sia nell’intento educativo
-          esplicitamente assunto con l’iscrizione del figlio, sia nella
-          conduzione della Proposta Estate Ragazzi attraverso impegni concreti.
-        </p>
+        <br />
         <p>
           Trattandosi di un’attività ricreativa, si chiarisce che l’assistenza
           non ha capillarità e puntualità di tipo scolastico, per cui
@@ -77,6 +78,7 @@ export default function Pagina() {
           assenta senza avvisare, soprattutto quando vengono addotte motivazioni
           non verificabili (ad esempio: Mi ha detto la mamma ...).
         </p>
+        <br />
         <p>
           Gli iscritti alla Proposta Estate Ragazzi sono coperti da precisa
           garanzia assicurativa sia durante l’attività svolta in sede che
@@ -84,22 +86,33 @@ export default function Pagina() {
           responsabilità per coloro che non sono presenti, o liberamente si
           allontanano prima del termine delle attività organizzate.
         </p>
+        <br />
+        <p>
+          L’Oratorio don Bosco chiede di non portare, o di tenere in zaino,
+          smartphone, cuffie o altri dispositivi tecnologici che possano evitare
+          l’interazione tra i ragazzi. Per eventuali necessità la segreteria e
+          don Simone sono sempre disponibili.
+        </p>
+        <br />
         <p>
           L’Oratorio don Bosco declina ogni responsabilità nel caso si
           verifichino danneggiamenti e/o smarrimenti e/o furti di cellulari,
           effetti personali e denaro.
         </p>
+        <br />
         <p>
           Essendo l’Oratorio ambiente educativo e non una spiaggia pubblica è
           richiesto un abbigliamento adatto al luogo (non si può giocare a petto
           nudo, non ci si presenta con magliette troppo succinte, pantaloncini
           troppo corti, indumenti strappati, ecc...).
         </p>
+        <br />
         <p>
           La direzione si riserva la possibilità di allontanare (in qualsiasi
           momento) l’iscritto/a per motivi disciplinari, previa comunicazione ai
           genitori o a chi ne fa le veci.
         </p>
+        <br />
         <p>
           Per quanto non descritto o contemplato nel presente regolamento, si
           rimanda al comune buon senso, fermo restando l’insindacabilità del

@@ -22,7 +22,7 @@ let products = [
   },
   {
     title: 'BASKET',
-    category: '1ª ora elementari / 2ª ora medie',
+    category: '1ª ora medie / 2ª ora elementari',
     description:
       'Sport di squadra in cui due formazioni di cinque giocatori ciascuna si affrontano per segnare con un pallone nel canestro avversario, secondo una serie di regole prefissate e con un punteggio che varia dalla posizione di tiro.',
     immagineUrl: '/images/laboratori/basket.jpeg',
@@ -43,14 +43,14 @@ let products = [
   },
   {
     title: 'RUGBY',
-    category: '1ª ora elementari / 2ª ora medie',
+    category: '1ª ora medie / 2ª ora elementari',
     description:
       'Sport di squadra in cui il campo è diviso in due metà, con due zone di meta nei dieci metri finali di entrambe. Portando la palla nella zona di meta della squadra avversaria realizzi cinque punti e ottieni il diritto di tirare un calcio di trasformazione che ne vale due...',
     immagineUrl: '/images/laboratori/rugby.jpeg',
   },
   {
-    title: 'PALLAMANO',
-    category: '1ª ora elementari / 2ª ora medie',
+    title: 'PALLAMANO/HALO BALL/SMATCHBALL',
+    category: '1ª ora medie / 2ª ora elementari',
     description: 'La pallamano è uno sport di squadra, in cui scendono in campo 7 atleti per ogni squadra. Riprende caratteristiche del calcio e della pallacanestro.',
     immagineUrl: '/images/laboratori/pallamano.jpeg',
   },

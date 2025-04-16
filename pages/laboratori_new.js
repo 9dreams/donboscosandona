@@ -7,23 +7,30 @@ import { Container, ButtonGroup, Button } from '@mui/material/'
 
 let laboratori = [
   {
-    title: 'MEDIEVAL WAR',
+    title: 'LEGO',
     description:
-      'Indossa la tua armatura, sella il tuo destriero e... caricaaaaa!',
-    immagineUrl: '/images/laboratori/medieval.jpeg',
+      'Divertiti con i mattoncini più iconici del mondo! (solo elementari)',
+    immagineUrl: '/images/laboratori/lego.jpg',
     category: '1ªora elementari / 2ªora elementari',
   },
   {
-    title: 'SOPRAVVIVENZA',
-    description:
-      'E se un giorno le città fossero invase da zombie e tu ti trovassi da solo nella foresta?... Impara a sopravvivere ad ogni costo!!!',
-    immagineUrl: '/images/laboratori/survival.jpeg',
+    title: 'GIOIELLERIA',
+    description: 'Crea stupendi gioielli con pietre e metalli! ',
+    immagineUrl: '/images/laboratori/gioielleria.avif',
     category: '1ªora medie / 2ªora elementari',
   },
   {
-    title: 'GRANDI GIOCHI',
-    description: 'Ogni giorno un grande gioco in cui la strategia è tutto!',
-    immagineUrl: '/images/laboratori/grandi_giochi.jpeg',
+    title: 'MINI TENNIS',
+    description:
+      'Sinner spostati! Arriviamo noi (per partecipare sarà necessario venire con una propria racchetta da tennis)',
+    immagineUrl: '/images/laboratori/tennis.png',
+    category: '1ªora elementari / 2ªora elementari',
+  },
+  {
+    title: 'GIOCOLERIA',
+    description:
+      'Ritorna dopo un anno di pausa la scuola di giocoleria! (solo medie)',
+    immagineUrl: '/images/laboratori/giocoleria.jpg',
     category: '1ªora elementari / 2ªora elementari',
   },
 ]
@@ -71,6 +78,10 @@ export default function Pagina() {
         </ButtonGroup>
       </Container>
       <Products cardWidth={4} products={laboratori} cardHeigth={4} />
+      <Paragraph>
+        E per le terze medie??? Il GRUPPO SPECIAL, con attività e laboratori
+        pensati ad hoc!
+      </Paragraph>
     </Layout>
   )
 }
