@@ -360,7 +360,7 @@ let serate = [
   {
     titolo: "Oratorio's Got Talent",
     descrizione:
-      'Martedì 18 Giugno / Una serata dedicata ai talenti dei ragazzi della PER!!! Metti alla prova la tua creatività artistica, canora, di ballo, teatrale in una sfida mozzafiato!',
+      'Martedì 17 Giugno / Una serata dedicata ai talenti dei ragazzi della PER!!! Metti alla prova la tua creatività artistica, canora, di ballo, teatrale in una sfida mozzafiato!',
     immagine: '/images/serate/talent.jpeg',
     colore: '#182C61',
     colore2: 'transparent',
@@ -370,10 +370,10 @@ let serate = [
     buttonUrl: '',
   },
   {
-    titolo: 'Etienne e la sua crew',
-    descrizione: 'Venerdì 21 Giugno',
-    immagine: '/images/serate/etienne.jpeg',
-    colore: '#182C61',
+    titolo: 'I Meloni in concerto',
+    descrizione: 'Venerdì 20 Giugno / PER in concerto con i Meloni! Band eclettica che ci farà divertire e cantare assieme!',
+    immagine: '/images/serate/meloni2.jpg',
+    colore: '#611851',
     colore2: 'transparent',
     opacity: 1,
     blur: '0rem',
@@ -382,7 +382,7 @@ let serate = [
   },
   {
     titolo: 'Schiuma Party',
-    descrizione: 'Venerdì 28 Giugno',
+    descrizione: 'Venerdì 27 Giugno / Dj Tilio ci farà ballare a ritmo Dance mentre scende la neve!!!',
     immagine: '/images/serate/schiuma.jpeg',
     colore: '#182C61',
     colore2: 'transparent',
@@ -405,7 +405,7 @@ let serate = [
   {
     titolo: 'Serata delle squadre',
     descrizione:
-      'Giovedì 4 luglio / Sfilata, animazione da palco e gara di torte',
+      'Giovedì 3 luglio / Sfilata delle squadre, giochi con le famiglie e gara di torte',
     immagine: '/images/serate/sfilata.jpeg',
     colore: '#182C61',
     colore2: 'transparent',
@@ -417,7 +417,7 @@ let serate = [
   {
     titolo: 'Serata finale',
     descrizione:
-      'Venerdì 12 luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER24',
+      'Venerdì 11 luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER25',
     immagine: '/images/serate/finale.jpeg',
     colore: '#182C61',
     colore2: 'transparent',
@@ -432,17 +432,17 @@ let gite = [
   {
     titolo: 'Porto Santa Margherita // Baia Blanca',
     descrizione:
-      'Lunedì 24 Giugno con i ragazzi di quinta elementare e prima media / Venerdì 28 giugno con i ragazzi di seconda e terza media / Lunedì 1 Luglio con i ragazzi di terza e quarta elementare',
+      'Lunedì 23 Giugno con i ragazzi di prima e seconda media / Venerdì 30 giugno con i ragazzi di terza, quarta e quinta elementare',
     immagine: '/images/gite/mare.webp',
-    colore: '#FFC312',
+    colore: '#008c93',
     colore2: 'transparent',
-    opacity: 1,
+    opacity: 0.5,
     blur: '0rem',
   },
   {
     titolo: 'Noale // Aquaestate',
     descrizione:
-      'Giovedì 20 Giugno / Martedì 9 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
+      'Giovedì 19 Giugno / Martedì 8 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
     immagine: '/images/gite/noale.webp',
     colore: '#0097e6',
     colore2: 'transparent',
@@ -452,7 +452,7 @@ let gite = [
   {
     titolo: 'Escursione in montagna',
     descrizione:
-      'Martedì 27 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
+      'Martedì 24 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
     immagine: '/images/gite/montagna.webp',
     colore: '#009432',
     colore2: 'transparent',
@@ -460,9 +460,9 @@ let gite = [
     blur: '0rem',
   },
   {
-    titolo: 'Movieland // Caneva World',
+    titolo: 'Gardaland // Aquasplash',
     descrizione:
-      'Martedì 2 Luglio / La Proposta Estate 2024 si immerge nei paesaggi del lago di Garda per una giornata tra giostre e acqua!',
+      "Martedì 1 Luglio / La Proposta Estate 2025 si divide in due: le medie a Gardaland e le elementari all’Aquasplash di Lignano.",
     immagine: '/images/gite/movieland.webp',
     colore: '#FC427B',
     colore2: 'transparent',
