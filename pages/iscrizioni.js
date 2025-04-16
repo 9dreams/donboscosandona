@@ -44,7 +44,7 @@ Per tutti, LE ISCRIZIONI INIZIERANNO mercoledì 7 maggio alle ore 16.00.</b>
 
         </p>
       </Paragraph>
-      <Paragraph subtitle='Anche quest’anno la preiscrizione è obbligatoria e si può fare direttamente da casa, tramite Internet!'>
+      <Paragraph subtitle='Anche quest’anno la pre-iscrizione è obbligatoria e si può fare direttamente da casa, tramite Internet!'>
         
         <p>Anche quest’anno la PRE-ISCRIZIONE è obbligatoria e si può fare direttamente da casa, tramite Internet!
         </p><br />

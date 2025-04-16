@@ -61,7 +61,7 @@ let settimana0 = [
   {
     date: 'Domenica 15 Giugno',
     afternoon:
-      'Gonfiabili e gara torte',
+      'Santa Messa di apertura alle 9.00, riunione genitori e giochi, gonfiabili e gara di torte, pranzo al sacco',
     immagineUrl: '/images/calendario/gonfiabili.webp',
     bgColor: coloreDefault,
   },
@@ -152,7 +152,7 @@ let settimana3 = [
   {
     date: 'Lunedì 30 Giugno',
     morning: 'Cambio attività',
-    afternoon: 'Terza e quarta elementare al mare',
+    afternoon: 'Terza, quarta e quinta elementare al mare',
     immagineUrl: '/images/calendario/mare.jpg',
     bgColor: coloreMare,
   },
@@ -165,7 +165,7 @@ let settimana3 = [
   },
   {
     date: 'Mercoledì 2 Luglio',
-    morning: 'Confessioni elementari',
+    morning: 'Attività regolare',
     afternoon: 'Pit Stop animatori',
     evening: 'Tornei animatori',
     immagineUrl: '/images/calendario/animatori.jpeg',
@@ -173,7 +173,7 @@ let settimana3 = [
   },
   {
     date: 'Giovedì 3 Luglio',
-    morning: 'Confessioni prima e seconda media',
+    morning: 'Attività regolare',
     afternoon: 'Giochi al parco e tornei',
     evening: 'Sfilata a squadre, giochi a stand con i genitori e giochi di una volta',
     immagineUrl: '/images/serate/sfilata.jpeg',
@@ -181,7 +181,7 @@ let settimana3 = [
   },
   {
     date: 'Venerdì 4 Luglio',
-    morning: 'Confessioni terze medie',
+    morning: 'Attività regolare',
     afternoon: 'Presentazione delle associazioni',
     evening: 'Pellegrinaggio notturno terze medie',
     immagineUrl: '/images/calendario/regolare.jpeg',

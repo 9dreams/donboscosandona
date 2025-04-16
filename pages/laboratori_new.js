@@ -9,9 +9,9 @@ let laboratori = [
   {
     title: 'LEGO',
     description:
-      'Divertiti con i mattoncini più iconici del mondo! (solo elementari)',
+      'Divertiti con i mattoncini più iconici del mondo!',
     immagineUrl: '/images/laboratori/lego.jpg',
-    category: '1ªora elementari / 2ªora elementari',
+    category: '2ªora elementari',
   },
   {
     title: 'GIOIELLERIA',
@@ -22,7 +22,7 @@ let laboratori = [
   {
     title: 'MINI TENNIS',
     description:
-      'Sinner spostati! Arriviamo noi (per partecipare sarà necessario venire con una propria racchetta da tennis)',
+      'Sinner spostati! Arriviamo noi. IMPORTANTE: Per partecipare sarà necessario venire con una PROPRIA RACCHETTA DA TENNIS',
     immagineUrl: '/images/laboratori/tennis.png',
     category: '1ªora elementari / 2ªora elementari',
   },
@@ -55,7 +55,7 @@ export default function Pagina() {
       </Head>
       <LandingHero
         opacity={0.1}
-        title='Novità 2024'
+        title='Novità 2025'
         imageUrl='/images/novità.webp'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>

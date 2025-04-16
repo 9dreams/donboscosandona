@@ -117,7 +117,7 @@ export default function Pagina() {
           Per quanto non descritto o contemplato nel presente regolamento, si
           rimanda al comune buon senso, fermo restando l’insindacabilità del
           giudizio espresso dal direttore don Nicola Munari e dal coordinatore
-          della Proposta Estate Ragazzi, don Nicola Munari.
+          della Proposta Estate Ragazzi, don Simone Del Negro.
         </p>
       </Paragraph>
     </Layout>

@@ -73,7 +73,7 @@ export default function Home({ data }) {
           cercare e custodire un senso bello della vita, che dia significato ad
           ogni giornata. Senza un motivo davvero forte per vivere è difficile
           condurre un’esistenza bella e capace di superare i momenti di fatica,
-          l’ansia da prestazione, il fascino della violenta, il disorientamento
+          l’ansia da prestazione, il fascino della violenza, il disorientamento
           che quotidianamente insidia la vita di ciascuno.
         </p>
         <p>
@@ -86,7 +86,7 @@ export default function Home({ data }) {
         </p>
         <p>
           <br />
-          Il Meglio della nostra proposta non sono le attività, le gite, i
+          Il meglio della nostra proposta non sono le attività, le gite, i
           tornei, o i punti delle squadre. Il meglio sta nelle persone
           significative che sono la prova concreta che la vita può avere un
           gusto, una forza e un orizzonte davvero grandi ma non per merito loro,
