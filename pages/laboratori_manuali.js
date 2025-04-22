@@ -97,13 +97,13 @@ let products = [
     title: "TRAFORO",
     description: "L'intaglio del legno per dei lavori indimenticabili",
     immagineUrl: "/images/laboratori/traforo.jpeg",
-    category: "1ªora medie / 2ªora medie",
+    category: "1ªora medie / 2ªora elementari",
   },
   {
     title: "SOPRAVVIVENZA",
     description: "Porta a casa la pellaccia la prossima volta che gli animatori ti dimenticheranno in montagna",
     immagineUrl: "/images/laboratori/survival.jpg",
-    category: "1ªora medie / 2ªora medie",
+    category: "1ªora elementari / 2ªora medie",
   },
 ]
 

@@ -29,7 +29,7 @@ let products = [
   },
   {
     title: 'PALLAVOLO',
-    category: '1ª ora elementari / 2ª ora medie',
+    category: '1ª ora medie / 2ª ora elementari',
     description:
       'Sport di squadra il cui scopo è realizzare punti facendo sì che la palla tocchi terra nel campo avversario, separato da una rete alta più di 200 cm.',
     immagineUrl: '/images/laboratori/pallavolo.jpeg',

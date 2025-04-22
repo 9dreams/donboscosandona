@@ -31,7 +31,7 @@ let laboratori = [
     description:
       'Ritorna dopo un anno di pausa la scuola di giocoleria! (solo medie)',
     immagineUrl: '/images/laboratori/giocoleria.jpg',
-    category: '1ªora elementari / 2ªora elementari',
+    category: '1ªora medie',
   },
 ]
 
