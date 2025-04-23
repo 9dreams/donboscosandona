@@ -1,12 +1,11 @@
 "use client";
 
 import Navbar from "@/cc/Navbar";
-import Titolo from "@/cc/Titolo";
 import Privacy from "@/cc/Privacy";
 import Card from "@/cc/Card";
 import CardEscursione2 from "@/cc/CardEscursione2";
 import CardFeature from "@/cc/CardFeature";
-import cardServizi from "@/cc/cardServizi";
+import CardServizi from "@/cc/cardServizi";
 import Contatti from "@/cc/Contatti";
 import Layout from "@/components/Layout";
 import Featured from "@/components/Featured";
@@ -76,23 +75,15 @@ export default function Home({ data }) {
         logoUrl="/images/logo_navbar.png"
       />
 
-      <Titolo
-        titolo1="Escursioni Giornaliere"
-        titolo2="Nessuno ti mostrerà"
-        venezia="Venezia"
-        titolo3={
-          <>
-            Lasciati trasportare da una brezza marina mentre ammiri i palazzi
-            storici, i ponti iconici e i tesori nascosti della città. Vivi
-            l'emozione di vedere{" "}
-            <span className="text-[#99006e] font-semibold">Venezia</span> dal
-            suo elemento più autentico: l'acqua.
-          </>
-        }
-        stile="text-[#99006e] font-semibold"
-      />
-      <cardServizi
-        urlImmagine="/images/cardescursione/murano2.webp"
+      <div className=" items-center text-center justify-center">
+        {" "}
+        <h2 className="text-[30px]">I nostri servizi</h2>
+      </div>
+      {/* Grid 2 card per desktop con 4 righe */}
+      <div className="container items-center justify-center">      <div className="grid grid-cols-2 ">      
+        
+        <CardServizi
+        urlImmagine="/images/servizio_inclusive.png"
         altImmagine="Murano (26)"
         titolo="Escursione alle 3 Isole Murano - Burano - Torcello (Da Venezia)"
         luogoPartenza="Venezia"
@@ -108,17 +99,60 @@ export default function Home({ data }) {
         testoDa="Da"
         testoBottonePrenota="Prenota"
       />
-      <CardEscursione2
+      <CardServizi
+        urlImmagine="/images/servizio_inclusive.png"
+        altImmagine="Murano (26)"
         titolo="Escursione alle 3 Isole Murano - Burano - Torcello (Da Venezia)"
-        descrizione="La nostra prima tappa, Murano, scopri perché l'isola è rinomata per le sue vetrerie con una visita a una fabbrica di vetro locale. Guarda un abile artigiano durante una dimostrazione della lavorazione del vetro. Successivamente, avrai circa un'ora sull'isola per fare shopping in uno dei tanti negozi di vetro."
         luogoPartenza="Venezia"
         durata="6h 30min"
-        dataDisponibilita="1 aprile 2024"
+        dataInizio="1 aprile 2024"
+        dataFine="31 marzo 2026"
         prezzo="35,00"
-        immagine="/images/cardescursione/murano_venice.webp"
-        altImmagine="Murano (26)"
-        urlMappa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.935943006592!2d12.457208287171033!3d45.455997250089766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eb1c7a88973a5%3A0x568247814ad7d782!2sVia%20Treportina%2C%2030%2C%2030013%20Cavallino-Treporti%20VE%2C%20Italia!5e0!3m2!1sit!2sit!4v1652450992365!5m2!1sit!2sit"
+        testoPrenotaSubito="prenota subito, si esaurisce facilmente!"
+        testoPartenza="Partenza:"
+        testoDurata="Durata:"
+        testoDisponibileDal="Disponibile dal:"
+        testoAl="al"
+        testoDa="Da"
+        testoBottonePrenota="Prenota"
       />
+      <CardServizi
+        urlImmagine="/images/servizio_inclusive.png"
+        altImmagine="Murano (26)"
+        titolo="Escursione alle 3 Isole Murano - Burano - Torcello (Da Venezia)"
+        luogoPartenza="Venezia"
+        durata="6h 30min"
+        dataInizio="1 aprile 2024"
+        dataFine="31 marzo 2026"
+        prezzo="35,00"
+        testoPrenotaSubito="prenota subito, si esaurisce facilmente!"
+        testoPartenza="Partenza:"
+        testoDurata="Durata:"
+        testoDisponibileDal="Disponibile dal:"
+        testoAl="al"
+        testoDa="Da"
+        testoBottonePrenota="Prenota"
+      />
+      <CardServizi
+        urlImmagine="/images/servizio_inclusive.png"
+        altImmagine="Murano (26)"
+        titolo="Escursione alle 3 Isole Murano - Burano - Torcello (Da Venezia)"
+        luogoPartenza="Venezia"
+        durata="6h 30min"
+        dataInizio="1 aprile 2024"
+        dataFine="31 marzo 2026"
+        prezzo="35,00"
+        testoPrenotaSubito="prenota subito, si esaurisce facilmente!"
+        testoPartenza="Partenza:"
+        testoDurata="Durata:"
+        testoDisponibileDal="Disponibile dal:"
+        testoAl="al"
+        testoDa="Da"
+        testoBottonePrenota="Prenota"
+      /></div></div>
+
+
+
       <CardFeature
         prenotazione={{
           immagine: "/images/cardfeature/phone.png",
@@ -195,9 +229,9 @@ export default function Home({ data }) {
         onRifiuta={() => {}}
         onPreferenzeGDPR={() => {}}
         onCookiePolicy={() => {}}
-        bgColor="bg-[#0265A5]"
-        hoverBgColor="hover:bg-[#0265A5]"
-        textColor="text-[#0265A5]"
+        bgColor="bg-[#99006E]"
+        hoverBgColor="hover:bg-[#7a0058]"
+        textColor="text-[#99006E]"
       />
     </Layout>
   );

@@ -87,7 +87,7 @@ export default function Footer({
                     target="_blank"
                     className="hover:text-[#0265A5]"
                   >
-                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#99006E] hover:text-[#99006E]">
+                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#0265A5] hover:text-[#0265A5]">
                       {iconaFacebook}
                     </div>
                   </a>
@@ -96,7 +96,7 @@ export default function Footer({
                     target="_blank"
                     className="hover:text-[#0265A5]"
                   >
-                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#99006E] hover:text-[#99006E]">
+                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#0265A5] hover:text-[#0265A5]">
                       {iconaInstagram}
                     </div>
                   </a>
@@ -105,7 +105,7 @@ export default function Footer({
                     target="_blank"
                     className="hover:text-[#0265A5]"
                   >
-                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#99006E] hover:text-[#99006E]">
+                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#0265A5] hover:text-[#0265A5]">
                       {iconaTwitter}
                     </div>
                   </a>
