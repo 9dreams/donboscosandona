@@ -10,7 +10,7 @@ let products = [
     title: 'BASEBALL',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      "In collaborazione con il Baseball San Donà: Sport di squadra in cui due squadre composte da nove giocatori si affrontano per nove inning (o riprese) in ciascuno dei quali le due squadre si alternano nella fase di attacco e di difesa.",
+      "Il Baseball è uno sport per tutti, con la sua variante a 5. Si può giocare ovunque con una palla di gomma e ci sono tornei di squadre miste. La sua progressione didattica permette a persone con diverse abilità, di divertirsi e fare gioco di squadra. L'obiettivo: fai punti completando il giro delle basi dopo aver colpito la palla. In collaborazione con i Metros Venezia Baseball.",
     immagineUrl: '/images/laboratori/baseball.jpeg',
   },
   {
