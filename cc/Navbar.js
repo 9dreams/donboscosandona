@@ -11,7 +11,6 @@ export default function Navbar({
   testo5,
   testo6,
   testo7,
-  testo8,
   telefonoSuMisura,
   faxSuMisura,
   emailSuMisura,
@@ -48,7 +47,6 @@ export default function Navbar({
     { href: "/la-flotta", label: testo5 },
     { href: "/news", label: testo6 },
     { href: "/news", label: testo7 },
-    { href: "/news", label: testo8 },
   ];
 
   return (
@@ -60,7 +58,7 @@ export default function Navbar({
             <Image
               src={logoUrl}
               alt="Logo"
-              width={280}
+              width={120}
               height={70}
               className="transition-all"
             />

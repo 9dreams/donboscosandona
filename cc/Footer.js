@@ -85,7 +85,7 @@ export default function Footer({
                   <a
                     href="https://www.facebook.com/dogedivenezia/?fref=ts"
                     target="_blank"
-                    className="hover:text-[#99006E]"
+                    className="hover:text-[#0265A5]"
                   >
                     <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#99006E] hover:text-[#99006E]">
                       {iconaFacebook}
@@ -94,7 +94,7 @@ export default function Footer({
                   <a
                     href="https://www.instagram.com/ildogedivenezia_"
                     target="_blank"
-                    className="hover:text-[#99006E]"
+                    className="hover:text-[#0265A5]"
                   >
                     <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#99006E] hover:text-[#99006E]">
                       {iconaInstagram}
@@ -103,7 +103,7 @@ export default function Footer({
                   <a
                     href="https://x.com/DogeNavigazioni"
                     target="_blank"
-                    className="hover:text-[#99006E]"
+                    className="hover:text-[#0265A5]"
                   >
                     <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#99006E] hover:text-[#99006E]">
                       {iconaTwitter}
@@ -125,7 +125,7 @@ export default function Footer({
           </div>
         </div>
       </div>
-      <div className="bg-[#99006E] text-white text-xs md:text-sm">
+      <div className="bg-[#0265A5] text-white text-xs md:text-sm">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center text-center md:text-left py-6 lg:py-2 text-sm">
           <div className="flex">
             <div>

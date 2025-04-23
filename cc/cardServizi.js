@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function CardEscursione({
+export default function cardServizi({
   urlImmagine,
   altImmagine,
   titolo,
