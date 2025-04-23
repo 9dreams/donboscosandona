@@ -87,7 +87,7 @@ Una volta aperta la pagina per l’iscrizione al P.E.R. 25 Proposta Estate Ragaz
 indicazioni che sono riportate subito sotto al pulsante ISCRIVITI, in particolare tenete presente che a) che bisogna selezionare e iscriversi a ciascuna settimana<br />
 b) una volta iscritti alle settimane di P.E.R BISOGNA VENIRE IN ORATORIO A PERFEZIONARE L’ISCRIZIONE
 !!!ATTENZIONE!!! L’iscrizione fatta online e non perfezionata in Oratorio non è un’iscrizione valida!!! È NECESSARIO RICORDARSI DI VENIRE IN PRESENZA!!!<br />
-Per iscrivere i ragazzi/e al GREST selezionate dal menù a tendina sotto alla scritta “Seleziona data e orario disponibili” LA SETTIMANA CHE VI INTERESSA e quindi cliccate su “ISCRIVITI”. Questa operazione va ripetuta per ogni settimana. (qui ci sono le immagini da mettere!!! Le trovi su una cartella)<br />
+Per iscrivere i ragazzi/e al GREST selezionate dal menù a tendina sotto alla scritta “Seleziona data e orario disponibili” LA SETTIMANA CHE VI INTERESSA e quindi cliccate su “ISCRIVITI”. Questa operazione va ripetuta per ogni settimana.<br />
 Una volta fatto ciò si è conclusa la pre-iscrizione. <br />
 
         </p><br />
