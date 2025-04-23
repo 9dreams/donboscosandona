@@ -48,8 +48,8 @@ export default function Home({ data, movies }) {
       >
         <a href='https://per.donboscosandona.it'>
           <Image
-            src='/images/home/scopri_la_per.jpeg'
-            alt='Scopri la #per24'
+            src='/images/home/scopri_la_per.png'
+            alt='Scopri la #per'
             style={{
               width: '100%',
               display: 'block',
