@@ -112,7 +112,7 @@ export const footer = (
     }}
     mediacyLink={{
       children: "Matteo Buccudu",
-      href: "/",
+      href: "https://github.com/DevMatrix8080",
       target: "_blank",
       className: "transition-all hover:text-secondary-300",
     }}
