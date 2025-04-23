@@ -80,7 +80,7 @@ export default function Home({ data }) {
         <h2 className="text-[30px]">I nostri servizi</h2>
       </div>
       {/* Grid 2 card per desktop con 4 righe */}
-      <div className="container items-center justify-center">      <div className="grid grid-cols-2 ">      
+      <div className="container items-center justify-center">      <div className="grid grid-cols-2 items-center ">      
         
         <CardServizi
         urlImmagine="/images/servizio_inclusive.png"

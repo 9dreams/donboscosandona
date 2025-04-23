@@ -19,7 +19,6 @@ export default function cardServizi({
 }) {
   return (
 
-    <div className="container mx-auto px-6 lg:px-0 py-12 lg:py-24">
      
       <div className="max-w-[474px] mr-6">
         <div className="mb-6 rounded-[2rem] shadow overflow-hidden group">
@@ -66,6 +65,6 @@ export default function cardServizi({
           </div>
         </div>
       </div>
-    </div>
+  
   );
 }
