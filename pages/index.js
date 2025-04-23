@@ -199,7 +199,7 @@ let members = [
 
 let siti = [
   {
-    title: 'Proposta Estate 2024',
+    title: 'Proposta Estate',
     immagineUrl: '/images/home/per.png',
     url: 'https://per.donboscosandona.it',
   },
