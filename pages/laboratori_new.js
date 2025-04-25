@@ -24,7 +24,7 @@ let laboratori = [
     description:
       'Sinner spostati! Arriviamo noi. IMPORTANTE: Per partecipare sarà necessario venire con una PROPRIA RACCHETTA DA TENNIS',
     immagineUrl: '/images/laboratori/tennis.png',
-    category: '1ªora elementari / 2ªora elementari',
+    category: '1ªora elementari / 2ªora medie',
   },
   {
     title: 'GIOCOLERIA',
