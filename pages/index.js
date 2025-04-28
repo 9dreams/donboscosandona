@@ -75,83 +75,43 @@ export default function Home({ data }) {
         logoUrl="/images/logo_navbar.png"
       />
 
-      <div className=" items-center text-center justify-center">
-        {" "}
-        <h2 className="text-[30px]">I nostri servizi</h2>
+      <div className=" items-center justify-center">
+        <div className="flex flex-col items-center">
+          <h2 className="text-[30px] mb-8">I nostri servizi</h2>
+          <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <CardServizi
+              urlImmagine="/images/servizio_inclusive.png"
+              altImmagine="Murano (26)"
+              titolo="Servizio all-inclusive"
+              descrizioneservizio=""
+              testoBottonePrenota="SCOPRI DI PIU'"
+            />
+            <CardServizi
+              urlImmagine="/images/servizio_inclusive.png"
+              altImmagine="Murano (26)"
+              titolo="Bed & Breakfast"
+              descrizioneservizio=""
+              testoBottonePrenota="SCOPRI DI PIU'"
+            />
+            <CardServizi
+              urlImmagine="/images/servizio_inclusive.png"
+              altImmagine="Murano (26)"
+              titolo="Family Time"
+              descrizioneservizio="Regala alla tua famiglia un tempo di qualità per stare assieme in un ambiente di serenità e pace, dove costruire ricordi indimenticabili che cementano legami indissolubili...
+"
+              testoBottonePrenota="SCOPRI DI PIU'"
+            />
+            <CardServizi
+              urlImmagine="/images/servizio_inclusive.png"
+              altImmagine="Murano (26)"
+              titolo="Regala una vacanza ai tuoi nonni"
+              descrizioneservizio="Quest'anno regala ai tuoi nonni una vacanza al mare all'insegna del riposto e della tranquillità in un ambiente sicuro e protetto...
+"
+              testoBottonePrenota="SCOPRI DI PIU'"
+            />
+          </div>
+        </div>
       </div>
-      {/* Grid 2 card per desktop con 4 righe */}
-      <div className="container items-center justify-center">      <div className="grid grid-cols-2 items-center ">      
-        
-        <CardServizi
-        urlImmagine="/images/servizio_inclusive.png"
-        altImmagine="Murano (26)"
-        titolo="Escursione alle 3 Isole Murano - Burano - Torcello (Da Venezia)"
-        luogoPartenza="Venezia"
-        durata="6h 30min"
-        dataInizio="1 aprile 2024"
-        dataFine="31 marzo 2026"
-        prezzo="35,00"
-        testoPrenotaSubito="prenota subito, si esaurisce facilmente!"
-        testoPartenza="Partenza:"
-        testoDurata="Durata:"
-        testoDisponibileDal="Disponibile dal:"
-        testoAl="al"
-        testoDa="Da"
-        testoBottonePrenota="Prenota"
-      />
-      <CardServizi
-        urlImmagine="/images/servizio_inclusive.png"
-        altImmagine="Murano (26)"
-        titolo="Escursione alle 3 Isole Murano - Burano - Torcello (Da Venezia)"
-        luogoPartenza="Venezia"
-        durata="6h 30min"
-        dataInizio="1 aprile 2024"
-        dataFine="31 marzo 2026"
-        prezzo="35,00"
-        testoPrenotaSubito="prenota subito, si esaurisce facilmente!"
-        testoPartenza="Partenza:"
-        testoDurata="Durata:"
-        testoDisponibileDal="Disponibile dal:"
-        testoAl="al"
-        testoDa="Da"
-        testoBottonePrenota="Prenota"
-      />
-      <CardServizi
-        urlImmagine="/images/servizio_inclusive.png"
-        altImmagine="Murano (26)"
-        titolo="Escursione alle 3 Isole Murano - Burano - Torcello (Da Venezia)"
-        luogoPartenza="Venezia"
-        durata="6h 30min"
-        dataInizio="1 aprile 2024"
-        dataFine="31 marzo 2026"
-        prezzo="35,00"
-        testoPrenotaSubito="prenota subito, si esaurisce facilmente!"
-        testoPartenza="Partenza:"
-        testoDurata="Durata:"
-        testoDisponibileDal="Disponibile dal:"
-        testoAl="al"
-        testoDa="Da"
-        testoBottonePrenota="Prenota"
-      />
-      <CardServizi
-        urlImmagine="/images/servizio_inclusive.png"
-        altImmagine="Murano (26)"
-        titolo="Escursione alle 3 Isole Murano - Burano - Torcello (Da Venezia)"
-        luogoPartenza="Venezia"
-        durata="6h 30min"
-        dataInizio="1 aprile 2024"
-        dataFine="31 marzo 2026"
-        prezzo="35,00"
-        testoPrenotaSubito="prenota subito, si esaurisce facilmente!"
-        testoPartenza="Partenza:"
-        testoDurata="Durata:"
-        testoDisponibileDal="Disponibile dal:"
-        testoAl="al"
-        testoDa="Da"
-        testoBottonePrenota="Prenota"
-      /></div></div>
-
-
 
       <CardFeature
         prenotazione={{
