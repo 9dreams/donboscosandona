@@ -9,6 +9,7 @@ import CardServizi from "@/cc/cardServizi";
 import Contatti from "@/cc/Contatti";
 import Layout from "@/components/Layout";
 import Featured from "@/components/Featured";
+import ServiziDisposizioni from "@/cc/servizidisposizione"
 
 export async function getStaticProps() {
   let res = await fetch(
@@ -77,7 +78,6 @@ export default function Home({ data }) {
 
       <div className="items-center justify-center">
         <div className="flex flex-col items-center">
-
           <div className="items-center justify-center px-4 sm:px-8">
             <div className="flex flex-col items-center">
               <h2 className="text-[30px] sm:text-[40px] md:text-[50px] mb-8 text-center">
@@ -118,65 +118,7 @@ export default function Home({ data }) {
           </div>
         </div>
       </div>
-
-      <CardFeature
-        prenotazione={{
-          immagine: "/images/cardfeature/phone.png",
-          altImmagine: "Prenota",
-          titolo: "Prenotazione Istantanea",
-          descrizione:
-            "Prenota il tuo tour a Venezia in pochi click, senza attese.",
-        }}
-        prezzo={{
-          immagine: "/images/cardfeature/prezzo.png",
-          altImmagine: "Prezzo",
-          titolo: "Miglior Prezzo Garantito",
-          descrizione:
-            "Offriamo i migliori prezzi per un'esperienza indimenticabile.",
-        }}
-        pagamenti={{
-          immagine: "/images/cardfeature/pagamenti.png",
-          altImmagine: "Pagamenti",
-          titolo: "Pagamenti 100% Sicuri",
-          descrizione: "Goditi il tuo tour con pagamenti sicuri e affidabili.",
-        }}
-        territorio={{
-          immagine: "/images/cardfeature/venezianita.png",
-          altImmagine: "Venezianita",
-          titolo: "Del Territorio",
-          descrizione:
-            "Veneziani da generazioni: passione e amore per la città.",
-        }}
-      />
-
-      <Card
-        titoloGrassetto="Matrimonio"
-        titolo="Matrimonio a Bordo"
-        descrizione="Scopri il fascino di Venezia in un modo unico e romantico con il nostro servizio 'Matrimonio a Bordo'. Immagina di dire 'Sì' circondato dalle incantevoli acque della laguna veneziana."
-        testoBottone="Scopri di più"
-        immagineUrl="https://backoffice.dogedivenezia.it/assets/090ed0d7-6236-4c1c-813f-ececad5c79af.JPG"
-        immagineAlt="Matrimonio a bordo"
-        coloreSfondoBottone="bg-white"
-        coloreTestoBottone="text-[#99006E]"
-        coloreHoverSfondoBottone="hover:bg-[#99006E]"
-        coloreHoverTestoBottone="hover:text-white"
-      />
-
-      <Contatti
-        titoloSezione="Contattaci"
-        descrizione="Scrivici per problemi con la prenotazione o se vuoi chiederci maggiori informazioni riguardo i tour."
-        titoloContattiSuMisura="Contatti per prodotti su misura"
-        telefonoSuMisura="+39 041 530 23 63"
-        emailSuMisura="info@dogedivenezia.it"
-        titoloContattiIndividuali="Contatti Individuali / Escursioni"
-        telefonoIndividuali="+39 041 315 63 02"
-        emailIndividuali="api@dogedivenezia.it"
-        coordinateMappa="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.935943006592!2d12.457208287171033!3d45.455997250089766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eb1c7a88973a5%3A0x568247814ad7d782!2sVia%20Treportina%2C%2030%2C%2030013%20Cavallino-Treporti%20VE%2C%20Italia!5e0!3m2!1sit!2sit!4v1652450992365!5m2!1sit!2sit"
-        immagineTelefono="/images/contatti/phone1__.png"
-        immagineEmail="/images/contatti/contact_email.png"
-        altImmagineTelefono="Icona telefono"
-        altImmagineEmail="Icona email"
-      />
+      <ServiziDisposizioni></ServiziDisposizioni>
 
       <Privacy
         rifiutaButtonText="Rifiuta cookie non necessari ×"

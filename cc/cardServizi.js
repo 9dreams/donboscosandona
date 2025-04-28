@@ -32,12 +32,15 @@ export default function CardServizi({
           </div>
 
           <div className="flex items-center gap-6 mt-auto">
+            <a href="">
             <button
               type="button"
-              className="text-white bg-[#048BE6] font-bold rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+              className="text-white cursor-pointer bg-[#0265A5] font-bold rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
             >
               {testoBottonePrenota}
             </button>
+            </a>
+            
           </div>
         </div>
       </div>
