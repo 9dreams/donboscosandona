@@ -15,8 +15,8 @@ export default function CardServizi({
             src={urlImmagine}
             alt={altImmagine}
             layout="responsive"
-            width={500} // Imposta una larghezza fissa per l'immagine
-            height={300} // Imposta un'altezza fissa per mantenere la proporzione
+            width={500}
+            height={300}
             className="rounded-t-lg object-cover"
             sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 33vw"
           />
