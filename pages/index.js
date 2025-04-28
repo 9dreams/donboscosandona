@@ -75,40 +75,46 @@ export default function Home({ data }) {
         logoUrl="/images/logo_navbar.png"
       />
 
-      <div className=" items-center justify-center">
+      <div className="items-center justify-center">
         <div className="flex flex-col items-center">
-          <h2 className="text-[30px] mb-8">I nostri servizi</h2>
-          <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <CardServizi
-              urlImmagine="/images/servizio_inclusive.png"
-              altImmagine="Murano (26)"
-              titolo="Servizio all-inclusive"
-              descrizioneservizio=""
-              testoBottonePrenota="SCOPRI DI PIU'"
-            />
-            <CardServizi
-              urlImmagine="/images/servizio_inclusive.png"
-              altImmagine="Murano (26)"
-              titolo="Bed & Breakfast"
-              descrizioneservizio=""
-              testoBottonePrenota="SCOPRI DI PIU'"
-            />
-            <CardServizi
-              urlImmagine="/images/servizio_inclusive.png"
-              altImmagine="Murano (26)"
-              titolo="Family Time"
-              descrizioneservizio="Regala alla tua famiglia un tempo di qualità per stare assieme in un ambiente di serenità e pace, dove costruire ricordi indimenticabili che cementano legami indissolubili...
-"
-              testoBottonePrenota="SCOPRI DI PIU'"
-            />
-            <CardServizi
-              urlImmagine="/images/servizio_inclusive.png"
-              altImmagine="Murano (26)"
-              titolo="Regala una vacanza ai tuoi nonni"
-              descrizioneservizio="Quest'anno regala ai tuoi nonni una vacanza al mare all'insegna del riposto e della tranquillità in un ambiente sicuro e protetto...
-"
-              testoBottonePrenota="SCOPRI DI PIU'"
-            />
+
+          <div className="items-center justify-center px-4 sm:px-8">
+            <div className="flex flex-col items-center">
+              <h2 className="text-[30px] sm:text-[40px] md:text-[50px] mb-8 text-center">
+                I nostri servizi
+              </h2>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+                <CardServizi
+                  urlImmagine="/images/servizio_inclusive.png"
+                  altImmagine="Murano (26)"
+                  titolo="Servizio all-inclusive"
+                  descrizioneservizio="Il nostro servizio di ospitalità classica, della durata di una settimana, da sabato a sabato..."
+                  testoBottonePrenota="SCOPRI DI PIÙ"
+                />
+                <CardServizi
+                  urlImmagine="/images/cardservizi/bed_breakfast.png"
+                  altImmagine="Murano (26)"
+                  titolo="Bed & Breakfast"
+                  descrizioneservizio="Per tutti gli amanti delle gite fuori porta, la nostra formula che offre un soggiorno con camera e prima colazione a partire da 31 € a persona..."
+                  testoBottonePrenota="SCOPRI DI PIÙ"
+                />
+                <CardServizi
+                  urlImmagine="/images/cardservizi/family_time.jpg"
+                  altImmagine="Murano (26)"
+                  titolo="Family Time"
+                  descrizioneservizio="Regala alla tua famiglia un tempo di qualità per stare assieme in un ambiente di serenità e pace, dove costruire ricordi indimenticabili che cementano legami indissolubili..."
+                  testoBottonePrenota="SCOPRI DI PIÙ"
+                />
+                <CardServizi
+                  urlImmagine="/images/cardservizi/vacanza_nonni.png"
+                  altImmagine="Murano (26)"
+                  titolo="Regala una vacanza ai tuoi nonni"
+                  descrizioneservizio="Quest'anno regala ai tuoi nonni una vacanza al mare all'insegna del riposo e della tranquillità in un ambiente sicuro e protetto..."
+                  testoBottonePrenota="SCOPRI DI PIÙ"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
