@@ -8,7 +8,7 @@ export default function CardServizi({
   testoBottonePrenota,
 }) {
   return (
-    <div className="max-w-[500px] mr-6 flex flex-col min-h-[400px]">
+    <div className="max-w-[500px] mx-auto flex flex-col min-h-[400px]">
       <div className="mb-6 rounded-lg shadow-sm overflow-hidden group flex flex-col min-h-full">
         <div className="relative w-full h-48">
           <Image
