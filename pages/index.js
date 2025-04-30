@@ -12,7 +12,7 @@ import Featured from "@/components/Featured";
 import Servizidisposizione from "@/cc/servizidisposizione"
 
 
-const serviziData = [
+const servizi = [
   {
     imgSrc: "/images/servizidisposizione/spiaggia_privata.png",
     alt: "Spiaggia privata",
@@ -194,9 +194,9 @@ export default function Home({ data }) {
           </div>
         </div>
       </div>
-      <Servizidisposizione>
-        
-      </Servizidisposizione>
+      <Servizidisposizione
+        servizi={servizi}
+      />
 
       <Privacy
         rifiutaButtonText="Rifiuta cookie non necessari ×"
