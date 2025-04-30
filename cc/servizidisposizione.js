@@ -1,6 +1,6 @@
 import Image from "next/image";
-
-export default function ContainerImmagini() {
+import Servizio from "@/cc/servizio";
+export default function Servizidisposizione() {
   return (
     <div className="mt-20 max-w-4xl mx-auto">
       {/* Titolo sopra le icone */}
@@ -9,6 +9,7 @@ export default function ContainerImmagini() {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-12">
+        <Servizio immagine=""  titolo="" testo=""/>
         {/* Servizio 1 */}
         <div className="flex flex-col items-center">
           <div className="flex justify-center items-center w-full h-32">

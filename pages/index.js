@@ -9,7 +9,83 @@ import CardServizi from "@/cc/cardServizi";
 import Contatti from "@/cc/Contatti";
 import Layout from "@/components/Layout";
 import Featured from "@/components/Featured";
-import ServiziDisposizioni from "@/cc/servizidisposizione"
+import Servizidisposizione from "@/cc/servizidisposizione"
+
+
+const serviziData = [
+  {
+    imgSrc: "/images/servizidisposizione/spiaggia_privata.png",
+    alt: "Spiaggia privata",
+    titolo: "Spiaggia privata",
+    descrizione: "Una spiaggia riservata agli ospiti del soggiorno garantisce la tranquillità di cui la tua famiglia ha bisogno."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/ombrelloni_sdraio.png",
+    alt: "Ombrelloni e sdraio",
+    titolo: "Ombrelloni e sdraio",
+    descrizione: "Ogni camera ha in dotazione un ombrellone con sdraio e lettino."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/guardiaspiaggia.png",
+    alt: "Guardiaspiaggia",
+    titolo: "Guardiaspiaggia",
+    descrizione: "Nel periodo estivo la balneazione è sorvegliata in determinati orari."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/ascensore.png",
+    alt: "Ascensore",
+    titolo: "Ascensore",
+    descrizione: "I piani superiori sono raggiungibili da tutti grazie a un comodo ascensore."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/aria_condizionata.png",
+    alt: "Aria condizionata",
+    titolo: "Aria condizionata",
+    descrizione: "Il relax in camera è garantito da un moderno impianto di condizionamento."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/bagno_interno.png",
+    alt: "Bagno in camera",
+    titolo: "Bagno in camera",
+    descrizione: "Tutte le camere sono dotate di servizi igienici riservati e asciugacapelli."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/wifi.png",
+    alt: "Wi-Fi",
+    titolo: "Free Wi-Fi",
+    descrizione: "La navigazione dai tuoi dispositivi mobili è garantita da una moderna connessione in fibra ottica."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/cappella.png",
+    alt: "Cappella",
+    titolo: "Cappella",
+    descrizione: "Il Soggiorno è dotato di una cappella per chi desidera coltivare il suo rapporto con il Signore."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/bar.png",
+    alt: "Bar",
+    titolo: "Bar",
+    descrizione: "Nella comoda hall del Soggiorno è sempre a disposizione un servizio bar."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/sala_conferenze.png",
+    alt: "Sala conferenze",
+    titolo: "Sala conferenze",
+    descrizione: "I gruppi che prenotano la casa possono usufruire della sala conferenze per i loro momenti di studio."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/parcheggio_privato.png",
+    alt: "Parcheggio privato",
+    titolo: "Parcheggio privato",
+    descrizione: "All'interno dell'area recintata del Soggiorno un comodo parcheggio privato è riservato agli ospiti."
+  },
+  {
+    imgSrc: "/images/servizidisposizione/bandiera_blu.png",
+    alt: "Bandiera Blu",
+    titolo: "Bandiera Blu",
+    descrizione: "La Bandiera Blu è sinonimo di acque pulite, di spiagge ben curate e di attenzione per le esigenze ambientali."
+  },
+];
 
 export async function getStaticProps() {
   let res = await fetch(
@@ -118,7 +194,9 @@ export default function Home({ data }) {
           </div>
         </div>
       </div>
-      <ServiziDisposizioni></ServiziDisposizioni>
+      <Servizidisposizione>
+        
+      </Servizidisposizione>
 
       <Privacy
         rifiutaButtonText="Rifiuta cookie non necessari ×"
