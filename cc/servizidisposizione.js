@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ContainerImmagini() {
   return (
-    <div className="mb-200 max-w-[1200px] mx-auto grid grid-cols-4 gap-4">
+    <div className="mt-10 max-w-4xl mx-auto grid grid-cols-4 gap-4">
       {/* Servizio 1 */}
       <div className="flex flex-col items-center">
         <div className="relative w-full h-32">
@@ -10,8 +10,8 @@ export default function ContainerImmagini() {
             src="/images/servizidisposizione/spiaggia_privata.png"
             alt="Servizio 1"
             layout="fixed"
-            width={120}
-            height={120}
+            width={80}
+            height={80}
             className="rounded-full object-contain"
             sizes="(max-width: 768px) 120px, (max-width: 1200px) 120px, 120px"
           />
@@ -24,12 +24,12 @@ export default function ContainerImmagini() {
       <div className="flex flex-col items-center">
         <div className="relative w-full h-32">
           <Image
-                      src="/images/servizio3.png"
-                      alt="Servizio 3"
-                      layout="responsive"
-                      width={100}
-                      height={100}
-                      className="rounded-full object-contain"
+            src="/images/servizio3.png"
+            alt="Servizio 3"
+            layout="responsive"
+            width={100}
+            height={100}
+            className="rounded-full object-contain"
           />
         </div>
         <h2 className="text-xl mt-2 text-center">Titolo 2</h2>
@@ -40,12 +40,12 @@ export default function ContainerImmagini() {
       <div className="flex flex-col items-center">
         <div className="relative w-full h-32">
           <Image
-                      src="/images/servizio3.png"
-                      alt="Servizio 3"
-                      layout="responsive"
-                      width={100}
-                      height={100}
-                      className="rounded-full object-contain"
+            src="/images/servizio3.png"
+            alt="Servizio 3"
+            layout="responsive"
+            width={100}
+            height={100}
+            className="rounded-full object-contain"
           />
         </div>
         <h2 className="text-xl mt-2 text-center">Titolo 3</h2>
@@ -56,12 +56,12 @@ export default function ContainerImmagini() {
       <div className="flex flex-col items-center">
         <div className="relative w-full h-32">
           <Image
-                       src="/images/servizio3.png"
-                       alt="Servizio 3"
-                       layout="responsive"
-                       width={100}
-                       height={100}
-                       className="rounded-full object-contain"
+            src="/images/servizio3.png"
+            alt="Servizio 3"
+            layout="responsive"
+            width={100}
+            height={100}
+            className="rounded-full object-contain"
           />
         </div>
         <h2 className="text-xl mt-2 text-center">Titolo 4</h2>

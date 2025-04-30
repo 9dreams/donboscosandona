@@ -26,7 +26,7 @@ export default function Footer({
 }) {
   return (
     <>
-      <div className="bg-gray-200">
+      <div className="bg-gray-200 mt-40">
         <div className="container mx-auto py-12 text-center lg:text-left">
           <div className="w-full flex justify-center mt-4 mb-10">
             <a className="cursor-pointer">
