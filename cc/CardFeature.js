@@ -4,7 +4,7 @@ export default function CardFeature({
   prenotazione,
   prezzo,
   pagamenti,
-  territorio
+  territorio,
 }) {
   return (
     <div className="container mx-auto lg:py-24 py-12">
