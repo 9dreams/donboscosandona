@@ -215,9 +215,9 @@ export default function Home({ data }) {
         onRifiuta={() => {}}
         onPreferenzeGDPR={() => {}}
         onCookiePolicy={() => {}}
-        bgColor="bg-[#99006E]"
-        hoverBgColor="hover:bg-[#7a0058]"
-        textColor="text-[#99006E]"
+        bgColor="bg-[#0265A5]"
+        hoverBgColor="hover:bg-[#0265A5]"
+        textColor="text-[#0265A5]"
       />
     </Layout>
   );

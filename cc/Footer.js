@@ -1,148 +1,86 @@
-import Image from "next/image";
+import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
-export default function Footer({
-  logo,
-  titolo,
-  indirizzo,
-  contattiTitolo1,
-  telefono1,
-  fax1,
-  email1,
-  contattiTitolo2,
-  telefono2,
-  fax2,
-  email2,
-  seguiciTitolo,
-  pagamentoTitolo,
-  pagamentoImmagine,
-  infoAzienda,
-  privacyLink,
-  cookiePolicy,
-  sviluppatoDa,
-  mediacyLink,
-  iconaFacebook,
-  iconaInstagram,
-  iconaTwitter,
-}) {
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Footer() {
   return (
-    <>
-      <div className="bg-gray-200 mt-40">
-        <div className="container mx-auto py-12 text-center lg:text-left">
-          <div className="w-full flex justify-center mt-4 mb-10">
-            <a className="cursor-pointer">
-              <Image {...logo} />
-            </a>
+    <footer className="bg-[#0265A5] text-white pt-10 pb-4 w-full">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-y-8 gap-x-12 px-4 sm:px-0">
+          {/* Colonna 1 - Chi siamo */}
+          <div className="text-center md:text-left">
+            <h3 className="text-white text-lg sm:text-base font-bold mb-4">CHI SIAMO</h3>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li><Link href="/chi-siamo" className="hover:text-gray-200 transition-colors">ABOUT US</Link></li>
+              <li><Link href="/bed-breakfast" className="hover:text-gray-200 transition-colors">BED & BREAKFAST</Link></li>
+              <li><Link href="/gruppi" className="hover:text-gray-200 transition-colors">GRUPPI</Link></li>
+            </ul>
           </div>
-          <div className="grid grid-cols-1 xl:grid-cols-5 gap-6">
-            <div className="flex flex-col gap-6">
-              <div>
-                <div {...titolo} />
-                <div {...indirizzo} />
-              </div>
+
+          {/* Colonna 2 - La struttura */}
+          <div className="text-center md:text-left">
+            <h3 className="text-white text-lg sm:text-base font-bold mb-4">LA STRUTTURA</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/la-cucina" className="hover:text-gray-200 transition-colors">LA CUCINA</Link></li>
+            </ul>
+            
+            <h3 className="text-white text-lg sm:text-base font-bold mt-6 mb-4">APPUNTAMENTI</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/baby-club" className="hover:text-gray-200 transition-colors">BABY CLUB</Link></li>
+            </ul>
+          </div>
+
+          {/* Colonna 3 - Social e contatti */}
+          <div className="text-center md:text-left">
+            <h3 className="text-white text-lg sm:text-base font-bold mb-4">SEGUICI SU</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="https://www.facebook.com" className="hover:text-gray-200 transition-colors flex items-center">
+                <span className="mr-2">Facebook</span>
+              </Link></li>
+              <li><Link href="https://www.instagram.com" className="hover:text-gray-200 transition-colors flex items-center">
+                <span className="mr-2">Instagram</span>
+              </Link></li>
+            </ul>
+            
+            <div className="mt-6">
+              <p className="text-sm font-medium">+39 0421 299 158</p>
+              <p className="text-sm font-medium">info@soggiornomarinobosco.it</p>
             </div>
-            <div className="flex flex-col gap-6">
-              <div>
-                <div {...contattiTitolo1} />
-                <div className="text-base text-[#252525]">
-                  Tel:
-                  <a {...telefono1} />
-                  <br />
-                </div>
-                <div className="text-base text-[#252525]">
-                  Fax:
-                  <a {...fax1} />
-                  <br />
-                </div>
-                <div className="text-base text-[#252525]">
-                  E-Mail:
-                  <a {...email1} />
-                </div>
-              </div>
+          </div>
+
+          {/* Colonna 4 - Logo e indirizzo */}
+          <div className="flex flex-col items-center md:items-start">
+            <div className="mb-4 max-w-[160px] sm:max-w-[180px]">
+              <Image 
+                src="/images/logo-soggiorno-marino.png" 
+                alt="Soggiorno Marino Don Bosco" 
+                width={180} 
+                height={80}
+                className="object-contain bg-white p-2 rounded-lg"
+              />
             </div>
-            <div className="flex flex-col gap-6">
-              <div>
-                <div {...contattiTitolo2} />
-                <div className="text-base text-[#252525]">
-                  Tel:
-                  <a {...telefono2} />
-                  <br />
-                </div>
-                <div className="text-base text-[#252525]">
-                  Fax:
-                  <a {...fax2} />
-                  <br />
-                </div>
-                <div className="text-base text-[#252525]">
-                  E-Mail:
-                  <a {...email2} />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-6">
-              <div>
-                <div {...seguiciTitolo} />
-                <div className="flex gap-3 lg:justify-start justify-center mt-3">
-                  <a
-                    href="https://www.facebook.com/dogedivenezia/?fref=ts"
-                    target="_blank"
-                    className="hover:text-[#0265A5]"
-                  >
-                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#0265A5] hover:text-[#0265A5]">
-                      {iconaFacebook}
-                    </div>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/ildogedivenezia_"
-                    target="_blank"
-                    className="hover:text-[#0265A5]"
-                  >
-                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#0265A5] hover:text-[#0265A5]">
-                      {iconaInstagram}
-                    </div>
-                  </a>
-                  <a
-                    href="https://x.com/DogeNavigazioni"
-                    target="_blank"
-                    className="hover:text-[#0265A5]"
-                  >
-                    <div className="rounded-full flex items-center justify-center border border-dark w-10 h-10 hover:border-[#0265A5] hover:text-[#0265A5]">
-                      {iconaTwitter}
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col gap-6">
-              <div>
-                <div {...pagamentoTitolo} />
-                <div className="flex gap-3">
-                  <div className="relative h-20 w-full mt-4">
-                    <Image {...pagamentoImmagine} />
-                  </div>
-                </div>
-              </div>
+            <div className="text-xs sm:text-sm text-center md:text-left">
+              <p className="font-medium">via Selva Rosata, 61</p>
+              <p className="font-medium">30013 Cavallino - Venezia</p>
+              <p className="font-medium">C.F./P.IVA 03681180276</p>
             </div>
           </div>
         </div>
-      </div>
-      <div className="bg-[#0265A5] text-white text-xs md:text-sm">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center text-center md:text-left py-6 lg:py-2 text-sm">
-          <div className="flex">
-            <div>
-              {infoAzienda.children} <a {...privacyLink} /> &amp;{" "}
-              <span {...cookiePolicy} />
-            </div>
+
+        {/* Linea di separazione */}
+        <div className="border-t border-white/30 my-6"></div>
+
+        {/* Footer bottom */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-white/80">
+          <div>
+            Soggiorno Marino Don Bosco - via Selva Rosata, 61 - 30013 Cavallino - Venezia - VAT IT 03681180276
           </div>
-          <div className="text-center md:text-end py-3 md:py-0">
-            <div>
-              {sviluppatoDa.children}{" "}
-              <strong className="underline">
-                <a {...mediacyLink} />
-              </strong>
-            </div>
+          <div className="mt-4 md:mt-0 flex items-center">
+            <span>Developed and design by <Link href="#" className="hover:underline font-medium">Matteo Buccudu</Link></span>
           </div>
         </div>
       </div>
-    </>
+    </footer>
   );
 }
