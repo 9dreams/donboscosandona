@@ -154,7 +154,10 @@ export default function Footer({
           <div className="mt-4 md:mt-0 flex items-center">
             <span>
               {testoDeveloped}{" "}
-              <a href="#" className="hover:underline font-medium">
+              <a
+                href="https://github.com/DevMatrix8080"
+                className="hover:underline font-medium"
+              >
                 {nomeSviluppatore}
               </a>
             </span>
