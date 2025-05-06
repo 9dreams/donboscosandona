@@ -37,7 +37,7 @@ export default function Pagina() {
 Per tutti, LE ISCRIZIONI INIZIERANNO mercoledì 7 maggio alle ore 16.00.</b>
 
         </p><br />
-        <p>Le iscrizione sono previste da lunedì 5 maggio a venerdì 9 maggio dalle ore 16.00 alle 19.30.
+        <p>Le iscrizione sono previste da lunedì 5 maggio a venerdì 9 maggio dalle ore 16.00 alle 19.00.
         Sabato 10 maggio le iscrizioni saranno aperte dalle 9.00 alle 12.00.
         </p><br />
         <p>QUEST’ANNO I LABORATORI SARANNO SCELTI IN PRESENZA AL MOMENTO DELL'ISCRIZIONE IN ORATORIO E PERCIÒ È NECESSARIA LA PRESENZA DEL RAGAZZO/A, così da facilitare le operazioni di segreteria nello scegliere i laboratori e la taglia della maglietta.
