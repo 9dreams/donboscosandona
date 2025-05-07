@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Navbar({
   testo1,
@@ -12,10 +13,7 @@ export default function Navbar({
   testo6,
   testo7,
   telefonoSuMisura,
-  faxSuMisura,
   emailSuMisura,
-  telefonoIndividuali,
-  emailIndividuali,
   titoloDoge,
   titoloHome,
   titoloEscursioni,
@@ -24,19 +22,11 @@ export default function Navbar({
   titoloFlotta,
   titoloNews,
   testoContattiSuMisura,
-  maildogedivenezia,
-  numeroditelefono,
-  testoContattiIndividuali,
-  serviziProfessionali,
-  numerodicellulare,
-  testoescursionigiornaliere,
-  posizioneDOGE,
+  posizioneSOGGIORNO,
   testoTelefono,
-  mailAPI,
-  testoFax,
   testoEmail,
-  testoSocial,
   logoUrl,
+  testoSocial,
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -142,10 +132,9 @@ export default function Navbar({
             </a>
           </div>
 
-
           <div className="text-center mt-12 space-y-4">
             <h3 className="text-[#048BE6] text-xl">{titoloDoge}</h3>
-            <p>{posizioneDOGE}</p>
+            <p>{posizioneSOGGIORNO}</p>
 
             <div className="mt-8">
               <h4 className="text-[#048BE6] text-lg">
@@ -155,29 +144,40 @@ export default function Navbar({
                 {testoTelefono}: {telefonoSuMisura}
               </p>
               <p>
-                {testoFax}: {faxSuMisura}
-              </p>
-              <p>
                 {testoEmail}: {emailSuMisura}
               </p>
             </div>
 
+            {/* Icone social aggiunte qui */}
             <div className="mt-8">
               <h4 className="text-[#048BE6] text-lg">
-                {testoContattiIndividuali}
+                {testoSocial || "Seguici"}
               </h4>
-              <p>
-                {testoTelefono}: {telefonoIndividuali}
-              </p>
-              <p>
-                {testoEmail}: {emailIndividuali}
-              </p>
-            </div>
-
-            <div className="mt-8">
-              <h4 className="text-[#048BE6] text-lg">{testoSocial}</h4>
               <div className="flex justify-center space-x-4 mt-4">
-                {/* Icone social mantenute qui */}
+                <a
+                  href="https://www.facebook.com/soggiornomarinobosco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0265A5] hover:text-[#025084]"
+                >
+                  <FaFacebook size={24} />
+                </a>
+                <a
+                  href="https://www.instagram.com/soggiornomarinobosco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0265A5] hover:text-[#025084]"
+                >
+                  <FaInstagram size={24} />
+                </a>
+                <a
+                  href="https://twitter.com/soggiornomarinobosco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0265A5] hover:text-[#025084]"
+                >
+                  <FaTwitter size={24} />
+                </a>
               </div>
             </div>
           </div>
