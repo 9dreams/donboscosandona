@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function LuoghiVisitare() {
   return (
-    <div className="py-12 px-4 max-w-5xl mx-auto">
+    <div className="py-12 mt-4 px-4 max-w-5xl mx-auto">
       {/* Titolo con linee decorative */}
       <div className="flex items-center justify-center mb-12">
         <div className="h-[1px] bg-[#0265A5] w-1/4"></div>
