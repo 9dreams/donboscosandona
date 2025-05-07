@@ -8,6 +8,7 @@ import Featured from "@/components/Featured";
 import Servizidisposizione from "@/cc/servizidisposizione";
 import ContattiSoggiorno from "@/cc/contattisoggiorno";
 import SectionInitial from "@/cc/sectioninitial";
+import LuoghiVisitare from "@/cc/luoghivisitare";
 const servizi = [
   {
     imgSrc: "/images/servizidisposizione/spiaggia_privata.png",
@@ -140,8 +141,20 @@ export default function Home({ data }) {
         testoEmail="E-Mail"
         logoUrl="/images/logo_navbar.png"
       />
-      <SectionInitial />
 
+      <SectionInitial
+        intestazione="Soggiorno Marino don Bosco"
+        titoloPrincipale="Tra verde e azzurro"
+        testoApertura1="Il Soggiorno Marino Don Bosco"
+        testoApertura2="riaprirà per la stagione estiva venerdì 24 maggio 2025."
+        descrizione1="Il Soggiorno Marino Don Bosco e la Casa Domenico Savio sono immersi in un ampio giardino fronte mare, con accesso diretto alla spiaggia privata in località Duna Verde, nei pressi di Caorle, caratteristica cittadina di mare e di pescatori. Duna Verde si trova a metà strada tra le splendide campagne venete e la città di Venezia, meta prediletta del turismo internazionale."
+        descrizione2="A pochi chilometri di distanza numerose località turistiche e città di interesse artistico sono mete ideali per le vostre escursioni e gite fuori porta. La riviera e il lido si accendono di sera di iniziative e feste."
+        testoBottone="SCOPRI LA NOSTRA STORIA"
+        linkBottone="/chi-siamo"
+        immagine1="/images/initialsection/bagnino.jpg"
+        immagine2="/images/initialsection/sky_.jpg"
+        immagine3="/images/initialsection/caorle_ambiente.jpg"
+      />
       <div className="items-center justify-center">
         <div className="flex flex-col items-center">
           <div className="items-center justify-center px-4 sm:px-8">
@@ -185,6 +198,7 @@ export default function Home({ data }) {
         </div>
       </div>
       <Servizidisposizione servizi={servizi} />
+      <LuoghiVisitare></LuoghiVisitare>
       <ContattiSoggiorno
         titoloPagina="Contatti"
         nomeSoggiorno="SOGGIORNO MARINO DON BOSCO"
