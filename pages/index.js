@@ -7,6 +7,7 @@ import Layout from "@/components/Layout";
 import Featured from "@/components/Featured";
 import Servizidisposizione from "@/cc/servizidisposizione";
 import ContattiSoggiorno from "@/cc/contattisoggiorno";
+import SectionInitial from "@/cc/sectioninitial";
 const servizi = [
   {
     imgSrc: "/images/servizidisposizione/spiaggia_privata.png",
@@ -126,18 +127,13 @@ export default function Home({ data }) {
         emailSuMisura="info@dogedivenezia.it"
         telefonoIndividuali="+39 041 315 63 02"
         emailIndividuali="api@dogedivenezia.it"
-        linguaItaliano="IT"
-        linguaInglese="EN"
-        linguaTedesco="DE"
-        linguaFrancese="FR"
-        linguaSpagnolo="ES"
-        titoloDoge="Il Doge di Venezia"
-        titoloHome="Home Page"
-        titoloEscursioni="Escursioni Giornaliere"
-        titoloServizi="Servizi Professionali"
-        titoloChiSiamo="Chi Siamo"
-        titoloFlotta="La Flotta"
-        titoloNews="News"
+        titoloDoge="Soggiorno Marino Don Bosco"
+        titoloHome="ALL INCLUSIVE"
+        titoloEscursioni="BED & BREAKFAST"
+        titoloServizi="GRUPPI"
+        titoloChiSiamo="CHI SIAMO"
+        titoloFlotta="STRUTTURA"
+        titoloNews="OFFERTE"
         testoContattiSuMisura="Contatti per prodotti su misura"
         maildogedivenezia="info@dogedivenezia.it"
         numeroditelefono="+39 041 530 23 63"
@@ -158,6 +154,7 @@ export default function Home({ data }) {
         testoSocial="Seguici"
         logoUrl="/images/logo_navbar.png"
       />
+      <SectionInitial />
 
       <div className="items-center justify-center">
         <div className="flex flex-col items-center">

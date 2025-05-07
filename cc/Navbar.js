@@ -24,14 +24,15 @@ export default function Navbar({
   titoloFlotta,
   titoloNews,
   testoContattiSuMisura,
+  maildogedivenezia,
+  numeroditelefono,
   testoContattiIndividuali,
-  selettorelinguaITA,
-  selettorelinguaENG,
-  selettorelinguaDE,
-  selettorelinguaFR,
-  selettorelinguaES,
+  serviziProfessionali,
+  numerodicellulare,
+  testoescursionigiornaliere,
   posizioneDOGE,
   testoTelefono,
+  mailAPI,
   testoFax,
   testoEmail,
   testoSocial,
@@ -141,11 +142,6 @@ export default function Navbar({
             </a>
           </div>
 
-          <div className="flex justify-center space-x-3 mt-12 text-xl">
-            <span>{selettorelinguaITA}</span> /{" "}
-            <span>{selettorelinguaENG}</span> / <span>{selettorelinguaDE}</span>{" "}
-            /<span>{selettorelinguaFR}</span> / <span>{selettorelinguaES}</span>
-          </div>
 
           <div className="text-center mt-12 space-y-4">
             <h3 className="text-[#048BE6] text-xl">{titoloDoge}</h3>
