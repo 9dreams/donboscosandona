@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Privacy({
   rifiutaButtonText,
@@ -25,6 +26,10 @@ export default function Privacy({
   textColor,
 }) {
   const [isVisible, setIsVisible] = useState(true);
+  const pathname = usePathname();
+
+  // Verifica se siamo nella home page
+  const isHomePage = pathname === "/";
 
   const handleAccettaTutto = () => {
     onAccettaTutto();
@@ -41,7 +46,7 @@ export default function Privacy({
     setIsVisible(false);
   };
 
-  return isVisible ? (
+  return isHomePage && isVisible ? (
     <div className="fixed bottom-0 left-0 right-0 bg-white p-6 shadow-lg z-50 transition-opacity duration-300 ease-in-out">
       <div className="container mx-auto">
         <div className="flex justify-end mb-2">
