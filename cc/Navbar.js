@@ -31,13 +31,13 @@ export default function Navbar({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: testo1, isActive: true },
-    { href: "/escursioni-giornaliere", label: testo2 },
-    { href: "/servizi-professionali", label: testo3 },
+    { href: "/all-inclusive", label: testo1, isActive: true },
+    { href: "/b-b", label: testo2 },
+    { href: "/gruppi", label: testo3 },
     { href: "/chi-siamo", label: testo4 },
-    { href: "/la-flotta", label: testo5 },
-    { href: "/news", label: testo6 },
-    { href: "/news", label: testo7 },
+    { href: "/scopri-la-struttura", label: testo5 },
+    { href: "/offerte", label: testo6 },
+    { href: "/carta-dei-servizi", label: testo7 },
   ];
 
   return (
