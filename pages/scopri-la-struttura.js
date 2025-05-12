@@ -79,14 +79,14 @@ export default function Home({ data }) {
             }}
             pagination={{
               enabled: true,
-              clickable: true
+              clickable: true,
             }}
             breakpoints={{
               768: {
                 navigation: {
                   enabled: true,
                 },
-              }
+              },
             }}
             effect="fade"
             fadeEffect={{ crossFade: true }}
