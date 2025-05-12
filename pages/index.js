@@ -48,7 +48,6 @@ export default function Home({ data }) {
           events={date}
         />
         <News title="News" data={data} limit={6} />
-        <Download />
 
         {/* Contenitore con maggiore padding per evitare sovrapposizioni */}
         <div className="relative z-10 mt-12">
