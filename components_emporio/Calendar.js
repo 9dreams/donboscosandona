@@ -11,7 +11,7 @@ const cardData = [
   {
     text: `Con la preghiera che questo messaggio venga portato a conoscenza
     di tutte quelle persone che hanno bisogno di un sostegno in questo periodo,
-    comunichiamo che l’Emporio Solidale,
+    comunichiamo che l'Emporio Solidale,
     proprio per essere più vicino possibile alle esigenze,
     fornisce il proprio servizio a tutte le persone in difficoltà.
     Chiediamo solo di presentarsi con un documento di riconoscimento.`,
@@ -20,7 +20,7 @@ const cardData = [
     alt: "Carta",
   },
   {
-    text: `Per tutti coloro che volessero contribuire e sostenere l’Emporio Solidale
+    text: `Per tutti coloro che volessero contribuire e sostenere l'Emporio Solidale
     in questo momento di diffusa difficoltà, riportiamo di seguito i riferimenti per le donazioni:`,
     bankInfo: {
       name: "Ass San Vincenzo de Paoli Conf Santi Liberale e Bartolomea",
@@ -35,145 +35,81 @@ const cardData = [
 
 export default function Calendar({ title, description }) {
   return (
-    <Container maxWidth="lg" sx={{ marginBottom: "2rem" }}>
-      <Box sx={{ textAlign: "center", mb: 6, mt: 4 }}>
+    <Container maxWidth="lg" className="py-16">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-16"
+      >
         <Typography
           component="h2"
-          variant="h3"
-          sx={{
-            fontWeight: "bold",
-            letterSpacing: "2px",
-            textShadow: "1px 2px 8px #00000055",
-            mb: 2,
-            fontSize: { xs: "2.2rem", md: "2.8rem" },
-            color: "#780202"
-          }}
+          className="text-4xl md:text-5xl font-bold mb-6"
+          sx={{ color: "#780202" }}
         >
-          <span style={{ color: "#e53935" }}>{title}</span>
+          <span className="text-red-500">{title}</span>
         </Typography>
         <Typography
-          variant="subtitle1"
-          sx={{
-            color: "#444",
-            fontSize: { xs: "1.1rem", md: "1.25rem" },
-            maxWidth: "600px",
-            mx: "auto",
-            mb: 2
-          }}
+          className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto"
         >
           {description}
         </Typography>
-        <Box sx={{ width: 96, height: 4, background: "#e53935", borderRadius: 2, mx: "auto", mb: 2 }} />
-      </Box>
-      <Grid container spacing={3} justifyContent="center">
+        <div className="w-24 h-1 bg-red-500 mx-auto mt-6"></div>
+      </motion.div>
+
+      <Grid container spacing={4} justifyContent="center">
         {cardData.map((card, index) => (
-          <Grid item xs={12} sm={6} md={6} key={index}>
+          <Grid item xs={12} md={6} key={index}>
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: index * 0.2 }}
-              whileHover={{ scale: 1.07, boxShadow: "0 8px 32px #00000055" }}
-              whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -10, transition: { duration: 0.2 } }}
             >
-              <Card
-                sx={{
-                  background: "linear-gradient(135deg, #780202 60%, #b31217 100%)",
-                  borderRadius: "18px",
-                  boxShadow: "0 6px 32px #00000044",
-                  padding: "24px",
-                  textAlign: "center",
-                  height: "440px",
-                  transition: "0.3s",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  border: "2px solid #fff3",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                <Box
-                  sx={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    background: "radial-gradient(circle at 80% 10%, #fff2 0%, transparent 70%)",
-                    zIndex: 0,
-                  }}
-                />
-                <CardContent sx={{ flexGrow: 1, position: "relative", zIndex: 1 }}>
+              <Card className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl h-full">
+                {/* Header con gradiente e forme decorative */}
+                <div className="p-6 text-white relative" style={{
+                  background: "linear-gradient(135deg, #780202 0%, #b31217 100%)"
+                }}>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16" />
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12" />
+                  
+                  {/* Icona */}
+                  <div className="relative z-10 flex items-center justify-center mb-4">
+                    <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center p-2">
+                      <Image
+                        src={card.image}
+                        alt={card.alt}
+                        width={40}
+                        height={40}
+                        className="filter brightness-0 invert"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Testo principale */}
                   <Typography
                     variant="h6"
-                    sx={{
-                      fontWeight: "bold",
-                      color: "#fff",
-                      textShadow: "0 2px 8px #00000055",
-                      fontSize: "1.1rem",
-                    }}
+                    className="relative z-10 text-lg font-semibold mb-4 leading-relaxed"
                   >
                     {card.text}
                   </Typography>
+
+                  {/* Informazioni bancarie se presenti */}
                   {card.bankInfo && (
-                    <>
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          mt: 2,
-                          fontWeight: "bold",
-                          color: "#fff",
-                          letterSpacing: "1px",
-                        }}
-                      >
-                        {card.bankInfo.name}:
+                    <div className="relative z-10 mt-6 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                      <Typography className="font-bold text-lg mb-2">
+                        {card.bankInfo.name}
                       </Typography>
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          color: "#fff",
-                          fontWeight: "bold",
-                          fontSize: "1.1rem",
-                          letterSpacing: "2px",
-                        }}
-                      >
+                      <Typography className="font-mono text-xl mb-2 tracking-wider">
                         {card.bankInfo.iban}
                       </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        sx={{ mt: 1, color: "#ffe" }}
-                      >
+                      <Typography className="text-gray-200">
                         {card.bankInfo.bank}
                       </Typography>
-                    </>
+                    </div>
                   )}
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      mt: 3,
-                      filter: "drop-shadow(0 2px 8px #fff8)",
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        borderRadius: "50%",
-                        border: "3px solid #fff",
-                        boxShadow: "0 0 12px #fff8",
-                        padding: "6px",
-                        background: "#fff2",
-                        display: "inline-block",
-                        transition: "box-shadow 0.3s",
-                        "&:hover": {
-                          boxShadow: "0 0 24px #fff",
-                        },
-                      }}
-                    >
-                      <Image src={card.image} alt={card.alt} width={50} height={50} />
-                    </Box>
-                  </Box>
-                </CardContent>
+                </div>
               </Card>
             </motion.div>
           </Grid>

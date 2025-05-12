@@ -39,7 +39,6 @@ export default function Home({ data }) {
       />
       <Featured data={data} limit={4} defaultTag="scuola" />
 
-      {/* Aggiunto padding e sfondo per testare Tailwind */}
       <div className="bg-gray-100 py-10">
         <Calendar
           title="Avvisi Importanti"
@@ -49,7 +48,6 @@ export default function Home({ data }) {
         />
         <News title="News" data={data} limit={6} />
 
-        {/* Contenitore con maggiore padding per evitare sovrapposizioni */}
         <div className="relative z-10 mt-12">
           <Anziani />
         </div>
