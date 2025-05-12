@@ -45,6 +45,8 @@ export default function Calendar({ title, description }) {
           textAlign: "center",
           fontWeight: "bold",
           paddingTop: "20px",
+          letterSpacing: "2px",
+          textShadow: "1px 2px 8px #00000055",
         }}
       >
         {title}
@@ -53,32 +55,57 @@ export default function Calendar({ title, description }) {
         variant="subtitle1"
         color="text.secondary"
         paragraph
-        sx={{ textAlign: "center", px: 2 }}
+        sx={{ textAlign: "center", px: 2, fontSize: "1.2rem" }}
       >
         {description}
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         {cardData.map((card, index) => (
           <Grid item xs={12} sm={6} md={6} key={index}>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: index * 0.2 }}
+              whileHover={{ scale: 1.07, boxShadow: "0 8px 32px #00000055" }}
+              whileTap={{ scale: 0.97 }}
+            >
               <Card
                 sx={{
-                  backgroundColor: "#780202",
-                  borderRadius: "0px",
-                  boxShadow: 5,
-                  padding: "20px",
+                  background: "linear-gradient(135deg, #780202 60%, #b31217 100%)",
+                  borderRadius: "18px",
+                  boxShadow: "0 6px 32px #00000044",
+                  padding: "24px",
                   textAlign: "center",
-                  height: "420px",
+                  height: "440px",
                   transition: "0.3s",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
+                  border: "2px solid #fff3",
+                  position: "relative",
+                  overflow: "hidden",
                 }}
               >
-                <CardContent sx={{ flexGrow: 1 }}>
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    background: "radial-gradient(circle at 80% 10%, #fff2 0%, transparent 70%)",
+                    zIndex: 0,
+                  }}
+                />
+                <CardContent sx={{ flexGrow: 1, position: "relative", zIndex: 1 }}>
                   <Typography
                     variant="h6"
-                    sx={{ fontWeight: "bold", color: "#fff" }}
+                    sx={{
+                      fontWeight: "bold",
+                      color: "#fff",
+                      textShadow: "0 2px 8px #00000055",
+                      fontSize: "1.1rem",
+                    }}
                   >
                     {card.text}
                   </Typography>
@@ -86,27 +113,59 @@ export default function Calendar({ title, description }) {
                     <>
                       <Typography
                         variant="body1"
-                        sx={{ mt: 2, fontWeight: "bold", color: "#fff" }}
+                        sx={{
+                          mt: 2,
+                          fontWeight: "bold",
+                          color: "#fff",
+                          letterSpacing: "1px",
+                        }}
                       >
                         {card.bankInfo.name}:
                       </Typography>
                       <Typography
                         variant="body1"
-                        sx={{ color: "#fff", fontWeight: "bold" }}
+                        sx={{
+                          color: "#fff",
+                          fontWeight: "bold",
+                          fontSize: "1.1rem",
+                          letterSpacing: "2px",
+                        }}
                       >
                         {card.bankInfo.iban}
                       </Typography>
                       <Typography
                         variant="body2"
                         color="text.secondary"
-                        sx={{ mt: 1 }}
+                        sx={{ mt: 1, color: "#ffe" }}
                       >
                         {card.bankInfo.bank}
                       </Typography>
                     </>
                   )}
-                  <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
-                    <Image src={card.image} alt={card.alt} width={50} height={50} />
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      mt: 3,
+                      filter: "drop-shadow(0 2px 8px #fff8)",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        borderRadius: "50%",
+                        border: "3px solid #fff",
+                        boxShadow: "0 0 12px #fff8",
+                        padding: "6px",
+                        background: "#fff2",
+                        display: "inline-block",
+                        transition: "box-shadow 0.3s",
+                        "&:hover": {
+                          boxShadow: "0 0 24px #fff",
+                        },
+                      }}
+                    >
+                      <Image src={card.image} alt={card.alt} width={50} height={50} />
+                    </Box>
                   </Box>
                 </CardContent>
               </Card>
