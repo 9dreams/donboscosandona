@@ -96,6 +96,54 @@ const servizi = [
   },
 ];
 
+// Array per la prima sezione: Scoperta di Caorle e Itinerari in bici
+const SECTION1 = [
+  {
+    titolo: "Alla scoperta di Caorle",
+    descrizione:
+      "Immaginate diciotto chilometri di spiaggia sabbiosa color oro, mare pulito adatto ai bambini, limpido, pescoso e pieno di tesori sommersi, per la gioia dei pescatori e amanti delle immersioni e degli sport acquatici, e poi le dune, la natura incontaminata, il borgo storico sul mare, le eccellenze enogastronomiche del territorio...",
+    link: "https://www.caorle.eu/it",
+    immagine: "/images/luoghivisitare/mare_caorle.png",
+    alt: "Vista di Caorle al tramonto",
+  },
+  {
+    titolo: "Itinerari in bicicletta",
+    descrizione:
+      "Con il servizio bici gratuito offerto dal Soggiorno Marino don Bosco, fare un'uscita in bicicletta è uno dei modi migliori per vivere la natura nei dintorni di Caorle. Scegli il percorso più adatto a te... o provane uno diverso ogni giorno... e parti per l'avventura. Caorle e i suoi territori incontaminati ti stanno aspettando!",
+    link: "https://www.komoot.com/it-it/guide/619197/percorsi-bici-e-piste-ciclabili-nei-dintorni-di-caorle",
+    immagine: "/images/luoghivisitare/bici.png",
+    alt: "Persone che osservano il paesaggio dalla bicicletta",
+  },
+];
+
+// Array per la seconda sezione: le altre card
+const SECTION2 = [
+  {
+    titolo: "Ospitalità per gruppi",
+    descrizione:
+      "Per soggiorni di almeno 40 ospiti, siamo a tua disposizione nei periodi dedicati all'ospitalità per i gruppi...",
+    link: "/gruppi",
+    immagine: "/images/luoghivisitare/sala.png",
+    alt: "Sala da pranzo per gruppi",
+  },
+  {
+    titolo: "Servizio bici gratuito",
+    descrizione:
+      "Biciclette su prenotazione gratuita per splendide scampagnate alla scoperta di Caorle e dintorni.",
+    link: "/servizio-bici",
+    immagine: "/images/luoghivisitare/pista_ciclabile.jpg",
+    alt: "Pista ciclabile",
+  },
+  {
+    titolo: "ATVO",
+    descrizione:
+      "Una comoda fermata degli autobus di fronte al Soggiorno Marino ti permetterà di viaggiare sulle linee ATVO: 4a / Aeroporto Marco Polo di Venezia - Caorle - P.S.Margherita - Lido Altanea - Duna Verde 97 / Caorle - Porto S. Margherita - Duna Verde Anche i biglietti possono essere acquistati comodamente all'interno del Soggiorno.",
+    link: "https://www.atvo.it/it-orari-e-autolinee.html",
+    immagine: "/images/luoghivisitare/ATVO.png",
+    alt: "Logo ATVO",
+  },
+];
+
 export async function getStaticProps() {
   let res = await fetch(
     "https://channels.donboscosandona.it/api/posts/inoratorio"
@@ -198,7 +246,13 @@ export default function Home({ data }) {
         </div>
       </div>
       <Servizidisposizione servizi={servizi} />
-      <LuoghiVisitare></LuoghiVisitare>
+      <LuoghiVisitare
+        section1Card1={SECTION1[0]}
+        section1Card2={SECTION1[1]}
+        section2Card1={SECTION2[0]}
+        section2Card2={SECTION2[1]}
+        section2Card3={SECTION2[2]}
+      />
       <ContattiSoggiorno
         titoloPagina="Contatti"
         nomeSoggiorno="SOGGIORNO MARINO DON BOSCO"

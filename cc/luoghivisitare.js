@@ -3,7 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function LuoghiVisitare() {
+export default function LuoghiVisitare({
+  section1Card1,
+  section1Card2,
+  section2Card1,
+  section2Card2,
+  section2Card3
+}) {
   return (
     <div className="py-12 mt-4 px-4 max-w-5xl mx-auto">
       {/* Titolo con linee decorative */}
@@ -17,30 +23,25 @@ export default function LuoghiVisitare() {
 
       {/* Prima riga con due card principali */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        {/* Card Caorle */}
+        {/* Card 1 Sezione 1 */}
         <div className="bg-[#FAFAFA] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
           <div className="relative aspect-square w-full">
             <Image
-              src="/images/luoghivisitare/mare_caorle.png"
-              alt="Vista di Caorle al tramonto"
+              src={section1Card1.immagine}
+              alt={section1Card1.alt}
               fill
               className="object-cover"
             />
           </div>
           <div className="p-6 text-left flex flex-col flex-grow">
             <h3 className="text-2xl text-gray-800 font-medium mb-4">
-              Alla scoperta di Caorle
+              {section1Card1.titolo}
             </h3>
             <p className="text-gray-600 mb-6 flex-grow">
-              Immaginate diciotto chilometri di spiaggia sabbiosa color oro,
-              mare pulito adatto ai bambini, limpido, pescoso e pieno di tesori
-              sommersi, per la gioia dei pescatori e amanti delle immersioni e
-              degli sport acquatici, e poi le dune, la natura incontaminata, il
-              borgo storico sul mare, le eccellenze enogastronomiche del
-              territorio...
+              {section1Card1.descrizione}
             </p>
             <div className="mt-auto">
-              <a href="/caorle">
+              <a href={section1Card1.link}>
                 <button
                   type="button"
                   className="text-white cursor-pointer bg-[#0265A5] font-bold rounded-lg text-sm px-5 py-2.5 me-2 mb-2 whitespace-nowrap"
@@ -52,30 +53,25 @@ export default function LuoghiVisitare() {
           </div>
         </div>
 
-        {/* Card Itinerari in bicicletta */}
+        {/* Card 2 Sezione 1 */}
         <div className="bg-[#FAFAFA] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
           <div className="relative aspect-square w-full">
             <Image
-              src="/images/luoghivisitare/bici.png"
-              alt="Persone che osservano il paesaggio dalla bicicletta"
+              src={section1Card2.immagine}
+              alt={section1Card2.alt}
               fill
               className="object-cover"
             />
           </div>
           <div className="p-6 text-left flex flex-col flex-grow">
             <h3 className="text-2xl text-gray-800 font-medium mb-4">
-              Itinerari in bicicletta
+              {section1Card2.titolo}
             </h3>
             <p className="text-gray-600 mb-6 flex-grow">
-              Con il servizio bici gratuito offerto dal Soggiorno Marino don
-              Bosco, fare un'uscita in bicicletta è uno dei modi migliori per
-              vivere la natura nei dintorni di Caorle. Scegli il percorso più
-              adatto a te... o provane uno diverso ogni giorno... e parti per
-              l'avventura. Caorle e i suoi territori incontaminati ti stanno
-              aspettando!
+              {section1Card2.descrizione}
             </p>
             <div className="mt-auto">
-              <a href="/itinerari-bici">
+              <a href={section1Card2.link}>
                 <button
                   type="button"
                   className="text-white cursor-pointer bg-[#0265A5] font-bold rounded-lg text-sm px-5 py-2.5 me-2 mb-2 whitespace-nowrap"
@@ -90,26 +86,25 @@ export default function LuoghiVisitare() {
 
       {/* Seconda riga con tre card più piccole */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Card Ospitalità per gruppi */}
+        {/* Card 1 Sezione 2 */}
         <div className="bg-[#FAFAFA] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
           <div className="relative aspect-square w-full">
             <Image
-              src="/images/luoghivisitare/sala.png"
-              alt="Sala da pranzo per gruppi"
+              src={section2Card1.immagine}
+              alt={section2Card1.alt}
               fill
               className="object-cover"
             />
           </div>
           <div className="p-4 text-left flex flex-col flex-grow">
             <h3 className="text-xl text-gray-800 font-medium mb-3">
-              Ospitalità per gruppi
+              {section2Card1.titolo}
             </h3>
             <p className="text-gray-600 mb-4 flex-grow text-sm">
-              Per soggiorni di almeno 40 ospiti, siamo a tua disposizione nei
-              periodi dedicati all'ospitalità per i gruppi...
+              {section2Card1.descrizione}
             </p>
             <div className="mt-auto">
-              <a href="/gruppi">
+              <a href={section2Card1.link}>
                 <button
                   type="button"
                   className="text-white cursor-pointer bg-[#0265A5] font-bold rounded-lg text-sm px-5 py-2.5 me-2 mb-2 whitespace-nowrap"
@@ -121,26 +116,25 @@ export default function LuoghiVisitare() {
           </div>
         </div>
 
-        {/* Card Servizio bici gratuito */}
+        {/* Card 2 Sezione 2 */}
         <div className="bg-[#FAFAFA] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
           <div className="relative aspect-square w-full">
             <Image
-              src="/images/luoghivisitare/pista_ciclabile.jpg"
-              alt="Pista ciclabile"
+              src={section2Card2.immagine}
+              alt={section2Card2.alt}
               fill
               className="object-cover"
             />
           </div>
           <div className="p-4 text-left flex flex-col flex-grow">
             <h3 className="text-xl text-gray-800 font-medium mb-3">
-              Servizio bici gratuito
+              {section2Card2.titolo}
             </h3>
             <p className="text-gray-600 mb-4 flex-grow text-sm">
-              Biciclette su prenotazione gratuita per splendide scampagnate alla
-              scoperta di Caorle e dintorni.
+              {section2Card2.descrizione}
             </p>
             <div className="mt-auto">
-              <a href="/servizio-bici">
+              <a href={section2Card2.link}>
                 <button
                   type="button"
                   className="text-white cursor-pointer bg-[#0265A5] font-bold rounded-lg text-sm px-5 py-2.5 me-2 mb-2 whitespace-nowrap"
@@ -152,30 +146,25 @@ export default function LuoghiVisitare() {
           </div>
         </div>
 
-        {/* Card ATVO */}
+        {/* Card 3 Sezione 2 */}
         <div className="bg-[#FAFAFA] rounded-lg shadow-md overflow-hidden h-full flex flex-col">
           <div className="relative aspect-square w-full">
             <Image
-              src="/images/luoghivisitare/ATVO.png"
-              alt="Logo ATVO"
+              src={section2Card3.immagine}
+              alt={section2Card3.alt}
               fill
               className="object-contain p-4"
             />
           </div>
           <div className="p-4 text-left flex flex-col flex-grow">
+            <h3 className="text-xl text-gray-800 font-medium mb-3">
+              {section2Card3.titolo}
+            </h3>
             <p className="text-gray-600 mb-4 flex-grow text-sm">
-              Una comoda fermata degli autobus di fronte al Soggiorno Marino ti
-              permetterà di viaggiare sulle linee ATVO: 4a / Aeroporto Marco
-              Polo di Venezia - Caorle - P.S.Margherita - Lido Altanea - Duna
-              Verde 97 / Caorle - Porto S. Margherita - Duna Verde Anche i
-              biglietti possono essere acquistati comodamente all'interno del
-              Soggiorno.
+              {section2Card3.descrizione}
             </p>
             <div className="mt-auto">
-              <a
-                href="https://www.atvo.it/it-orari-e-autolinee.html"
-                target="_blank"
-              >
+              <a href={section2Card3.link} target="_blank">
                 <button
                   type="button"
                   className="text-white cursor-pointer bg-[#0265A5] font-bold rounded-lg text-sm px-5 py-2.5 me-2 mb-2 whitespace-nowrap"
