@@ -154,5 +154,221 @@ export const documenti = [
     categoria: 'Emporio',
     link: '/downloads/spesa_carrello.pdf',
     emoji: '🛍️'
+  },
+  {
+    id: 'analisi-bilanci-2016-2019',
+    titolo: 'Analisi bilanci 2016-2019',
+    descrizione: 'Analisi dettagliata dei bilanci dal 2016 al 2019',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/Analisibilanci20162019.pdf',
+    emoji: '📊'
+  },
+  {
+    id: 'rendiconto-raccolta-1',
+    titolo: 'Rendiconto raccolta pubblica di fondi (1)',
+    descrizione: 'Primo rendiconto della raccolta fondi pubblica',
+    tipo: 'DOC',
+    categoria: 'Trasparenza',
+    link: '/docs/107Rendicontoraccoltapubblicadifondi(1).doc',
+    emoji: '💰'
+  },
+  {
+    id: 'bilancio-2021',
+    titolo: 'Bilancio 2021',
+    descrizione: 'Bilancio completo dell\'anno 2021',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/BILANCIO2021EMPORIOSOLIDALE.pdf',
+    emoji: '📈'
+  },
+  {
+    id: 'rendiconto-raccolta-2',
+    titolo: 'Rendiconto raccolta pubblica di fondi (2)',
+    descrizione: 'Secondo rendiconto della raccolta fondi pubblica',
+    tipo: 'DOC',
+    categoria: 'Trasparenza',
+    link: '/docs/207Rendicontoraccoltapubblicadifondi.doc',
+    emoji: '💰'
+  },
+  {
+    id: 'bilancio-2021-firmato',
+    titolo: 'Bilancio 2021 Firmato',
+    descrizione: 'Versione firmata del bilancio 2021',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/BILANCIO2021FIRMATO.pdf',
+    emoji: '✍️'
+  },
+  {
+    id: 'rendiconto-raccolta-3',
+    titolo: 'Rendiconto raccolta pubblica di fondi (3)',
+    descrizione: 'Terzo rendiconto della raccolta fondi pubblica',
+    tipo: 'DOC',
+    categoria: 'Trasparenza',
+    link: '/docs/307Rendicontoraccoltapubblicadifondi.doc',
+    emoji: '💰'
+  },
+  {
+    id: 'bilancio-2018-1',
+    titolo: 'Bilancio al 31 dicembre 2018 (1)',
+    descrizione: 'Prima versione del bilancio 2018',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/Bilancioal31dicembre2018(1).pdf',
+    emoji: '📊'
+  },
+  {
+    id: 'rendiconto-raccolta-a',
+    titolo: 'Rendiconto raccolta pubblica di fondi (A)',
+    descrizione: 'Rendiconto A della raccolta fondi pubblica',
+    tipo: 'DOC',
+    categoria: 'Trasparenza',
+    link: '/docs/A07Rendicontoraccoltapubblicadifondi.doc',
+    emoji: '💰'
+  },
+  {
+    id: 'bilancio-2018-2',
+    titolo: 'Bilancio al 31 dicembre 2018',
+    descrizione: 'Versione finale del bilancio 2018',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/Bilancioal31dicembre2018.pdf',
+    emoji: '📊'
+  },
+  {
+    id: 'rendiconto-raccolta-b',
+    titolo: 'Rendiconto raccolta pubblica di fondi (B)',
+    descrizione: 'Rendiconto B della raccolta fondi pubblica',
+    tipo: 'DOC',
+    categoria: 'Trasparenza',
+    link: '/docs/B07Rendicontoraccoltapubblicadifondi2.doc',
+    emoji: '💰'
+  },
+  {
+    id: 'bilancio-2019',
+    titolo: 'Bilancio al 31 dicembre 2019',
+    descrizione: 'Bilancio completo dell\'anno 2019',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/Bilancioal31dicembre2019.pdf',
+    emoji: '📊'
+  },
+  {
+    id: 'bilancio-2023',
+    titolo: 'Bilancio 2023',
+    descrizione: 'Bilancio completo dell\'anno 2023',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/Bilancio2023EmporioSolidale.pdf',
+    emoji: '📈'
+  },
+  {
+    id: 'bilancio-2022-analitico',
+    titolo: 'Bilancio analitico 2022',
+    descrizione: 'Versione dettagliata del bilancio 2022',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/Bilancioanalitico2022EmporioSolidale.pdf',
+    emoji: '🔍'
+  },
+  {
+    id: 'bilancio-2023-mod-d',
+    titolo: 'Bilancio 2023 MOD D',
+    descrizione: 'Modello D del bilancio 2023',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/BILANCIO2023MODDEmporioSolidale.pdf',
+    emoji: '📋'
+  },
+  {
+    id: 'bilancio-preventivo-2023',
+    titolo: 'Bilancio Preventivo 2023',
+    descrizione: 'Previsione di bilancio per l\'anno 2023',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/BilancioPreventivo2023EmporioSolidale.pdf',
+    emoji: '🎯'
+  },
+  {
+    id: 'bilancio-preventivo-2024',
+    titolo: 'Bilancio Preventivo 2024',
+    descrizione: 'Previsione di bilancio per l\'anno 2024',
+    tipo: 'XLSX',
+    categoria: 'Trasparenza',
+    link: '/docs/BilancioPreventivo2024EmporioSolidale.xlsx',
+    emoji: '🎯'
+  },
+  {
+    id: 'bilancio-2020',
+    titolo: 'Bilancio finanziario 2020',
+    descrizione: 'Bilancio finanziario dell\'anno 2020',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/Emporio-Bilanciofinanziario2020.pdf',
+    emoji: '📊'
+  },
+  {
+    id: 'relazione-missione-2023',
+    titolo: 'Relazione di missione 2023',
+    descrizione: 'Relazione sulle attività e obiettivi del 2023',
+    tipo: 'DOCX',
+    categoria: 'Trasparenza',
+    link: '/docs/Relazionedimissionebilancio2023(3).docx',
+    emoji: '📝'
+  },
+  {
+    id: 'legge-trasparenza',
+    titolo: 'Legge sulla Trasparenza',
+    descrizione: 'Documento sulla normativa della trasparenza',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/LeggesullaTrasparenza.pdf',
+    emoji: '⚖️'
+  },
+  {
+    id: 'rendiconto-attivita-2023',
+    titolo: 'Rendiconto Attività 2023',
+    descrizione: 'Resoconto delle attività svolte nel 2023',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/RENDICONTOATTIVITA2023.pdf',
+    emoji: '📋'
+  },
+  {
+    id: 'relazione-2021',
+    titolo: 'Relazione 2021',
+    descrizione: 'Relazione annuale firmata del 2021',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/RELAZIONE2021FIRMATO.pdf',
+    emoji: '📝'
+  },
+  {
+    id: 'rendiconto-finanziario-2023',
+    titolo: 'Rendiconto Finanziario 2023',
+    descrizione: 'Rendiconto finanziario dell\'anno 2023',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/RENDICONTOFINANZIARIO2023.pdf',
+    emoji: '💶'
+  },
+  {
+    id: 'relazione-missione-2022',
+    titolo: 'Relazione di missione 2022',
+    descrizione: 'Relazione sulle attività e obiettivi del 2022',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/relazionedimissionebilancio2022.pdf',
+    emoji: '📝'
+  },
+  {
+    id: 'trasparenza-2020-2019',
+    titolo: 'Trasparenza 2020-2019',
+    descrizione: 'Documentazione sulla trasparenza 2019-2020',
+    tipo: 'PDF',
+    categoria: 'Trasparenza',
+    link: '/docs/Trasparenza2020-2019.pdf',
+    emoji: '🔍'
   }
 ]; 
