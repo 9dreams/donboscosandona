@@ -33,7 +33,7 @@ const cardData = [
   },
 ];
 
-export default function Calendar({ title, description }) {
+export default function Calendar({ description }) {
   return (
     <Container maxWidth="lg" className="py-16">
       <motion.div
@@ -47,7 +47,7 @@ export default function Calendar({ title, description }) {
           className="text-4xl md:text-5xl font-bold mb-6"
           sx={{ color: "#780202" }}
         >
-          <span className="text-red-500">{title}</span>
+          <span className="text-black"><span className="text-red-500">Avvisi</span> Importanti</span>
         </Typography>
         <Typography
           className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto"

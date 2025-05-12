@@ -41,7 +41,6 @@ export default function Home({ data }) {
 
       <div className="bg-gray-100 py-10">
         <Calendar
-          title="Avvisi Importanti"
           description="Scopri tutti gli avvisi"
           cardWidth={3}
           events={date}

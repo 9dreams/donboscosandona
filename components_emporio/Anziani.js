@@ -78,7 +78,7 @@ export default function Anziani() {
           className="text-4xl md:text-5xl font-bold mb-6"
           sx={{ color: "#780202" }}
         >
-          <span className="text-red-500">I nostri Servizi</span>
+          <span className="text-black">I nostri <span className="text-red-500">Servizi</span></span>
         </Typography>
         <Typography
           className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto"
