@@ -57,10 +57,10 @@ const scrollableContent = [
 ];
 export default function Anziani() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-black">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black to-gray-900">
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: 0.7 }}
         transition={{ duration: 1.5 }}
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
@@ -68,50 +68,66 @@ export default function Anziani() {
             "url(https://149797850.v2.pressablecdn.com/wp-content/uploads/2024/04/Website-Photos-14.png)",
         }}
       />
+      
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
 
-      <div className="relative z-10 px-6 py-12 flex flex-col justify-center items-center text-black overflow-y-auto">
+      <div className="relative z-10 px-6 py-16 flex flex-col justify-center items-center text-black overflow-y-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-red-500">
-            I servizi che offriamo
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+            <span className="text-red-500">I servizi</span> che offriamo
           </h1>
-          <p className="text-lg md:text-xl text-red-500">
-            Inizia il tuo viaggio con noi oggi!
+          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
+            Scopri come possiamo aiutarti nel tuo percorso di crescita e supporto
           </p>
+          <div className="w-24 h-1 bg-red-500 mx-auto mt-6"></div>
         </motion.div>
 
-        <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {scrollableContent.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+              transition={{ duration: 0.8, delay: index * 0.15 }}
+              whileHover={{ 
+                y: -10,
+                scale: 1.03,
+              }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl"
             >
-              <Link href={item.link} passHref>
-                {" "}
-                <a style={{ textDecoration: "none", color: "inherit" }}>
-                  <div className="relative w-full h-64 sm:h-80">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-t-lg"
-                    />
+              <Link 
+                href={item.link}
+                className="block h-full" 
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div className="relative w-full h-64 sm:h-72 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-500 hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+                </div>
+                <div className="p-8 text-center">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-3">
+                    {item.title}
+                  </h2>
+                  <div className="w-16 h-1 bg-red-500 mx-auto mb-4"></div>
+                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <div className="mt-6">
+                    <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-red-700 to-red-600 text-white font-semibold text-base shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-gradient-to-l cursor-pointer">
+                      <span role="img" aria-label="search">🔎</span>
+                      Scopri di più
+                    </span>
                   </div>
-                  <div className="p-6 text-center">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                      {item.title}
-                    </h2>
-                    <p className="text-gray-600">{item.description}</p>
-                  </div>
-                </a>
+                </div>
               </Link>
             </motion.div>
           ))}
