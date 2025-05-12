@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Search, Menu, Close } from '@mui/icons-material';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,15 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
+      setSearchTerm('');
+      setIsMenuOpen(false);
+    }
+  };
 
   const menuItems = [
     { name: 'Home Page', link: '/', class: 'text-[#C7AE6A]' },
@@ -29,7 +41,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#780202] shadow-lg' : 'bg-[#780202]/95'
+        isScrolled ? 'bg-[#780202] shadow-lg' : 'bg-[#780202]'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,9 +74,11 @@ export default function Navbar() {
 
           {/* Search Bar */}
           <div className="hidden md:flex items-center">
-            <div className="relative">
+            <form onSubmit={handleSearch} className="relative">
               <input
                 type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Cerca..."
                 onFocus={() => setIsSearchFocused(true)}
                 onBlur={() => setIsSearchFocused(false)}
@@ -72,8 +86,13 @@ export default function Navbar() {
                   isSearchFocused ? 'w-64 ring-2 ring-[#C7AE6A]' : 'w-48'
                 }`}
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/70" />
-            </div>
+              <button
+                type="submit"
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors duration-200"
+              >
+                <Search />
+              </button>
+            </form>
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,14 +131,21 @@ export default function Navbar() {
               ))}
               
               {/* Mobile Search */}
-              <div className="relative mt-4 px-4">
+              <form onSubmit={handleSearch} className="relative mt-4 px-4">
                 <input
                   type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="Cerca..."
                   className="w-full pl-10 pr-4 py-2 rounded-full bg-[#780202] text-white placeholder-white/70 outline-none"
                 />
-                <Search className="absolute left-7 top-1/2 transform -translate-y-1/2 text-white/70" />
-              </div>
+                <button
+                  type="submit"
+                  className="absolute left-7 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors duration-200"
+                >
+                  <Search />
+                </button>
+              </form>
             </div>
           </motion.div>
         )}
