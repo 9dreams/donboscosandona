@@ -36,29 +36,35 @@ const cardData = [
 export default function Calendar({ title, description }) {
   return (
     <Container maxWidth="lg" sx={{ marginBottom: "2rem" }}>
-      <Typography
-        component="h3"
-        variant="h4"
-        color="inherit"
-        gutterBottom
-        sx={{
-          textAlign: "center",
-          fontWeight: "bold",
-          paddingTop: "20px",
-          letterSpacing: "2px",
-          textShadow: "1px 2px 8px #00000055",
-        }}
-      >
-        {title}
-      </Typography>
-      <Typography
-        variant="subtitle1"
-        color="text.secondary"
-        paragraph
-        sx={{ textAlign: "center", px: 2, fontSize: "1.2rem" }}
-      >
-        {description}
-      </Typography>
+      <Box sx={{ textAlign: "center", mb: 6, mt: 4 }}>
+        <Typography
+          component="h2"
+          variant="h3"
+          sx={{
+            fontWeight: "bold",
+            letterSpacing: "2px",
+            textShadow: "1px 2px 8px #00000055",
+            mb: 2,
+            fontSize: { xs: "2.2rem", md: "2.8rem" },
+            color: "#780202"
+          }}
+        >
+          <span style={{ color: "#e53935" }}>{title}</span>
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            color: "#444",
+            fontSize: { xs: "1.1rem", md: "1.25rem" },
+            maxWidth: "600px",
+            mx: "auto",
+            mb: 2
+          }}
+        >
+          {description}
+        </Typography>
+        <Box sx={{ width: 96, height: 4, background: "#e53935", borderRadius: 2, mx: "auto", mb: 2 }} />
+      </Box>
       <Grid container spacing={3} justifyContent="center">
         {cardData.map((card, index) => (
           <Grid item xs={12} sm={6} md={6} key={index}>

@@ -11,9 +11,13 @@ export default function News({ title, limit = 6, data }) {
 
   return (
     <Container className="mx-auto mt-20 mb-24 px-4">
-      <Typography className="text-left text-4xl font-semibold mb-8 text-[#780202]" component="h2">
-        {title}
+      <Typography className="text-center text-4xl md:text-5xl font-bold mb-4 text-[#780202]" component="h2">
+        <span className="text-red-500">{title}</span>
       </Typography>
+      <Typography className="text-center text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-6">
+        Scopri le ultime notizie e aggiornamenti.
+      </Typography>
+      <div className="w-24 h-1 bg-red-500 mx-auto mb-8"></div>
       <Grid container spacing={6}>
         {data.map((post, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
