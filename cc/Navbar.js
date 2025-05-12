@@ -31,7 +31,7 @@ export default function Navbar({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/all-inclusive", label: testo1, isActive: true },
+    { href: "/all-inclusive", label: testo1 },
     { href: "/b-b", label: testo2 },
     { href: "/gruppi", label: testo3 },
     { href: "/chi-siamo", label: testo4 },
@@ -77,9 +77,7 @@ export default function Navbar({
             {navLinks.map((link) => (
               <a key={link.href} href={link.href}>
                 <span
-                  className={`hover:text-[#048BE6] ${
-                    link.isActive ? "active font-bold" : ""
-                  }`}
+                  className={`hover:text-[#048BE6]`}
                 >
                   {link.label}
                 </span>
@@ -112,7 +110,7 @@ export default function Navbar({
           </div>
 
           <div className="flex flex-col items-center text-center pt-8 space-y-6">
-            <a href="/" className="text-[#048BE6] text-2xl font-medium">
+            <a href="/" className="text-[#048BE6] text-2xl">
               {titoloHome}
             </a>
             <a href="/escursioni-giornaliere" className="text-black text-2xl">
