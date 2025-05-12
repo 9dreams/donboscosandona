@@ -201,20 +201,93 @@ export default function Home({ data }) {
           </h2>
         </div>
         <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal pr-6">
-          <span className="font-bold">L'accesso agli ospiti</span> alloggiati è consentito fino alle ore <span className="font-bold">24.00</span>: si
+          <span className="font-bold">L'accesso agli ospiti</span> alloggiati è
+          consentito fino alle ore <span className="font-bold">24.00</span>: si
           prega di avvisare in Reception in caso di rientro più tardi.
         </p>
         <ul className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal list-disc">
           <li className="mb-2">
-            il <span className="font-bold">pranzo</span> o la{" "}
-            <span className="font-bold">cena</span> per amici o parenti degli
-            ospiti alloggiati ha un costo di{" "}
-            <span className="font-bold">€25 a persona</span>;
+            In caso di necessità o di emergenza, in ogni stanza è presente un
+            vademecum con il{" "}
+            <span className="font-bold">numero telefonico</span> della struttura
+            e i <span className="font-bold">principali recapiti</span>.
+          </li>
+        </ul>
+
+        {/* Sezione attenzioni */}
+        <div className="flex items-center justify-center mb-4">
+          <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+            Attenzioni
+          </h2>
+        </div>
+        <ul className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal list-disc">
+          <li className="mb-2">
+            Al pagamento del soggiorno, all'arrivo,{" "}
+            <span className="font-bold">non si accettano assegni.</span>
           </li>
           <li className="mb-2">
-            il <span className="font-bold">servizio spiaggia</span> con
-            ombrellone, sedia sdraio e lettino ha un costo di{" "}
-            <span className="font-bold">€15</span>.
+            La <span className="font-bold">pulizia delle camere</span> e il{" "}
+            <span className="font-bold">
+              cambio della biancheria letto-bagno
+            </span>
+            viene effettuato il sabato. Il{" "}
+            <span className="font-bold">cambio degli asciugamani</span> è
+            previsto anche ogni mercoledì dai nostri collaboratori durante la
+            permanenza. È facoltà degli ospiti il riassetto.
+          </li>
+          <li className="mb-2">
+            Chiediamo gentilmente di non gettare nel WC{" "}
+            <span className="font-bold">oggetti ingombranti</span> da smaltire
+            negli appositi contenitori.
+          </li>
+          <li className="mb-2">
+            Ricordiamo che, per far funzionare l'
+            <span className="font-bold">aria condizionata</span>, è necessario
+            chiudere completamente tutte le finestre della camera (altrimenti
+            non parte).
+          </li>
+          <li className="mb-2">
+            Per ragioni di sicurezza, non è consentito l'utilizzo di{" "}
+            <span className="font-bold">
+              ferri da stiro, fornelli elettrici e apparecchi frigoriferi
+            </span>{" "}
+            nelle camere. Invitiamo gli ospiti a rivolgersi in Reception in caso
+            di necessità.
+          </li>
+          <li className="mb-2">
+            Il nostro ampio <span className="font-bold">parcheggio</span> è a
+            disposizione degli ospiti, ma non custodito; durante il check-in è
+            possibile avvicinare temporaneamente il veicolo all'ingresso per
+            scaricare i bagagli.
+          </li>
+          <li className="mb-2">
+            Si declina ogni responsabilità per eventuali{" "}
+            <span className="font-bold">
+              smarrimenti o furti di denaro, oggetti o effetti personali
+              all'interno della struttura, nel parco e nella spiaggia.
+            </span>
+          </li>
+          <li className="mb-2">
+            È vietato l'uso dell'ascensore ai{" "}
+            <span className="font-bold">minori di 12 anni</span> se non
+            accompagnati da un adulto.
+          </li>
+          <li className="mb-2">
+            Chiediamo alle famiglie di{" "}
+            <span className="font-bold">
+              prestare attenzione ai propri figli
+            </span>
+            durante la giornata, specie quando si trovano in prossimità del
+            mare.
+          </li>
+          <li className="mb-2">
+            Chiediamo di limitare{" "}
+            <span className="font-bold">l'uso del costume</span> nelle zone
+            esterne della casa (parco e veranda).
+          </li>
+          <li className="mb-2">
+            È consentito fumare nell'apposita{" "}
+            <span className="font-bold">zona fumatori</span>.
           </li>
         </ul>
 
