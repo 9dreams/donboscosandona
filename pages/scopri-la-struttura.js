@@ -62,9 +62,8 @@ export default function Home({ data }) {
         testoEmail="E-Mail"
         logoUrl="/images/logo_navbar.png"
       />
-      {/*  */}
-      <div className="flex items-center justify-center mb-4">
-        <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+      <div className="flex items-center justify-center mb-8">
+        <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
           Scopri la struttura
         </h2>
       </div>
@@ -90,7 +89,7 @@ export default function Home({ data }) {
             }}
             effect="fade"
             fadeEffect={{ crossFade: true }}
-            style={{ height: "450px" }}
+            style={{ height: "450px", width: "100%" }}
             className="rounded-xl overflow-hidden swiper-custom"
           >
             <SwiperSlide>
@@ -106,7 +105,7 @@ export default function Home({ data }) {
             <SwiperSlide>
               <div className="w-full h-full relative">
                 <Image
-                  src="/images/due_letti_singoli.jpg"
+                  src="/images/struttura/due_letti_singoli.jpg"
                   alt="Immagine della struttura 2"
                   layout="fill"
                   objectFit="cover"
@@ -116,44 +115,94 @@ export default function Home({ data }) {
             <SwiperSlide>
               <div className="w-full h-full relative">
                 <Image
-                  src="/images/letto_singola.jpg"
+                  src="/images/struttura/tre_letti_singoli.jpg"
                   alt="Immagine della struttura 3"
                   layout="fill"
                   objectFit="cover"
                 />
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/letto_matrimoniale_letto_singolo.jpg"
+                  alt="Immagine della struttura 4"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
           </Swiper>
+        </div>
 
-          {/* Stile personalizzato per i controlli */}
-          <style jsx global>{`
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6 mb-8 text-center">
+            Le camere
+          </h2>
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6">
+            <p className="mb-8 text-base sm:text-[1.313rem] text-primary">
+              I nostri confortevoli alloggi vi offrono una straordinaria e
+              indimenticabile esperienza di soggiorno in riva al mare. Ogni
+              camera è dotata di servizi privati, aria condizionata,
+              asciugacapelli e Wi-Fi gratuito.
+            </p>
+            <p className="mb-8 text-base sm:text-[1.313rem] text-primary">
+              Il Soggiorno Marino Don Bosco dispone di diverse soluzioni pensate
+              ad hoc per le famiglie e per i bambini: dalla camera singola a
+              quella familiare.
+            </p>
+            <p className="mb-4 text-base sm:text-[1.313rem] text-primary">
+              Il nostro impegno nel rispettare la pulizia delle camere e degli
+              ambienti comuni sarà rigoroso e costante nel corso di tutta la
+              stagione. Ad ogni ospite verrà garantito il cambio dei
+              coprimaterassi e copricuscini - usa e getta - per l'intero
+              soggiorno.
+            </p>
+          </div>
+        </div>
+
+        {/* Stile personalizzato per i controlli */}
+        <style jsx global>{`
+          .swiper-button-next,
+          .swiper-button-prev {
+            width: 40px !important;
+            height: 40px !important;
+            background-color: #0265a5 !important;
+            border-radius: 50% !important;
+            color: white !important;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+            transition: all 0.3s ease !important;
+          }
+
+          .swiper-button-next:hover,
+          .swiper-button-prev:hover {
+            background-color: #035990 !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15) !important;
+          }
+
+          .swiper-button-next:after,
+          .swiper-button-prev:after {
+            font-size: 16px !important;
+            font-weight: bold !important;
+          }
+
+          .swiper-pagination-bullet-active {
+            background-color: #0265a5 !important;
+          }
+
+          @media (max-width: 767px) {
             .swiper-button-next,
             .swiper-button-prev {
-              width: 32px !important;
-              height: 32px !important;
-              background-color: #048be6 !important;
-              border-radius: 50% !important;
-              color: white !important;
+              display: none !important;
             }
+          }
 
-            .swiper-button-next:after,
-            .swiper-button-prev:after {
-              font-size: 14px !important;
-              font-weight: bold !important;
-            }
-
-            .swiper-pagination-bullet-active {
-              background-color: #048be6 !important;
-            }
-
-            @media (max-width: 767px) {
-              .swiper-button-next,
-              .swiper-button-prev {
-                display: none !important;
-              }
-            }
-          `}</style>
-        </div>
+          .swiper-custom {
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+        `}</style>
       </div>
     </Layout>
   );
