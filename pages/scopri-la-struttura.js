@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import PhotoGallery from "@/cc/photogallery";
 
 export async function getStaticProps() {
   let res = await fetch(
@@ -160,7 +161,7 @@ export default function Home({ data }) {
             </p>
           </div>
         </div>
-
+<PhotoGallery />
         {/* Stile personalizzato per i controlli */}
         <style jsx global>{`
           .swiper-button-next,
