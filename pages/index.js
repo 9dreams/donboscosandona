@@ -31,12 +31,6 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <LandingHero
-        opacity={0.5}
-        title="Emporio Solidale Basso Piave"
-        description="Scopri un mondo  "
-        imageUrl="images/landing.jpg"
-      />
       <Featured data={data} limit={4} defaultTag="scuola" />
 
       <div className="bg-gray-100 py-10">

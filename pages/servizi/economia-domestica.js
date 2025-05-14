@@ -47,10 +47,10 @@ export default function Servizi() {
           </div>
         </div>
 
-        <div className="w-full bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
+        <div className="w-full bg-[url('')] bg-repeat bg-center">
           <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
             <a href="/" className="mb-4 md:mb-0">
-              <p className="text-sm text-white">Emporio solidale</p>
+              <p className="text-sm text-black">Emporio solidale</p>
             </a>
             <p className="ml-0 md:ml-12 lg:ml-24 text-sm text-black">
               Economia domestica
@@ -60,22 +60,22 @@ export default function Servizi() {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="flex flex-col px-5 md:px-10 lg:pl-64 pt-8 md:pt-14 pb-10 md:pb-20 gap-y-4 w-full lg:w-1/2">
               <a href="/">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl text-white hover:text-gray-300 transition-colors duration-200">
+                <h1 className="text-2xl md:text-3xl  text-black lg:text-4xl  hover:text-gray-300 transition-colors duration-200">
                   Corso di economia domestica
                 </h1>
               </a>
-              <p className="text-sm md:text-md text-white leading-relaxed">
+              <p className="text-sm md:text-md text-black leading-relaxed">
                 È un laboratorio per la promozione delle conoscenze degli
                 aspetti pratici della vita di famiglia.
               </p>
-              <p className="text-sm md:text-md text-white leading-relaxed">
+              <p className="text-sm md:text-md text-black leading-relaxed">
                 È rivolto in special modo a quelle persone, uomini o donne, che
                 provenendo da paesi lontani, con usi e costumi molto diversi dal
                 nostro, si trovano a volte in difficoltà nel gestire soprattutto
                 i figli che si devono integrare con una quotidianità diversa da
                 quella abituale.
               </p>
-              <p className="text-sm md:text-md text-white leading-relaxed">
+              <p className="text-sm md:text-md text-black leading-relaxed">
                 Accompagnati da volontarie e personale specializzato, vengono a
                 conoscenza di come si effettuano le pulizie di casa e con quali
                 prodotti adeguati; come prendersi cura dei bambini e degli
@@ -83,7 +83,7 @@ export default function Servizi() {
                 bilancio familiare; inoltre tecniche base e cucinare piatti
                 italiani.
               </p>
-              <p className="text-sm md:text-md text-white leading-relaxed">
+              <p className="text-sm md:text-md text-black leading-relaxed">
                 Queste semplici nozioni possono essere anche di grande aiuto per
                 poter trovare un lavoro fuori casa, contribuendo così al maggior
                 sostentamento

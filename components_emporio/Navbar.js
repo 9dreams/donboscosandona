@@ -28,7 +28,7 @@ export default function Navbar() {
   };
 
   const menuItems = [
-    { name: 'Home Page', link: '/', class: 'text-[#C7AE6A]' },
+    { name: 'Home Page', link: '/', class: 'text-white' },
     { name: 'Chi Siamo', link: 'chisiamo', class: 'text-white' },
     { name: 'Dove Siamo', link: 'dovesiamo', class: 'text-white' },
     { name: 'Trasparenza', link: 'trasparenza', class: 'text-white' },
@@ -59,20 +59,30 @@ export default function Navbar() {
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.link}
-                whileHover={{ scale: 1.1 }}
-                className={`${item.class} font-semibold text-sm transition-colors duration-200 hover:text-[#C7AE6A]`}
-              >
-                {item.name}
-              </motion.a>
-            ))}
+          <div className="hidden md:flex flex-1 justify-center items-center space-x-8">
+            {menuItems.map((item, index) => {
+              const isActive =
+                (item.link === '/' && router.pathname === '/') ||
+                (item.link !== '/' && router.pathname === `/${item.link}`);
+              return (
+                <motion.a
+                  key={index}
+                  href={item.link}
+                  whileHover={{ scale: 1.1 }}
+                  className={`${
+                    isActive
+                      ? 'text-[#C7AE6A]'
+                      : item.class
+                  } font-semibold text-sm transition-colors duration-200 hover:text-[#C7AE6A]`}
+                >
+                  {item.name}
+                </motion.a>
+              );
+            })}
           </div>
 
           {/* Search Bar */}
+          {/*
           <div className="hidden md:flex items-center">
             <form onSubmit={handleSearch} className="relative">
               <input
@@ -94,6 +104,7 @@ export default function Navbar() {
               </button>
             </form>
           </div>
+          */}
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -117,20 +128,30 @@ export default function Navbar() {
             className="md:hidden bg-[#8f1d1d]"
           >
             <div className="px-4 pt-2 pb-6 space-y-3">
-              {menuItems.map((item, index) => (
-                <motion.a
-                  key={index}
-                  href={item.link}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`block py-2 px-4 rounded-lg ${item.class} font-medium hover:bg-[#780202] transition-colors duration-200`}
-                >
-                  {item.name}
-                </motion.a>
-              ))}
+              {menuItems.map((item, index) => {
+                const isActive =
+                  (item.link === '/' && router.pathname === '/') ||
+                  (item.link !== '/' && router.pathname === `/${item.link}`);
+                return (
+                  <motion.a
+                    key={index}
+                    href={item.link}
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`block py-2 px-4 rounded-lg ${
+                      isActive
+                        ? 'text-[#C7AE6A]'
+                        : item.class
+                    } font-medium hover:bg-[#780202] transition-colors duration-200`}
+                  >
+                    {item.name}
+                  </motion.a>
+                );
+              })}
               
               {/* Mobile Search */}
+              {/*
               <form onSubmit={handleSearch} className="relative mt-4 px-4">
                 <input
                   type="text"
@@ -146,6 +167,7 @@ export default function Navbar() {
                   <Search />
                 </button>
               </form>
+              */}
             </div>
           </motion.div>
         )}

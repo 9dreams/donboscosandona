@@ -1,49 +1,16 @@
+import Layout from "../components_emporio/Layout";
+import React from "react";
+
+
 export default function Servizi() {
   return (
-    <>
+    <Layout>
     <title>Servizi - Emporio Solidale</title>
     <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
 
     <div class="flex flex-col">
-      <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between mb-10">
-        <div class="flex justify-center md:ml-10">
-          <img
-            src="/images/Logo_emporio.png"
-            class="w-24 md:w-[140px] rounded-full"
-            alt="Logo"
-          />
-        </div>
-        <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
-          {[
-            { name: "Home Page", link: "/", class: "text-white" },
-            { name: "Chi Siamo", link: "chisiamo", class: "text-white" },
-            { name: "Dove Siamo", link: "dovesiamo", class: "text-white" },
-            { name: "Trasparenza", link: "trasparenza", class: "text-white" },
-            {
-              name: "Servizi",
-              link: "servizi",
-              class: "text-[#C7AE6A]",
-            },
-          ].map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              class={`font-bold hover:text-[#C7AE6A] cursor-pointer ${item.class}`}
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
-        <div class="mt-3 md:mt-0 md:mr-10 flex justify-center items-center w-full md:w-auto">
-          <input
-            type="text"
-            placeholder="Ricerca"
-            class="shadow-lg rounded-md placeholder:text-white placeholder:font-bold p-2 text-white font-semibold bg-[#8f1d1d] w-full md:w-auto"
-          />
-        </div>
-      </div>
 
-      <div class="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20 mx-auto">
+      <div class="flex flex-col 2xl:flex-row w-11/12 md:w-9/10 mt-20 gap-5 justify-center mb-20 mt-32 mx-auto">
         <div class="flex flex-col w-full 2xl:w-11/12">
           <h1 class="font-semibold text-3xl text-[#780202] mb-10 text-center">
             I nostri servizi
@@ -295,6 +262,6 @@ export default function Servizi() {
         </div>
       </footer>
     </div>
-    </>
+    </Layout>
   );
 }

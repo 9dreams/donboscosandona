@@ -47,10 +47,10 @@ export default function Servizi() {
           </div>
         </div>
 
-        <div className="w-screen bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
+        <div className="w-screen bg-[url('')] bg-repeat bg-center">
           <div className="flex flex-row p-20 pb-[31rem]">
             <a href="/">
-              <p className="text-sm text-white">Emporio Solidale</p>
+              <p className="text-sm text-black">Emporio Solidale</p>
             </a>
             <p className="ml-24 text-sm color-[#272833]">
               Corso Volontari 2019

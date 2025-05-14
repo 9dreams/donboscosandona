@@ -47,10 +47,10 @@ export default function Servizi() {
           </div>
         </div>
 
-        <div className="w-full bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
+        <div className="w-full bg-[url('')] bg-repeat bg-center">
           <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
             <a href="/" className="mb-4 md:mb-0">
-              <p className="text-sm text-white">Emporio Solidale</p>
+              <p className="text-sm text-black">Emporio Solidale</p>
             </a>
             <p className="ml-0 md:ml-12 lg:ml-24 text-sm text-black">
               Corso di cucito
@@ -60,16 +60,16 @@ export default function Servizi() {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="flex flex-col px-5 md:px-10 lg:pl-64 pt-8 md:pt-14 pb-10 md:pb-20 gap-y-4 w-full lg:w-1/2">
               <a href="/">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl text-white hover:text-gray-300 transition-colors duration-200">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl text-black hover:text-gray-300 transition-colors duration-200">
                   Corso di cucito
                 </h1>
               </a>
-              <p className="text-sm md:text-md text-white leading-relaxed">
+              <p className="text-sm md:text-md text-black leading-relaxed">
                 E’ un laboratorio base di formazione per imparare le primarie
                 tecniche di taglio e cucito, rammendo, uso di macchine da cucire
                 con l’ausilio di volontarie e personale specializzato.
               </p>
-              <p className="text-sm md:text-md text-white leading-relaxed">
+              <p className="text-sm md:text-md text-black leading-relaxed">
                 E’ un progetto di aiuto specifico, rispettoso delle potenzialità
                 e della dignità delle donne che decidono di frequentarlo,
                 contribuendo anche a creare relazioni e stimolare scambi

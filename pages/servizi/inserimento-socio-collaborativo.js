@@ -50,7 +50,7 @@ export default function Servizi() {
         <div className="w-full bg-[url('/images/servizi_favicon/sfondo.png')] bg-repeat bg-center">
           <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
             <a href="/" className="mb-4 md:mb-0">
-              <p className="text-sm text-white">Emporio Solidale</p>
+              <p className="text-sm text-black">Emporio Solidale</p>
             </a>
             <p className="ml-0 md:ml-12 lg:ml-24 text-sm text-black">
               Inserimento socio collaborativo
@@ -60,18 +60,18 @@ export default function Servizi() {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="flex flex-col px-5 md:px-10 lg:pl-64 pt-8 md:pt-14 pb-10 md:pb-20 gap-y-4 w-full lg:w-1/2">
               <a href="/">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl text-white hover:text-gray-300 transition-colors duration-200">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl text-black hover:text-gray-300 transition-colors duration-200">
                   Inserimento socio collaborativo
                 </h1>
               </a>
-              <p className="text-sm md:text-md text-white leading-relaxed">
+              <p className="text-sm md:text-md text-black leading-relaxed">
                 Attraverso il contatto con la rete associativa, l’Emporio si
                 propone di aumentare l’efficienza dei processi di inserimento
                 lavorativo attraverso il sostegno della cooperazione sociale ed
                 imprenditoriale, valorizzando le potenzialità lavorative della
                 persona.
               </p>
-              <p className="text-sm md:text-md text-white leading-relaxed">
+              <p className="text-sm md:text-md text-black leading-relaxed">
                 In costante dialogo con i Servizi Sociali dei Comuni, si
                 propongono occasioni di lavoro a soggetti ad alto rischio di
                 emarginazione sociale, coinvolgendoli anche all’interno
