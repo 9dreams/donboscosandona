@@ -13,24 +13,99 @@ export default function PhotoGallery() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 1" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 2" },
-    { src: "/images/struttura/idue_letti_singoli.jpg", alt: "Immagine 3" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 4" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 5" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 6" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 7" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 8" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 9" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 10" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 11" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 12" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 13" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 14" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 15" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 16" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 17" },
-    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 18" },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno.jpg",
+      alt: "Immagine 1",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_natura.jpg",
+      alt: "Immagine 2",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_prato.jpg",
+      alt: "Immagine 3",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_fiori.jpg",
+      alt: "Immagine 4",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_gradangolare.jpg",
+      alt: "Immagine 5",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_piccolo_parco.jpg",
+      alt: "Immagine 6",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_natura_con_verde.jpg",
+      alt: "Immagine 7",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_focus_fiori.jpg",
+      alt: "Immagine 8",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno__.jpg",
+      alt: "Immagine 9",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_soggiorno.jpg",
+      alt: "Immagine 10",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_soggiorno_presenza_verde.jpg",
+      alt: "Immagine 11",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_natura_soggiorno_scorcio_spiaggia.jpg",
+      alt: "Immagine 12",
+    },
+    {
+      src: "/images/struttura/photogallery/ombrelloni_soggiorno.jpg",
+      alt: "Immagine 13",
+    },
+    {
+      src: "/images/struttura/photogallery/ombrelloni_sdraie_soggiorno_.jpg",
+      alt: "Immagine 14",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_soggiorno_esterna.jpg",
+      alt: "Immagine 15",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_soggiorno_presenza_natura.jpg",
+      alt: "Immagine 16",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_parco_giochi.jpg",
+      alt: "Immagine 17",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_esterno_soggiorno_marino.jpg",
+      alt: "Immagine 18",
+    },
+    {
+      src: "/images/struttura/photogallery/vista_ambiente_soggiorno_parcheggio.jpg",
+      alt: "Immagine 19",
+    },
+    { src: "/images/struttura/photogallery/vista_natura_soggiorno.jpg", alt: "Immagine 20" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 21" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 22" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 23" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 24" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
+    { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
     { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
   ];
 
