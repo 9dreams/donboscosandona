@@ -109,8 +109,14 @@ export default function PhotoGallery() {
       src: "/images/struttura/photogallery/cappellina.jpg",
       alt: "Immagine 24",
     },
-    { src: "/images/struttura/photogallery/vista_panoramica_lettini_ombrellini_soggiorno.jpg", alt: "Immagine 25" },
-    { src: "/images/struttura/photogallery/dettaglio_ombrellone_soggiorno.jpg", alt: "Immagine 26" },
+    {
+      src: "/images/struttura/photogallery/vista_panoramica_lettini_ombrellini_soggiorno.jpg",
+      alt: "Immagine 25",
+    },
+    {
+      src: "/images/struttura/photogallery/dettaglio_ombrellone_soggiorno.jpg",
+      alt: "Immagine 26",
+    },
     { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
     { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
     { src: "/images/struttura/due_letti_singoli.jpg", alt: "Immagine 19" },
