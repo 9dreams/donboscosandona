@@ -50,7 +50,8 @@ export default function Home({ data }) {
         titoloNews="OFFERTE"
         testoContattiSuMisura="Contatti per prodotti su misura"
         maildogedivenezia="info@soggiornomarinobosco.it"
-        numeroditelefono="+39 041 530 23 63"
+        numeroditelefono="       +39 0421 299 158
+"
         posizioneSOGGIORNO="Via Selva Rosata, 61"
         testoTelefono="Tel"
         testoEmail="E-Mail"

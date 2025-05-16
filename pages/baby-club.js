@@ -4,7 +4,6 @@ import Navbar from "@/cc/Navbar";
 import Layout from "@/components/Layout";
 import Featured from "@/components/Featured";
 import Head from "next/head";
-import Image from "next/image";
 
 export async function getStaticProps() {
   let res = await fetch(
@@ -41,8 +40,6 @@ export default function Home({ data }) {
         testo5="STRUTTURA"
         testo6="OFFERTE"
         testo7="CARTA DEI SERVIZI"
-        telefonoSuMisura="+39 041 530 23 63"
-        faxSuMisura="+39 041 530 40 16"
         emailSuMisura="info@soggiornomarinobosco.it"
         titoloDoge="Soggiorno Marino Don Bosco"
         titoloHome="ALL INCLUSIVE"
@@ -53,7 +50,8 @@ export default function Home({ data }) {
         titoloNews="OFFERTE"
         testoContattiSuMisura="Contatti per prodotti su misura"
         maildogedivenezia="info@soggiornomarinobosco.it"
-        numeroditelefono="+39 041 530 23 63"
+        numeroditelefono="       +39 0421 299 158
+"
         posizioneSOGGIORNO="Via Selva Rosata, 61"
         testoTelefono="Tel"
         testoEmail="E-Mail"

@@ -11,7 +11,7 @@ export const menu = [
   { href: "/", label: "ALL INCLUSIVE", isActive: true },
   { href: "/escursioni-giornaliere", label: "BED & BREAKFAST" },
   { href: "/servizi-professionali", label: "GRUPPI" },
-  { href: "/chi-siamo", label: "CHI SIAMO" },
+  { href: "/storia", label: "CHI SIAMO" },
   { href: "/la-flotta", label: "STRUTTURA" },
   { href: "/news", label: "OFFERTE" },
   { href: "/news", label: "CARTA DEI SERVIZIto7" },
