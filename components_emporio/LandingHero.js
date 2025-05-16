@@ -1,95 +1,86 @@
-import React from "react";
-import { Container, Grid, Paper, Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
-export default function LandingHero({ imageUrl, imageMobileUrl, opacity, title, description, buttonUrl, buttonText }) {
+export default function LandingHero({ title, description, imageUrl, opacity }) {
   return (
-    <Container maxWidth disableGutters sx={{ height: "100vh", width: "100%" }}>
-      <Paper
-        sx={{
-          position: "relative",
-          color: "#fff",
-          height: "100vh",
-          backgroundImage: `url(${imageMobileUrl || imageUrl})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          transition: "background-image 1s ease-in-out",
-        }}
+    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Parallax Effect */}
+      <motion.div
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 2 }}
+        className="absolute inset-0 z-0"
       >
-        {/* Overlay scuro per migliorare leggibilità */}
-        <Box sx={{ 
-          position: "absolute", 
-          top: 0, 
-          bottom: 0, 
-          right: 0, 
-          left: 0, 
-          backgroundColor: `rgba(0,0,0,${opacity})`, 
-          zIndex: 1
-        }} />
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${imageUrl})`,
+            filter: `brightness(${1 - opacity})`,
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-[#780202]/90" />
+      </motion.div>
 
-        {/* Contenuto principale */}
-        <Grid container sx={{ height: "100%", alignItems: "center", justifyContent: "center" }}>
-          <Grid item md={8} xs={10} sx={{ textAlign: "center" }}>
-            {/* Titolo con z-index maggiore per stare sopra alla box */}
-            <motion.div initial={{ y: -20 }} animate={{ y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
-              <Typography
-                component="h1"
-                variant="h3"
-                gutterBottom
-                sx={{
-                  fontWeight: 700,
-                  fontSize: { xs: "2.5rem", sm: "3.5rem" },
-                  lineHeight: 1.2,
-                  textShadow: "2px 2px 10px rgba(0,0,0,0.7)",
-                  zIndex: 2,
-                  position: "relative",
-                }}
-              >
-                {title}
-              </Typography>
-            </motion.div>
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+        >
+          {title}
+        </motion.h1>
+        
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="text-xl md:text-2xl text-gray-200 mb-12 max-w-2xl mx-auto"
+        >
+          {description}
+        </motion.p>
 
-            {/* Descrizione con animazione e maggiore opacità */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
-              <Typography 
-                component="h5" 
-                sx={{ 
-                  fontSize: "1.1rem", 
-                  letterSpacing: "1px", 
-                  zIndex: 2,
-                  position: "relative",
-                }}
-              >
-                {description}
-              </Typography>
-            </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.1 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            href="/servizi"
+            className="px-8 py-4 bg-[#C7AE6A] text-black font-bold rounded-full 
+                     hover:bg-[#d4bc7c] transform hover:scale-105 transition-all duration-300
+                     shadow-lg hover:shadow-xl text-lg"
+          >
+            Scopri i Servizi
+          </a>
+          <a
+            href="/chisiamo"
+            className="px-8 py-4 bg-white/10 text-white font-bold rounded-full
+                     backdrop-blur-sm hover:bg-white/20 transform hover:scale-105 
+                     transition-all duration-300 border-2 border-white/30 text-lg"
+          >
+            Chi Siamo
+          </a>
+        </motion.div>
+      </div>
 
-            {/* Pulsante opzionale con animazione e maggiore opacità */}
-            {buttonUrl && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }}>
-                <Button
-                  variant="contained"
-                  size="large"
-                  href={buttonUrl}
-                  sx={{
-                    marginTop: "1rem",
-                    borderRadius: "2rem",
-                    paddingX: "3rem",
-                    transition: "all 0.3s ease",
-                    backgroundColor: "#780202",
-                    "&:hover": { backgroundColor: "#5a0101", transform: "scale(1.05)" },
-                    zIndex: 2,
-                  position: "relative", 
-                  }}
-                >
-                  {buttonText}
-                </Button>
-              </motion.div>
-            )}
-          </Grid>
-        </Grid>
-      </Paper>
-    </Container>
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ 
+          duration: 1,
+          delay: 1.5,
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <div className="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/70 rounded-full mt-2" />
+        </div>
+      </motion.div>
+    </div>
   );
 }

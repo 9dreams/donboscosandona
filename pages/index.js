@@ -6,6 +6,7 @@ import Download from "../components_emporio/Download";
 import Anziani from "../components_emporio/Anziani";
 import Collab from "../components_emporio/Collab";
 import Featured from "../components/Featured";
+import Footer from "../components/Footer";
 
 export default function Home({ data }) {
   const date = [
@@ -31,26 +32,16 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <LandingHero
-        opacity={0.5}
-        title="Emporio Solidale Basso Piave"
-        description="Scopri un mondo  "
-        imageUrl="images/landing.jpg"
-      />
       <Featured data={data} limit={4} defaultTag="scuola" />
 
-      {/* Aggiunto padding e sfondo per testare Tailwind */}
       <div className="bg-gray-100 py-10">
         <Calendar
-          title="Avvisi Importanti"
           description="Scopri tutti gli avvisi"
           cardWidth={3}
           events={date}
         />
         <News title="News" data={data} limit={6} />
-        <Download />
 
-        {/* Contenitore con maggiore padding per evitare sovrapposizioni */}
         <div className="relative z-10 mt-12">
           <Anziani />
         </div>

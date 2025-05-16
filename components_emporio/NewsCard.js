@@ -1,14 +1,6 @@
-import {
-  Container,
-  Typography,
-  Card,
-  CardActionArea,
-  CardContent,
-  Chip,
-  Stack,
-} from '@mui/material';
-
+import { Typography } from '@mui/material';
 import Image from 'next/image';
+import { CalendarToday, LocalOffer } from '@mui/icons-material';
 
 function readMore(string, maxWords) {
   if (string) {
@@ -21,70 +13,84 @@ function readMore(string, maxWords) {
       string += '...';
     }
   }
-
   return string;
 }
 
 export default function NewsCard({ post, aspectRatio, defaultTag }) {
   return (
-    <CardActionArea
-      component='a'
-      href={(post.articolo && '/articoli/' + post.id) || post.link || post.allegato}
-      disabled={!post.articolo && !post.link && !post.allegato}
-      className="mb-8" // Tailwind CSS class for margin bottom
-    >
-      <Card sx={{ display: 'block', minHeight: '33rem' }}>
-        <Container
-          sx={{
-            aspectRatio: aspectRatio,
-            position: 'relative',
-            overflow: 'hidden',
-          }}
+    <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl h-full">
+      {/* Immagine */}
+      <div className="relative h-48 w-full overflow-hidden">
+        <Image
+          src={post.immagine}
+          alt={post.titolo}
+          layout="fill"
+          objectFit="cover"
+          className="transform transition-transform duration-500 hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+        
+        {/* Data e ora */}
+        <div className="absolute bottom-4 left-4 flex items-center gap-4 text-white text-sm">
+          <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1">
+            <CalendarToday sx={{ fontSize: 16 }} />
+            <span>
+              {new Date(post.pubblicazione).toLocaleDateString('it-IT') === 'Invalid Date'
+                ? 'Data non inserita'
+                : new Date(post.pubblicazione).toLocaleDateString('it-IT')}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Contenuto */}
+      <div className="p-6 min-h-[17rem]">
+        {/* Titolo */}
+        <h2 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 hover:text-[#780202] transition-colors duration-300">
+          {post.titolo}
+        </h2>
+
+        {/* Abstract */}
+        <p className="text-gray-600 mb-6 line-clamp-3">
+          {readMore(post.abstract, 40)}
+        </p>
+
+        {/* Link */}
+        <a
+          href={(post.articolo && '/articoli/' + post.id) || post.link || post.allegato}
+          className="inline-flex items-center text-[#780202] font-semibold hover:text-[#b31217] transition-colors duration-300"
         >
-          <Image
-            src={post.immagine}
-            alt={post.titolo}
-            style={{
-              width: '100%',
-              display: 'block',
-              objectFit: 'cover',
-            }}
-            fill={true}
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-          />
-        </Container>
-        <CardContent sx={{ flex: 1 }}>
-          {post.tag && post.tag !== defaultTag ? (
-            <Stack direction='row' spacing={1} sx={{ marginBottom: '10px' }}>
-              {post.tag.split(',').map((tag, index) => (
-                <Chip label={tag} color='primary' size='small' key={index} />
-              ))}
-            </Stack>
-          ) : (
-            <Container sx={{ height: '2rem' }} />
-          )}
-          <Typography component='h2' variant='h5' className="text-lg font-semibold">
-            {post.titolo}
-          </Typography>
-          <Typography variant='subtitle1' color='text.secondary' className="text-sm">
-            {post.pubblicazione}
-          </Typography>
-          <Typography variant='subtitle1' paragraph className="text-base">
-            {readMore(post.abstract, 40)}
-          </Typography>
-          {post.articolo && (
-            <Typography variant='subtitle1' color='primary' className="text-blue-600">
-              Continua a leggere...
-            </Typography>
-          )}
-          {!post.articolo && post.allegato && (
-            <Typography variant='subtitle1' color='primary' className="text-blue-600">
-              Scarica l'allegato
-            </Typography>
-          )}
-        </CardContent>
-      </Card>
-    </CardActionArea>
+          {post.articolo ? 'Continua a leggere' : (post.allegato ? 'Scarica l\'allegato' : 'Scopri di più')}
+          <svg
+            className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </a>
+
+        {/* Tag */}
+        {post.tag && post.tag !== defaultTag && (
+          <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
+            {post.tag.split(',').map((tag, index) => (
+              <span
+                key={index}
+                className="px-2 py-0.5 bg-red-50 text-[#780202] rounded-full text-xs font-medium hover:bg-red-100 transition-colors duration-300 cursor-pointer"
+              >
+                #{tag.trim().toLowerCase()}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
