@@ -57,12 +57,12 @@ export default function Home({ data }) {
         logoUrl="/images/logo_navbar.png"
       />
       <div className="flex items-center justify-center mb-4">
-        <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+        <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
           Ospitalità per gruppi
         </h2>
       </div>
       <div className="container mx-auto max-w-4xl px-4 sm:px-6">
-        <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal">
+        <p className="text-base sm:text-[1.313rem] text-primary mb-4 leading-normal">
           <span className="font-bold">Da metà settembre a metà maggio</span>{" "}
           offriamo la possibilità ai gruppi (a partire da 30 persone sino a 150)
           di soggiornare presso la nostra struttura con cucina attrezzata, sala

@@ -371,6 +371,157 @@ export default function Home({ data }) {
             </p>
           </div>
         </div>
+        <div className="mb-12 relative">
+          <Swiper
+            modules={[Navigation, Pagination, EffectFade]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={{
+              enabled: false,
+            }}
+            pagination={{
+              enabled: true,
+              clickable: true,
+            }}
+            breakpoints={{
+              768: {
+                navigation: {
+                  enabled: true,
+                },
+              },
+            }}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            style={{ height: "450px", width: "100%" }}
+            className="rounded-xl overflow-hidden swiper-custom"
+          >
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/cappellina/cappellina.jpg"
+                  alt="Immagine della struttura 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/cappellina/cappellina_vista_altare.jpg"
+                  alt="Immagine della struttura 2"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/giardino/campo_pallavolo.jpg"
+                  alt="Immagine della struttura 3"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6 mb-8 text-center">
+            La cappellina
+          </h2>
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6">
+            <p className="mb-8 text-base sm:text-[1.313rem] text-primary">
+              In vacanza, oltre a rigenerare la mente, puoi rigenerare anche il
+              tuo spirito! Il Soggiorno Marino Don Bosco è dotato di una
+              cappellina per coltivare il vostro rapporto con il Signore: un
+              sacerdote della nostra casa salesiana di San Dona’ di Piave
+              celebrerà la messa quotidiana e sarà a disposizione per tutta la
+              durata della stagione.
+            </p>
+          </div>
+        </div>
+        <div className="mb-12 relative">
+          <Swiper
+            modules={[Navigation, Pagination, EffectFade]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={{
+              enabled: false,
+            }}
+            pagination={{
+              enabled: true,
+              clickable: true,
+            }}
+            breakpoints={{
+              768: {
+                navigation: {
+                  enabled: true,
+                },
+              },
+            }}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            style={{ height: "450px", width: "100%" }}
+            className="rounded-xl overflow-hidden swiper-custom"
+          >
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/salaconferenze/area_sala_conferenze.jpg"
+                  alt="Immagine area sala conferenze "
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/salaconferenze/sala_confereze_dettaglio_calcetto.jpg"
+                  alt="Immagine sala conferenze dettaglio calcetto balila"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/bar/sala_bar_grandangolare.jpg"
+                  alt="Immagine della struttura 2"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/bar/esterno_bar.jpg"
+                  alt="Immagine della struttura 2"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6 mb-8 text-center">
+            Le sala conferenze e relax
+          </h2>
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6">
+            <p className="mb-8 text-base sm:text-[1.313rem] text-primary">
+              L’ampio salone della nostra struttura e le sale relax vi
+              consentiranno di godere di preziosi momenti di tranquillità e
+              riposo, lettura e studio. Inoltre, il nostro salone conferenze è
+              l’ideale per l’organizzazione dei vostri eventi e potrà accogliere
+              numerosi gruppi che desiderano promuovere le loro iniziative.
+            </p>
+          </div>
+        </div>
         <PhotoGallery />
         {/* Stile personalizzato per i controlli */}
         <style jsx global>{`
