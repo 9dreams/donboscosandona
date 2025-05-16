@@ -6,6 +6,7 @@ import Download from "../components_emporio/Download";
 import Anziani from "../components_emporio/Anziani";
 import Collab from "../components_emporio/Collab";
 import Featured from "../components/Featured";
+import Footer from "../components/Footer";
 
 export default function Home({ data }) {
   const date = [
