@@ -96,7 +96,7 @@ export default function Home({ data }) {
             <SwiperSlide>
               <div className="w-full h-full relative">
                 <Image
-                  src="/images/letto_singola.jpg"
+                  src="/images/struttura/letto_singolo_first_image.jpg"
                   alt="Immagine della struttura 1"
                   layout="fill"
                   objectFit="cover"
@@ -152,16 +152,131 @@ export default function Home({ data }) {
               ad hoc per le famiglie e per i bambini: dalla camera singola a
               quella familiare.
             </p>
-            <p className="mb-4 text-base sm:text-[1.313rem] text-primary">
-              Il nostro impegno nel rispettare la pulizia delle camere e degli
-              ambienti comuni sarà rigoroso e costante nel corso di tutta la
-              stagione. Ad ogni ospite verrà garantito il cambio dei
-              coprimaterassi e copricuscini - usa e getta - per l'intero
-              soggiorno.
+          </div>
+        </div>
+        <div className="mb-12 relative">
+          <Swiper
+            modules={[Navigation, Pagination, EffectFade]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={{
+              enabled: false,
+            }}
+            pagination={{
+              enabled: true,
+              clickable: true,
+            }}
+            breakpoints={{
+              768: {
+                navigation: {
+                  enabled: true,
+                },
+              },
+            }}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            style={{ height: "450px", width: "100%" }}
+            className="rounded-xl overflow-hidden swiper-custom"
+          >
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/giardino/giardino1.jpg"
+                  alt="Immagine della struttura 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/giardino/campo_basket.jpg"
+                  alt="Immagine della struttura 2"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/giardino/campo_pallavolo.jpg"
+                  alt="Immagine della struttura 3"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6 mb-8 text-center">
+            Il giardino
+          </h2>
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6">
+            <p className="mb-8 text-base sm:text-[1.313rem] text-primary">
+              La struttura è immersa nel verde, circondata da un ampio giardino
+              con un campo da calcio, uno da basket e uno da pallavolo. Inoltre,
+              nel nostro parco giochi attrezzato, i bambini potranno divertirsi
+              e giocare insieme in tutta sicurezza. I nostri gazebo con sedie
+              consentiranno a coloro che lo desiderano di riposarsi o di
+              ritrovarsi insieme per godersi la serata con gli amici.
+            </p>
+            <p className="mb-8 text-base sm:text-[1.313rem] text-primary">
+              I nostri gazebo con sedie consentiranno a coloro che lo desiderano
+              di riposarsi o di ritrovarsi insieme per godersi la serata con gli
+              amici.
             </p>
           </div>
         </div>
-<PhotoGallery />
+        <div className="mb-12 relative">
+          <Swiper
+            modules={[Navigation, Pagination, EffectFade]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={{
+              enabled: false,
+            }}
+            pagination={{
+              enabled: true,
+              clickable: true,
+            }}
+            breakpoints={{
+              768: {
+                navigation: {
+                  enabled: true,
+                },
+              },
+            }}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            style={{ height: "450px", width: "100%" }}
+            className="rounded-xl overflow-hidden swiper-custom"
+          >
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/spiaggia/spiaggia_soggiorno_marino_privata.jpg"
+                  alt="Immagine della struttura 2"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-full relative">
+                <Image
+                  src="/images/struttura/spiaggia/spiaggia_privata_con_ombrelloni.jpg"
+                  alt="Immagine della struttura 3"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <PhotoGallery />
         {/* Stile personalizzato per i controlli */}
         <style jsx global>{`
           .swiper-button-next,
@@ -195,6 +310,10 @@ export default function Home({ data }) {
           @media (max-width: 767px) {
             .swiper-button-next,
             .swiper-button-prev {
+              display: none !important;
+            }
+
+            .swiper-pagination-bullet {
               display: none !important;
             }
           }

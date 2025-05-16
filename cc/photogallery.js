@@ -155,7 +155,7 @@ export default function PhotoGallery() {
     <div className="container mx-auto max-w-4xl py-12 px-4">
       {/* Titolo della galleria */}
       <h2 className="text-3xl md:text-4xl text-gray-800 font-medium text-center mb-8">
-        Galleria Fotografica
+        Photogallery
       </h2>
 
       {/* Griglia di immagini */}

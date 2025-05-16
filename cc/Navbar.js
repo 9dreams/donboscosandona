@@ -76,11 +76,7 @@ export default function Navbar({
           <div className="hidden lg:flex gap-3 xl:gap-6 2xl:gap-12 items-center">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href}>
-                <span
-                  className={`hover:text-[#048BE6]`}
-                >
-                  {link.label}
-                </span>
+                <span className={`hover:text-[#048BE6]`}>{link.label}</span>
               </a>
             ))}
           </div>
