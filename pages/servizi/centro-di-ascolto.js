@@ -1,51 +1,13 @@
+import Layout from "components_emporio/Layout.js";
+import React from "react";
 export default function Servizi() {
   return (
-    <>
+    <Layout>
       <title>Centro di ascolto - Emporio Solidale</title>
       <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
 
       <div class="flex flex-col">
-        <div class="flex flex-col md:flex-row w-full bg-[#780202] p-3 items-center mx-auto border-b border-gray-300 justify-between">
-          <div class="flex justify-center md:ml-0 lg:ml-10 mb-2 md:mb-0">
-            <img
-              src="/images/Logo_emporio.png"
-              class="w-20 md:w-[120px] lg:w-[140px] rounded-full"
-              alt="Logo"
-            />
-          </div>
-          <div class="w-full md:w-7/12 flex flex-col md:flex-row gap-3 md:gap-6 items-center justify-center text-center">
-            {[
-              { name: "Home Page", link: "/", class: "text-white" },
-              { name: "Chi Siamo", link: "../chisiamo", class: "text-white" },
-              { name: "Dove Siamo", link: "../dovesiamo", class: "text-white" },
-              {
-                name: "Trasparenza",
-                link: "../trasparenza",
-                class: "text-white",
-              },
-              {
-                name: "Servizi",
-                link: "../servizi",
-                class: "text-[#C7AE6A]",
-              },
-            ].map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                class={`font-bold hover:text-[#C7AE6A] cursor-pointer ${item.class}`}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-          <div class="mt-3 md:mt-0 md:mr-0 lg:mr-10 flex justify-center items-center w-full md:w-auto">
-            <input
-              type="text"
-              placeholder="Ricerca"
-              class="shadow-lg rounded-md placeholder:text-white placeholder:font-bold p-2 text-white font-semibold bg-[#8f1d1d] w-full md:w-auto"
-            />
-          </div>
-        </div>
+      
 
         <div className="w-full bg-[url('')] bg-repeat bg-center">
           <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
@@ -226,6 +188,6 @@ export default function Servizi() {
           </div>
         </footer>
       </div>
-    </>
+    </Layout>
   );
 }
