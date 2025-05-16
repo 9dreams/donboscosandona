@@ -101,28 +101,30 @@ export default function Footer({
             </h3>
             <div className="flex space-x-4 justify-center md:justify-start">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/soggiornomarinodonbosco/"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
               >
                 <FaFacebook className="text-white w-6 h-6" />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/soggiornodonbosco"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
               >
                 <FaInstagram className="text-white w-6 h-6" />
               </a>
-              <a
-                href="https://twitter.com"
-                className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
-              >
-                <FaXTwitter className="text-white w-6 h-6" />
-              </a>
             </div>
 
             <div className="mt-6">
-              <p className="text-sm font-medium">{numeroTelefono}</p>
-              <p className="text-sm font-medium">{email}</p>
+              <p className="text-sm font-medium">
+                <a href={`tel:${numeroTelefono}`} className="hover:underline">
+                  {numeroTelefono}
+                </a>
+              </p>
+              <p className="text-sm font-medium">
+                <a href={`mailto:${email}`} className="hover:underline">
+                  {email}
+                </a>
+              </p>
             </div>
           </div>
 

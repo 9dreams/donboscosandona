@@ -4,7 +4,7 @@ import Navbar from "@/cc/Navbar";
 export const siteName = "Soggiorno Marino don Bosco - Duna Verde";
 export const siteTitle = "Soggiorno Marino don Bosco - Duna Verde";
 export const siteDescription =
-  "Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave";
+  "Soggiorno Marino don Bosco - Duna Verde - 61, 30013 Cavallino - Venezia";
 export const siteBaseUrl = "https://dev.donboscosandona.it";
 
 export const menu = [

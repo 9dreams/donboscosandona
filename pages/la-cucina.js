@@ -60,7 +60,7 @@ export default function Home({ data }) {
         logoUrl="/images/logo_navbar.png"
       />
       <div className="flex items-center justify-center mb-4">
-        <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+        <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
           La nostra cucina
         </h2>
       </div>
@@ -81,7 +81,10 @@ export default function Home({ data }) {
       </div>
       <div className="max-w-4xl container mx-auto px-4 sm:px-6 mb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-          <div className="relative rounded-lg overflow-hidden" style={{ height: "450px" }}>
+          <div
+            className="relative rounded-lg overflow-hidden"
+            style={{ height: "450px" }}
+          >
             <Image
               src="/images/cucina/dettaglio_frutta.jpg"
               alt="Buffet di antipasti e piatti freddi"
@@ -90,27 +93,36 @@ export default function Home({ data }) {
               sizes="(max-width: 640px) 100vw, 50vw"
             />
           </div>
-          <div className="relative rounded-lg overflow-hidden" style={{ height: "450px" }}>
+          <div
+            className="relative rounded-lg overflow-hidden"
+            style={{ height: "450px" }}
+          >
             <Image
-              src="/images/cucina/buffet2.jpg"
+              src="/images/cucina/dettaglio_piatto_di_mare.jpg"
               alt="Insalata di mare e piatti tipici"
               fill
               className="object-cover"
               sizes="(max-width: 640px) 100vw, 50vw"
             />
           </div>
-          <div className="relative rounded-lg overflow-hidden" style={{ height: "450px" }}>
+          <div
+            className="relative rounded-lg overflow-hidden"
+            style={{ height: "450px" }}
+          >
             <Image
-              src="/images/cucina/gnocchi.jpg"
+              src="/images/cucina/dettaglio_piatto.jpg"
               alt="Gnocchi e specialità della casa"
               fill
               className="object-cover"
               sizes="(max-width: 640px) 100vw, 50vw"
             />
           </div>
-          <div className="relative rounded-lg overflow-hidden" style={{ height: "450px" }}>
+          <div
+            className="relative rounded-lg overflow-hidden"
+            style={{ height: "450px" }}
+          >
             <Image
-              src="/images/cucina/dolci.jpg"
+              src="/images/cucina/dettaglio_torte.jpg"
               alt="Dolci e frutta fresca"
               fill
               className="object-cover"
