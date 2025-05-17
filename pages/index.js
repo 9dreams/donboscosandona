@@ -3,7 +3,7 @@ import LandingHero from "../components_emporio/LandingHero";
 import Layout from "../components_emporio/Layout";
 import News from "../components_emporio/News";
 import Download from "../components_emporio/Download";
-import Anziani from "../components_emporio/Anziani";
+import Servizi from "../components_emporio/Servizi";
 import Collab from "../components_emporio/Collab";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
@@ -36,14 +36,14 @@ export default function Home({ data }) {
 
       <div className="bg-gray-100 py-10">
         <Calendar
-          description="Scopri tutti gli avvisi"
+          description=""
           cardWidth={3}
           events={date}
         />
         <News title="News" data={data} limit={6} />
 
         <div className="relative z-10 mt-12">
-          <Anziani />
+          <Servizi />
         </div>
 
         <Collab />

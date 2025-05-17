@@ -35,9 +35,7 @@ export default function NewsCard({ post, aspectRatio, defaultTag }) {
           <div className="flex items-center gap-1 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1">
             <CalendarToday sx={{ fontSize: 16 }} />
             <span>
-              {new Date(post.pubblicazione).toLocaleDateString('it-IT') === 'Invalid Date'
-                ? 'Data non inserita'
-                : new Date(post.pubblicazione).toLocaleDateString('it-IT')}
+              {post.pubblicazione}
             </span>
           </div>
         </div>

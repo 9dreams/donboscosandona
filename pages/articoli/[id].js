@@ -3,7 +3,7 @@ import { siteBaseUrl } from '/config/default'
 
 import { Container, Typography, Chip, Stack } from '@mui/material'
 
-import Layout from '/components/Layout'
+import Layout from '/components_emporio/Layout'
 import LandingHero from '/components/LandingHero'
 import Paragraph from '/components/Paragraph'
 

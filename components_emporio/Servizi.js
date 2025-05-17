@@ -10,7 +10,7 @@ const scrollableContent = [
     description:
       "I volontari operanti nella rete, vengono formati da professionisti, allo scopo di essere preparati ad affrontare le varie problematiche delle persone che stanno vivendo un momento di fragilità.",
     image: "/images/formazione-volontari.jpg",
-    link: "/servizi/corso-volontari-2019",
+    link: null,
     icon: "👥",
   },
   {
@@ -58,12 +58,12 @@ const scrollableContent = [
     description:
       "Aiuti verso gli “anziani” ovvero chi è prima della pensione e ha bisogno di trovare lavoro viene aiutato a trovare un lavoro / progetti stipendiati per dargli una minima entrata per esempio progetto nonni vigili",
     image: "https://qdpnews.it/wp-content/uploads/2018/08/Nonno-vigile.jpg",
-    link: "/servizi/",
+    link: null,
     icon: "👴",
   },
 ];
 
-export default function Anziani() {
+export default function Servizi() {
   return (
     <div className="relative py-16 bg-gradient-to-b from-gray-50 to-white">
       {/* Header Section */}
@@ -99,7 +99,7 @@ export default function Anziani() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
             >
-              <Link href={item.link} className="block h-full">
+              <Link href={item.link || ''} className="block h-full">
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full transform transition-all duration-300 hover:shadow-2xl">
                   {/* Immagine */}
                   <div className="relative h-48 w-full overflow-hidden">
@@ -126,6 +126,7 @@ export default function Anziani() {
                     <p className="text-gray-600 line-clamp-4 mb-4">
                       {item.description}
                     </p>
+                    {item.link && (
                     <div className="inline-flex items-center text-[#780202] font-semibold hover:text-[#b31217] transition-colors duration-300">
                       Scopri di più
                       <svg
@@ -141,7 +142,7 @@ export default function Anziani() {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
-                    </div>
+                    </div>)}
                   </div>
                 </div>
               </Link>
