@@ -13,7 +13,7 @@ export default function Servizio({ immagine, titolo, testo }) {
         />
       </div>
       <h2 className="text-xl mt-2 text-center mb-2 text-[#0265A5]">{titolo}</h2>
-      <p className="text-center text-[#666666] text-base">{testo}</p>
+      <p className="text-center text-primary text-base">{testo}</p>
     </div>
   );
 }

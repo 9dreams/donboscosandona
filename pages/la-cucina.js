@@ -66,7 +66,7 @@ export default function Home({ data }) {
         </h2>
       </div>
       <div className="container mx-auto max-w-4xl px-4 sm:px-6">
-        <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal">
+        <p className="text-base sm:text-[1.313rem] text-primary mb-4 leading-normal">
           Il nostro Chef ogni giorno stupisce gli ospiti con{" "}
           <span className="font-bold">
             primi e secondi piatti di carne e pesce
