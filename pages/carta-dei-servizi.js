@@ -59,12 +59,12 @@ export default function Home({ data }) {
       />
       {/*  */}
       <div className="flex items-center justify-center mb-4">
-        <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+        <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
           Carta dei servizi
         </h2>
       </div>
       <div className="container mx-auto max-w-4xl px-4 sm:px-6">
-        <p className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal">
+        <p className="text-base sm:text-[1.313rem] text-primary mb-12 leading-normal">
           Il <span className="font-bold">Soggiorno Marino Don Bosco</span>,
           gestito dai salesiani dell'Oratorio Don Bosco di San Donà di Piave,
           offre ai propri ospiti un ambiente familiare e sereno che favorisce il
@@ -83,11 +83,11 @@ export default function Home({ data }) {
         </p>
 
         <div className="flex items-center justify-center mb-4">
-          <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
             Arrivi e partenze
           </h2>
         </div>
-        <ul className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal list-disc">
+        <ul className="text-base sm:text-[1.313rem] text-primary mb-12 leading-normal list-disc">
           <li className="mb-2">
             Il Soggiorno Marino Don Bosco offre{" "}
             <span className="font-bold">soggiorni settimanali</span>, da sabato
@@ -123,11 +123,11 @@ export default function Home({ data }) {
           </li>
         </ul>
         <div className="flex items-center justify-center mb-4">
-          <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
             Ristorazione e bar
           </h2>
         </div>
-        <ul className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal list-disc">
+        <ul className="text-base sm:text-[1.313rem] text-primary mb-12 leading-normal list-disc">
           <li className="">
             Il <span className="font-bold">servizio di ristorazione</span> avrà
             i seguenti orari:
@@ -151,11 +151,11 @@ export default function Home({ data }) {
         </ul>
         {/*  */}
         <div className="flex items-center justify-center mb-4">
-          <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
             Spiaggia
           </h2>
         </div>
-        <ul className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal list-disc">
+        <ul className="text-base sm:text-[1.313rem] text-primary mb-12 leading-normal list-disc">
           <li className="mb-2">
             Agli ospiti è assegnato un posto in{" "}
             <span className="font-bold">spiaggia privata</span> con ombrellone,
@@ -173,15 +173,15 @@ export default function Home({ data }) {
 
         {/* Sezione per famigliari e ospiti esterni */}
         <div className="flex items-center justify-center mb-4">
-          <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
             Servizi per famigliari e ospiti esterni
           </h2>
         </div>
-        <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal pr-6">
+        <p className="text-base sm:text-[1.313rem] text-primary mb-4 leading-normal pr-6">
           I familiari e gli amici che desiderano trascorrere qualche ora insieme
           agli ospiti del Soggiorno Marino sono i benvenuti:
         </p>
-        <ul className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal list-disc">
+        <ul className="text-base sm:text-[1.313rem] text-primary mb-12 leading-normal list-disc">
           <li className="mb-2">
             il <span className="font-bold">pranzo</span> o la{" "}
             <span className="font-bold">cena</span> per amici o parenti degli
@@ -197,16 +197,16 @@ export default function Home({ data }) {
 
         {/* Sezione orari */}
         <div className="flex items-center justify-center mb-4">
-          <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
             Orari
           </h2>
         </div>
-        <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal pr-6">
+        <p className="text-base sm:text-[1.313rem] text-primary mb-4 leading-normal pr-6">
           <span className="font-bold">L'accesso agli ospiti</span> alloggiati è
           consentito fino alle ore <span className="font-bold">24.00</span>: si
           prega di avvisare in Reception in caso di rientro più tardi.
         </p>
-        <ul className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal list-disc">
+        <ul className="text-base sm:text-[1.313rem] text-primary mb-12 leading-normal list-disc">
           <li className="mb-2">
             In caso di necessità o di emergenza, in ogni stanza è presente un
             vademecum con il{" "}
@@ -217,11 +217,11 @@ export default function Home({ data }) {
 
         {/* Sezione attenzioni */}
         <div className="flex items-center justify-center mb-4">
-          <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+          <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
             Attenzioni
           </h2>
         </div>
-        <ul className="text-base sm:text-[1.313rem] text-[#666666] mb-12 leading-normal list-disc">
+        <ul className="text-base sm:text-[1.313rem] text-primary mb-12 leading-normal list-disc">
           <li className="mb-2">
             Al pagamento del soggiorno, all'arrivo,{" "}
             <span className="font-bold">non si accettano assegni.</span>

@@ -8,17 +8,15 @@ export default function LuoghiVisitare({
   section1Card2,
   section2Card1,
   section2Card2,
-  section2Card3
+  section2Card3,
 }) {
   return (
     <div className="py-12 mt-4 px-4 max-w-5xl mx-auto">
       {/* Titolo con linee decorative */}
       <div className="flex items-center justify-center mb-12">
-        <div className="h-[1px] bg-[#0265A5] w-1/4"></div>
         <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
           I luoghi da visitare
         </h2>
-        <div className="h-[1px] bg-[#0265A5] w-1/4"></div>
       </div>
 
       {/* Prima riga con due card principali */}

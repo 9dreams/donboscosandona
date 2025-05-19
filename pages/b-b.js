@@ -60,12 +60,12 @@ export default function Home({ data }) {
         logoUrl="/images/logo_navbar.png"
       />
       <div className="flex items-center justify-center mb-4">
-        <h2 className="text-3xl md:text-4xl text-gray-800 font-medium px-6">
+        <h2 className="text-3xl md:text-4xl text-secondary font-medium px-6">
           Bed & Breakfast
         </h2>
       </div>
       <div className="container mx-auto max-w-4xl px-4 sm:px-6">
-        <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal">
+        <p className="text-base sm:text-[1.313rem] text-primary mb-4 leading-normal">
           La nostra struttura offre ai propri ospiti la possibilità di
           soggiornare usufruendo della{" "}
           <span className="font-bold">formula B&B</span>. Questa offerta è
@@ -105,26 +105,26 @@ export default function Home({ data }) {
           lettino.
         </p>
         <div>
-          <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 mt-4 leading-normal">
+          <p className="text-base sm:text-[1.313rem] text-primary mb-4 mt-4 leading-normal">
             Per la <span className="font-bold">registrazione</span> sono
             necessari i documenti di riconoscimento validi di tutti gli ospiti
             (carta d'identità, passaporto o patente per i cittadini italiani).
           </p>
-          <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal">
+          <p className="text-base sm:text-[1.313rem] text-primary mb-4 leading-normal">
             Le <span className="font-bold">camere</span> sono dotate di bagno,
             aria condizionata, riscaldamento e asciugacapelli, preparate con
             biancheria letto-bagno
           </p>
-          <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal">
+          <p className="text-base sm:text-[1.313rem] text-primary  mb-4 leading-normal">
             Il <span className="font-bold">parcheggio</span> è privato ma non
             custodito.
           </p>
-          <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal">
+          <p className="text-base sm:text-[1.313rem] text-primary  mb-4 leading-normal">
             La camera è riservata solo al ricevimento dell'{" "}
             <span className="font-bold">acconto pari a € 100</span>, da versare
             entro 5 giorni dalla prenotazione, pena la decadenza della stessa.
           </p>
-          <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal">
+          <p className="text-base sm:text-[1.313rem] text-primary  mb-4 leading-normal">
             Il pagamento dell'acconto, indirizzato a{" "}
             <span className="font-bold">
               ORATORIO DON BOSCO - via XIII Martiri n. 86 - 30027 San Donà di
@@ -136,12 +136,12 @@ export default function Home({ data }) {
             0000 4212 - <span className="underline">CODICE SWIFT</span> :
             BAPPIT21713 CIN: IT027005B7FBR21JIS
           </p>
-          <p className="text-base sm:text-[1.313rem] text-[#666666] mb-4 leading-normal">
+          <p className="text-base sm:text-[1.313rem] text-primary  mb-4 leading-normal">
             Il pagamento del saldo avverrà direttamente in struttura all'arrivo,
             con le seguenti modalità di pagamento: carta di credito, POS o
             contanti (non si accettano assegni).
           </p>
-          <p className="leading-normal text-base sm:text-[1.313rem] text-[#666666] mb-4 font-bold">
+          <p className="leading-normal text-base sm:text-[1.313rem] text-primary  mb-4 font-bold">
             L'acconto sarà restituito solo in caso di disdetta pervenuta almeno
             30 giorni prima della data di inizio soggiorno
           </p>
