@@ -471,7 +471,6 @@ export default function Home({ data }) {
           <h2 className="text-[2.625rem] text-secondary font-medium px-6">
             Ripartire dall'oggi
           </h2>
-          
         </div>
         <p className="text-base sm:text-[1.313rem] text-primary mb-4 leading-normal">
           Nello spazio verde circostante, le giovani piantine messe a dimora con
@@ -480,7 +479,7 @@ export default function Home({ data }) {
           divertirsi in assoluta sicurezza.
         </p>
         <p className="text-base font-bold sm:text-[1.313rem] text-primary mt-12 mb-4 leading-normal">
-   Autore: Wally Perissinotto
+          Autore: Wally Perissinotto
         </p>
       </div>
     </Layout>
