@@ -65,9 +65,11 @@ export default function Home({ data }) {
       </div>
 
       <div className="container mx-auto max-w-4xl px-4 sm:px-6">
-        <h2 className="text-[1.75rem] text-secondary text-left font-medium mb-4">
-          Giubileo 2025
-        </h2>
+        <div className="bg-[#6699cc] text-white py-2 px-2 inline-block mb-2">
+          <p className="text-base sm:text-[1.313rem] font-medium m-0 leading-normal">
+            Giubileo 2025
+          </p>
+        </div>
         <p className="text-base sm:text-[1.313rem] text-primary mb-4 leading-normal">
           In occasione del <span className="font-bold">Giubileo 2025</span>{" "}
           (fino a fine disponibilità camere) dal 24 maggio al 07 giugno 2025!{" "}
@@ -150,30 +152,31 @@ export default function Home({ data }) {
           <p className="text-base sm:text-[1.313rem] text-primary mb-8 leading-normal">
             Contattaci!
           </p>
+          {/* Sezione informazioni */}
           <div className="my-8">
-            <h3 className="leading-normal text-center text-lg sm:text-[1.8rem] text-[#0265A5] font-medium mb-6">
+            <h3 className="leading-normal text-left text-lg sm:text-[1.8rem] text-[#0265A5] font-medium mb-6">
               INFORMAZIONI e PRENOTAZIONI:
             </h3>
 
-            <div className="bg-[#D84936] text-center p-4 rounded-md mb-6 max-w-xl mx-auto">
+            <div className="bg-[#D84936] text-left p-4 rounded-md mb-6 max-w-xl">
               <p className="text-black mb-1">via email:</p>
               <p className="text-black text-lg sm:text-xl font-medium">
                 info@soggiornodonbosco.it
               </p>
             </div>
 
-            <p className="text-center text-[#0265A5] text-lg sm:text-xl mb-6">
+            <p className="text-left text-[#0265A5] text-lg sm:text-xl mb-6">
               da lunedì 3 febbraio 2025
             </p>
 
-            <div className="bg-[#D84936] text-center p-4 rounded-md mb-6 max-w-xl mx-auto">
+            <div className="bg-[#D84936] text-left p-4 rounded-md mb-6 inline-block">
               <p className="text-black mb-1">Telefono:</p>
               <p className="text-black text-lg sm:text-xl font-medium">
                 +39 0421 299 158
               </p>
             </div>
 
-            <div className="text-center text-[#0265A5] text-base sm:text-xl mb-2">
+            <div className="text-left text-[#0265A5] text-base sm:text-xl mb-2">
               <p className="mb-1">
                 da lunedì a venerdì, dalle ore 9.00 alle ore 12.30.
               </p>
@@ -181,7 +184,7 @@ export default function Home({ data }) {
               <p>Dal 24 maggio tutti i giorni dalle 8.30 alle 21.30.</p>
             </div>
 
-            <div className="text-center mt-8 mb-4">
+            <div className="text-left mt-8 mb-4">
               <p className="text-gray-700 text-base sm:text-xl mb-2">
                 Visita il nostro sito{" "}
                 <a
@@ -195,7 +198,7 @@ export default function Home({ data }) {
                 e i nostri social
               </p>
 
-              <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <div className="flex flex-wrap gap-4 mb-4">
                 <a
                   href="https://instagram.com/soggiornodonbosco"
                   className="bg-[#FFC107] text-black py-2 px-4 rounded-md text-center hover:bg-[#e6af06] transition-colors w-full sm:w-auto"
