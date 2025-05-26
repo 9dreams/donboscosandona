@@ -48,13 +48,14 @@ export default function Navbar() {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex-shrink-0"
+            className="flex-shrink-0 flex items-center"
           >
             <img
               src="/images/Logo_emporio.png"
               className="h-14 w-auto md:h-16 md:w-auto object-cover"
               alt="Logo Emporio"
             />
+            <span className="text-white font-bold ml-2">Emporio Solidale</span>
           </motion.div>
 
           {/* Desktop Menu */}
