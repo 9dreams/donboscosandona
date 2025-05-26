@@ -20,6 +20,7 @@ export default function Banner5() {
     "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiPjxwYXRoIGQ9Ik0xNi4wNjEgMTAuNDA0TDE0IDE3aC00bC0yLjA2MS02LjU5NmE2IDYgMCAwIDEgLjk5OC01LjQ4NGwyLjU5LTMuMzE1YS42LjYgMCAwIDEgLjk0NiAwbDIuNTkgMy4zMTVhNiA2IDAgMCAxIC45OTggNS40ODRNMTAgMjBjMCAyIDIgMyAyIDNzMi0xIDItM20tNS41LTcuNUM1IDE1IDcgMTkgNyAxOWwzLTJtNS45MzEtNC41YzMuNSAyLjUgMS41IDYuNSAxLjUgNi41bC0zLTIiLz48cGF0aCBkPSJNMTIgMTFhMiAyIDAgMSAxIDAtNGEyIDIgMCAwIDEgMCA0Ii8+PC9nPjwvc3ZnPg==", // Card 7
     "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMjAgMTdxLjg2IDAgMS40NS42dC41OCAxLjRMMTQgMjJsLTctMnYtOWgxLjk1bDcuMjcgMi42OXEuNzguMzEuNzggMS4xMnEwIC40Ny0uMzQuODJ0LS44Ni4zN0gxM2wtMS43NS0uNjdsLS4zMy45NEwxMyAxN3pNMTYgMy4yM1ExNy4wNiAyIDE4LjcgMnExLjM2IDAgMi4zIDF0MSAyLjNxMCAxLjAzLTEgMi40NnQtMS45NyAyLjM5VDE2IDEzcS0yLjA4LTEuODktMy4wNi0yLjg1dC0xLjk3LTIuMzlUMTAgNS4zcTAtMS4zNi45Ny0yLjN0Mi4zNC0xcTEuNiAwIDIuNjkgMS4yM00uOTg0IDExSDV2MTFILjk4NHoiLz48L3N2Zz4=",
   ];
+
   const animateCount = (index, target) => {
     const startTime = performance.now();
     const animate = (currentTime) => {
@@ -44,14 +45,18 @@ export default function Banner5() {
   };
 
   useEffect(() => {
-    const options = { threshold: 0.4 };
+    const animateAll = () => {
+      setHasAnimated(true);
+      targetCounts.forEach((target, index) => {
+        animateCount(index, target);
+      });
+    };
+
+    const options = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       if (entry.isIntersecting && !hasAnimated) {
-        setHasAnimated(true);
-        targetCounts.forEach((target, index) => {
-          animateCount(index, target);
-        });
+        animateAll();
       }
     }, options);
 
@@ -59,11 +64,26 @@ export default function Banner5() {
       observer.observe(containerRef.current);
     }
 
+    const fallbackCheck = () => {
+      if (!containerRef.current || hasAnimated) return;
+
+      const rect = containerRef.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        animateAll();
+      }
+    };
+
+    window.addEventListener("scroll", fallbackCheck);
+    window.addEventListener("resize", fallbackCheck);
+    fallbackCheck();
+
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current);
       }
       observer.disconnect();
+      window.removeEventListener("scroll", fallbackCheck);
+      window.removeEventListener("resize", fallbackCheck);
     };
   }, [hasAnimated, targetCounts, animationDuration]);
 
