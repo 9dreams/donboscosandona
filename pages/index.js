@@ -54,7 +54,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   let res = await fetch(
-    "https://channels.donboscosandona.it/api/posts/inoratorio"
+    "https://channels.donboscosandona.it/api/posts/emporio"
   );
   const data = await res.json();
 

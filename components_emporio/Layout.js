@@ -14,7 +14,7 @@ export default function Layout({ children }) {
       <CssBaseline />
       <div>
         <Head>
-          <title>Emporio Solidale</title>
+          <title>Emporio Solidale del Basso Piave</title>
           <meta name='description' content='Sito ufficiale del Centro di Formazione Professionale don Bosco di San Donà di Piave' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />
