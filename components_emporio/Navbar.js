@@ -32,7 +32,7 @@ export default function Navbar() {
     { name: 'Chi Siamo', link: '/chisiamo', class: 'text-white' },
     { name: 'Dove Siamo', link: '/dovesiamo', class: 'text-white' },
     { name: 'Trasparenza', link: '/trasparenza', class: 'text-white' },
-    { name: 'Documenti', link: '/documenti', class: 'text-white' },
+    // { name: 'Documenti', link: '/documenti', class: 'text-white' },
   ];
 
   return (
