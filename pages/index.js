@@ -6,7 +6,7 @@ import Download from "../components_emporio/Download";
 import Servizi from "../components_emporio/Servizi";
 import Collab from "../components_emporio/Collab";
 import Featured from "../components/Featured";
-import Footer from "../components/Footer";
+import Credits from "../components/Credits";
 
 export default function Home({ data }) {
   const date = [
@@ -47,6 +47,7 @@ export default function Home({ data }) {
         </div>
 
         <Collab />
+        <Credits />
       </div>
     </Layout>
   );
