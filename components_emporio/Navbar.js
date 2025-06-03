@@ -62,9 +62,7 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-1 justify-center items-center space-x-8">
             {menuItems.map((item, index) => {
-              const isActive =
-                (item.link === '/' && router.pathname === '/') ||
-                (item.link !== '/' && router.pathname === `/${item.link}`);
+              const isActive = router.pathname === item.link;
               return (
                 <motion.a
                   key={index}
@@ -130,9 +128,7 @@ export default function Navbar() {
           >
             <div className="px-4 pt-2 pb-6 space-y-3">
               {menuItems.map((item, index) => {
-                const isActive =
-                  (item.link === '/' && router.pathname === '/') ||
-                  (item.link !== '/' && router.pathname === `/${item.link}`);
+                const isActive = router.pathname === item.link;
                 return (
                   <motion.a
                     key={index}
