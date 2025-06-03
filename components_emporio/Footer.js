@@ -104,20 +104,12 @@ export default function Footer() {
             </a>
           </span>
           <div className="mt-4 sm:mt-0">
-            <a href="#" className="text-gray-300 hover:text-white">
-              <svg
+            <a href="https://www.facebook.com/p/Emporio-Solidale-Basso-Piave-San-Vincenzo-De-Paoli-ODV-San-Donà-di-Piave-100089118798074/?locale=it_IT" className="text-gray-300 hover:text-white">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                alt="Facebook logo" 
                 className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 8 19"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              />
             </a>
           </div>
         </div>
