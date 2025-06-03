@@ -55,7 +55,8 @@ export default function Navbar() {
               className="h-14 w-auto md:h-16 md:w-auto object-cover"
               alt="Logo Emporio"
             />
-            <span className="text-white font-bold ml-2">Emporio Solidale del Basso Piave</span>
+            <span className="text-white font-bold ml-2 hidden sm:block">Emporio Solidale del Basso Piave</span>
+            <span className="text-white font-bold ml-2 sm:hidden">Emporio Solidale</span>
           </motion.div>
 
           {/* Desktop Menu */}
