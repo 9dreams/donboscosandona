@@ -36,6 +36,146 @@ export default function Chisiamo() {
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 md:w-7/12  gap-5 items-center mb-20">
           <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
             <h1 class="text-md text-center mb-3">
+              Bilancio2024EmporioSolidale.pdf
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 rounded-2xl text-center text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/Bilancio2024EmporioSolidale.pdf"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              BILANCIOMODD2024EmporioSolidale.pdf
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 rounded-2xl text-center text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/BILANCIOMODD2024EmporioSolidale.pdf"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              RENDICONTOATTIVITA2024.pdf
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/RENDICONTOATTIVITA2024.pdf"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              RENDICONTOFINANZIARIO2024.pdf
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/RENDICONTOFINANZIARIO2024.pdf"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              Raccoltafondinonmonetarie2.doc
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/Raccoltafondinonmonetarie2.doc"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              Raccoltafondinonmonetarie.doc
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/Raccoltafondinonmonetarie.doc"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">RFmonetarie2.doc</h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/RFmonetarie2.doc"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">RFmonetarie.doc</h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/RFmonetarie.doc"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              Relazionedimissionebilancio2024.docx
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/Relazionedimissionebilancio2024.docx"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              VerbaleConsigliodirbilanci20242025.docx
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/VerbaleConsigliodirbilanci20242025.docx"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              Verbaleassembleasocibilanci20242025.docx
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/Verbaleassembleasocibilanci20242025.docx"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
+              BilancioPreventivo2025EmporioSolidale.xlsx
+            </h1>
+            <a
+              class="bg-[#8f1d1d] p-3 text-center rounded-2xl text-white hover:text-[#C7AE6A] shadow-lg w-10/12"
+              download
+              href="/docs/BilancioPreventivo2025EmporioSolidale.xlsx"
+            >
+              SCARICA QUI IL DOCUMENTO
+            </a>
+          </div>
+          <div class="flex flex-col border border-gray-200 rounded-3xl p-5 items-center w-full h-full">
+            <h1 class="text-md text-center mb-3">
               Analisi bilanci da 2016 2019 Emporio.pdf
             </h1>
             <a
