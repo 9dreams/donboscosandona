@@ -24,7 +24,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/servizi/corso-di-cucito"
-                  className="hover:underline text-cyan-400"
+                  className="hover:underline text-[#dfb031]"
                 >
                   Vai al corso
                 </a>
@@ -41,7 +41,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/servizi/economia-domestica"
-                  className="hover:underline text-cyan-400"
+                  className="hover:underline text-[#dfb031]"
                 >
                   Approfondimenti
                 </a>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/servizi/centro-di-ascolto"
-                  className="hover:underline text-cyan-400"
+                  className="hover:underline text-[#dfb031]"
                 >
                   Presentazione del servizio
                 </a>
@@ -83,7 +83,7 @@ export default function Footer() {
                 e-mail:{" "}
                 <a
                   href="mailto:emporiosolidalebassopiave@gmail.com"
-                  className="hover:underline text-cyan-400 break-all"
+                  className="hover:underline text-[#dfb031] break-all"
                 >
                   emporiosolidalebassopiave@gmail.com
                 </a>
