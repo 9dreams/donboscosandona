@@ -16,8 +16,8 @@ const cardData = [
     fornisce il proprio servizio a tutte le persone in difficoltà.
     Chiediamo solo di presentarsi con un documento di riconoscimento.`,
     image:
-      "https://www.emporiosolidalebassopiave.it/documents/3870210/3916872/icons8-furto-di-identit%C3%A0-64.png/02ec178a-77c6-55ac-fa3b-c0d4b59d7296?t=1586435212721&imagePreview=1",
-    alt: "Carta",
+      "https://cdn-icons-png.flaticon.com/512/7816/7816094.png",
+    alt: "Preghiera",
   },
   {
     text: `Per tutti coloro che volessero contribuire e sostenere l'Emporio Solidale
@@ -28,7 +28,7 @@ const cardData = [
       bank: "Banco BMP-San Donà di Piave",
     },
     image:
-      "https://www.emporiosolidalebassopiave.it/documents/3870210/3916872/icons8-finanziamenti-comunitari-64.png/b92997be-e5e7-744c-8a48-26151cc9e07f?t=1586435226600&imagePreview=1",
+      "https://cdn-icons-png.flaticon.com/512/10766/10766857.png",
     alt: "Donazioni",
   },
 ];
@@ -82,7 +82,6 @@ export default function Calendar({ description }) {
                         alt={card.alt}
                         width={40}
                         height={40}
-                        className="filter brightness-0 invert"
                       />
                     </div>
                   </div>
