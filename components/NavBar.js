@@ -22,7 +22,7 @@ const Navbar2 = () => {
     { label: "Home", icon: <FaHome />, href: "/" },
     { label: "Chi siamo", icon: <FaInfoCircle />, href: "#chi-siamo" },
     { label: "Laboratori", icon: <FaServicestack />, href: "#laboratori" },
-    { label: "Trasparenza", icon: <TbZoom />, href: "#trasparenza" },
+    { label: "Trasparenza", icon: <TbZoom />, href: "/trasparenza" },
     { label: "Contattaci", icon: <FaPhone />, href: "#contattaci" },
   ];
 
