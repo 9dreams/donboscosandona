@@ -143,7 +143,7 @@ export default function Home({ data, elementi }) {
         <h1>Martina Dianese</h1>
         <h2>Orientatrice scolastica e professionale</h2>
         <p>
-          piazza IV Novembre, 22
+          Galleria San Donato, 4
           <br />
           30027 San Donà di Piave (VE)
           <br />
