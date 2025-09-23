@@ -32,11 +32,11 @@ export default function Home() {
         Orario della segreteria:
         <br />
         <ul>
-          <li>
-            MATTINO: dal lunedì al venerdì dalle 8:00 alle 13:00; il sabato
-            dalle 8:00 alle 11:00
+        <li>
+            MATTINO: dal lunedì al venerdì dalle 8:00 alle 9:00 e dalle 11:00 alle 12:30; il sabato
+            dalle 9:00 alle 10:00
           </li>
-          <li>POMERIGGIO: dal lunedì al venerdì dalle 15:00 alle 17:00</li>
+          <li>POMERIGGIO: martedì e giovedì dalle 15:30 alle 16:00</li>
           <br />
           <li>
             Informazioni generali: info@donboscosandona.it - tel. 0421 338 980
