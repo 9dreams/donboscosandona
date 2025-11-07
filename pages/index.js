@@ -158,11 +158,11 @@ let certifications = [
 
 let link_utili = [
   {
-    title: 'Regolamento',
+    title: 'Regolamento allievi',
     description:
       'Il regolamento sottoscritto a inizio anno, che tutti gli allievi si impegnano a rispettare.',
     immagineUrl: '/images/home/regolamento.png',
-    url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96c2ed50875db2d6bc536633e55dab4b1d4c1288/Regolamento%20San%20Dona%CC%80%20Settembre%202023.pdf',
+    url: 'https://channels.donboscosandona.it/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhPWE5oYkhjMmVtUm5hSEU1TVRnM00zbHFiblIwY1dZNWJqbDJOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpV1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWxKbFoyOXNZVzFsYm5SdkxXRnNiR2xsZG1rdWNHUm1JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRTWldkdmJHRnRaVzUwYnkxaGJHeHBaWFpwTG5Ca1pnWTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lGR0Z3Y0d4cFkyRjBhVzl1TDNCa1pnWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9rZXkifX0=--ba29e1bb4ca72ca582ce15b5f56079447ca8fc3c/Regolamento-allievi.pdf',
   },
   {
     title: 'ScuolaOnLine',
@@ -190,7 +190,7 @@ export default function Home({ data, movies, elementi }) {
     <Layout>
       
       <Featured data={data} defaultTag='scuola' />
-      <Logos url='/images/home/loghi_sponsor.png' />
+      <Logos url='/images/home/loghi_sponsor_new.png' />
       <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
       <Products
         title='I settori'
