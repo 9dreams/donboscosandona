@@ -36,7 +36,7 @@ const features = [
       'https://archive.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png',
     description:
       'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
-      url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbzBDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a11a024b29580ed816be3503321c670225da2e2/Progetto%20Educativo.pdf'
+      url: 'https://channels.donboscosandona.it/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNakI2Y1RScGNYaHRjbTFtWW5CMmRteHZNRE5xZVRWNGRuZG9Nd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlScGJteHBibVU3SUdacGJHVnVZVzFsUFNKUWNtOW5aWFIwYnlCRlpIVmpZWFJwZG04Z0pUSTRVbVYyTGpOZk1qVXVNVEV1TWpBeU5TVXlPUzV3WkdZaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoxQnliMmRsZEhSdkpUSXdSV1IxWTJGMGFYWnZKVEl3SlRJNFVtVjJMak5mTWpVdU1URXVNakF5TlNVeU9TNXdaR1lHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWhSaGNIQnNhV05oZEdsdmJpOXdaR1lHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOm51bGwsInB1ciI6ImJsb2Jfa2V5In19--f05ec6d1060eb83027c6deea05ae9c8fa76269ba/Progetto%20Educativo%20(Rev.3_25.11.2025).pdf'
   },
   {
     title: 'Didattica attiva',
