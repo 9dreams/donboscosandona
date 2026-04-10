@@ -61,14 +61,6 @@ const scrollableContent = [
     link: null,
     icon: "👴",
   },
-  {
-    title: "Consegna a domicilio",
-    description:
-      "Per chi è impossibilitato a recarsi presso la nostra sede, offriamo un servizio di consegna della spesa a domicilio. I nostri volontari si occupano di portare i beni di prima necessità direttamente a casa vostra, garantendo supporto anche a chi ha difficoltà motorie o di trasporto.",
-    image: "/images/consegna-domicilio.jpg",
-    link: "/servizi/consegna-a-domicilio",
-    icon: "🚚",
-  },
 ];
 
 export default function Servizi() {
