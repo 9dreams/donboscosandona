@@ -10,7 +10,7 @@ export default function Servizi() {
       
 
         <div className="w-full bg-[url('')] bg-repeat bg-center">
-          <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
+          <div className="flex items-center justify-center md:justify-start pt-32 md:px-10 lg:pl-64 px-5">
             <a href="/" className="mb-4 md:mb-0">
               <p className="text-sm text-black">Emporio solidale</p>
             </a>
