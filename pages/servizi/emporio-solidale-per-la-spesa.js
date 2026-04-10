@@ -1,16 +1,20 @@
 import Layout from "components_emporio/Layout.js";
 import React from "react";
+import Head from "next/head";
+
 export default function Servizi() {
   return (
     <Layout>
-      <title>Emporio solidale per la spesa - Emporio Solidale</title>
-      <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
+      <Head>
+        <title>Emporio solidale per la spesa - Emporio Solidale</title>
+        <link rel="icon" type="image/x-icon" href="/images/servizi_favicon/favicon.ico" />
+      </Head>
 
-      <div class="flex flex-col">
+      <div className="flex flex-col">
 
 
         <div className="w-full bg-[url('')] bg-repeat bg-center">
-          <div className="flex items-center justify-center md:justify-start pt-10 md:px-10 lg:pl-64 px-5">
+          <div className="flex items-center justify-center md:justify-start pt-32 md:px-10 lg:pl-64 px-5">
             <a href="/" className="mb-4 md:mb-0">
               <p className="text-sm text-black">Emporio Solidale</p>
             </a>

@@ -99,53 +99,65 @@ export default function Servizi() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
             >
-              <Link href={item.link || ''} className="block h-full">
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full transform transition-all duration-300 hover:shadow-2xl">
-                  {/* Immagine */}
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transform transition-transform duration-500 hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    
-                    {/* Icona */}
-                    <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-2xl shadow-lg">
-                      {item.icon}
+              {item.link ? (
+                <Link href={item.link} className="block h-full group">
+                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full transform transition-all duration-300 hover:shadow-2xl flex flex-col">
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        className="transform transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-2xl shadow-lg">
+                        {item.icon}
+                      </div>
+                    </div>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-[#780202] transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 line-clamp-4 mb-4 flex-grow">
+                        {item.description}
+                      </p>
+                      <div className="inline-flex items-center text-[#780202] font-semibold group-hover:text-[#b31217] transition-colors duration-300">
+                        Scopri di più
+                        <svg className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Contenuto */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-[#780202] transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 line-clamp-4 mb-4">
-                      {item.description}
-                    </p>
-                    {item.link && (
-                    <div className="inline-flex items-center text-[#780202] font-semibold hover:text-[#b31217] transition-colors duration-300">
-                      Scopri di più
-                      <svg
-                        className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>)}
+                </Link>
+              ) : (
+                <div className="h-full">
+                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full transform transition-all duration-300 hover:shadow-2xl flex flex-col">
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        className="transform transition-transform duration-500 hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-2xl shadow-lg">
+                        {item.icon}
+                      </div>
+                    </div>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 line-clamp-4 flex-grow">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </Link>
+              )}
             </motion.div>
           ))}
         </div>
