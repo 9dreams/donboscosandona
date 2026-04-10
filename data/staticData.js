@@ -371,4 +371,7 @@ export const documenti = [
     link: '/docs/Trasparenza2020-2019.pdf',
     emoji: '🔍'
   }
-]; 
+];
+
+export const eventi = [];
+ 
