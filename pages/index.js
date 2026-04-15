@@ -607,84 +607,71 @@ const testimonials = [
 
 let serate_cinema = [
   {
-    title: 'LILO & STITCH',
+    title: 'MANDALORIAN E GROGU',
     category: '',
-    description:
-      "Una solitaria bambina hawaiana di nome Lilo, grazie all'aiuto di un fuggitivo alieno blu, riesce a riparare la sua famiglia, a cui credeva di dover dire addio per sempre...",
+    description: "Se sei in cerca di una nuova avventura, 'Questa è la via'",
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/oyY4WANSpBwaBTTnN1qxWOsgmCy.jpg',
+      'https://image.tmdb.org/t/p/original//2XX2XlXdfEWV0tfUyWunBj1SFpx.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'MISSION IMPOSSIBLE - THE FINAL RECKONING',
+    title: 'DISCLOSURE DAY',
     category: '',
-    description:
-      'Ethan e il suo team si trovano ad affrontare una nuova e pericolosa minaccia: devono rintracciare due chiavi che sbloccano un potente sistema di intelligenza artificiale, capace di causare disastri a livello mondiale, dai sabotaggi dei circuiti bancari internazionali al caos delle reti elettriche.',
+    description: 'Meritiamo di sapere',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//z53D72EAOxGRqdr7KXXWp9dJiDe.jpg',
+      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ3dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9ddc4e13c3529104be59ba35728fbc4bc54012bf/Disclosure%20day.webp',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'DRAGON TRAINER',
+    title: 'TOY STORY 5',
     category: '',
     description:
-      "Sulla selvaggia isola di Berk, dove vichinghi e draghi sono stati acerrimi nemici per generazioni, Hiccup è diverso dagli altri. Figlio geniale ma sottovalutato dal capo Stoick l'Immenso, Hiccup sfida secoli di tradizione stringendo un'insolita amiciza con Sdentato, un temibile drago Furia Buia...",
+      'Quando Bonnie riceve in regalo un tablet Lilypad e ne diventa ossessionata, per Buzz, Woody, Jessie e il resto della banda, il lavoro si complica enormemente: dovranno affrontare una nuova, temibile minaccia al momento del gioco.',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/iLrqsG4tmqHEInjKIf6cpyQp30N.jpg',
+      'https://image.tmdb.org/t/p/original//aXRsPzBgZKRlRDParzxwQEgM8p2.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'ELIO',
+    title: 'SUPERGIRL',
     category: '',
     description:
-      'Elio è un bambino di undici anni con un carattere artistico, creativo e sognatore, ma ha difficoltà a integrarsi con gli altri. A causa di questo problema, il piccolo è sempre rinchiuso in casa. Nel frattempo sua madre Olga è impegnata nella direzione di un progetto militare top-secret ed è intenta a decodificare uno strano segnale giunto dallo spazio...',
+      'Quando un avversario inaspettato e spietato colpisce troppo vicino a casa, Kara Zor-El, alias Supergirl, è costretta a stringere un’improbabile alleanza intraprendendo un’epica avventura interstellare all’insegna della vendetta e della giustizia.',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//feUV7SEy9mrbp5dJUoiRoJy7u9x.jpg',
+      'https://image.tmdb.org/t/p/original//niSvU02l2BONH9ivubV6K1a5QiK.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'F1',
+    title: 'MINIONS & MONSTERS',
     category: '',
-    description:
-      "La leggenda delle corse automobilistiche Sonny Hayes viene convinto a uscire dal ritiro per guidare un team di Formula 1 in difficoltà e fare da mentore a un giovane pilota promettente, mentre insegue un'altra possibilità di gloria.",
+    description: '',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//hfkVxu1tLhbS0FHcqleTdq0VRcn.jpg',
+      'https://image.tmdb.org/t/p/original/822dQlRkYV5X23WGdxEZGVxKpa9.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'JURASSIC WORLD - LA RINASCITA',
+    title: 'ODISSEA',
     category: '',
     description:
-      "I dinosauri si stanno estinguendo poiché il mondo moderno è inospitale nei loro confronti e i sopravvissuti si sono rifugiati in una piccola regione dei tropici attorno all'equatore. Ma a minacciarli interviene ancora una volta l'essere umano, visto che un'azienda farmaceutica spera di utilizzare il DNA di dinosauro per creare un nuovo farmaco salvavita...",
+      'Ulisse, il leggendario re greco di Itaca, intraprende un lungo e pericoloso viaggio verso casa dopo la guerra di Troia, raccontando i suoi incontri con esseri mitici come il ciclope Polifemo, le Sirene e la dea strega Circe.',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/gvWXhXuPbMviAJmBCcBX9L2pjLk.jpg',
+      'https://image.tmdb.org/t/p/original//5S4U3gM7N17ni028LJhO60zfcKJ.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'SUPERMAN',
+    title: 'SPIDERMAN: BRAND NEW DAY',
     category: '',
-    description:
-      "Il film segna l'inizio del nuovo DCU, ma non racconta una origin story sull'Uomo d'Acciaio. Si concentra su Superman e il suo equilibrio tra le origini kryptoniane e la sua parte umana.",
+    description: '',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//wPLysNDLffQLOVebZQCbXJEv6E6.jpg',
+      'https://image.tmdb.org/t/p/original/pspkSVP39NGa6G2rvK5KlMjvYUe.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'I FANTASTICI 4 - GLI INIZI',
+    title: 'OCEANIA',
     category: '',
     description:
-      "Costretti a bilanciare il loro ruolo di eroi con la forza del loro legame familiare, i protagonisti devono difendere la Terra da una vorace divinità spaziale chiamata Galactus e dal suo enigmatico araldo, Silver Surfer. E se il piano di Galactus di divorare l'intero pianeta e tutti i suoi abitanti non fosse già abbastanza terribile, la situazione diventa all’improvviso una questione molto personale...",
+      "Vaiana (Catherine Lagaʻaia) risponde al richiamo dell'oceano e, per la prima volta, viaggia oltre la barriera corallina dell’isola di Motunui con il famigerato semidio Maui (Dwayne Johnson) in un viaggio indimenticabile per riportare la prosperità al suo popolo.",
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/jatnqRPnxjg2Q6cFsAjmrBNhx9.jpg',
-    url: 'https://cinema.donboscosandona.it',
-  },
-  {
-    title: 'TROPPO CATTIVI 2',
-    category: '',
-    description:
-      'Nel nuovo capitolo, i Troppo Cattivi, una banda di animali criminali, cercano di guadagnarsi fiducia e accettazione nella loro nuova vita da ""bravi ragazzi"". Tuttavia, vengono richiamati in azione per affrontare un\'ultima missione, guidati da una squadra criminale tutta al femminile.',
-    immagineUrl:
-      'https://image.tmdb.org/t/p/original//3KE3teyf3d8m14Mrdz75w4KdNGr.jpg',
+      'https://image.tmdb.org/t/p/original/g4zumtvkkH5QbyXyL0mO8HpCSaw.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
 ]

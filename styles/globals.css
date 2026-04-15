@@ -61,11 +61,11 @@ h1, h2, h3, h4,
   -webkit-text-fill-color: transparent !important;
   letter-spacing: 2px;
   text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #e60000 !important;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 1px white;
 }
 
 h3, h4, .MuiTypography-h3, .MuiTypography-h4, .MuiTypography-h5, .MuiTypography-h6 {
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 0.5px white;
 }
 
 main > *:nth-child(even) h1,
