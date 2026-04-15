@@ -104,7 +104,7 @@ export default function Home({ data }) {
         </p>
       </Paragraph>
       <Featured data={data} defaultTag='per' />
-      <SwiperNews title='News' data={data} limit={12} defaultTag='per' />
+      {/* <SwiperNews title='News' data={data} limit={12} defaultTag='per' /> */}
       <Team
         title="La #per dell'Oratorio don Bosco è..."
         description=''
