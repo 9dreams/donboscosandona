@@ -45,21 +45,32 @@ export default function MyCarousel({
       >
         {slides.map((slide) => (
           <Paper
-            className={styles.slide}
+            className={styles.slideOuter}
             sx={{
               position: 'relative',
-              backgroundImage: {
-                xs: 'url(' + (slide.immagine_mobile || slide.immagine) + ')',
-                lg: 'url(' + slide.immagine + ')',
-              },
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
               height: height + 'vh',
               paddingTop: height / 2 - 10 + 'vh',
+              overflow: 'hidden',
             }}
             elevation={5}
           >
+            <Box
+              className={styles.slideBackground}
+              sx={{
+                position: 'absolute',
+                top: 0,
+                bottom: 0,
+                right: 0,
+                left: 0,
+                backgroundImage: {
+                  xs: 'url(' + (slide.immagine_mobile || slide.immagine) + ')',
+                  lg: 'url(' + slide.immagine + ')',
+                },
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+            />
             <Box
               sx={{
                 position: 'absolute',

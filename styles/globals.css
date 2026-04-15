@@ -1,16 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Bebas+Neue&family=Figtree:wght@300&family=Roboto+Slab&display=swap');
+@import url('https://fonts.cdnfonts.com/css/starjedi-special-edition');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Bebas Neue', cursive !important;
-}
+/* Lightsaber titles moved to bottom */
 
 h5,
 h6,
@@ -18,13 +13,119 @@ h,
 a,
 p,
 th,
-td {
-  font-family: 'Figtree', sans-serif !important;
+td,
+span {
+  font-family: 'Exo 2', sans-serif !important;
+  color: #e0e0e0 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
 }
 
 html,
 body {
   margin: 0 !important;
   padding: 0 !important;
-  font-family: 'Figtree', sans-serif !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  background-color: #0c0c0c !important;
+  background-image: url('/images/spaceship_bg.jpg') !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  color: #e0e0e0 !important;
+}
+
+/* Overrides for common surface elements to make them dark and slightly transparent */
+.bg-white {
+  background-color: rgba(15, 15, 20, 0.85) !important;
+  color: #e0e0e0 !important;
+}
+
+.MuiPaper-root,
+.MuiCard-root {
+  background-color: rgba(15, 15, 20, 0.85) !important;
+  color: #e0e0e0 !important;
+}
+
+.MuiTypography-root {
+  color: #e0e0e0 !important;
+}
+
+/* Star Wars Titles - Sith Red vs Jedi Blue */
+h1, h2, h3, h4, 
+.MuiTypography-h1, .MuiTypography-h2, .MuiTypography-h3, .MuiTypography-h4, .MuiTypography-h5, .MuiTypography-h6 {
+  font-family: 'StarJedi Special Edition', 'Bebas Neue', cursive !important;
+  text-transform: lowercase !important;
+  color: #9e0000 !important;
+  -webkit-text-fill-color: transparent !important;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #e60000 !important;
+  -webkit-text-stroke: 2px white;
+}
+
+h3, h4, .MuiTypography-h3, .MuiTypography-h4, .MuiTypography-h5, .MuiTypography-h6 {
+  -webkit-text-stroke: 1px white;
+}
+
+main > *:nth-child(even) h1,
+main > *:nth-child(even) h2,
+main > *:nth-child(even) h3,
+main > *:nth-child(even) h4,
+main > *:nth-child(even) .MuiTypography-h1,
+main > *:nth-child(even) .MuiTypography-h2,
+main > *:nth-child(even) .MuiTypography-h3,
+main > *:nth-child(even) .MuiTypography-h4,
+main > *:nth-child(even) .MuiTypography-h5,
+main > *:nth-child(even) .MuiTypography-h6 {
+  color: #004e92 !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 5px #00aaff, 0 0 10px #00aaff, 0 0 15px #0088ff !important;
+}
+
+/* Effetto Filtro Olografico / Interferenza Informatica per le Immagini */
+img,
+.MuiCardMedia-root,
+.MuiAvatar-root {
+  /* Linee di scansione tipiche dei vecchi monitor CRT / ologrammi */
+  -webkit-mask-image: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 2px,
+    rgba(0, 0, 0, 0.5) 3px,
+    rgba(0, 0, 0, 0.5) 5px
+  );
+  mask-image: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 2px,
+    rgba(0, 0, 0, 0.5) 3px,
+    rgba(0, 0, 0, 0.5) 5px
+  );
+  
+  /* Filtro per uniformare i colori in stile tech/vintage */
+  filter: sepia(20%) saturate(120%) contrast(120%) brightness(90%);
+  transition: all 0.3s ease;
+}
+
+@keyframes glitch-flicker {
+  0%   { opacity: 1; filter: sepia(20%) saturate(120%) contrast(120%) brightness(90%); -webkit-mask-position: 0 0; }
+  5%   { opacity: 0.6; filter: sepia(60%) saturate(200%) contrast(150%) brightness(130%) hue-rotate(20deg); -webkit-mask-position: 0 5px; }
+  10%  { opacity: 0.9; filter: sepia(30%) saturate(150%) contrast(180%) brightness(110%) hue-rotate(-15deg); -webkit-mask-position: 0 -2px; }
+  15%  { opacity: 1; filter: sepia(20%) saturate(120%) contrast(120%) brightness(90%); -webkit-mask-position: 0 0; }
+  55%  { opacity: 1; -webkit-mask-position: 0 0; }
+  60%  { opacity: 0.5; filter: sepia(80%) saturate(250%) contrast(160%) brightness(140%) hue-rotate(30deg); -webkit-mask-position: 0 10px; }
+  65%  { opacity: 0.8; filter: sepia(40%) saturate(160%) contrast(130%) brightness(120%) hue-rotate(-25deg); -webkit-mask-position: 0 -8px; }
+  70%  { opacity: 0.9; filter: sepia(30%) saturate(140%) contrast(140%) brightness(110%) hue-rotate(15deg); -webkit-mask-position: 0 3px; }
+  75%  { opacity: 1; filter: sepia(20%) saturate(120%) contrast(120%) brightness(90%); -webkit-mask-position: 0 0; }
+  100% { opacity: 1; -webkit-mask-position: 0 0; }
+}
+
+img:hover,
+a:hover img,
+.MuiCardActionArea-root:hover img,
+.MuiCardMedia-root:hover,
+.MuiAvatar-root:hover {
+  animation: glitch-flicker 4s infinite linear;
+  cursor: crosshair;
 }

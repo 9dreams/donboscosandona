@@ -9,3 +9,18 @@
 
 @media screen and (max-width: 768px) { .link_settori { font-size: 19px; } }
 @media screen and (min-width: 1024px) { .link_settori { font-size: 17px; } }
+
+.heroOuter {
+    overflow: hidden;
+}
+
+.heroBackground {
+    -webkit-mask-image: repeating-linear-gradient(to bottom, black 0px, black 2px, rgba(0, 0, 0, 0.5) 3px, rgba(0, 0, 0, 0.5) 5px);
+    mask-image: repeating-linear-gradient(to bottom, black 0px, black 2px, rgba(0, 0, 0, 0.5) 3px, rgba(0, 0, 0, 0.5) 5px);
+    filter: sepia(20%) saturate(120%) contrast(120%) brightness(90%);
+    transition: all 0.3s ease;
+}
+
+.heroOuter:hover .heroBackground {
+    animation: glitch-flicker 4s infinite linear;
+}

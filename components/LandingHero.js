@@ -39,6 +39,7 @@ export default function LandingHero(props) {
       }}
     >
       <Paper
+        className={styles.heroOuter}
         sx={{
           position: 'relative',
           color: '#fff',
@@ -47,17 +48,28 @@ export default function LandingHero(props) {
             xs: '100vh',
             lg: props.height + 'vh',
           },
-          backgroundImage: {
-                xs: 'url(' + (props.imageMobileUrl || props.imageUrl) + ')',
-                lg: 'url(' + props.imageUrl + ')',
-              },
           padding: 0,
           margin: 0,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          overflow: 'hidden',
         }}
       >
+        <Box
+          className={styles.heroBackground}
+          sx={{
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            right: 0,
+            left: 0,
+            backgroundImage: {
+              xs: 'url(' + (props.imageMobileUrl || props.imageUrl) + ')',
+              lg: 'url(' + props.imageUrl + ')',
+            },
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
         <Box
           sx={{
             position: 'absolute',

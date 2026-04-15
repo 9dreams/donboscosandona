@@ -2,10 +2,21 @@
     width: 100%;
 }
 
-.carousel .slide {
+.carousel .slideOuter {
     overflow: hidden;
 }
 
-.carousel .slide * {
+.carousel .slideBackground {
+    -webkit-mask-image: repeating-linear-gradient(to bottom, black 0px, black 2px, rgba(0, 0, 0, 0.5) 3px, rgba(0, 0, 0, 0.5) 5px);
+    mask-image: repeating-linear-gradient(to bottom, black 0px, black 2px, rgba(0, 0, 0, 0.5) 3px, rgba(0, 0, 0, 0.5) 5px);
+    filter: sepia(20%) saturate(120%) contrast(120%) brightness(90%);
+    transition: all 0.3s ease;
+}
+
+.carousel .slideOuter:hover .slideBackground {
+    animation: glitch-flicker 4s infinite linear;
+}
+
+.carousel .slideOuter * {
     color: white;
 }
