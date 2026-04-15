@@ -16,7 +16,7 @@ export const menu = [
 ]
 
 export const logoUrl = null
-export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
+export const Header = () => <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 
 const menuFooter = menu
 
@@ -28,7 +28,7 @@ const socials = [
 
 let images = []
 
-export const footer = <Footer
+export const Footer_ = () => <Footer
     imageUrl="https://source.unsplash.com/random"
     color="#272727"
     opacitycolor="1"

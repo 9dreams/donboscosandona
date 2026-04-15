@@ -17,12 +17,13 @@
 
 .card {
   position: relative;
-  background-color: #ffffff;
+  background-color: #1a1a2e;
   margin-top: 50px;
   margin-bottom: 80px;
   padding: 30px;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  color: #f0f0f0;
 }
 
 .cardHeader {
@@ -49,5 +50,5 @@
 .cardBody p {
   font-size: 14px;
   line-height: 1.5;
-  color: #6c757d;
+  color: #cccccc;
 }

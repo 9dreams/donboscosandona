@@ -129,3 +129,28 @@ a:hover img,
   animation: glitch-flicker 4s infinite linear;
   cursor: crosshair;
 }
+
+/* Effetto ologramma leggero per la mappa per non compromettere la leggibilità */
+.light-glitch {
+  -webkit-mask-image: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 2px,
+    rgba(0, 0, 0, 0.85) 3px,
+    rgba(0, 0, 0, 0.85) 4px
+  ) !important;
+  mask-image: repeating-linear-gradient(
+    to bottom,
+    black 0px,
+    black 2px,
+    rgba(0, 0, 0, 0.85) 3px,
+    rgba(0, 0, 0, 0.85) 4px
+  ) !important;
+  filter: sepia(10%) saturate(110%) contrast(110%) brightness(95%) !important;
+  transition: all 0.3s ease;
+}
+
+.light-glitch:hover {
+  animation: glitch-flicker 6s infinite linear !important;
+  cursor: crosshair !important;
+}

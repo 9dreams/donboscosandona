@@ -304,9 +304,8 @@ export default function Home({ data }) {
         cardWidth={4}
       />
       <Maps
-        maxWidth='100%'
-        maxHeight='550px'
-        url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.164099261905!2d12.571927!3d45.629088!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477957021a6f5e37%3A0x2767632f6958496c!2sOratorio%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1682593458374!5m2!1sit!2sit'
+        maxWidth={false}
+        url='/images/map_dark.png'
       />
       <div className='m-10'>
         <Credits />
@@ -635,7 +634,7 @@ let serate_cinema = [
     title: 'SUPERGIRL',
     category: '',
     description:
-      'Quando un avversario inaspettato e spietato colpisce troppo vicino a casa, Kara Zor-El, alias Supergirl, è costretta a stringere un’improbabile alleanza intraprendendo un’epica avventura interstellare all’insegna della vendetta e della giustizia.',
+      `Quando un avversario inaspettato e spietato colpisce troppo vicino a casa, Kara Zor-El, alias Supergirl, è costretta a stringere un'improbabile alleanza intraprendendo un'epica avventura interstellare all'insegna della vendetta e della giustizia.`,
     immagineUrl:
       'https://image.tmdb.org/t/p/original//niSvU02l2BONH9ivubV6K1a5QiK.jpg',
     url: 'https://cinema.donboscosandona.it',
