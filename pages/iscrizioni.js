@@ -142,6 +142,27 @@ export default function Pagina() {
           </Button>
         </Box>
       </Paragraph>
+      <Paragraph title='Pagamento'>
+        <p>
+          <strong>Quota di iscrizione:</strong>
+        </p>
+        <ul style={{ paddingLeft: '1.5rem', marginTop: '0.5rem' }}>
+          <li>2 settimane: 135,00 €</li>
+          <li>3 settimane: 145,00 €</li>
+          <li>Tutta la PER: 170,00 €</li>
+        </ul>
+        <br />
+        <p>I ragazzi di terza media pagano 110,00 €</p>
+        <br />
+        <p>
+          Nel caso di fratelli o sorelle, la seconda quota sarà ribassata di 20€,
+          la terza di 40€.
+        </p>
+        <br />
+        <p>
+          <em>Nota: la quota per le singole uscite è a parte.</em>
+        </p>
+      </Paragraph>
     </Layout>
   )
 }

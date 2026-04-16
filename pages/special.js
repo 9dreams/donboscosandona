@@ -49,7 +49,7 @@ export default function Pagina() {
 
         <p>
           Attenzione: la partecipazione al Gruppo Special potrebbe comportare
-          spese aggiuntive.
+          spese aggiuntive. In particolare il 7 luglio potranno partecipare alla gita di Rafting sul Brenta, e l’8 luglio sarà possibile un’uscita notturna!
         </p>
       </Paragraph>
     </Layout>

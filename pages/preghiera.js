@@ -31,39 +31,53 @@ export default function Pagina() {
       />
       <Paragraph>
         <p>
-          La Proposta Estate desidera offrire a tutti i ragazzi ed animatori un
+          La Proposta Estate desidera offrire ai ragazzi ed agli animatori un
           tempo di qualità per prendersi cura di tutti gli aspetti della vita,
-          compreso quello spirituale, prendendoci cura dell’amicizia tra di noi
-          e con il Signore della nostra vita.
-          <br /></p>
-        <p><br />
-          Tutti i giorni dalle 9.30 alle 10.00 appuntamento in chiesa o in
-          teatro per iniziare la nostra giornata. Tra canti, preghiera e la
-          nostra bellissima storia lanciamo l’impegno della giornata
-          <br /></p>
-        <p><br />
-          Tutti i giorni, per chi vuole, alle 12:15 la preghiera dell’ora media
-          in cappellina
-          <br /></p>
-        <p><br />
-        DOMENICA 15 GIUGNO - FESTA DI APERTURA CON TUTTE LE FAMIGLIE
-Ore 9.00 – S. Messa; a seguire, incontro in teatro coi genitori per alcune importanti comunicazioni. Nel frattempo, i ragazzi si ritroveranno con i loro animatori per giocare e fare festa coi gonfiabili.
-Sempre domenica mattina verranno distribuite le magliette della P.E.R. 25. 
+          compreso quello spirituale, prendendoci cura dell’amicizia con il
+          Signore della nostra vita, in modo che cresca l’amicizia tra noi.
         </p>
-        <p><br />
-        Venerdì 4 e Sabato 5 LUGLIO - PELLEGRINAGGIO
+        <br />
+        <p>
+          Tutti i giorni dalle 9.15 alle 9.45 appuntamento in chiesa o in teatro
+          per iniziare la nostra giornata. Tra canti, preghiera e la nostra
+          bellissima storia lanciamo l’impegno della giornata.
           <br />
-          Il pellegrinaggio è un’esperienza fondamentale nel cammino della
-          P.E.R.: dopo tanti doni ricevuti, è il momento di ringraziare, prima
-          di lasciarci...
-          <br />
-          IL PROGRAMMA dettagliato verrà dato durante la PER
+          Tutti i giorni, per chi vuole, alle 12:15 la preghiera dell’angelus in
+          cappellina.
         </p>
-        <p><br />
-        Un gruppo di ragazzi di terza media partirà a piedi nel pomeriggio di venerdì 4, passerà la notte in sacco a pelo e materassini, ospitato presso una parrocchia lungo il tragitto. Un secondo gruppo partirà in bicicletta sabato mattina e raggiungerà il resto dei pellegrini per l’ultima tappa e il pranzo al sacco.
- 
- Tutti  gli altri (pigri, fratelli, genitori, nonni, zii e chi vuole…) sono attesi per la S. Messa che sarà celebrata alle ore 11.00 al Santuario di Motta … E POI ANGURIA PER TUTTI!!!
- 
+        <br />
+        <p>
+          <strong>
+            DOMENICA 14 GIUGNO - FESTA DI APERTURA CON TUTTE LE FAMIGLIE
+          </strong>
+          <br />
+          Ore 9.00 – S. Messa; a seguire, incontro in teatro coi genitori per
+          alcune importanti comunicazioni. Nel frattempo, i ragazzi si
+          ritroveranno con i loro animatori per giocare e fare festa coi
+          gonfiabili.
+          <br />
+          In questa giornata di festa ci sarà anche la gara delle torte delle
+          squadre! (Potrete portare le torte da casa, scrivendo gli ingredienti,
+          e saranno giudicate in una gara che darà punti alle squadre della
+          P.E.R.)
+          <br />
+          Sempre domenica mattina verranno distribuite le magliette della P.E.R.
+          26.
+        </p>
+        <br />
+        <p>
+          <strong>SABATO 11 LUGLIO - PELLEGRINAGGIO</strong>
+          <br />
+          Il pellegrinaggio quest'anno chiuderà la P.E.R. e permetterà di
+          ringraziare il Signore di quanto ci avrà donato di vivere durante il
+          mese di P.E.R. 26. Come al solito andremo a Motta di Livenza in bici
+          per concludere nelle mani di Maria.
+        </p>
+        <br />
+        <p>
+          IL PROGRAMMA dettagliato verrà dato durante la PER.
+          <br />
+          Ciò che non cambia mai invece è… l’ANGURIA PER TUTTI!!!
         </p>
       </Paragraph>
     </Layout>

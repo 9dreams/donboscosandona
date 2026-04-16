@@ -29,19 +29,37 @@ export default function Pagina() {
         title="Spazio Genitori"
         imageUrl="/images/genitori.png"
       />
-      <Paragraph
-        title="Spazio genitori"
-      >
-        L’intento dell’Oratorio Don Bosco è di essere alleati dei genitori nell’educazione dei ragazzi, non sostituti!
-        E visto che i nostri cortili non sono un parcheggio per i figli, è bello vedersi ogni tanto durante il periodo della P.E.R. per incontrarci, mettersi al servizio, scambiarci opinioni, ridere e scherzare…
-        <br /><br />
-        Ecco gli appuntamenti della P.E.R. dove i genitori sono stra-benvenuti:
-        <br />-   	Domenica 15 giugno, ore 9: Santa Messa di Apertura; a seguire incontro per delle comunicazioni in teatro.
-        <br />-   	Tutte le serate organizzate!
-        <br />-   	l’Oratorio è sempre aperto… venite a rinfrescarvi da noi!
-        <br />-   	Sabato 5 Luglio, ore 11.00: Santa Messa di Ringraziamento al Santuario di Motta di Livenza... e alla fine ANGURIA PER TUTTI!!!
-        <br /><br />Per coloro che volessero regalare un po’ del proprio tempo e dare una
-        mano a Don Bosco durante la P.E.R., non esitino a contattare don Simone.
+      <Paragraph title="Spazio genitori">
+        <p>
+          L’intento dell’Oratorio Don Bosco è di essere alleati dei genitori
+          nell’educazione dei ragazzi, non sostituti! E visto che i nostri
+          cortili non sono un parcheggio per i figli, è bello vedersi ogni tanto
+          durante il periodo della P.E.R. per incontrarci, mettersi al servizio,
+          scambiarci opinioni, ridere e scherzare…
+        </p>
+        <br />
+        <p>
+          Ecco gli appuntamenti della P.E.R. dove i genitori sono
+          stra-benvenuti:
+        </p>
+        <ul style={{ paddingLeft: "1.5rem", marginTop: "0.5rem" }}>
+          <li>
+            Domenica 14 giugno, ore 9: Santa Messa di Apertura; a seguire
+            incontro per delle comunicazioni in teatro.
+          </li>
+          <li>Tutte le serate organizzate!</li>
+          <li>l’Oratorio è sempre aperto… venite a rinfrescarvi da noi!</li>
+          <li>
+            Sabato 11 Luglio, ore 11.00: Santa Messa di Ringraziamento al
+            Santuario di Motta di Livenza... e alla fine ANGURIA PER TUTTI!!!
+          </li>
+        </ul>
+        <br />
+        <p>
+          Per coloro che volessero regalare un po’ del proprio tempo e dare una
+          mano a Don Bosco durante la P.E.R., non esitino a contattare don
+          Simone.
+        </p>
       </Paragraph>
     </Layout>
   );

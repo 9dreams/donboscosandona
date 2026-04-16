@@ -39,68 +39,75 @@ export default function Home({ data }) {
       <LandingHero
         opacity={0.2}
         title='Proposta Estate Ragazzi'
-        description="Dal 13 Giugno all'11 Luglio 2026"
+        description="Dall'11 Giugno al 9 Luglio 2026"
         buttonUrl='/tema'
-        buttonText='SAVED TO SAVE'
+        buttonText='SKY WARS'
         imageUrl='/images/home.png'
       />
       <Paragraph
-        title='Salvato per salvare'
-        subtitle='Saluto del Direttore, don Nicola Munari'
+        title='SKY WARS...'
+        subtitle='“Fa più rumore un albero che cade di una foresta che cresce”'
         avatarImageUrl='/images/home/nik.png'
         columnCount={2}
       >
         <p>
-          Titolo interessante quello di questa Proposta Estate Ragazzi: “Salvato
-          per salvare”. Provo a mettermi nei panni di un genitore che leggerà
-          questo titolo. Un genitore cosa desidera salvare, rendere sicuro, dare
-          stabilità per la vita dei propri figli?
+          Da sempre la lotta tra il bene e il male è un tema che interroga,
+          affascina, preoccupa, ispira ogni generazione. Dai tempi di Caino e
+          Abele, di Davide e Golia…
+          <br />
+          Lungo la storia, su questa disputa, si sono interrogati e confrontati
+          uomini di spirito, filosofi, teologi, romanzieri, registi, politici e
+          sociologi… Ma questo agguerrito confronto è solo fonte di ispirazione
+          per artisti e pensatori?
         </p>
         <p>
           <br />
-          Per molti, ma non per tutti, in questo periodo, sicuramente c’è la
-          necessità di salvare l’anno scolastico. Per la maggior parte è urgente
-          salvare le amicizie dei propri figli, perché siano sicure e
-          promettenti. Tutti sono preoccupati perché la salute fisica sia sempre
-          salva e salvaguardata e tutti sperano per loro un futuro sereno, senza
-          problemi economici e con una vita di successo. Mi chiedo se per
-          salvare, custodire, conservare, difendere i propri ragazzi basta avere
-          a cuore la vita fisica, la scuola, le amicizie e quant’altro.
+          C’è una guerra quotidiana, che ogni persona vive dentro e fuori di sé:
+          la difficile scelta tra il bene e il male, tra ciò che è giusto, bello
+          e buono e ciò che è facile, cattivo e ingiusto. Ognuno di noi vuole
+          una vita significativa ed è costretto a compiere quelle scelte che
+          maggiormente portano alla realizzazione di sé. Ma quali sono le scelte
+          giuste? Chi può dirmi ciò che è bene o male? Questo è il tema che fa
+          perdere il somno ad ogni mamma e papà che desidera la felicità dei
+          propri figli. Chi ama veramente non può non chiedersi cos’è meglio per
+          chi gli è affidato.
         </p>
         <p>
           <br />
-          Per i piccoli, per ogni genitore e per ogni persona, è essenziale
-          cercare e custodire un senso bello della vita, che dia significato ad
-          ogni giornata. Senza un motivo davvero forte per vivere è difficile
-          condurre un’esistenza bella e capace di superare i momenti di fatica,
-          l’ansia da prestazione, il fascino della violenza, il disorientamento
-          che quotidianamente insidia la vita di ciascuno.
+          Per i greci bellezza e bontà non potevano essere separati. Per i
+          latini cattivo aveva il significato di schiavo, meschino, miserabile.
+          Il problema sta nella scelta, segnata dalla fatica o dalla facilità.
+          Il male è più appariscente, immediato, accattivante, facile,
+          istintivo e rumoroso. Il bene è più umile, silenzioso, discreto, lento
+          e fecondo, fruttuoso e faticoso.
         </p>
         <p>
           <br />
-          La P.E.R. si propone di offrire ai Ragazzi, che ci vengono affidati,
-          un esempio di vita bella e buona, significativa e piena, spesa bene e
-          robusta di fronte alle fatiche della vita stessa. Come lo si vuol
-          fare? Mettendo accanto ai vostri figli persone adulte e giovani che
-          sanno spendersi per gli altri con gioia e gratuità.
+          Tale distinzione la si può riassumere nella celebre frase: “Fa più
+          rumore un albero che cade di una foresta che cresce”. Nel pensare LA
+          PROPOSTA ESTATE RAGAZZI 2026, ci poniamo questa domanda: come aiutare
+          i nostri ragazzi a scegliere tra bene e male. Voi genitori ogni giorno
+          vi sforzate di insegnare ai vostri figli questo delicato compito che
+          coinvolge tutta la loro vita.
         </p>
         <p>
           <br />
-          Il meglio della nostra proposta non sono le attività, le gite, i
-          tornei, o i punti delle squadre. Il meglio sta nelle persone
-          significative che sono la prova concreta che la vita può avere un
-          gusto, una forza e un orizzonte davvero grandi ma non per merito loro,
-          ma perché nella loro vita è presente Gesù.
+          La P.E.R. è un’ottima esperienza per aiutare a discernere e allenare
+          la volontà perché le scelte siano buone e non facili. Tra giochi,
+          attività di ogni genere, gite, lavoro di squadra, impegno e un
+          equilibrato agonismo, i nostri ragazzi, accompagnati da salesiani e
+          animatori, possono sicuramente sperimentare che c’è un modo buono di
+          vivere e possono valutare che ogni cosa nella vita può concorrere al
+          bene di tutta l’esistenza.
         </p>
         <p>
-          <br />A tutti: genitori, educatori e ragazzi dico: “Non abbiamo paura
-          di credere che la nostra vita è custodita, salvaguardata, resa davvero
-          spettacolare dal Signore. Ecco il meglio, non solo dell’estate, ma di
-          tutta vita. Buona estate
+          <br />
+          Chissà, cari genitori, forse questa estate potrebbe essere una
+          occasione anche per voi!? Perché no!! Buona P.E.R. a tutti
         </p>
         <br />
         <p>
-          <b>don Nicola</b>
+          <b>don Nicola Munari - Direttore</b>
         </p>
       </Paragraph>
       <Featured data={data} defaultTag='per' />
@@ -128,24 +135,24 @@ export default function Home({ data }) {
             'Inizio pomeriggio: tornei, giochi al parco, spettacoli, ecc.',
           ],
           [
-            '9.30',
+            '9.15',
             'Momento di preghiera ragazzi',
             '17.45',
             'Concludiamo insieme la giornata',
           ],
           [
-            '10.00',
+            '9.45',
             'Prima ora di attività',
             '18.00',
             'Termine attività pomeridiane',
           ],
           [
-            '10.50',
+            '10.35',
             'Ricreazione',
             '18.30',
             'Santa Messa (per chi lo desidera)',
           ],
-          ['11.10', 'Seconda ora di attività', '', ''],
+          ['11.05', 'Seconda ora di attività', '', ''],
           [
             '12.00',
             'A casa... buon pranzo!',
@@ -154,6 +161,19 @@ export default function Home({ data }) {
           ],
         ]}
       />
+      <Paragraph title='Pranzo al sacco'>
+        <p>
+          Per i ragazzi che fanno parte delle attività dell’oratorio durante
+          l’anno (ADS, DopoLaCampanella, Scout San Donà 1, Banda) sarà possibile
+          rimanere in oratorio durante la pausa pranzo con il pranzo al sacco.
+          <br />
+          L’assistenza durante il pranzo sarà assicurata, ma non saranno forniti
+          servizi di animazione.
+          <br />
+          Il contributo per rimanere in oratorio durante la pausa pranzo è di
+          <strong> 10 euro a settimana</strong>.
+        </p>
+      </Paragraph>
       <Products
         cardWidth={3}
         products={in_evidenza}
@@ -200,7 +220,7 @@ export default function Home({ data }) {
         </p>
         <p>
           <b>
-            Anche quest’anno potrai ricevere tutte le NEWS della PER2
+            Anche quest’anno potrai ricevere tutte le NEWS della PER
             direttamente su WhatsApp!!!
           </b>
           <br /> E' semplice e comodo... usando il tuo telefono tocca il
@@ -221,7 +241,7 @@ export default function Home({ data }) {
             target='_blank'
             color='success'
             variant='outlined'
-            href='https://chat.whatsapp.com/F0B4dSu6LXYEEKnJYo6dUd'
+            href='https://chat.whatsapp.com/BdKnnpkcjcfI3pKUiykDdm?mode=gi_t'
           >
             ISCRIVITI ALLE NEWS SU WHATSAPP
           </Button>
@@ -620,7 +640,7 @@ let serate_cinema = [
   {
     title: 'DISCLOSURE DAY',
     category: '',
-    description: 'Meritiamo di sapere',
+    description: 'Un viaggio oltre i confini del conosciuto per scoprire la verità che ci è stata tenuta nascosta. Cosa accadrebbe se finalmente venisse rivelata la presenza di intelligenze extraterrestri tra noi?',
     immagineUrl:
       'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ3dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9ddc4e13c3529104be59ba35728fbc4bc54012bf/Disclosure%20day.png',
     url: 'https://cinema.donboscosandona.it',
@@ -646,7 +666,7 @@ let serate_cinema = [
   {
     title: 'MINIONS & MONSTERS',
     category: '',
-    description: '',
+    description: 'I piccoli aiutanti gialli si lanciano in un\'avventura mozzafiato in un mondo popolato da creature leggendarie. Riusciranno la loro goffaggine e il loro spirito di squadra a sconfiggere le minacce più oscure?',
     immagineUrl:
       'https://image.tmdb.org/t/p/original/822dQlRkYV5X23WGdxEZGVxKpa9.jpg',
     url: 'https://cinema.donboscosandona.it',
@@ -663,7 +683,7 @@ let serate_cinema = [
   {
     title: 'SPIDERMAN: BRAND NEW DAY',
     category: '',
-    description: '',
+    description: 'New York ha un nuovo volto e Peter Parker deve affrontare sfide mai viste prima. In una città che non dorme mai, il nostro amichevole Spider-Man di quartiere dovrà decidere che tipo di eroe vuole essere in questo nuovo capitolo della sua vita.',
     immagineUrl:
       'https://image.tmdb.org/t/p/original/pspkSVP39NGa6G2rvK5KlMjvYUe.jpg',
     url: 'https://cinema.donboscosandona.it',
