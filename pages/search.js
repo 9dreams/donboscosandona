@@ -339,6 +339,12 @@ export default function SearchResults() {
                 </ul>
               </div>
             </div>
+            <hr className="my-6 border-gray-500 w-full" />
+            <div className="flex flex-col sm:flex-row items-center justify-between w-full">
+              <span className="text-sm text-gray-300">
+                © 2026 Emporio Solidale™. Questo sito è stato realizzato dagli allievi Buccudu Matteo, Marcon Filippo e Menegaldo Riccardo.
+              </span>
+            </div>
           </div>
         </footer>
       </div>

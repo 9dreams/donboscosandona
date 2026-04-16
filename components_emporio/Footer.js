@@ -98,10 +98,11 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between w-full">
           <span className="text-sm text-gray-300">
-            © 2025{" "}
+            © 2026{" "}
             <a href="#" className="hover:underline">
               Emporio Solidale™
             </a>
+            . Questo sito è stato realizzato dagli allievi Buccudu Matteo, Marcon Filippo e Menegaldo Riccardo.
           </span>
           <div className="mt-4 sm:mt-0">
             <a href="https://www.facebook.com/p/Emporio-Solidale-Basso-Piave-San-Vincenzo-De-Paoli-ODV-San-Donà-di-Piave-100089118798074/?locale=it_IT" className="text-gray-300 hover:text-white">
