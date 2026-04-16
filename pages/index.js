@@ -39,7 +39,7 @@ export default function Home({ data }) {
       <LandingHero
         opacity={0.2}
         title='Proposta Estate Ragazzi'
-        description="Dal 13 Giugno all'11 Luglio 2025"
+        description="Dal 13 Giugno all'11 Luglio 2026"
         buttonUrl='/tema'
         buttonText='SAVED TO SAVE'
         imageUrl='/images/home.png'
@@ -166,13 +166,13 @@ export default function Home({ data }) {
         description='Scegli due laboratori per le prime due settimane di PER, e altri due per le ultime due settimane. '
         cardWidth={3}
         products={laboratori}
-        borderRadius='2rem'
+        borderRadius='0.5rem'
         aspectRatio='1 / 1'
       />
       <Carousel slides={serate} height={90} />
       <Products
         title="Un'estate di emozioni al Cinema don Bosco"
-        description='Nei mesi di giugno, luglio e agosto gli iscritti alla PER25 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai iscriverti alla Community WhatsApp NEWS della P.E.R.25 che si trova nella sezione delle informazioni e News. Riceverai ogni settimana la programmazione insieme a un link che ti permetterà di acquistare online a prezzo scontato i biglietti per te e per i tuoi amici e familiari. Nota: non è possibile ricevere lo sconto alla cassa, ma solo acquistando i biglietti online.'
+        description='Nei mesi di giugno, luglio e agosto gli iscritti alla PER26 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai iscriverti alla Community WhatsApp NEWS della P.E.R.26 che si trova nella sezione delle informazioni e News. Riceverai ogni settimana la programmazione insieme a un link che ti permetterà di acquistare online a prezzo scontato i biglietti per te e per i tuoi amici e familiari. Nota: non è possibile ricevere lo sconto alla cassa, ma solo acquistando i biglietti online.'
         cardWidth={3}
         products={serate_cinema}
         aspectRatio='1 / 1.5'
@@ -189,7 +189,7 @@ export default function Home({ data }) {
           appuntamenti importanti.
           <br />
           Animatori, ragazzi e genitori potranno così essere sempre connessi e
-          raccontare la propria esperienza usando gli hashtag #PER25{' '}
+          raccontare la propria esperienza usando gli hashtag #PER26{' '}
         </p>
         <p>
           Seguiteci su
@@ -213,30 +213,29 @@ export default function Home({ data }) {
               marginBottom: '2rem',
               padding: '1rem',
               borderRadius: '2rem',
+              border: '2px solid green',
+              '&:hover': {
+                border: '2px solid lightgreen',
+              }
             }}
             target='_blank'
             color='success'
-            variant='contained'
+            variant='outlined'
             href='https://chat.whatsapp.com/F0B4dSu6LXYEEKnJYo6dUd'
           >
             ISCRIVITI ALLE NEWS SU WHATSAPP
           </Button>
         </p>
       </Paragraph>
-      <Testimonials
-        testimonials={testimonials}
-        cardWidth={4}
-        imageUrl='/images/home/sfondo_giostra.jpeg'
-      />
       <Products
         cardWidth={3}
         products={altri_link}
-        borderRadius='50%'
-        aspectRatio='1 / 1'
+        borderRadius='0.5rem'
+        aspectRatio='1.2 / 1'
       />
       <Paragraph
         title='La Segreteria della PER'
-        backgroundColor='#2f4700'
+        backgroundColor='#280b00ff'
         opacity={0.7}
         blur='0rem'
         maxWidth={false}
@@ -297,6 +296,11 @@ export default function Home({ data }) {
           Non è necessaria la presenza del genitore per l’iscrizione alle gite.
         </p>
       </Paragraph>
+      <Testimonials
+        testimonials={testimonials}
+        cardWidth={4}
+        imageUrl=''
+      />
       <Team
         title='Contatti'
         description='Hai dei dubbi? Contattaci pure (preferibilmente via email) e ti risponderemo il prima possibile.'
@@ -330,25 +334,25 @@ export async function getStaticProps() {
 const features = [
   {
     name: 'Una proposta cristiana',
-    imageUrl: '/images/home/praying.png',
+    imageUrl: '/images/home/call0.png',
     description:
       "Nel cuore dell'estate la PER vuol essere un'occasione per riscoprire la bellezza della fede.",
   },
   {
     name: 'In allegria',
-    imageUrl: '/images/home/happy.png',
+    imageUrl: '/images/home/call1.png',
     description:
       'La PER è piena di allegria vissuta in compagnia in ogni momento: giochi, attività, gite, serate...',
   },
   {
     name: 'Mettendo a frutto la creatività',
-    imageUrl: '/images/home/creativo.png',
+    imageUrl: '/images/home/call2.png',
     description:
       "Nei laboratori i talenti fioriscono: in te forse c'è uno sportivo, un artista, un creativo... scegli con cura al momento della preiscrizione.",
   },
   {
     name: 'Coltivando le relazioni',
-    imageUrl: '/images/home/relazioni.png',
+    imageUrl: '/images/home/call3.png',
     description:
       'Durante la PER non sarai mai da solo: educatori, animatori, altri ragazzi, ospiti... ognuno è un mondo da esplorare, devi solo buttarti!',
   },
@@ -416,7 +420,7 @@ let serate = [
   {
     titolo: 'Serata finale',
     descrizione:
-      'Venerdì 11 luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER25',
+      'Venerdì 11 luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER26',
     immagine: '/images/serate/finale.jpeg',
     colore: '#182C61',
     colore2: 'transparent',
@@ -461,7 +465,7 @@ let gite = [
   {
     titolo: 'Gardaland // Aquasplash',
     descrizione:
-      "Martedì 1 Luglio / La Proposta Estate 2025 si divide in due: le medie a Gardaland e le elementari all’Aquasplash di Lignano.",
+      "Martedì 1 Luglio / La Proposta Estate 2026 si divide in due: le medie a Gardaland e le elementari all’Aquasplash di Lignano.",
     immagine: '/images/gite/movieland.png',
     colore: '#FC427B',
     colore2: 'transparent',

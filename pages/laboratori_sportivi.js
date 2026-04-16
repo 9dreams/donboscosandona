@@ -7,52 +7,60 @@ import { Container, ButtonGroup, Button } from '@mui/material/'
 
 let products = [
   {
-    title: 'BASEBALL',
-    category: '1ª ora elementari / 2ª ora medie',
-    description:
-      "Il Baseball è uno sport per tutti, con la sua variante a 5. Si può giocare ovunque con una palla di gomma e ci sono tornei di squadre miste. La sua progressione didattica permette a persone con diverse abilità, di divertirsi e fare gioco di squadra. L'obiettivo: fai punti completando il giro delle basi dopo aver colpito la palla. In collaborazione con i Metros Venezia Baseball.",
-    immagineUrl: '/images/laboratori/baseball.jpeg',
-  },
-  {
     title: 'CALCIO',
-    category: '1ª ora elementari / 2ª ora medie',
+    category: '1ª ora medie / 2ª ora elementari',
     description:
-      "Sport di squadra giocato con un pallone su un campo di gioco rettangolare; l'obiettivo è di segnare più punti (detti gol o reti) facendo passare il pallone fra i pali della porta avversaria.",
+      'Scendi in campo per la sfida più amata! Allenamenti e partite per vivere la passione del pallone insieme.',
     immagineUrl: '/images/laboratori/calcio.jpeg',
   },
   {
     title: 'BASKET',
-    category: '1ª ora medie / 2ª ora elementari',
+    category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Sport di squadra in cui due formazioni di cinque giocatori ciascuna si affrontano per segnare con un pallone nel canestro avversario, secondo una serie di regole prefissate e con un punteggio che varia dalla posizione di tiro.',
+      'Pronti a fare canestro? Impara i tiri e i palleggi per diventare un vero campione del parquet.',
     immagineUrl: '/images/laboratori/basket.jpeg',
   },
   {
     title: 'PALLAVOLO',
     category: '1ª ora medie / 2ª ora elementari',
     description:
-      'Sport di squadra il cui scopo è realizzare punti facendo sì che la palla tocchi terra nel campo avversario, separato da una rete alta più di 200 cm.',
+      'Schiacciate e bagher! Un laboratorio dinamico per imparare il gioco di squadra nel rettangolo di gioco.',
     immagineUrl: '/images/laboratori/pallavolo.jpeg',
+  },
+  {
+    title: 'BASEBALL',
+    category: '1ª ora elementari / 2ª ora medie',
+    description:
+      'Home run! Prendi la mazza e corri tra le basi in questo emozionante sport di precisione e velocità.',
+    immagineUrl: '/images/laboratori/baseball.jpeg',
   },
   {
     title: 'PING PONG',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Il tennis tavolo, più popolarmente conosciuto come ping pong e inventato nel 1884, è uno degli sport di maggior diffusione nel mondo ed è una specialità olimpica.',
+      'Riflessi pronti e colpi veloci! Sfide mozzafiato al tavolo verde per diventare il re della racchetta.',
     immagineUrl: '/images/laboratori/pingpong.jpeg',
   },
   {
     title: 'RUGBY',
     category: '1ª ora medie / 2ª ora elementari',
     description:
-      'Sport di squadra in cui il campo è diviso in due metà, con due zone di meta nei dieci metri finali di entrambe. Portando la palla nella zona di meta della squadra avversaria realizzi cinque punti e ottieni il diritto di tirare un calcio di trasformazione che ne vale due...',
+      'Forza, coraggio e spirito di squadra! Impara le basi della palla ovale e il valore del terzo tempo.',
     immagineUrl: '/images/laboratori/rugby.jpeg',
   },
   {
-    title: 'PALLAMANO/HALO BALL/SMATCHBALL',
+    title: 'PALLAMANO',
     category: '1ª ora medie / 2ª ora elementari',
-    description: 'La pallamano è uno sport di squadra, in cui scendono in campo 7 atleti per ogni squadra. Riprende caratteristiche del calcio e della pallacanestro.',
+    description:
+      'Velocità e mira! Uno sport di squadra veloce e coinvolgente dove ogni gol è una vittoria collettiva.',
     immagineUrl: '/images/laboratori/pallamano.jpeg',
+  },
+  {
+    title: 'MINI TENNIS',
+    category: '1ª ora elementari / 2ª ora medie',
+    description:
+      'Sinner spostati! Arriviamo noi (per partecipare sarà necessario venire con una propria racchetta da tennis)',
+    immagineUrl: '/images/laboratori/tennis.png',
   },
 ]
 

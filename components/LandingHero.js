@@ -226,7 +226,7 @@ export default function LandingHero(props) {
               </Typography>
               {props.buttonUrl && (
                 <Button
-                  variant='contained'
+                  variant='outlined'
                   size='large'
                   color='error'
                   href={props.buttonUrl}
@@ -236,6 +236,10 @@ export default function LandingHero(props) {
                     borderRadius: '2rem',
                     paddingLeft: '3rem',
                     paddingRight: '3rem',
+                    border: '2px solid red',
+                    '&:hover': {
+                      border: '2px solid lightredf',
+                    }
                   }}
                 >
                   {props.buttonText}

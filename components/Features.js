@@ -27,6 +27,7 @@ const Features = (props) => {
                   alt={feature.title}
                   width='100'
                   height='100'
+                  className='light-glitch'
                 />
                 <h2>{feature.title}</h2>
                 <p>{feature.description}</p>

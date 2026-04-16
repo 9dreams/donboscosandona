@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
 
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
@@ -32,88 +33,114 @@ export default function Pagina() {
         title='Iscrizioni alla PER'
         imageUrl='/images/iscrizioni.png'
       />
-      <Paragraph>
-      <p><b>Le iscrizioni per i ragazzi/e che frequentano i gruppi dell’Oratorio (ADS, Dopo la Campanella, Scout San Donà 1, Banda) inizieranno lunedì 5   alle 16.00.<br />
-Per tutti, LE ISCRIZIONI INIZIERANNO mercoledì 7 maggio alle ore 16.00.</b>
-
-        </p><br />
-        <p>Le iscrizione sono previste da lunedì 5 maggio a venerdì 9 maggio dalle ore 16.00 alle 19.00.
-        Sabato 10 maggio le iscrizioni saranno aperte dalle 9.00 alle 12.00.
-        </p><br />
-        <p>QUEST’ANNO I LABORATORI SARANNO SCELTI IN PRESENZA AL MOMENTO DELL'ISCRIZIONE IN ORATORIO E PERCIÒ È NECESSARIA LA PRESENZA DEL RAGAZZO/A, così da facilitare le operazioni di segreteria nello scegliere i laboratori e la taglia della maglietta.
-
+      <Paragraph title='Date e Orari'>
+        <p>
+          Le iscrizione sono previste da <strong>lunedì 4 maggio a venerdì 8 maggio</strong> dalle ore <strong>16.00 alle 19.30</strong>.<br />
+          Sabato 09 maggio le iscrizioni saranno aperte dalle <strong>9.00 alle 12.00</strong>.
+        </p>
+        <br />
+        <p>
+          Le iscrizioni per i ragazzi/e che frequentano i gruppi dell’Oratorio (ADS, Dopo la Campanella, Scout San Donà 1, Banda) inizieranno <strong>lunedì 4 maggio alle 16.00</strong>.
+        </p>
+        <br />
+        <p>
+          Per tutti, <strong>LE ISCRIZIONI INIZIERANNO mercoledì 6 maggio alle ore 16.00</strong>.
+        </p>
+        <br />
+        <p>
+          <strong>ANCHE QUEST’ANNO I LABORATORI SARANNO SCELTI IN PRESENZA AL MOMENTO DELL'ISCRIZIONE IN ORATORIO</strong> E PERCIÒ È NECESSARIA LA PRESENZA DEL RAGAZZO/A, così da facilitare le operazioni di segreteria nello scegliere i laboratori e la taglia della maglietta.
         </p>
       </Paragraph>
-      <Paragraph subtitle='Anche quest’anno la pre-iscrizione è obbligatoria e si può fare direttamente da casa, tramite Internet!'>
-        
-        <p>Anche quest’anno la PRE-ISCRIZIONE è obbligatoria e si può fare direttamente da casa, tramite Internet!
-        </p><br />
-        <p>LA PRE-ISCRIZIONE SI FA CON SQUBY!<br />
-Quest’anno l’Oratorio ha scelto un nuovo programma per gestire le iscrizioni al GREST, ma anche a tutte le attività dell’Oratorio; il programma si chiama SQUBY.<br /><br />
-Per utilizzare SQUBY si può utilizzare:<br />
-- app SQUBY scaricabile da tutti gli store di app;<br />
-- attraverso il link <a href='https://live.squby.it/'>https://live.squby.it/</a><br />
 
-        </p><br />
-        <p>1. Se hai già l’account, entra con il solito modo a Squby con nome utente (mail) e la Password. Per l’iscrizione alla P.E.R. passa al punto 3 della guida, con il titolo ISCRIZIONE ALLA P.E.R. 25 Proposta Estate Ragazzi.
-        </p><br />
-        <p>2. SE NON SEI ISCRITTO: REGISTRA L’ANAGRAFICA<br />
-Il primo passaggio per iscriversi al GREST è registrare l’anagrafica, cioè inserire la scheda con tutti i dati del ragazzo/a all’interno del programma. Per fare questo è necessario collegarsi con PC o smartphone all’indirizzo<br /><br /></p>
-<p><a href="https://live.squby.it/iscrizione.aspx?grest=ac07b306-8431-4298-a477-4a57dfef7384&usertype=4 " class="bg-blue-400 p-5 rounded-full">https://live.squby.it/iscrizione.aspx?grest=ac07b306-8431-4298-a477-4a57dfef7384&usertype=4 </a></p>
-<p>
-<br />
-Scorrendo verso il basso troverete tutto il modulo da compilare con i DATI DEL RAGAZZO/A; inserite con particolare attenzione la vostra mail, i vostri recapiti telefonici e le eventuali allergie.
-Scendendo si arriva ai DATI DEI GENITORI - controllate bene numeri di cellulari e l’indirizzo mail. Una volta inseriti tutti i dati applicate la spunta alle 2 caselle in fondo alla pagina, con cui:<br />
-Si aderisce al servizio Squby (il programma di gestione delle iscrizioni)<br />
-Si dà il consenso alla conservazione e al trattamento dei dati (privacy) e alla pubblicazione di foto e video da parte dell’Oratorio sui propri canali.<br />
-Una volta terminato l’inserimento dei dati. cliccate su “Iscrivi”<br />
-Salvati la PSW da qualche parte!<br />
+      <Paragraph title='Pre-iscrizione Obbligatoria'>
+        <p>
+          Anche quest’anno la <strong>PRE-ISCRIZIONE è obbligatoria</strong> e si può fare direttamente da casa, tramite Internet!
+        </p>
+        <br />
+        <p>
+          <strong>LA PRE-ISCRIZIONE SI FA CON SQUBY!</strong><br />
+          Squby è il programma per gestire le iscrizioni al GREST, ma anche a tutte le attività dell’Oratorio.
+        </p>
+        <br />
+        <p>
+          Per utilizzare SQUBY puoi scaricare l'app dagli store oppure utilizzare il link diretto:
+        </p>
+        <Box sx={{ mt: 2, mb: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+          <Button
+            variant='outlined'
+            href='https://live.squby.it/'
+            target='_blank'
+          >
+            Accedi a Squby
+          </Button>
+        </Box>
+      </Paragraph>
 
-        </p><br />
-        <p>Una volta fatto questo, controlla la mail…arriverà un messaggio con le credenziali per accedere al programma Squby.
-Una volta compilata l’anagrafica sarà utile scaricare l’app Squby, che trovi su Play Store o su App Store, così da poter gestire le iscrizioni direttamente dall’app e ricevere i messaggi che verranno mandati!
-Per accedere al programma puoi:<br />
-Collegarti su http://live.squby.it<br />
- Accedere all’app SQUBY tramite smartphone<br />
-
-        </p><br />
-        <p>3. LA PRE-ISCRIZIONE VERA E PROPRIA!<br />
-Quanto fatto fino ad adesso non è stata l’iscrizione alla PER!<br />
-I prossimi passi ci mostreranno come iscriversi.<br />
-Aprire l’app Squby o entrare nel proprio account attraverso il link http://live.squby.it<br />
-Quando viene caricata la schermata iniziale, scorrere in fondo fino a quando non viene visualizzata l’attività P.E.R. 25 Proposta Estate Ragazzi
-Cliccare su ISCRIZIONI APERTE<br />
-Una volta aperta la pagina per l’iscrizione al P.E.R. 25 Proposta Estate Ragazzi  leggete con attenzione le
-indicazioni che sono riportate subito sotto al pulsante ISCRIVITI, in particolare tenete presente che a) che bisogna selezionare e iscriversi a ciascuna settimana<br />
-b) una volta iscritti alle settimane di P.E.R BISOGNA VENIRE IN ORATORIO A PERFEZIONARE L’ISCRIZIONE
-!!!ATTENZIONE!!! L’iscrizione fatta online e non perfezionata in Oratorio non è un’iscrizione valida!!! È NECESSARIO RICORDARSI DI VENIRE IN PRESENZA!!!<br />
-Per iscrivere i ragazzi/e al GREST selezionate dal menù a tendina sotto alla scritta “Seleziona data e orario disponibili” LA SETTIMANA CHE VI INTERESSA e quindi cliccate su “ISCRIVITI”. Questa operazione va ripetuta per ogni settimana.<br />
-Una volta fatto ciò si è conclusa la pre-iscrizione. <br />
-
-        </p><br />
-        <p>Da questo punto in poi tutte le iscrizioni verranno sempre fatte su Squby, quindi attraverso
-App o sito internet. Meglio installare l’app sul telefono in modo da ricevere notifiche e
-messaggi in tempo reale.
-
+      <Paragraph title='Guida alla registrazione'>
+        <p>
+          <strong>1. Hai già un account?</strong><br />
+          Entra con il solito modo a Squby con nome utente (mail) e la Password. Per l’iscrizione alla P.E.R. passa al punto 3 della guida.
+        </p>
+        <br />
+        <p>
+          <strong>2. Non sei ancora iscritto? Registra l'anagrafica</strong><br />
+          Il primo passaggio è registrare l’anagrafica, cioè inserire la scheda con tutti i dati del ragazzo/a. È necessario collegarsi con PC o smartphone:
+        </p>
+        <Box sx={{ mt: 2, mb: 2 }}>
+          <Button
+            variant='outlined'
+            href='https://live.squby.it/iscrizione.aspx?grest=ac07b306-8431-4298-a477-4a57dfef7384&usertype=4'
+            target='_blank'
+          >
+            Registra Nuova Anagrafica
+          </Button>
+        </Box>
+        <p>
+          Scorrendo verso il basso troverete il modulo da compilare; inserite con particolare attenzione mail, recapiti telefonici ed eventuali allergie.
+          Controllate bene i dati dei genitori. Una volta inseriti tutti i dati applicate la spunta alle caselle per l'adesione al servizio e il consenso privacy/foto.
+          Terminato l'inserimento, cliccate su <strong>“Iscrivi”</strong> e salvate la password!
+        </p>
+        <br />
+        <p>
+          Controlla la mail: arriverà un messaggio con le credenziali. Ti consigliamo di scaricare l’app Squby (Play Store o App Store) per gestire tutto comodamente e ricevere i messaggi.
         </p>
       </Paragraph>
-      <Paragraph title="Pagamento">
 
-Quota di iscrizione:<br />
-2 settimane: 120,00 €<br />
-3 settimane: 140,00 €<br />
-Tutta la PER: 160,00 €<br />
-<br />
-I ragazzi di terza media pagano  100,00 €<br />
-<br />
-nel caso di fratelli o sorelle, la seconda quota sarà ribassata di 20€, la terza di 40€<br />
-<br />
-Nota: la quota per le singole uscite è a parte<br />
+      <Paragraph title='Iscrizione vera e propria'>
+        <p>
+          <strong>3. I passi per iscriversi alla P.E.R. 26</strong><br />
+          Quanto fatto finora non è ancora l’iscrizione! Segui questi passi:
+        </p>
+        <ol style={{ paddingLeft: '1.5rem', marginTop: '1rem' }}>
+          <li>Apri l’app Squby o accedi via web.</li>
+          <li>Scorri in fondo fino all'attività <strong>P.E.R. 26 Proposta Estate Ragazzi</strong>.</li>
+          <li>Clicca su <strong>ISCRIZIONI APERTE</strong>.</li>
+          <li>Leggi con attenzione le indicazioni sotto al pulsante ISCRIVITI.</li>
+          <li>
+            Seleziona dal menù a tendina la <strong>settimana di interesse</strong> e clicca su ISCRIVITI.
+            <em> Questa operazione va ripetuta per ogni settimana.</em>
+          </li>
+        </ol>
+        <br />
+        <p>
+          <strong>!!! ATTENZIONE !!!</strong> L’iscrizione fatta online e non perfezionata in Oratorio non è valida! È NECESSARIO venire in presenza.
+        </p>
       </Paragraph>
-      <Paragraph title="Novità pranzo al sacco!!!">
-      Per i ragazzi che fanno parte delle attività dell’oratorio durante l’anno (ADS, DopoLaCampanella, Scout San Donà 1, Banda) sarà possibile rimanere in oratorio durante la pausa pranzo con il pranzo al sacco. <br />
-L’assistenza durante il pranzo sarà assicurata, ma non saranno forniti servizi di animazione. <br />
-Il contributo per rimanere in oratorio durante la pausa pranzo è di 10 euro a settimana. <br />
+
+      <Paragraph title='Prenota il tuo appuntamento'>
+        <p>
+          <strong>NOVITÀ:</strong> Quest’anno, per evitare code, abbiamo introdotto la prenotazione dell'appuntamento in presenza.
+          Basterà cliccare sul pulsante qui sotto, prenotare l’orario e venire all’appuntamento nell’orario preciso.
+        </p>
+        <Box sx={{ mt: 2, mb: 2 }}>
+          <Button
+            variant='outlined'
+            href='https://calendly.com/ads-donboscosandona/new-meeting'
+            target='_blank'
+          >
+            Prenota Appuntamento (Calendly)
+          </Button>
+        </Box>
       </Paragraph>
     </Layout>
   )
