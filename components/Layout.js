@@ -7,7 +7,7 @@ import { CookieBanner } from '@palmabit/react-cookie-law'
 
 import styles from './Layout.module.css'
 
-import { header, footer, siteTitle, siteDescription } from '/config/default'
+import { Header, Footer_, siteTitle, siteDescription } from '/config/default'
 
 const theme = createTheme()
 
@@ -45,9 +45,9 @@ export default function Layout({ children }) {
           }}
         />
 
-        {header}
+        <Header />
         <main>{children}</main>
-        {footer}
+        <Footer_ />
       </div>
     </ThemeProvider>
   )

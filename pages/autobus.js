@@ -31,7 +31,7 @@ export default function Pagina() {
       { /*
       <Table
         title='Andata'
-        backgroundImageUrl='/images/autobus/02.webp'
+        backgroundImageUrl='/images/autobus/02.png'
         backgroundColor='#009432'
         opacity={0.7}
         blur='0.2rem'

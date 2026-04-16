@@ -7,31 +7,29 @@ import { Container, ButtonGroup, Button } from '@mui/material/'
 
 let laboratori = [
   {
-    title: 'LEGO',
+    title: 'OFFICINA DELLE FORME GALATTICHE',
+    category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Divertiti con i mattoncini più iconici del mondo!',
-    immagineUrl: '/images/laboratori/lego.jpg',
-    category: '2ªora elementari',
+      'Divertiti a lavorare con vari materiali per creare oggetti e sculture spaziali!',
+    immagineUrl: '/images/laboratori/scenografia.jpeg',
   },
   {
-    title: 'GIOIELLERIA',
-    description: 'Crea stupendi gioielli con pietre e metalli! ',
-    immagineUrl: '/images/laboratori/gioielleria.avif',
-    category: '1ªora medie / 2ªora elementari',
+    title: 'POLLICE VERDE',
+    category: '1ª ora elementari / 2ª ora medie',
+    description: 'Ritorna dopo un anno di pausa la scuola di giardinaggio!',
+    immagineUrl: '/images/laboratori/polliceverde.jpeg',
   },
   {
-    title: 'MINI TENNIS',
-    description:
-      'Sinner spostati! Arriviamo noi. IMPORTANTE: Per partecipare sarà necessario venire con una PROPRIA RACCHETTA DA TENNIS',
-    immagineUrl: '/images/laboratori/tennis.png',
-    category: '1ªora elementari / 2ªora medie',
+    title: 'BASI DI BALLO LATINO/AMERICANO',
+    category: '1ª ora medie / 2ª ora elementari',
+    description: 'Un modo per approcciarsi al mondo delle danze sudamericane e scatenarsi a ritmo tropicale.',
+    immagineUrl: '/images/laboratori/balli.jpeg',
   },
   {
-    title: 'GIOCOLERIA',
-    description:
-      'Ritorna dopo un anno di pausa la scuola di giocoleria! (solo medie)',
-    immagineUrl: '/images/laboratori/giocoleria.jpg',
-    category: '1ªora medie',
+    title: 'SCHERMA',
+    category: '1ª ora medie / 2ª ora elementari',
+    description: "L'arte della spada e del fioretto. Velocità, coordinazione e rispetto: mettiti in guardia!",
+    immagineUrl: '/images/laboratori/medieval.jpeg',
   },
 ]
 
@@ -51,12 +49,12 @@ export default function Pagina() {
           content='Proposta Estate Ragazzi di San Donà di Piave'
         />
         <meta name='og:description' content="Tutte le novità di quest'anno!" />
-        <meta name='og:image' content='/images/novità.webp' />
+        <meta name='og:image' content='/images/novità.png' />
       </Head>
       <LandingHero
         opacity={0.1}
-        title='Novità 2025'
-        imageUrl='/images/novità.webp'
+        title='Novità 2026'
+        imageUrl='/images/novità.png'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>
         <ButtonGroup

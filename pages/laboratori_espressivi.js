@@ -7,13 +7,6 @@ import { Container, ButtonGroup, Button } from '@mui/material/'
 
 let products = [
   {
-    title: 'CANTO',
-    category: '1ª ora elementari / 2ª ora medie',
-    description:
-      '(Laboratorio per la serata finale) Passi ore nella doccia cantando a squarciagola davanti a un pubblico immaginario? Partecipa a questa attività, e il pubblico lo avrai davvero!',
-    immagineUrl: '/images/laboratori/canto.jpeg',
-  },
-  {
     title: 'REPORTER PER CASO',
     category: '1ª ora medie / 2ª ora elementari',
     description:
@@ -21,11 +14,25 @@ let products = [
     immagineUrl: '/images/laboratori/reporter.jpeg',
   },
   {
-    title: 'DRAW UP',
+    title: 'ACCADEMIA JEDI',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Fai uscire l’artista che c’è in te! Realizza vere e proprie opere d’arte utilizzando le più diverse tecniche artistiche',
-    immagineUrl: '/images/laboratori/drawup.jpeg',
+      'Luogo dove custodire la Bellezza della galassia e i tuoi ricordi di questo viaggio spaziale. Come? Costruendo con le tue mani piccoli diari e taccuini, rivestendo quadernoni con stoffa e carta, trasformando con disegni e colori un semplice quaderno in un pezzo da collezione...',
+    immagineUrl: '/images/laboratori/legatoria.png',
+  },
+  {
+    title: 'CANTO',
+    category: '1ª ora elementari / 2ª ora medie',
+    description:
+      '(Laboratorio per la serata finale)',
+    immagineUrl: '/images/laboratori/canto.jpeg',
+  },
+  {
+    title: 'GIOCOLERIA',
+    category: 'solo 1ª ora medie',
+    description:
+      'vuoi dare spazio allo spettacolo? Il laboratorio giusto per imparare a usare palline, diablo e tanto altro…',
+    immagineUrl: '/images/laboratori/giocoleria.jpg',
   },
 ]
 
@@ -34,27 +41,28 @@ let serata = [
     title: 'BALLI DI GRUPPO',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      "Grandi novità! Non solo Zumba... quest'anno si gira il mondo con balli Country, Sudamericani e Danze Etniche...",
+      "Divertimento assicurato con le hit dell'estate! Impariamo le coreografie più famose per scatenarci tutti insieme.",
     immagineUrl: '/images/laboratori/balli.jpeg',
   },
   {
     title: 'BALLO HIP-HOP',
     category: '1ª ora medie / 2ª ora elementari',
-    description: 'Disciplina di ballo che proviene dal movimento Hip Hop e ne conserva le caratteristiche culturali ed estetiche.',
+    description:
+      'Ritmo, energia e stile! Muoviti a tempo di musica e impara i passi base di questa cultura urbana.',
     immagineUrl: '/images/laboratori/hiphop.webp',
   },
   {
     title: 'TEATRO',
     category: '1ª ora medie / 2ª ora elementari',
     description:
-      'Essere o non essere? Questo è il dilemma...',
+      'Entra in scena! Giochi di improvvisazione, espressione corporea e recitazione per vincere la timidezza e divertirsi sul palco.',
     immagineUrl: '/images/laboratori/sketch.jpeg',
   },
   {
     title: 'CHITARRA',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Perfezionare la tecnica o scoprire la passione per lo strumento musicale più diffuso al mondo!',
+      'Straccia le corde! Dai primi accordi alle canzoni più famose, un viaggio musicale per scoprire il fascino della sei corde.',
     immagineUrl: '/images/laboratori/chitarra.jpeg',
   },
 ]
@@ -78,12 +86,12 @@ export default function Pagina() {
           name='og:description'
           content='Laboratori espressivi/musicali e preparazione della serata finale.'
         />
-        <meta name='og:image' content='/images/espressivi.webp' />
+        <meta name='og:image' content='/images/espressivi.png' />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Laboratori espressivi'
-        imageUrl='/images/espressivi.webp'
+        imageUrl='/images/espressivi.png'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>
         <ButtonGroup

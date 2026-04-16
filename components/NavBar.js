@@ -38,7 +38,7 @@ export default function DrawerAppBar({
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant='h6' sx={{ my: 2, color: drawerTextColor }}>
+      <Typography variant='h6' component='div' sx={{ my: 2, color: drawerTextColor }}>
         {logoUrl ? (
           <img src={logoUrl} style={{ width: '100%', padding: '1rem'}} />
         ) : (
@@ -92,7 +92,7 @@ export default function DrawerAppBar({
                 key={item.title}
                 className={styles.link}
                 sx={{
-                  color: { color },
+                  color: color,
                   textShadow: textShadow,
                   fontSize: '1.1rem',
                 }}

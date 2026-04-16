@@ -34,77 +34,84 @@ export default function Home({ data }) {
           name='og:description'
           content="Il sito ufficiale della Proposta Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave (VE)"
         />
-        <meta name='og:image' content='/images/home.webp' />
+        <meta name='og:image' content='/images/home.png' />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Proposta Estate Ragazzi'
-        description="Dal 13 Giugno all'11 Luglio 2025"
+        description="Dall'11 Giugno al 9 Luglio 2026"
         buttonUrl='/tema'
-        buttonText='SAVED TO SAVE'
-        imageUrl='/images/home.webp'
+        buttonText='SKY WARS'
+        imageUrl='/images/home.png'
       />
       <Paragraph
-        title='Salvato per salvare'
-        subtitle='Saluto del Direttore, don Nicola Munari'
+        title='SKY WARS...'
+        subtitle='“Fa più rumore un albero che cade di una foresta che cresce”'
         avatarImageUrl='/images/home/nik.png'
         columnCount={2}
       >
         <p>
-          Titolo interessante quello di questa Proposta Estate Ragazzi: “Salvato
-          per salvare”. Provo a mettermi nei panni di un genitore che leggerà
-          questo titolo. Un genitore cosa desidera salvare, rendere sicuro, dare
-          stabilità per la vita dei propri figli?
+          Da sempre la lotta tra il bene e il male è un tema che interroga,
+          affascina, preoccupa, ispira ogni generazione. Dai tempi di Caino e
+          Abele, di Davide e Golia…
+          <br />
+          Lungo la storia, su questa disputa, si sono interrogati e confrontati
+          uomini di spirito, filosofi, teologi, romanzieri, registi, politici e
+          sociologi… Ma questo agguerrito confronto è solo fonte di ispirazione
+          per artisti e pensatori?
         </p>
         <p>
           <br />
-          Per molti, ma non per tutti, in questo periodo, sicuramente c’è la
-          necessità di salvare l’anno scolastico. Per la maggior parte è urgente
-          salvare le amicizie dei propri figli, perché siano sicure e
-          promettenti. Tutti sono preoccupati perché la salute fisica sia sempre
-          salva e salvaguardata e tutti sperano per loro un futuro sereno, senza
-          problemi economici e con una vita di successo. Mi chiedo se per
-          salvare, custodire, conservare, difendere i propri ragazzi basta avere
-          a cuore la vita fisica, la scuola, le amicizie e quant’altro.
+          C’è una guerra quotidiana, che ogni persona vive dentro e fuori di sé:
+          la difficile scelta tra il bene e il male, tra ciò che è giusto, bello
+          e buono e ciò che è facile, cattivo e ingiusto. Ognuno di noi vuole
+          una vita significativa ed è costretto a compiere quelle scelte che
+          maggiormente portano alla realizzazione di sé. Ma quali sono le scelte
+          giuste? Chi può dirmi ciò che è bene o male? Questo è il tema che fa
+          perdere il somno ad ogni mamma e papà che desidera la felicità dei
+          propri figli. Chi ama veramente non può non chiedersi cos’è meglio per
+          chi gli è affidato.
         </p>
         <p>
           <br />
-          Per i piccoli, per ogni genitore e per ogni persona, è essenziale
-          cercare e custodire un senso bello della vita, che dia significato ad
-          ogni giornata. Senza un motivo davvero forte per vivere è difficile
-          condurre un’esistenza bella e capace di superare i momenti di fatica,
-          l’ansia da prestazione, il fascino della violenza, il disorientamento
-          che quotidianamente insidia la vita di ciascuno.
+          Per i greci bellezza e bontà non potevano essere separati. Per i
+          latini cattivo aveva il significato di schiavo, meschino, miserabile.
+          Il problema sta nella scelta, segnata dalla fatica o dalla facilità.
+          Il male è più appariscente, immediato, accattivante, facile,
+          istintivo e rumoroso. Il bene è più umile, silenzioso, discreto, lento
+          e fecondo, fruttuoso e faticoso.
         </p>
         <p>
           <br />
-          La P.E.R. si propone di offrire ai Ragazzi, che ci vengono affidati,
-          un esempio di vita bella e buona, significativa e piena, spesa bene e
-          robusta di fronte alle fatiche della vita stessa. Come lo si vuol
-          fare? Mettendo accanto ai vostri figli persone adulte e giovani che
-          sanno spendersi per gli altri con gioia e gratuità.
+          Tale distinzione la si può riassumere nella celebre frase: “Fa più
+          rumore un albero che cade di una foresta che cresce”. Nel pensare LA
+          PROPOSTA ESTATE RAGAZZI 2026, ci poniamo questa domanda: come aiutare
+          i nostri ragazzi a scegliere tra bene e male. Voi genitori ogni giorno
+          vi sforzate di insegnare ai vostri figli questo delicato compito che
+          coinvolge tutta la loro vita.
         </p>
         <p>
           <br />
-          Il meglio della nostra proposta non sono le attività, le gite, i
-          tornei, o i punti delle squadre. Il meglio sta nelle persone
-          significative che sono la prova concreta che la vita può avere un
-          gusto, una forza e un orizzonte davvero grandi ma non per merito loro,
-          ma perché nella loro vita è presente Gesù.
+          La P.E.R. è un’ottima esperienza per aiutare a discernere e allenare
+          la volontà perché le scelte siano buone e non facili. Tra giochi,
+          attività di ogni genere, gite, lavoro di squadra, impegno e un
+          equilibrato agonismo, i nostri ragazzi, accompagnati da salesiani e
+          animatori, possono sicuramente sperimentare che c’è un modo buono di
+          vivere e possono valutare che ogni cosa nella vita può concorrere al
+          bene di tutta l’esistenza.
         </p>
         <p>
-          <br />A tutti: genitori, educatori e ragazzi dico: “Non abbiamo paura
-          di credere che la nostra vita è custodita, salvaguardata, resa davvero
-          spettacolare dal Signore. Ecco il meglio, non solo dell’estate, ma di
-          tutta vita. Buona estate
+          <br />
+          Chissà, cari genitori, forse questa estate potrebbe essere una
+          occasione anche per voi!? Perché no!! Buona P.E.R. a tutti
         </p>
         <br />
         <p>
-          <b>don Nicola</b>
+          <b>don Nicola Munari - Direttore</b>
         </p>
       </Paragraph>
       <Featured data={data} defaultTag='per' />
-      <SwiperNews title='News' data={data} limit={12} defaultTag='per' />
+      {/* <SwiperNews title='News' data={data} limit={12} defaultTag='per' /> */}
       <Team
         title="La #per dell'Oratorio don Bosco è..."
         description=''
@@ -113,7 +120,7 @@ export default function Home({ data }) {
       />
       <Table
         title='Orario della Giornata tipo'
-        backgroundImageUrl='/images/giornata.webp'
+        backgroundImageUrl='/images/giornata.png'
         backgroundColor='#1b1188'
         opacity={0.7}
         blur='0rem'
@@ -128,24 +135,24 @@ export default function Home({ data }) {
             'Inizio pomeriggio: tornei, giochi al parco, spettacoli, ecc.',
           ],
           [
-            '9.30',
+            '9.15',
             'Momento di preghiera ragazzi',
             '17.45',
             'Concludiamo insieme la giornata',
           ],
           [
-            '10.00',
+            '9.45',
             'Prima ora di attività',
             '18.00',
             'Termine attività pomeridiane',
           ],
           [
-            '10.50',
+            '10.35',
             'Ricreazione',
             '18.30',
             'Santa Messa (per chi lo desidera)',
           ],
-          ['11.10', 'Seconda ora di attività', '', ''],
+          ['11.05', 'Seconda ora di attività', '', ''],
           [
             '12.00',
             'A casa... buon pranzo!',
@@ -154,6 +161,19 @@ export default function Home({ data }) {
           ],
         ]}
       />
+      <Paragraph title='Pranzo al sacco'>
+        <p>
+          Per i ragazzi che fanno parte delle attività dell’oratorio durante
+          l’anno (ADS, DopoLaCampanella, Scout San Donà 1, Banda) sarà possibile
+          rimanere in oratorio durante la pausa pranzo con il pranzo al sacco.
+          <br />
+          L’assistenza durante il pranzo sarà assicurata, ma non saranno forniti
+          servizi di animazione.
+          <br />
+          Il contributo per rimanere in oratorio durante la pausa pranzo è di
+          <strong> 10 euro a settimana</strong>.
+        </p>
+      </Paragraph>
       <Products
         cardWidth={3}
         products={in_evidenza}
@@ -166,13 +186,13 @@ export default function Home({ data }) {
         description='Scegli due laboratori per le prime due settimane di PER, e altri due per le ultime due settimane. '
         cardWidth={3}
         products={laboratori}
-        borderRadius='2rem'
+        borderRadius='0.5rem'
         aspectRatio='1 / 1'
       />
       <Carousel slides={serate} height={90} />
       <Products
         title="Un'estate di emozioni al Cinema don Bosco"
-        description='Nei mesi di giugno, luglio e agosto gli iscritti alla PER25 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai iscriverti alla Community WhatsApp NEWS della P.E.R.25 che si trova nella sezione delle informazioni e News. Riceverai ogni settimana la programmazione insieme a un link che ti permetterà di acquistare online a prezzo scontato i biglietti per te e per i tuoi amici e familiari. Nota: non è possibile ricevere lo sconto alla cassa, ma solo acquistando i biglietti online.'
+        description='Nei mesi di giugno, luglio e agosto gli iscritti alla PER26 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai iscriverti alla Community WhatsApp NEWS della P.E.R.26 che si trova nella sezione delle informazioni e News. Riceverai ogni settimana la programmazione insieme a un link che ti permetterà di acquistare online a prezzo scontato i biglietti per te e per i tuoi amici e familiari. Nota: non è possibile ricevere lo sconto alla cassa, ma solo acquistando i biglietti online.'
         cardWidth={3}
         products={serate_cinema}
         aspectRatio='1 / 1.5'
@@ -189,7 +209,7 @@ export default function Home({ data }) {
           appuntamenti importanti.
           <br />
           Animatori, ragazzi e genitori potranno così essere sempre connessi e
-          raccontare la propria esperienza usando gli hashtag #PER25{' '}
+          raccontare la propria esperienza usando gli hashtag #PER26{' '}
         </p>
         <p>
           Seguiteci su
@@ -200,7 +220,7 @@ export default function Home({ data }) {
         </p>
         <p>
           <b>
-            Anche quest’anno potrai ricevere tutte le NEWS della PER2
+            Anche quest’anno potrai ricevere tutte le NEWS della PER
             direttamente su WhatsApp!!!
           </b>
           <br /> E' semplice e comodo... usando il tuo telefono tocca il
@@ -213,35 +233,34 @@ export default function Home({ data }) {
               marginBottom: '2rem',
               padding: '1rem',
               borderRadius: '2rem',
+              border: '2px solid green',
+              '&:hover': {
+                border: '2px solid lightgreen',
+              }
             }}
             target='_blank'
             color='success'
-            variant='contained'
-            href='https://chat.whatsapp.com/F0B4dSu6LXYEEKnJYo6dUd'
+            variant='outlined'
+            href='https://chat.whatsapp.com/BdKnnpkcjcfI3pKUiykDdm?mode=gi_t'
           >
             ISCRIVITI ALLE NEWS SU WHATSAPP
           </Button>
         </p>
       </Paragraph>
-      <Testimonials
-        testimonials={testimonials}
-        cardWidth={4}
-        imageUrl='/images/home/sfondo_giostra.jpeg'
-      />
       <Products
         cardWidth={3}
         products={altri_link}
-        borderRadius='50%'
-        aspectRatio='1 / 1'
+        borderRadius='0.5rem'
+        aspectRatio='1.2 / 1'
       />
       <Paragraph
         title='La Segreteria della PER'
-        backgroundColor='#2f4700'
+        backgroundColor='#280b00ff'
         opacity={0.7}
         blur='0rem'
         maxWidth={false}
         color='white'
-        backgroundImageUrl='/images/segreteria.webp'
+        backgroundImageUrl='/images/segreteria.png'
       >
         <p>
           In segreteria, negli orari indicati, troverete sempre qualcuno pronto
@@ -297,6 +316,11 @@ export default function Home({ data }) {
           Non è necessaria la presenza del genitore per l’iscrizione alle gite.
         </p>
       </Paragraph>
+      <Testimonials
+        testimonials={testimonials}
+        cardWidth={4}
+        imageUrl=''
+      />
       <Team
         title='Contatti'
         description='Hai dei dubbi? Contattaci pure (preferibilmente via email) e ti risponderemo il prima possibile.'
@@ -304,9 +328,8 @@ export default function Home({ data }) {
         cardWidth={4}
       />
       <Maps
-        maxWidth='100%'
-        maxHeight='550px'
-        url='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5580.164099261905!2d12.571927!3d45.629088!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477957021a6f5e37%3A0x2767632f6958496c!2sOratorio%20Don%20Bosco!5e0!3m2!1sit!2sit!4v1682593458374!5m2!1sit!2sit'
+        maxWidth={false}
+        url='/images/map_dark.png'
       />
       <div className='m-10'>
         <Credits />
@@ -331,25 +354,25 @@ export async function getStaticProps() {
 const features = [
   {
     name: 'Una proposta cristiana',
-    imageUrl: '/images/home/praying.webp',
+    imageUrl: '/images/home/call0.png',
     description:
       "Nel cuore dell'estate la PER vuol essere un'occasione per riscoprire la bellezza della fede.",
   },
   {
     name: 'In allegria',
-    imageUrl: '/images/home/happy.webp',
+    imageUrl: '/images/home/call1.png',
     description:
       'La PER è piena di allegria vissuta in compagnia in ogni momento: giochi, attività, gite, serate...',
   },
   {
     name: 'Mettendo a frutto la creatività',
-    imageUrl: '/images/home/creativo.webp',
+    imageUrl: '/images/home/call2.png',
     description:
       "Nei laboratori i talenti fioriscono: in te forse c'è uno sportivo, un artista, un creativo... scegli con cura al momento della preiscrizione.",
   },
   {
     name: 'Coltivando le relazioni',
-    imageUrl: '/images/home/relazioni.webp',
+    imageUrl: '/images/home/call3.png',
     description:
       'Durante la PER non sarai mai da solo: educatori, animatori, altri ragazzi, ospiti... ognuno è un mondo da esplorare, devi solo buttarti!',
   },
@@ -417,7 +440,7 @@ let serate = [
   {
     titolo: 'Serata finale',
     descrizione:
-      'Venerdì 11 luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER25',
+      'Venerdì 11 luglio / Grande festa tutti insieme e proclamazione della Squadra vincitrice della #PER26',
     immagine: '/images/serate/finale.jpeg',
     colore: '#182C61',
     colore2: 'transparent',
@@ -433,7 +456,7 @@ let gite = [
     titolo: 'Porto Santa Margherita // Baia Blanca',
     descrizione:
       'Lunedì 23 Giugno con i ragazzi di prima e seconda media / Venerdì 30 giugno con i ragazzi di terza, quarta e quinta elementare',
-    immagine: '/images/gite/mare.webp',
+    immagine: '/images/gite/mare.png',
     colore: '#008c93',
     colore2: 'transparent',
     opacity: 0.5,
@@ -443,7 +466,7 @@ let gite = [
     titolo: 'Noale // Aquaestate',
     descrizione:
       'Giovedì 19 Giugno / Martedì 8 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
-    immagine: '/images/gite/noale.webp',
+    immagine: '/images/gite/noale.png',
     colore: '#0097e6',
     colore2: 'transparent',
     opacity: 0.8,
@@ -453,7 +476,7 @@ let gite = [
     titolo: 'Escursione in montagna',
     descrizione:
       'Martedì 24 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
-    immagine: '/images/gite/montagna.webp',
+    immagine: '/images/gite/montagna.png',
     colore: '#009432',
     colore2: 'transparent',
     opacity: 0.8,
@@ -462,8 +485,8 @@ let gite = [
   {
     titolo: 'Gardaland // Aquasplash',
     descrizione:
-      "Martedì 1 Luglio / La Proposta Estate 2025 si divide in due: le medie a Gardaland e le elementari all’Aquasplash di Lignano.",
-    immagine: '/images/gite/movieland.webp',
+      "Martedì 1 Luglio / La Proposta Estate 2026 si divide in due: le medie a Gardaland e le elementari all’Aquasplash di Lignano.",
+    immagine: '/images/gite/movieland.png',
     colore: '#FC427B',
     colore2: 'transparent',
     opacity: 0.8,
@@ -476,20 +499,20 @@ let members = [
   {
     name: 'Segreteria PER',
     role: 'Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo:',
-    imageUrl: '/images/call1.webp',
+    imageUrl: '/images/call1.png',
     email: 'per@donboscosandona.it',
     phone: '392 464 3689',
   },
   {
     name: 'Dopo la Campanella',
     role: 'Dott. Andrea Pasqualetto',
-    imageUrl: '/images/call2.webp',
+    imageUrl: '/images/call2.png',
     phone: '391 706 4430',
   },
   {
     name: 'Cinema don Bosco',
     role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero:",
-    imageUrl: '/images/call3.webp',
+    imageUrl: '/images/call3.png',
     phone: '346 960 5687',
   },
 ]
@@ -497,22 +520,22 @@ let members = [
 let in_evidenza = [
   {
     title: 'Iscrizioni',
-    immagineUrl: '/images/iscrizioni.webp',
+    immagineUrl: '/images/iscrizioni.png',
     url: '/iscrizioni',
   },
   {
     title: 'Calendario',
-    immagineUrl: '/images/calendario.webp',
+    immagineUrl: '/images/calendario.png',
     url: '/calendario',
   },
   {
     title: 'Tema formativo',
-    immagineUrl: '/images/tema.webp',
+    immagineUrl: '/images/tema.png',
     url: '/tema',
   },
   {
     title: 'Pomeriggi',
-    immagineUrl: '/images/pomeriggi.webp',
+    immagineUrl: '/images/pomeriggi.png',
     url: '/pomeriggi',
   },
 ]
@@ -520,22 +543,22 @@ let in_evidenza = [
 let laboratori = [
   {
     title: 'Espressivi',
-    immagineUrl: '/images/espressivi.webp',
+    immagineUrl: '/images/espressivi.png',
     url: '/laboratori_espressivi',
   },
   {
     title: 'Sportivi',
-    immagineUrl: '/images/sportivi.webp',
+    immagineUrl: '/images/sportivi.png',
     url: '/laboratori_sportivi',
   },
   {
     title: 'Manuali',
-    immagineUrl: '/images/manuali.webp',
+    immagineUrl: '/images/manuali.png',
     url: '/laboratori_manuali',
   },
   {
     title: 'Novità 2024',
-    immagineUrl: '/images/novità.webp',
+    immagineUrl: '/images/novità.png',
     url: '/laboratori_new',
   },
 ]
@@ -543,27 +566,27 @@ let laboratori = [
 let altri_link = [
   {
     title: 'Regolamento',
-    immagineUrl: '/images/regolamento.webp',
+    immagineUrl: '/images/regolamento.png',
     url: '/regolamento',
   },
   {
     title: 'Momenti di preghiera e riflessione',
-    immagineUrl: '/images/preghiera.webp',
+    immagineUrl: '/images/preghiera.png',
     url: '/preghiera',
   },
   {
     title: 'Gruppo Special',
-    immagineUrl: '/images/special.webp',
+    immagineUrl: '/images/special.png',
     url: '/special',
   },
   {
     title: 'Spazio animatori',
-    immagineUrl: '/images/animatori.webp',
+    immagineUrl: '/images/animatori.png',
     url: '/animatori',
   },
   {
     title: 'Spazio genitori',
-    immagineUrl: '/images/genitori.webp',
+    immagineUrl: '/images/genitori.png',
     url: '/genitori',
   },
   {
@@ -607,84 +630,71 @@ const testimonials = [
 
 let serate_cinema = [
   {
-    title: 'LILO & STITCH',
+    title: 'MANDALORIAN E GROGU',
     category: '',
-    description:
-      "Una solitaria bambina hawaiana di nome Lilo, grazie all'aiuto di un fuggitivo alieno blu, riesce a riparare la sua famiglia, a cui credeva di dover dire addio per sempre...",
+    description: "Se sei in cerca di una nuova avventura, 'Questa è la via'",
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/oyY4WANSpBwaBTTnN1qxWOsgmCy.jpg',
+      'https://image.tmdb.org/t/p/original//2XX2XlXdfEWV0tfUyWunBj1SFpx.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'MISSION IMPOSSIBLE - THE FINAL RECKONING',
+    title: 'DISCLOSURE DAY',
     category: '',
-    description:
-      'Ethan e il suo team si trovano ad affrontare una nuova e pericolosa minaccia: devono rintracciare due chiavi che sbloccano un potente sistema di intelligenza artificiale, capace di causare disastri a livello mondiale, dai sabotaggi dei circuiti bancari internazionali al caos delle reti elettriche.',
+    description: 'Un viaggio oltre i confini del conosciuto per scoprire la verità che ci è stata tenuta nascosta. Cosa accadrebbe se finalmente venisse rivelata la presenza di intelligenze extraterrestri tra noi?',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//z53D72EAOxGRqdr7KXXWp9dJiDe.jpg',
+      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ3dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9ddc4e13c3529104be59ba35728fbc4bc54012bf/Disclosure%20day.png',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'DRAGON TRAINER',
+    title: 'TOY STORY 5',
     category: '',
     description:
-      "Sulla selvaggia isola di Berk, dove vichinghi e draghi sono stati acerrimi nemici per generazioni, Hiccup è diverso dagli altri. Figlio geniale ma sottovalutato dal capo Stoick l'Immenso, Hiccup sfida secoli di tradizione stringendo un'insolita amiciza con Sdentato, un temibile drago Furia Buia...",
+      'Quando Bonnie riceve in regalo un tablet Lilypad e ne diventa ossessionata, per Buzz, Woody, Jessie e il resto della banda, il lavoro si complica enormemente: dovranno affrontare una nuova, temibile minaccia al momento del gioco.',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/iLrqsG4tmqHEInjKIf6cpyQp30N.jpg',
+      'https://image.tmdb.org/t/p/original//aXRsPzBgZKRlRDParzxwQEgM8p2.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'ELIO',
+    title: 'SUPERGIRL',
     category: '',
     description:
-      'Elio è un bambino di undici anni con un carattere artistico, creativo e sognatore, ma ha difficoltà a integrarsi con gli altri. A causa di questo problema, il piccolo è sempre rinchiuso in casa. Nel frattempo sua madre Olga è impegnata nella direzione di un progetto militare top-secret ed è intenta a decodificare uno strano segnale giunto dallo spazio...',
+      `Quando un avversario inaspettato e spietato colpisce troppo vicino a casa, Kara Zor-El, alias Supergirl, è costretta a stringere un'improbabile alleanza intraprendendo un'epica avventura interstellare all'insegna della vendetta e della giustizia.`,
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//feUV7SEy9mrbp5dJUoiRoJy7u9x.jpg',
+      'https://image.tmdb.org/t/p/original//niSvU02l2BONH9ivubV6K1a5QiK.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'F1',
+    title: 'MINIONS & MONSTERS',
     category: '',
-    description:
-      "La leggenda delle corse automobilistiche Sonny Hayes viene convinto a uscire dal ritiro per guidare un team di Formula 1 in difficoltà e fare da mentore a un giovane pilota promettente, mentre insegue un'altra possibilità di gloria.",
+    description: 'I piccoli aiutanti gialli si lanciano in un\'avventura mozzafiato in un mondo popolato da creature leggendarie. Riusciranno la loro goffaggine e il loro spirito di squadra a sconfiggere le minacce più oscure?',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//hfkVxu1tLhbS0FHcqleTdq0VRcn.jpg',
+      'https://image.tmdb.org/t/p/original/822dQlRkYV5X23WGdxEZGVxKpa9.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'JURASSIC WORLD - LA RINASCITA',
+    title: 'ODISSEA',
     category: '',
     description:
-      "I dinosauri si stanno estinguendo poiché il mondo moderno è inospitale nei loro confronti e i sopravvissuti si sono rifugiati in una piccola regione dei tropici attorno all'equatore. Ma a minacciarli interviene ancora una volta l'essere umano, visto che un'azienda farmaceutica spera di utilizzare il DNA di dinosauro per creare un nuovo farmaco salvavita...",
+      'Ulisse, il leggendario re greco di Itaca, intraprende un lungo e pericoloso viaggio verso casa dopo la guerra di Troia, raccontando i suoi incontri con esseri mitici come il ciclope Polifemo, le Sirene e la dea strega Circe.',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/gvWXhXuPbMviAJmBCcBX9L2pjLk.jpg',
+      'https://image.tmdb.org/t/p/original//5S4U3gM7N17ni028LJhO60zfcKJ.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'SUPERMAN',
+    title: 'SPIDERMAN: BRAND NEW DAY',
     category: '',
-    description:
-      "Il film segna l'inizio del nuovo DCU, ma non racconta una origin story sull'Uomo d'Acciaio. Si concentra su Superman e il suo equilibrio tra le origini kryptoniane e la sua parte umana.",
+    description: 'New York ha un nuovo volto e Peter Parker deve affrontare sfide mai viste prima. In una città che non dorme mai, il nostro amichevole Spider-Man di quartiere dovrà decidere che tipo di eroe vuole essere in questo nuovo capitolo della sua vita.',
     immagineUrl:
-      'https://image.tmdb.org/t/p/original//wPLysNDLffQLOVebZQCbXJEv6E6.jpg',
+      'https://image.tmdb.org/t/p/original/pspkSVP39NGa6G2rvK5KlMjvYUe.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
   {
-    title: 'I FANTASTICI 4 - GLI INIZI',
+    title: 'OCEANIA',
     category: '',
     description:
-      "Costretti a bilanciare il loro ruolo di eroi con la forza del loro legame familiare, i protagonisti devono difendere la Terra da una vorace divinità spaziale chiamata Galactus e dal suo enigmatico araldo, Silver Surfer. E se il piano di Galactus di divorare l'intero pianeta e tutti i suoi abitanti non fosse già abbastanza terribile, la situazione diventa all’improvviso una questione molto personale...",
+      "Vaiana (Catherine Lagaʻaia) risponde al richiamo dell'oceano e, per la prima volta, viaggia oltre la barriera corallina dell’isola di Motunui con il famigerato semidio Maui (Dwayne Johnson) in un viaggio indimenticabile per riportare la prosperità al suo popolo.",
     immagineUrl:
-      'https://image.tmdb.org/t/p/original/jatnqRPnxjg2Q6cFsAjmrBNhx9.jpg',
-    url: 'https://cinema.donboscosandona.it',
-  },
-  {
-    title: 'TROPPO CATTIVI 2',
-    category: '',
-    description:
-      'Nel nuovo capitolo, i Troppo Cattivi, una banda di animali criminali, cercano di guadagnarsi fiducia e accettazione nella loro nuova vita da ""bravi ragazzi"". Tuttavia, vengono richiamati in azione per affrontare un\'ultima missione, guidati da una squadra criminale tutta al femminile.',
-    immagineUrl:
-      'https://image.tmdb.org/t/p/original//3KE3teyf3d8m14Mrdz75w4KdNGr.jpg',
+      'https://image.tmdb.org/t/p/original/g4zumtvkkH5QbyXyL0mO8HpCSaw.jpg',
     url: 'https://cinema.donboscosandona.it',
   },
 ]

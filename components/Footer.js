@@ -36,29 +36,27 @@ export default function Footer(props) {
 
                         { /* Social Feed */}
                         <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
+                            <Typography variant="h6" color="White" paddingBottom="2rem">
                                 {props.title2}
                             </Typography>
-                            <Typography component="h1" color="White" >
+                            <Box sx={{ color: "White" }}>
                                 {
                                     props.socials.map((social) => (
-                                        <Container sx={{ padding: "0.5rem" }}>
+                                        <Container key={social.title} sx={{ padding: "0.5rem" }}>
                                             <Link
                                                 color="inherit"
                                                 noWrap
-                                                key={social.title}
-
                                                 variant="body2"
                                                 href={social.url}
                                                 sx={{ p: 1, flexShrink: 0, }}
                                             >
-                                                <img src={social.imageUrl} width="20" />
+                                                <img src={social.imageUrl} width="40" style={{ marginRight: '8px', maskImage: 'none', webkitMaskImage: 'none', filter: 'none', animation: 'none' }} />
                                                 {social.title}
                                             </Link>
                                         </Container>
                                     ))
                                 }
-                            </Typography>
+                            </Box>
                         </Grid>
 
                         { /* Immagini */}
@@ -86,9 +84,7 @@ export default function Footer(props) {
 
                         { /* Linea */}
                         <Grid item xs={12}>
-                            <Typography component="h1">
-                                <hr />
-                            </Typography>
+                            <hr style={{ borderColor: 'rgba(255, 255, 255, 0.12)' }} />
                         </Grid>
 
                         { /* Menù */}
@@ -123,9 +119,9 @@ export default function Footer(props) {
 
                         { /* Copyright */}
                         <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" sx={{marginLeft: '27px', marginBottom: '15px'}}>
+                            <Box sx={{ color: "White", marginLeft: '27px', marginBottom: '15px' }}>
                                 {props.copyright}
-                            </Typography>
+                            </Box>
                         </Grid>
                     </Grid>
                 </Container>

@@ -22,12 +22,12 @@ export default function Pagina() {
           name="og:description"
           content="Gruppo Special: l'attività cucita su misura per i ragazzi di terza media!"
         />
-        <meta name="og:image" content="/images/special.webp" />
+        <meta name="og:image" content="/images/special.png" />
       </Head>
       <LandingHero
         opacity={0.2}
         title="Gruppo Special"
-        imageUrl="/images/special.webp"
+        imageUrl="/images/special.png"
       />
       <Paragraph>
         <p>
@@ -49,7 +49,7 @@ export default function Pagina() {
 
         <p>
           Attenzione: la partecipazione al Gruppo Special potrebbe comportare
-          spese aggiuntive.
+          spese aggiuntive. In particolare il 7 luglio potranno partecipare alla gita di Rafting sul Brenta, e l’8 luglio sarà possibile un’uscita notturna!
         </p>
       </Paragraph>
     </Layout>

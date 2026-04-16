@@ -13,28 +13,24 @@ let products = [
     immagineUrl: '/images/laboratori/scenografia.jpeg',
   },
   {
-    title: 'DECORAZIONI E FANTASIA',
-    category: '1ª ora elementari / 2ª ora medie',
-    description: 'Decora ritagliando',
-    immagineUrl: '/images/laboratori/decoupages.jpeg',
-  },
-  {
-    title: 'FILI E PERLINE',
+    title: 'INTRECCI GALATTICI',
     category: '1ª ora medie / 2ª ora elementari',
     description:
-      'L’arte dell’intreccio di corde e stoffe per realizzare magnifici braccialetti… ma non solo.',
+      'Costruire... intrecciare... decorare... inventare... Una galassia piena di fili colorati e perline... Tutto magico!',
     immagineUrl: '/images/laboratori/perline.jpeg',
   },
   {
-    title: 'CREAZIONI SU STOFFA',
+    title: 'COSMO ATELIER',
     category: '1ª ora elementari / 2ª ora medie',
-    description: 'Riproduci su stoffa la tua creatività',
-    immagineUrl: '/images/laboratori/stampa.jpeg',
+    description:
+      'Hai voglia di trasformare il tuo look in qualcosa di galattico? Porta una felpa, un vecchio jeans o una t-shirt e rendili capi unici da vera star!',
+    immagineUrl: '/images/laboratori/sartoria.jpeg',
   },
   {
-    title: 'TUTTO CARTA',
+    title: 'NEBULA CARTA',
     category: '1ª ora medie / 2ª ora elementari',
-    description: 'La carta in 3 dimensioni e oltre',
+    description:
+      'Piegare, tagliare, incollare e inventare piccoli mondi di carta. Un universo da costruire.',
     immagineUrl: '/images/laboratori/carta.jpeg',
   },
   {
@@ -50,60 +46,51 @@ let products = [
     immagineUrl: '/images/laboratori/pirografia.jpeg',
   },
   {
-    title: 'ECO ART',
+    title: 'ECO WARS LAB',
     category: '1ª ora elementari / 2ª ora medie',
-    description: 'La creatività sostenibile',
+    description: 'La creatività sostenibile per difendere il nostro pianeta.',
     immagineUrl: '/images/laboratori/ecoart.jpeg',
   },
   {
-    title: 'STRING ART',
-    category: '1ª ora medie / 2ª ora elementari',
-    description:
-      'Cosa si può fare con una tavoletta di legno, dei chiodi e fili colorati? magnifiche opere d’arte',
-    immagineUrl: '/images/laboratori/stringart.jpeg',
-  },
-  {
-    title: 'INFORMATICA E VIDEOGIOCHI',
+    title: 'INFORMATICA E STAMPA 3D',
     category: '1ª ora medie / 2ª ora medie',
-    description: 'Migliora le tue skill tecnologiche e divertiti',
+    description:
+      'Migliora le tue skill tecnologiche e impara a progettare e stampare oggetti in 3D.',
     immagineUrl: '/images/laboratori/informatica2.jpeg',
   },
   {
     title: 'GIOCHI DA TAVOLO',
     category: '1ª ora medie / 2ª ora elementari',
-    description: 'Divertiti con noi con i giochi da tavolo più belli del mondo',
+    description:
+      'Divertiti con noi con i giochi da tavolo più belli del mondo e sfida i tuoi amici.',
     immagineUrl: '/images/laboratori/giochi.jpeg',
   },
   {
-    title: 'TUTTO BICI',
+    title: 'SCACCHI',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Un team di ciclo-meccanici pronti ad aggiustare qualsiasi guasto',
-    immagineUrl: '/images/laboratori/tuttobici.jpeg',
+      'Una sfida di logica e strategia sulla scacchiera. Re, Regine e Alfieri ti aspettano!',
+    immagineUrl: '/images/laboratori/scacchi.jpeg',
   },
   {
-    title: "SCACCHI",
-    description: "Impara a giocare a scacchi e sfida i tuio amici",
-    immagineUrl: "/images/laboratori/scacchi.jpeg",
-    category: "1ªora elementari / 2ªora medie",
+    title: 'TRAFORO',
+    category: '1ª ora medie / 2ª ora medie',
+    description: 'L’intaglio del legno per dei lavori indimenticabili.',
+    immagineUrl: '/images/laboratori/traforo.jpeg',
   },
   {
-    title: "AGO&FILO",
-    description: "Qui si che sanno metterci una pezza",
-    immagineUrl: "/images/laboratori/sartoria.jpeg",
-    category: "1ªora medie / 2ªora elementari",
+    title: 'SOPRAVVIVENZA',
+    category: '1ª ora elementari / 2ª ora medie',
+    description:
+      'Tecniche di orientamento, nodi e piccoli segreti per cavarsela in ogni situazione immersi nella natura.',
+    immagineUrl: '/images/laboratori/survival.jpg',
   },
   {
-    title: "TRAFORO",
-    description: "L'intaglio del legno per dei lavori indimenticabili",
-    immagineUrl: "/images/laboratori/traforo.jpeg",
-    category: "1ªora medie / 2ªora elementari",
-  },
-  {
-    title: "SOPRAVVIVENZA",
-    description: "Porta a casa la pellaccia la prossima volta che gli animatori ti dimenticheranno in montagna",
-    immagineUrl: "/images/laboratori/survival.jpg",
-    category: "1ªora elementari / 2ªora medie",
+    title: 'LEGO',
+    category: 'solo 2ª ora elementari',
+    description:
+      'Mattoncini colorati per dare sfogo alla tua fantasia e costruire astronavi e basi stellari.',
+    immagineUrl: '/images/laboratori/lego.jpg',
   },
 ]
 
@@ -122,12 +109,12 @@ export default function Pagina() {
           name='og:title'
           content='Proposta Estate Ragazzi di San Donà di Piave'
         />
-        <meta name='og:image' content='/images/manuali.webp' />
+        <meta name='og:image' content='/images/manuali.png' />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Laboratori Manuali'
-        imageUrl='/images/manuali.webp'
+        imageUrl='/images/manuali.png'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>
         <ButtonGroup

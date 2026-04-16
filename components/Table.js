@@ -70,7 +70,7 @@ export default function MyTable(props) {
         )}
 
         <TableContainer
-          component={Paper}
+          component={Table}
           sx={{ backgroundColor: "transparent" }}
           elevation={0}
         >
