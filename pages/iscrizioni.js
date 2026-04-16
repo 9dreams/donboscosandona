@@ -25,12 +25,12 @@ export default function Pagina() {
           name='og:description'
           content="Tutto quello che c'è da sapere per iscriversi alla Proposta Estate."
         />
-        <meta name='og:image' content='/images/iscrizioni.webp' />
+        <meta name='og:image' content='/images/iscrizioni.png' />
       </Head>
       <LandingHero
         opacity={0.3}
         title='Iscrizioni alla PER'
-        imageUrl='/images/iscrizioni.webp'
+        imageUrl='/images/iscrizioni.png'
       />
       <Paragraph>
       <p><b>Le iscrizioni per i ragazzi/e che frequentano i gruppi dell’Oratorio (ADS, Dopo la Campanella, Scout San Donà 1, Banda) inizieranno lunedì 5   alle 16.00.<br />

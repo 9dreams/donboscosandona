@@ -34,7 +34,7 @@ export default function Home({ data }) {
           name='og:description'
           content="Il sito ufficiale della Proposta Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave (VE)"
         />
-        <meta name='og:image' content='/images/home.webp' />
+        <meta name='og:image' content='/images/home.png' />
       </Head>
       <LandingHero
         opacity={0.2}
@@ -42,7 +42,7 @@ export default function Home({ data }) {
         description="Dal 13 Giugno all'11 Luglio 2025"
         buttonUrl='/tema'
         buttonText='SAVED TO SAVE'
-        imageUrl='/images/home.webp'
+        imageUrl='/images/home.png'
       />
       <Paragraph
         title='Salvato per salvare'
@@ -113,7 +113,7 @@ export default function Home({ data }) {
       />
       <Table
         title='Orario della Giornata tipo'
-        backgroundImageUrl='/images/giornata.webp'
+        backgroundImageUrl='/images/giornata.png'
         backgroundColor='#1b1188'
         opacity={0.7}
         blur='0rem'
@@ -241,7 +241,7 @@ export default function Home({ data }) {
         blur='0rem'
         maxWidth={false}
         color='white'
-        backgroundImageUrl='/images/segreteria.webp'
+        backgroundImageUrl='/images/segreteria.png'
       >
         <p>
           In segreteria, negli orari indicati, troverete sempre qualcuno pronto
@@ -330,25 +330,25 @@ export async function getStaticProps() {
 const features = [
   {
     name: 'Una proposta cristiana',
-    imageUrl: '/images/home/praying.webp',
+    imageUrl: '/images/home/praying.png',
     description:
       "Nel cuore dell'estate la PER vuol essere un'occasione per riscoprire la bellezza della fede.",
   },
   {
     name: 'In allegria',
-    imageUrl: '/images/home/happy.webp',
+    imageUrl: '/images/home/happy.png',
     description:
       'La PER è piena di allegria vissuta in compagnia in ogni momento: giochi, attività, gite, serate...',
   },
   {
     name: 'Mettendo a frutto la creatività',
-    imageUrl: '/images/home/creativo.webp',
+    imageUrl: '/images/home/creativo.png',
     description:
       "Nei laboratori i talenti fioriscono: in te forse c'è uno sportivo, un artista, un creativo... scegli con cura al momento della preiscrizione.",
   },
   {
     name: 'Coltivando le relazioni',
-    imageUrl: '/images/home/relazioni.webp',
+    imageUrl: '/images/home/relazioni.png',
     description:
       'Durante la PER non sarai mai da solo: educatori, animatori, altri ragazzi, ospiti... ognuno è un mondo da esplorare, devi solo buttarti!',
   },
@@ -432,7 +432,7 @@ let gite = [
     titolo: 'Porto Santa Margherita // Baia Blanca',
     descrizione:
       'Lunedì 23 Giugno con i ragazzi di prima e seconda media / Venerdì 30 giugno con i ragazzi di terza, quarta e quinta elementare',
-    immagine: '/images/gite/mare.webp',
+    immagine: '/images/gite/mare.png',
     colore: '#008c93',
     colore2: 'transparent',
     opacity: 0.5,
@@ -442,7 +442,7 @@ let gite = [
     titolo: 'Noale // Aquaestate',
     descrizione:
       'Giovedì 19 Giugno / Martedì 8 Luglio / Una giornata di allegria in piscina, tra scivoli e spruzzi!',
-    immagine: '/images/gite/noale.webp',
+    immagine: '/images/gite/noale.png',
     colore: '#0097e6',
     colore2: 'transparent',
     opacity: 0.8,
@@ -452,7 +452,7 @@ let gite = [
     titolo: 'Escursione in montagna',
     descrizione:
       'Martedì 24 Giugno / Una giornata immersi nel verde e respirando l’aria fresca di montagna! Scarponi da trekking, zaino in spalla: si parte per un’avventura indimenticabile!!!',
-    immagine: '/images/gite/montagna.webp',
+    immagine: '/images/gite/montagna.png',
     colore: '#009432',
     colore2: 'transparent',
     opacity: 0.8,
@@ -462,7 +462,7 @@ let gite = [
     titolo: 'Gardaland // Aquasplash',
     descrizione:
       "Martedì 1 Luglio / La Proposta Estate 2025 si divide in due: le medie a Gardaland e le elementari all’Aquasplash di Lignano.",
-    immagine: '/images/gite/movieland.webp',
+    immagine: '/images/gite/movieland.png',
     colore: '#FC427B',
     colore2: 'transparent',
     opacity: 0.8,
@@ -475,20 +475,20 @@ let members = [
   {
     name: 'Segreteria PER',
     role: 'Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo:',
-    imageUrl: '/images/call1.webp',
+    imageUrl: '/images/call1.png',
     email: 'per@donboscosandona.it',
     phone: '392 464 3689',
   },
   {
     name: 'Dopo la Campanella',
     role: 'Dott. Andrea Pasqualetto',
-    imageUrl: '/images/call2.webp',
+    imageUrl: '/images/call2.png',
     phone: '391 706 4430',
   },
   {
     name: 'Cinema don Bosco',
     role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero:",
-    imageUrl: '/images/call3.webp',
+    imageUrl: '/images/call3.png',
     phone: '346 960 5687',
   },
 ]
@@ -496,22 +496,22 @@ let members = [
 let in_evidenza = [
   {
     title: 'Iscrizioni',
-    immagineUrl: '/images/iscrizioni.webp',
+    immagineUrl: '/images/iscrizioni.png',
     url: '/iscrizioni',
   },
   {
     title: 'Calendario',
-    immagineUrl: '/images/calendario.webp',
+    immagineUrl: '/images/calendario.png',
     url: '/calendario',
   },
   {
     title: 'Tema formativo',
-    immagineUrl: '/images/tema.webp',
+    immagineUrl: '/images/tema.png',
     url: '/tema',
   },
   {
     title: 'Pomeriggi',
-    immagineUrl: '/images/pomeriggi.webp',
+    immagineUrl: '/images/pomeriggi.png',
     url: '/pomeriggi',
   },
 ]
@@ -519,22 +519,22 @@ let in_evidenza = [
 let laboratori = [
   {
     title: 'Espressivi',
-    immagineUrl: '/images/espressivi.webp',
+    immagineUrl: '/images/espressivi.png',
     url: '/laboratori_espressivi',
   },
   {
     title: 'Sportivi',
-    immagineUrl: '/images/sportivi.webp',
+    immagineUrl: '/images/sportivi.png',
     url: '/laboratori_sportivi',
   },
   {
     title: 'Manuali',
-    immagineUrl: '/images/manuali.webp',
+    immagineUrl: '/images/manuali.png',
     url: '/laboratori_manuali',
   },
   {
     title: 'Novità 2024',
-    immagineUrl: '/images/novità.webp',
+    immagineUrl: '/images/novità.png',
     url: '/laboratori_new',
   },
 ]
@@ -542,27 +542,27 @@ let laboratori = [
 let altri_link = [
   {
     title: 'Regolamento',
-    immagineUrl: '/images/regolamento.webp',
+    immagineUrl: '/images/regolamento.png',
     url: '/regolamento',
   },
   {
     title: 'Momenti di preghiera e riflessione',
-    immagineUrl: '/images/preghiera.webp',
+    immagineUrl: '/images/preghiera.png',
     url: '/preghiera',
   },
   {
     title: 'Gruppo Special',
-    immagineUrl: '/images/special.webp',
+    immagineUrl: '/images/special.png',
     url: '/special',
   },
   {
     title: 'Spazio animatori',
-    immagineUrl: '/images/animatori.webp',
+    immagineUrl: '/images/animatori.png',
     url: '/animatori',
   },
   {
     title: 'Spazio genitori',
-    immagineUrl: '/images/genitori.webp',
+    immagineUrl: '/images/genitori.png',
     url: '/genitori',
   },
   {
@@ -618,7 +618,7 @@ let serate_cinema = [
     category: '',
     description: 'Meritiamo di sapere',
     immagineUrl:
-      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ3dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9ddc4e13c3529104be59ba35728fbc4bc54012bf/Disclosure%20day.webp',
+      'https://cinema.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ3dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9ddc4e13c3529104be59ba35728fbc4bc54012bf/Disclosure%20day.png',
     url: 'https://cinema.donboscosandona.it',
   },
   {

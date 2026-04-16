@@ -22,12 +22,12 @@ export default function Pagina() {
           name="og:description"
           content="I nostri pomeriggi: divertimento assicurato!"
         />
-        <meta name="og:image" content="/images/pomeriggi.webp" />
+        <meta name="og:image" content="/images/pomeriggi.png" />
       </Head>
       <LandingHero
         opacity={0.3}
         title="I nostri pomeriggi"
-        imageUrl="/images/pomeriggi.webp"
+        imageUrl="/images/pomeriggi.png"
       />
       <Paragraph>
         <p>

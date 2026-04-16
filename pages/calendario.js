@@ -23,12 +23,12 @@ export default function Pagina() {
           name='og:description'
           content='Il calendario dettagliato delle giornate e delle serate.'
         />
-        <meta name='og:image' content='/images/calendario.webp' />
+        <meta name='og:image' content='/images/calendario.png' />
       </Head>
       <LandingHero
         opacity={0.3}
         title='Calendario'
-        imageUrl='/images/calendario.webp'
+        imageUrl='/images/calendario.png'
       />
       <Calendar cardWidth={3} events={settimana0} />
       <Calendar title='Prima settimana' cardWidth={3} events={settimana1} />
@@ -62,7 +62,7 @@ let settimana0 = [
     date: 'Domenica 15 Giugno',
     afternoon:
       'Santa Messa di apertura alle 9.00, riunione genitori e giochi, gonfiabili e gara di torte, pranzo al sacco',
-    immagineUrl: '/images/calendario/gonfiabili.webp',
+    immagineUrl: '/images/calendario/gonfiabili.png',
     bgColor: coloreDefault,
   },
 ]
@@ -239,7 +239,7 @@ let settimana4 = [
     morning: 'Sistemazione ambienti',
     afternoon: 'Gita animatori',
     evening: 'Cena con tutti i volontari',
-    immagineUrl: '/images/calendario/grigliata.webp',
+    immagineUrl: '/images/calendario/grigliata.png',
     bgColor: colorePrimiGiorni,
   },
 ]

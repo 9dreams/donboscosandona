@@ -22,12 +22,12 @@ export default function Pagina() {
           name='og:description'
           content='Tutte le regole della Proposta Estate.'
         />
-        <meta name='og:image' content='/images/regolamento.webp' />
+        <meta name='og:image' content='/images/regolamento.png' />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Regolamento'
-        imageUrl='/images/regolamento.webp'
+        imageUrl='/images/regolamento.png'
       />
       <Paragraph>
         <p>

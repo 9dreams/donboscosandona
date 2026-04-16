@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Bebas+Neue&family=Figtree:wght@300&family=Roboto+Slab&display=swap');
 @import url('https://fonts.cdnfonts.com/css/starjedi-special-edition');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,10 +16,14 @@ p,
 th,
 td,
 span {
-  font-family: 'Exo 2', sans-serif !important;
   color: #e0e0e0 !important;
   font-size: 1.1rem !important;
   line-height: 1.6 !important;
+
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html,
@@ -28,12 +33,17 @@ body {
   font-family: 'Exo 2', sans-serif !important;
   font-size: 18px !important;
   line-height: 1.6 !important;
-  background-color: #0c0c0c !important;
-  background-image: url('/images/spaceship_bg.jpg') !important;
+  background-color: #050505 !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/spaceship_bg.jpg') !important;
   background-size: cover !important;
   background-attachment: fixed !important;
   background-position: center !important;
   color: #e0e0e0 !important;
+  cursor: url('/images/lightsaber_cursor.png') 0 0, auto !important;
+}
+
+a, button, .MuiButton-root, .MuiCardActionArea-root, [role="button"] {
+  cursor: url('/images/lightsaber_cursor.png') 0 0, pointer !important;
 }
 
 /* Overrides for common surface elements to make them dark and slightly transparent */
@@ -55,8 +65,10 @@ body {
 /* Star Wars Titles - Sith Red vs Jedi Blue */
 h1, h2, h3, h4, 
 .MuiTypography-h1, .MuiTypography-h2, .MuiTypography-h3, .MuiTypography-h4, .MuiTypography-h5, .MuiTypography-h6 {
-  font-family: 'StarJedi Special Edition', 'Bebas Neue', cursive !important;
-  text-transform: lowercase !important;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   color: #9e0000 !important;
   -webkit-text-fill-color: transparent !important;
   letter-spacing: 2px;

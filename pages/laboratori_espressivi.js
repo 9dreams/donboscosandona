@@ -41,7 +41,7 @@ let serata = [
     title: 'BALLO HIP-HOP',
     category: '1ª ora medie / 2ª ora elementari',
     description: 'Disciplina di ballo che proviene dal movimento Hip Hop e ne conserva le caratteristiche culturali ed estetiche.',
-    immagineUrl: '/images/laboratori/hiphop.webp',
+    immagineUrl: '/images/laboratori/hiphop.png',
   },
   {
     title: 'TEATRO',
@@ -78,12 +78,12 @@ export default function Pagina() {
           name='og:description'
           content='Laboratori espressivi/musicali e preparazione della serata finale.'
         />
-        <meta name='og:image' content='/images/espressivi.webp' />
+        <meta name='og:image' content='/images/espressivi.png' />
       </Head>
       <LandingHero
         opacity={0.2}
         title='Laboratori espressivi'
-        imageUrl='/images/espressivi.webp'
+        imageUrl='/images/espressivi.png'
       />
       <Container sx={{ padding: '2rem', textAlign: 'center' }}>
         <ButtonGroup
