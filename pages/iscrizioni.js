@@ -43,11 +43,13 @@ export default function Pagina() {
         <p>
           Anche quest’anno la <strong>PRE-ISCRIZIONE è obbligatoria</strong> e si può fare direttamente da casa, tramite Internet, utilizzando Squby, il programma per gestire le iscrizioni a tutte le attività dell’Oratorio.
         </p>
-        <br />
+      </Paragraph>
+
+      <Paragraph title={<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}> <PersonAddIcon sx={{ fontSize: 48, color: '#ff0000', filter: 'drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 10px #ff0000)' }} /> 1. Registrazione su Squby </Box>}>
         <p>
-          Scarica SQUBY dagli store oppure utilizzala via web:
+          <strong>Hai già un account?</strong>
         </p>
-        <Box sx={{ mt: 2, mb: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+        <Box sx={{ mt: 2, mb: 2 }}>
           <Button
             variant='contained'
             fullWidth
@@ -57,12 +59,8 @@ export default function Pagina() {
             Accedi a Squby
           </Button>
         </Box>
-      </Paragraph>
-
-      <Paragraph title={<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}> <PersonAddIcon sx={{ fontSize: 48, color: '#ff0000', filter: 'drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 10px #ff0000)' }} /> 1. Registrazione su Squby </Box>}>
         <p>
-          <strong>Hai già un account?</strong><br />
-          Entra con il solito modo a Squby con nome utente (mail) e la Password. Per l’iscrizione alla P.E.R. passa al punto 3 della guida.
+          Entra con il solito modo a Squby con nome utente (mail) e la Password. Per l’iscrizione alla P.E.R. passa al punto 2 della guida.
         </p>
         <br />
         <p>
