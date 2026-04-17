@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-import { Button, Container, Typography, Grid } from '@mui/material'
+import { Button, Container, Typography, Grid, Box, Paper } from '@mui/material'
+import Link from 'next/link'
 
 import {
   Carousel,
@@ -44,6 +45,57 @@ export default function Home({ data }) {
         buttonText='SKY WARS'
         imageUrl='/images/home.png'
       />
+
+      <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
+        <Link href='/iscrizioni' style={{ textDecoration: 'none' }}>
+          <Paper
+            sx={{
+              position: 'relative',
+              backgroundColor: 'grey.800',
+              color: '#fff',
+              mb: 4,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundImage: `url(/images/iscrizioni.png)`,
+              borderRadius: '2rem',
+              overflow: 'hidden',
+              minHeight: { xs: '300px', md: '250px' },
+              display: 'flex',
+              alignItems: 'center',
+              transition: 'all 0.3s ease',
+              border: '2px solid rgba(255, 255, 255, 0.1)',
+              '&:hover': {
+                transform: 'scale(1.01)',
+                borderColor: '#00aaff',
+                boxShadow: '0 0 20px rgba(0, 170, 255, 0.4)',
+              }
+            }}
+          >
+            <Box
+              sx={{
+                position: 'absolute',
+                top: 0,
+                bottom: 0,
+                right: 0,
+                left: 0,
+                backgroundColor: 'rgba(0,0,0,0.2)',
+                backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1))'
+              }}
+            />
+            <Grid container sx={{ position: 'relative', zIndex: 1 }}>
+              <Grid item md={10} sx={{ p: { xs: 3, md: 6 } }}>
+                <Typography component='h2' variant='h2' sx={{ fontWeight: 'bold' }}>
+                  ISCRIZIONE
+                </Typography>
+                <Typography variant='h5' sx={{ mt: 2, maxWidth: '600px', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                  scopri tutti i dettagli per imbarcarti nell'avventura galattica più bella della tua vita!
+                </Typography>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Link>
+      </Container>
       <Paragraph
         title='SKY WARS...'
         subtitle='“Fa più rumore un albero che cade di una foresta che cresce”'
