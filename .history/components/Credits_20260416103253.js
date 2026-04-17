@@ -7,9 +7,6 @@ const Credits = () => {
       <p className='text-center text-white text-lg font-bold mb-6'>
         Questo sito è stato realizzato dagli allievi informatici della SFP don
         Bosco di San Donà di Piave: Buccudu Matteo, Marcon Filippo e Menegaldo Riccardo.
-
-
-        
       </p>
       <div className='flex flex-col lg:flex-row lg:space-x-12 lg:mt-4'>
         <a
