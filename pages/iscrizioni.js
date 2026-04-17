@@ -2,6 +2,10 @@ import Head from 'next/head'
 import Button from '@mui/material/Button'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
+import PersonAddIcon from '@mui/icons-material/PersonAdd'
+import AssignmentIcon from '@mui/icons-material/Assignment'
+import EventAvailableIcon from '@mui/icons-material/EventAvailable'
+import PaymentsIcon from '@mui/icons-material/Payments'
 
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
@@ -33,41 +37,20 @@ export default function Pagina() {
         title='Iscrizioni alla PER'
         imageUrl='/images/iscrizioni.png'
       />
-      <Paragraph title='Date e Orari'>
-        <p>
-          Le iscrizione sono previste da <strong>lunedì 4 maggio a venerdì 8 maggio</strong> dalle ore <strong>16.00 alle 19.30</strong>.<br />
-          Sabato 09 maggio le iscrizioni saranno aperte dalle <strong>9.00 alle 12.00</strong>.
-        </p>
-        <br />
-        <p>
-          Le iscrizioni per i ragazzi/e che frequentano i gruppi dell’Oratorio (ADS, Dopo la Campanella, Scout San Donà 1, Banda) inizieranno <strong>lunedì 4 maggio alle 16.00</strong>.
-        </p>
-        <br />
-        <p>
-          Per tutti, <strong>LE ISCRIZIONI INIZIERANNO mercoledì 6 maggio alle ore 16.00</strong>.
-        </p>
-        <br />
-        <p>
-          <strong>ANCHE QUEST’ANNO I LABORATORI SARANNO SCELTI IN PRESENZA AL MOMENTO DELL'ISCRIZIONE IN ORATORIO</strong> E PERCIÒ È NECESSARIA LA PRESENZA DEL RAGAZZO/A, così da facilitare le operazioni di segreteria nello scegliere i laboratori e la taglia della maglietta.
-        </p>
-      </Paragraph>
 
-      <Paragraph title='Pre-iscrizione Obbligatoria'>
+
+      <Paragraph title=''>
         <p>
-          Anche quest’anno la <strong>PRE-ISCRIZIONE è obbligatoria</strong> e si può fare direttamente da casa, tramite Internet!
+          Anche quest’anno la <strong>PRE-ISCRIZIONE è obbligatoria</strong> e si può fare direttamente da casa, tramite Internet, utilizzando Squby, il programma per gestire le iscrizioni a tutte le attività dell’Oratorio.
         </p>
         <br />
         <p>
-          <strong>LA PRE-ISCRIZIONE SI FA CON SQUBY!</strong><br />
-          Squby è il programma per gestire le iscrizioni al GREST, ma anche a tutte le attività dell’Oratorio.
-        </p>
-        <br />
-        <p>
-          Per utilizzare SQUBY puoi scaricare l'app dagli store oppure utilizzare il link diretto:
+          Scarica SQUBY dagli store oppure utilizzala via web:
         </p>
         <Box sx={{ mt: 2, mb: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
           <Button
-            variant='outlined'
+            variant='contained'
+            fullWidth
             href='https://live.squby.it/'
             target='_blank'
           >
@@ -76,19 +59,20 @@ export default function Pagina() {
         </Box>
       </Paragraph>
 
-      <Paragraph title='Guida alla registrazione'>
+      <Paragraph title={<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}> <PersonAddIcon sx={{ fontSize: 48, color: '#ff0000', filter: 'drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 10px #ff0000)' }} /> 1. Registrazione su Squby </Box>}>
         <p>
-          <strong>1. Hai già un account?</strong><br />
+          <strong>Hai già un account?</strong><br />
           Entra con il solito modo a Squby con nome utente (mail) e la Password. Per l’iscrizione alla P.E.R. passa al punto 3 della guida.
         </p>
         <br />
         <p>
-          <strong>2. Non sei ancora iscritto? Registra l'anagrafica</strong><br />
+          <strong>Non sei ancora iscritto? Registra l'anagrafica</strong><br />
           Il primo passaggio è registrare l’anagrafica, cioè inserire la scheda con tutti i dati del ragazzo/a. È necessario collegarsi con PC o smartphone:
         </p>
         <Box sx={{ mt: 2, mb: 2 }}>
           <Button
-            variant='outlined'
+            variant='contained'
+            fullWidth
             href='https://live.squby.it/iscrizione.aspx?grest=ac07b306-8431-4298-a477-4a57dfef7384&usertype=4'
             target='_blank'
           >
@@ -106,11 +90,7 @@ export default function Pagina() {
         </p>
       </Paragraph>
 
-      <Paragraph title='Iscrizione vera e propria'>
-        <p>
-          <strong>3. I passi per iscriversi alla P.E.R. 26</strong><br />
-          Quanto fatto finora non è ancora l’iscrizione! Segui questi passi:
-        </p>
+      <Paragraph title={<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}> <AssignmentIcon sx={{ fontSize: 48, color: '#00aaff', filter: 'drop-shadow(0 0 5px #00aaff) drop-shadow(0 0 10px #00aaff)' }} /> 2. Preiscrizione su Squby </Box>}>
         <ol style={{ paddingLeft: '1.5rem', marginTop: '1rem' }}>
           <li>Apri l’app Squby o accedi via web.</li>
           <li>Scorri in fondo fino all'attività <strong>P.E.R. 26 Proposta Estate Ragazzi</strong>.</li>
@@ -127,24 +107,70 @@ export default function Pagina() {
         </p>
       </Paragraph>
 
-      <Paragraph title='Prenota il tuo appuntamento'>
+      <Paragraph title={<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}> <EventAvailableIcon sx={{ fontSize: 48, color: '#ff0000', filter: 'drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 10px #ff0000)' }} /> 3. Prenota il tuo appuntamento </Box>}>
         <p>
           <strong>NOVITÀ:</strong> Quest’anno, per evitare code, abbiamo introdotto la prenotazione dell'appuntamento in presenza.
           Basterà cliccare sul pulsante qui sotto, prenotare l’orario e venire all’appuntamento nell’orario preciso.
         </p>
         <Box sx={{ mt: 2, mb: 2 }}>
           <Button
-            variant='outlined'
+            variant='contained'
+            fullWidth
             href='https://calendly.com/ads-donboscosandona/new-meeting'
             target='_blank'
           >
-            Prenota Appuntamento (Calendly)
+            Prenota Appuntamento
           </Button>
         </Box>
+        <div style={{ overflowX: 'auto', marginTop: '2rem', marginBottom: '2rem' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+            <tbody>
+              <tr>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Lunedì 4 maggio</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>16.00 - 19.30</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Per i ragazzi/e che frequentano i gruppi dell'Oratorio (ADS, Dopo la Campanella, Scout San Donà 1, Banda)</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Martedì 5 maggio</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>16.00 - 19.30</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Per i ragazzi/e che frequentano i gruppi dell'Oratorio (ADS, Dopo la Campanella, Scout San Donà 1, Banda)</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Mercoledì 6 maggio</td>
+                <td style={{ padding: '12px', borderBottom: '19.30' }}>16.00 - 19.30</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Per tutti</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Giovedì 7 maggio</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>16.00 - 19.30</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Per tutti</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Venerdì 8 maggio</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>16.00 - 19.30</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Per tutti</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Sabato 9 maggio</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>9.00 - 12.00</td>
+                <td style={{ padding: '12px', borderBottom: '1px solid #ddd' }}>Per tutti</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </Paragraph>
-      <Paragraph title='Pagamento'>
+
+      <Paragraph title={<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}> <PaymentsIcon sx={{ fontSize: 48, color: '#00aaff', filter: 'drop-shadow(0 0 5px #00aaff) drop-shadow(0 0 10px #00aaff)' }} /> 4. Iscrizione in presenza e pagamento </Box>}>
         <p>
-          <strong>Quota di iscrizione:</strong>
+          Ora non vi resta che presentarvi per l'iscrizione nella data e orario scelto.
+        </p>
+        <br />
+        <p>
+          <strong>Anche quest’anno i laboratori saranno scelti in presenza al momento dell'iscrizione in Oratorio</strong> e perciò è necessaria la presenza del ragazzo/a, così da facilitare le operazioni di segreteria nello scegliere i laboratori e la taglia della maglietta.
+        </p>
+        <br />
+        <p>
+          <strong>Quota di iscrizione da versare in contanti o con POS:</strong>
         </p>
         <ul style={{ paddingLeft: '1.5rem', marginTop: '0.5rem' }}>
           <li>2 settimane: 135,00 €</li>

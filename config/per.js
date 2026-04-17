@@ -12,7 +12,7 @@ export const menu = [
     { title: 'Oratorio don Bosco', url: 'http://www.inoratorio.it' },
     { title: 'Iscrizioni', url: '/iscrizioni' },
     { title: 'Calendario', url: '/calendario' },
-    { title: 'Privacy', url: 'http://www.inoratorio.it/privacy-policy' },
+    { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
 ]
 
 export const logoUrl = null

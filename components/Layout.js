@@ -30,7 +30,7 @@ export default function Layout({ children }) {
           onAcceptPreferences={() => {}}
           onAcceptStatistics={() => {}}
           onAcceptMarketing={() => {}}
-          policyLink='https://www.donboscosandona.it/privacy'
+          policyLink='http://archive.inoratorio.it/privacy-policy'
           privacyPolicyLinkText='Privacy Policy'
           necessaryOptionText='Necessari'
           preferencesOptionText='Preferenze'

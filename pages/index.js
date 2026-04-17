@@ -180,7 +180,14 @@ export default function Home({ data }) {
         borderRadius='50%'
         aspectRatio='1 / 1'
       />
-      <Carousel slides={gite} height={90} />
+      {/* <Carousel slides={gite} height={90} /> */}
+
+      <Products
+        cardWidth={3}
+        products={altri_link}
+        borderRadius='0.5rem'
+        aspectRatio='1.2 / 1'
+      />
       <Products
         title='I laboratori'
         description='Scegli due laboratori per le prime due settimane di PER, e altri due per le ultime due settimane. '
@@ -189,7 +196,7 @@ export default function Home({ data }) {
         borderRadius='0.5rem'
         aspectRatio='1 / 1'
       />
-      <Carousel slides={serate} height={90} />
+      {/* <Carousel slides={serate} height={90} /> */}
       <Products
         title="Un'estate di emozioni al Cinema don Bosco"
         description='Nei mesi di giugno, luglio e agosto gli iscritti alla PER26 potranno partecipare a tutti gli spettacoli del Cinema don Bosco al prezzo speciale di 4 €! Non ci sarà più un giorno fisso dedicato al Cinema quindi, ma tutti i giorni e tutti gli orari saranno buoni per venire a divertirti con i tuoi amici! Per avere lo sconto dovrai iscriverti alla Community WhatsApp NEWS della P.E.R.26 che si trova nella sezione delle informazioni e News. Riceverai ogni settimana la programmazione insieme a un link che ti permetterà di acquistare online a prezzo scontato i biglietti per te e per i tuoi amici e familiari. Nota: non è possibile ricevere lo sconto alla cassa, ma solo acquistando i biglietti online.'
@@ -247,12 +254,7 @@ export default function Home({ data }) {
           </Button>
         </p>
       </Paragraph>
-      <Products
-        cardWidth={3}
-        products={altri_link}
-        borderRadius='0.5rem'
-        aspectRatio='1.2 / 1'
-      />
+
       <Paragraph
         title='La Segreteria della PER'
         backgroundColor='#280b00ff'
