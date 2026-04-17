@@ -85,7 +85,7 @@ export default function Home({ data }) {
             />
             <Grid container sx={{ position: 'relative', zIndex: 1 }}>
               <Grid item md={10} sx={{ p: { xs: 3, md: 6 } }}>
-                <Typography component='h2' variant='h2' sx={{ fontWeight: 'bold' }}>
+                <Typography component='h2' sx={{ fontWeight: 'bold', fontSize: { xs: '2.2rem', sm: '3rem', md: '3.75rem' } }}>
                   ISCRIZIONE
                 </Typography>
                 <Typography variant='h5' sx={{ mt: 2, maxWidth: '600px', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
