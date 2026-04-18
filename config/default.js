@@ -76,6 +76,6 @@ La prima colonna sarà destinata a un testo descrittivo, la seconda ai social, l
     title3='I Settori'
     images={images}
     menu={menuFooter}
-    copyright='Copyright (C) 2023 9dreams Agency.'
+    copyright='Copyright (C) 2026 9dreams Agency. Realizzato dagli allievi Buccudu Matteo, Marcon Filippo e Menegaldo Riccardo.'
   />
 )
