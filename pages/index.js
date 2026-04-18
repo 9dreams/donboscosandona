@@ -81,7 +81,7 @@ export default function Home({ data, movies }) {
       </Container>
 
       <Products
-        cardWidth={3}
+        cardWidth={4}
         products={siti}
         borderRadius='10px'
         aspectRatio='1 / 1'
@@ -188,13 +188,6 @@ let members = [
     imageUrl: '/images/call3.webp',
     phone: '346 960 5687',
   },
-  {
-    name: 'Soggiorno don Bosco',
-    role: 'Dal lunedì al venerdì dalle 9.00 alle 12.00',
-    imageUrl: '/images/call3.webp',
-    email: 'info@soggiornodonbosco.it',
-    phone: '0421 299 158',
-  },
 ]
 
 let siti = [
@@ -212,11 +205,6 @@ let siti = [
     title: 'Scuola di Formazione Professionale',
     immagineUrl: '/images/home/sfp.png',
     url: 'https://www.donboscosandona.it',
-  },
-  {
-    title: 'Soggiorno Marino don Bosco',
-    immagineUrl: '/images/home/soggiornodonbosco.png',
-    url: 'https://www.soggiornodonbosco.it',
   },
 ]
 
