@@ -31,7 +31,7 @@ let products = [
     title: 'BASEBALL',
     category: '1ª ora elementari / 2ª ora medie',
     description:
-      'Home run! Prendi la mazza e corri tra le basi in questo emozionante sport di precisione e velocità.',
+      'Palla in gioco, testa in azione: conquista le 4 basi nel baseball!',
     immagineUrl: '/images/laboratori/baseball.jpeg',
   },
   {
