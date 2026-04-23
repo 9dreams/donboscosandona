@@ -36,7 +36,7 @@ const features = [
       'https://archive.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png',
     description:
       'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
-      url: 'https://channels.donboscosandona.it/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNakI2Y1RScGNYaHRjbTFtWW5CMmRteHZNRE5xZVRWNGRuZG9Nd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlScGJteHBibVU3SUdacGJHVnVZVzFsUFNKUWNtOW5aWFIwYnlCRlpIVmpZWFJwZG04Z0pUSTRVbVYyTGpOZk1qVXVNVEV1TWpBeU5TVXlPUzV3WkdZaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoxQnliMmRsZEhSdkpUSXdSV1IxWTJGMGFYWnZKVEl3SlRJNFVtVjJMak5mTWpVdU1URXVNakF5TlNVeU9TNXdaR1lHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWhSaGNIQnNhV05oZEdsdmJpOXdaR1lHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOm51bGwsInB1ciI6ImJsb2Jfa2V5In19--f05ec6d1060eb83027c6deea05ae9c8fa76269ba/Progetto%20Educativo%20(Rev.3_25.11.2025).pdf'
+      url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamdEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d34762c0a87f0670457a8db5239124cbc77efa99/Progetto%20Educativo%20(Rev.3_25.11.2025).pdf'
   },
   {
     title: 'Didattica attiva',
@@ -162,7 +162,7 @@ let link_utili = [
     description:
       'Il regolamento sottoscritto a inizio anno, che tutti gli allievi si impegnano a rispettare.',
     immagineUrl: '/images/home/regolamento.png',
-    url: 'https://channels.donboscosandona.it/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiRFJ5TVhsdVptRnZhbkU1YUhsdFltUnVibkU1Ykc5bFpYWmxPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlScGJteHBibVU3SUdacGJHVnVZVzFsUFNKRUxqRXpMakV1TXlCU1pXZHZiR0Z0Wlc1MGJ5QkJiR3hwWlhacElDVXlPSEpsZGk0eUpUSTVMbkJrWmlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblJDNHhNeTR4TGpNbE1qQlNaV2R2YkdGdFpXNTBieVV5TUVGc2JHbGxkbWtsTWpBbE1qaHlaWFl1TWlVeU9TNXdaR1lHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWhSaGNIQnNhV05oZEdsdmJpOXdaR1lHT3daVU9oRnpaWEoyYVdObFgyNWhiV1U2Q214dlkyRnMiLCJleHAiOm51bGwsInB1ciI6ImJsb2Jfa2V5In19--56c7e561c9e90c523f6dbf3869f337c9634af1e9/D.13.1.3%20Regolamento%20Allievi%20(rev.2).pdf',
+    url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBalFEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f729bfb33efb7d19edd4a88149189a466d19900f/D.13.1.3%20Regolamento%20Allievi%20(rev.2).pdf',
   },
   {
     title: 'ScuolaOnLine',
