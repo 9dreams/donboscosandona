@@ -51,7 +51,7 @@ export default function Schermo({data0}) {
             link: '',
             allegato: null,
           }))}
-          height='100'
+          height='90'
           limit={10}
           animation='fade'
           interval={12000}
