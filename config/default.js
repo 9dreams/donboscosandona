@@ -10,7 +10,6 @@ export const siteBaseUrl = 'https://per.donboscosandona.it'
 export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Oratorio don Bosco', url: 'http://www.inoratorio.it' },
-    { title: 'Iscrizioni', url: '/iscrizioni' },
     { title: 'Calendario', url: '/calendario' },
     { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
 ]

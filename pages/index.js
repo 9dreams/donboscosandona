@@ -47,54 +47,44 @@ export default function Home({ data }) {
       />
 
       <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
-        <Link href='/iscrizioni' style={{ textDecoration: 'none' }}>
-          <Paper
+        <Paper
+          sx={{
+            position: 'relative',
+            backgroundColor: 'grey.900',
+            color: '#fff',
+            mb: 4,
+            p: { xs: 3, md: 6 },
+            borderRadius: '2rem',
+            overflow: 'hidden',
+            border: '2px solid rgba(255, 255, 255, 0.1)',
+            background: 'linear-gradient(135deg, rgba(0, 170, 255, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%)',
+          }}
+        >
+          <Typography
+            component='h2'
             sx={{
-              position: 'relative',
-              backgroundColor: 'grey.800',
-              color: '#fff',
-              mb: 4,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundImage: `url(/images/iscrizioni.png)`,
-              borderRadius: '2rem',
-              overflow: 'hidden',
-              minHeight: { xs: '300px', md: '250px' },
-              display: 'flex',
-              alignItems: 'center',
-              transition: 'all 0.3s ease',
-              border: '2px solid rgba(255, 255, 255, 0.1)',
-              '&:hover': {
-                transform: 'scale(1.01)',
-                borderColor: '#00aaff',
-                boxShadow: '0 0 20px rgba(0, 170, 255, 0.4)',
-              }
+              fontWeight: 'bold',
+              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
+              color: '#00aaff',
+              mb: 2,
+              textTransform: 'uppercase',
+              letterSpacing: '0.1rem'
             }}
           >
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                backgroundColor: 'rgba(0,0,0,0.2)',
-                backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1))'
-              }}
-            />
-            <Grid container sx={{ position: 'relative', zIndex: 1 }}>
-              <Grid item md={10} sx={{ p: { xs: 3, md: 6 } }}>
-                <Typography component='h2' sx={{ fontWeight: 'bold', fontSize: { xs: '2.2rem', sm: '3rem', md: '3.75rem' } }}>
-                  ISCRIZIONE
-                </Typography>
-                <Typography variant='h5' sx={{ mt: 2, maxWidth: '600px', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                  scopri tutti i dettagli per imbarcarti nell'avventura galattica più bella della tua vita!
-                </Typography>
-              </Grid>
-            </Grid>
-          </Paper>
-        </Link>
+            Iscrizioni Chiuse
+          </Typography>
+          <Typography
+            variant='h6'
+            sx={{
+              lineHeight: 1.6,
+              fontWeight: 400,
+              color: 'rgba(255, 255, 255, 0.9)',
+              fontSize: { xs: '1rem', md: '1.15rem' }
+            }}
+          >
+            Gentili famiglie, abbiamo chiuso le iscrizioni dirette alla PER26 ma chi desiderasse ancora provare a trovare posto dovrà scrivere una mail a <a href="mailto:per@donboscosandona.it" style={{ color: '#00aaff', textDecoration: 'underline', fontWeight: 'bold' }}>per@donboscosandona.it</a> per accedere alla lista di attesa. Siete pregati di scrivere nella mail il nome del ragazzo/a, la data di nascita, la classe frequentata e a quali esperienze dell’oratorio il ragazzo/a abbia già partecipato.
+          </Typography>
+        </Paper>
       </Container>
       <Paragraph
         title='SKY WARS...'
@@ -572,11 +562,6 @@ let members = [
 ]
 
 let in_evidenza = [
-  {
-    title: 'Iscrizioni',
-    immagineUrl: '/images/iscrizioni.png',
-    url: '/iscrizioni',
-  },
   {
     title: 'Calendario',
     immagineUrl: '/images/calendario.png',
