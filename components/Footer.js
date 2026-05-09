@@ -9,7 +9,7 @@ import Button from '@mui/material/Button'
 export default function Footer(props) {
     return (
         <Container
-            maxWidth={true}
+            maxWidth={false}
             disableGutters={true}
         >
             <Box
@@ -42,17 +42,15 @@ export default function Footer(props) {
                             <Typography component="h1" color="White" >
                                 {
                                     props.socials.map((social) => (
-                                        <Container sx={{ padding: "0.5rem" }}>
+                                        <Container key={social.title} sx={{ padding: "0.5rem" }}>
                                             <Link
                                                 color="inherit"
                                                 noWrap
-                                                key={social.title}
-
                                                 variant="body2"
                                                 href={social.url}
                                                 sx={{ p: 1, flexShrink: 0, }}
                                             >
-                                                <img src={social.imageUrl} width="20" />
+                                                <img src={social.imageUrl} width="20" alt={social.title} />
                                                 {social.title}
                                             </Link>
                                         </Container>
@@ -69,14 +67,14 @@ export default function Footer(props) {
                             <Grid container spacing={2} minHeight={160}>
                                 {
                                     props.images.map((image) => (
-                                        <Grid item xs={4} display="flex" justifyContent="center" alignItems="center">
+                                        <Grid key={image.imageUrl} item xs={4} display="flex" justifyContent="center" alignItems="center">
                                             <Link
                                                 color="inherit"
                                                 noWrap
                                                 variant="body2"
                                                 sx={{ p: 1, flexShrink: 3, }}
                                             >
-                                                <img src={image.imageUrl} width="120" />
+                                                <img src={image.imageUrl} width="120" alt="" />
                                             </Link>
                                         </Grid>
                                     ))
@@ -107,9 +105,7 @@ export default function Footer(props) {
                                         props.menu.map((link) => (
                                             <Button
                                                 color="inherit"
-                                                noWrap
                                                 key={link.title}
-                                                variant="body2"
                                                 href={link.url}
                                                 sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
                                             >

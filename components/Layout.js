@@ -3,13 +3,18 @@ import Head from 'next/head'
 import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
-import { CookieBanner } from '@palmabit/react-cookie-law'
+import dynamic from 'next/dynamic'
 
 import styles from './Layout.module.css'
 
 import { header, footer, siteTitle, siteDescription } from '/config/default'
 
 const theme = createTheme()
+
+const CookieBanner = dynamic(
+  () => import('@palmabit/react-cookie-law').then((m) => m.CookieBanner),
+  { ssr: false }
+)
 
 export default function Layout({ children }) {
   return (

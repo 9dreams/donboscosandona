@@ -104,7 +104,6 @@ export default function LandingHero(props) {
                 <MenuItem key={item.title} onClick={handleCloseNavMenu}>
                   <Button
                     color='inherit'
-                    noWrap
                     key={item.title}
                     href={item.url}
                   >
@@ -172,7 +171,6 @@ export default function LandingHero(props) {
                       <Button
                         className={styles.link_settori}
                         color='inherit'
-                        noWrap
                         key={item.title}
                         href={item.url}
                         sx={{
