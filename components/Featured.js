@@ -11,6 +11,7 @@ export default function Featured({
   interval,
   duration,
   defaultTag,
+  captionMode,
 }) {
   if (!data) return <div>Caricamento...</div>
   if (data && data.status == '404')
@@ -47,6 +48,7 @@ export default function Featured({
           interval={interval}
           duration={duration}
           defaultTag={defaultTag}
+          captionMode={captionMode}
         ></Carousel>
       )}
     </>
@@ -61,4 +63,5 @@ Featured.defaultProps = {
   interval: 7000,
   duration: 1000,
   defaultTag: '',
+  captionMode: 'responsive',
 }

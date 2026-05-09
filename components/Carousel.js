@@ -36,7 +36,10 @@ export default function MyCarousel({
   interval,
   duration,
   defaultTag,
+  captionMode,
 }) {
+  const forceDesktopCaption = captionMode === 'desktop'
+
   return (
     <Container
       maxWidth={maxWidth}
@@ -147,9 +150,11 @@ export default function MyCarousel({
                 <Grid item md={8}>
                   <Box
                     sx={{
-                      position: { xs: 'absolute', md: 'relative' },
-                      bottom: { xs: '3rem' },
-                      marginTop: { md: '12rem' },
+                      position: forceDesktopCaption
+                        ? 'relative'
+                        : { xs: 'absolute', md: 'relative' },
+                      bottom: forceDesktopCaption ? 'auto' : { xs: '3rem' },
+                      marginTop: forceDesktopCaption ? '12rem' : { md: '12rem' },
                       p: { xs: 3, md: 6 },
                       pr: { md: 0 },
                     }}
@@ -157,7 +162,7 @@ export default function MyCarousel({
                     {slide.tag && slide.tag != defaultTag && (
                       <Stack direction='row' spacing={1} marginBottom={2}>
                         {slide.tag.split(',').map((tag) => (
-                          <Chip label={tag} color='primary' />
+                          <Chip key={tag} label={tag} color='primary' />
                         ))}
                       </Stack>
                     )}
@@ -204,4 +209,5 @@ MyCarousel.defaultProps = {
   interval: 7000,
   duration: 3000,
   defaultTag: '',
+  captionMode: 'responsive',
 }
