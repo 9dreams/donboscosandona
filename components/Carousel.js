@@ -37,8 +37,10 @@ export default function MyCarousel({
   duration,
   defaultTag,
   captionMode,
+  hideButton,
 }) {
   const forceDesktopCaption = captionMode === 'desktop'
+  const forceScreenCaption = captionMode === 'screen'
 
   return (
     <Container
@@ -150,11 +152,26 @@ export default function MyCarousel({
                 <Grid item md={8}>
                   <Box
                     sx={{
-                      position: forceDesktopCaption
-                        ? 'relative'
-                        : { xs: 'absolute', md: 'relative' },
-                      bottom: forceDesktopCaption ? 'auto' : { xs: '3rem' },
-                      marginTop: forceDesktopCaption ? '12rem' : { md: '12rem' },
+                      position: forceScreenCaption
+                        ? 'absolute'
+                        : forceDesktopCaption
+                          ? 'relative'
+                          : { xs: 'absolute', md: 'relative' },
+                      left: forceScreenCaption ? 0 : 'auto',
+                      right: forceScreenCaption ? 0 : 'auto',
+                      bottom: forceScreenCaption
+                        ? { xs: '2rem', md: '2rem' }
+                        : forceDesktopCaption
+                          ? 'auto'
+                          : { xs: '3rem' },
+                      marginTop: forceScreenCaption
+                        ? 0
+                        : forceDesktopCaption
+                          ? '12rem'
+                          : { md: '12rem' },
+                      maxWidth: forceScreenCaption ? { xs: '100%', md: '60%' } : 'none',
+                      maxHeight: forceScreenCaption ? 'calc(100vh - 6rem)' : 'none',
+                      overflow: forceScreenCaption ? 'hidden' : 'visible',
                       p: { xs: 3, md: 6 },
                       pr: { md: 0 },
                     }}
@@ -177,7 +194,7 @@ export default function MyCarousel({
                     <Typography component='h5' color='inherit' paragraph>
                       {readMore(slide.descrizione, 50)}
                     </Typography>
-                    {slide.buttonUrl && (
+                    {!hideButton && slide.buttonUrl && (
                       <Button
                         variant='contained'
                         size='large'
@@ -210,4 +227,5 @@ MyCarousel.defaultProps = {
   duration: 3000,
   defaultTag: '',
   captionMode: 'responsive',
+  hideButton: false,
 }

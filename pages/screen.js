@@ -58,7 +58,8 @@ export default function Schermo({data0}) {
           interval={12000}
           duration={0}
           defaultTag=''
-          captionMode='desktop'
+          captionMode='screen'
+          hideButton={true}
         />
         )}
       </div>
