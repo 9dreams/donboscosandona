@@ -1,131 +1,181 @@
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import Link from '@mui/material/Link'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import Toolbar from '@mui/material/Toolbar'
-import Button from '@mui/material/Button'
+import Image from 'next/image'
 
-export default function Footer(props) {
-    return (
-        <Container
-            maxWidth={false}
-            disableGutters={true}
-        >
-            <Box
-                sx={{
-                    position: 'relative',
-                    top: 0,
-                    bottom: 0,
-                    right: 0,
-                    left: 0,
-                    backgroundColor: props.color,
-                }}
+const bodyStyle = { fontFamily: '"Plus Jakarta Sans", "Exo 2", sans-serif' }
+const titleStyle = {
+  fontFamily: '"Bebas Neue", sans-serif',
+  textShadow: 'none',
+  WebkitTextFillColor: 'initial',
+  WebkitTextStroke: '0px',
+  letterSpacing: '0.04em',
+}
+
+export default function Footer({ color, title1, description1, socials = [], menu = [], copyright }) {
+  const bgColor = color || '#272727'
+
+  // Split menu: main links vs legal/utility links
+  const legalSlugs = ['privacy', 'whistleblowing', 'cookie']
+  const mainLinks = menu.filter(
+    (l) => !legalSlugs.some((s) => l.url?.toLowerCase().includes(s))
+  )
+  const legalLinks = menu.filter((l) =>
+    legalSlugs.some((s) => l.url?.toLowerCase().includes(s))
+  )
+
+  return (
+    <footer style={{ backgroundColor: bgColor, ...bodyStyle }}>
+      {/* Main footer body */}
+      <div className="max-w-[1280px] mx-auto px-5 md:px-12 pt-16 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+          {/* Column 1 — Brand */}
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logo_inoratorio.png"
+                alt="Logo Oratorio don Bosco"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
+              <span
+                className="text-white text-3xl leading-none uppercase"
+                style={titleStyle}
+              >
+                {title1}
+              </span>
+            </div>
+            {description1 && (
+              <p className="text-sm leading-6" style={{ color: '#9ca3af' }}>
+                {description1}
+              </p>
+            )}
+
+            {/* Social icons */}
+            {socials.length > 0 && (
+              <div className="flex gap-3 mt-1">
+                {socials.map((social) => (
+                  <a
+                    key={social.title}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={social.title}
+                    className="w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200"
+                    style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#1976D2')}
+                    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)')}
+                  >
+                    <Image
+                      src={social.imageUrl}
+                      alt={social.title}
+                      width={18}
+                      height={18}
+                      className="object-contain"
+                      style={{ filter: 'brightness(0) invert(1)' }}
+                    />
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Column 2 — Quick links */}
+          <div>
+            <h3
+              className="text-white text-xl mb-6 uppercase"
+              style={titleStyle}
             >
-                <Container maxWidth="lg">
-                    <Grid container spacing={3}>
-                        { /* Chi siamo */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title1}
-                            </Typography>
-                            <Typography component="h5" color="darkgrey" paragraph>
-                                {props.description1}
-                            </Typography>
-                        </Grid>
+              Navigazione
+            </h3>
+            <ul className="flex flex-col gap-3">
+              {mainLinks.map((link) => (
+                <li key={link.title}>
+                  <a
+                    href={link.url}
+                    className="text-sm transition-colors duration-200"
+                    style={{ color: '#9ca3af' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#FF9800')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#9ca3af')}
+                  >
+                    {link.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                        { /* Social Feed */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title2}
-                            </Typography>
-                            <Typography component="h1" color="White" >
-                                {
-                                    props.socials.map((social) => (
-                                        <Container key={social.title} sx={{ padding: "0.5rem" }}>
-                                            <Link
-                                                color="inherit"
-                                                noWrap
-                                                variant="body2"
-                                                href={social.url}
-                                                sx={{ p: 1, flexShrink: 0, }}
-                                            >
-                                                <img src={social.imageUrl} width="20" alt={social.title} />
-                                                {social.title}
-                                            </Link>
-                                        </Container>
-                                    ))
-                                }
-                            </Typography>
-                        </Grid>
+          {/* Column 3 — Contact */}
+          <div>
+            <h3
+              className="text-white text-xl mb-6 uppercase"
+              style={titleStyle}
+            >
+              Contatti
+            </h3>
+            <ul className="flex flex-col gap-4 text-sm" style={{ color: '#9ca3af' }}>
+              <li className="flex items-start gap-3">
+                <svg className="mt-0.5 flex-shrink-0" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#1976D2" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>via XIII Martiri, 86<br />30027 San Donà di Piave (VE)</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg className="flex-shrink-0" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#1976D2" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <a
+                  href="tel:0421338911"
+                  style={{ color: '#9ca3af' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#FF9800')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#9ca3af')}
+                >
+                  0421 338911
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <svg className="flex-shrink-0" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#1976D2" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+                <a
+                  href="https://www.donboscosandona.it"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#9ca3af' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#FF9800')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#9ca3af')}
+                >
+                  www.donboscosandona.it
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-                        { /* Immagini */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title3}
-                            </Typography>
-                            <Grid container spacing={2} minHeight={160}>
-                                {
-                                    props.images.map((image) => (
-                                        <Grid key={image.imageUrl} item xs={4} display="flex" justifyContent="center" alignItems="center">
-                                            <Link
-                                                color="inherit"
-                                                noWrap
-                                                variant="body2"
-                                                sx={{ p: 1, flexShrink: 3, }}
-                                            >
-                                                <img src={image.imageUrl} width="120" alt="" />
-                                            </Link>
-                                        </Grid>
-                                    ))
-                                }
-                            </Grid>
-                        </Grid>
+        {/* Divider */}
+        <div className="mt-12 mb-6 border-t" style={{ borderColor: 'rgba(255,255,255,0.08)' }} />
 
-                        { /* Linea */}
-                        <Grid item xs={12}>
-                            <Typography component="h1">
-                                <hr />
-                            </Typography>
-                        </Grid>
-
-                        { /* Menù */}
-                        <Grid item xs={12} lg={8}>
-                            <Toolbar
-                                component="nav"
-                                variant="dense"
-                                sx={{
-                                    overflowX: 'auto',
-                                    float: 'right',
-                                    color: '#fff',
-                                }}
-                            >
-                                <Grid container sx={{ marginBottom: '10px', pb: '10px'}}>
-                                    {
-                                        props.menu.map((link) => (
-                                            <Button
-                                                color="inherit"
-                                                key={link.title}
-                                                href={link.url}
-                                                sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
-                                            >
-                                                {link.title}
-                                            </Button>
-                                        ))
-                                    }
-                                </Grid>
-                            </Toolbar>
-                        </Grid>
-
-                        { /* Copyright */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" sx={{marginLeft: '27px', marginBottom: '15px'}}>
-                                {props.copyright}
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </Box>
-        </Container>
-    )
+        {/* Bottom bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs" style={{ color: '#6b7280' }}>
+          <div>{copyright}</div>
+          {legalLinks.length > 0 && (
+            <div className="flex flex-wrap gap-4 justify-center">
+              {legalLinks.map((link) => (
+                <a
+                  key={link.title}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors duration-200 hover:text-white"
+                  style={{ color: '#6b7280' }}
+                >
+                  {link.title}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </footer>
+  )
 }
