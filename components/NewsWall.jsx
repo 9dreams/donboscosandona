@@ -248,7 +248,7 @@ export default function NewsWall({
         <Button 
           variant="outlined" 
           endIcon={<GridViewIcon />}
-          href="https://www.inoratorio.it/news"
+          href="/news"
           sx={{
             borderRadius: '2rem',
             padding: '10px 30px',
