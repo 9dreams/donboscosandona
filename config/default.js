@@ -26,11 +26,11 @@ export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} 
 const menuFooter = menu
 
 const socials = [
-    { title: 'Facebook', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/667px-2023_Facebook_icon.svg.png', url: 'https://www.facebook.com/donboscosandona/?fref=ts' },
-    { title: 'Instagram', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/640px-Instagram_icon.png', url: 'https://www.instagram.com/donboscosandona/' },
-    { title: 'Youtube', imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-youtube-logo-icon-download-in-svg-png-gif-file-formats--social-media-70-flat-icons-color-pack-logos-432560.png', url: 'https://www.youtube.com/channel/UCZ2sxe9w7Yf9lP4nl65oAvg' },
-    { title: 'Linkedin', imageUrl: 'https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png', url: 'https://www.linkedin.com/company/c-f-p-don-bosco/' },
-    { title: 'TikTok', imageUrl: 'https://seeklogo.com/images/T/tiktok-logo-1F4A5DCD45-seeklogo.com.png', url: 'https://www.tiktok.com/@sfpdonbosco' },
+    { title: 'Facebook', platform: 'facebook', url: 'https://www.facebook.com/donboscosandona/?fref=ts' },
+    { title: 'Instagram', platform: 'instagram', url: 'https://www.instagram.com/donboscosandona/' },
+    { title: 'Youtube', platform: 'youtube', url: 'https://www.youtube.com/channel/UCZ2sxe9w7Yf9lP4nl65oAvg' },
+    { title: 'Linkedin', platform: 'linkedin', url: 'https://www.linkedin.com/company/c-f-p-don-bosco/' },
+    { title: 'TikTok', platform: 'tiktok', url: 'https://www.tiktok.com/@sfpdonbosco' },
 ]
 
 

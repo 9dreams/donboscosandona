@@ -6,6 +6,8 @@ import Container from '@mui/material/Container'
 import Toolbar from '@mui/material/Toolbar'
 import Button from '@mui/material/Button'
 
+import { FooterSocialIcon } from '/components/FooterSocialIcons'
+
 export default function Footer(props) {
     return (
         <Container
@@ -42,17 +44,14 @@ export default function Footer(props) {
                             <Typography component="h1" color="White" >
                                 {
                                     props.socials.map((social) => (
-                                        <Container sx={{ padding: "0.5rem" }}>
+                                        <Container sx={{ padding: "0.5rem" }} key={social.url || social.title}>
                                             <Link
                                                 color="inherit"
-                                                noWrap
-                                                key={social.title}
-
                                                 variant="body2"
                                                 href={social.url}
-                                                sx={{ p: 1, flexShrink: 0, }}
+                                                sx={{ p: 1, flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 1 }}
                                             >
-                                                <img src={social.imageUrl} width="20" />
+                                                <FooterSocialIcon social={social} />
                                                 {social.title}
                                             </Link>
                                         </Container>

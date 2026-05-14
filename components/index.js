@@ -25,6 +25,8 @@ export { default as Elements } from './Elements'
 export { default as ElementsCard } from './ElementsCard'
 export { default as Credits } from './Credits'
 export { default as Test } from './Test'
+export { default as NewsWall } from './NewsWall.jsx'
+export { default as NewsArchive } from './NewsArchive.jsx'
 
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder

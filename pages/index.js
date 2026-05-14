@@ -16,6 +16,7 @@ import {
   Elements,
   Credits,
   Test,
+  NewsWall,
 } from '/components'
 
 import Banner5 from '/cc/Banner5'
@@ -191,7 +192,7 @@ export default function Home({ data, movies, elementi }) {
       
       <Featured data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor_new.png' />
-      <SwiperNews title='News' data={data} limit={12} defaultTag='scuola' />
+      <NewsWall data={data} limit={7} defaultTag='scuola' />
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
