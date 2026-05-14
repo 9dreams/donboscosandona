@@ -15,6 +15,7 @@ import {
   Team,
   Maps,
   SwiperNews,
+  NewsWall,
   Featured,
   Credits,
 } from '/components'
@@ -38,7 +39,7 @@ export default function Home({ data, movies }) {
         <meta name='og:image' content='/images/home.png' />
       </Head>
       <Featured data={data} height={100} />
-      <SwiperNews title='News' data={data} limit={12} />
+      <NewsWall title='News Wall' data={data} limit={7} />
       <Container
         sx={{
           aspectRatio: '16 / 9',
