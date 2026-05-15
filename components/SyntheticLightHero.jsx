@@ -12,6 +12,7 @@ export default function SyntheticLightHero({
   // single-post mode overrides
   ctaLabel: ctaLabelProp = null,
   ctaHref: ctaHrefProp = null,
+  sponsorImage = '/images/home/loghi_sponsor_new.png',
 }) {
   const heroImgRef = useRef(null)
 
@@ -161,7 +162,29 @@ export default function SyntheticLightHero({
             </div>
           </div>
         )}
+
+        {sponsorImage && (
+          <div className="pointer-events-none absolute bottom-0 right-0 z-20 hidden w-1/3 md:block">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={sponsorImage}
+              alt="Partner e sponsor"
+              className="block h-auto w-full rounded-tl-[10px] object-contain object-right object-bottom"
+            />
+          </div>
+        )}
       </section>
+
+      {sponsorImage && (
+        <div className="w-full md:hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={sponsorImage}
+            alt="Partner e sponsor"
+            className="block h-auto w-full rounded-tl-[10px]"
+          />
+        </div>
+      )}
 
       {/* Scoped styles (no CSS Modules needed) */}
       <style jsx global>{`

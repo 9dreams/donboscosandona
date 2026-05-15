@@ -73,7 +73,7 @@ const ActionLabel = ({ post, compact = false }) => {
 }
 
 export default function NewsWall({ 
-  title = "NEWS WALL", 
+  title = "News Wall", 
   subtitle = "Scopri i nostri traguardi, gli eventi e le innovazioni più recenti...", 
   data, 
   limit = 7,
@@ -126,7 +126,8 @@ export default function NewsWall({
             {renderTag(news[0].tag, defaultTag)}
             <div className="relative z-10 text-white mt-auto">
               <p className="text-sm font-medium mb-1 opacity-90">{news[0].pubblicazione}</p>
-              <div className="title-display text-2xl md:text-3xl font-bold mb-2 text-white leading-tight">
+              <div className="text-2xl md:text-3xl font-bold mb-2 text-white leading-tight"
+              style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 700 }}>
                 {news[0].titolo}
               </div>
               <p className="text-sm md:text-base opacity-90 mb-4">{news[0].abstract}</p>
@@ -188,7 +189,8 @@ export default function NewsWall({
             {renderTag(news[3].tag, defaultTag)}
             <div className="relative z-10 text-white mt-auto">
               <p className="text-sm font-medium mb-1 opacity-90">{news[3].pubblicazione}</p>
-              <div className="title-display text-2xl md:text-3xl font-bold mb-2 text-white leading-tight">
+              <div className="text-2xl md:text-3xl font-bold mb-2 text-white leading-tight"
+              style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 700 }}>
                 {news[3].titolo}
               </div>
               <p className="text-sm md:text-base opacity-90 mb-4">{news[3].abstract}</p>

@@ -11,7 +11,6 @@ import {
   Maps,
   SwiperNews,
   Featured,
-  Logos,
   Paragraph,
   Elements,
   Credits,
@@ -191,8 +190,11 @@ export default function Home({ data, movies, elementi }) {
   return (
     <Layout>
       
-      <SyntheticLightHero data={data} defaultTag='scuola' />
-      <Logos url='/images/home/loghi_sponsor_new.png' />
+      <SyntheticLightHero
+        data={data}
+        defaultTag='scuola'
+        sponsorImage='/images/home/loghi_sponsor_new.png'
+      />
       <NewsWall data={data} limit={7} defaultTag='scuola' />
       <Products
         title='I settori'

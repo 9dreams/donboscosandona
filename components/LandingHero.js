@@ -83,7 +83,29 @@ export default function LandingHero(props) {
             </div>
           </div>
         </div>
+
+        {props.sponsorImage && (
+          <div className="pointer-events-none absolute bottom-0 right-0 z-20 hidden w-1/3 md:block">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={props.sponsorImage}
+              alt="Partner e sponsor"
+              className="block h-auto w-full rounded-tl-[10px] object-contain object-right object-bottom"
+            />
+          </div>
+        )}
       </section>
+
+      {props.sponsorImage && (
+        <div className="w-full md:hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={props.sponsorImage}
+            alt="Partner e sponsor"
+            className="block h-auto w-full rounded-tl-[10px]"
+          />
+        </div>
+      )}
 
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
@@ -179,4 +201,5 @@ export default function LandingHero(props) {
 LandingHero.defaultProps = {
   height: 80,
   opacity: 0.3,
+  sponsorImage: '/images/home/loghi_sponsor_new.png',
 }
