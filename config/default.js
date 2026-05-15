@@ -12,7 +12,7 @@ export const menu = [
     { title: 'Proposta Estate', url: 'https://per.donboscosandona.it' },
     { title: 'Cinema', url: 'https://cinema.donboscosandona.it' },
     { title: 'Scuola', url: 'https://www.donboscosandona.it' },
-    { title: 'Soggiorno Marino', url: 'https://www.soggiornodonbosco.it' },
+    { title: 'Soggiorno Alpino', url: 'https://www.donboscopierabech.it' },
     { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
     { title: 'Segnalazione illeciti', url: 'http://archive.inoratorio.it/whistleblowing' },
 ]

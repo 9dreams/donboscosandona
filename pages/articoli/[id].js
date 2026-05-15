@@ -4,8 +4,7 @@ import { siteBaseUrl } from '/config/default'
 import { Container, Typography, Chip, Stack } from '@mui/material'
 
 import Layout from '/components/Layout'
-import LandingHero from '/components/LandingHero'
-import Paragraph from '/components/Paragraph'
+import NocturnalHero from '/components/NocturnalHero'
 
 import { getIdArticoli } from '../../lib/articoli'
 
@@ -26,17 +25,15 @@ export default function Show({ data }) {
         <meta name='og:description' content={data.abstract} />
         <meta property='og:image' content={data.immagine} />
       </Head>
-      <LandingHero
-        opacity={0.5}
-        title={data.titolo}
-        description={data.abstract}
-        imageUrl={data.immagine}
-        imageMobileUrl={data.immagine_mobile}
-        buttonText={
+      <NocturnalHero
+        post={data}
+        ctaLabel={
           (data.link && 'Scopri di più') ||
-          (data.allegato && "Scarica l'allegato")
+          (data.allegato && "Scarica l'allegato") ||
+          null
         }
-        buttonUrl={data.link || data.allegato}
+        ctaHref={data.link || data.allegato || null}
+        showNewsLink={false}
       />
       <Container
         maxWidth='lg'

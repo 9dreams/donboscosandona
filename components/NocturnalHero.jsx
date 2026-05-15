@@ -4,14 +4,17 @@ import { Icon } from '@iconify/react'
 
 export default function NocturnalHero({
   data,
+  post: postProp = null,
   limit,
   defaultTag,
+  ctaLabel: ctaLabelProp = null,
+  ctaHref: ctaHrefProp = null,
+  showNewsLink = true,
 }) {
   const heroImgRef = useRef(null)
 
-  // Pick first "in evidenza" post, fallback to first post
   const allPosts = Array.isArray(data) ? data : []
-  const featured = allPosts.find((p) => p.in_evidenza) ?? allPosts[0]
+  const featured = postProp ?? allPosts.find((p) => p.in_evidenza) ?? allPosts[0]
 
   // Scroll-parallax on hero image
   useEffect(() => {
@@ -61,16 +64,18 @@ export default function NocturnalHero({
     : tags
 
   const ctaHref =
-    (featured.articolo && '/articoli/' + featured.id) ||
-    featured.link ||
-    featured.allegato ||
-    null
+    ctaHrefProp ??
+    ((featured.articolo && '/articoli/' + featured.id) ||
+      featured.link ||
+      featured.allegato ||
+      null)
 
   const ctaLabel =
-    (featured.articolo && 'Continua a leggere') ||
-    (featured.link && 'Scopri di più') ||
-    (featured.allegato && "Scarica l'allegato") ||
-    null
+    ctaLabelProp ??
+    ((featured.articolo && 'Continua a leggere') ||
+      (featured.link && 'Scopri di più') ||
+      (featured.allegato && "Scarica l'allegato") ||
+      null)
 
   return (
     <>
@@ -81,24 +86,25 @@ export default function NocturnalHero({
           <div className="absolute right-[6%] bottom-[10%] h-[30rem] w-[30rem] rounded-full bg-[radial-gradient(circle,rgba(62,145,139,.12),transparent_70%)] blur-3xl" />
         </div>
 
-        {/* Gradient overlay above image */}
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,153,84,.22)_0%,rgba(18,21,28,.82)_52%,rgba(11,14,18,.95)_100%)] z-[1]" />
-
-        {/* Radial vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,189,98,.1),transparent_18%),radial-gradient(circle_at_center,rgba(0,0,0,.1),rgba(0,0,0,.18)_55%,rgba(0,0,0,.35)_100%)] z-[2]" />
-
         {/* Hero image */}
         {featured.immagine && (
-          <div className="nh-mask absolute inset-0 z-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              ref={heroImgRef}
-              src={featured.immagine}
-              alt={featured.titolo || ''}
-              className="nh-img absolute inset-0 h-full w-full object-cover"
-            />
+          <div className="absolute inset-0 z-0">
+            <picture>
+              {featured.immagine_mobile && (
+                <source media="(max-width: 767px)" srcSet={featured.immagine_mobile} />
+              )}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                ref={heroImgRef}
+                src={featured.immagine}
+                alt={featured.titolo || ''}
+                className="nh-img absolute inset-0 h-full w-full object-cover"
+              />
+            </picture>
           </div>
         )}
+
+        <div className="pointer-events-none absolute inset-0 z-[1] bg-black/35" />
 
         {/* Content */}
         <div className="relative z-10 flex min-h-[100svh] items-center justify-center px-6 pb-10 pt-[110px] text-center">
@@ -124,25 +130,28 @@ export default function NocturnalHero({
               </p>
             )}
 
-            {/* CTA buttons */}
-            <div className="nh-reveal flex flex-wrap justify-center gap-3">
-              {ctaHref && ctaLabel && (
-                <Link
-                  href={ctaHref}
-                  className="group inline-flex h-14 items-center gap-3 rounded-full border border-white/12 bg-[linear-gradient(180deg,rgba(20,22,24,.94),rgba(11,13,16,.9))] px-7 text-[11px] uppercase tracking-[0.26em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_18px_60px_rgba(0,0,0,.28)] transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <Icon icon="ph:arrow-right" className="text-xl text-[#f0c06b]" />
-                  {ctaLabel}
-                </Link>
-              )}
-              <Link
-                href="/news"
-                className="inline-flex h-14 items-center gap-3 rounded-full border border-white/10 bg-white/8 px-7 text-[11px] uppercase tracking-[0.26em] text-white/80 backdrop-blur-[20px] transition-transform duration-300 hover:-translate-y-1 hover:bg-white/12"
-              >
-                <Icon icon="ph:newspaper" className="text-xl text-white/70" />
-                Tutte le notizie
-              </Link>
-            </div>
+            {(ctaHref && ctaLabel) || showNewsLink ? (
+              <div className="nh-reveal flex flex-wrap justify-center gap-3">
+                {ctaHref && ctaLabel && (
+                  <Link
+                    href={ctaHref}
+                    className="group inline-flex h-14 items-center gap-3 rounded-full border border-white/12 bg-[linear-gradient(180deg,rgba(20,22,24,.94),rgba(11,13,16,.9))] px-7 text-[11px] uppercase tracking-[0.26em] text-white shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_18px_60px_rgba(0,0,0,.28)] transition-transform duration-300 hover:-translate-y-1"
+                  >
+                    <Icon icon="ph:arrow-right" className="text-xl text-[#f0c06b]" />
+                    {ctaLabel}
+                  </Link>
+                )}
+                {showNewsLink && (
+                  <Link
+                    href="/news"
+                    className="inline-flex h-14 items-center gap-3 rounded-full border border-white/10 bg-white/8 px-7 text-[11px] uppercase tracking-[0.26em] text-white/80 backdrop-blur-[20px] transition-transform duration-300 hover:-translate-y-1 hover:bg-white/12"
+                  >
+                    <Icon icon="ph:newspaper" className="text-xl text-white/70" />
+                    Tutte le notizie
+                  </Link>
+                )}
+              </div>
+            ) : null}
 
             {visibleTags.length > 0 && (
               <div className="nh-reveal mt-6 flex justify-center">
@@ -166,28 +175,10 @@ export default function NocturnalHero({
           font-family: 'Cormorant Garamond', serif !important;
         }
 
-        .nh-mask {
-          -webkit-mask-image: radial-gradient(
-            circle at center,
-            black 0 52%,
-            rgba(0,0,0,.92) 64%,
-            rgba(0,0,0,.62) 78%,
-            transparent 94%
-          );
-          mask-image: radial-gradient(
-            circle at center,
-            black 0 52%,
-            rgba(0,0,0,.92) 64%,
-            rgba(0,0,0,.62) 78%,
-            transparent 94%
-          );
-        }
-
         .nh-img {
           will-change: transform;
           transform: scale(1.07);
-          brightness: 1.05;
-          saturate: 1.2;
+          filter: brightness(1.05) saturate(1.2);
         }
 
         .nh-reveal {
