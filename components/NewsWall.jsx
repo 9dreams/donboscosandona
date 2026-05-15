@@ -74,7 +74,7 @@ const ActionLabel = ({ post, compact = false }) => {
 
 export default function NewsWall({ 
   title = "NEWS WALL", 
-  subtitle = "Scopri i traguardi, gli eventi e le innovazioni più recenti della nostra comunità scolastica.", 
+  subtitle = "Scopri i nostri traguardi, gli eventi e le innovazioni più recenti...", 
   data, 
   limit = 7,
   defaultTag = '',
@@ -83,7 +83,13 @@ export default function NewsWall({
   if (data && data.status === '404')
     return <div className="text-center py-10 text-white">Errore: il canale specificato per le News è inesistente.</div>
 
-  const news = data.filter((post) => !post.in_evidenza).slice(0, limit)
+  const allPosts = Array.isArray(data) ? data : []
+  const firstFeaturedIndex = allPosts.findIndex((post) => post.in_evidenza)
+  const news = (
+    firstFeaturedIndex === -1
+      ? allPosts
+      : allPosts.filter((_, index) => index !== firstFeaturedIndex)
+  ).slice(0, limit)
 
   return (
     <Container maxWidth="lg" sx={{ my: 8 }}>
