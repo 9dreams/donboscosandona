@@ -3,14 +3,20 @@ import { Icon } from '@iconify/react'
 import Link from 'next/link'
 
 export default function SyntheticLightHero({
+  // array mode (homepage)
   data,
   limit = 1,
   defaultTag = '',
+  // single-post mode (article page)
+  post: postProp = null,
+  // single-post mode overrides
+  ctaLabel: ctaLabelProp = null,
+  ctaHref: ctaHrefProp = null,
 }) {
   const heroImgRef = useRef(null)
 
-  // Pick first post marked in_evidenza, filtering defaultTag if needed
-  const post = data
+  // In single-post mode use postProp directly; otherwise filter from data array
+  const post = postProp ?? (data
     ? data
         .filter((p) => p.in_evidenza)
         .filter((p) => {
@@ -19,7 +25,7 @@ export default function SyntheticLightHero({
           return tags.includes(defaultTag.toLowerCase())
         })
         .slice(0, limit)[0]
-    : null
+    : null)
 
   // Tags to show (excluding defaultTag)
   const visibleTags = post?.tag
@@ -30,13 +36,13 @@ export default function SyntheticLightHero({
         .slice(0, 2)
     : []
 
-  // CTA
-  const ctaLabel =
+  // CTA — prefer explicit overrides, fall back to post fields
+  const ctaLabel = ctaLabelProp ||
     (post?.articolo && 'Continua a leggere') ||
     (post?.link && 'Scopri di più') ||
     (post?.allegato && "Scarica l'allegato") ||
     null
-  const ctaHref =
+  const ctaHref = ctaHrefProp ||
     (post?.articolo && '/articoli/' + post.id) ||
     post?.link ||
     post?.allegato ||

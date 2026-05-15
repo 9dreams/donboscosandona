@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useRef } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
@@ -32,10 +33,15 @@ const getActionLabel = (post) => {
   return null
 }
 
-function NewsCard({ post }) {
+function NewsCard({ post, hiddenTagList = [] }) {
   const href = getPostHref(post)
   const label = getActionLabel(post)
-  const tags = post.tag ? post.tag.split(',').map((t) => t.trim()).filter(Boolean) : []
+  const tags = post.tag
+    ? post.tag
+        .split(',')
+        .map((t) => t.trim())
+        .filter((t) => t && !hiddenTagList.includes(t.toLowerCase()))
+    : []
 
   const inner = (
     <article className="group bg-white border border-[#c1c6d4] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.08)] hover:border-[#1976D2] flex flex-col h-full">
@@ -160,9 +166,19 @@ function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
 }
 
 export default function NewsArchive({ data, hiddenTags = '' }) {
+  const router = useRouter()
   const [activeTag, setActiveTag] = useState('all')
   const [page, setPage] = useState(1)
   const gridRef = useRef(null)
+
+  // Pre-select tag from ?q= query param on mount
+  useEffect(() => {
+    const q = router.query.q
+    if (q && typeof q === 'string') {
+      setActiveTag(q.trim())
+      setPage(1)
+    }
+  }, [router.query.q])
   const hiddenTagList = useMemo(
     () =>
       hiddenTags
@@ -295,7 +311,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
           {paged.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {paged.map((post) => (
-                <NewsCard key={post.id} post={post} />
+                <NewsCard key={post.id} post={post} hiddenTagList={hiddenTagList} />
               ))}
             </div>
           ) : (
