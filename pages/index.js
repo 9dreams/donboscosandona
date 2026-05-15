@@ -17,6 +17,7 @@ import {
   Credits,
   Test,
   NewsWall,
+  SyntheticLightHero,
 } from '/components'
 
 import Banner5 from '/cc/Banner5'
@@ -190,7 +191,7 @@ export default function Home({ data, movies, elementi }) {
   return (
     <Layout>
       
-      <Featured data={data} defaultTag='scuola' />
+      <SyntheticLightHero data={data} defaultTag='scuola' />
       <Logos url='/images/home/loghi_sponsor_new.png' />
       <NewsWall data={data} limit={7} defaultTag='scuola' />
       <Products

@@ -26,6 +26,7 @@ export { default as ElementsCard } from './ElementsCard'
 export { default as Credits } from './Credits'
 export { default as Test } from './Test'
 export { default as NewsWall } from './NewsWall.jsx'
+export { default as SyntheticLightHero } from './SyntheticLightHero.jsx'
 export { default as NewsArchive } from './NewsArchive.jsx'
 
 // Reference:
