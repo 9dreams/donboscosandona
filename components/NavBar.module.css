@@ -1,10 +1,12 @@
 .logo {
-  height: 6rem;
+  height: 3.25rem;
+  width: auto;
+  object-fit: contain;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1023px) {
   .logo {
-    height: 5rem;
+    height: 2.75rem;
   }
 }
 

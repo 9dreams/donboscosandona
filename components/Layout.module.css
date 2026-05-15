@@ -2,3 +2,7 @@
     padding: 0;
     margin: 0;
 }
+
+.container :global(.layout-main) {
+    padding-top: 72px;
+}

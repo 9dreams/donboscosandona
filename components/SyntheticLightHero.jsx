@@ -73,25 +73,30 @@ export default function SyntheticLightHero({
 
   return (
     <>
-      <section className="slh-root relative min-h-screen overflow-hidden">
+      <section className="slh-root relative min-h-screen overflow-hidden -mt-[72px]">
         {/* Background noise / gradient overlay */}
         <div className="slh-bg-gradient absolute inset-0 pointer-events-none -z-10" />
         <div className="slh-grain fixed inset-0 pointer-events-none opacity-[0.28] mix-blend-screen -z-10" />
 
         {/* Hero image with parallax */}
         <div className="slh-hero-mask absolute inset-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            ref={heroImgRef}
-            src={post.immagine}
-            alt={post.titolo || ''}
-            className="slh-hero-img absolute inset-0 h-full w-full object-cover brightness-[1.05] saturate-[1.3] contrast-[1.1]"
-          />
+          <picture>
+            {post.immagine_mobile && (
+              <source media="(max-width: 767px)" srcSet={post.immagine_mobile} />
+            )}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              ref={heroImgRef}
+              src={post.immagine}
+              alt={post.titolo || ''}
+              className="slh-hero-img absolute inset-0 h-full w-full object-cover brightness-[1.05] saturate-[1.3] contrast-[1.1]"
+            />
+          </picture>
           <div className="slh-hero-color-overlay absolute inset-0" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex min-h-screen max-w-[1600px] items-center px-6 md:px-12">
+        <div className="relative z-10 mx-auto flex min-h-screen max-w-[1600px] items-center px-6 pb-12 pt-28 md:px-12 md:pt-32">
           <div className="max-w-3xl">
             {/* Badge */}
             {visibleTags.length > 0 && (

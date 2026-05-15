@@ -67,7 +67,7 @@ export default function Layout({ children }) {
         )}
 
         {header}
-        <main>{children}</main>
+        <main className="layout-main">{children}</main>
         {footer}
       </div>
     </ThemeProvider>
