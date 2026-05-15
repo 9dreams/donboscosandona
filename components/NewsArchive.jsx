@@ -41,7 +41,7 @@ function NewsCard({ post, hiddenTagList = [] }) {
     : []
 
   const inner = (
-    <article className="group bg-white border border-[#c1c6d4] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.08)] hover:border-[#1976D2] flex flex-col h-full">
+    <article className="group bg-white dark:bg-[#181b23] border border-[#c1c6d4] dark:border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.08)] dark:hover:shadow-[0px_4px_20px_rgba(0,0,0,0.35)] hover:border-[#1976D2] dark:hover:border-[#64B5F6] flex flex-col h-full">
       {/* Image */}
       <div className="relative h-56 overflow-hidden flex-shrink-0">
         <Image
@@ -71,7 +71,7 @@ function NewsCard({ post, hiddenTagList = [] }) {
         {/* Date */}
         <div className="flex items-center gap-2 mb-3">
           <CalendarTodayIcon sx={{ fontSize: 16, color: '#717783' }} />
-          <span className="text-sm text-[#717783]" style={bodyStyle}>
+          <span className="text-sm text-[#717783] dark:text-gray-400" style={bodyStyle}>
             {post.pubblicazione}
           </span>
         </div>
@@ -79,7 +79,7 @@ function NewsCard({ post, hiddenTagList = [] }) {
         {/* Title */}
         {post.titolo && (
           <h3
-            className="text-[#1976D2] text-xl font-normal leading-tight mb-3 group-hover:text-[#FF9800] transition-colors"
+            className="text-[#1976D2] dark:text-[#64B5F6] text-xl font-normal leading-tight mb-3 group-hover:text-[#FF9800] transition-colors"
             style={cardTitleStyle}
           >
             {post.titolo}
@@ -88,16 +88,16 @@ function NewsCard({ post, hiddenTagList = [] }) {
 
         {/* Abstract */}
         {post.abstract && (
-          <p className="text-sm text-[#414752] line-clamp-3 flex-grow" style={bodyStyle}>
+          <p className="text-sm text-[#414752] dark:text-gray-300 line-clamp-3 flex-grow" style={bodyStyle}>
             {post.abstract}
           </p>
         )}
 
         {/* CTA */}
         {label && (
-          <div className="mt-6 pt-4 border-t border-[#c1c6d4] flex justify-between items-center">
+          <div className="mt-6 pt-4 border-t border-[#c1c6d4] dark:border-white/10 flex justify-between items-center">
             <span
-              className="text-sm font-bold text-[#1976D2] uppercase"
+              className="text-sm font-bold text-[#1976D2] dark:text-[#64B5F6] uppercase"
               style={bodyStyle}
             >
               {label}
@@ -124,27 +124,26 @@ function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
       <button
         onClick={() => onPage(page - 1)}
         disabled={page === 1}
-        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] text-[#191c1e] hover:bg-[#eceef0] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
         <ChevronLeftIcon sx={{ fontSize: 20 }} />
       </button>
 
       {pageNumbers.map((p, i) =>
         p === '...' ? (
-          <span key={`dots-${i}`} className="px-2 text-[#717783]">
+          <span key={`dots-${i}`} className="px-2 text-[#717783] dark:text-gray-400">
             ...
           </span>
         ) : (
           <button
             key={p}
             onClick={() => onPage(p)}
-            className="w-12 h-12 flex items-center justify-center rounded-lg text-sm font-semibold transition-colors"
-            style={{
-              backgroundColor: page === p ? '#1976D2' : 'transparent',
-              color: page === p ? '#fff' : '#191c1e',
-              border: page === p ? 'none' : '1px solid #c1c6d4',
-              ...bodyStyle,
-            }}
+            className={`w-12 h-12 flex items-center justify-center rounded-lg text-sm font-semibold transition-colors ${
+              page === p
+                ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white border-none'
+                : 'bg-transparent border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23]'
+            }`}
+            style={bodyStyle}
           >
             {p}
           </button>
@@ -154,7 +153,7 @@ function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
       <button
         onClick={() => onPage(page + 1)}
         disabled={page === totalPages}
-        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] text-[#191c1e] hover:bg-[#eceef0] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
         <ChevronRightIcon sx={{ fontSize: 20 }} />
       </button>
@@ -240,7 +239,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
   }, [page, totalPages])
 
   return (
-    <div style={{ backgroundColor: '#f7f9fb', minHeight: '100vh' }}>
+    <div className="min-h-screen bg-[#f7f9fb] transition-colors duration-300 dark:bg-[#0d0f14]">
       <main
         className="max-w-[1280px] mx-auto px-5 md:px-12 py-12 md:py-20"
         style={bodyStyle}
@@ -252,7 +251,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
           >
             Archivio Notizie
           </h1>
-          <p className="text-lg text-[#414752] max-w-2xl leading-7" style={bodyStyle}>
+          <p className="text-lg text-[#414752] dark:text-gray-300 max-w-2xl leading-7" style={bodyStyle}>
             Resta aggiornato su tutte le attività dell'Oratorio don Bosco di San Donà di Piave:
             dalla formazione professionale agli eventi per le famiglie.
           </p>
@@ -263,12 +262,12 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => handleTagChange('all')}
-              className="px-5 py-2 rounded-full text-sm font-semibold transition-colors"
-              style={{
-                backgroundColor: activeTag === 'all' ? '#1976D2' : '#e6e8ea',
-                color: activeTag === 'all' ? '#fff' : '#414752',
-                ...bodyStyle,
-              }}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
+                activeTag === 'all'
+                  ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white'
+                  : 'bg-[#e6e8ea] dark:bg-[#181b23] text-[#414752] dark:text-gray-300'
+              }`}
+              style={bodyStyle}
             >
               Tutte le Notizie
             </button>
@@ -276,18 +275,18 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
               <button
                 key={tag}
                 onClick={() => handleTagChange(tag)}
-                className="px-5 py-2 rounded-full text-sm font-semibold transition-colors"
-                style={{
-                  backgroundColor: activeTag === tag ? '#1976D2' : '#e6e8ea',
-                  color: activeTag === tag ? '#fff' : '#414752',
-                  ...bodyStyle,
-                }}
+                className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
+                  activeTag === tag
+                    ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white'
+                    : 'bg-[#e6e8ea] dark:bg-[#181b23] text-[#414752] dark:text-gray-300'
+                }`}
+                style={bodyStyle}
               >
                 {tag}
               </button>
             ))}
           </div>
-          <p className="text-sm text-[#717783] whitespace-nowrap" style={bodyStyle}>
+          <p className="text-sm text-[#717783] dark:text-gray-400 whitespace-nowrap" style={bodyStyle}>
             {filtered.length} {filtered.length === 1 ? 'articolo' : 'articoli'}
           </p>
         </section>
@@ -311,7 +310,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
               ))}
             </div>
           ) : (
-            <p className="text-center text-[#717783] py-20 text-lg" style={bodyStyle}>
+            <p className="text-center text-[#717783] dark:text-gray-400 py-20 text-lg" style={bodyStyle}>
               Nessun articolo trovato per questo filtro.
             </p>
           )}
