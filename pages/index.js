@@ -82,7 +82,7 @@ export default function Home({ data, movies }) {
       </Container>
 
       <Products
-        cardWidth={4}
+        cardWidth={3}
         products={siti}
         borderRadius='10px'
         aspectRatio='1 / 1'
@@ -206,6 +206,11 @@ let siti = [
     title: 'Scuola di Formazione Professionale',
     immagineUrl: '/images/home/sfp.png',
     url: 'https://www.donboscosandona.it',
+  },
+  {
+    title: 'Soggiorno Alpino Pierabech',
+    immagineUrl: '/images/home/donboscopierabech.jpg',
+    url: 'https://www.donboscopierabech.it',
   },
 ]
 
