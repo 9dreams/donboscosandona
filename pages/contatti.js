@@ -12,8 +12,8 @@ export default function Home() {
       <Head />
       <LandingHero
         opacity={0.5}
-        siteName="CFP DON BOSCO"
-        title="CONTATTI"
+        siteName="SFP DON BOSCO"
+        title="Contatti"
         description="Numeri utili e indirizzi email di riferimento"
         imageUrl="/images/trasparenza/transparency-2.webp"
       />

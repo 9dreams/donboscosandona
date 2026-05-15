@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import Container from '@mui/material/Container'
 
 import {
   Layout,
   LandingHero,
   Products,
-  SwiperNews,
+  NewsWall,
   Paragraph,
   Sponsor,
   Table,
@@ -15,9 +14,11 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <Container maxWidth="xl">
-        <img src="/images/settori/Elettrico2.png" />
-      </Container>
+      <LandingHero
+        title='Settore Elettrico'
+        description='Impianti civili e industriali, domotica, PLC e building automation KNX: il percorso per diventare tecnico elettrico del futuro.'
+        imageUrl='/images/settori/Elettrico2.png'
+      />
       <Paragraph
         title='Operatore Elettrico'
         subtitle='Qualifica triennale'
@@ -118,7 +119,7 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={quarto_anno}
       />
-      <SwiperNews title='News dal Settore Elettrico' data={data} limit={15} />
+      <NewsWall title='News dal Settore Elettrico' data={data} limit={7} defaultTag="elettrico" />
       <Sponsor logos={sponsor} />
 
       <Paragraph>

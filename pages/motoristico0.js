@@ -4,7 +4,7 @@ import {
   Layout,
   LandingHero,
   Products,
-  SwiperNews,
+  NewsWall,
   Paragraph,
   Sponsor,
   Table,
@@ -14,9 +14,10 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <img
-        src=''
-        style={{ width: '100%' }}
+      <LandingHero
+        title='Settore Motoristico'
+        description='Lavorazioni meccaniche di precisione, CNC, CAD-CAM e produzione industriale: il percorso per diventare tecnico della meccanica.'
+        imageUrl='/images/settori/Meccanico2.png'
       />
       <Paragraph
         title='Operatore Motoristico'
@@ -104,7 +105,7 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={quarto_anno}
       />
-      <SwiperNews title='News dal Settore Motoristico' data={data} limit={15} />
+      <NewsWall title='News dal Settore Motoristico' data={data} limit={7} defaultTag="motoristico" />
     </Layout>
   )
 }

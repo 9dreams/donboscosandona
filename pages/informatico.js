@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import Container from '@mui/material/Container'
 
 import {
   Layout,
   LandingHero,
   Products,
-  SwiperNews,
+  NewsWall,
   Paragraph,
   Sponsor,
   Table,
@@ -15,15 +14,17 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <Container maxWidth="xl">
-        <img src="/images/settori/Informatico2.png" />
-      </Container>
+      <LandingHero
+        title='Settore Informatico'
+        description='Reti, programmazione, sistemi operativi e sviluppo web: il percorso che ti forma come tecnico del futuro digitale.'
+        imageUrl='/images/settori/Informatico2.png'
+      />
 
-      <SwiperNews
+      <NewsWall
         title='News dal Settore Informatico'
         data={data}
-        limit={15}
-        defaultTag='scuola,informatico'
+        limit={7}
+        defaultTag='informatico'
       />
 
       <Paragraph
@@ -142,7 +143,7 @@ export default function Home({ data }) {
       </Paragraph>
       <LandingHero
         opacity={0.3}
-        title='ITS ACADEMY: PERCHÉ È UNA SPLENDIDA NOTIZIA'
+        title='ITS Academy: Perché è una splendida notizia'
         description='Sul sito di ITS Digital Academy Mario Volpato è apparsa la nuova sede di San Donà, con indirizzo Web Developer Full Stack... scopri nel nostro articolo perché questa è una splendida notizia per i nostri allievi... e non solo!'
         buttonUrl='https://www.donboscosandona.it/articoli/227'
         buttonText="Leggi l'articolo"

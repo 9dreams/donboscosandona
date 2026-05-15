@@ -2,10 +2,8 @@ import { FooterSocialIcon } from '/components/FooterSocialIcons'
 
 const bodyStyle = { fontFamily: '"Plus Jakarta Sans", "Exo 2", sans-serif' }
 const titleStyle = {
-  fontFamily: '"Bebas Neue", sans-serif',
-  textShadow: 'none',
-  WebkitTextFillColor: 'initial',
-  WebkitTextStroke: '0px',
+  fontFamily: '"Inter Tight", sans-serif',
+  fontWeight: 600,
   letterSpacing: '0.04em',
 }
 

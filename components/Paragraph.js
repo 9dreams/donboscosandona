@@ -56,9 +56,14 @@ export default function Paragraph(props) {
         {props.title && (
           <Typography
             variant='h4'
-            component='h1'
+            component='h2'
             gutterBottom
-            sx={{ textAlign: { xs: 'center', sm: 'left' } }}
+            sx={{
+              textAlign: { xs: 'center', sm: 'left' },
+              fontFamily: "'Inter Tight', sans-serif",
+              fontWeight: 700,
+              color: props.color && props.color !== '#444' ? props.color : '#1976D2',
+            }}
           >
             {props.title}
           </Typography>
@@ -66,9 +71,14 @@ export default function Paragraph(props) {
         {props.subtitle && (
           <Typography
             variant='h5'
-            component='h1'
+            component='h3'
             gutterBottom
-            sx={{ textAlign: { xs: 'center', sm: 'left' } }}
+            sx={{
+              textAlign: { xs: 'center', sm: 'left' },
+              fontFamily: "'Inter Tight', sans-serif",
+              fontWeight: 600,
+              color: props.color && props.color !== '#444' ? props.color : '#1976D2',
+            }}
           >
             {props.subtitle}
           </Typography>

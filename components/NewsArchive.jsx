@@ -9,12 +9,9 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 
 const ITEMS_PER_PAGE = 12
 
-const titleStyle = {
-  fontFamily: '"Bebas Neue", sans-serif',
-  textShadow: 'none',
-  WebkitTextFillColor: 'initial',
-  WebkitTextStroke: '0px',
-  letterSpacing: '0.02em',
+const cardTitleStyle = {
+  fontFamily: '"Inter Tight", sans-serif',
+  fontWeight: 600,
 }
 
 const bodyStyle = { fontFamily: '"Plus Jakarta Sans", "Exo 2", sans-serif' }
@@ -82,8 +79,8 @@ function NewsCard({ post, hiddenTagList = [] }) {
         {/* Title */}
         {post.titolo && (
           <h3
-            className="text-[#1976D2] text-xl font-normal uppercase leading-tight mb-3 group-hover:text-[#FF9800] transition-colors"
-            style={titleStyle}
+            className="text-[#1976D2] text-xl font-normal leading-tight mb-3 group-hover:text-[#FF9800] transition-colors"
+            style={cardTitleStyle}
           >
             {post.titolo}
           </h3>
@@ -251,8 +248,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
         {/* Page header */}
         <div className="mb-12 md:mb-16 border-l-8 border-[#1976D2] pl-6">
           <h1
-            className="text-[56px] md:text-[72px] text-[#1976D2] uppercase mb-4 leading-none"
-            style={titleStyle}
+            className="title-display text-[56px] md:text-[72px] text-[#1976D2] mb-4 leading-none"
           >
             Archivio Notizie
           </h1>

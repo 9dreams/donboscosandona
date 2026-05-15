@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import Container from '@mui/material/Container'
 
 import {
   Layout,
   LandingHero,
   Products,
-  SwiperNews,
+  NewsWall,
   Paragraph,
   Sponsor,
   Table,
@@ -15,9 +14,11 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <Container maxWidth="xl">
-        <img src="/images/settori/Automotive2.png" />
-      </Container>
+      <LandingHero
+        title='Settore Automotive'
+        description='Diagnosi elettronica, autoriparazione meccanica e carrozzeria: il percorso che ti prepara ai veicoli di ultima generazione.'
+        imageUrl='/images/settori/Automotive2.png'
+      />
       <Paragraph
         title="Operatore Alla autoriparazione"
         subtitle="Qualifica triennale"
@@ -105,7 +106,7 @@ avanzamento e valutazione relativa alle lavorazioni svolte ed interazione con il
               cardWidthXs={6}
               products={quarto_anno}
             />
-            <SwiperNews title="News dal Settore Automotive" data={data} limit={15} />
+            <NewsWall title="News dal Settore Automotive" data={data} limit={7} defaultTag="automotive" />
     </Layout>
   )
 }

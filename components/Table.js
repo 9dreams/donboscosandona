@@ -51,9 +51,13 @@ export default function MyTable(props) {
         {props.title && (
           <Typography
             variant="h4"
-            component="h1"
+            component="h2"
             gutterBottom
-            sx={{ color: props.color }}
+            sx={{
+              color: props.color === 'white' ? props.color : '#1976D2',
+              fontFamily: "'Inter Tight', sans-serif",
+              fontWeight: 700,
+            }}
           >
             {props.title}
           </Typography>

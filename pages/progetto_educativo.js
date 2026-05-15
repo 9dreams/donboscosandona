@@ -1,4 +1,5 @@
 import Layout from "/components/Layout";
+import LandingHero from "/components/LandingHero";
 import Head from "next/head";
 
 export default function Home() {
@@ -7,18 +8,14 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="mt-23">
-        <Head>
-          <title>Progetto Educativo CNOS-FAP CFP Don Bosco</title>
-        </Head>
-        <div className="w-full h-[800px] overflow-hidden">
-          <img
-            src="/images/progetto-educativo.png"
-            alt="Progetto Educativo"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
+      <Head>
+        <title>Progetto Educativo CNOS-FAP CFP Don Bosco</title>
+      </Head>
+      <LandingHero
+        title='Progetto Educativo'
+        description="Lo strumento che delinea l'identità del Centro, i valori e le strategie per il successo scolastico e umano dei nostri ragazzi."
+        imageUrl='/images/progetto-educativo.png'
+      />
       <div className="p-20 flex flex-col items-center">
         <div className={sectionStyle}>
           <p className="text-2xl text-justify">

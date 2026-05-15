@@ -166,6 +166,13 @@ export default function MyCarousel({
                       variant='h3'
                       color='inherit'
                       gutterBottom
+                      className='title-display'
+                      sx={{
+                        fontFamily: "'Cormorant Garamond', serif",
+                        fontSize: { xs: '2rem', md: 'clamp(2.25rem, 4vw, 3.5rem)' },
+                        lineHeight: 1.1,
+                        letterSpacing: '-0.04em',
+                      }}
                     >
                       {slide.titolo}
                     </Typography>

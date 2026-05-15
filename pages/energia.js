@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import Container from '@mui/material/Container'
 
 import {
   Layout,
   LandingHero,
   Products,
-  SwiperNews,
+  NewsWall,
   Paragraph,
   Sponsor,
   Table,
@@ -15,9 +14,11 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Head />
-      <Container maxWidth="xl">
-        <img src="/images/settori/Energia2.png" />
-      </Container>
+      <LandingHero
+        title='Settore Energia'
+        description="Impianti termoidraulici, refrigerazione industriale, smart building e risparmio energetico: il percorso per il tecnico dell'energia."
+        imageUrl='/images/settori/Energia2.png'
+      />
       <Paragraph
         title='Operatore Termoidraulico'
         subtitle='Qualifica triennale'
@@ -129,7 +130,7 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={quarto_anno}
       />
-      <SwiperNews title='News dal Settore Elettrico' data={data} limit={15} />
+      <NewsWall title='News dal Settore Energia' data={data} limit={7} defaultTag="energia" />
       <Sponsor logos={sponsor} />
 
       <Paragraph>

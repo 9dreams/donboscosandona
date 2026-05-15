@@ -166,14 +166,13 @@ export default function Show({ data }) {
         .art-content h2,
         .art-content h3,
         .art-content h4 {
-          font-family: 'Cormorant Garamond', serif !important;
+          font-family: 'Inter Tight', sans-serif !important;
           font-weight: 600;
           color: #1976D2 !important;
           text-shadow: none !important;
           -webkit-text-fill-color: initial !important;
           -webkit-text-stroke: 0 !important;
-          letter-spacing: -0.03em;
-          line-height: 1.15;
+          line-height: 1.25;
           margin-top: 2.5rem;
           margin-bottom: 1rem;
         }
@@ -218,7 +217,7 @@ export default function Show({ data }) {
         }
 
         .art-content blockquote {
-          font-family: 'Cormorant Garamond', serif !important;
+          font-family: 'Inter Tight', sans-serif !important;
           font-size: 1.5rem;
           line-height: 1.5;
           color: #353B48;

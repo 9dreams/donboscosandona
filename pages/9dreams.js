@@ -1,17 +1,6 @@
 import {
-  Carousel,
-  Certifications,
   Layout,
   LandingHero,
-  Features,
-  Products,
-  Testimonials,
-  Team,
-  Maps,
-  SwiperNews,
-  Featured,
-  Logos,
-  Torneo,
   Paragraph,
 } from "/components";
 
@@ -78,41 +67,30 @@ export default function Home() {
         </strong>
       </Paragraph>
 
-      <p style={{ width: "1100px" }}>
-        <img
-          src="/images/informatico/server.png"
-          style={{
-            width: "370px",
-            marginLeft: "190px",
-            float: "left",
-            marginRight: "20px",
-          }}
-        />
+      <Paragraph rightImageUrl="/images/informatico/server.png">
         E così l'idea iniziale di creare una web agency che lavorasse per dei
         clienti immaginari come in una simulazione d'impresa, è stata quasi
-        immediatamente superata dall'illuminazione che <strong> noi i "clienti" reali li
+        immediatamente superata dall'illuminazione che <strong>noi i "clienti" reali li
         abbiamo già, ed è la nostra realtà Salesiana di San Donà</strong>: la Scuola
-        Professionale, l'Oratorio, il Cinema, il Soggiorno Marino....
-        <br />
-        <br />
+        Professionale, l'Oratorio, il Cinema, il Soggiorno Marino.
+        <br /><br />
         Da qui l'idea di metterci a disposizione con dei nuovi servizi di tipo
         "creativo" che vanno ad aggiungersi a quelli che già offrivamo con il
         supporto tecnico: e per celebrare una novità così importante serviva un
         nome all'altezza! Dovete sapere che <strong>nel 2024 ricorrerà il duecentesimo
         anniversario del sogno dei nove anni di don Bosco</strong>, avvenuto
         presumibilmente tra il 1824 e il 1825. La nostra scuola, aderendo alla
-        proposta del <Link href={"https://www.donboscoland.it/it/"}> Movimento Giovanile Salesiano</Link>, si lascerà ispirare da
+        proposta del <Link href="https://www.donboscoland.it/it/">Movimento Giovanile Salesiano</Link>, si lascerà ispirare da
         questo sogno per le proposte pastorali di questi tre anni.
-        <br />
-        <br />
+        <br /><br />
         <strong>Giocando con le parole è nato il nome 9dreams</strong> (letteralmente nove sogni)
         per dire la nostra capacità di sognare e realizzare infinite idee
-        creative: e il primo progetto sarà proprio la creazione del sito
-        <Link href={"https://www.9dreams.it/"}> www.9dreams.it</Link> (rigorosamente ospitato sui server da noi gestiti) che ci
+        creative: e il primo progetto sarà proprio la creazione del sito{" "}
+        <Link href="https://www.9dreams.it/">www.9dreams.it</Link> (rigorosamente ospitato sui server da noi gestiti) che ci
         permetterà di fare un'esperienza di programmazione collaborativa in
-        stile open-source, grazie a <Link href={"https://github.com/"}>GitHub</Link>, strumento imprescindibile per i
+        stile open-source, grazie a <Link href="https://github.com/">GitHub</Link>, strumento imprescindibile per i
         programmatori di oggi.
-      </p>
+      </Paragraph>
       <Paragraph>
         <strong>La collaborazione con le insegnanti di italiano e di inglese</strong> ci
         permetterà poi di mettere a frutto anche le competenze linguistiche,

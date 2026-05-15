@@ -21,12 +21,15 @@ export default function Products({
     <Container maxWidth='lg'>
       {title && (
         <Typography
-          text-align='center'
-          style={{ textAlign: 'center' }}
-          component='h3'
+          component='h2'
           variant='h3'
-          color='inherit'
           gutterBottom
+          sx={{
+            textAlign: 'center',
+            fontFamily: "'Inter Tight', sans-serif",
+            fontWeight: 700,
+            color: '#1976D2',
+          }}
         >
           {title}
         </Typography>

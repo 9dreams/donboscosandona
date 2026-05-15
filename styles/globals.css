@@ -1,39 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300&family=Roboto+Slab&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Bebas Neue', cursive !important;
-}
-
-h5,
-h6,
-h,
-a,
-p,
-th,
-td {
-  font-family: 'Figtree', sans-serif !important;
+:root {
+  --brand-blue: #1976D2;
+  --font-ui: 'Inter Tight', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
 }
 
 html,
 body {
   margin: 0 !important;
   padding: 0 !important;
-  font-family: 'Figtree', sans-serif !important;
+  background-color: #f7f9fb;
+  color: #353B48;
+  font-family: var(--font-ui) !important;
+}
+
+/* Titoli di sezione e contenuto: Inter Tight (come navbar) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4,
+.MuiTypography-h5,
+.MuiTypography-h6 {
+  font-family: var(--font-ui) !important;
+  color: var(--brand-blue);
+}
+
+/* Titoli molto grandi: hero, carousel, headline di pagina */
+.title-display,
+.slh-root h1.slh-serif,
+.slh-root .slh-serif .slh-wind {
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.04em;
+}
+
+.title-display {
+  color: var(--brand-blue);
+}
+
+.slh-root h1.slh-serif,
+.slh-root .slh-serif .slh-wind,
+.title-display.text-white {
+  color: #fff !important;
+}
+
+h5,
+h6,
+p,
+a,
+th,
+td,
+li,
+span,
+button,
+input,
+textarea,
+select,
+label {
+  font-family: var(--font-ui) !important;
 }
 
 a {
-    color: #1289A7;
-    text-decoration: none;
+  color: var(--brand-blue);
+  text-decoration: none;
 }
 
 a:hover {
-    color: #1cd2ff;
+  color: #FF9800;
 }

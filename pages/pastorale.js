@@ -6,7 +6,7 @@ import Products from '/components/Products'
 import Paragraph from '@/components/Paragraph'
 import { Typography } from '@mui/material'
 import Image from 'next/image'
-import {SwiperNews} from '/components';
+import { NewsWall } from '/components';
 
 // Voci del menù per il componente LandingHero
 
@@ -70,10 +70,10 @@ export default function Home({ data }) {
             </Container> 
               
             <div style={{ textAlign: 'center' }}> 
-              <SwiperNews
+              <NewsWall
                 title={null}
                 data={data}
-                limit={15}
+                limit={7}
                 defaultTag='pastorale'
               />
 

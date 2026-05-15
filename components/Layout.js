@@ -10,7 +10,30 @@ import styles from './Layout.module.css'
 
 import { header, footer, siteTitle, siteDescription } from '/config/default'
 
-const theme = createTheme()
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: { main: '#1976D2' },
+    secondary: { main: '#FF9800' },
+    background: {
+      default: '#f7f9fb',
+      paper: '#ffffff',
+    },
+    text: {
+      primary: '#353B48',
+      secondary: '#717783',
+    },
+  },
+  typography: {
+    fontFamily: "'Inter Tight', sans-serif",
+    h1: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 700 },
+    h2: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 700 },
+    h3: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 600 },
+    h4: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 600 },
+    h5: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 600 },
+    h6: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 600 },
+  },
+})
 
 const CookieBanner = dynamic(
   () => import('@palmabit/react-cookie-law').then((m) => m.CookieBanner),
