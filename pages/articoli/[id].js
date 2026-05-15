@@ -269,6 +269,81 @@ export default function Show({ data }) {
           letter-spacing: 0.25em;
           color: #717783;
         }
+
+        /* Dark mode */
+        :global(html.dark) .art-page {
+          background: #0d0f14;
+        }
+
+        :global(html.dark) .art-date,
+        :global(html.dark) .art-label {
+          color: #9da3af;
+        }
+
+        :global(html.dark) .art-tag {
+          border-color: rgba(100, 181, 246, 0.35);
+          color: #64B5F6;
+          background: rgba(100, 181, 246, 0.1);
+        }
+
+        :global(html.dark) .art-tag:hover {
+          background: rgba(100, 181, 246, 0.2);
+          border-color: rgba(100, 181, 246, 0.6);
+          color: #64B5F6;
+        }
+
+        :global(html.dark) .art-divider {
+          background: linear-gradient(90deg, transparent, #64B5F6, rgba(100, 181, 246, 0.3), transparent);
+        }
+
+        :global(html.dark) .art-content {
+          color: #e8eaf0;
+        }
+
+        :global(html.dark) .art-content h1,
+        :global(html.dark) .art-content h2,
+        :global(html.dark) .art-content h3,
+        :global(html.dark) .art-content h4 {
+          color: #64B5F6 !important;
+        }
+
+        :global(html.dark) .art-content p,
+        :global(html.dark) .art-content li {
+          color: #c8ccd4;
+        }
+
+        :global(html.dark) .art-content a {
+          color: #64B5F6;
+          text-decoration-color: rgba(100, 181, 246, 0.35);
+        }
+
+        :global(html.dark) .art-content a:hover {
+          color: #FF9800;
+        }
+
+        :global(html.dark) .art-content img {
+          border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        :global(html.dark) .art-content blockquote {
+          color: #e8eaf0;
+          border-left-color: #64B5F6;
+        }
+
+        :global(html.dark) .art-content th,
+        :global(html.dark) .art-content td {
+          border-color: rgba(255, 255, 255, 0.1);
+          color: #c8ccd4;
+        }
+
+        :global(html.dark) .art-content th {
+          background: #181b23;
+          color: #e8eaf0;
+        }
+
+        :global(html.dark) .art-bottom-tags {
+          border-top-color: rgba(255, 255, 255, 0.1);
+        }
       `}</style>
     </Layout>
   )
