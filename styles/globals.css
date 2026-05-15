@@ -8,15 +8,28 @@
   --brand-blue: #1976D2;
   --font-ui: 'Inter Tight', sans-serif;
   --font-display: 'Cormorant Garamond', serif;
+  --bg: #f7f9fb;
+  --fg: #353B48;
+  --fg-secondary: #717783;
+  --surface: #ffffff;
+}
+
+html.dark {
+  --brand-blue: #64B5F6;
+  --bg: #0d0f14;
+  --fg: #e8eaf0;
+  --fg-secondary: #9da3af;
+  --surface: #181b23;
 }
 
 html,
 body {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #f7f9fb;
-  color: #353B48;
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
   font-family: var(--font-ui) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Titoli di sezione e contenuto: Inter Tight (come navbar) */
@@ -34,6 +47,19 @@ h6,
 .MuiTypography-h6 {
   font-family: var(--font-ui) !important;
   color: var(--brand-blue);
+}
+
+/* Dark mode: MUI Paper / Card backgrounds */
+html.dark .MuiPaper-root,
+html.dark .MuiCard-root {
+  background-color: var(--surface) !important;
+  color: var(--fg) !important;
+}
+
+html.dark .MuiTypography-body1,
+html.dark .MuiTypography-body2,
+html.dark p {
+  color: var(--fg);
 }
 
 /* Titoli molto grandi: hero, carousel, headline di pagina */

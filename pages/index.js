@@ -19,7 +19,7 @@ import {
   SyntheticLightHero,
 } from '/components'
 
-import Banner5 from '/cc/Banner5'
+import INostriNumeri from '/cc/INostriNumeri'
 
 // I punti di forza
 const features = [
@@ -217,7 +217,7 @@ export default function Home({ data, movies, elementi }) {
         aspectRatio='3 / 2'
         borderRadius='10px'
       />  
-      <Banner5 />
+      <INostriNumeri />
       <Carousel slides={slides} />
       <Features
         title='I nostri punti di forza'

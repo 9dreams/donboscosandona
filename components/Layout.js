@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
+import { useTheme as useNextTheme } from 'next-themes'
 
 import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
@@ -10,30 +11,33 @@ import styles from './Layout.module.css'
 
 import { header, footer, siteTitle, siteDescription } from '/config/default'
 
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: { main: '#1976D2' },
-    secondary: { main: '#FF9800' },
-    background: {
-      default: '#f7f9fb',
-      paper: '#ffffff',
+function buildMuiTheme(mode) {
+  const isDark = mode === 'dark'
+  return createTheme({
+    palette: {
+      mode,
+      primary: { main: isDark ? '#64B5F6' : '#1976D2' },
+      secondary: { main: '#FF9800' },
+      background: {
+        default: isDark ? '#0d0f14' : '#f7f9fb',
+        paper: isDark ? '#181b23' : '#ffffff',
+      },
+      text: {
+        primary: isDark ? '#e8eaf0' : '#353B48',
+        secondary: isDark ? '#9da3af' : '#717783',
+      },
     },
-    text: {
-      primary: '#353B48',
-      secondary: '#717783',
+    typography: {
+      fontFamily: "'Inter Tight', sans-serif",
+      h1: { fontFamily: "'Inter Tight', sans-serif", color: isDark ? '#64B5F6' : '#1976D2', fontWeight: 700 },
+      h2: { fontFamily: "'Inter Tight', sans-serif", color: isDark ? '#64B5F6' : '#1976D2', fontWeight: 700 },
+      h3: { fontFamily: "'Inter Tight', sans-serif", color: isDark ? '#64B5F6' : '#1976D2', fontWeight: 600 },
+      h4: { fontFamily: "'Inter Tight', sans-serif", color: isDark ? '#64B5F6' : '#1976D2', fontWeight: 600 },
+      h5: { fontFamily: "'Inter Tight', sans-serif", color: isDark ? '#64B5F6' : '#1976D2', fontWeight: 600 },
+      h6: { fontFamily: "'Inter Tight', sans-serif", color: isDark ? '#64B5F6' : '#1976D2', fontWeight: 600 },
     },
-  },
-  typography: {
-    fontFamily: "'Inter Tight', sans-serif",
-    h1: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 700 },
-    h2: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 700 },
-    h3: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 600 },
-    h4: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 600 },
-    h5: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 600 },
-    h6: { fontFamily: "'Inter Tight', sans-serif", color: '#1976D2', fontWeight: 600 },
-  },
-})
+  })
+}
 
 const CookieBanner = dynamic(
   () => import('@palmabit/react-cookie-law').then((m) => m.CookieBanner),
@@ -42,13 +46,19 @@ const CookieBanner = dynamic(
 
 export default function Layout({ children }) {
   const [isMounted, setIsMounted] = useState(false)
+  const { resolvedTheme } = useNextTheme()
 
   useEffect(() => {
     setIsMounted(true)
   }, [])
 
+  const muiTheme = useMemo(
+    () => buildMuiTheme(resolvedTheme === 'dark' ? 'dark' : 'light'),
+    [resolvedTheme]
+  )
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={muiTheme}>
       <CssBaseline />
       <div className={styles.container}>
         <Head>

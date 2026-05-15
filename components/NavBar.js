@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Icon } from '@iconify/react'
+import { useTheme } from 'next-themes'
 
 import styles from './NavBar.module.css'
 
@@ -46,6 +47,10 @@ export default function NavBar({
   const router = useRouter()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme, resolvedTheme } = useTheme()
+
+  useEffect(() => { setMounted(true) }, [])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
@@ -114,6 +119,21 @@ export default function NavBar({
               </li>
             ))}
           </ul>
+
+          {/* Theme toggle */}
+          {mounted && (
+            <button
+              type="button"
+              className="nb-glass grid h-9 w-9 place-items-center rounded-full border border-white/10 text-white transition-colors duration-300 hover:bg-white/10"
+              aria-label={resolvedTheme === 'dark' ? 'Passa alla modalità chiara' : 'Passa alla modalità scura'}
+              onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+            >
+              <Icon
+                icon={resolvedTheme === 'dark' ? 'ph:sun' : 'ph:moon'}
+                className="text-lg"
+              />
+            </button>
+          )}
 
           {/* Mobile toggle */}
           <button

@@ -5,9 +5,12 @@ import styles from '/components/Products.module.css'
 
 export default function Certifications({ certifications, cardWidth, maxWidth }) {
     return (
-        <Container maxWidth={maxWidth} style={{ backgroundColor: 'lightgrey' }}>
+        <Container
+            maxWidth={maxWidth}
+            className="bg-neutral-300 transition-colors duration-300 dark:bg-[#0d0f14]"
+        >
             <Container maxWidth="lg">
-                <Grid container style={{ backgroundColor: 'lightgrey' }}>
+                <Grid container className="bg-neutral-300 transition-colors duration-300 dark:bg-[#0d0f14]">
                     {
                         certifications.map(
                             (certification) => (

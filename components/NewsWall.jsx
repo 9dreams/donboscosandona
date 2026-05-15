@@ -66,7 +66,7 @@ const ActionLabel = ({ post, compact = false }) => {
   if (!label) return null
 
   return (
-    <div className={`flex items-center text-[#1976D2] font-semibold group-hover:underline ${compact ? 'mt-4 text-sm' : 'mt-6'}`}>
+    <div className={`flex items-center text-[#1976D2] dark:text-[#64B5F6] font-semibold group-hover:underline ${compact ? 'mt-4 text-sm' : 'mt-6'}`}>
       {label} <ArrowForwardIcon fontSize="small" className="ml-1" />
     </div>
   )
@@ -105,7 +105,7 @@ export default function NewsWall({
           >
             {title}
           </div>
-          <div className="text-gray-300 max-w-2xl text-sm md:text-base" style={{ fontFamily: '"Exo 2", sans-serif' }}>
+          <div className="text-gray-500 dark:text-gray-300 max-w-2xl text-sm md:text-base" style={{ fontFamily: '"Exo 2", sans-serif' }}>
             {subtitle}
           </div>
         </div>
@@ -142,18 +142,18 @@ export default function NewsWall({
 
         {/* Card 2: Normal */}
         {news[1] && (
-          <CardLink post={news[1]} className="col-span-1 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+          <CardLink post={news[1]} className="col-span-1 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full h-48">
               <Image src={news[1].immagine} alt={news[1].titolo} fill className="object-cover" />
               {renderTag(news[1].tag, defaultTag)}
             </div>
-            <div className="p-5 flex flex-col flex-grow justify-between bg-white">
+            <div className="p-5 flex flex-col flex-grow justify-between bg-white dark:bg-[#181b23]">
               <div>
-                <p className="text-xs text-gray-500 mb-1 font-medium">{news[1].pubblicazione}</p>
-                <div className="text-lg font-bold text-[#1976D2] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-medium">{news[1].pubblicazione}</p>
+                <div className="text-lg font-bold text-[#1976D2] dark:text-[#64B5F6] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
                   {news[1].titolo}
                 </div>
-                <p className="text-sm text-gray-600">{news[1].abstract}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{news[1].abstract}</p>
               </div>
               <ActionLabel post={news[1]} compact />
             </div>
@@ -162,18 +162,18 @@ export default function NewsWall({
 
         {/* Card 3: Normal */}
         {news[2] && (
-          <CardLink post={news[2]} className="col-span-1 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+          <CardLink post={news[2]} className="col-span-1 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full h-48">
               <Image src={news[2].immagine} alt={news[2].titolo} fill className="object-cover" />
               {renderTag(news[2].tag, defaultTag)}
             </div>
-            <div className="p-5 flex flex-col flex-grow justify-between bg-white">
+            <div className="p-5 flex flex-col flex-grow justify-between bg-white dark:bg-[#181b23]">
               <div>
-                <p className="text-xs text-gray-500 mb-1 font-medium">{news[2].pubblicazione}</p>
-                <div className="text-lg font-bold text-[#1976D2] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-medium">{news[2].pubblicazione}</p>
+                <div className="text-lg font-bold text-[#1976D2] dark:text-[#64B5F6] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
                   {news[2].titolo}
                 </div>
-                <p className="text-sm text-gray-600">{news[2].abstract}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{news[2].abstract}</p>
               </div>
               <ActionLabel post={news[2]} compact />
             </div>
@@ -205,18 +205,18 @@ export default function NewsWall({
 
         {/* Card 5: Normal */}
         {news[4] && (
-          <CardLink post={news[4]} className="col-span-1 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+          <CardLink post={news[4]} className="col-span-1 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full h-48">
               <Image src={news[4].immagine} alt={news[4].titolo} fill className="object-cover" />
               {renderTag(news[4].tag, defaultTag)}
             </div>
-            <div className="p-5 flex flex-col flex-grow justify-between bg-white">
+            <div className="p-5 flex flex-col flex-grow justify-between bg-white dark:bg-[#181b23]">
               <div>
-                <p className="text-xs text-gray-500 mb-1 font-medium">{news[4].pubblicazione}</p>
-                <div className="text-lg font-bold text-[#1976D2] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-medium">{news[4].pubblicazione}</p>
+                <div className="text-lg font-bold text-[#1976D2] dark:text-[#64B5F6] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
                   {news[4].titolo}
                 </div>
-                <p className="text-sm text-gray-600">{news[4].abstract}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{news[4].abstract}</p>
               </div>
               <ActionLabel post={news[4]} compact />
             </div>
@@ -225,18 +225,18 @@ export default function NewsWall({
 
         {/* Card 6: Normal */}
         {news[5] && (
-          <CardLink post={news[5]} className="col-span-1 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+          <CardLink post={news[5]} className="col-span-1 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full h-48">
               <Image src={news[5].immagine} alt={news[5].titolo} fill className="object-cover" />
               {renderTag(news[5].tag, defaultTag)}
             </div>
-            <div className="p-5 flex flex-col flex-grow justify-between bg-white">
+            <div className="p-5 flex flex-col flex-grow justify-between bg-white dark:bg-[#181b23]">
               <div>
-                <p className="text-xs text-gray-500 mb-1 font-medium">{news[5].pubblicazione}</p>
-                <div className="text-lg font-bold text-[#1976D2] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-medium">{news[5].pubblicazione}</p>
+                <div className="text-lg font-bold text-[#1976D2] dark:text-[#64B5F6] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
                   {news[5].titolo}
                 </div>
-                <p className="text-sm text-gray-600">{news[5].abstract}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{news[5].abstract}</p>
               </div>
               <ActionLabel post={news[5]} compact />
             </div>
@@ -245,18 +245,18 @@ export default function NewsWall({
 
         {/* Card 7: Wide */}
         {news[6] && (
-          <CardLink post={news[6]} className="col-span-1 md:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row group hover:shadow-lg transition-all duration-300">
+          <CardLink post={news[6]} className="col-span-1 md:col-span-2 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col md:flex-row group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full md:w-1/2 h-48 md:h-auto min-h-[200px]">
               <Image src={news[6].immagine} alt={news[6].titolo} fill className="object-cover" />
               {renderTag(news[6].tag, defaultTag)}
             </div>
-            <div className="p-6 flex flex-col w-full md:w-1/2 justify-between bg-white">
+            <div className="p-6 flex flex-col w-full md:w-1/2 justify-between bg-white dark:bg-[#181b23]">
               <div>
-                <p className="text-xs text-gray-500 mb-1 font-medium">{news[6].pubblicazione}</p>
-                <div className="text-xl font-bold text-[#1976D2] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-medium">{news[6].pubblicazione}</p>
+                <div className="text-xl font-bold text-[#1976D2] dark:text-[#64B5F6] mb-2 uppercase leading-tight" style={{ fontFamily: '"Inter Tight", sans-serif', fontWeight: 600 }}>
                   {news[6].titolo}
                 </div>
-                <p className="text-sm text-gray-600">{news[6].abstract}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{news[6].abstract}</p>
               </div>
               <ActionLabel post={news[6]} compact />
             </div>
