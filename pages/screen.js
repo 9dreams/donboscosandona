@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Head from 'next/head'
 
-import { Featured } from '/components'
+import { NocturnalHeroScreen } from '/components'
 
 const theme = createTheme()
 
@@ -39,7 +39,7 @@ export default function Schermo({data0}) {
         style={{ backgroundColor: 'black', height: '100vh', cursor: 'none' }}
       >
         { data && (
-        <Featured
+        <NocturnalHeroScreen
           data={data.map((post) => ({
             ...post,
             in_evidenza: true,
@@ -52,7 +52,7 @@ export default function Schermo({data0}) {
             link: '',
             allegato: null,
           }))}
-          height='90'
+          height={100}
           limit={10}
           animation='fade'
           interval={12000}

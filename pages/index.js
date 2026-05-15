@@ -17,6 +17,7 @@ import {
   SwiperNews,
   NewsWall,
   Featured,
+  NocturnalHero,
   Credits,
 } from '/components'
 
@@ -38,7 +39,7 @@ export default function Home({ data, movies }) {
         />
         <meta name='og:image' content='/images/home.png' />
       </Head>
-      <Featured data={data} height={100} />
+      <NocturnalHero data={data} />
       <NewsWall title='News' data={data} limit={7} />
       <Container
         sx={{
