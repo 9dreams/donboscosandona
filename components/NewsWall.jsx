@@ -59,8 +59,8 @@ const ActionLabel = ({ post, compact = false }) => {
 }
 
 export default function NewsWall({ 
-  title = "NEWS WALL", 
-  subtitle = "Scopri i traguardi, gli eventi e le innovazioni più recenti della nostra comunità scolastica.", 
+  title = "News", 
+  subtitle = "", 
   data, 
   limit = 7 
 }) {

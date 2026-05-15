@@ -39,7 +39,7 @@ export default function Home({ data, movies }) {
         <meta name='og:image' content='/images/home.png' />
       </Head>
       <Featured data={data} height={100} />
-      <NewsWall title='News Wall' data={data} limit={7} />
+      <NewsWall title='News' data={data} limit={7} />
       <Container
         sx={{
           aspectRatio: '16 / 9',
