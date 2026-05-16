@@ -68,7 +68,12 @@ export default function NewsWall({
   if (data && data.status === '404')
     return <div className="text-center py-10 text-white">Errore: il canale specificato per le News è inesistente.</div>
 
-  const news = data.filter((post) => !post.in_evidenza).slice(0, limit)
+  const firstFeaturedIndex = data.findIndex((post) => post.in_evidenza)
+  const news = (
+    firstFeaturedIndex === -1
+      ? data
+      : data.filter((_, index) => index !== firstFeaturedIndex)
+  ).slice(0, limit)
 
   return (
     <Container maxWidth="lg" sx={{ my: 8 }}>
