@@ -91,7 +91,7 @@ export default function Paragraph(props) {
             columnGap: '3rem',
           }}
         >
-          <Typography variant='body1' gutterBottom>
+          <Typography variant='body1' component='div' gutterBottom>
             {props.avatarImageUrl && (
               <CardMedia
                 component='img'

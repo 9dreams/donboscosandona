@@ -27,6 +27,20 @@ export default function Home({ data }) {
         defaultTag='informatico'
       />
 
+      <a
+        href='https://www.donboscoitalia.it/go-beyond-traditional-education/'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='block w-full bg-black'
+        aria-label='GO Beyond Traditional Education'
+      >
+        <img
+          src='/images/gobeyond.png'
+          alt='GO beyond traditional education'
+          className='block w-full'
+        />
+      </a>
+
       <Paragraph
         title='Operatore Informatico'
         subtitle='Qualifica triennale'
@@ -59,7 +73,17 @@ export default function Home({ data }) {
           </li>
         </ol>
       </Paragraph>
+      <section className='mx-auto mb-16 grid max-w-6xl gap-8 px-4 py-8 lg:mb-24 lg:grid-cols-[minmax(260px,0.85fr)_minmax(0,1.35fr)] lg:items-start'>
+        <div className='lg:sticky lg:top-24'>
+          <img
+            src='/images/informatico/sistema-educativo-formazione.png'
+            alt='Sistema educativo di istruzione e formazione'
+            className='mx-auto w-full max-w-[420px] rounded-2xl shadow-2xl lg:max-w-none'
+          />
+        </div>
+        <div>
       <Paragraph
+        maxWidth={false}
         title='Tecnico Informatico'
         subtitle='Diploma Professionale Quadriennale in Sistema Duale con indirizzo Sviluppo soluzioni ICT'
       >
@@ -69,12 +93,12 @@ export default function Home({ data }) {
         Technologies). Supporta operativamente l'installazione, aggiornamento e
         dismissione di hardware, software e componenti di sottosistema, la
         sicurezza e il testing di conformità, la gestione di reti informatiche e
-        del data management.
-        <ol>
-          <h3>
-            Competenze del tecnico informatico con indirizzo Sviluppo soluzioni
-            ICT:
-          </h3>
+            del data management.
+            <h3>
+              Competenze del tecnico informatico con indirizzo Sviluppo soluzioni
+              ICT:
+            </h3>
+            <ol>
           <li>
             Elaborare prodotti di comunicazione che descrivono prodotti,
             servizi, componenti o applicazioni conformi con i requisiti relativi
@@ -113,9 +137,10 @@ export default function Home({ data }) {
         </ol>
       </Paragraph>
       <Paragraph
+        maxWidth={false}
         title='Full Stack Developer'
         subtitle='Percorso post-diploma IFTS (Istruzione Formazione Tecnico Superiore)'
-        topImageUrl='https://channels.donboscosandona.it/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc3dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a45437c361f9bbeb1bc4ce6529b980225d896118/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--aaf4fdd54bf27deaa59aaccef6c956f74cfaab5c/image.png'
+        topImageUrl=''
       >
         Il Full Stack Developer è un programmatore che si occupa della
         progettazione e della realizzazione dell'intero stack di un'applicazione
@@ -135,12 +160,9 @@ export default function Home({ data }) {
         house, agenzie pubblicitarie a imprese non necessariamente del settore
         ICT che desiderino mantenere internamente il proprio sito web o la
         propria applicazione.
-        <p>
-          <a href='https://www.donboscosandona.it/articoli/172'>
-            Per saperne di più...
-          </a>
-        </p>
       </Paragraph>
+        </div>
+      </section>
       <LandingHero
         opacity={0.3}
         title='ITS Academy: Perché è una splendida notizia'
@@ -148,37 +170,46 @@ export default function Home({ data }) {
         buttonUrl='https://www.donboscosandona.it/articoli/227'
         buttonText="Leggi l'articolo"
         imageUrl='/images/informatico/sfondo_its.jpg'
+        sponsorImage={null}
       />
       <p>&nbsp;</p>
       <p>&nbsp;</p>
-      <Products
-        title='Primo anno'
-        description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e alla programmazione."
-        cardWidth={4}
-        cardWidthXs={6}
-        products={primo_anno}
-      />
-      <Products
-        title='Secondo anno'
-        description="Il secondo anno è dedicato all'assistenza tecnica al cliente da tutti i punti di vista. Nella parte di programmazione vedremo lo sviluppo del front-end delle applicazioni."
-        cardWidth={3}
-        cardWidthXs={6}
-        products={secondo_anno}
-      />
-      <Products
-        title='Terzo anno'
-        description='Il terzo anno ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end, full-stack e delle API (Application Programming Interfaces)'
-        cardWidth={3}
-        cardWidthXs={6}
-        products={terzo_anno}
-      />
-      <Products
-        title='Quarto anno'
-        description="Il quarto anno - se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico - sarai collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda)."
-        cardWidth={4}
-        cardWidthXs={6}
-        products={quarto_anno}
-      />
+      <div className='mb-16 lg:mb-24'>
+        <Products
+          title='Primo anno'
+          description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e alla programmazione."
+          cardWidth={4}
+          cardWidthXs={6}
+          products={primo_anno}
+        />
+      </div>
+      <div className='mb-16 lg:mb-24'>
+        <Products
+          title='Secondo anno'
+          description="Il secondo anno è dedicato all'assistenza tecnica al cliente da tutti i punti di vista. Nella parte di programmazione vedremo lo sviluppo del front-end delle applicazioni."
+          cardWidth={3}
+          cardWidthXs={6}
+          products={secondo_anno}
+        />
+      </div>
+      <div className='mb-16 lg:mb-24'>
+        <Products
+          title='Terzo anno'
+          description='Il terzo anno ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end, full-stack e delle API (Application Programming Interfaces)'
+          cardWidth={3}
+          cardWidthXs={6}
+          products={terzo_anno}
+        />
+      </div>
+      <div className='mb-16 lg:mb-24'>
+        <Products
+          title='Quarto anno'
+          description="Il quarto anno - se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico - sarai collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda)."
+          cardWidth={4}
+          cardWidthXs={6}
+          products={quarto_anno}
+        />
+      </div>
       <Products
         title='IFTS'
         description='500 ore a scuola e 500 in azienda nel nostro percorso di Istruzione e Formazione Tecnica Superiore, che apre le porte agli ITS Academy.'
@@ -187,13 +218,15 @@ export default function Home({ data }) {
         products={ifts}
       />
 
-      <Products
-        title='I nostri progetti'
-        description='Ci piace mettere a frutto quello che impariamo a scuola, e siamo sempre aperti a nuove avventure!'
-        cardWidth={3}
-        cardWidthXs={12}
-        products={progetti}
-      />
+      <div className='mt-16 lg:mt-24'>
+        <Products
+          title='I nostri progetti'
+          description='Ci piace mettere a frutto quello che impariamo a scuola, e siamo sempre aperti a nuove avventure!'
+          cardWidth={3}
+          cardWidthXs={12}
+          products={progetti}
+        />
+      </div>
 
       {/* <Paragraph topImageUrl='/images/informatico/programma-scolastico.svg' /> */}
       <Sponsor logos={sponsor} />
@@ -307,10 +340,10 @@ let primo_anno = [
     immagineUrl: '/images/informatico/arduino.png',
   },
   {
-    title: 'C# E UNITY',
+    title: 'JavaScript',
     description:
-      "Unity è un potente motore di gioco che ti permette di creare mondi virtuali straordinari: sarà l'occasione per familiarizzare con C#, un moderno linguaggio di programmazione a oggetti. ",
-    immagineUrl: '/images/informatico/csharpeunity.jpg',
+      "Dopo aver curato l'aspetto della tua pagina, potrai darle vita e renderla attiva usando JavaScript.",
+    immagineUrl: '/images/informatico/javascript.png',
   },
 ]
 
@@ -376,22 +409,10 @@ let secondo_anno = [
     immagineUrl: '/images/informatico/bootstrap.png',
   },
   {
-    title: 'JavaScript',
-    description:
-      "Dopo aver curato l'aspetto della tua pagina, potrai darle vita e renderla attiva usando JavaScript.",
-    immagineUrl: '/images/informatico/javascript.png',
-  },
-  {
     title: 'ReactJS',
     description:
       'React è una libreria creata dagli sviluppatori di Facebook che viene usata in tutto il mondo per costruire velocemente applicazioni basate su componenti creati da te o da altri sviluppatori.',
     immagineUrl: '/images/informatico/reactjs.png',
-  },
-  {
-    title: 'NextJS',
-    description:
-      'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci. Anche questo sito è creato con React e NextJS.',
-    immagineUrl: '/images/informatico/nextjs.png',
   },
 ]
 
@@ -446,40 +467,16 @@ let terzo_anno = [
     immagineUrl: '/images/informatico/sicurezza-informatica.png',
   },
   {
-    title: 'Figma',
-    description:
-      "Con questo stumento potrai disegnare l'interfaccia utente della tua applicazione: realizzerai un progetto grafico e di comunicazione sul quale poi basare lo sviluppo vero e proprio.",
-    immagineUrl: '/images/informatico/figma.png',
-  },
-  {
     title: 'TailWind CSS',
     description:
       'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
     immagineUrl: '/images/informatico/tailwind-css.jpeg',
   },
   {
-    title: 'SQL',
+    title: 'NextJS',
     description:
-      'È il linguaggio usato per interrogare i database, per inserire nuovi dati e per fare ricerche tra di essi.',
-    immagineUrl: '/images/informatico/sql.png',
-  },
-  {
-    title: 'NodeJS',
-    description:
-      "Permette di creare dei servizi superveloci, ai quali poi le applicazioni web o dai dispositivi mobili possono collegarsi per ricevere i dati da mostrare all'utente.",
-    immagineUrl: '/images/informatico/nodejs.png',
-  },
-  {
-    title: 'MongoDB',
-    description:
-      'Un esempio di database noSQL, che non memorizza i dati in forma di tabelle e righe come fanno i normali database, ma sotto forma di documenti complessi.',
-    immagineUrl: '/images/informatico/mongodb.png',
-  },
-  {
-    title: 'Ruby on Rails',
-    description:
-      "È un framework che permette di creare rapidamente complesse applicazioni web full-stack, e cioè sia la parte lato server, sia quella visibile all'utente.",
-    immagineUrl: '/images/informatico/ruby-rails.png',
+      'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci. Anche questo sito è creato con React e NextJS.',
+    immagineUrl: '/images/informatico/nextjs.png',
   },
   {
     title: 'Fotoritocco',
@@ -497,37 +494,43 @@ let terzo_anno = [
 
 let quarto_anno = [
   {
+    title: 'Figma',
+    description:
+      "Con questo stumento potrai disegnare l'interfaccia utente della tua applicazione: realizzerai un progetto grafico e di comunicazione sul quale poi basare lo sviluppo vero e proprio.",
+    immagineUrl: '/images/informatico/figma.png',
+  },
+  {
+    title: 'PHP',
+    description:
+      'PHP è uno dei linguaggi più diffusi per lo sviluppo web lato server: permette di costruire siti dinamici, gestire dati e creare servizi backend.',
+    immagineUrl: '/images/informatico/loghi/php.png',
+  },
+  {
+    title: 'SQL',
+    description:
+      'È il linguaggio usato per interrogare i database, per inserire nuovi dati e per fare ricerche tra di essi.',
+    immagineUrl: '/images/informatico/sql.png',
+  },
+  {
+    title: 'Laravel',
+    description:
+      "Framework PHP moderno per costruire applicazioni web full-stack: backend, database, autenticazione, API e interfacce web organizzate in modo solido e professionale.",
+    immagineUrl: '/images/informatico/loghi/laraver.webp',
+  },
+  {
     title: 'React Native',
     description:
       'Potrai mettere a frutto la conoscenza di ReactJS fatta negli anni precedenti per realizzare applicazioni native per iOS e Android. Sarai tu a sviluppare la prossima app virale negli store?',
     immagineUrl: '/images/informatico/react_native.png',
   },
-  {
-    title: 'Flutter',
-    description:
-      'Flutter ti permette di creare splendide applicazioni multipiattaforma: Android, iOS, Windows, MacOS, Linux, web e dispositivi intelligenti di ogni tipo.',
-    immagineUrl: '/images/informatico/flutter.webp',
-  },
-  {
-    title: '.NET MAUI',
-    description:
-      'Il framework di Microsoft per creare applicazioni multipiattaforma con C# e XAML ci darà la possibilità di mettere a confronto diverse tecnologie.',
-    immagineUrl: '/images/informatico/maui.png',
-  },
 ]
 
 let ifts = [
   {
-    title: 'JavaScript',
+    title: 'PHP',
     description:
-      'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
-    immagineUrl: '/images/informatico/javascript.png',
-  },
-  {
-    title: 'React e NextJS',
-    description:
-      'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
-    immagineUrl: '/images/informatico/nextjs.png',
+      'PHP è uno dei linguaggi più diffusi per lo sviluppo web lato server: permette di costruire siti dinamici, gestire dati e creare servizi backend.',
+    immagineUrl: '/images/informatico/loghi/php.png',
   },
   {
     title: 'Database relazionali',
@@ -538,32 +541,52 @@ let ifts = [
   {
     title: 'TailWind CSS',
     description:
-      'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
+      'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
     immagineUrl: '/images/informatico/tailwind-css.jpeg',
   },
   {
-    title: 'Figma',
-    description: 'Progettazione della User Interface e della User Experience',
-    immagineUrl: '/images/informatico/figma.png',
+    title: 'Google Stitch',
+    description:
+      'Progettazione rapida di interfacce e prototipi con strumenti AI per trasformare idee, prompt e flussi utente in layout pronti da sviluppare.',
+    immagineUrl: '/images/informatico/loghi/stitch.jpg',
   },
   {
-    title: 'Ruby on Rails',
+    title: 'Flutter',
     description:
-      "Costruzione di applicazioni web full-stack complete: strutturazione del backend (database, autenticazione, permessi...) e creazione dell'interfaccia grafica visibile all'utente nel frontend.",
-    immagineUrl: '/images/informatico/ruby-rails.png',
+      'Flutter ti permette di creare splendide applicazioni multipiattaforma: Android, iOS, Windows, MacOS, Linux, web e dispositivi intelligenti di ogni tipo.',
+    immagineUrl: '/images/informatico/flutter.webp',
+  },
+  {
+    title: 'Laravel',
+    description:
+      "Framework PHP moderno per costruire applicazioni web full-stack: backend, database, autenticazione, API e interfacce web organizzate in modo solido e professionale.",
+    immagineUrl: '/images/informatico/loghi/laraver.webp',
+  },
+  {
+    title: 'Filament',
+    description:
+      'Toolkit basato su Laravel per creare rapidamente pannelli di amministrazione, dashboard e strumenti gestionali moderni per applicazioni web.',
+    immagineUrl: '/images/informatico/loghi/filament.jpg',
+  },
+  {
+    title: 'Vibe Coding',
+    description:
+      'Approccio allo sviluppo assistito dall’intelligenza artificiale: dal prompt alla prototipazione rapida, imparando a guidare gli strumenti AI con consapevolezza tecnica.',
+    immagineUrl: '/images/informatico/loghi/vibe_coding.png',
   },
 ]
 
 let sponsor = [
   'https://agsol.com/wp-content/uploads/2018/09/new-microsoft-logo-SIZED-SQUARE.jpg',
   'https://assets.ubuntu.com/v1/57a889f6-ubuntu-logo112.png',
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png',
   'https://dev.socialidnow.com/images/9/94/Mikrotik-logo.png',
-  'https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png',
+  'https://www.itquadro.com/wp-content/uploads/2023/06/Fortinet_Logo.png',
   'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
   'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
   'https://www.comitec.it/img/logo.png?v=1.1',
-  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
   'https://images.squarespace-cdn.com/content/v1/5a9651691137a60b454560da/1520306528003-SNVBGH088XW7W7NM8F06/11340-oculus-logo-hero-vertical-447x362.png',
   'https://framerusercontent.com/images/LUfj3Wtf4rSkQ19ocMokPTaCJI.svg',
+  'https://www.freelogovectors.net/wp-content/uploads/2025/06/cursor-logo-freelogovectors.net_.png',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/PhpStorm_Icon.svg/1280px-PhpStorm_Icon.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail',
+  'https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png',
 ]

@@ -196,6 +196,19 @@ export default function Home({ data, movies, elementi }) {
         sponsorImage='/images/home/loghi_sponsor_new.png'
       />
       <NewsWall data={data} limit={7} defaultTag='scuola' />
+      <a
+        href='https://www.donboscoitalia.it/go-beyond-traditional-education/'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='mb-12 block w-full bg-black md:mb-16'
+        aria-label='GO Beyond Traditional Education'
+      >
+        <img
+          src='/images/gobeyond.png'
+          alt='GO beyond traditional education'
+          className='block w-full'
+        />
+      </a>
       <Products
         title='I settori'
         description="Un'ampia scelta di indirizzi professionali: scopri quello che ti accende di più!"
