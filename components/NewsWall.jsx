@@ -136,7 +136,7 @@ export default function NewsWall({
             <div className="p-5 flex flex-col flex-grow justify-between bg-white">
               <div>
                 <p className="text-xs text-gray-500 mb-1 font-medium">{news[1].pubblicazione}</p>
-                <div className="text-lg font-bold text-[#00529C] mb-2 uppercase line-clamp-2 leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
+                <div className="text-lg font-bold text-[#00529C] mb-2 uppercase leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
                   {news[1].titolo}
                 </div>
                 <p className="text-sm text-gray-600">{news[1].abstract}</p>
@@ -156,7 +156,7 @@ export default function NewsWall({
             <div className="p-5 flex flex-col flex-grow justify-between bg-white">
               <div>
                 <p className="text-xs text-gray-500 mb-1 font-medium">{news[2].pubblicazione}</p>
-                <div className="text-lg font-bold text-[#00529C] mb-2 uppercase line-clamp-2 leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
+                <div className="text-lg font-bold text-[#00529C] mb-2 uppercase leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
                   {news[2].titolo}
                 </div>
                 <p className="text-sm text-gray-600">{news[2].abstract}</p>
@@ -198,7 +198,7 @@ export default function NewsWall({
             <div className="p-5 flex flex-col flex-grow justify-between bg-white">
               <div>
                 <p className="text-xs text-gray-500 mb-1 font-medium">{news[4].pubblicazione}</p>
-                <div className="text-lg font-bold text-[#00529C] mb-2 uppercase line-clamp-2 leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
+                <div className="text-lg font-bold text-[#00529C] mb-2 uppercase leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
                   {news[4].titolo}
                 </div>
                 <p className="text-sm text-gray-600">{news[4].abstract}</p>
@@ -218,7 +218,7 @@ export default function NewsWall({
             <div className="p-5 flex flex-col flex-grow justify-between bg-white">
               <div>
                 <p className="text-xs text-gray-500 mb-1 font-medium">{news[5].pubblicazione}</p>
-                <div className="text-lg font-bold text-[#00529C] mb-2 uppercase line-clamp-2 leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
+                <div className="text-lg font-bold text-[#00529C] mb-2 uppercase leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
                   {news[5].titolo}
                 </div>
                 <p className="text-sm text-gray-600">{news[5].abstract}</p>
@@ -238,7 +238,7 @@ export default function NewsWall({
             <div className="p-6 flex flex-col w-full md:w-1/2 justify-between bg-white">
               <div>
                 <p className="text-xs text-gray-500 mb-1 font-medium">{news[6].pubblicazione}</p>
-                <div className="text-xl font-bold text-[#00529C] mb-2 uppercase line-clamp-2 leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
+                <div className="text-xl font-bold text-[#00529C] mb-2 uppercase leading-tight" style={{ textShadow: 'none', WebkitTextFillColor: 'initial', WebkitTextStroke: '0px' }}>
                   {news[6].titolo}
                 </div>
                 <p className="text-sm text-gray-600">{news[6].abstract}</p>
