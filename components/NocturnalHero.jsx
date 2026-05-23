@@ -79,35 +79,37 @@ export default function NocturnalHero({
 
   return (
     <>
-      <section className="nh-root relative min-h-[100svh] overflow-hidden -mt-[72px]">
+      <section className="nh-root relative h-[100svh] min-h-[100svh] overflow-hidden">
         {/* Ambient glows */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden -z-10">
           <div className="absolute left-[10%] top-[12%] h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(circle,rgba(255,180,102,.18),transparent_70%)] blur-3xl" />
           <div className="absolute right-[6%] bottom-[10%] h-[30rem] w-[30rem] rounded-full bg-[radial-gradient(circle,rgba(62,145,139,.12),transparent_70%)] blur-3xl" />
         </div>
 
-        {/* Hero image */}
-        {featured.immagine && (
-          <div className="absolute inset-0 z-0">
-            <picture>
-              {featured.immagine_mobile && (
-                <source media="(max-width: 767px)" srcSet={featured.immagine_mobile} />
-              )}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+        {/* Hero image: desktop (lg+) vs mobile, come in Carousel */}
+        {(featured.immagine || featured.immagine_mobile) && (
+          <div ref={heroImgRef} className="nh-img-wrap absolute inset-0 z-0">
+            {featured.immagine && (
+              // eslint-disable-next-line @next/next/no-img-element
               <img
-                ref={heroImgRef}
                 src={featured.immagine}
                 alt={featured.titolo || ''}
-                className="nh-img absolute inset-0 h-full w-full object-cover"
+                className="nh-img absolute inset-0 hidden h-full w-full object-cover lg:block"
               />
-            </picture>
+            )}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={featured.immagine_mobile || featured.immagine}
+              alt={featured.titolo || ''}
+              className="nh-img absolute inset-0 block h-full w-full object-cover lg:hidden"
+            />
           </div>
         )}
 
         <div className="pointer-events-none absolute inset-0 z-[1] bg-black/35" />
 
         {/* Content */}
-        <div className="relative z-10 flex min-h-[100svh] items-center justify-center px-6 pb-10 pt-[110px] text-center">
+        <div className="relative z-10 flex h-full items-center justify-center px-6 pb-10 pt-[88px] text-center">
           <div className="max-w-[980px] rounded-[2.2rem] px-3 py-7 sm:px-8 sm:py-8">
 
             {featured.pubblicazione && (
@@ -175,9 +177,12 @@ export default function NocturnalHero({
           font-family: 'Cormorant Garamond', serif !important;
         }
 
-        .nh-img {
+        .nh-img-wrap {
           will-change: transform;
           transform: scale(1.07);
+        }
+
+        .nh-img {
           filter: brightness(1.05) saturate(1.2);
         }
 
