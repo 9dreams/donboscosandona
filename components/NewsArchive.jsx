@@ -7,6 +7,8 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 
+import NewsArchiveHero from './NewsArchiveHero'
+
 const ITEMS_PER_PAGE = 12
 
 const cardTitleStyle = {
@@ -240,57 +242,18 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
 
   return (
     <div className="min-h-screen bg-[#f7f9fb] transition-colors duration-300 dark:bg-[#0d0f14]">
+      <NewsArchiveHero
+        data={data}
+        allTags={allTags}
+        activeTag={activeTag}
+        onTagChange={handleTagChange}
+        filteredCount={filtered.length}
+      />
+
       <main
-        className="max-w-[1280px] mx-auto px-5 md:px-12 py-12 md:py-20"
+        className="max-w-[1280px] mx-auto px-5 md:px-12 pb-12 md:pb-20 pt-2"
         style={bodyStyle}
       >
-        {/* Page header */}
-        <div className="mb-12 md:mb-16 border-l-8 border-[#1976D2] pl-6">
-          <h1
-            className="title-display text-[56px] md:text-[72px] text-[#1976D2] mb-4 leading-none"
-          >
-            Archivio Notizie
-          </h1>
-          <p className="text-lg text-[#414752] dark:text-gray-300 max-w-2xl leading-7" style={bodyStyle}>
-            Resta aggiornato su tutte le attività dell'Oratorio don Bosco di San Donà di Piave:
-            dalla formazione professionale agli eventi per le famiglie.
-          </p>
-        </div>
-
-        {/* Filters */}
-        <section className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-6">
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={() => handleTagChange('all')}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
-                activeTag === 'all'
-                  ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white'
-                  : 'bg-[#e6e8ea] dark:bg-[#181b23] text-[#414752] dark:text-gray-300'
-              }`}
-              style={bodyStyle}
-            >
-              Tutte le Notizie
-            </button>
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => handleTagChange(tag)}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
-                  activeTag === tag
-                    ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white'
-                    : 'bg-[#e6e8ea] dark:bg-[#181b23] text-[#414752] dark:text-gray-300'
-                }`}
-                style={bodyStyle}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
-          <p className="text-sm text-[#717783] dark:text-gray-400 whitespace-nowrap" style={bodyStyle}>
-            {filtered.length} {filtered.length === 1 ? 'articolo' : 'articoli'}
-          </p>
-        </section>
-
         {/* Pagination — top */}
         <div className="mb-10">
           <PaginationBar

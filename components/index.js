@@ -28,6 +28,7 @@ export { default as Test } from './Test'
 export { default as NewsWall } from './NewsWall.jsx'
 export { default as SyntheticLightHero } from './SyntheticLightHero.jsx'
 export { default as NewsArchive } from './NewsArchive.jsx'
+export { default as NewsArchiveHero } from './NewsArchiveHero.jsx'
 
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder

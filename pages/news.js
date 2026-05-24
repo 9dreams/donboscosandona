@@ -22,7 +22,7 @@ export default function NewsPage({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio')
+  const res = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio?q=scuola')
   const data = await res.json()
   const scuolaPosts = data.filter((post) =>
     post.tag
