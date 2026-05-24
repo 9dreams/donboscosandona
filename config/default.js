@@ -7,6 +7,9 @@ export const siteTitle = "Proposta Estate Ragazzi 2024 - San Donà di Piave"
 export const siteDescription = "Sito ufficiale dell'Estate Ragazzi dell'Oratorio don Bosco di San Donà di Piave"
 export const siteBaseUrl = 'https://per.donboscosandona.it'
 
+/** ID misurazione GA4 (Flussi di dati → Web). Un ID per sito/branch. */
+export const gaMeasurementId = 'G-VL8NWRMT6E'
+
 export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Oratorio don Bosco', url: 'http://www.inoratorio.it' },
