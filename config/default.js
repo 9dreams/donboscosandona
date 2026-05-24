@@ -6,6 +6,9 @@ export const siteTitle = "SFP DON BOSCO - San Donà di Piave"
 export const siteDescription = "Sito ufficiale della Scuola della Formazione Professionale don Bosco di San Donà di Piave"
 export const siteBaseUrl = 'https://dev.donboscosandona.it'
 
+/** ID misurazione GA4 (Flussi di dati → Web). Un ID per sito/branch. */
+export const gaMeasurementId = 'G-GDJJYGVN8F'
+
 export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Contatti', url: '/contatti' },
