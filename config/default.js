@@ -7,6 +7,9 @@ export const siteTitle = "Oratorio don Bosco - San Donà di Piave"
 export const siteDescription = "Sito ufficiale dell'Oratorio don Bosco di San Donà di Piave"
 export const siteBaseUrl = 'https://www.inoratorio.it'
 
+/** ID misurazione GA4 (Flussi di dati → Web). Un ID per sito/branch. */
+export const gaMeasurementId = 'G-ZXJFLYMJ3V'
+
 export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Proposta Estate', url: 'https://per.donboscosandona.it' },

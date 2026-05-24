@@ -29,6 +29,7 @@ export { default as Credits } from './Credits'
 export { default as Test } from './Test'
 export { default as NewsWall } from './NewsWall.jsx'
 export { default as NewsArchiveHero } from './NewsArchiveHero.jsx'
+export { default as GoogleAnalytics } from './GoogleAnalytics'
 
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder
