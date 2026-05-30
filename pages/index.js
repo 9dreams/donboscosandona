@@ -203,6 +203,28 @@ export default function Home({ data }) {
           ],
         ]}
       />
+      <Container maxWidth='lg' sx={{ my: 4 }}>
+        <a
+          href='https://www.centropiave.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='block'
+          aria-label='Centro Piave San Donà di Piave — sito ufficiale'
+        >
+          <picture>
+            <source
+              media='(min-width: 1024px)'
+              srcSet='/images/sponsor/centro_piave_banner.jpg'
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src='/images/sponsor/centro_piave_post.jpg'
+              alt='Centro Piave San Donà di Piave'
+              className='block h-auto w-full rounded-2xl transition-opacity duration-300 hover:opacity-90'
+            />
+          </picture>
+        </a>
+      </Container>
       <Paragraph title='Pranzo al sacco'>
         <p>
           Per i ragazzi che fanno parte delle attività dell’oratorio durante
