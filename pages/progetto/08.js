@@ -1,5 +1,3 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
 
 
 import Head from 'next/head'
@@ -14,12 +12,6 @@ import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
 import Paragraph from '/components/Paragraph'
-import { Typography } from '@mui/material'
-
-
-
-
-
 let menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
     { title: 'Contatti', url: '/contatti' },
@@ -68,11 +60,11 @@ export default function Home({ datiArticoli }) {
                 menu={menu}
             /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h4" sx={{ color: 'text.secondary' }}>Regolamento di Disciplina</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h4>Regolamento di Disciplina</h4>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Gli studenti, come titolari del diritto della “libertà di apprendimento”, sono<br /> protagonisti primari del cammino formativo, partecipano in modo creativo<br /> all’elaborazione e attuazione di esso, nelle forme rese progressivamente possibili dal<br /> maturare dell’età e con le caratteristiche loro proprie di autenticità ed entusiasmo.<br /><br />
 
                     Le norme del presente Regolamento si ispirano ai principi dello Statuto degli<br /> Studenti e delle Studentesse della scuola secondaria (DPR 249/98 e successive<br /> modifiche ed integrazioni), nel quale la scuola è definita come "luogo di formazione e<br /> di educazione mediante lo studio … comunità di dialogo, ricerca, di esperienza<br /> sociale informata ai valori democratici e volta alla crescita della persona in tutti gli<br /> aspetti".<br /><br />
@@ -84,15 +76,15 @@ export default function Home({ datiArticoli }) {
                     Il Regolamento di Disciplina, nell’individuare le sanzioni e gli organi competenti a<br /> comminarle, si pone come strumento di trasparenza e di garanzia.<br /><br />
 
                     Tutte le disposizioni si applicano anche nel caso in cui le lezioni si svolgano con la<br /> didattica a distanza. A seguito dell’emergenza sanitaria in corso è stato redatto il<br /> Protocollo di sicurezza scolastico per il rischio Covid ad integrazione del Documento<br /> Valutazione Rischi; pertanto l’assolto rispetto delle norme e delle procedure in esso<br /> contenute rientra a tutti gli effetti nell’ambito della sicurezza nei luoghi di lavoro ed<br /> ogni trasgressione sarà sanzionata.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>1.Norme generali di comportamento</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>1.Norme generali di comportamento</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     “Gli studenti sono tenuti a frequentare regolarmente i corsi e ad assolvere<br /> assiduamente agli impegni di studio”. (D.P.R. 249/1998 Art. 3 Comma 1)<br /><br />
 
                     Per raggiungere gli obiettivi formativi che la Comunità Educativa del CFP Don Bosco<br /> propone è indispensabile osservare alcune norme e mantenere un comportamento<br /> educato che è anzitutto scelta personale e responsabile di ogni persona.<br /><br /><br />
@@ -132,25 +124,25 @@ export default function Home({ datiArticoli }) {
                     L’accesso al portale è possibile mediante l’utilizzo di username e password<br /> personali fornite dal Centro alla famiglia e all’allievo. Si raccomanda ai genitori di<br /> controllarlo regolarmente per poter monitorare l’andamento scolastico del figlio e/o<br /> apporre le apposite firme richieste in caso di comunicazioni.<br /><br />
 
                     È necessario che il genitore non fornisca le proprie credenziali al figlio, in quanto<br /> l’istituzione scolastica non è più in grado di sapere se la famiglia è realmente a<br /> conoscenza della situazione scolastica del ragazzo.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>2.Rispetto dei tempi</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>2.Rispetto dei tempi</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Durante l'orario scolastico, compresi gli intervalli, l’allievo deve essere sempre<br /> presente al Centro. È richiesta la massima puntualità all’inizio e alla ripresa delle<br /> lezioni dopo l’intervallo e dopo la pausa pranzo. L’ingresso e l’uscita dai rispettivi<br /> ambienti scolastici sono regolati dal suono della campanella. È vietato allontanarsi<br /> dal Centro, anche durante l’intervallo o la pausa pranzo, senza previa autorizzazione<br /> del Direttore o del suo Delegato.<br /><br />
 
                     L’esonero dalla parte pratica di educazione motoria (parziale o totale) deve essere<br /> chiesto al Direttore o del suo Delegato con domanda scritta accompagnata da <br />certificato medico. Tuttavia l’alunno è tenuto alla presenza alla lezione.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>3.Assenze</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>3.Assenze</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Dopo ogni assenza lo studente deve presentare al Direttore o suo delegato prima<br /> dell’inizio della prima ora del giorno di rientro giustificazione scritta sul libretto<br /> scolastico, firmata dai genitori o da chi ne fa le veci, anche se l’allievo è maggiorenne.<br /> Nel caso in cui la firma sia diversa da quella depositata in calce al libretto, le assenze<br /> non saranno giustificate e il Direttore o suo delegato deciderà il da farsi.<br /><br />
 
                     L’assenza prolungata per ragioni diverse dalla malattia deve essere concordata in<br /> anticipo con il Direttore o suo delegato.<br /><br />
@@ -160,14 +152,14 @@ export default function Home({ datiArticoli }) {
                     Si precisa che le assenze sono conteggiate in ore e non in giorni, pertanto sono<br /> calcolate come assenza anche le ore di entrata posticipata e di uscita anticipata<br /> rispetto all’orario scolastico.<br /><br />
 
                     Ai sensi della normativa regionale, il mancato conseguimento del limite minimo di<br /> frequenza, pari ad almeno il 75% dell'orario annuale, comporta l'esclusione dallo<br /> scrutinio finale e la non ammissione alla classe successiva o all'esame finale.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>4.Enrate ed uscite</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>4.Enrate ed uscite</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     L’ingresso e l’uscita in orari diversi da quelli regolari devono essere richiesti mediante<br /> permesso debitamente firmato sul libretto scolastico e vidimato dal Direttore o dal<br /> suo delegato. La giustificazione dovrà essere presentata all’insegnante di classe.<br /><br />
 
                     a.Gli allievi in ritardo rispetto all’orario di inizio sprovvisti di permesso firmato dalle<br /> famiglie potranno essere ammessi in aula dal Direttore o dal suo delegato. Sono<br /> comunque tenuti a presentare il giorno successivo, o al massimo entro due<br /> giorni, regolare giustificazione. Qualora ciò non avvenga, verranno<br /> immediatamente avvisate le famiglie.<br />
@@ -175,14 +167,14 @@ export default function Home({ datiArticoli }) {
                     c.Per le uscite anticipate rispetto al termine regolare delle lezioni o l’assenza dalle<br /> lezioni pomeridiane, l’alunno dovrà presentare richiesta sul libretto scolastico<br /> firmata dei genitori, o di chi ne fa le veci, al Direttore o suo delegato, prima<br /> dell’inizio della prima ora.<br />
                     d.Le uscite anticipate dovute ad indisposizione avverranno solo nel caso in cui un<br /> famigliare o un suo delegato vengano a prendere il ragazzo a scuola. Le uscite<br /> per altri motivi saranno autorizzate dopo che il Direttore o un suo delegato avrà<br /> preavvertito la famiglia e avuto il consenso scritto dalla stessa.<br />
                     e.Qualora si presentasse al Centro un soggetto terzo per prelevare<br /> anticipatamente lo studente, i genitori saranno immediatamente contattati per<br /> verificarne la veridicità. Nel caso siano irraggiungibili telefonicamente, il Centro<br /> non potrà permettere l'uscita anticipata dello studente: ciò potrà avvenire solo<br /> mediante delega scritta da parte dei genitori.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>5.Norme di comportamento</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>5.Norme di comportamento</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     ACCESSO E USO DEI LOCALI: Ogni aula deve essere usata per il solo scopo didattico;<br /> non è consentito, quindi, affiggere poster, locandine, manifesti non in sintonia con<br /> l'ambiente. La stessa bacheca esposta in corridoio, deve essere utilizzata solo per le<br /> comunicazioni scolastiche e dal personale della scuola.<br /><br />
 
                     Non è consentito inoltre lasciare in aula, al termine delle lezioni, materiale scolastico<br /> e/o utile allo svolgimento delle attività motorie o di laboratorio. Al cambio dell’ora<br /> tutti gli studenti devono rimanere in classe.<br /><br />
@@ -364,14 +356,14 @@ export default function Home({ datiArticoli }) {
                     INTRODUZIONE DI PORNOGRAFIA: è vietato introdurre, utilizzare o diffondere<br/> materiale offensivo della persona sia sotto forma cartacea che multimediale.<br/><br/>
 
                     INTRODUZIONE E/O USO DI ALCOLICI E SOSTANZE STUPEFACENTI: è fatto divieto di<br/> introdurre e utilizzare qualsiasi bevanda alcolica o sostanza stupefacente (droga).
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>6. Rispetto dei materiali e delle cose.</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>6. Rispetto dei materiali e delle cose.</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     <u>BENI PERSONALI E FURTO</u>: è vietata la sottrazione o la ricettazione di qualsiasi bene<br /> della scuola e non, nonché il furto ai danni di terzi. Si invita a non portare a scuola<br /> oggetti di valore non attinenti l’attività didattica.<br /><br />
 
                     Il Centro non è tenuto in alcun modo a ricevere e custodire i beni personali degli<br /> allievi, tra cui abbigliamento, <del>libri</del>, mezzi di locomozione, ecc., né assume alcuna<br /> responsabilità o risponde della loro custodia, conservazione e sottrazione, qualora<br /> siano portati o introdotti all’interno dell’Istituto. È fatto obbligo agli stessi allievi di<br /> apprestare tutte le cautele necessarie per impedire a loro carico qualsiasi evento<br /> dannoso.<br /><br />
@@ -399,14 +391,14 @@ export default function Home({ datiArticoli }) {
                     La denuncia va effettuata quale che sia l’età dell’autore del reato (e quindi anche per<br /> i minori di anni 14): ogni valutazione circa il rilievo dell’imputabilità è rimessa<br /> esclusivamente all’Autorità giudiziaria.<br /><br />
 
                     La denuncia può essere fatta sia in forma orale (presso gli uffici della Polizia di stato o<br /> dei Carabinieri che provvederanno direttamente alla verbalizzazione ed all’inoltro<br /> all’autorità giudiziaria competente) sia in forma scritta, con indicazione chiara del<br /> denunciante e sottoscrizione della stessa. La denuncia può anche essere trasmessa<br /> direttamente alla Procura presso il Tribunale dei minorenni. Nella denuncia devono<br /> essere presenti tutti i dati acquisiti e disponibili (oltre al “racconto” del fatto, l’identità<br /> delle persone coinvolte, le modalità di acquisizione della notizia di reato, ecc.) con<br /> indicazione delle persone a conoscenza dei fatti o testimoni degli stessi. Anche in<br /> questo caso, la denuncia va fatta senza ritardo in rapporto alla gravità dei fatti.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>7. Rispetto degli obblighi giuridici e disciplina</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>7. Rispetto degli obblighi giuridici e disciplina</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     La responsabilità disciplinare è personale.<br /><br />
 
                     Essa è assunta per mancanze disciplinari, le quali sono costituite dai comportamenti<br /> dello studente considerati reato dalla vigente legislazione ovvero che violano i doveri<br /> stabiliti dall’art. 3 del D.P.R. 24 giugno 1998 n. 249 o quelli contenuti nei punti<br /> precedenti del presente Regolamento ovvero le violazioni del progetto educativo.<br /><br />
@@ -634,10 +626,10 @@ export default function Home({ datiArticoli }) {
                     i) Quadro riassuntivo delle mancanze e delle sanzioni<br /><br />
 
 
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
                 <Image
                     src="/images/progetto/tabella.png"
                     alt=""
@@ -645,7 +637,7 @@ export default function Home({ datiArticoli }) {
                     height={1500}
 
                 />
-            </Container><br /><br /><br /><br />
+            </div><br /><br /><br /><br />
 
 
         </Layout>

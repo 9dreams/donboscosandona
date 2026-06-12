@@ -1,20 +1,8 @@
-import { Container, Grid, Typography } from '@mui/material'
-
 import Carousel from '/components/Carousel'
 
-export default function Featured({
-  data,
-  limit,
-  maxWidth,
-  height,
-  animation,
-  interval,
-  duration,
-  defaultTag,
-}) {
+export default function Featured({ data, limit, maxWidth, height, animation, interval, duration, defaultTag }) {
   if (!data) return <div>Caricamento...</div>
-  if (data && data.status == '404')
-    return <div>Errore: il canale specificato per le News è inesistente.</div>
+  if (data && data.status === '404') return <div>Errore: il canale specificato per le News è inesistente.</div>
 
   data = data.filter((post) => post.in_evidenza)
   data.splice(limit)
@@ -36,26 +24,13 @@ export default function Featured({
       (post.articolo && '/articoli/' + post.id) || post.link || post.allegato,
   }))
 
-  return (
-    <>
-      {slides.length > 0 && (
-        <Carousel
-          slides={slides}
-          maxWidth={maxWidth}
-          height={height}
-          animation={animation}
-          interval={interval}
-          duration={duration}
-          defaultTag={defaultTag}
-        ></Carousel>
-      )}
-    </>
-  )
+  return slides.length > 0 ? (
+    <Carousel slides={slides} height={height} animation={animation} interval={interval} duration={duration} defaultTag={defaultTag} />
+  ) : null
 }
 
 Featured.defaultProps = {
   limit: 6,
-  maxWidth: false,
   height: 90,
   animation: 'slide',
   interval: 7000,

@@ -1,4 +1,3 @@
-import Container from '@mui/material/Container'
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
@@ -63,7 +62,7 @@ export default function Home() {
                 imageUrl="/images/privacy/imgsfondo.webp"
                 menu={menu}
             /> */}
-            <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-12">
 
                 <p>
                     Lo stage rappresenta un momento fondamentale nella formazione professionale perché punto d’incontro tra formazione e lavoro. È uno strumento indispensabile per fare esperienza concreta nel settore prescelto, per valutare la predisposizione verso l’attività intrapresa, per proporsi nel mercato del lavoro con un curriculum arricchito non solo nella forma (titolo rilasciato), ma soprattutto nella sostanza (competenza acquisita nella pratica svolta).
@@ -110,7 +109,7 @@ export default function Home() {
 
 
 
-            </Container>
+            </div>
 
         </Layout>
     )

@@ -1,10 +1,8 @@
-import Container from '@mui/material/Container'
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
 import Products from '/components/Products'
 import Paragraph from '@/components/Paragraph'
-import { Typography } from '@mui/material'
 import Image from 'next/image'
 import { NewsWall } from '/components';
 
@@ -65,9 +63,9 @@ export default function Home({ data }) {
                />
 
 
-            <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-12">
                 
-            </Container> 
+            </div> 
               
             <div style={{ textAlign: 'center' }}> 
               <NewsWall

@@ -1,10 +1,7 @@
-import Container from "@mui/material/Container"
-import styles from '/components/Maps.module.css'
-
-export default function Maps(props) {
-    return (
-        <Container className={styles.map} maxWidth={props.maxWidth} disableGutters={true}>
-            <iframe src={props.url} width="100%" height={props.maxHeight} style={{border: '0'}}></iframe>
-        </Container>
-    )
+export default function Maps({ url, maxWidth, maxHeight }) {
+  return (
+    <div className="flex items-center justify-center w-full" style={{ maxWidth: maxWidth || '100%' }}>
+      <iframe src={url} width="100%" height={maxHeight || 450} style={{ border: 0 }} />
+    </div>
+  )
 }

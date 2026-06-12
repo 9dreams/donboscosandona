@@ -1,5 +1,3 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
 
 import Head from 'next/head'
 import Layout from '/components/Layout'
@@ -8,13 +6,9 @@ import Features from '/components/Features'
 import Carousel from '/components/Carousel'
 import PostInEvidenza from '/components/PostInEvidenza'
 import Products from '/components/Products'
-import Button from '@mui/material/Button';
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
-import { Typography } from '@mui/material'
-
-
 import { getDatiArticoli } from '/lib/articoli'
 
 
@@ -69,8 +63,8 @@ export default function Home({ datiArticoli }) {
             /><br /><br />
 
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            </Container><br /><br />
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+            </div><br /><br />
             <Products 
                 title="Accreditamenti"
                 description=""

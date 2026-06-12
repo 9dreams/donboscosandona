@@ -1,5 +1,3 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
 
 
 import Head from 'next/head'
@@ -13,11 +11,6 @@ import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
-import { Typography } from '@mui/material'
-
-
-
-
 let menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
     { title: 'Contatti', url: '/contatti' },
@@ -66,15 +59,15 @@ export default function Home({ datiArticoli }) {
                 menu={menu}
             /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h3" sx={{ color: 'text.secondary' }}>6. LE AZIONI EDUCATIVE</Typography>
-            </Container><br /><br />
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h3>6. LE AZIONI EDUCATIVE</h3>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>6.1. La pedagogia d’ambiente e le relazioni educative</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>6.1. La pedagogia d’ambiente e le relazioni educative</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Secondo la tradizione salesiana, tutto deve concorre a creare un clima di<br /> serenità, di gioia e di impegno. Per questo sarà premura del Direttore e dei suoi collaboratori:<br /><br />
 
                     ✓    qualificare i rapporti educativi e creare un ambiente favorevole alla valorizzazione<br /> della vita quotidiana;<br /><br />
@@ -88,15 +81,15 @@ export default function Home({ datiArticoli }) {
                     ✓    sviluppare il senso di appartenenza ad una CEP;<br /><br />
 
                     ✓    garantire esperienze di solidarietà e collaborazione.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>6.2. L’accompagnamento personale</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>6.2. L’accompagnamento personale</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     La promozione dell’orientamento, inteso come "educazione alla scelta, è obiettivo<br /> prioritario ” del CFP Don Bosco. Le attività offerte in questo ambito sono:<br /><br />
 
 
@@ -115,61 +108,61 @@ export default function Home({ datiArticoli }) {
                     ✓    incontri con esperti su temi quali: educazione alla affettività; prevenzione del tabagismo, dell’alcolismo e droga, educazione alimentare, uso dei mezzi di comunicazione, ecc...;<br /><br />
 
                     ✓    lavoro di rete con i servizi del territorio per casi particolari.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>6.3. Le buone prassi e le azioni</Typography>
-            </Container>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>6.3. Le buone prassi e le azioni</h5>
+            </div>
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>6.3.1. Il cortile</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>6.3.1. Il cortile</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Spazio e modalità ineludibile nell'esperienza salesiana del CFP è il cortile. Esso non è<br /> solo luogo geografico in cui vengono organizzate attività ed iniziative, ma si<br /> configura come tempo di costruzione delle relazioni personali a partire dallo sport,<br /> dal gioco o dall'animazione. La CEP è garante dell'assistenza dei giovani secondo lo<br /> spirito salesiano.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>6.3.2. Il Buongiorno</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>6.3.2. Il Buongiorno</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     La mattina inizia con un breve momento di preghiera ed una piccola riflessione su<br /> un aspetto della vita cristiana capace di indirizzare ed accompagnare allievi e<br /> formatori per tutta la giornata. Seguendo i tempi dell’Anno Liturgico e i temi della<br /> Proposta Formativa, i ragazzi sono così condotti ad un cammino di approfondimento<br /> della fede e della morale cristiana. Questo appuntamento è animato dal direttore e<br /> dal vice-direttore, dal coordinatore pastorale e, a turno, dai vari formatori.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>6.3.3. Le ricreazioni</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>6.3.3. Le ricreazioni</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Per don Bosco il cortile ed il gioco hanno sempre assunto una forte valenza<br /> educativa pertanto tutti i tempi di ricreazione, in particolare quello più lungo del<br /> dopo pranzo, sono organizzati in tornei. La vittoria di una partita fa guadagnare dei<br /> punti che, a fine anno, vanno a decretare la classe meritevole della Superpizza. Tutte<br /> le ricreazioni sono assistite dai formatori, diventando occasione per avvicinare i<br /> ragazzi e dialogare con loro in spirito di famiglia.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>6.3.4. I Ritiri Spirituali e le Uscite Didattiche</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>6.3.4. I Ritiri Spirituali e le Uscite Didattiche</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     La crescita integrale della persona passa anche per la formazione della coscienza e<br />  l’apertura del cuore, per questo riteniamo importante proporre delle giornate di<br /> riflessione e di formazione. Questi appuntamenti sono vissuti all’inizio dell’anno e<br /> ripresi nell’arco dell’anno formativo. Accompagnati dai loro formatori, gli allievi<br /> hanno l’opportunità di fare l’importante esperienza dell’uscita didattica, di effettuare<br /> visite tecniche in aziende o fiere campionarie ed espositive.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>1.6.2. Settore Motoristico: operatore alla riparazione veicoli a motore</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>1.6.2. Settore Motoristico: operatore alla riparazione veicoli a motore</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     All’inizio e alla fine di ogni anno formativo vengono proposti due momenti di festa<br /> che coinvolgono le famiglie di tutti i ragazzi; sono occasioni preziose per<br /> approfondire la reciproca conoscenza e rendere grazie per il percorso condiviso. Atri<br /> importanti appuntamenti  sono la festa dell’Immacolata, il Convegno degli EX-Allievi,<br /> la festa di don Bosco e quella di Maria Ausiliatrice.<br />
 
                     Per don Bosco le due colonne che sostengono l’educazione dei giovani sono la<br /> Confessione e l’Eucaristia. Per questa ragione, in vista delle feste del CFP, viene<br /> offerta la possibilità di accostarsi alla Confessione e partecipare all’Eucaristia.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
         </Layout>

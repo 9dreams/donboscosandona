@@ -1,5 +1,3 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
 
 
 import Head from 'next/head'
@@ -13,11 +11,6 @@ import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
-import { Typography } from '@mui/material'
-
-
-
-
 let menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
     { title: 'Contatti', url: '/contatti' },
@@ -67,37 +60,37 @@ export default function Home({ datiArticoli }) {
             /><br />
 
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h3" sx={{ color: 'text.secondary' }}>9.           ATTIVITÀ PROMOZIONALI DEL CFP E RAPPORTI CON IL TERRITORIO</Typography>
-            </Container><br /><br />
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h3>9.           ATTIVITÀ PROMOZIONALI DEL CFP E RAPPORTI CON IL TERRITORIO</h3>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>9.1. Rapporti con le imprese</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>9.1. Rapporti con le imprese</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Le imprese risultano essere partner del “campo formativo”. Concorrono<br /> all’individuazione delle caratteristiche professionali, tecnologiche e degli snodi<br /> formativi del progetto. Prestano un servizio formativo sotto forma di testimonianza,<br /> dimostrazione, disponibilità a visite guidate ed a stage. Partecipano alla valutazione<br /> degli esiti dello stage dell’allievo.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>9.2. Orientamento e territorio</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>9.2. Orientamento e territorio</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Il CFP Don Bosco appartiene ad una rete istituzionalmente predisposta alla gestione<br /> dell’orientamento nell’ambito dell’obbligo formativo e, successivamente, del diritto-<br />dovere all’istruzione e alla formazione. La rete, nata nel 2004, sta portando avanti un<br /> progetto chiamato “Orientamento e territorio”, che coinvolge vari attori impegnati su<br /> obiettivi comuni: istituzioni scolastiche (scuole secondarie di 1° e 2° grado), Centri di<br /> Formazione Professionale, Associazioni imprenditoriali, Enti Locali.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>9.3. Rapporti con altri Enti</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>9.3. Rapporti con altri Enti</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Qualora la situazione lo richieda, verranno coinvolti i Comuni, l’Azienda U.L.S.S. n. 4, la<br /> Neuropsichiatria infantile, la “Nostra Famiglia” ed il Consultorio
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
 

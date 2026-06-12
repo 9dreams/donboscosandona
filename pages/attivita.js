@@ -1,5 +1,3 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
 
 import Head from 'next/head'
 import Layout from '/components/Layout'
@@ -12,14 +10,13 @@ import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
 import Certifications from '@/components/Certifications'
-import { Typography } from '@mui/material'
 import Paragraph from "/components/Paragraph"
 
 export default function Home({ datiArticoli }) {
     return (
         <Layout>
             <Head />
-            <Container maxWidth="lg">
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-12">
                 <Paragraph
                     title="Cantami o Diva del pelide Achille l'ira funesta..."
                     subtitle={<span style={{ color: '' }}>Il percorso formativo al C.F.P. “don Bosco” è caratterizzato da una serie di <strong>attività</strong> che hanno l’<strong>obiettivo di concretizzare il progetto educativo</strong> che proponiamo ai nostri giovani e alle loro famiglie.</span>}
@@ -121,7 +118,7 @@ export default function Home({ datiArticoli }) {
                     sx={{}}
                 >
                 </Paragraph>
-            </Container>
+            </div>
         </Layout>
     )
 }

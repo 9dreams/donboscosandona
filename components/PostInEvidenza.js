@@ -1,58 +1,19 @@
-import Paper from '@mui/material/Paper'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import Link from '@mui/material/Link'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-
 export default function PostInEvidenza({ post }) {
-    return (
-        <Container maxWidth="lg">
-            <Paper
-                sx={{
-                    position: 'relative',
-                    backgroundColor: 'grey.800',
-                    color: '#fff',
-                    mb: 4,
-                    backgroundImage: 'url(' + post.immagine + ')',
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                }}
-            >
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: 0,
-                        bottom: 0,
-                        right: 0,
-                        left: 0,
-                        backgroundColor: 'rgba(0,0,0,0.4)',
-                    }}
-                />
-                <Grid container>
-                    <Grid item md={6}>
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                p: { xs: 3, md: 6 },
-                                pr: { md: 0 },
-                            }}
-                        >
-                            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                                {post.titolo}
-                            </Typography>
-                            <Typography component="h5" color="inherit" paragraph>
-                                {post.descrizione}
-                            </Typography>
-                            <Link variant="subtitle1" href="#">
-                                {post.testoLink}
-                            </Link>
-                            
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Paper>
-        </Container>
-    )
+  return (
+    <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+      <div
+        className="relative text-white mb-8 bg-gray-800 bg-cover bg-center bg-no-repeat rounded-xl overflow-hidden"
+        style={{ backgroundImage: `url(${post.immagine})` }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 max-w-xl p-6 md:p-12">
+          <h1 className="text-3xl font-bold mb-4">{post.titolo}</h1>
+          <p className="mb-4">{post.descrizione}</p>
+          {post.testoLink && (
+            <a href="#" className="text-blue-300 hover:underline">{post.testoLink}</a>
+          )}
+        </div>
+      </div>
+    </div>
+  )
 }

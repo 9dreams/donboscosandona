@@ -1,147 +1,56 @@
-import * as React from "react";
+import Link from 'next/link'
+import { Icon } from '@iconify/react'
 
-import Avatar from "@mui/material/Avatar";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Link from "next/link";
-import Chip from "@mui/material/Chip";
-import CallIcon from "@mui/icons-material/Call";
-import EmailIcon from "@mui/icons-material/Email";
+export default function Team({ members, cardWidth, title, description, maxWidth }) {
+  const lgCols = cardWidth ? Math.round(12 / cardWidth) : 3
 
-const emails = ["username@gmail.com", "user02@gmail.com"];
-
-export default function Team({
-  members,
-  cardWidth,
-  title,
-  description,
-  maxWidth,
-}) {
   return (
-    <Container
-      maxWidth={maxWidth}
-      sx={{ marginTop: "3rem", marginBottom: "5rem" }}
-    >
-      <Grid>
-        <Paper
-          style={{
-            textAlign: "center",
-          }}
-          elevation={0}
-        >
-          <Typography component="h2" variant="h3" color="inherit" gutterBottom>
-            {title}
-          </Typography>
-          <Typography component="h3" color="inherit" paragraph>
-            {description}
-          </Typography>
-        </Paper>
-      </Grid>
-      <Grid container>
-        {members.map((member) => (
-          <Grid item xs={12} lg={cardWidth}>
-            <center>
-              <Avatar
-                style={{ marginTop: "3rem" }}
-                alt=""
+    <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-20" style={{ maxWidth: maxWidth === 'lg' ? '1200px' : '100%' }}>
+      {(title || description) && (
+        <div className="text-center mb-8">
+          {title && <h2 className="text-3xl font-bold mb-4">{title}</h2>}
+          {description && <p className="text-gray-600 dark:text-gray-300">{description}</p>}
+        </div>
+      )}
+      <div className={`grid grid-cols-1 lg:grid-cols-${lgCols} gap-8`}>
+        {members.map((member, i) => (
+          <div key={i} className="flex flex-col items-center text-center">
+            {member.imageUrl && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
                 src={member.imageUrl}
-                sx={{ width: "7rem", height: "7rem" }}
-                component={Paper}
-                elevation={10}
+                alt={member.name || ''}
+                className="w-28 h-28 rounded-full object-cover mt-8 mb-4 shadow-xl"
               />
-              <Paper
-                style={{
-                  textAlign: "center",
-                }}
-                elevation={0}
-              >
-                <Typography
-                  style={{ marginTop: "5%" }}
-                  component="h3"
-                  variant="h5"
-                  color="inherit"
-                  gutterBottom
-                  paragraph
-                >
-                  {member.name}
-                </Typography>
-                <Typography variant="subtitle1" paragraph>
-                  {member.role}
-                </Typography>
-                <Typography variant="subtitle1" color="text.secondary">
-                  {member.description}
-                </Typography>
-                <Typography variant="subtitle1" color="text.secondary">
-                  {member.description1}
-                </Typography>
-
-                <Grid
-                  container
-                  direction="row"
-                  justifyContent="space-evenly"
-                  alignItems="center"
-                >
-                  {member.phone &&
-                    <Chip
-                      icon={<CallIcon />}
-                      label={member.phone}
-                      style={{ marginTop: "1rem" }}
-                      size="small"
-                    />
-                  }
-                  {member.email &&
-                    <Chip
-                      icon={<EmailIcon />}
-                      label={member.email}
-                      style={{ marginTop: "1rem" }}
-                      size="small"
-                    />
-                  }
-                  {member.twitterUrl &&
-                    <Link href={member.twitterUrl} style={{ marginTop: "10%" }}>
-                      <center>
-                        <img
-                          src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg"
-                          width="38"
-                        />
-                      </center>
-                    </Link>
-                  }
-                  {member.googleUrl &&
-                    <Link href={member.googleUrl} style={{ marginTop: "10%" }}>
-                      <center>
-                        <img
-                          src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515395_10840.jpg"
-                          width="35"
-                        />
-                      </center>
-                    </Link>
-                  }
-                  {member.linkedinUrl &&
-                    <Link
-                      href={member.linkedinUrl}
-                      style={{ marginTop: "10%" }}
-                    >
-                      <center>
-                        <img
-                          src="https://goldfollower.com/en/wp-content/uploads/2020/01/linkedin.png"
-                          width="35"
-                        />
-                      </center>
-                    </Link>
-                  }
-                </Grid>
-              </Paper>
-            </center>
-          </Grid>
+            )}
+            {member.name && <h3 className="text-xl font-semibold mb-1">{member.name}</h3>}
+            {member.role && <p className="text-sm mb-2">{member.role}</p>}
+            {member.description && <p className="text-sm text-gray-500 dark:text-gray-400">{member.description}</p>}
+            {member.description1 && <p className="text-sm text-gray-500 dark:text-gray-400">{member.description1}</p>}
+            <div className="flex flex-wrap justify-center gap-2 mt-3">
+              {member.phone && (
+                <span className="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-full border border-gray-200 dark:border-white/20">
+                  <Icon icon="ph:phone" /> {member.phone}
+                </span>
+              )}
+              {member.email && (
+                <span className="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-full border border-gray-200 dark:border-white/20">
+                  <Icon icon="ph:envelope" /> {member.email}
+                </span>
+              )}
+              {member.linkedinUrl && (
+                <Link href={member.linkedinUrl} className="mt-2">
+                  <Icon icon="ph:linkedin-logo" className="text-2xl text-[#0077b5]" />
+                </Link>
+              )}
+            </div>
+          </div>
         ))}
-      </Grid>
-    </Container>
-  );
+      </div>
+    </div>
+  )
 }
 
 Team.defaultProps = {
-  maxWidth: "lg",
-};
+  maxWidth: 'lg',
+}

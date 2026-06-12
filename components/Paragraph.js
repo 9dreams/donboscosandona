@@ -1,141 +1,65 @@
-import { Container, Typography, CardMedia, Box } from '@mui/material'
-
 export default function Paragraph(props) {
+  const titleColor = props.color && props.color !== '#444' ? props.color : '#1976D2'
+
   return (
-    <Container
-      maxWidth={props.maxWidth}
-      sx={{
-        position: 'relative',
-        marginTop: '2rem',
-        marginBottom: '2rem',
-        padding: { xs: '1rem', md: '2rem', lg: '3rem' },
-        textAlign: 'justify',
-        backgroundColor: props.backgroundColor,
-        borderRadius: '1rem',
-        backgroundImage: 'url(' + props.backgroundImageUrl + ')',
+    <div
+      className="relative my-8 rounded-2xl text-justify px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
+      style={{
+        maxWidth: props.maxWidth === 'lg' ? '1200px' : undefined,
+        margin: props.maxWidth === 'lg' ? '2rem auto' : undefined,
+        backgroundColor: props.backgroundColor || undefined,
+        backgroundImage: props.backgroundImageUrl ? `url(${props.backgroundImageUrl})` : undefined,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        ...props.sx,
       }}
     >
-      <Box
-        sx={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          backgroundColor: props.backgroundColor,
-          opacity: props.opacity,
-          borderRadius: '1rem',
-        }}
-      />
-      <Container
-        maxWidth={false}
-        sx={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          backdropFilter: 'blur(' + props.blur + ')',
-        }}
-      />
-      <Container sx={{ position: 'relative', color: props.color }}>
+      {props.backgroundColor && (
+        <div className="absolute inset-0 rounded-2xl" style={{ backgroundColor: props.backgroundColor, opacity: props.opacity }} />
+      )}
+      {props.blur && (
+        <div className="absolute inset-0 rounded-2xl" style={{ backdropFilter: `blur(${props.blur})` }} />
+      )}
+      <div className="relative" style={{ color: props.color }}>
         {props.topImageUrl && (
-          <CardMedia
-            component='img'
-            image={props.topImageUrl}
-            width='100%'
-            sx={{
-              marginBottom: '3rem',
-            }}
-          />
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={props.topImageUrl} alt="" className="w-full mb-12" />
         )}
         {props.title && (
-          <Typography
-            variant='h4'
-            component='h2'
-            gutterBottom
-            sx={{
-              textAlign: { xs: 'center', sm: 'left' },
-              fontFamily: "'Inter Tight', sans-serif",
-              fontWeight: 700,
-              color: props.color && props.color !== '#444' ? props.color : '#1976D2',
-            }}
-          >
+          <h2 className="text-3xl font-bold mb-4 text-center sm:text-left" style={{ color: titleColor }}>
             {props.title}
-          </Typography>
+          </h2>
         )}
         {props.subtitle && (
-          <Typography
-            variant='h5'
-            component='h3'
-            gutterBottom
-            sx={{
-              textAlign: { xs: 'center', sm: 'left' },
-              fontFamily: "'Inter Tight', sans-serif",
-              fontWeight: 600,
-              color: props.color && props.color !== '#444' ? props.color : '#1976D2',
-            }}
-          >
+          <h3 className="text-2xl font-semibold mb-4 text-center sm:text-left" style={{ color: titleColor }}>
             {props.subtitle}
-          </Typography>
+          </h3>
         )}
-        <Container
-          disableGutters={true}
-          sx={{
-            marginTop: '2rem',
-            columnCount: { xs: 1, sm: props.columnCount },
-            columnGap: '3rem',
+        <div
+          className="mt-8"
+          style={{
+            columnCount: props.columnCount > 1 ? props.columnCount : undefined,
+            columnGap: props.columnCount > 1 ? '3rem' : undefined,
           }}
         >
-          <Typography variant='body1' component='div' gutterBottom>
+          <div>
             {props.avatarImageUrl && (
-              <CardMedia
-                component='img'
-                image={props.avatarImageUrl}
-                sx={{
-                  float: 'left',
-                  marginTop: '-1rem',
-                  marginRight: '1rem',
-                  width: '8rem',
-                  borderRadius: '50%',
-                }}
-              />
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={props.avatarImageUrl} alt="" className="float-left -mt-4 mr-4 w-32 rounded-full" />
             )}
             {props.leftImageUrl && (
-              <CardMedia
-                component='img'
-                image={props.leftImageUrl}
-                sx={{
-                  float: 'left',
-                  marginRight: '1rem',
-                  marginBottom: '1rem',
-                  width: '20rem',
-                  borderRadius: '5px',
-                }}
-              />
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={props.leftImageUrl} alt="" className="float-left mr-4 mb-4 w-80 rounded" />
             )}
             {props.rightImageUrl && (
-              <CardMedia
-                component='img'
-                image={props.rightImageUrl}
-                sx={{
-                  float: 'right',
-                  marginLeft: '1rem',
-                  marginBottom: '1rem',
-                  width: '20rem',
-                  borderRadius: '5px',
-                }}
-              />
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={props.rightImageUrl} alt="" className="float-right ml-4 mb-4 w-80 rounded" />
             )}
             {props.children}
-          </Typography>
-        </Container>
-      </Container>
-    </Container>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
