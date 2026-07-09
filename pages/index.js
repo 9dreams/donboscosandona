@@ -117,7 +117,7 @@ export async function getStaticProps() {
   const data = await res.json()
 
   const res_cinema = await fetch(
-    'https://cinema.donboscosandona.it/movie/featured.json'
+    'https://cinema.donboscosandona.it/api/featured'
   )
   let movie_data = await res_cinema.json()
 
