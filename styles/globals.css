@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Kaushan+Script&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Brand variables ─── */
 :root {
   --brand-blue: #1976D2;
   --font-ui: 'Inter Tight', sans-serif;
@@ -22,6 +23,7 @@ html.dark {
   --surface: #181b23;
 }
 
+/* ─── Base ─── */
 html,
 body {
   margin: 0 !important;
@@ -32,67 +34,12 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Titoli di sezione e contenuto: Inter Tight (come navbar) */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.MuiTypography-h1,
-.MuiTypography-h2,
-.MuiTypography-h3,
-.MuiTypography-h4,
-.MuiTypography-h5,
-.MuiTypography-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-ui) !important;
   color: var(--brand-blue);
 }
 
-/* Dark mode: MUI Paper / Card backgrounds */
-html.dark .MuiPaper-root,
-html.dark .MuiCard-root {
-  background-color: var(--surface) !important;
-  color: var(--fg) !important;
-}
-
-html.dark .MuiTypography-body1,
-html.dark .MuiTypography-body2,
-html.dark p {
-  color: var(--fg);
-}
-
-/* Titoli molto grandi: hero, carousel, headline di pagina */
-.title-display,
-.slh-root h1.slh-serif,
-.slh-root .slh-serif .slh-wind {
-  font-family: var(--font-display) !important;
-  letter-spacing: -0.04em;
-}
-
-.title-display {
-  color: var(--brand-blue);
-}
-
-.slh-root h1.slh-serif,
-.slh-root .slh-serif .slh-wind,
-.title-display.text-white {
-  color: #fff !important;
-}
-
-h5,
-h6,
-p,
-a,
-th,
-td,
-li,
-span,
-button,
-input,
-textarea,
-select,
-label {
+h5, h6, p, a, th, td, li, span, button, input, textarea, select, label {
   font-family: var(--font-ui) !important;
 }
 
@@ -103,4 +50,121 @@ a {
 
 a:hover {
   color: #FF9800;
+}
+
+/* ─── Display titles ─── */
+.title-display,
+.slh-root h1.slh-serif,
+.slh-root .slh-serif .slh-wind {
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.04em;
+}
+
+.title-display { color: var(--brand-blue); }
+
+.slh-root h1.slh-serif,
+.slh-root .slh-serif .slh-wind,
+.title-display.text-white {
+  color: #fff !important;
+}
+
+/* ─── Torneo component animations ─── */
+@keyframes torneo-fallRotate {
+  0%   { transform: translateY(-20vh) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
+}
+@keyframes torneo-rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes torneo-rotateY {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
+@keyframes torneo-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.torneo-pizzette {
+  width: 50px; height: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: torneo-fallRotate 10s linear infinite;
+}
+
+.torneo-rotating-images {
+  width: 600px; height: 600px;
+  animation: torneo-rotate 7s linear infinite;
+  position: relative; z-index: 1;
+}
+
+.torneo-pizza-podio {
+  width: 600px; height: 600px;
+  animation: torneo-rotateY 3s linear;
+  position: relative;
+  transform: rotateY(180deg);
+  z-index: 0;
+}
+
+.torneo-punteggio {
+  display: block; font-size: large;
+  position: absolute; top: 48%; left: 49%;
+  transform: translate(-50%, -50%); z-index: 2;
+  background-image: url('/images/pizza/podio.jpg');
+  width: 370px; height: 210px;
+  background-size: cover; background-repeat: no-repeat;
+  opacity: 0; animation: torneo-fadeIn 2s ease-in forwards;
+  border-radius: 30px; box-shadow: 0px 0px 10px 10px crimson;
+}
+
+.torneo-button {
+  background-color: red; font-size: 16px;
+  border-radius: 50px; border: gold 5px solid;
+  padding: 5px; width: 150px; color: white;
+  z-index: 4; position: relative; left: 35%; cursor: pointer;
+}
+.torneo-button:hover {
+  background-color: rgb(131, 33, 33);
+  border-color: rgb(177, 154, 26);
+  color: rgb(172, 164, 164);
+}
+
+.torneo-link-settori { color: white; text-decoration: none; }
+.torneo-link-settori:hover { color: gray; }
+@media (max-width: 768px)  { .torneo-link-settori { font-size: 19px; } }
+@media (min-width: 1024px) { .torneo-link-settori { font-size: 17px; } }
+
+@media (min-width: 300px) {
+  .torneo-rotating-images, .torneo-pizza-podio { width: 250px; height: 250px; }
+  .torneo-pizzette { width: 30px; height: 30px; }
+  .torneo-punteggio { top: 29%; left: 17%; scale: 0.5; }
+  .torneo-button { left: 15%; }
+}
+@media (min-width: 350px) {
+  .torneo-rotating-images, .torneo-pizza-podio { width: 340px; height: 340px; }
+  .torneo-punteggio { top: 28%; left: 51%; transform: translateX(-74%); scale: 0.7; }
+  .torneo-button { left: 27%; }
+}
+@media (min-width: 410px) {
+  .torneo-rotating-images, .torneo-pizza-podio { width: 350px; height: 350px; }
+  .torneo-punteggio { top: 29%; left: 48%; transform: translateX(-74%); scale: 0.7; }
+  .torneo-button { left: 27%; }
+}
+@media (min-width: 720px) {
+  .torneo-rotating-images, .torneo-pizza-podio { width: 500px; height: 500px; }
+  .torneo-punteggio { top: 29%; left: 57%; scale: 0.9; }
+  .torneo-button { left: 27%; }
+}
+@media (min-width: 1200px) {
+  .torneo-rotating-images, .torneo-pizza-podio { width: 400px; height: 400px; }
+  .torneo-punteggio { top: 16%; left: 50%; transform: translateX(-74%); scale: 0.7; }
+  .torneo-button { left: 35%; }
+}
+@media (min-width: 1300px) {
+  .torneo-rotating-images { width: 600px; height: 600px; }
+  .torneo-pizza-podio { width: 600px; height: 600px; }
+  .torneo-punteggio { top: 42%; left: 52%; transform: translate(-50%, -50%); scale: 1; }
+  .torneo-button { left: 35%; }
 }

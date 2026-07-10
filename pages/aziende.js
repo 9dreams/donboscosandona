@@ -1,4 +1,3 @@
-import Container from '@mui/material/Container'
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
@@ -15,7 +14,7 @@ export default function Home() {
                 description="Leggi qua per scoprire di più su gli stage"
                 imageUrl="/images/aziende/img.sfondoA.jpg"
             />
-            <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-12">
 
                 <font face="Verdana">
                 <h2>Settori</h2>
@@ -130,7 +129,7 @@ export default function Home() {
                         Scrivi a Francesco Cicogna: f.cicogna@donboscosandona.it o telefona allo 0421 338 980.
                     </p>
                 </font>
-            </Container>
+            </div>
         </Layout>
     )
 }

@@ -1,5 +1,3 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
 
 
 import Head from 'next/head'
@@ -13,11 +11,6 @@ import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
-import { Typography } from '@mui/material'
-
-
-
-
 let menu = [
     { title: 'Chi siamo', url: '/chi-siamo' },
     { title: 'Contatti', url: '/contatti' },
@@ -66,52 +59,52 @@ export default function Home({ datiArticoli }) {
                 menu={menu}
             /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h3" sx={{ color: 'text.secondary' }}>7.    METODOLOGIE E STRUMENTI DIDATTICI</Typography>
-            </Container><br /><br />
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h3>7.    METODOLOGIE E STRUMENTI DIDATTICI</h3>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>7.1.    Apprendere facendo</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>7.1.    Apprendere facendo</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     La metodologia didattica del nostro CFP si caratterizza per l'applicazione operativa di<br /> conoscenze e abilità acquisite consentendo allo studente di comprendere formule o<br /> regole in un contesto pratico.  A tale proposito il nostro Centro aderisce ad iniziative e<br /> sperimentazioni sia a livello Regionale che Nazionale.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>7.2.    Progetto iPad</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>7.2.    Progetto iPad</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     E’ un’esperienza di innovazione pedagogica e didattica basata su un modello attivo<br /> nel quale l’insegnante, da fornitore di conoscenze, diventa facilitatore di processi di<br /> ricerca e di interazione significativa; è un grande investimento tecnologico che<br /> permette agli studenti di sperimentare modalità didattiche efficaci quali flipped<br /> classroom, il cooperative learning, il peer to peer e altro ancora; è uno stimolo a<br /> realizzare lavori di gruppo interdisciplinari che richiedono l’integrazione di testi,<br /> suoni, video e immagini.<br />
                     L’utilizzo dell’iPad richiede il rispetto di alcune condizioni, sottoscritte a inizio anno da<br /> genitori e giovani.
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>7.3.    Gli stages</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>7.3.    Gli stages</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                     Lo stage rappresenta un momento fondamentale nella formazione professionale<br /> perché punto d’incontro tra formazione e lavoro. È uno strumento indispensabile per<br /> fare esperienza concreta nel settore prescelto, per valutare la predisposizione verso<br /> l’attività intrapresa, per proporsi nel mercato del lavoro con un curriculum arricchito<br /> non solo nella forma (titolo rilasciato), ma soprattutto nella sostanza (competenza<br /> acquisita nella pratica svolta).
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'blue' }}>7.4.    Le attività a sostegno della didattica</Typography>
-            </Container>
-            <Container sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Typography variant="h5" sx={{ color: 'text.secondary' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>7.4.    Le attività a sostegno della didattica</h5>
+            </div>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+                <h5>
                         Iniziative di accoglienza: sono finalizzate ad un sereno inserimento degli allievi.<br /><br />
                         Metodo di studio: ha lo scopo di insegnare come organizzarsi nello studio<br /> (sottolineare, costruire schemi, riassumere, esporre) e nel lavoro.<br />
                         Educazione ambientale: mira a sensibilizzare gli allievi ai problemi ambientali, anche attraverso la proposta di semplici gesti quotidiani.<br />
                         Educazione alla salute: intende sviluppare il senso di responsabilità per la propria e l’altrui salute, promuovendo stili di vita sani.<br />
                         Visite guidate: costituiscono un arricchimento dell’attività didattica e rispondono alle finalità formative e culturali esplicitate dal piano educativo generale.<br />
                         Attività di prevenzione e proposte di solidarietà: incontri informativi in<br /> collaborazione con diverse associazioni del territorio: A.C.A.T. (problema di alcolismo);<br /> SER.D. (dipendenza da droghe); CONSULTORIO (educazione all’affettività e alla<br /> sessualità); A.V.I.S. (donazione del sangue); A.I.D.O. (donazione degli organi); POLIZIA<br /> di STATO (convivenza civile).
-                </Typography>
-            </Container><br /><br />
+                </h5>
+            </div><br /><br />
 
 
 

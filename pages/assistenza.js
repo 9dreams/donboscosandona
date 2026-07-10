@@ -1,13 +1,8 @@
-import Container from '@mui/material/Container'
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
 import Products from '/components/Products'
 import Paragraph from "/components/Paragraph"
-import { Typography } from '@mui/material'
-import Box from '@mui/material/Box'
-import { grey } from '@mui/material/colors'
-
 // Voci del menù per il componente LandingHero
 
 let menu = [
@@ -118,7 +113,7 @@ export default function Home() {
                 imageUrl="/images/privacy/imgsfondo.webp"
                 menu={menu}
             /> */}
-            <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-12">
                 <Paragraph
                     title="Benvenuti nella pagina del centro di assistenza informatica della nostra scuola!"
                     subtitle="Il nostro centro di assistenza informatica è qui per aiutare gli studenti, i docenti e il personale della scuola a risolvere problemi tecnologici e migliorare la loro esperienza di utilizzo della tecnologia nella scuola. Siamo specializzati in problemi informatici che riguardano l'utilizzo di software, hardware e di reti informatiche."
@@ -138,11 +133,11 @@ export default function Home() {
 
                 </Paragraph>
                 <br />
-                <Typography variant="subtitle1" gutterBottom>
+                <p>
                     Il nostro centro assistenza per iPad offre tanti servizi per garantire che i dispositivi degli studenti funzionino correttamente. Siamo in grado di risolvere problemi di connessione Wi-Fi e di configurare le reti in modo che gli studenti possano connettersi facilmente alla rete scolastica.
 
                     Inoltre, offriamo anche una gestione remota per i dispositivi degli studenti. Questo servizio consente di bloccare gli iPad in modo da impedire l'accesso a determinati siti web o applicazioni durante le lezioni, garantendo un ambiente di apprendimento più concentrato e mirato.
-                </Typography>
+                </p>
                 <br />
                 <br />
 
@@ -160,7 +155,7 @@ export default function Home() {
                     >
                         <center><img src="/images/assistenza/valutazioni.png" /></center>
                     </Paragraph>
-            </Container>
+            </div>
         </Layout>
     )
 }

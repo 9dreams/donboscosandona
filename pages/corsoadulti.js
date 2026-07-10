@@ -1,4 +1,3 @@
-import Container from '@mui/material/Container'
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
@@ -70,7 +69,7 @@ export default function Home() {
                 imageUrl="/images/privacy/imgsfondo.webp"
                 menu={menu}
             /> */}
-            <Container maxWidth="lg" sx={{ marginTop: '3rem', marginBottom: '3rem' }}>
+            <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-12">
 
                 <font face="Verdana">
 
@@ -96,7 +95,7 @@ export default function Home() {
                     </p>
 
                 </font>
-            </Container>
+            </div>
             <Products
                 title=""
                 description=""

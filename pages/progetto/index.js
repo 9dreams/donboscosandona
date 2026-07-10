@@ -1,5 +1,3 @@
-import Container from '@mui/material/Container'
-import Grid from '@mui/material/Grid'
 
 import Head from 'next/head'
 import Layout from '/components/Layout'
@@ -11,7 +9,6 @@ import Products from '/components/Products'
 import Testimonials from '/components/Testimonials'
 import Team from '/components/Team'
 import Post from '/components/Post'
-import { Typography } from '@mui/material'
 import Paragraph from '/components/Paragraph'
 
 import { getDatiArticoli } from '/lib/articoli'

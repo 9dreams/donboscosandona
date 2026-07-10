@@ -1,5 +1,3 @@
-import Container from '@mui/material/Container'
-import Link from '@mui/material/Link'
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
@@ -49,14 +47,14 @@ export default function Page({ data }) {
         tel. 392 154 9739
       </Paragraph>
       <Paragraph title='Documentazione utile'>
-        <Link href='http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/6264597'>
+        <a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/6264597">
           Regolamento UE 2016 679. Con riferimenti ai considerando
-        </Link>
+        </a>
         <br />
-        <Link href='http://www.garanteprivacy.it/web/guest/regolamentoue/guida-all-applicazione-del-regolamento-europeo-in-materia-di-protezione-dei-dati-personali'>
+        <a href="http://www.garanteprivacy.it/web/guest/regolamentoue/guida-all-applicazione-del-regolamento-europeo-in-materia-di-protezione-dei-dati-personali">
           Guida all’applicazione del Regolamento europeo in materia di
           protezione dei dati personali
-        </Link>
+        </a>
       </Paragraph>
       <Paragraph
         title='Informativa sul trattamento dei dati personali '

@@ -1,59 +1,19 @@
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import styles from '/components/Products.module.css'
-import Card from '@mui/material/Card'
-import CardActionArea from '@mui/material/CardActionArea'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
+export default function Sponsor({ title, description, cardWidth, cardWidthXs, logos }) {
+  const xsCols = cardWidthXs ? Math.round(12 / cardWidthXs) : 3
+  const smCols = 4
+  const mdCols = cardWidth ? Math.round(12 / cardWidth) : 6
 
-export default function Sponsor({
-  title,
-  description,
-  cardWidth,
-  cardWidthXs,
-  logos,
-}) {
   return (
-    <Container maxWidth='lg'>
-      <Typography
-        text-align='center'
-        style={{ textAlign: 'center' }}
-        component='h3'
-        variant='h3'
-        color='inherit'
-        gutterBottom
-      >
-        {title}
-      </Typography>
-      <Typography
-        variant='subtitle1'
-        style={{ textAlign: 'center', padding: '10px' }}
-        text-align='center'
-        color='text.secondary'
-        paragraph
-      >
-        {description}
-      </Typography>
-      <Grid container>
-        {logos.map((logo) => (
-          <Grid item xs={cardWidthXs} sm={3} md={cardWidth}>
-            <CardMedia
-              component='img'
-              sx={{
-                display: {
-                  xs: 'block',
-                  sm: 'block',
-                  margin: 'auto',
-                },
-                padding: {xs: '0.5rem', sm: '1rem', md: '2rem',}
-              }}
-              image={logo}
-            />
-          </Grid>
+    <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+      {title && <h3 className="text-3xl text-center mb-4">{title}</h3>}
+      {description && <p className="text-center text-gray-500 dark:text-gray-300 mb-6 px-2">{description}</p>}
+      <div className={`grid grid-cols-${xsCols} sm:grid-cols-${smCols} md:grid-cols-${mdCols} gap-2`}>
+        {logos.map((logo, i) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img key={i} src={logo} alt="" className="block mx-auto px-2 sm:px-4 md:px-8 py-2 object-contain w-full" />
         ))}
-      </Grid>
-    </Container>
+      </div>
+    </div>
   )
 }
 
@@ -62,5 +22,4 @@ Sponsor.defaultProps = {
   description: '',
   cardWidth: 2,
   cardWidthXs: 4,
-  borderRadius: '10px',
 }

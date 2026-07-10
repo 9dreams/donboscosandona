@@ -1,74 +1,46 @@
-import {
-  Container,
-  Typography,
-  Card,
-  CardActionArea,
-  CardContent,
-  Chip,
-  Stack,
-} from '@mui/material'
-
 import Image from 'next/image'
 
 function readMore(string, maxWords) {
   if (string) {
-    var strippedString = string.trim()
-    var array = strippedString.split(' ')
-    var wordCount = array.length
-    var string = array.splice(0, maxWords).join(' ')
-
-    if (wordCount > maxWords) {
-      string += '...'
-    }
+    const array = string.trim().split(' ')
+    const wordCount = array.length
+    let result = array.splice(0, maxWords).join(' ')
+    if (wordCount > maxWords) result += '...'
+    return result
   }
-
   return string
 }
 
 export default function ElementsCard({ post, aspectRatio, borderRadius }) {
-  return (
-    <CardActionArea
-      component='a'
-      href={
-        (post.articolo && '/articoli/' + post.id) || post.link || post.allegato
-      }
-      disabled={!post.articolo && !post.link && !post.allegato}
-    >
-      <Container
-        sx={{
-          aspectRatio: aspectRatio,
-          position: 'relative',
-          overflow: 'hidden',
-          borderRadius: borderRadius,
-        }}
-      >
+  const href = (post.articolo && '/articoli/' + post.id) || post.link || post.allegato
+  const isDisabled = !post.articolo && !post.link && !post.allegato
+
+  const inner = (
+    <>
+      <div className="relative overflow-hidden" style={{ aspectRatio, borderRadius }}>
         <Image
           src={post.immagine}
-          alt={post.titolo}
-          style={{
-            width: '100%',
-            display: 'block',
-            objectFit: 'cover',
-          }}
-          fill={true}
-          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          alt={post.titolo || ''}
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-      </Container>
+      </div>
       {(post.titolo || post.abstract) && (
-        <CardContent sx={{ flex: 1 }}>
-          {post.titolo && (
-            <Typography component='h2' variant='h5'>
-              {post.titolo}
-            </Typography>
-          )}
-          {post.abstract && (
-            <Typography variant='subtitle1' paragraph>
-              {readMore(post.abstract, 40)}
-            </Typography>
-          )}
-        </CardContent>
+        <div className="p-3">
+          {post.titolo && <h2 className="text-xl font-semibold mb-1">{post.titolo}</h2>}
+          {post.abstract && <p className="text-sm">{readMore(post.abstract, 40)}</p>}
+        </div>
       )}
-    </CardActionArea>
+    </>
+  )
+
+  if (isDisabled) return <div>{inner}</div>
+
+  return (
+    <a href={href} className="block hover:opacity-90 transition-opacity">
+      {inner}
+    </a>
   )
 }
 

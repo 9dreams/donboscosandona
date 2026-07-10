@@ -1,134 +1,67 @@
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import Link from '@mui/material/Link'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import Toolbar from '@mui/material/Toolbar'
-import Button from '@mui/material/Button'
-
 import { FooterSocialIcon } from '/components/FooterSocialIcons'
 
 export default function Footer(props) {
-    return (
-        <Container
-            maxWidth={true}
-            disableGutters={true}
-        >
-            <Box
-                sx={{
-                    position: 'relative',
-                    top: 0,
-                    bottom: 0,
-                    right: 0,
-                    left: 0,
-                    backgroundColor: props.color,
-                }}
-            >
-                <Container maxWidth="lg">
-                    <Grid container spacing={3}>
-                        { /* Chi siamo */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title1}
-                            </Typography>
-                            <Typography component="h5" color="darkgrey" paragraph>
-                                {props.description1}
-                            </Typography>
-                        </Grid>
+  return (
+    <div style={{ backgroundColor: props.color || '#272727' }}>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div>
+            <h1 className="text-white text-2xl mb-8">{props.title1}</h1>
+            <p className="text-gray-400 text-sm leading-6">{props.description1}</p>
+          </div>
 
-                        { /* Social Feed */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title2}
-                            </Typography>
-                            <Typography component="h1" color="White" >
-                                {
-                                    props.socials.map((social) => (
-                                        <Container sx={{ padding: "0.5rem" }} key={social.url || social.title}>
-                                            <Link
-                                                color="inherit"
-                                                variant="body2"
-                                                href={social.url}
-                                                sx={{ p: 1, flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 1 }}
-                                            >
-                                                <FooterSocialIcon social={social} />
-                                                {social.title}
-                                            </Link>
-                                        </Container>
-                                    ))
-                                }
-                            </Typography>
-                        </Grid>
+          <div>
+            <h1 className="text-white text-2xl mb-8">{props.title2}</h1>
+            <div>
+              {props.socials && props.socials.map((social) => (
+                <div key={social.url || social.title} className="py-2 px-0">
+                  <a
+                    href={social.url}
+                    className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors p-2"
+                  >
+                    <FooterSocialIcon social={social} />
+                    {social.title}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
 
-                        { /* Immagini */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" paddingBottom="2rem">
-                                {props.title3}
-                            </Typography>
-                            <Grid container spacing={2} minHeight={160}>
-                                {
-                                    props.images.map((image) => (
-                                        <Grid item xs={4} display="flex" justifyContent="center" alignItems="center">
-                                            <Link
-                                                color="inherit"
-                                                noWrap
-                                                variant="body2"
-                                                sx={{ p: 1, flexShrink: 3, }}
-                                            >
-                                                <img src={image.imageUrl} width="120" />
-                                            </Link>
-                                        </Grid>
-                                    ))
-                                }
-                            </Grid>
-                        </Grid>
+          <div>
+            <h1 className="text-white text-2xl mb-8">{props.title3}</h1>
+            <div className="grid grid-cols-3 gap-4 min-h-[160px]">
+              {props.images && props.images.map((image, i) => (
+                <div key={i} className="flex items-center justify-center p-2">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={image.imageUrl} alt="" width="120" className="object-contain" />
+                </div>
+              ))}
+            </div>
+          </div>
 
-                        { /* Linea */}
-                        <Grid item xs={12}>
-                            <Typography component="h1">
-                                <hr />
-                            </Typography>
-                        </Grid>
+          <div className="lg:col-span-3">
+            <hr className="border-white/20" />
+          </div>
 
-                        { /* Menù */}
-                        <Grid item xs={12} lg={8}>
-                            <Toolbar
-                                component="nav"
-                                variant="dense"
-                                sx={{
-                                    overflowX: 'auto',
-                                    float: 'right',
-                                    color: '#fff',
-                                }}
-                            >
-                                <Grid container sx={{ marginBottom: '10px', pb: '10px'}}>
-                                    {
-                                        props.menu.map((link) => (
-                                            <Button
-                                                color="inherit"
-                                                noWrap
-                                                key={link.title}
-                                                variant="body2"
-                                                href={link.url}
-                                                sx={{ p: 1, flexShrink: 0, marginRight: '20px' }}
-                                            >
-                                                {link.title}
-                                            </Button>
-                                        ))
-                                    }
-                                </Grid>
-                            </Toolbar>
-                        </Grid>
+          <div className="lg:col-span-2 flex justify-end">
+            <nav className="flex flex-wrap gap-2">
+              {props.menu && props.menu.map((link) => (
+                <a
+                  key={link.title}
+                  href={link.url}
+                  className="px-3 py-2 text-white/80 hover:text-white transition-colors text-sm"
+                >
+                  {link.title}
+                </a>
+              ))}
+            </nav>
+          </div>
 
-                        { /* Copyright */}
-                        <Grid item xs={12} lg={4}>
-                            <Typography component="h1" color="White" sx={{marginLeft: '27px', marginBottom: '15px'}}>
-                                {props.copyright}
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </Box>
-        </Container>
-    )
+          <div className="ml-7 mb-4">
+            <span className="text-white text-sm">{props.copyright}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }

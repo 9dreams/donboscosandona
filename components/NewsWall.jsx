@@ -1,7 +1,5 @@
 import React from 'react'
-import { Container, Button } from '@mui/material'
-import GridViewIcon from '@mui/icons-material/GridView'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import { Icon } from '@iconify/react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -67,7 +65,7 @@ const ActionLabel = ({ post, compact = false }) => {
 
   return (
     <div className={`flex items-center text-[#1976D2] dark:text-[#64B5F6] font-semibold group-hover:underline ${compact ? 'mt-4 text-sm' : 'mt-6'}`}>
-      {label} <ArrowForwardIcon fontSize="small" className="ml-1" />
+      {label} <Icon icon="ph:arrow-right" className="ml-1 inline-block" />
     </div>
   )
 }
@@ -92,7 +90,7 @@ export default function NewsWall({
   ).slice(0, limit)
 
   return (
-    <Container maxWidth="lg" sx={{ my: 8 }}>
+    <div className="max-w-[1200px] mx-auto px-4 md:px-8 my-16">
       <div className="mb-8">
         <div>
           <div 
@@ -265,32 +263,13 @@ export default function NewsWall({
       </div>
 
       <div className="mt-12 flex justify-center">
-        <Button 
-          variant="outlined" 
-          endIcon={<GridViewIcon />}
+        <a
           href="/news"
-          sx={{
-            borderRadius: '2rem',
-            padding: '10px 30px',
-            border: '2px solid #1976D2',
-            color: '#1976D2',
-            fontWeight: 'bold',
-            textTransform: 'none',
-            fontSize: '1rem',
-            boxSizing: 'border-box',
-            '&:hover': {
-              border: '2px solid #1976D2',
-              backgroundColor: '#1976D2',
-              color: '#fff',
-            },
-            '&:focus-visible': {
-              border: '2px solid #1976D2',
-            },
-          }}
+          className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-[#1976D2] text-[#1976D2] font-bold text-base hover:bg-[#1976D2] hover:text-white transition-colors"
         >
-          Vedi tutte le notizie
-        </Button>
+          Vedi tutte le notizie <Icon icon="ph:grid-four" />
+        </a>
       </div>
-    </Container>
+    </div>
   )
 }

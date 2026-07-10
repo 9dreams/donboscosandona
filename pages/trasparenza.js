@@ -4,8 +4,6 @@ import LandingHero from '/components/LandingHero.js'
 import Paragraph from '/components/Paragraph'
 import News from '/components/News'
 
-import {Button, Container} from '@mui/material/'
-
 export default function Home({ data }) {
   return (
     <Layout>
@@ -26,11 +24,11 @@ export default function Home({ data }) {
         <br />
         C.F. 80015710306 P.IVA 01845730306
       </Paragraph>
-      <Container>
-        <Button variant='contained' href='/whistleblowing'>
-        Whistleblowing - Segnalazione illeciti
-      </Button>
-      </Container>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+        <a href="/whistleblowing" className="inline-block px-6 py-2 bg-[#1976D2] text-white rounded-full font-bold hover:bg-[#1565C0] transition-colors">
+          Whistleblowing - Segnalazione illeciti
+        </a>
+      </div>
       
       <News title={null} data={data} limit={30} />
     </Layout>

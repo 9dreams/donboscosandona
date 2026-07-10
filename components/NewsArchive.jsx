@@ -2,10 +2,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import { Icon } from '@iconify/react'
 
 import NewsArchiveHero from './NewsArchiveHero'
 
@@ -72,7 +69,7 @@ function NewsCard({ post, hiddenTagList = [] }) {
       <div className="p-6 flex flex-col flex-grow">
         {/* Date */}
         <div className="flex items-center gap-2 mb-3">
-          <CalendarTodayIcon sx={{ fontSize: 16, color: '#717783' }} />
+          <Icon icon="ph:calendar-blank" className="text-base text-[#717783]" />
           <span className="text-sm text-[#717783] dark:text-gray-400" style={bodyStyle}>
             {post.pubblicazione}
           </span>
@@ -104,7 +101,7 @@ function NewsCard({ post, hiddenTagList = [] }) {
             >
               {label}
             </span>
-            <ArrowForwardIcon sx={{ color: '#1976D2', fontSize: 20 }} />
+            <Icon icon="ph:arrow-right" className="text-[#1976D2]" />
           </div>
         )}
       </div>
@@ -128,7 +125,7 @@ function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
         disabled={page === 1}
         className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        <ChevronLeftIcon sx={{ fontSize: 20 }} />
+        <Icon icon="ph:caret-left" />
       </button>
 
       {pageNumbers.map((p, i) =>
@@ -157,7 +154,7 @@ function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
         disabled={page === totalPages}
         className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        <ChevronRightIcon sx={{ fontSize: 20 }} />
+        <Icon icon="ph:caret-right" />
       </button>
     </nav>
   )

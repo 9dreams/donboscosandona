@@ -1,12 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { Container } from "@mui/material";
 
 export default function INostriNumeri() {
   const targetCounts = [68, 43, 15, 432, 533, 98.7, 93.4, 98];
   const animationDuration = 3000;
   const [counts, setCounts] = useState(targetCounts.map(() => 0));
   const [hasAnimated, setHasAnimated] = useState(false);
-
   const containerRef = useRef(null);
 
   const cardImages = [
@@ -21,35 +19,23 @@ export default function INostriNumeri() {
   ];
 
   const labels = [
-    "anni di attività",
-    "formatori/educatori per i nostri ragazzi",
-    "I nostri laboratori ",
-    " I nostri iscritti",
-    "Collaborazioni con le aziende",
-    "Feedback delle aziende sullo stage",
-    "Raggiungimento obiettivi e potenziale dello stage",
-    "Gradimento famiglie",
+    "anni di attività", "formatori/educatori per i nostri ragazzi", "I nostri laboratori",
+    " I nostri iscritti", "Collaborazioni con le aziende", "Feedback delle aziende sullo stage",
+    "Raggiungimento obiettivi e potenziale dello stage", "Gradimento famiglie",
   ];
 
   const animateCount = (index, target) => {
     const startTime = performance.now();
     const animate = (currentTime) => {
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / animationDuration, 1);
-
+      const progress = Math.min((currentTime - startTime) / animationDuration, 1);
       setCounts((prevCounts) => {
         const newCounts = [...prevCounts];
-        if (Number.isInteger(targetCounts[index])) {
-          newCounts[index] = Math.floor(progress * target);
-        } else {
-          newCounts[index] = Math.round(progress * target * 10) / 10;
-        }
+        newCounts[index] = Number.isInteger(targetCounts[index])
+          ? Math.floor(progress * target)
+          : Math.round(progress * target * 10) / 10;
         return newCounts;
       });
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
+      if (progress < 1) requestAnimationFrame(animate);
     };
     requestAnimationFrame(animate);
   };
@@ -57,30 +43,20 @@ export default function INostriNumeri() {
   useEffect(() => {
     const animateAll = () => {
       setHasAnimated(true);
-      targetCounts.forEach((target, index) => {
-        animateCount(index, target);
-      });
+      targetCounts.forEach((target, index) => animateCount(index, target));
     };
 
-    const options = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting && !hasAnimated) {
-        animateAll();
-      }
-    }, options);
+    const observer = new IntersectionObserver(
+      (entries) => { if (entries[0].isIntersecting && !hasAnimated) animateAll(); },
+      { threshold: 0.1 }
+    );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    if (containerRef.current) observer.observe(containerRef.current);
 
     const fallbackCheck = () => {
       if (!containerRef.current || hasAnimated) return;
-
       const rect = containerRef.current.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        animateAll();
-      }
+      if (rect.top < window.innerHeight && rect.bottom > 0) animateAll();
     };
 
     window.addEventListener("scroll", fallbackCheck);
@@ -88,37 +64,25 @@ export default function INostriNumeri() {
     fallbackCheck();
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
+      if (containerRef.current) observer.unobserve(containerRef.current);
       observer.disconnect();
       window.removeEventListener("scroll", fallbackCheck);
       window.removeEventListener("resize", fallbackCheck);
     };
-  }, [hasAnimated, targetCounts, animationDuration]);
+  }, [hasAnimated]);
 
   return (
-    <Container
-      maxWidth="lg"
-      sx={{
-        marginTop: "1rem",
-        marginBottom: "8rem",
-      }}
-      ref={containerRef}
-    >
+    <div className="max-w-[1200px] mx-auto px-4 mt-4 mb-32" ref={containerRef}>
       <div className="flex justify-center items-center px-4 sm:px-6 lg:px-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center w-full max-w-screen-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center w-full">
           {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
             <div key={index} className="w-full flex justify-center px-2">
               <div className="w-full max-w-2xl h-[420px] mt-3 rounded-3xl bg-white dark:bg-[#181b23] transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:border-violet-800 dark:hover:border-[#64B5F6] border border-sky-300 dark:border-white/10 flex flex-col items-center justify-center p-6 shadow-md dark:shadow-black/30">
                 <div className="flex justify-center mb-6">
                   <div className="relative w-[160px] h-[160px] bg-sky-500 dark:bg-sky-600 rounded-full border border-sky-300 dark:border-sky-500">
-                    <div className="w-[140px] h-[125px] bg-sky-500 dark:bg-sky-600 object-contain rounded-full z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <img
-                        src={cardImages[index]}
-                        className="w-full h-full object-contain rounded-full"
-                        alt={`Card ${index + 1}`}
-                      />
+                    <div className="w-[140px] h-[125px] bg-sky-500 dark:bg-sky-600 rounded-full z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={cardImages[index]} className="w-full h-full object-contain rounded-full" alt={`Card ${index + 1}`} />
                     </div>
                   </div>
                 </div>
@@ -129,10 +93,7 @@ export default function INostriNumeri() {
                     : counts[index].toFixed(1).replace(/\.0+$/, "")}
                   {(index === 5 || index === 6 || index === 7) && "%"}
                 </h2>
-                <h3
-                  className="text-center text-base sm:text-lg md:text-2xl mt-[5px] min-h-[48px] text-gray-600 dark:text-gray-300 leading-snug"
-                  style={{ fontWeight: "normal" }}
-                >
+                <h3 className="text-center text-base sm:text-lg md:text-2xl mt-[5px] min-h-[48px] text-gray-600 dark:text-gray-300 leading-snug font-normal">
                   {labels[index].toLowerCase()}
                 </h3>
               </div>
@@ -140,6 +101,6 @@ export default function INostriNumeri() {
           ))}
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
