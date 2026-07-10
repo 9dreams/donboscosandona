@@ -280,7 +280,7 @@ export async function getStaticProps() {
   const data = await res.json()
 
   res = await fetch(
-    'https://cinema.donboscosandona.it/movie/featured.json'
+    'https://cinema.donboscosandona.it/api/featured'
   )
   let movie_data = await res.json()
   movie_data = movie_data.filter((movie) => movie.hero_path)
