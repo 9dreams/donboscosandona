@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 
 import { Featured } from '/components'
+import { stripTag } from '/lib/posts'
 
 export default function Schermo({data0}) {
   const [data, setData] = useState(data0)
@@ -41,7 +42,7 @@ export default function Schermo({data0}) {
             titolo: post.immagine_schermo ? '' : post.titolo,
             abstract: post.immagine_schermo ? '' : post.abstract,
             immagine: post.immagine_schermo || post.immagine,
-            tag: post.immagine_schermo ? '' : post.tag,
+            tag: post.immagine_schermo ? '' : stripTag(post.tag, 'screen'),
             articolo: '',
             link: '',
             allegato: null,

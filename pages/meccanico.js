@@ -9,6 +9,7 @@ import {
   Sponsor,
   Table,
 } from "/components";
+import { excludeTag } from '/lib/posts'
 
 export default function Home({ data }) {
   return (
@@ -115,7 +116,7 @@ export async function getStaticProps() {
   const res = await fetch(
     "https://channels.donboscosandona.it/api/posts/inoratorio?q=meccanico"
   );
-  const data = await res.json();
+  const data = excludeTag(await res.json(), 'screen');
 
   return {
     props: { data },

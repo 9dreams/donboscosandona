@@ -5,6 +5,7 @@ import Products from '/components/Products'
 import Paragraph from '@/components/Paragraph'
 import Image from 'next/image'
 import { NewsWall } from '/components';
+import { excludeTag } from '/lib/posts'
 
 // Voci del menù per il componente LandingHero
 
@@ -162,7 +163,7 @@ export async function getStaticProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio?q=pastorale'
   )
-  const data = await res.json()
+  const data = excludeTag(await res.json(), 'screen')
 
   return {
     props: { data },

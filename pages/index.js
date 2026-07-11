@@ -20,6 +20,7 @@ import {
 } from '/components'
 
 import INostriNumeri from '/cc/INostriNumeri'
+import { excludeTag } from '/lib/posts'
 import { slides, domande_test } from '../data/homePage'
 
 // I punti di forza
@@ -277,7 +278,7 @@ export async function getStaticProps() {
   let res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio?q=scuola'
   )
-  const data = await res.json()
+  const data = excludeTag(await res.json(), 'screen')
 
   res = await fetch(
     'https://cinema.donboscosandona.it/api/featured'
