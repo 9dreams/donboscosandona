@@ -22,6 +22,7 @@ import {
   Credits,
   Test,
 } from '/components'
+import { excludeTag } from '/lib/posts'
 
 export default function Home({ data, elementi }) {
   return (
@@ -234,7 +235,7 @@ export async function getStaticProps() {
   let res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio'
   )
-  const data = await res.json()
+  const data = excludeTag(await res.json(), 'screen')
 
   res = await fetch(
     'https://channels.donboscosandona.it/api/posts/donboscosandona_elements'

@@ -20,6 +20,7 @@ import {
   NocturnalHero,
   Credits,
 } from '/components'
+import { excludeTag } from '/lib/posts'
 
 export default function Home({ data, movies }) {
   return (
@@ -114,7 +115,7 @@ export async function getStaticProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio'
   )
-  const data = await res.json()
+  const data = excludeTag(await res.json(), 'screen')
 
   const res_cinema = await fetch(
     'https://cinema.donboscosandona.it/api/featured'

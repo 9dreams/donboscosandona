@@ -21,6 +21,8 @@ import {
   Sponsor,
   Elements,
 } from '/components'
+import { excludeTag } from '/lib/posts'
+
 const slides = [
   {
     titolo: 'ADS',
@@ -449,7 +451,7 @@ export async function getStaticProps() {
   let res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio'
   )
-  const data = await res.json()
+  const data = excludeTag(await res.json(), 'screen')
 
   res = await fetch(
     'https://channels.donboscosandona.it/api/posts/donboscosandona_elements'

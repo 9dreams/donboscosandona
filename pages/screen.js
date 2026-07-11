@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Head from 'next/head'
 
 import { NocturnalHeroScreen } from '/components'
+import { stripTag } from '/lib/posts'
 
 const theme = createTheme()
 
@@ -47,7 +48,7 @@ export default function Schermo({data0}) {
             abstract: post.immagine_schermo ? '' : post.abstract,
             immagine: post.immagine_schermo || post.immagine,
             immagine_mobile: null,
-            tag: post.immagine_schermo ? '' : post.tag,
+            tag: post.immagine_schermo ? '' : stripTag(post.tag, 'screen'),
             articolo: '',
             link: '',
             allegato: null,

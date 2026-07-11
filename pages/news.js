@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Layout } from '/components'
 import NewsArchive from '/components/NewsArchive'
+import { excludeTag } from '/lib/posts'
 
 export default function NewsPage({ data }) {
   return (
@@ -23,7 +24,7 @@ export default function NewsPage({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio')
-  const data = await res.json()
+  const data = excludeTag(await res.json(), 'screen')
 
   return {
     props: { data },
