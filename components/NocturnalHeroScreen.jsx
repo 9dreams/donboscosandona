@@ -67,7 +67,9 @@ function NocturnalSlide({ post, defaultTag, hideButton }) {
         </div>
       )}
 
-      <div className="pointer-events-none absolute inset-0 z-[1] bg-black/35" />
+      {hasCaption && (
+        <div className="pointer-events-none absolute inset-0 z-[1] bg-black/35" />
+      )}
 
       {hasCaption && (
         <div className="relative z-10 flex h-full min-h-[100svh] items-center justify-center px-6 pb-10 pt-6 text-center">
