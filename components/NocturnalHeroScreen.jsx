@@ -81,7 +81,7 @@ function NocturnalSlide({ post, defaultTag, hideButton }) {
             )}
 
             {post.titolo && (
-              <h1 className="nhs-reveal nhs-serif mt-6 text-[clamp(3.2rem,9vw,8.5rem)] leading-[.84] tracking-[-.07em] text-white drop-shadow-[0_10px_20px_rgba(0,0,0,.8)]">
+              <h1 className="nhs-reveal nhs-serif mt-6 text-[clamp(2.4rem,6.5vw,5.5rem)] leading-[.9] tracking-[-.05em] text-white drop-shadow-[0_10px_20px_rgba(0,0,0,.8)]">
                 {post.titolo}
               </h1>
             )}
