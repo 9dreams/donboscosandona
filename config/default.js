@@ -17,6 +17,7 @@ export const menu = [
     { title: 'Informatico', url: '/informatico' },
     { title: 'Meccanico', url: '/meccanico' },
     { title: 'Automotive', url: '/automotive' },
+    { title: 'Acquisto iPad', url: '/ipad' },
     { title: 'Trasparenza', url: '/trasparenza' },
     { title: 'Privacy', url: '/privacy' },
 ]
