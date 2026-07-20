@@ -48,7 +48,13 @@ export default function LandingHero(props) {
               ref={heroImgRef}
               src={props.imageUrl}
               alt={props.title || ''}
-              className="slh-hero-img absolute inset-0 h-full w-full object-cover brightness-[1.05] saturate-[1.3] contrast-[1.1]"
+              className={`slh-hero-img absolute inset-0 h-full w-full object-cover ${
+                {
+                  right: 'max-md:object-right',
+                  left: 'max-md:object-left',
+                  center: 'max-md:object-center',
+                }[props.mobileObjectPosition] || ''
+              } brightness-[1.05] saturate-[1.3] contrast-[1.1]`}
             />
           </picture>
           <div className="slh-hero-color-overlay absolute inset-0" />
