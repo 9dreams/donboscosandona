@@ -196,7 +196,7 @@ export default function IpadPage() {
           </h2>
         </div>
         <p className="text-lg leading-8 mb-6">
-          In alternativa a Unieuro, la Scuola mette a disposizione il portale convenzionato{' '}
+          In alternativa a Unieuro, è disponibile il portale convenzionato{' '}
           <a
             href="https://donboscosandona.mrdigital.it/"
             target="_blank"
@@ -423,7 +423,7 @@ export default function IpadPage() {
             Hai bisogno di altre informazioni?
           </h2>
           <p className="text-base md:text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Per qualsiasi dubbio sull'acquisto, sulla convenzione o sulla configurazione dell'iPad,
+            Per qualsiasi dubbio sull'acquisto o sulla configurazione dell'iPad,
             scrivete sempre a{' '}
             <a href="mailto:assistenza@donboscosandona.it" className="font-semibold">
               assistenza@donboscosandona.it

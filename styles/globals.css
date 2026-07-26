@@ -36,20 +36,27 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-ui) !important;
-  color: var(--brand-blue);
 }
 
 h5, h6, p, a, th, td, li, span, button, input, textarea, select, label {
   font-family: var(--font-ui) !important;
 }
 
-a {
-  color: var(--brand-blue);
-  text-decoration: none;
-}
+/* Colori di default in @layer base: così le utility Tailwind (text-white, ecc.)
+   possono sovrascriverli — le regole fuori layer vincerebbero sempre. */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--brand-blue);
+  }
 
-a:hover {
-  color: #FF9800;
+  a {
+    color: var(--brand-blue);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #FF9800;
+  }
 }
 
 /* ─── Display titles ─── */
