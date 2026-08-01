@@ -14,7 +14,11 @@ export default function News({ title, data, limit, defaultTag, aspectRatio }) {
 
   return (
     <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-20 mb-24">
-      {title && <h2 className="text-3xl font-bold mb-8 text-left">{title}</h2>}
+      {title && (
+        <h2 className="text-3xl font-bold mb-8 text-left text-[var(--fg)] uppercase tracking-wide">
+          {title}
+        </h2>
+      )}
       <Swiper
         modules={[Pagination, Autoplay]}
         autoplay

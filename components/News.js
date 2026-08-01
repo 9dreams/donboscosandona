@@ -9,7 +9,11 @@ export default function News({ title, data, limit, defaultTag, aspectRatio }) {
 
   return (
     <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-20 mb-24">
-      {title && <h2 className="text-3xl font-bold text-left pb-8">{title}</h2>}
+      {title && (
+        <h2 className="text-3xl font-bold text-left pb-8 text-[var(--fg)]">
+          {title}
+        </h2>
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {data.map((post, i) => (
           <NewsCard key={i} post={post} defaultTag={defaultTag} aspectRatio={aspectRatio} />
