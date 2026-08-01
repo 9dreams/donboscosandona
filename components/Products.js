@@ -17,7 +17,7 @@ export default function Products({ title, description, cardWidth, cardWidthXs, p
           <a
             key={i}
             href={product.url || undefined}
-            className={product.url ? 'block' : 'block pointer-events-none'}
+            className={`block text-[var(--fg)] no-underline ${product.url ? '' : 'pointer-events-none'}`}
           >
             <div className="flex flex-col">
               <div className="relative overflow-hidden" style={{ borderRadius, aspectRatio }}>
@@ -29,22 +29,28 @@ export default function Products({ title, description, cardWidth, cardWidthXs, p
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              <div className="p-3 relative">
+              <div className="p-3 relative text-[var(--fg)]">
                 {product.title && (
-                  <h4 className="text-center text-lg font-semibold mb-1">{product.title}</h4>
+                  <h4 className="text-center text-lg font-semibold mb-1 text-[var(--fg)]">
+                    {product.title}
+                  </h4>
                 )}
                 {product.category && (
-                  <p className="text-center text-sm text-gray-500 dark:text-gray-400">{product.category}</p>
+                  <p className="text-center text-sm text-gray-500 dark:text-gray-400">
+                    {product.category}
+                  </p>
                 )}
                 {product.description && (
-                  <p className="text-sm p-2">{product.description}</p>
+                  <p className="text-sm p-2 text-gray-700 dark:text-gray-300">
+                    {product.description}
+                  </p>
                 )}
                 {product.rif && (
                   <div
                     className="text-right px-2 absolute bottom-0 right-0"
                     style={{ backgroundColor: product.labelColor }}
                   >
-                    <p className="text-sm">{product.rif}</p>
+                    <p className="text-sm text-[var(--fg)]">{product.rif}</p>
                   </div>
                 )}
               </div>

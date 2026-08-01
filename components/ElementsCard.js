@@ -27,18 +27,27 @@ export default function ElementsCard({ post, aspectRatio, borderRadius }) {
         />
       </div>
       {(post.titolo || post.abstract) && (
-        <div className="p-3">
-          {post.titolo && <h2 className="text-xl font-semibold mb-1">{post.titolo}</h2>}
-          {post.abstract && <p className="text-sm">{readMore(post.abstract, 40)}</p>}
+        <div className="p-3 text-[var(--fg)]">
+          {post.titolo && (
+            <h2 className="text-xl font-semibold mb-1 text-[var(--fg)]">{post.titolo}</h2>
+          )}
+          {post.abstract && (
+            <p className="text-sm text-gray-700 dark:text-gray-300">
+              {readMore(post.abstract, 40)}
+            </p>
+          )}
         </div>
       )}
     </>
   )
 
-  if (isDisabled) return <div>{inner}</div>
+  if (isDisabled) return <div className="text-[var(--fg)]">{inner}</div>
 
   return (
-    <a href={href} className="block hover:opacity-90 transition-opacity">
+    <a
+      href={href}
+      className="block text-[var(--fg)] no-underline hover:opacity-90 transition-opacity"
+    >
       {inner}
     </a>
   )
