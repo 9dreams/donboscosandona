@@ -1,5 +1,3 @@
-import { Container, Grid, Typography } from '@mui/material'
-
 import { Pagination, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css/bundle'
@@ -15,16 +13,12 @@ export default function News({ title, data, limit, defaultTag, aspectRatio }) {
   data.splice(limit)
 
   return (
-    <Container maxWidth='lg' sx={{ marginTop: '5rem', marginBottom: '6rem' }}>
-      <Typography
-        style={{ textAlign: 'left', paddingBottom: '2rem' }}
-        component='h2'
-        variant='h4'
-        color='inherit'
-        gutterBottom
-      >
-        {title}
-      </Typography>
+    <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-20 mb-24">
+      {title && (
+        <h2 className="text-3xl font-bold mb-8 text-left text-[var(--fg)] uppercase tracking-wide">
+          {title}
+        </h2>
+      )}
       <Swiper
         modules={[Pagination, Autoplay]}
         autoplay
@@ -32,23 +26,17 @@ export default function News({ title, data, limit, defaultTag, aspectRatio }) {
         slidesPerView={1}
         spaceBetween={10}
         breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
+          640: { slidesPerView: 2, spaceBetween: 15 },
+          1024: { slidesPerView: 3, spaceBetween: 20 },
         }}
       >
-        {data.map((post) => (
-          <SwiperSlide>
+        {data.map((post, i) => (
+          <SwiperSlide key={i}>
             <NewsCard post={post} defaultTag={defaultTag} aspectRatio={aspectRatio} />
           </SwiperSlide>
         ))}
       </Swiper>
-    </Container>
+    </div>
   )
 }
 

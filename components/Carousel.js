@@ -1,231 +1,122 @@
-import Carousel from 'react-material-ui-carousel'
-import {
-  Paper,
-  Button,
-  Box,
-  Grid,
-  Typography,
-  Container,
-  Stack,
-  Chip,
-} from '@mui/material'
-import styles from './Carousel.module.css'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 import Image from 'next/image'
 
 function readMore(string, maxWords) {
   if (string) {
-    var strippedString = string.trim()
-    var array = strippedString.split(' ')
-    var wordCount = array.length
-    var string = array.splice(0, maxWords).join(' ')
-
-    if (wordCount > maxWords) {
-      string += '...'
-    }
+    const array = string.trim().split(' ')
+    const wordCount = array.length
+    let result = array.splice(0, maxWords).join(' ')
+    if (wordCount > maxWords) result += '...'
+    return result
   }
-
   return string
 }
 
-export default function MyCarousel({
-  slides,
-  maxWidth,
-  height,
-  animation,
-  interval,
-  duration,
-  defaultTag,
-  captionMode,
-  hideButton,
-}) {
-  const forceDesktopCaption = captionMode === 'desktop'
-  const forceScreenCaption = captionMode === 'screen'
-
+export default function MyCarousel({ slides, height, animation, interval, duration, defaultTag }) {
   return (
-    <Container
-      maxWidth={maxWidth}
-      disableGutters={true}
-      sx={{
-        border: '300px',
-        marginBottom: '2rem',
-      }}
-    >
-      <Carousel
-        className={styles.carousel}
-        interval={interval}
-        duration={duration}
-        animation={animation}
-        stopAutoPlayOnHover={false}
-        sx={{ height: height + 'vh' }}
+    <div className="relative mb-8 w-full">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: interval, disableOnInteraction: false }}
+        speed={duration}
+        loop
+        className="w-full"
+        style={{ height: `${height}vh` }}
       >
-        {slides.map((slide) => (
-          <Paper
-            className={styles.slide}
-            sx={{
-              position: 'relative',
-              overflow: 'hidden',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              height: height + 'vh',
-              paddingTop: height / 2 - 10 + 'vh',
-            }}
-            elevation={5}
-          >
-            <Container
-              className='hidden lg:block'
-              maxWidth={false}
-              sx={{
-                position: 'absolute',
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                src={slide.immagine}
-                alt={slide.titolo}
-                style={{
-                  width: '100%',
-                  display: 'block',
-                  objectFit: 'cover',
-                }}
-                fill={true}
-                sizes='100vw'
-              />
-            </Container>
-            <Container
-              className='block lg:hidden'
-              maxWidth={false}
-              sx={{
-                position: 'absolute',
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                src={(slide.immagine_mobile || slide.immagine)}
-                alt={slide.titolo}
-                style={{
-                  width: '100%',
-                  display: 'block',
-                  objectFit: 'cover',
-                }}
-                fill={true}
-                sizes='100vw'
-              />
-            </Container>
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                opacity: slide.opacity,
-                background:
-                  !slide.titolo ||
-                  `linear-gradient(${
-                    slide.colore2 || slide.colore || 'transparent'
-                  }, ${slide.colore || 'black'})`,
-              }}
-            />
-            <Container
-              maxWidth={false}
-              sx={{
-                position: 'absolute',
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                backdropFilter: 'blur(' + slide.blur + ')',
-              }}
-            />
-            <Container maxWidth='lg'>
-              <Grid container>
-                <Grid item md={8}>
-                  <Box
-                    sx={{
-                      position: forceScreenCaption
-                        ? 'absolute'
-                        : forceDesktopCaption
-                          ? 'relative'
-                          : { xs: 'absolute', md: 'relative' },
-                      left: forceScreenCaption ? 0 : 'auto',
-                      right: forceScreenCaption ? 0 : 'auto',
-                      bottom: forceScreenCaption
-                        ? { xs: '2rem', md: '2rem' }
-                        : forceDesktopCaption
-                          ? 'auto'
-                          : { xs: '3rem' },
-                      marginTop: forceScreenCaption
-                        ? 0
-                        : forceDesktopCaption
-                          ? '12rem'
-                          : { md: '12rem' },
-                      maxWidth: forceScreenCaption ? { xs: '100%', md: '60%' } : 'none',
-                      maxHeight: forceScreenCaption ? 'calc(100vh - 6rem)' : 'none',
-                      overflow: forceScreenCaption ? 'hidden' : 'visible',
-                      p: { xs: 3, md: 6 },
-                      pr: { md: 0 },
-                    }}
-                  >
-                    {slide.tag && slide.tag != defaultTag && (
-                      <Stack direction='row' spacing={1} marginBottom={2}>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full h-full overflow-hidden">
+              {/* Desktop image */}
+              <div className="hidden lg:block absolute inset-0">
+                <Image
+                  src={slide.immagine}
+                  alt={slide.titolo || ''}
+                  fill
+                  style={{ objectFit: 'cover', color: 'white' }}
+                  sizes="100vw"
+                />
+              </div>
+              {/* Mobile image */}
+              <div className="block lg:hidden absolute inset-0">
+                <Image
+                  src={slide.immagine_mobile || slide.immagine}
+                  alt={slide.titolo || ''}
+                  fill
+                  style={{ objectFit: 'cover', color: 'white' }}
+                  sizes="100vw"
+                />
+              </div>
+
+              {/* Gradient overlay */}
+              {slide.titolo && (
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    opacity: slide.opacity || 1,
+                    background: `linear-gradient(${slide.colore2 || slide.colore || 'transparent'}, ${slide.colore || 'black'})`,
+                  }}
+                />
+              )}
+              {/* Blur overlay */}
+              {slide.blur && (
+                <div className="absolute inset-0" style={{ backdropFilter: `blur(${slide.blur})` }} />
+              )}
+
+              {/* Content */}
+              <div className="absolute inset-0 flex items-end md:items-center">
+                <div className="max-w-[1200px] mx-auto w-full px-4 md:px-8">
+                  <div className="max-w-2xl pb-12 md:pb-0 md:mt-48">
+                    {/* Tags */}
+                    {slide.tag && slide.tag !== defaultTag && (
+                      <div className="flex gap-2 mb-4 flex-wrap">
                         {slide.tag.split(',').map((tag) => (
-                          <Chip key={tag} label={tag} color='primary' />
+                          <span key={tag} className="px-3 py-1 bg-[#1976D2] text-white text-xs font-bold rounded-full uppercase">
+                            {tag}
+                          </span>
                         ))}
-                      </Stack>
+                      </div>
                     )}
-                    <Typography
-                      component='h2'
-                      variant='h3'
-                      color='inherit'
-                      gutterBottom
-                    >
+                    {/* Title */}
+                    <h2 className="title-display text-white mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: 1.1, letterSpacing: '-0.04em' }}>
                       {slide.titolo}
-                    </Typography>
-                    <Typography component='h5' color='inherit' paragraph>
-                      {readMore(slide.descrizione, 50)}
-                    </Typography>
-                    {!hideButton && slide.buttonUrl && (
-                      <Button
-                        variant='contained'
-                        size='large'
-                        color='error'
+                    </h2>
+                    {/* Description */}
+                    {slide.descrizione && (
+                      <p className="text-white/80 text-base mb-4">
+                        {readMore(slide.descrizione, 50)}
+                      </p>
+                    )}
+                    {/* Button */}
+                    {slide.buttonUrl && (
+                      <a
                         href={slide.buttonUrl}
-                        sx={{
-                          marginTop: '1rem',
-                          borderRadius: '2rem',
-                        }}
+                        className="mt-4 inline-block px-6 py-3 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-colors"
                       >
                         {slide.buttonText}
-                      </Button>
+                      </a>
                     )}
-                  </Box>
-                </Grid>
-              </Grid>
-            </Container>
-          </Paper>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
         ))}
-      </Carousel>
-    </Container>
+      </Swiper>
+    </div>
   )
 }
 
 MyCarousel.defaultProps = {
-  maxWidth: false,
   height: 90,
   animation: 'slide',
   interval: 7000,
-  duration: 3000,
+  duration: 1000,
   defaultTag: '',
-  captionMode: 'responsive',
-  hideButton: false,
 }

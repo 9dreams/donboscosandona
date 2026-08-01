@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import CssBaseline from '@mui/material/CssBaseline'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
-import Head from 'next/head'
-
 import { NocturnalHeroScreen } from '/components'
 import { stripTag } from '/lib/posts'
-
-const theme = createTheme()
 
 export default function Schermo({data0}) {
   const [data, setData] = useState(data0)
@@ -34,37 +28,34 @@ export default function Schermo({data0}) {
   }, [])
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div
-        style={{ backgroundColor: 'black', height: '100vh', cursor: 'none' }}
-      >
-        { data && (
-        <NocturnalHeroScreen
-          data={data.map((post) => ({
-            ...post,
-            in_evidenza: true,
-            titolo: post.immagine_schermo ? '' : post.titolo,
-            abstract: post.immagine_schermo ? '' : post.abstract,
-            immagine: post.immagine_schermo || post.immagine,
-            immagine_mobile: null,
-            tag: post.immagine_schermo ? '' : stripTag(post.tag, 'screen'),
-            articolo: '',
-            link: '',
-            allegato: null,
-          }))}
-          height={100}
-          limit={10}
-          animation='fade'
-          interval={12000}
-          duration={0}
-          defaultTag=''
-          captionMode='screen'
-          hideButton={true}
-        />
-        )}
-      </div>
-    </ThemeProvider>
+    <div
+      style={{ backgroundColor: 'black', height: '100vh', cursor: 'none' }}
+    >
+      { data && (
+      <NocturnalHeroScreen
+        data={data.map((post) => ({
+          ...post,
+          in_evidenza: true,
+          titolo: post.immagine_schermo ? '' : post.titolo,
+          abstract: post.immagine_schermo ? '' : post.abstract,
+          immagine: post.immagine_schermo || post.immagine,
+          immagine_mobile: null,
+          tag: post.immagine_schermo ? '' : stripTag(post.tag, 'screen'),
+          articolo: '',
+          link: '',
+          allegato: null,
+        }))}
+        height={100}
+        limit={10}
+        animation='fade'
+        interval={12000}
+        duration={0}
+        defaultTag=''
+        captionMode='screen'
+        hideButton={true}
+      />
+      )}
+    </div>
   )
 }
 

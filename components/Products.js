@@ -1,143 +1,58 @@
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import styles from '/components/Products.module.css'
-import Card from '@mui/material/Card'
-import CardActionArea from '@mui/material/CardActionArea'
-import CardContent from '@mui/material/CardContent'
-
 import Image from 'next/image'
 
-export default function Products({
-  title,
-  description,
-  cardWidth,
-  cardWidthXs,
-  products,
-  borderRadius,
-  aspectRatio,
-}) {
+export default function Products({ title, description, cardWidth, cardWidthXs, products, borderRadius, aspectRatio }) {
+  const xsCols = cardWidthXs ? Math.round(12 / cardWidthXs) : 2
+  const mdCols = cardWidth ? Math.round(12 / cardWidth) : 4
+
   return (
-    <Container maxWidth='lg'>
+    <div className="max-w-[1200px] mx-auto px-4 md:px-8">
       {title && (
-        <Typography
-          text-align='center'
-          style={{ textAlign: 'center' }}
-          component='h3'
-          variant='h3'
-          color='inherit'
-          gutterBottom
-        >
-          {title}
-        </Typography>
+        <h2 className="text-3xl font-bold text-center text-[#1976D2] dark:text-[#64B5F6] mb-4">{title}</h2>
       )}
       {description && (
-        <Typography
-          variant='subtitle1'
-          style={{ textAlign: 'center', padding: '10px' }}
-          text-align='center'
-          color='text.secondary'
-          paragraph
-        >
-          {description}
-        </Typography>
+        <p className="text-center text-gray-500 dark:text-gray-300 px-2 mb-6">{description}</p>
       )}
-      <Grid container>
-        {products.map((product) => (
-          <Grid item xs={cardWidthXs} sm={4} md={cardWidth}>
-            <CardActionArea
-              component='a'
-              href={product.url}
-              disabled={!product.url}
-            >
-              <Card
-                sx={{ display: 'flex' }}
-                className={styles.card}
-                elevation={0}
-              >
-                <CardContent
-                  sx={{
-                    flex: 1,
-                  }}
-                >
-                  <Container
-                    sx={{
-                      borderRadius: borderRadius,
-                      aspectRatio: aspectRatio,
-                      position: 'relative',
-                      overflow: 'hidden',
-                    }}
+      <div className={`grid grid-cols-${xsCols} sm:grid-cols-3 md:grid-cols-${mdCols}`}>
+        {products.map((product, i) => (
+          <a
+            key={i}
+            href={product.url || undefined}
+            className={product.url ? 'block' : 'block pointer-events-none'}
+          >
+            <div className="flex flex-col">
+              <div className="relative overflow-hidden" style={{ borderRadius, aspectRatio }}>
+                <Image
+                  src={product.immagineUrl}
+                  alt={product.title || ''}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-3 relative">
+                {product.title && (
+                  <h4 className="text-center text-lg font-semibold mb-1">{product.title}</h4>
+                )}
+                {product.category && (
+                  <p className="text-center text-sm text-gray-500 dark:text-gray-400">{product.category}</p>
+                )}
+                {product.description && (
+                  <p className="text-sm p-2">{product.description}</p>
+                )}
+                {product.rif && (
+                  <div
+                    className="text-right px-2 absolute bottom-0 right-0"
+                    style={{ backgroundColor: product.labelColor }}
                   >
-                    <Image
-                      src={product.immagineUrl}
-                      alt={product.title}
-                      className={styles.immagine}
-                      style={{
-                        display: {
-                          xs: 'block',
-                          sm: 'block',
-                          margin: 'auto',
-                        },
-                        objectFit: 'cover',
-                      }}
-                      fill={true}
-                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    />
-                  </Container>
-                  {product.title && (
-                    <Typography
-                      text-align='center'
-                      component='h4'
-                      variant='h6'
-                      style={{ textAlign: 'center' }}
-                      color='inherit'
-                      gutterBottom
-                    >
-                      {product.title}
-                    </Typography>
-                  )}
-                  {product.category && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ textAlign: 'center' }}
-                      color='text.secondary'
-                      paragraph
-                    >
-                      {product.category}
-                    </Typography>
-                  )}
-                  {product.description && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ padding: '10px' }}
-                      color='inherit'
-                      paragraph
-                    >
-                      {product.description}
-                    </Typography>
-                  )}
-                  {product.rif && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ padding: '10px' }}
-                      color='inherit'
-                      paragraph
-                    >
-                      <div
-                        className={styles.label}
-                        style={{ backgroundColor: product.labelColor }}
-                      >
-                        <p>{product.rif}</p>
-                      </div>
-                    </Typography>
-                  )}
-                </CardContent>
-              </Card>
-            </CardActionArea>
-          </Grid>
+                    <p className="text-sm">{product.rif}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </a>
         ))}
-      </Grid>
-    </Container>
+      </div>
+    </div>
   )
 }
 

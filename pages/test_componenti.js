@@ -1,4 +1,3 @@
-import { Container, Grid, Typography } from '@mui/material'
 import {
   Carousel,
   Certifications,
@@ -47,11 +46,11 @@ export default function Home({ data, elementi }) {
       <Featured data={data} limit={4} defaultTag='scuola' />
       <Featured data={elementi} limit={4} defaultTag='scuola' height={90} />
       <News title='News' data={data} limit={4} />
-      <Container>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
         <h1 className='bg-teal-500 text-yellow-500 p-6 text-3xl font-bold underline'>
           Prova Tailwind
         </h1>
-      </Container>
+      </div>
 
       <Elements
         data={elementi}

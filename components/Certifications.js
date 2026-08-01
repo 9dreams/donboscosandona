@@ -1,32 +1,30 @@
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import styles from '/components/Products.module.css'
+export default function Certifications({ certifications, cardWidth }) {
+  const mdCols = cardWidth ? Math.round(12 / cardWidth) : 3
 
-export default function Certifications({ certifications, cardWidth, maxWidth }) {
-    return (
-        <Container maxWidth={maxWidth} style={{ backgroundColor: 'lightgrey' }}>
-            <Container maxWidth="lg">
-                <Grid container style={{ backgroundColor: 'lightgrey' }}>
-                    {
-                        certifications.map(
-                            (certification) => (
-                                <Grid item xs={12} sm={6} md={cardWidth} sx={{ height: '295px' }}>
-                                    <img src={certification.logoUrl} style={{ width: '75%', padding: '15px', borderRadius: '40px', height: '170px', paddingLeft: '90px' }} className={styles.immagine} />
-                                    <Typography variant="subtitle1" style={{ textAlign: 'center', width: '250px', paddingLeft: '20px', height: '' }} color="text.secondary" paragraph>
-                                        {certification.text1}
-                                        {certification.text2}
-                                    </Typography >
-                                </Grid>
-                            )
-                        )
-                    }
-                </Grid>
-            </Container>
-        </Container>
-    )
+  return (
+    <div className="w-full bg-neutral-300 dark:bg-[#0d0f14] transition-colors duration-300">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${mdCols} bg-neutral-300 dark:bg-[#0d0f14] transition-colors duration-300`}>
+          {certifications.map((certification, i) => (
+            <div key={i} className="h-[295px] flex flex-col items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={certification.logoUrl}
+                alt=""
+                style={{ width: '75%', padding: '15px', borderRadius: '40px', height: '170px', paddingLeft: '90px' }}
+              />
+              <p className="text-center w-[250px] pl-5 text-gray-500 dark:text-gray-300 text-sm">
+                {certification.text1}
+                {certification.text2}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 Certifications.defaultProps = {
-    maxWidth: false
+  cardWidth: 4,
 }

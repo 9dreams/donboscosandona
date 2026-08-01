@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Button, Container, Typography, Grid } from '@mui/material'
-
 import {
   Carousel,
   Layout,
@@ -42,13 +40,7 @@ export default function Home({ data, movies }) {
       </Head>
       <NocturnalHero data={data} />
       <NewsWall title='News' data={data} limit={7} />
-      <Container
-        sx={{
-          aspectRatio: '16 / 9',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 relative aspect-video overflow-hidden">
         <a href='https://per.donboscosandona.it'>
           <Image
             src='/images/home/scopri_la_per.png'
@@ -61,7 +53,7 @@ export default function Home({ data, movies }) {
             fill={true}
           />
         </a>
-      </Container>
+      </div>
       <Table
         title='Orari delle Sante Messe'
         backgroundImageUrl='https://wp.it.aleteia.org/wp-content/uploads/sites/8/2018/01/shutterstock_untitled-design-14.jpg'
@@ -77,11 +69,11 @@ export default function Home({ data, movies }) {
           ['ore 18.30', 'ore 18:00', ''],
         ]}
       />
-      <Container>
-        <p align="right">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+        <p className="text-right">
           <a href='https://www.duomosandona.it/orario-sante-messe/' target='_blank'>Orari delle Sante Messe nella Collaborazione Pastorale</a>
         </p>
-      </Container>
+      </div>
 
       <Products
         cardWidth={3}
@@ -162,33 +154,28 @@ let members = [
   {
     name: 'Centralino',
     role: 'Per informazioni generali',
-    imageUrl: '/images/call1.webp',
     phone: '0421 338 911 ',
   },
   {
     name: 'Amministrazione',
     role: 'Per informazioni amministrative e disponibilità degli ambienti.',
-    imageUrl: '/images/call1.webp',
     email: 'amministrazione@donboscosandona.it',
     phone: '0421 338 900',
   },
   {
     name: 'Segreteria PER',
     role: 'Per qualsiasi evenienza ed informazione potete mandare una mail al nostro indirizzo',
-    imageUrl: '/images/call1.webp',
     email: 'per@donboscosandona.it',
     phone: '392 464 3689',
   },
   {
     name: 'Dopo la Campanella',
     role: 'Dott. Andrea Pasqualetto',
-    imageUrl: '/images/call2.webp',
     phone: '391 706 4430',
   },
   {
     name: 'Cinema don Bosco',
     role: "Per informazioni sugli orari e l'acquisto dei biglietti, inviate pure un whatsapp al nostro numero",
-    imageUrl: '/images/call3.webp',
     phone: '346 960 5687',
   },
 ]

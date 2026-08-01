@@ -1,21 +1,16 @@
-import React, { useState, useMemo, useRef } from 'react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import { Icon } from '@iconify/react'
 
 import NewsArchiveHero from './NewsArchiveHero'
 
 const ITEMS_PER_PAGE = 12
 
-const titleStyle = {
-  fontFamily: '"Bebas Neue", sans-serif',
-  textShadow: 'none',
-  WebkitTextFillColor: 'initial',
-  WebkitTextStroke: '0px',
-  letterSpacing: '0.02em',
+const cardTitleStyle = {
+  fontFamily: '"Inter Tight", sans-serif',
+  fontWeight: 600,
 }
 
 const bodyStyle = { fontFamily: '"Plus Jakarta Sans", "Exo 2", sans-serif' }
@@ -34,13 +29,18 @@ const getActionLabel = (post) => {
   return null
 }
 
-function NewsCard({ post }) {
+function NewsCard({ post, hiddenTagList = [] }) {
   const href = getPostHref(post)
   const label = getActionLabel(post)
-  const tags = post.tag ? post.tag.split(',').map((t) => t.trim()).filter(Boolean) : []
+  const tags = post.tag
+    ? post.tag
+        .split(',')
+        .map((t) => t.trim())
+        .filter((t) => t && !hiddenTagList.includes(t.toLowerCase()))
+    : []
 
   const inner = (
-    <article className="group bg-white border border-[#c1c6d4] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.08)] hover:border-[#1976D2] flex flex-col h-full">
+    <article className="group bg-white dark:bg-[#181b23] border border-[#c1c6d4] dark:border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.08)] dark:hover:shadow-[0px_4px_20px_rgba(0,0,0,0.35)] hover:border-[#1976D2] dark:hover:border-[#64B5F6] flex flex-col h-full">
       {/* Image */}
       <div className="relative h-56 overflow-hidden flex-shrink-0">
         <Image
@@ -69,8 +69,8 @@ function NewsCard({ post }) {
       <div className="p-6 flex flex-col flex-grow">
         {/* Date */}
         <div className="flex items-center gap-2 mb-3">
-          <CalendarTodayIcon sx={{ fontSize: 16, color: '#717783' }} />
-          <span className="text-sm text-[#717783]" style={bodyStyle}>
+          <Icon icon="ph:calendar-blank" className="text-base text-[#717783]" />
+          <span className="text-sm text-[#717783] dark:text-gray-400" style={bodyStyle}>
             {post.pubblicazione}
           </span>
         </div>
@@ -78,8 +78,8 @@ function NewsCard({ post }) {
         {/* Title */}
         {post.titolo && (
           <h3
-            className="text-[#1976D2] text-xl font-normal uppercase leading-tight mb-3 group-hover:text-[#FF9800] transition-colors"
-            style={titleStyle}
+            className="text-[#1976D2] dark:text-[#64B5F6] text-xl font-normal leading-tight mb-3 group-hover:text-[#FF9800] transition-colors"
+            style={cardTitleStyle}
           >
             {post.titolo}
           </h3>
@@ -87,21 +87,21 @@ function NewsCard({ post }) {
 
         {/* Abstract */}
         {post.abstract && (
-          <p className="text-sm text-[#414752] line-clamp-3 flex-grow" style={bodyStyle}>
+          <p className="text-sm text-[#414752] dark:text-gray-300 line-clamp-3 flex-grow" style={bodyStyle}>
             {post.abstract}
           </p>
         )}
 
         {/* CTA */}
         {label && (
-          <div className="mt-6 pt-4 border-t border-[#c1c6d4] flex justify-between items-center">
+          <div className="mt-6 pt-4 border-t border-[#c1c6d4] dark:border-white/10 flex justify-between items-center">
             <span
-              className="text-sm font-bold text-[#1976D2] uppercase"
+              className="text-sm font-bold text-[#1976D2] dark:text-[#64B5F6] uppercase"
               style={bodyStyle}
             >
               {label}
             </span>
-            <ArrowForwardIcon sx={{ color: '#1976D2', fontSize: 20 }} />
+            <Icon icon="ph:arrow-right" className="text-[#1976D2]" />
           </div>
         )}
       </div>
@@ -123,27 +123,26 @@ function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
       <button
         onClick={() => onPage(page - 1)}
         disabled={page === 1}
-        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] text-[#191c1e] hover:bg-[#eceef0] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        <ChevronLeftIcon sx={{ fontSize: 20 }} />
+        <Icon icon="ph:caret-left" />
       </button>
 
       {pageNumbers.map((p, i) =>
         p === '...' ? (
-          <span key={`dots-${i}`} className="px-2 text-[#717783]">
+          <span key={`dots-${i}`} className="px-2 text-[#717783] dark:text-gray-400">
             ...
           </span>
         ) : (
           <button
             key={p}
             onClick={() => onPage(p)}
-            className="w-12 h-12 flex items-center justify-center rounded-lg text-sm font-semibold transition-colors"
-            style={{
-              backgroundColor: page === p ? '#1976D2' : 'transparent',
-              color: page === p ? '#fff' : '#191c1e',
-              border: page === p ? 'none' : '1px solid #c1c6d4',
-              ...bodyStyle,
-            }}
+            className={`w-12 h-12 flex items-center justify-center rounded-lg text-sm font-semibold transition-colors ${
+              page === p
+                ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white border-none'
+                : 'bg-transparent border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23]'
+            }`}
+            style={bodyStyle}
           >
             {p}
           </button>
@@ -153,18 +152,36 @@ function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
       <button
         onClick={() => onPage(page + 1)}
         disabled={page === totalPages}
-        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] text-[#191c1e] hover:bg-[#eceef0] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        <ChevronRightIcon sx={{ fontSize: 20 }} />
+        <Icon icon="ph:caret-right" />
       </button>
     </nav>
   )
 }
 
-export default function NewsArchive({ data }) {
+export default function NewsArchive({ data, hiddenTags = '' }) {
+  const router = useRouter()
   const [activeTag, setActiveTag] = useState('all')
   const [page, setPage] = useState(1)
   const gridRef = useRef(null)
+
+  // Pre-select tag from ?q= query param on mount
+  useEffect(() => {
+    const q = router.query.q
+    if (q && typeof q === 'string') {
+      setActiveTag(q.trim())
+      setPage(1)
+    }
+  }, [router.query.q])
+  const hiddenTagList = useMemo(
+    () =>
+      hiddenTags
+        .split(',')
+        .map((tag) => tag.trim().toLowerCase())
+        .filter(Boolean),
+    [hiddenTags]
+  )
 
   // Collect unique tags — "scuola" always first, then alphabetical
   const allTags = useMemo(() => {
@@ -172,14 +189,16 @@ export default function NewsArchive({ data }) {
     data.forEach((post) => {
       if (post.tag) post.tag.split(',').forEach((t) => { const s = t.trim(); if (s) set.add(s) })
     })
-    const sorted = Array.from(set).sort()
+    const sorted = Array.from(set)
+      .filter((tag) => !hiddenTagList.includes(tag.toLowerCase()))
+      .sort()
     const idx = sorted.findIndex((t) => t.toLowerCase() === 'scuola')
     if (idx > 0) {
       sorted.splice(idx, 1)
       sorted.unshift('scuola')
     }
     return sorted
-  }, [data])
+  }, [data, hiddenTagList])
 
   // Filter
   const filtered = useMemo(() => {
@@ -219,7 +238,7 @@ export default function NewsArchive({ data }) {
   }, [page, totalPages])
 
   return (
-    <div style={{ backgroundColor: '#f7f9fb', minHeight: '100vh' }}>
+    <div className="min-h-screen bg-[#f7f9fb] transition-colors duration-300 dark:bg-[#0d0f14]">
       <NewsArchiveHero
         data={data}
         allTags={allTags}
@@ -247,11 +266,11 @@ export default function NewsArchive({ data }) {
           {paged.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {paged.map((post) => (
-                <NewsCard key={post.id} post={post} />
+                <NewsCard key={post.id} post={post} hiddenTagList={hiddenTagList} />
               ))}
             </div>
           ) : (
-            <p className="text-center text-[#717783] py-20 text-lg" style={bodyStyle}>
+            <p className="text-center text-[#717783] dark:text-gray-400 py-20 text-lg" style={bodyStyle}>
               Nessun articolo trovato per questo filtro.
             </p>
           )}

@@ -1,4 +1,3 @@
-import { Container, Grid, Typography } from '@mui/material'
 import {
   Carousel,
   Certifications,
@@ -43,26 +42,21 @@ export default function Home({ data, elementi }) {
               interval={5000}
               duration={1000}
             />
-      <Container>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
    
         
         <div className='margin'>
-          <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
+          <h2 className="text-3xl font-bold text-center mt-12 mb-6">
             News
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
-            {Newss.map((Newss) => (
-              <Grid item xs={12} sm={6} md={4} key={Newss.id}>
-                <NewsCard post={Newss} />
-              </Grid>
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {Newss.map((item) => (
+              <NewsCard key={item.id} post={item} />
             ))}
-          </Grid>
+          </div>
         </div>
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/ads/cads4.jpg'/>
                 <p>L’iniziatore degli Amici di Domenico Savio in Italia è un salesiano: Don Edi Pezzetta, il quale fondò l’Associazione nel 1954 a Torino Valdocco. L’intuizione però risale già al Beato Filippo Rinaldi terzo successore di Don Bosco. Negli stessi anni gruppi di ADS erano già presenti negli Stati Uniti, Inghilterra ed Irlanda.
 
@@ -94,13 +88,10 @@ b) ricerca dei fondamenti a livello storico (vita di Domenico Savio e fondazione
 
 c) rivisitazione del progetto con chiarificazione del progetto sulla base della ricerca svolta.</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/ads/cads3.jpg'/>
                 <p>CARDINI DELL’ITINERARIO FORMATIVO ADS
 
@@ -122,13 +113,10 @@ b) Apostolato/Evangelizzazione: «Guadagnare anime a Dio», entusiasmo e gusto d
 
 c) Purezza: personalizzazione del cammino di amore verso Dio e verso i fratelli: impegno personale, colloquio, schiettezza, tensione verso la limpidezza nelle relazioni affettive.</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/ads/cads2.jpg'/>
                 <p>
 
@@ -152,14 +140,11 @@ d) L’associazione offre a tutti un cammino basato sull’incontro tra il prima
 
 e) L’appartenenza all’associazione è confermata da una promessa pubblica che ogni ADS, dopo un congruo cammino, emette insieme ai suoi amici e animatori. L’appartenenza è resa visibile da un «Fazzolettone» che cambia il colore per ogni fascia di età.</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
         
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='images/ads/ads5.jpg'/>
                 <p>Itinerario di 3 anni: dalla 3a alla 5a elementare.
 
@@ -210,14 +195,11 @@ b) gioco: favorire la partecipazione ai giochi salesiani e ai giochi di gruppo; 
 - coinvolgimento dei genitori nelle varie proposte;
 </p>
 <br></br>
-              </Grid>
+              </div>
         </div>
 
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/ads/ads4.jpg'/>
                 <p>Itinerario di 3 anni: dalla 1 alla 3 media.
 
@@ -299,14 +281,11 @@ b) gioco: favorire il coinvolgimento attivo ai giochi salesiani e ai giochi di g
 
 - prevedere un itinerario all’affettività.</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
 
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/ads/ads3.jpg'/>
                 <p>Itinerario di 5 anni: dalla 1a alla 5a superiore. (sarebbe opportuno distinguere tra biennio e triennio)
 
@@ -384,14 +363,11 @@ b) gioco: favorire il coinvolgimento attivo ai giochi salesiani e ai giochi di g
 
 - accompagnare l’apostolato in mezzo ai ragazzi;</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
 
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='images/ads/ads2.jpg'/>
                 <p>La Comunità Animatori (fino ai 25 anni) è guidata da un responsabile Salesiano o una Figlia di Maria Ausiliatrice, insieme ad un adulto (oltre 25 anni) cresciuto nell’associazione, che abbia maturato scelte vocazionali stabili.
 
@@ -440,9 +416,9 @@ Altri punti indicati
 a) insistere sul quaderno personale
 b) formazione seria che dia riferimenti di testi e letture e) formazione sui tempi liturgici</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
-      </Container>
+      </div>
     </Layout>
   )
 }

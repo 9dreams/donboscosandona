@@ -1,6 +1,5 @@
 import NavBar from '/components/NavBar'
 import Footer from '/components/Footer'
-import Link from '@mui/material/Link'
 
 export const siteName = "ORATORIO DON BOSCO"
 export const siteTitle = "Oratorio don Bosco - San Donà di Piave"
@@ -44,5 +43,12 @@ export const footer = <Footer
     title3=""
     images={images}
     menu={menuFooter}
-    copyright={<Link color="#fff" href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico">Copyright (C) 2024 9dreams Agency.</Link>}
+    copyright={
+      <a
+        className="text-white hover:text-[#FF9800]"
+        href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico"
+      >
+        Copyright (C) 2024 9dreams Agency.
+      </a>
+    }
 />

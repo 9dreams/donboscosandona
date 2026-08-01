@@ -1,30 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300&family=Roboto+Slab&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300;400;500;600;700&family=Roboto+Slab&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Bebas Neue', cursive !important;
+/* ─── Brand variables (Oratorio) ─── */
+:root {
+  --brand-blue: #1976D2;
+  --brand-accent: #F79F1F;
+  --font-ui: 'Figtree', sans-serif;
+  --font-display: 'Bebas Neue', cursive;
+  --bg: #f7f9fb;
+  --fg: #353B48;
+  --fg-secondary: #717783;
+  --surface: #ffffff;
 }
 
-h5,
-h6,
-h,
-a,
-p,
-th,
-td {
-  font-family: 'Figtree', sans-serif !important;
+html.dark {
+  --brand-blue: #64B5F6;
+  --bg: #0d0f14;
+  --fg: #e8eaf0;
+  --fg-secondary: #9da3af;
+  --surface: #181b23;
 }
 
+/* ─── Base ─── */
 html,
 body {
   margin: 0 !important;
   padding: 0 !important;
-  font-family: 'Figtree', sans-serif !important;
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
+  font-family: var(--font-ui) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display) !important;
+}
+
+h5, h6, p, a, th, td, li, span, button, input, textarea, select, label {
+  font-family: var(--font-ui) !important;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--brand-blue);
+  }
+
+  a {
+    color: var(--brand-blue);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--brand-accent);
+  }
+}
+
+.title-display {
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.02em;
+  color: var(--brand-blue);
+}
+
+.title-display.text-white {
+  color: #fff !important;
 }

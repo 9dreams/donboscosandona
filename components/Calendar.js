@@ -1,132 +1,51 @@
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
-import Card from '@mui/material/Card'
-import CardActionArea from '@mui/material/CardActionArea'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-
-import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import LightModeIcon from '@mui/icons-material/LightMode'
-import NightlightIcon from '@mui/icons-material/Nightlight'
-
 import Image from 'next/image'
+import { Icon } from '@iconify/react'
 
-export default function Calendar({
-  title,
-  description,
-  cardWidth,
-  events,
-  borderRadius,
-  aspectRatio,
-}) {
+export default function Calendar({ title, description, cardWidth, events, borderRadius, aspectRatio }) {
+  const mdCols = cardWidth ? Math.round(12 / cardWidth) : 4
+
   return (
-    <Container maxWidth='lg' sx={{ marginBottom: '2rem' }}>
-      <Typography
-        text-align='center'
-        style={{ textAlign: 'center' }}
-        component='h3'
-        variant='h3'
-        color='inherit'
-        gutterBottom
-      >
-        {title}
-      </Typography>
-      <Typography
-        variant='subtitle1'
-        style={{ textAlign: 'center', padding: '10px' }}
-        text-align='center'
-        color='text.secondary'
-        paragraph
-      >
-        {description}
-      </Typography>
-      <Grid container>
-        {events.map((date) => (
-          <Grid item xs={12} sm={6} md={cardWidth}>
-            <Card
-              sx={{
-                display: 'flex',
-                margin: { xs: '5px', md: '0.5rem' },
-                backgroundColor: date.bgColor || '#222f3e',
-                borderRadius: borderRadius,
-                minHeight: '35rem',
-                boxShadow: 3,
-              }}
-              elevation={0}
-            >
-              <CardContent sx={{ flex: 1, padding: '0px', paddingTop: '10px' }}>
-                <Container
-                  sx={{
-                    aspectRatio: aspectRatio,
-                    position: 'relative',
-                    overflow: 'hidden',
-                  }}
-                >
-                  <Image
-                    src={date.immagineUrl}
-                    alt={date.date}
-                    style={{
-                      width: '100%',
-                      display: 'block',
-                      objectFit: 'cover',
-                    }}
-                    fill={true}
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                  />
-                </Container>
-
-                <Container sx={{ paddingTop: '1.5rem' }}>
-                  <Typography
-                    text-align='center'
-                    component='h4'
-                    variant='h6'
-                    style={{ textAlign: 'center' }}
-                    color='white'
-                    gutterBottom
-                  >
-                    {date.date}
-                  </Typography>
-                  {date.morning && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ padding: '1px' }}
-                      color='white'
-                      paragraph
-                    >
-                      <AccessTimeIcon />
-                      &nbsp;Mattino: {date.morning}
-                    </Typography>
-                  )}
-                  {date.afternoon && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ padding: '1px' }}
-                      color='white'
-                      paragraph
-                    >
-                      <LightModeIcon />
-                      &nbsp;Pomeriggio: {date.afternoon}
-                    </Typography>
-                  )}
-                  {date.evening && (
-                    <Typography
-                      variant='subtitle1'
-                      style={{ padding: '1px' }}
-                      color='white'
-                      paragraph
-                    >
-                      <NightlightIcon />
-                      &nbsp;Sera: {date.evening}
-                    </Typography>
-                  )}
-                </Container>
-              </CardContent>
-            </Card>
-          </Grid>
+    <div className="max-w-[1200px] mx-auto px-4 md:px-8 mb-8">
+      {title && <h3 className="text-3xl text-center mb-4">{title}</h3>}
+      {description && <p className="text-center text-gray-500 dark:text-gray-300 mb-6 px-2">{description}</p>}
+      <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${mdCols} gap-3`}>
+        {events.map((date, i) => (
+          <div
+            key={i}
+            className="flex flex-col min-h-[35rem] shadow-md overflow-hidden"
+            style={{ backgroundColor: date.bgColor || '#222f3e', borderRadius }}
+          >
+            <div className="relative overflow-hidden" style={{ aspectRatio }}>
+              <Image
+                src={date.immagineUrl}
+                alt={date.date || ''}
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+              />
+            </div>
+            <div className="flex-1 px-4 pt-6 pb-4">
+              <h4 className="text-center text-lg font-semibold text-white mb-3">{date.date}</h4>
+              {date.morning && (
+                <p className="text-white flex items-center gap-1 mb-1">
+                  <Icon icon="ph:clock" /> Mattino: {date.morning}
+                </p>
+              )}
+              {date.afternoon && (
+                <p className="text-white flex items-center gap-1 mb-1">
+                  <Icon icon="ph:sun" /> Pomeriggio: {date.afternoon}
+                </p>
+              )}
+              {date.evening && (
+                <p className="text-white flex items-center gap-1">
+                  <Icon icon="ph:moon-stars" /> Sera: {date.evening}
+                </p>
+              )}
+            </div>
+          </div>
         ))}
-      </Grid>
-    </Container>
+      </div>
+    </div>
   )
 }
 

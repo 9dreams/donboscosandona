@@ -1,4 +1,3 @@
-import { Container, Grid, Typography } from '@mui/material'
 import {
   Carousel,
   Certifications,
@@ -54,37 +53,27 @@ export default function Home({ data, elementi }) {
         animation="slide"
         interval={5000}
         duration={1000}/>
-      <Container>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
         <div className='margin'>
-          <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
+          <h2 className="text-3xl font-bold text-center mt-12 mb-6">
           Questa pagina è gestita dall'Associazione AGESCI GRUPPO SAN DONA' DI PIAVE 1
-          </Typography>
-          <Grid container spacing={5} justifyContent="center">
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {servizi.map((servizio) => (
-              <Grid item xs={12} sm={6} md={3} key={servizio.id}>
-                <NewsCard post={servizio} />
-              </Grid>
+              <NewsCard key={servizio.id} post={servizio} />
             ))}
-          </Grid>
+          </div>
         </div>
         
         <div className='margin'>
-          <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
-            {Newss.map((Newss) => (
-              <Grid item xs={12} sm={8} md={4} key={Newss.id}>
-                <NewsCard post={Newss} />
-              </Grid>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+            {Newss.map((item) => (
+              <NewsCard key={item.id} post={item} />
             ))}
-          </Grid>
+          </div>
         </div>
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4}justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/scout/card5.jpg'/>
                 <p>
                 Dopo la Prima Guerra Mondiale, don Luigi Saretta ricostruì il tessuto sociale, economico e religioso del paese e fondò una sede locale dell\’ Associazione Scoutistica Cattolica Italiana. Durante l\’ inaugurazione del nuovo ponte sul fiume Piave, il Riparto San Donà 1 "San Marco" fece la Promessa, segnando l\’ inizio ufficiale dello scoutismo.
@@ -95,13 +84,10 @@ Nel 1958, il gruppo cambiò il fazzolettone, scegliendo il colore rosso bordeaux
 
 L\’ avventura scoutistica a San Donà riprese nel 1947, con gruppi separati per maschi e femmine fino al 1974, anno di nascita dell\’ AGESCI. Nel 1988, fu aperto un nuovo gruppo a San Pio X, portando il numero totale a quattro gruppi. Il gruppo San Donà 1, il più antico, ha celebrato i suoi 90 anni nel 2014</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/scout/card6.jpg'/>
                 <p>
                 Lo scautismo è un movimento educativo internazionale fondato nel 1907 da Robert Baden-Powell, basato sul volontariato e sull'apprendimento pratico attraverso attività all'aria aperta. Nato in Inghilterra, il movimento si estese rapidamente a livello globale, includendo anche le ragazze.
@@ -110,13 +96,10 @@ In Italia, l'AGESCI (Associazione Guide e Scouts Cattolici Italiani) fu fondata 
 
 I ragazzi sono divisi in gruppi per età: Lupetti (9-12 anni), Esploratori e Guide (12-16 anni), Rover e Scolte (16-20 anni), mentre gli adulti prestano servizio come Capi formati.</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/scout/card7.jpg'/>
                 <p>
                 Capi Gruppo:
@@ -162,13 +145,10 @@ Cell: 388 382 3715;<br/>
 
 Per chi vorrebbe iniziare il prossimo anno, contattare Alessia: cell. 366 192 1750</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/scout/card4.png'/>
                 <p><b>ROGRAMMA E OBIETTIVI DELL’EMPORIO</b>
 
@@ -185,14 +165,11 @@ Per chi vorrebbe iniziare il prossimo anno, contattare Alessia: cell. 366 192 17
 <li>Le camicie dovranno essere portate già con i distintivi scuciti (con cura); non verranno accettate camicie con segni di usura dei polsini e del colletto o con evidente sbiadimento del colore.</li>
 </p>
 <br></br>
-              </Grid>
+              </div>
         </div>
 
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/scout/card10.png'/>
                 
                 <p>“Estote parati”<br/>
@@ -201,14 +178,11 @@ Gli esploratori sono la base dello scautismo, nato nel 1907 con il primo campo s
 Le tecniche scout, come pionieristica, pronto soccorso, topografia, e altre, sono essenziali per sviluppare capacità fisiche e intellettuali, attraverso il "learning by doing". Gli obiettivi principali includono lo spirito di gruppo, la responsabilità, l'autonomia e il senso civico.
 San Giorgio è il patrono e guida spirituale della branca Esploratori e Guide nelle associazioni scout cattoliche</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
 
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/scout/card9.png'/>
                 <p>“In piedi nei piedi il coraggio che ho, che mi porti lontano per sentire vicino, e metto i miei piedi nella vita che c’è, lì dove mi chiedi i miei piedi con Te”<br/>
 La Branca Rover/Scolte si rivolge a giovani di 16-20 anni, accompagnandoli verso una vita adulta caratterizzata da autonomia, responsabilità e servizio verso gli altri. I giovani si uniscono in comunità chiamate Clan, dopo un periodo iniziale chiamato Noviziato, in cui approfondiscono il loro percorso scout e si preparano a fare scelte importanti per la loro vita.
@@ -216,14 +190,11 @@ Il Clan si basa sull'autoeducazione, la Legge e la Promessa scout, ed è un luog
 Il Capitolo affronta temi scelti dalla comunità, favorendo la consapevolezza sull'attualità e il servizio. La Carta di Clan guida il percorso dei membri, che si confrontano con valori di Comunità, Fede, Servizio e Strada. Il simbolo della forcola rappresenta la capacità di fare scelte importanti nella vita. L’obiettivo finale della branca è la "Partenza", quando i membri realizzano i valori dello scautismo nella vita quotidiana.
 San Paolo è il patrono e guida spirituale della branca.</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
 
         <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/scout/card11.png'/>
 
                 <p>“per sempre, meglio servire”
@@ -231,23 +202,20 @@ I Capi sono adulti che prestano servizio nello scautismo, divisi in "capi in for
 La comunità capi del gruppo scout si occupa di elaborare il progetto educativo, gestire la formazione dei Capi, e coordinare le attività locali. Ogni comunità capi elegge i capi gruppo (rappresentanti legali) e gestisce anche bilanci e incarichi. Nel gruppo San Donà 1, la comunità capi è composta da 25 membri.
 Il capo ha un ruolo educativo fondamentale e deve garantire l’applicazione corretta del metodo scout, sviluppando i ragazzi come "fratello/sorella maggiore". Inoltre, deve seguire un continuo aggiornamento formativo e collaborare alla preparazione del team di capi.</p>
                 <br></br>
-              </Grid>
+              </div>
               <div className='margin'>
-        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: 5 }}>
-            
-          </Typography>
-          <Grid container spacing={4} justifyContent="center">
+        <div className="mt-12 space-y-4">
                 <img src='/images/scout/card8.png'/>
                 <p>Fare tutto "col gioco" ma niente "per gioco"<br/>
 La branca Lupetti si rivolge ai bambini dai 9 ai 12 anni e mira a far vivere loro la fanciullezza come fondamento di una vita adulta autentica. Il metodo educativo promuove l’impegno, la solidarietà, e lo sviluppo del corpo e delle capacità manuali. Introdotto da Robert Baden-Powell nel 1916, il metodo si basa su regole semplici per una buona convivenza nel gruppo.
 Vera Barclay, prima Akela d'Inghilterra, sviluppò ulteriormente il metodo, creando la "Legge del Branco" e introducendo l'atmosfera fantastica della giungla, ispirata al Libro della Giungla di Kipling. Questa atmosfera aiuta i bambini a sviluppare la fantasia e facilita l’approccio degli educatori al mondo del bambino.
 Le attività si basano sul libro e sono pensate per insegnare attraverso il gioco, fondamentale per i bambini, che imparano anche concetti come la legge e la promessa. Nello scoutismo cattolico, San Francesco d'Assisi e Santa Chiara sono guide spirituali importanti per i Lupetti.</p>
                 <br></br>
-              </Grid>
+              </div>
         </div>
        
         </div>
-      </Container>
+      </div>
     </Layout>
   )
 }

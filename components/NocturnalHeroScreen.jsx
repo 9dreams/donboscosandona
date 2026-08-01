@@ -1,5 +1,8 @@
 import { useEffect } from 'react'
-import MuiCarousel from 'react-material-ui-carousel'
+import { Autoplay, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
 import { Icon } from '@iconify/react'
 
 function readMore(text, maxWords = 50) {
@@ -143,39 +146,32 @@ export default function NocturnalHeroScreen({
   return (
     <>
       <div className="nhs-carousel w-full" style={{ height: `${heightVh}vh` }}>
-        <MuiCarousel
-          interval={interval}
-          duration={duration}
-          animation={animation}
-          stopAutoPlayOnHover={false}
-          navButtonsAlwaysInvisible
-          indicators={featured.length > 1}
-          sx={{ height: `${heightVh}vh`, overflow: 'hidden' }}
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: interval, disableOnInteraction: false }}
+          speed={duration || 800}
+          loop={featured.length > 1}
+          pagination={{ clickable: true }}
+          className="h-full"
         >
           {featured.map((post) => (
-            <NocturnalSlide
-              key={post.id ?? post.immagine}
-              post={post}
-              defaultTag={defaultTag}
-              hideButton={hideButton}
-            />
+            <SwiperSlide key={post.id ?? post.immagine} className="h-full">
+              <NocturnalSlide
+                post={post}
+                defaultTag={defaultTag}
+                hideButton={hideButton}
+              />
+            </SwiperSlide>
           ))}
-        </MuiCarousel>
+        </Swiper>
       </div>
 
       <style jsx global>{`
         .nhs-carousel,
-        .nhs-carousel > div,
-        .nhs-carousel .MuiCarousel-root,
-        .nhs-carousel .CarouselItem,
-        .nhs-carousel .MuiPaper-root {
+        .nhs-carousel .swiper,
+        .nhs-carousel .swiper-slide {
           height: 100% !important;
           min-height: 100% !important;
-        }
-
-        .nhs-carousel .MuiPaper-root {
-          background: transparent !important;
-          box-shadow: none !important;
         }
 
         .nhs-serif {
@@ -200,15 +196,12 @@ export default function NocturnalHeroScreen({
           transform: translateY(0);
         }
 
-        .nhs-carousel .MuiIconButton-root {
-          color: rgba(255, 255, 255, 0.5);
-        }
-
-        .nhs-carousel .MuiMobileStepper-dot {
+        .nhs-carousel .swiper-pagination-bullet {
           background: rgba(255, 255, 255, 0.25);
+          opacity: 1;
         }
 
-        .nhs-carousel .MuiMobileStepper-dotActive {
+        .nhs-carousel .swiper-pagination-bullet-active {
           background: #f0c06b;
         }
       `}</style>
@@ -226,4 +219,3 @@ NocturnalHeroScreen.defaultProps = {
   captionMode: 'screen',
   hideButton: true,
 }
-

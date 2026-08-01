@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import { siteBaseUrl } from '/config/default'
 
-import { Container, Typography, Chip, Stack } from '@mui/material'
-
 import Layout from '/components/Layout'
 import NocturnalHero from '/components/NocturnalHero'
 
@@ -35,27 +33,23 @@ export default function Show({ data }) {
         ctaHref={data.link || data.allegato || null}
         showNewsLink={false}
       />
-      <Container
-        maxWidth='lg'
-        sx={{
-          paddingTop: '5rem',
-          paddingBottom: '5rem',
-          minHeight: '70vh',
-        }}
-      >
-        <Typography component='h5' color='inherit' paragraph>
-          {data.pubblicazione}
-        </Typography>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 pt-20 pb-20 min-h-[70vh]">
+        <p className="mb-4 text-inherit">{data.pubblicazione}</p>
         <div dangerouslySetInnerHTML={{ __html: data.content }} />
         <p>&nbsp;</p>
         {data.tag && (
-          <Stack direction='row' spacing={1}>
+          <div className="flex flex-wrap gap-2">
             {data.tag.split(',').map((tag) => (
-              <Chip label={tag} color='primary' />
+              <span
+                key={tag}
+                className="rounded-full bg-[var(--brand-blue)] px-3 py-1 text-sm text-white"
+              >
+                {tag}
+              </span>
             ))}
-          </Stack>
+          </div>
         )}
-      </Container>
+      </div>
     </Layout>
   )
 }
