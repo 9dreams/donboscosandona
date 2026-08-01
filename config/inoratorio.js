@@ -15,6 +15,7 @@ export const menu = [
     { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
 ]
 
+
 export const logoUrl = null
 export const header = <NavBar menu={menu} siteName={siteName} logoUrl={logoUrl} />
 
