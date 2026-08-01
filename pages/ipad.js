@@ -28,11 +28,15 @@ const negoziUnieuro = [
 const ancore = [
   { href: '#unieuro', label: 'Unieuro' },
   { href: '#mrdigital', label: 'MrDigital' },
+  { href: '#c2group', label: 'C2 Group' },
   { href: '#modelli', label: 'iPad già in famiglia' },
   { href: '#non-convenzionato', label: 'Dispositivo personale' },
   { href: '#accessori', label: 'Accessori consigliati' },
   { href: '#contatti', label: 'Serve aiuto?' },
 ]
+
+const portaleC2 =
+  'https://c2group.click/Convenzione_Salesiani_San_Dona_di_Piave'
 
 export default function IpadPage() {
   return (
@@ -240,6 +244,154 @@ export default function IpadPage() {
         >
           Vai al portale MrDigital <Icon icon="ph:arrow-right" style={{ color: '#fff' }} />
         </a>
+      </section>
+
+      {/* C2 Group */}
+      <section id="c2group" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
+        <div className="flex items-center gap-3 mb-4">
+          <Icon icon="ph:handshake" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
+          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">
+            C2 Group — Convenzione Scuola
+          </h2>
+        </div>
+        <p className="text-lg leading-8 mb-6">
+          Per l'anno scolastico 2026 è attiva anche la convenzione con{' '}
+          <strong>C2 Group</strong>, partner dell'Istituto per la fornitura di tecnologia
+          didattica. Le famiglie acquistano direttamente dal portale dedicato; i prodotti in
+          convenzione sono predisposti per integrarsi con le piattaforme utilizzate a scuola.
+        </p>
+
+        <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6 md:p-8 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:justify-between">
+            <div>
+              <h3 className="text-xl font-bold mb-2 m-0">Portale di acquisto</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300 m-0">
+                Registrazione, catalogo prodotti e ordine online sul sito C2 Group.
+              </p>
+            </div>
+            <a
+              href={portaleC2}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#1976D2] font-bold hover:bg-[#1565C0] transition-colors shrink-0"
+              style={{ color: '#fff' }}
+            >
+              Vai al portale C2 Group <Icon icon="ph:arrow-right" style={{ color: '#fff' }} />
+            </a>
+          </div>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 mb-0 break-all">
+            {portaleC2}
+          </p>
+        </div>
+
+        <h3 className="text-xl font-bold mb-4">Come acquistare</h3>
+        <ol className="space-y-4 mb-6">
+          <li className="flex gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1976D2] text-white text-sm font-bold">
+              1
+            </span>
+            <span>
+              <strong>Registrati</strong> sul portale C2 Group e crea un account (se non ne hai già
+              uno).{' '}
+              <a
+                href="https://www.loom.com/share/cf7618de49c2482783180ad0de6cfdae"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold inline-flex items-center gap-1"
+              >
+                Guarda il video tutorial <Icon icon="ph:play-circle" className="text-lg" />
+              </a>
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1976D2] text-white text-sm font-bold">
+              2
+            </span>
+            <span>
+              <strong>Naviga la convenzione</strong> Salesiani SFP Don Bosco — San Donà di Piave
+              (VE) e scegli i prodotti.
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1976D2] text-white text-sm font-bold">
+              3
+            </span>
+            <span>
+              <strong>Personalizza</strong> l'ordine indicando il nome dello studente a cui sono
+              destinati i prodotti.
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1976D2] text-white text-sm font-bold">
+              4
+            </span>
+            <span>
+              <strong>Acquista</strong> con il metodo di pagamento preferito (bonifico, carta,
+              finanziamento 12 mesi, Carta del Docente, GPay, …).
+            </span>
+          </li>
+        </ol>
+
+        <div className="grid sm:grid-cols-2 gap-5 mb-8">
+          <div className="rounded-2xl bg-sky-50 dark:bg-sky-950/20 border-l-4 border-sky-400 p-5">
+            <div className="flex items-center gap-2 mb-2">
+              <Icon icon="ph:calendar-blank" className="text-xl text-sky-500" />
+              <h3 className="font-bold m-0">Consegna</h3>
+            </div>
+            <p className="text-sm text-sky-900 dark:text-sky-200 m-0">
+              Consegna prevista presso la scuola entro il <strong>3 settembre 2026</strong>, secondo
+              le modalità definite dall'Istituto.
+            </p>
+          </div>
+          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-5">
+            <span className="inline-block text-xs font-bold tracking-wide uppercase text-[#1976D2] dark:text-[#64B5F6] bg-[#1976D2]/10 dark:bg-[#64B5F6]/15 px-2.5 py-1 rounded-md mb-3">
+              Hai una domanda?
+            </span>
+            <h3 className="font-bold text-lg mb-2 m-0">Siamo qui per aiutarti</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Per chiarimenti sulla Convenzione o domande sull'acquisto potete contattare
+              direttamente il personale dedicato di C2 Group.
+            </p>
+            <div className="border-t border-gray-200 dark:border-white/10 pt-4 space-y-2 text-sm">
+              <p className="m-0">
+                <strong>Marco Viacava</strong>
+                <span className="text-gray-500 dark:text-gray-400">
+                  {' '}
+                  · Referente Convenzione · C2 Group
+                </span>
+              </p>
+              <p className="m-0 flex items-center gap-2">
+                <Icon icon="ph:phone" className="text-lg text-[#1976D2] dark:text-[#64B5F6]" />
+                <a href="tel:+393409710671">340 9710671</a>
+              </p>
+              <p className="m-0 flex items-center gap-2">
+                <Icon icon="ph:envelope" className="text-lg text-[#1976D2] dark:text-[#64B5F6]" />
+                <a href="mailto:apple@c2group.it">apple@c2group.it</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          <a
+            href={portaleC2}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1976D2] font-bold hover:bg-[#1565C0] transition-colors"
+            style={{ color: '#fff' }}
+          >
+            Acquista sul portale <Icon icon="ph:arrow-right" style={{ color: '#fff' }} />
+          </a>
+          <a
+            href="https://www.loom.com/share/cf7618de49c2482783180ad0de6cfdae"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#1976D2]/40 dark:border-[#64B5F6]/40 text-[#1976D2] dark:text-[#64B5F6] font-bold hover:bg-[#1976D2]/5 dark:hover:bg-[#64B5F6]/10 transition-colors"
+          >
+            <Icon icon="ph:play-circle" className="text-xl" />
+            Video tutorial registrazione
+          </a>
+        </div>
       </section>
 
       {/* Modelli consigliati per chi possiede già un iPad */}
