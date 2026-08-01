@@ -590,4 +590,5 @@ let sponsor = [
   'https://www.freelogovectors.net/wp-content/uploads/2025/06/cursor-logo-freelogovectors.net_.png',
   'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/PhpStorm_Icon.svg/1280px-PhpStorm_Icon.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail',
   'https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png',
+  '/images/informatico/loghi/proxmox.png',
 ]
