@@ -27,6 +27,7 @@ const negoziUnieuro = [
 
 const ancore = [
   { href: '#unieuro', label: 'Unieuro' },
+  { href: '#sme', label: 'SME' },
   { href: '#mrdigital', label: 'MrDigital' },
   { href: '#c2group', label: 'C2 Group' },
   { href: '#modelli', label: 'iPad già in famiglia' },
@@ -189,6 +190,17 @@ export default function IpadPage() {
             </li>
           </ol>
         </div>
+      </section>
+
+      {/* SME */}
+      <section id="sme" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
+        <div className="flex items-center gap-3 mb-4">
+          <Icon icon="ph:storefront" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
+          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">SME</h2>
+        </div>
+        <p className="text-lg leading-8 mb-0">
+          I punti vendita SME al momento non sono convenzionati con la nostra scuola.
+        </p>
       </section>
 
       {/* MrDigital */}
