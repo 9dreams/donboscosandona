@@ -456,12 +456,12 @@ export default function IpadPage() {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-5 mb-6">
-          <div className="rounded-2xl bg-sky-50 dark:bg-sky-950/20 border-l-4 border-sky-400 p-5">
+          <div className="rounded-2xl bg-amber-50 dark:bg-amber-950/30 border-l-4 border-amber-400 p-5">
             <div className="flex items-center gap-2 mb-2">
-              <Icon icon="ph:x-circle" className="text-xl text-sky-500" />
-              <h3 className="font-bold m-0">Da evitare</h3>
+              <Icon icon="ph:x-circle" className="text-xl text-amber-500" />
+              <h3 className="font-bold m-0 text-amber-900 dark:text-amber-200">Da evitare</h3>
             </div>
-            <p className="text-sm text-sky-900 dark:text-sky-200">
+            <p className="text-sm text-amber-900 dark:text-amber-200">
               iPad con tasto Home e connettore Lightning (9ª generazione o precedenti) e modelli con
               meno di <strong>128 GB</strong> di memoria: rischiano di non ricevere più aggiornamenti
               iPadOS prima della fine del percorso e di non avere spazio sufficiente per app e
@@ -481,17 +481,17 @@ export default function IpadPage() {
           </div>
         </div>
 
-        <div className="rounded-2xl border-l-4 border-sky-400 bg-sky-50 dark:bg-sky-950/20 p-6">
+        <div className="rounded-2xl border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/30 p-6">
           <div className="flex items-center gap-2 mb-3">
-            <Icon icon="ph:lock-key" className="text-xl text-sky-500" />
-            <h3 className="font-bold m-0">Importante se riutilizzate un iPad già di famiglia</h3>
+            <Icon icon="ph:lock-key" className="text-xl text-amber-500" />
+            <h3 className="font-bold m-0 text-amber-900 dark:text-amber-200">Importante se riutilizzate un iPad già di famiglia</h3>
           </div>
-          <p className="text-sm text-sky-900 dark:text-sky-200 mb-3">
+          <p className="text-sm text-amber-900 dark:text-amber-200 mb-3">
             Prima di consegnare il dispositivo a scuola è necessario <strong>disattivare
             "Dov'è" (Find My)</strong>: l'iPad verrà infatti ripristinato e configurato ex novo
             dall'ufficio tecnico.
           </p>
-          <p className="text-sm text-sky-900 dark:text-sky-200 m-0">
+          <p className="text-sm text-amber-900 dark:text-amber-200 m-0">
             Se "Dov'è" non viene disattivato e non si riesce a risalire alle credenziali dell'Apple
             ID associato, il dispositivo resterà <strong>bloccato dal Blocco Attivazione</strong> del
             precedente proprietario: la scuola non potrà configurarlo, l'iPad non potrà essere
