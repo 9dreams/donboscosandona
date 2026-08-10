@@ -9,18 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.14.11",
-    "@mui/material": "^5.14.11",
-    "@mui/styled-engine-sc": "^5.14.11",
-    "@next/font": "13.1.6",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource/roboto": "^5.2.8",
+    "@mui/icons-material": "^5.18.0",
+    "@mui/material": "^5.18.0",
     "@palmabit/react-cookie-law": "^0.7.0",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
-    "next": "13.1.6",
-    "nextjs": "^0.0.3",
+    "next": "^15.5.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^5.3.0",
@@ -28,12 +25,32 @@
     "remark": "^14.0.2",
     "remark-html": "^15.0.2",
     "styled-components": "^5.3.11",
-    "swiper": "^10.2.0",
+    "swiper": "^12.2.0",
     "swr": "^2.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.41",
-    "tailwindcss": "^3.4.10"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^3.4.18"
+  },
+  "overrides": {
+    "postcss": "^8.5.25",
+    "sharp": "^0.35.3",
+    "cookie": "^0.7.2",
+    "nanoid": "^3.3.17",
+    "@babel/helpers": "^7.28.4",
+    "@babel/runtime": "^7.28.4",
+    "@babel/core": "^7.29.6",
+    "@babel/traverse": "^7.29.8",
+    "cross-spawn": "^7.0.6",
+    "js-yaml": "^3.15.1",
+    "glob": "^10.5.0",
+    "diff": "^5.2.2",
+    "lodash": "^4.17.23",
+    "minimatch": "^9.0.7",
+    "yaml": "^2.8.3",
+    "picomatch": "^2.3.2",
+    "uuid": "^11.1.1",
+    "brace-expansion": "^2.1.2"
   }
 }
