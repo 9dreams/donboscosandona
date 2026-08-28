@@ -17,7 +17,6 @@ import {
   Test,
   NewsWall,
   SyntheticLightHero,
-  InfoBanner,
 } from '/components'
 
 import INostriNumeri from '/cc/INostriNumeri'
@@ -198,7 +197,6 @@ export default function Home({ data, movies, elementi }) {
         defaultTag='scuola'
         sponsorImage='/images/home/loghi_sponsor_new.png'
       />
-      <InfoBanner message='Si avvisa che la segreteria didattica è chiusa fino al 23 agosto.' />
       <NewsWall data={data} limit={7} defaultTag='scuola' />
       <a
         href='https://www.donboscoitalia.it/go-beyond-traditional-education/'

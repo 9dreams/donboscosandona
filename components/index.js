@@ -30,7 +30,6 @@ export { default as SyntheticLightHero } from './SyntheticLightHero.jsx'
 export { default as NewsArchive } from './NewsArchive.jsx'
 export { default as NewsArchiveHero } from './NewsArchiveHero.jsx'
 export { default as GoogleAnalytics } from './GoogleAnalytics'
-export { default as InfoBanner } from './InfoBanner.jsx'
 
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder
