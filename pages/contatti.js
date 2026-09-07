@@ -38,7 +38,7 @@ export default function Home() {
           </li>
           <li>
             <span className="font-bold">POMERIGGIO:</span> martedì e giovedì
-            dalle 15:30 alle 16:00
+            dalle 15:30 alle 16:30
           </li>
           <br />
           <br />
