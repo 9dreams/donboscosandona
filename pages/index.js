@@ -165,7 +165,7 @@ let link_utili = [
     description:
       'Il regolamento sottoscritto a inizio anno, che tutti gli allievi si impegnano a rispettare.',
     immagineUrl: '/images/home/regolamento.png',
-    url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBalFEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f729bfb33efb7d19edd4a88149189a466d19900f/D.13.1.3%20Regolamento%20Allievi%20(rev.2).pdf',
+    url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc2dFIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--aaeae4095296064a00595e56af8fa9b5b4c8049b/D.13.1.3%20Regolamento%20allievi.pdf',
   },
   {
     title: 'ScuolaOnLine',
