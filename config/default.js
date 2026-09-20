@@ -16,6 +16,7 @@ export const menu = [
     { title: 'Energia', url: '/energia' },
     { title: 'Informatico', url: '/informatico' },
     { title: 'IFTS', url: '/ifts' },
+    { title: 'ITS', url: '/its' },
     { title: 'Meccanico', url: '/meccanico' },
     { title: 'Automotive', url: '/automotive' },
     { title: 'Acquisto iPad', url: '/ipad' },

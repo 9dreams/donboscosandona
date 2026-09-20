@@ -507,8 +507,11 @@ export default function IftsPage() {
           <p className="m-0 leading-7">
             Al termine, dopo l’esame, si ottiene il <strong>Certificato di Specializzazione Tecnica
             Superiore</strong> (EQF IV). Il titolo consente l’<strong>accesso ai percorsi ITS Academy</strong>,
-            tra cui l’indirizzo Web Developer Full Stack dell’ITS Digital Academy Mario Volpato, con
-            sede anche a San Donà di Piave.
+            tra cui l’indirizzo{' '}
+            <a href="/its" className="font-semibold text-[#1976D2] dark:text-[#64B5F6]">
+              Web Developer Full Stack
+            </a>{' '}
+            dell’ITS Digital Academy Mario Volpato, con sede anche a San Donà di Piave.
           </p>
         </div>
       </section>

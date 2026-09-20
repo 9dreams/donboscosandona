@@ -159,12 +159,13 @@ export default function Home({ data }) {
         </div>
       </section>
       <LandingHero
-        opacity={0.3}
-        title='ITS Academy: Perché è una splendida notizia'
-        description='Sul sito di ITS Digital Academy Mario Volpato è apparsa la nuova sede di San Donà, con indirizzo Web Developer Full Stack... scopri nel nostro articolo perché questa è una splendida notizia per i nostri allievi... e non solo!'
-        buttonUrl='https://www.donboscosandona.it/articoli/227'
-        buttonText="Leggi l'articolo"
-        imageUrl='/images/informatico/sfondo_its.jpg'
+        opacity={0.35}
+        title="ITS Academy — Web Developer Full Stack"
+        description="Il biennio ITS Digital Academy Mario Volpato è anche a San Donà, nella nostra sede. 1800 ore, tirocinio in azienda, qualifica EQF V. Open Day il 2 ottobre 2026."
+        buttonUrl="/its"
+        buttonText="Scopri il corso ITS"
+        imageUrl="/images/its/hero.jpg"
+        mobileObjectPosition="right"
         sponsorImage={null}
       />
       <p>&nbsp;</p>

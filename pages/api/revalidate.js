@@ -10,6 +10,7 @@ const DEFAULT_PATHS = [
   '/screen',
   '/informatico',
   '/ifts',
+  '/its',
   '/elettrico',
   '/energia',
   '/meccanico',
