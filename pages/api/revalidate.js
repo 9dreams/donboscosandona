@@ -9,6 +9,7 @@ const DEFAULT_PATHS = [
   '/news',
   '/screen',
   '/informatico',
+  '/ifts',
   '/elettrico',
   '/energia',
   '/meccanico',

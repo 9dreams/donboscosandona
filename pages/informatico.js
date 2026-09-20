@@ -140,27 +140,21 @@ export default function Home({ data }) {
       <Paragraph
         maxWidth={false}
         title='Full Stack Developer'
-        subtitle='Percorso post-diploma IFTS (Istruzione Formazione Tecnico Superiore)'
+        subtitle='Corso IFTS 2026/2027 — Coding & Vibe Coding'
         topImageUrl=''
       >
-        Il Full Stack Developer è un programmatore che si occupa della
-        progettazione e della realizzazione dell'intero stack di un'applicazione
-        web o mobile: dalla memorizzazione ed elaborazione dei dati lato server
-        (Back End) al suo interfacciamento con il lato utente (Front End), alla
-        definizione di un'interfaccia utente accattivante. Interfacciandosi con
-        il grafico, lavora sull'aspetto visivo di un sito web o di
-        un'applicazione, e fa in modo che l'esperienza utente sia ottimale anche
-        su piattaforme differenti, secondo i fondamenti dello User Experience
-        Design (UXD). Per fare questo ha una conoscenza dei principali linguaggi
-        di programmazione e framework usati nel web (HTML, CSS, JavaScript,
-        Bootstrap, ReactJS) e nella realizzazione di applicazioni mobile (React
-        Native, Flutter) oltre a quelli necessari per realizzare e gestire il
-        Back End (Ruby on Rails, PostgreSQL, JSON) ed è in grado di apprenderne
-        di nuovi in un contesto di continua evoluzione e rinnovamento. Gli
-        sbocchi professionali vanno dall'impiego in multinazionali, software
-        house, agenzie pubblicitarie a imprese non necessariamente del settore
-        ICT che desiderino mantenere internamente il proprio sito web o la
-        propria applicazione.
+        Percorso post-diploma di Istruzione e Formazione Tecnica Superiore:
+        800 ore, di cui 400 in aula e 400 di stage in azienda, gratuito, con
+        esame finale e Certificato di Specializzazione Tecnica Superiore
+        (EQF IV), valido anche per l&apos;accesso agli ITS Academy. In questa
+        edizione si diventa sviluppatori full stack su PHP, Laravel, Livewire
+        e Filament, imparando a scrivere il codice con le proprie mani e a
+        usare l&apos;intelligenza artificiale con criterio — capire prima di
+        delegare. Selezione il 30 ottobre, inizio il 3 novembre 2026.
+        {' '}
+        <a href="/ifts" className="font-semibold text-[#1976D2] dark:text-[#64B5F6]">
+          Tutte le informazioni sul corso IFTS →
+        </a>
       </Paragraph>
         </div>
       </section>
@@ -212,12 +206,20 @@ export default function Home({ data }) {
         />
       </div>
       <Products
-        title='IFTS'
-        description='500 ore a scuola e 500 in azienda nel nostro percorso di Istruzione e Formazione Tecnica Superiore, che apre le porte agli ITS Academy.'
+        title='IFTS 2026/2027'
+        description='800 ore: 400 in aula e 400 in azienda. Full Stack Developer — Coding & Vibe Coding. PHP, Laravel, Livewire, Filament e uso critico dell’intelligenza artificiale.'
         cardWidth={4}
         cardWidthXs={6}
         products={ifts}
       />
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 -mt-8 mb-16 text-center">
+        <a
+          href="/ifts"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1976D2] dark:bg-[#64B5F6] text-white dark:text-[#0d0f14] font-semibold px-8 py-4 text-sm uppercase tracking-[0.15em] no-underline hover:opacity-90 transition-opacity"
+        >
+          Scopri il corso IFTS
+        </a>
+      </div>
 
       <div className='mt-16 lg:mt-24'>
         <Products
@@ -253,7 +255,7 @@ export default function Home({ data }) {
               200,
               200,
               500,
-              500,
+              400,
             ],
           ]}
           backgroundImageUrl='/images/informatico/sfondo-piano-formativo.jpg'
@@ -528,52 +530,60 @@ let quarto_anno = [
 
 let ifts = [
   {
-    title: 'PHP',
+    title: 'PHP e OOP',
     description:
-      'PHP è uno dei linguaggi più diffusi per lo sviluppo web lato server: permette di costruire siti dinamici, gestire dati e creare servizi backend.',
+      'Il linguaggio e la programmazione a oggetti: classi, ereditarietà, interfacce, debugging. La base su cui poggia tutto il resto.',
     immagineUrl: '/images/informatico/loghi/php.png',
+    url: '/ifts',
   },
   {
     title: 'Database relazionali',
     description:
-      'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
+      'Modellazione dei dati, SQL, relazioni 1-N e N-N: lo schema su cui Laravel ed Eloquent lavorano ogni giorno.',
     immagineUrl: '/images/informatico/sql.png',
+    url: '/ifts',
   },
   {
-    title: 'TailWind CSS',
+    title: 'Tailwind CSS',
     description:
-      'Modulo di ripasso e allineamento per chi proviene da altri percorsi.',
+      'Interfacce moderne e responsive, insieme ai template Blade, per un front end coerente su desktop e mobile.',
     immagineUrl: '/images/informatico/tailwind-css.jpeg',
-  },
-  {
-    title: 'Google Stitch',
-    description:
-      'Progettazione rapida di interfacce e prototipi con strumenti AI per trasformare idee, prompt e flussi utente in layout pronti da sviluppare.',
-    immagineUrl: '/images/informatico/loghi/stitch.jpg',
-  },
-  {
-    title: 'Flutter',
-    description:
-      'Flutter ti permette di creare splendide applicazioni multipiattaforma: Android, iOS, Windows, MacOS, Linux, web e dispositivi intelligenti di ogni tipo.',
-    immagineUrl: '/images/informatico/flutter.webp',
+    url: '/ifts',
   },
   {
     title: 'Laravel',
     description:
-      "Framework PHP moderno per costruire applicazioni web full-stack: backend, database, autenticazione, API e interfacce web organizzate in modo solido e professionale.",
+      'Il framework PHP per applicazioni reali: routing, controller, migration, Eloquent, autenticazione e API.',
     immagineUrl: '/images/informatico/loghi/laraver.webp',
+    url: '/ifts',
+  },
+  {
+    title: 'Livewire',
+    description:
+      'Componenti interattivi senza ricaricare la pagina: il ponte concettuale tra Blade e i pannelli Filament.',
+    immagineUrl: '/images/informatico/javascript.png',
+    url: '/ifts',
   },
   {
     title: 'Filament',
     description:
-      'Toolkit basato su Laravel per creare rapidamente pannelli di amministrazione, dashboard e strumenti gestionali moderni per applicazioni web.',
+      'Pannelli di amministrazione professionali: Resource, form, tabelle, filtri, ruoli e permessi.',
     immagineUrl: '/images/informatico/loghi/filament.jpg',
+    url: '/ifts',
+  },
+  {
+    title: 'DevOps',
+    description:
+      'Git in team, Docker, ambienti, CI/CD e deploy: portare un’applicazione dal computer alla produzione.',
+    immagineUrl: '/images/informatico/versioning.png',
+    url: '/ifts',
   },
   {
     title: 'Vibe Coding',
     description:
-      'Approccio allo sviluppo assistito dall’intelligenza artificiale: dal prompt alla prototipazione rapida, imparando a guidare gli strumenti AI con consapevolezza tecnica.',
+      'Uso critico dell’intelligenza artificiale: specifiche chiare, lettura del codice generato, giudizio. Capire prima di delegare.',
     immagineUrl: '/images/informatico/loghi/vibe_coding.png',
+    url: '/ifts',
   },
 ]
 
