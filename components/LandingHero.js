@@ -54,7 +54,12 @@ export default function LandingHero(props) {
                   left: 'max-md:object-left',
                   center: 'max-md:object-center',
                 }[props.mobileObjectPosition] || ''
-              } brightness-[1.05] saturate-[1.3] contrast-[1.1]`}
+              } ${props.mobileObjectPosition?.includes('%') ? 'slh-hero-img--custom' : ''} brightness-[1.05] saturate-[1.3] contrast-[1.1]`}
+              style={
+                props.mobileObjectPosition?.includes('%')
+                  ? { '--slh-object-pos': props.mobileObjectPosition }
+                  : undefined
+              }
             />
           </picture>
           <div className="slh-hero-color-overlay absolute inset-0" />
@@ -154,6 +159,13 @@ export default function LandingHero(props) {
         .slh-hero-img {
           will-change: transform;
           transform: scale(1.05);
+        }
+
+        @media (max-width: 1023px) {
+          .slh-hero-img--custom {
+            object-position: var(--slh-object-pos);
+            transform-origin: var(--slh-object-pos);
+          }
         }
 
         .slh-hero-color-overlay {

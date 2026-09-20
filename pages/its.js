@@ -131,7 +131,7 @@ export default function ItsPage() {
         title="Web Developer Full Stack"
         description="Corso biennale ITS Academy — Tecnico Superiore Sviluppatore Software. A San Donà di Piave, nella nostra sede, con ITS Digital Academy Mario Volpato."
         imageUrl="/images/its/hero.jpg"
-        mobileObjectPosition="right"
+        mobileObjectPosition="78% 40%"
         opacity={0.35}
         sponsorImage={null}
         buttonUrl="#openday"

@@ -165,7 +165,7 @@ export default function Home({ data }) {
         buttonUrl="/its"
         buttonText="Scopri il corso ITS"
         imageUrl="/images/its/hero.jpg"
-        mobileObjectPosition="right"
+        mobileObjectPosition="78% 40%"
         sponsorImage={null}
       />
       <p>&nbsp;</p>
