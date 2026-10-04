@@ -1,5 +1,5 @@
 {
-  "intro": "Dall’arrivo dei Salesiani ad oggi, ben 23 Direttori si sono alternati alla guida della Comunità. Ne presentiamo un breve profilo convinti che ciascuno di essi abbia lasciato un’impronta particolare, che merita di essere conosciuta.",
+  "intro": "Dall’arrivo dei Salesiani ad oggi, ben 24 Direttori si sono alternati alla guida della Comunità. Ne presentiamo un breve profilo convinti che ciascuno di essi abbia lasciato un’impronta particolare, che merita di essere conosciuta.",
   "galleria": [
     "/images/storia/direttori/direttori-galleria-1.jpg",
     "/images/storia/direttori/direttori-galleria-2.jpg",
@@ -410,7 +410,7 @@
       "nome": "don Nicola Munari",
       "periodo": "dal 2020",
       "profilo": [
-        "E’ l’attuale direttore, in carica dal 22 agosto 2020.",
+        "In carica dal 22 agosto 2020.",
         "Auguriamo a don Nicola di continuare ad essere fra i nostri giovani appassionato testimone dello spirito di don Bosco.",
         "Gli assicuriamo il sostegno di una comunità che da sempre accoglie con caloroso entusiasmo i Salesiani, perché profondamente riconoscente del tanto bene ricevuto."
       ],
@@ -422,6 +422,23 @@
       "eta": "51 anni",
       "foto": "/images/storia/direttori/direttore-23-munari.jpg",
       "didascaliaFoto": "a sinistra nell'immagine"
+    },
+    {
+      "n": 24,
+      "slug": "michele-peruzzi",
+      "nome": "don Michele Peruzzi",
+      "periodo": "attuale direttore",
+      "profilo": [
+        "È l’attuale direttore dell’Oratorio Don Bosco, succeduto a don Nicola Munari."
+      ],
+      "nato": null,
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": null,
+      "al": null,
+      "eta": null,
+      "foto": null,
+      "didascaliaFoto": null
     }
   ]
 }

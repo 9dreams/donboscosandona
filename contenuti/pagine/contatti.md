@@ -8,7 +8,7 @@ contatti:
     telefono: "0421 338911"
     indirizzo: "via XIII Martiri, 86 - 30027 San Donà di Piave (VE)"
     fax: "0421 188 2664"
-  - nome: "don Nicola Munari"
+  - nome: "don Michele Peruzzi"
     ruolo: "Direttore"
     email: "direzione@donboscosandona.it"
   - nome: "Amministrazione"
@@ -49,7 +49,7 @@ via XIII Martiri, 86 \
 30027 San Donà di Piave (VE) \
 **Tel. 0421 338911 - Fax 0421 188 2664**
 
-- Direttore: **don Nicola Munari** - [direzione@donboscosandona.it](mailto:direzione@donboscosandona.it)
+- Direttore: **don Michele Peruzzi** - [direzione@donboscosandona.it](mailto:direzione@donboscosandona.it)
 - Amministrazione e disponibilità ambienti: [amministrazione@donboscosandona.it](mailto:amministrazione@donboscosandona.it) - tel. 0421 338900
 - Dopo la Campanella: dr. Andrea Pasqualetto - [campanella@donboscosandona.it](mailto:campanella@donboscosandona.it) - tel. 0421 338 992 - cell. 391 706 4430 (ore ufficio)
 - Cinema:

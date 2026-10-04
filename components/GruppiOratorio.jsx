@@ -43,7 +43,7 @@ export default function GruppiOratorio() {
                 La nostra storia
               </span>
               <span className="block text-[17px] leading-relaxed text-white/85">
-                Novant'anni di cortile, 23 direttori, i libri e le interviste «A tu per tu».
+                Novant'anni di cortile, 24 direttori, i libri e le interviste «A tu per tu».
               </span>
             </div>
             <span className="inline-flex items-center gap-2.5 rounded-full bg-[#F0C06B] px-[22px] py-3.5 text-[15px] font-extrabold text-[#0E1220]">

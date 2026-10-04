@@ -31,7 +31,7 @@ export default function Storia({ intro, cronologia, direttori, libri, interviste
         <title>La nostra storia | Oratorio Don Bosco</title>
         <meta
           name="description"
-          content="La storia dell'Oratorio Don Bosco di San Donà di Piave dal 1928: la cronologia, i 23 direttori, i libri e le interviste «A tu per tu»."
+          content="La storia dell'Oratorio Don Bosco di San Donà di Piave dal 1928: la cronologia, i 24 direttori, i libri e le interviste «A tu per tu»."
         />
       </Head>
 
