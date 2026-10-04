@@ -28,7 +28,7 @@ const slides = [
   {
     titolo: 'ADS',
     descrizione: 'Vieni a trovarci al Oratorio don Bosco - San Donà di Piave (VE)',
-    immagine: '/images/ads/images/ads1.jpg',
+    immagine: '/images/ads/ads1.jpg',
     colore2: 'rgba(100,100,100,0)',
     buttonText: 'Scopri di più!',
   },
