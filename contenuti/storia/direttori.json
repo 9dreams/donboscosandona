@@ -1,0 +1,427 @@
+{
+  "intro": "Dall’arrivo dei Salesiani ad oggi, ben 23 Direttori si sono alternati alla guida della Comunità. Ne presentiamo un breve profilo convinti che ciascuno di essi abbia lasciato un’impronta particolare, che merita di essere conosciuta.",
+  "galleria": [
+    "/images/storia/direttori/direttori-galleria-1.jpg",
+    "/images/storia/direttori/direttori-galleria-2.jpg",
+    "/images/storia/direttori/direttori-galleria-3.jpg"
+  ],
+  "direttori": [
+    {
+      "n": 1,
+      "slug": "riccardo-giovannetto",
+      "nome": "don Riccardo Giovannetto",
+      "periodo": "1928 – 1930",
+      "profilo": [
+        "“Bravo ed ottimo sacerdote, zelante e buono”, don Giovannetto viene incaricato dall’allora Ispettore salesiano don Festini a dirigere la parte maschile dell’Orfanotrofio, sede del primo nucleo salesiano.",
+        "Uomo mite, docile e riservato, si spende per gli orfanelli con grande dedizione e sacrificio avviando, nelle precarie condizioni iniziali, le prime attività educative e ricreative che portano il segno inconfondibile di don Bosco."
+      ],
+      "nato": "Fobello (VC), 16 giugno 1883",
+      "morto": "Biella (VC), 17 gennaio 1973",
+      "incarico": "Direttore dell’Orfanotrofio Don Rua",
+      "dal": "24 settembre 1928",
+      "al": "30 settembre 1930",
+      "eta": "45 anni",
+      "foto": "/images/storia/direttori/direttore-01-giovannetto.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 2,
+      "slug": "luigi-castellotti",
+      "nome": "don Luigi Castellotti",
+      "periodo": "1930 – 1931",
+      "profilo": [
+        "Arrivato a San Donà nel 1929 per seguire i lavori dell’erigendo oratorio, raccoglie i primi giovani e fonda la nuova opera che lascia nel 1931 “rigurgitante di oltre 1800 ragazzi”.",
+        "Il tratto allegro del carattere, la passione e l’estro creativo costituiscono “il segreto del suo straordinario successo tra i figli del popolo”. Musicista e compositore di talento, scrive l’Inno dell’Oratorio, uno spaccato di vita oratoriana che conserva la vitalità e la freschezza di quei tempi lontani."
+      ],
+      "nato": "Langosco (PV), 13 ottobre 1875",
+      "morto": "Colle don Bosco, 10 febbraio 1953",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "30 settembre 1930",
+      "al": "14 settembre 1931",
+      "eta": "54 anni",
+      "foto": "/images/storia/direttori/direttore-02-castellotti.jpg",
+      "didascaliaFoto": "al centro in prima fila"
+    },
+    {
+      "n": 3,
+      "slug": "alessandro-franch",
+      "nome": "don Alessandro Franch",
+      "periodo": "1931 – 1933",
+      "profilo": [
+        "Pur con precaria salute, dà nuovo impulso alle attività. Organizza la prima squadra di calcio ed acquista di seconda mano gli strumenti di banda istruendo un buon numero di giovannetti ai primi elementi della musica.",
+        "Dal sorriso amabile, mostra una particolare finezza d’animo. Lo si ricorda per la predicazione erudita che sa proporre in modo facile. Eccezionali le sue doti artistiche che esprime con la musica e con il teatro."
+      ],
+      "nato": "Cloz (TN), 1 dicembre 1880",
+      "morto": "Trento, 25 gennaio 1940",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "17 novembre 1931",
+      "al": "14 settembre 1933",
+      "eta": "50 anni",
+      "foto": "/images/storia/direttori/direttore-03-franch.jpg",
+      "didascaliaFoto": "in seconda fila al centro"
+    },
+    {
+      "n": 4,
+      "slug": "giuseppe-del-favero",
+      "nome": "don Giuseppe Del Favero",
+      "periodo": "1933 – 1936",
+      "profilo": [
+        "Il dinamismo e la grande disponibilità spiegano la profonda simpatia che don Bepi, come “impone quasi di essere chiamato con il suo fare modesto e accattivante”, sa guadagnare alla neo nata opera.",
+        "Nell’anno di don Bosco Santo, rilancia e promuove tutte le attività azzardando spese impegnative: amplia la capienza del teatro ed acquista una cinecamera che introduce la grande novità del cinema sonoro. Socio fondatore del locale gruppo di alpini, ne rimane per anni l’amato cappellano."
+      ],
+      "nato": "Lozzo di Cadore, 17 novembre 1895",
+      "morto": "Mogliano Veneto, 22 aprile 1985",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "8 ottobre 1933",
+      "al": "ottobre 1936",
+      "eta": "37 anni",
+      "foto": "/images/storia/direttori/direttore-04-del-favero.jpg",
+      "didascaliaFoto": "il quarto da sinistra"
+    },
+    {
+      "n": 5,
+      "slug": "luigi-benvenuti",
+      "nome": "don Luigi Benvenuti",
+      "periodo": "1936 – 1939",
+      "profilo": [
+        "Al suo arrivo, don Benvenuti trova un paese povero di risorse e di prospettive. Mosso da un cuore largo e generoso, si impegna per l’apertura di una scuola serale per adulti mentre ai piccoli offre un mezzo di divertimento che diverrà il simbolo dell’Oratorio: la giostra.",
+        "Incoraggia la partecipazione alle funzioni premiando i più assidui con giacca e pantaloni o con un paio di zoccoli, così preziosi per raggiungere a piedi l’oratorio anche da lontano."
+      ],
+      "nato": "Borghetto (TN), 3 maggio 1896",
+      "morto": "Negrar (VR), 15 gennaio 1980",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "ottobre 1936",
+      "al": "28 settembre 1939",
+      "eta": "40 anni",
+      "foto": "/images/storia/direttori/direttore-05-benvenuti.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 6,
+      "slug": "angelo-farina",
+      "nome": "don Angelo Farina",
+      "periodo": "1939 – 1942",
+      "profilo": [
+        "Giovanissimo direttore, si trova ad affrontare due eventi destinati a lasciar segno profondo nella Comunità: la morte dell’anziano confratello don Zaio, allievo di don Bosco e testimone diretto di due fatti prodigiosi, e la consacrazione di don Teodoro Mattiel, primo salesiano cresciuto e formato in quel cortile.",
+        "I tempi sono difficili ma don Farina è un tipo audace: inaugura il cinema all’aperto ed accumula lungo il muro perimetrale le pietre che serviranno per costruire la nuova ala."
+      ],
+      "nato": "Gambellara (VI), 17 febbraio 1907",
+      "morto": "Negrar (VR), 7 marzo 2000",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "26 settembre 1939",
+      "al": "9 ottobre 1942",
+      "eta": "32 anni",
+      "foto": "/images/storia/direttori/direttore-06-farina.jpg",
+      "didascaliaFoto": "il primo da sinistra"
+    },
+    {
+      "n": 7,
+      "slug": "domenico-trivellato",
+      "nome": "don Domenico Trivellato",
+      "periodo": "1942 – 1948",
+      "profilo": [
+        "Già presente nella comunità sandonatese in qualità di confessore e poi di catechista, dà compimento al progetto di ampliamento dell’edificio ultimando la seconda ala prospettica. Quando la guerra bussa alla porta, trasferisce l’oratorio nella vicina località di Calvecchia dove porta avanti al meglio le attività di base.",
+        "Dopo la Liberazione “don Pioppa”, come viene scherzosamente chiamato dai ragazzi, spende ogni energia per iniziare i lavori della chiesa, quanto mai necessaria per accogliere un’utenza sempre più numerosa."
+      ],
+      "nato": "Bagnoli (PD), 3 agosto 1906",
+      "morto": "Camposampiero, 11 dicembre 1977",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "9 ottobre 1942",
+      "al": "22 settembre 1948",
+      "eta": "36 anni",
+      "foto": "/images/storia/direttori/direttore-07-trivellato.jpg",
+      "didascaliaFoto": "al centro tra i confratelli"
+    },
+    {
+      "n": 8,
+      "slug": "domenico-moretti",
+      "nome": "don Domenico Moretti",
+      "periodo": "1948 – 1955",
+      "profilo": [
+        "Vero testimone di don Bosco, don Moretti dà nuova vitalità all’oratorio promuovendo ogni forma di attività espressiva. Richiama in oratorio anche i ragazzi più ribelli e trasgressivi infondendo fiducia, dinamismo e allegria. Sollecita la generosità di tutti riuscendo a completare e ad inaugurare la nuova chiesa.",
+        "Conquistato della gioiosa disponibilità dei sandonatesi, dà alla Casa che dirige l’appellativo di “Oratorio più bello del mondo”."
+      ],
+      "nato": "Padova, 31 luglio 1900",
+      "morto": "Udine, 26 agosto 1989",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "ottobre 1948",
+      "al": "6 ottobre 1955",
+      "eta": "48 anni",
+      "foto": "/images/storia/direttori/direttore-08-moretti.jpg",
+      "didascaliaFoto": "il secondo da sinistra"
+    },
+    {
+      "n": 9,
+      "slug": "giorgio-zancanaro",
+      "nome": "don Giorgio Zancanaro",
+      "periodo": "1955 – 1961",
+      "profilo": [
+        "Non ha il carisma del suo predecessore, si accontenta “di essere uno dei tanti”. Modesto e discreto, sa farsi guida in punta di piedi, distribuendo bontà e fiducia.",
+        "Sono gli anni tormentati che segnano la nascita del Centro di Addestramento Professionale, anni spinosi per le tensioni che generano e che mettono a rischio la sopravvivenza dell’Opera stessa, ma più che mai fecondi per l’incredibile sviluppo che quel granello di senapa riuscirà, nel tempo, a produrre."
+      ],
+      "nato": "Padova, 1 luglio 1908",
+      "morto": "Verona, 30 marzo 1976",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1955",
+      "al": "1961",
+      "eta": "47 anni",
+      "foto": "/images/storia/direttori/direttore-09-zancanaro.jpg",
+      "didascaliaFoto": "il quarto da sinistra"
+    },
+    {
+      "n": 10,
+      "slug": "alessandro-feltrin",
+      "nome": "don Alessandro Feltrin",
+      "periodo": "1961 – 1964",
+      "profilo": [
+        "Arriva a San Donà dall’Ispettoria piemontese facendosi notare per le doti di equilibrio, di bontà e di ingegno. Riservato e signorile nei modi, dà prova di generosità e disponibilità ma il suo passaggio è veloce e lascia poche tracce.",
+        "Durante il suo direttorato vengono comunque poste le basi per il potenziamento delle attività: nasce la Polisportiva Giovanile Salesiana \"Don Bosco\" e si avviano i lavori di ristrutturazione del fienile di Vallonga che diverrà la Casa di montagna dei gruppi."
+      ],
+      "nato": "Trevignano (TV), 22 settembre 1909",
+      "morto": "Mogliano Veneto, 1 aprile 1991",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1961",
+      "al": "1964",
+      "eta": "52 anni",
+      "foto": "/images/storia/direttori/direttore-10-feltrin.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 11,
+      "slug": "cesare-destro",
+      "nome": "don Cesare Destro",
+      "periodo": "1964 – 1970",
+      "profilo": [
+        "Entusiasta e propositivo, bussa a tutte le porte per chiedere lavoro per i giovani e finanziamenti per le nuove opere edilizie, e sempre ottiene con i suoi modi garbati ed insistenti. Nasce così l’ultima ala del fabbricato dove troveranno sistemazione il Centro giovanile, una cappella ed il centro di orientamento Cospes.",
+        "Quando l’ispettoria affida alla Casa di San Donà il soggiorno marino di S.Margherita di Caorle, si rimbocca le maniche per avviare l’attività estiva ed utilizzare la struttura tutto l’anno per ritiri ed incontri ."
+      ],
+      "nato": "Civè di Corbezzola, 27 luglio 1922",
+      "morto": "Castello di Godego, 16 febbraio 2008",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1964",
+      "al": "1970",
+      "eta": "42 anni",
+      "foto": "/images/storia/direttori/direttore-11-destro.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 12,
+      "slug": "ettore-andreatti",
+      "nome": "don Ettore Andreatti",
+      "periodo": "1970 – 1976",
+      "profilo": [
+        "Sono gli anni di transizione che aprono l’Oratorio alla modernità: si attuano i primi timidi tentativi di apertura alle ragazze (fino ad allora escluse dall’Oratorio), compare in chiesa la pianola elettrica che accompagna il canto liturgico, si incoraggia la solidarietà missionaria con le Operazioni Bolivia e Mato Grosso.",
+        "Attento al mondo della scuola, di carattere forte, buono e disponibile, don Ettore instaura rapporti positivi con la Parrocchia, mostrandosi un educatore premuroso, paziente ed amorevole."
+      ],
+      "nato": "Rizzologa di Pinè (TN), 6 ottobre 1930",
+      "morto": "Trento, 22 luglio 2015",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1970",
+      "al": "1976",
+      "eta": "39 anni",
+      "foto": "/images/storia/direttori/direttore-12-andreatti.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 13,
+      "slug": "alberto-trevisan",
+      "nome": "don Alberto Trevisan",
+      "periodo": "1976 – 1982",
+      "profilo": [
+        "Accompagna l’Oratorio verso la modernità aprendo la proposta educativa anche alle ragazze. Amplia l’offerta didattica introducendo sperimentazioni all’avanguardia, profonde il suo dinamismo e la sua creatività nel Centro giovanile, dà impulso al teatro portando in scena uno spaccato di vita contadina locale che avrà un incredibile successo.",
+        "Dalla sua mente vulcanica nascono iniziative che verranno premiate dalla tradizione quali la PER e la Settimana dell’Oratorio. Sostituita la tonaca con il clergyman, coinvolge i giovani in appassionanti gare sportive: organizza vacanze in bicicletta, partite di calcio e tornei di tennis nei due campi fatti appositamente predisporre nel nuovo cortile."
+      ],
+      "nato": "Domegge (BL), 21 agosto 1934",
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1976",
+      "al": "1982",
+      "eta": "42 anni",
+      "foto": "/images/storia/direttori/direttore-13-trevisan.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 14,
+      "slug": "carlo-zanon",
+      "nome": "don Carlo Zanon",
+      "periodo": "1982 – 1984",
+      "profilo": [
+        "Mostra doti di generosità spontanea, di allegria, di operosità. Frequente il suo richiamo a vivere una fede concreta, ama infatti ripetere: “Bisogna sporcarsi di Dio per vivere la vita cristianamente”.",
+        "Estroverso e un po’ stravagante, conquista chiunque con i suoi modi spicci e la confidenza espressa spesso con una pacca sulla spalla. Il suo passaggio è veloce ma lascia una scia di simpatia."
+      ],
+      "nato": "Treville (TV), 8 luglio 1927",
+      "morto": "Castello di Godego, 16 febbraio 2017",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1982",
+      "al": "1984",
+      "eta": "55 anni",
+      "foto": "/images/storia/direttori/direttore-14-zanon.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 15,
+      "slug": "aldo-bort",
+      "nome": "don Aldo Bort",
+      "periodo": "1984 – 1986",
+      "profilo": [
+        "Manifesta tratti di bontà, discrezione, squisita gentilezza. Salesiano convinto della sua missione e della sua vocazione, avvicina i giovani con gesti di amicizia ed espressioni gioiose, trascinandoli con il suo entusiasmo contagioso.",
+        "Al suo arrivo, benedice ed inaugura il campo sportivo che l’amministrazione comunale concede per la prima squadra in via Turati e rilancia, su sollecitazione degli Amici di Domenico Savio, il Concorso Presepi, un’iniziativa che vanta una lunga tradizione. Dopo solo un biennio di direzione lascia San Donà per occupare il posto vacante di vicario ispettoriale."
+      ],
+      "nato": "Sant'Orsola (TN), 4 aprile 1925",
+      "morto": "Castelfranco Veneto, 18 ottobre 2013",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1984",
+      "al": "1986",
+      "eta": "59 anni",
+      "foto": "/images/storia/direttori/direttore-15-bort.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 16,
+      "slug": "piergiorgio-busolin",
+      "nome": "don Piergiorgio Busolin",
+      "periodo": "1986 – 1992",
+      "profilo": [
+        "Per tutti padre, maestro e amico, don Piergiorgio è un salesiano buono e generoso anche se fermo e schietto nel richiamare lo sgarro a qualche principio. La sua presenza in Oratorio è attiva e accogliente, intenta a favorire ogni iniziativa per far crescere i giovani nel bene. Grande organizzatore ed animatore del cortile, si muove vigile per controllare, salutare, giocare a pallavolo, basket, calcetto… Ma è anche uomo di profonda spiritualità: realizza ed inaugura la Cappella delle confessioni.",
+        "In questi anni l’Oratorio promuove iniziative culturali con valenza cittadina: attività in piazza, cineforum, mostre, rappresentazioni teatrali, recital, concerti. Un Oratorio vivace e poliedrico, che non chiude mai i battenti."
+      ],
+      "nato": "Ca' Fornero di Jesolo, 11 aprile 1941",
+      "morto": "Castelfranco Veneto, 29 ottobre 2006",
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1986",
+      "al": "1992",
+      "eta": "45 anni",
+      "foto": "/images/storia/direttori/direttore-16-busolin.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 17,
+      "slug": "germano-colombo",
+      "nome": "don Germano Colombo",
+      "periodo": "1992 – 1998",
+      "profilo": [
+        "Gioviale ed accogliente come sanno esserlo i chioggiotti, raccoglie e fa sua l’impegnativa eredità di don Piergiorgio. Per dare visibilità ad un’offerta educativa ampia e variegata come quella sandonatese, lancia la rivista “Don Bosco Notizie”, un foglio d’informazione dell’Opera salesiana che a gennaio 1993 apre con uno Speciale Inaugurazione del CFP. In questi anni 90 le sfide educative sono impegnative ma le forze per affrontarle sono sempre più esigue. Si confida pertanto anche nell’aiuto esterno dei laici.",
+        "Nel 1997 si dà inizio ai lavori di riqualificazione del Tempio votivo; questi prevedono il rinnovo degli impianti tecnici e la collocazione delle nuove vetrate che si impongono per la bellezza del cromatismo e per la novità del simbolo del Grande Giubileo del 2000 riportato negli oblò."
+      ],
+      "nato": "Chioggia, 15 settembre 1950",
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1992",
+      "al": "1998",
+      "eta": "42 anni",
+      "foto": "/images/storia/direttori/direttore-17-colombo.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 18,
+      "slug": "enrico-peretti",
+      "nome": "don Enrico Peretti",
+      "periodo": "1998 – 2004",
+      "profilo": [
+        "E’ il primo direttore sandonatese nato provvidenzialmente, come ama ripetere, in via don Bosco n.1. Il legame con la sua terra e con l’ambiente educativo che lo ha plasmato è tanto forte da indurlo a promuovere una raccolta di memorie orali e documentali che forniscono del materiale prezioso per un primo libro sulla Storia dell’Oratorio e una mostra fotografica di successo, allestita al Centro Culturale cittadino.",
+        "Ottimo oratore, competente e appassionato, si impegna affinché tutti, entrando in oratorio, si sentano accolti e respirino aria di casa. Guida con intelligenza alcune trasformazioni importanti quali la ristrutturazione del Soggiorno marino di Caorle e l’avvio dei primi campi estivi nella nuova casa alpina di Pierabech. E’ un periodo fecondo ma allo stesso tempo carico di addii: ben sette confratelli se ne vanno per sempre dopo aver scritto belle pagine di storia oratoriana. Fra questi, don Piero Prez, uno dei primi salesiani ad arrivare a San Donà, nel lontano 1929."
+      ],
+      "nato": "S. Donà, 11 giugno 1956",
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "1998",
+      "al": "2004",
+      "eta": "42 anni",
+      "foto": "/images/storia/direttori/direttore-18-peretti.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 19,
+      "slug": "carlo-busana",
+      "nome": "don Carlo Busana",
+      "periodo": "2004 – 2007",
+      "profilo": [
+        "I suoi tratti caratteristici sono l’allegria e l’ottimismo. Amante della musica, dà vivacità alle feste accompagnando i canti con il suono della fisarmonica. Segue il gruppo Cospes ed è assistente appassionato ed amato della P.G.S LASTIMMA Don Bosco.",
+        "E’ il primo ad intuire la necessità di rinnovare il vecchio campo polveroso dotandolo di un tappeto in erba sintetica che sarà inaugurato dal suo successore. Provvede alla sistemazione delle varie sedi, al rinnovo del bar e della sala giochi, alla sostituzione della pavimentazione del porticato. Con la riasfaltatura del cortile viene smontata e messa a nuovo anche la giostra con sedile ottagonale, regina incontrastate del cortile dal 1938."
+      ],
+      "nato": "Cinte Tesino (TN), 30 maggio 1943",
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "2004",
+      "al": "2007",
+      "eta": "61 anni",
+      "foto": "/images/storia/direttori/direttore-19-busana.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 20,
+      "slug": "alberto-maschio",
+      "nome": "don Alberto Maschio",
+      "periodo": "2007 – 2013",
+      "profilo": [
+        "Sandonatese di origine, già responsabile dell’Oratorio negli anni ’90, riveste ora il doppio incarico con rinnovato entusiasmo, con passione e instancabile energia. Sempre presente in cortile, manifesta notevoli doti organizzative che gli valgono “un grande seguito tra i ragazzi e numeri da record in termini di partecipazione”.",
+        "Stimato ed apprezzato da molti per la straordinaria capacità di farsi prossimo, coinvolge giovani e adulti in mille iniziative. E’ un vulcano di idee: grazie a lui nascono e trovano rilancio progetti importanti quali il “Laboratorio Presepi”, l’attività di sostegno scolastico “Dopo la Campanella”, il programma TechPro2 che vede la collaborazione tra il CNOS/FAP e Fiat Group Automobiles; un’attività benedetta dallo stesso Rettor Maggiore, don Pascual Chávez, in visita a san Donà per l’inaugurazione della seconda aula."
+      ],
+      "nato": "S. Donà di P., 27 agosto 1959",
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "2007",
+      "al": "2013",
+      "eta": "48 anni",
+      "foto": "/images/storia/direttori/direttore-20-maschio.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 21,
+      "slug": "enrico-gaetan",
+      "nome": "don Enrico Gaetan",
+      "periodo": "2013 – 2016",
+      "profilo": [
+        "Dapprima direttore del CFP e responsabile degli Scout, raccoglie la sfida impegnativa lasciata da don Alberto, esibendo una leadership marcatamente diversa, ma altrettanto carismatica. Aperto, solare, disponibile, sa conquistare il cuore di giovani, adulti ed anziani con la sua umiltà, la bontà d’animo, la straordinaria capacità, che fu di don Bosco, di far sentire ciascuno amato in modo particolare. Preciso e solerte in ogni attività, da quelle professionali a quelle che coinvolgono le tante passioni (dalla botanica ai lavori creativi), richiama ogni domenica un gran numero di fedeli attirati dalla sua predicazione raffinata, profonda e ricca di provocazioni. Amante dell’ordine e del bello, dà avvio ai lavori di riqualificazione dell’edificio a cominciare dall’arredo verde prospiciente la strada principale.",
+        "Il suo passaggio è breve ma benedetto da eventi importanti: la peregrinazione dell’urna di Don Bosco, il ritorno per “l’ultima” messa di don Moretti, la visita del Rettor Maggiore don Artime."
+      ],
+      "nato": "Riese Pio X (TV), 17 aprile 1975",
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "2013",
+      "al": "2016",
+      "eta": "38 anni",
+      "foto": "/images/storia/direttori/direttore-21-gaetan.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 22,
+      "slug": "massimo-zagato",
+      "nome": "don Massimo Zagato",
+      "periodo": "2016 – 2020",
+      "profilo": [
+        "Giovanissimo salesiano, viene chiamato a svolgere il triplice incarico di direttore dell’Opera, Economo e direttore del CFP.",
+        "Gentile e riservato, si fa apprezzare per la disponibilità, l’accoglienza discreta e la predicazione chiara, ricca di stimoli e di indicazioni capaci di illuminare la quotidianità. Sostenuto da una bella comunità, accompagna i giovani con passione educativa e creatività: dirette streaming permettono quotidianamente all’oratorio, durante il lockdown, di entrare nelle singole case per raggiungere e coinvolgere ragazzi e genitori.",
+        "Procede con il lavoro di ristrutturazione dell’edificio e dà avvio a nuovi laboratori nell’intelligente intento di dialogare con le imprese e preparare gli studenti ad inserirsi con competenza nel mutato mondo del lavoro.",
+        "Segni tangibili della sua presenza sono i variopinti spazi di gioco e la graziosa statuina dell’Ausiliatrice, la “Madonna Portiera”, posta a perenne protezione del cortile."
+      ],
+      "nato": "Porto Viro (Ro), 2 novembre 1983",
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "2016",
+      "al": "2020",
+      "eta": "32 anni",
+      "foto": "/images/storia/direttori/direttore-22-zagato.jpg",
+      "didascaliaFoto": null
+    },
+    {
+      "n": 23,
+      "slug": "nicola-munari",
+      "nome": "don Nicola Munari",
+      "periodo": "dal 2020",
+      "profilo": [
+        "E’ l’attuale direttore, in carica dal 22 agosto 2020.",
+        "Auguriamo a don Nicola di continuare ad essere fra i nostri giovani appassionato testimone dello spirito di don Bosco.",
+        "Gli assicuriamo il sostegno di una comunità che da sempre accoglie con caloroso entusiasmo i Salesiani, perché profondamente riconoscente del tanto bene ricevuto."
+      ],
+      "nato": "Cittadella (Pd), 12 novembre 1968",
+      "morto": null,
+      "incarico": "Direttore dell’Oratorio Don Bosco",
+      "dal": "22 agosto 2020",
+      "al": null,
+      "eta": "51 anni",
+      "foto": "/images/storia/direttori/direttore-23-munari.jpg",
+      "didascaliaFoto": "a sinistra nell'immagine"
+    }
+  ]
+}

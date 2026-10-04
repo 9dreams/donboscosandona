@@ -27,7 +27,7 @@ export default function GruppiOratorio() {
           className="relative mb-11 flex min-h-[300px] items-end overflow-hidden rounded-[28px] bg-[#0E1220]"
         >
           <Image
-            src="/images/storia/oratoriani-anni-trenta.jpg"
+            src="/images/storia/storia-oratoriani-davanti-alla-casa.jpg"
             alt=""
             fill
             sizes="(min-width: 1200px) 1200px, 100vw"

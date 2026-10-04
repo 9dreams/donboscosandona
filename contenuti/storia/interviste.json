@@ -1,0 +1,28 @@
+{
+  "titolo": "A tu per tu con…",
+  "intro": [
+    "La rubrica ”A tu per tu con…” è uno spazio che raccoglie ricordi e informazioni relative all’ambiente educativo dell’Oratorio.",
+    "E' uno strumento per rileggerne la storia attraverso la voce di alcuni suoi protagonisti ma è soprattutto un'occasione per aprire il nostro cuore alla riconoscenza.",
+    "Solo guardando il passato con gratitudine possiamo cogliere la bellezza e la preziosità dell'oggi!"
+  ],
+  "introMarkdown": [
+    "*La rubrica ”**A tu per tu con…**” è uno **spazio** che raccoglie ricordi e informazioni relative all’ambiente educativo dell’Oratorio.*",
+    "*E' uno **strumento** per rileggerne la storia attraverso la voce di alcuni suoi protagonisti ma è soprattutto un'**occasione** per aprire il nostro cuore alla riconoscenza.*",
+    "***Solo guardando il passato con gratitudine possiamo cogliere la bellezza e la preziosità dell'oggi!***"
+  ],
+  "testata": "/images/storia/interviste/interviste-testata.jpg",
+  "ordine": [
+    "giampietro-pettenon",
+    "germano-colombo",
+    "enrico-peretti",
+    "massimo-zagato",
+    "guerrino-bordignon",
+    "enrico-gaetan",
+    "paolo-pontoni",
+    "bruno-canova",
+    "roberto-dissegna",
+    "angelino-battistella",
+    "bepi-arvotti",
+    "nicola-munari"
+  ]
+}

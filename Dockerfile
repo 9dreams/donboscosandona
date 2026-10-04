@@ -55,8 +55,10 @@ RUN groupadd --system --gid 1001 nodejs \
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-# Articoli markdown locali letti da lib/articoli.js (process.cwd()/articoli).
+# Markdown letti a runtime con process.cwd(): articoli (lib/articoli.js) e
+# contenuti fissi delle pagine (lib/contenuti.js, rigenerati via ISR).
 COPY --from=builder --chown=nextjs:nodejs /app/articoli ./articoli
+COPY --from=builder --chown=nextjs:nodejs /app/contenuti ./contenuti
 
 USER nextjs
 
