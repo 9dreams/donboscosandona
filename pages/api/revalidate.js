@@ -11,6 +11,14 @@ const DEFAULT_PATHS = [
   '/dlc',
   '/scout',
   '/ads',
+  '/storia',
+  '/calcio',
+  '/cooperatori',
+  '/missioni',
+  '/cl',
+  '/caio',
+  '/presepe',
+  '/banda',
 ]
 
 export default async function handler(req, res) {

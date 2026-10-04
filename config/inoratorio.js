@@ -12,7 +12,7 @@ export const menu = [
     { title: 'Cinema', url: 'https://cinema.donboscosandona.it' },
     { title: 'Scuola', url: 'https://www.donboscosandona.it' },
     { title: 'Soggiorno Marino', url: 'https://www.soggiornodonbosco.it' },
-    { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
+    { title: 'Privacy', url: '/privacy' },
 ]
 
 
@@ -44,7 +44,7 @@ export const footer = <Footer
     copyright={
       <a
         className="text-white hover:text-[#FF9800]"
-        href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico"
+        href="https://www.donboscosandona.it/9dreams"
       >
         Copyright (C) 2024 9dreams Agency.
       </a>

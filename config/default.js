@@ -11,12 +11,14 @@ export const gaMeasurementId = 'G-ZXJFLYMJ3V'
 
 export const menu = [
     { title: 'Home', url: '/' },
+    { title: 'Storia', url: '/storia' },
     { title: 'Proposta Estate', url: 'https://per.donboscosandona.it' },
     { title: 'Cinema', url: 'https://cinema.donboscosandona.it' },
     { title: 'Scuola', url: 'https://www.donboscosandona.it' },
     { title: 'Soggiorno Alpino', url: 'https://www.donboscopierabech.it' },
-    { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
-    { title: 'Segnalazione illeciti', url: 'http://archive.inoratorio.it/whistleblowing' },
+    { title: 'Contatti', url: '/contatti' },
+    { title: 'Privacy', url: '/privacy' },
+    { title: 'Segnalazione illeciti', url: '/whistleblowing' },
 ]
 
 export const logoUrl = '/images/logo_inoratorio.png'
@@ -46,7 +48,7 @@ export const footer = <Footer
     copyright={
       <a
         className="text-white hover:text-[#FF9800]"
-        href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico"
+        href="https://www.donboscosandona.it/9dreams"
       >
         Copyright (C) 2024 9dreams Agency.
       </a>

@@ -8,6 +8,7 @@ import {
   Features,
   Paragraph,
   Products,
+  GruppiOratorio,
   Table,
   Testimonials,
   Team,
@@ -81,12 +82,7 @@ export default function Home({ data, movies }) {
         borderRadius='10px'
         aspectRatio='1 / 1'
       />
-      <Products
-        cardWidth={3}
-        products={gruppi1}
-        borderRadius='20px'
-        aspectRatio='2 / 1'
-      />
+      <GruppiOratorio />
 
       <SwiperNews title='Al cinema' data={movies} limit={12} />
 
@@ -200,67 +196,5 @@ let siti = [
     title: 'Soggiorno Alpino Pierabech',
     immagineUrl: '/images/home/donboscopierabech.jpg',
     url: 'https://www.donboscopierabech.it',
-  },
-]
-
-let gruppi1 = [
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/9372c8fb969c3d9280014acd16f4d741b77915e4.jpg',
-    url: '/ads',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/5b27adfa600161e5d8aac496e3874055ed228743.jpg?1521194053',
-    url: '/scout',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/b28e973c6613ac1521bd7ef934721aa402d215af.jpg?1517600704',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/e4a41909932c20f3fb16eb22f12c19737eaeca17.jpg?1517600703',
-    url: 'http://archive.inoratorio.it/dlc',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/42fbf35ed416b040e78cd4ebdb10488d52cc2694.jpg?1517600705',
-    url: 'http://archive.inoratorio.it/storia',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/a68f73dc5c0a74d4a7c4187394fbe67adaa1dcc4.jpg?1517600704',
-    url: 'http://archive.inoratorio.it/cooperatori',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/b6930c69b4c434215de171191ef34748eea25a4d.jpg?1517600705',
-    url: 'http://archive.inoratorio.it/missioni',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/ce9cd906c4787f771a1b10e59f3e9e1ad38870db.jpg?1517600705',
-    url: 'http://archive.inoratorio.it/cl',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/a44867c32c44afda8717857c72e8de2cd570beb5.jpg?1517600672',
-    url: 'http://archive.inoratorio.it/banda',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/2827044e2ccaa6dfd84f387b4413580a5bccfffa.jpg?1517600704',
-    url: 'http://archive.inoratorio.it/resto',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/8610e2eaf7d5e97d99b6b1be2096c696e88b775e.jpg?1517600705',
-    url: 'http://archive.inoratorio.it/presepe',
-  },
-  {
-    immagineUrl:
-      'http://archive.inoratorio.it/img/column/5e089332bd175d1306e6535d68a98e6c6eb221cf.jpg?1517600704',
-    url: 'http://archive.inoratorio.it/caio',
   },
 ]

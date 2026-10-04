@@ -457,39 +457,39 @@ let Newss= [
   {
     id: 1,
     titolo: '8-9-10 dicembre 2023 - Ritiro GR',
-    immagine: 'http://archive.inoratorio.it/img/column/ae16a4e059de6c4da6b8efcd34aad8a1e20bded9.jpg?1702725164',
+    immagine: '/images/ads/archivio-01.jpg',
     abstract: 'Il Gruppo Responsabili dell’ADS ha vissuto un ritiro d’Avvento dal 8 al 10 dicembre a Gorizia, dedicandosi a temi educativi e alla preparazione al Natale, con la celebrazione di nuovi membri. Un momento di fraternità, riflessione e condivisione, arricchito da giochi e canti. Buon Natale a tutti!.',
   },
   {
     id: 2,
     titolo: '8 dicembre 2023 - Promesse NF1-GR',
-    immagine: 'http://archive.inoratorio.it/img/column/01db6c1b0cdff578f1d528b6db4a2448aa6a3977.jpg?1702584997',
+    immagine: '/images/ads/archivio-02.jpg',
     abstract: 'L\'8 dicembre, i ragazzi NF1 hanno cambiato foulard, segnando un importante passo nel loro percorso ADS. Hanno condiviso emozioni e obiettivi, esprimendo la loro dedizione e il desiderio di crescere insieme nel gruppo.'
 },
 
   {
     id: 3,
     titolo: '2-3 dicembre 2023 - Ritiro NF 3-4-5',
-    immagine: 'http://archive.inoratorio.it/img/column/a8e9fe48d7da85cc5e32da8c0631e68924b40c72.jpg?1702307246',
+    immagine: '/images/ads/archivio-03.jpg',
      abstract: 'Il 2 e 3 dicembre, il ritiro NF ha esplorato il tema “l’uomo vivo”, stimolando riflessioni profonde attraverso letture e giochi, creando legami e momenti indimenticabili tra i partecipanti.'
   },
   {
     id: 4,
     titolo: '11-12 novembre - Ritiro GeN1-2-3 a Duna Verde',
-    immagine: 'http://archive.inoratorio.it/img/column/7ee9ab8a2d8d97f801410dbfa1cbc92890260932.jpg?1701271390',
+    immagine: '/images/ads/archivio-04.jpg',
     abstract: 'Dedichiamo a Bepi questa foto di lui felice con i ragazzi. La sua dedizione e preghiera sono state un dono prezioso per noi. Visite e funerali si svolgeranno all’Oratorio Don Bosco dal 26 al 29 aprile.'
     
   },
    {
     id: 5,
     titolo: '18 novembre 2023 - Colletta alimentare',
-    immagine: 'http://archive.inoratorio.it/img/column/22ddc382ee7db3d3b24a38f6ba5f93192b68c175.jpg?1700744925',
+    immagine: '/images/ads/archivio-05.jpg',
     abstract: 'Il 18 novembre 2023, i ragazzi del Gen 3 dell’ADS hanno partecipato alla colletta alimentare per aiutare i più bisognosi, sensibilizzando la comunità sulla povertà e l’impegno sociale.'
    },
   {
     id: 6,
     titolo: 'Festa di Apertura ADS 2023-2024',
-    immagine: 'http://archive.inoratorio.it/img/column/973fe9bf9c38fd73a9465ba54f4649582aeec803.jpg?1697467578',
+    immagine: '/images/ads/archivio-06.jpg',
     abstract: 'Vi invitiamo alla FESTA DI APERTURA dell’anno ADS il 22 ottobre! Iscrivetevi qui: https://forms.gle/z82GN4QExXRypL4k7. Contributo di 2 Euro a persona.'
   },
 ];

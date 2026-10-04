@@ -6,19 +6,19 @@ import { SezioneApprofondimento } from '/components'
 const activities = [
   {
     title: 'Attività Educative',
-    image: 'http://archive.inoratorio.it/img/column/daac7f166a35aed93e13de057b5ee87ec833df60.jpg?1517601159',
+    image: '/images/dlc/archivio-01.jpg',
     alt: 'Attività 1',
     body: 'Il progetto offre attività di doposcuola e supporto scolastico per studenti dalle scuole elementari alle superiori, inclusi laboratori creativi, gruppi di studio personalizzati e ripetizioni individuali, con obiettivi educativi concordati in fase di iscrizione.',
   },
   {
     title: 'Laboratori Creativi',
-    image: 'http://archive.inoratorio.it/img/column/266250e7aafa0a1f4045ae2ead19638761ca2eca.jpg?1517601160',
+    image: '/images/dlc/archivio-02.jpg',
     alt: 'Attività 2',
     body: 'L’attività si svolge dal lunedì al venerdì, suddividendo il tempo tra compiti, supporto scolastico e attività ludico-ricreative. Gli studenti delle scuole elementari e medie lavorano in gruppi, con supporto individuale limitato a gruppi di studio e ripetizioni.',
   },
   {
     title: 'Supporto Psicologico',
-    image: 'http://archive.inoratorio.it/img/column/6a3b075844f340c4d41a6969e1662092c21b2177.jpg?1517601162',
+    image: '/images/dlc/archivio-03.jpg',
     alt: 'Attività 3',
     body: `Iscrizioni doposcuola mercoledì e venerdì su prenotazione. Completa con appuntamento dal Tutor. Per gruppi studio e ripetizioni, contattare il referente.
 
@@ -78,7 +78,7 @@ export default function Home({data, elementi, approfondimento }) {
 
         <div className="mt-8 text-center">
           <img
-            src='http://archive.inoratorio.it/img/ck/2850edcef06dff4c46fd4b4c89b93d192aa710a9.png'
+            src='/images/dlc/archivio-04.png'
             alt="Immagine dopo la campanella"
             className="block mx-auto max-w-full"
           />
