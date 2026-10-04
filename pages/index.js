@@ -1,6 +1,5 @@
  
 import {
-  Carousel,
   Certifications,
   Layout,
   LandingHero,
@@ -21,14 +20,14 @@ import {
 
 import INostriNumeri from '/cc/INostriNumeri'
 import { excludeTag } from '/lib/posts'
-import { slides, domande_test } from '../data/homePage'
+import { domande_test } from '../data/homePage'
 
 // I punti di forza
 const features = [
   {
     title: 'Pastorale',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/8a32ae923c77551e17262820251ee646d2b41fce.png',
+      '/images/home/punti-di-forza/pastorale.png',
     description:
       'Per diventare come insegna don Bosco "buoni cristiani e onesti cittadini".',
       url: '/pastorale'
@@ -36,7 +35,7 @@ const features = [
   {
     title: 'Progetto educativo',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/77e8fb59e0a23151c46936b674e3c9620c64ff3a.png',
+      '/images/home/punti-di-forza/progetto-educativo.png',
     description:
       'Un progetto chiaro e affidabile per far crescere e diventare uomini. ',
       url: 'https://channels.donboscosandona.it/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamdEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d34762c0a87f0670457a8db5239124cbc77efa99/Progetto%20Educativo%20(Rev.3_25.11.2025).pdf'
@@ -44,7 +43,7 @@ const features = [
   {
     title: 'Didattica attiva',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/c46d55012c575d41c5a23c8fa606cb0a5f67337f.png',
+      '/images/home/punti-di-forza/didattica-attiva.png',
     description:
       'Lezioni attive e coinvolgenti per dimenticare la noia e partecipare da protagonisti.',
       url: '/didattica'
@@ -52,14 +51,14 @@ const features = [
   {
     title: 'Laboratori',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/1ecf12eb29bb3b57b1629de8376a3288d31c0f4a.png',
+      '/images/home/punti-di-forza/laboratori.png',
     description:
       "12 ore settimanali in laboratori tecnologicamente all'avanguardia per formare i professionisti del futuro.",
   },
   {
     title: 'Servizi al lavoro',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/d7e68e6fd443ca3d7573c81ae780ff8e6783ad99.png',
+      '/images/home/punti-di-forza/servizi-al-lavoro.png',
     description:
       "Orientamento, stage e alternanza, i nostri esperti ti accompagneranno fino all'effettivo inserimento nelle aziende del settore.",
     url: '/sal',
@@ -233,7 +232,6 @@ export default function Home({ data, movies, elementi }) {
         borderRadius='10px'
       />  
       <INostriNumeri />
-      <Carousel slides={slides} />
       <Features
         title='I nostri punti di forza'
         description='Scopri perché SFP DON BOSCO è davvero la scuola che fa al caso tuo!'

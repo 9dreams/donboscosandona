@@ -305,6 +305,6 @@ let sponsor = [
   "https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png",
   "https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png",
   "https://www.comitec.it/img/logo.png?v=1.1",
-  "https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png",
+  "/images/sponsor/rethink-robotics.png",
   "https://www.amd.com/system/files/11340-oculus-logo-hero-vertical-447x362.png",
 ];

@@ -34,7 +34,7 @@ export default function Home({ data, elementi }) {
         imageUrl='https://source.unsplash.com/random'
       />
 
-      <Logos url='https://archive.donboscosandona.it/img/ck/20b01b69c5c5586ea921a398e557a7767d004959.png' />
+      <Logos url='/images/loghi-finanziatori.png' />
       <div>
       <Test domande={domande_test} />
       </div>
@@ -497,7 +497,7 @@ let sponsor = [
   'https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png',
   'https://images-eu.ssl-images-amazon.com/images/I/413W%2BhcdyEL.png',
   'https://www.comitec.it/img/logo.png?v=1.1',
-  'https://archive.donboscosandona.it/img/ck/1e0a315dbf7a64beb118a36bbc2148c8d20f55a3.png',
+  '/images/sponsor/rethink-robotics.png',
 ]
 
 let domande_test = [

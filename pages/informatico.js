@@ -308,7 +308,7 @@ let progetti = [
     description:
       'Siamo fieri di aver contribuito con le nostre classi alla traduzione italiana del progetto freeCodeCamp, dove puoi imparare a programmare gratuitamente ottenendo certificazioni di livello Universitario.',
     immagineUrl:
-      'https://archive.donboscosandona.it/img/column/0355dfc4fe258cf1982ba5ac69a051d4ebd245c4.jpg?1622362155',
+      '/images/informatico/freecodecamp.jpg',
   },
 ]
 

@@ -46,7 +46,6 @@ npm run lint     # ESLint
 │   ├── [settore].js          # Pagine corsi: elettrico, energia, informatico, meccanico, automotive
 │   ├── articoli/[id].js      # Articolo singolo — ISR, revalidate 3600s, fetch da CMS esterno
 │   ├── news.js               # Archivio notizie
-│   ├── progetto/             # Sottopagine progetto educativo (01–10 + index)
 │   ├── quiz.js               # Quiz orientamento
 │   ├── screen.js             # Schermo display esterno (autoplay Featured)
 │   └── ...                   # contatti, trasparenza, privacy, stage, sal, accreditamenti, ecc.
@@ -118,7 +117,7 @@ npm run lint     # ESLint
 | Quiz | `/quiz` | Importa `Test` da `/cc/Test` |
 | Schermo | `/screen` | `Featured` fullscreen, autoplay, reload ogni 10min |
 | Trasparenza | `/trasparenza` | Documenti da CMS con query `?q=trasparenza` |
-| Progetto | `/progetto` + `/progetto/01–10` | Pagine sottosezioni progetto educativo |
+| Progetto educativo | `/progetto`, `/progetto/*`, `/progetto_educativo` | Pagine rimosse: redirect in `next.config.js` al PDF aggiornato sul CMS (stesso link del riquadro in home) |
 
 ---
 

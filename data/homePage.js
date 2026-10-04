@@ -1,14 +1,3 @@
-export const slides = [
-  {
-    titolo: 'Visita virtuale',
-    descrizione:
-      'Scopri tutti i segreti della nostra Scuola con il tour virtuale!',
-    immagine: '/images/home/vr.webp',
-    buttonText: 'Inizia il tour',
-    buttonUrl: 'https://archive.donboscosandona.it/virtual-tour/index.htm',
-  },
-]
-
 export const classi = [
   { classe: '1A', punti: '538' },
   { classe: '1B', punti: '548' },
