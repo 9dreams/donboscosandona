@@ -25,7 +25,10 @@ const negoziUnieuro = [
   ['Castelfranco Veneto', 'Viale Europa, 30', 'TV'],
 ]
 
+const portaleEnroll = 'https://servizi.donboscosandona.it/enroll'
+
 const ancore = [
+  { href: '#registrazione', label: 'Registrazione iPad' },
   { href: '#unieuro', label: 'Unieuro' },
   { href: '#sme', label: 'SME' },
   { href: '#mrdigital', label: 'MrDigital' },
@@ -90,6 +93,87 @@ export default function IpadPage() {
           completare l'acquisto correttamente.
         </p>
       </div>
+
+      {/* Registrazione dell'iPad (enrollment) — obbligatoria per tutti */}
+      <section id="registrazione" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
+        <div className="rounded-2xl bg-white dark:bg-[#181b23] border-2 border-[#1976D2] dark:border-[#64B5F6] shadow-sm p-6 md:p-10">
+          <div className="flex items-center gap-3 mb-4">
+            <Icon icon="ph:clipboard-text" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
+            <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">
+              Registrazione dell'iPad: obbligatoria per tutti
+            </h2>
+          </div>
+          <p className="text-lg leading-8 mb-6">
+            Qualunque sia il modo in cui avete acquistato l'iPad — da un rivenditore convenzionato,
+            in un altro negozio o perché ne avevate già uno in famiglia — <strong>prima di
+            iniziare a usarlo dovete registrarlo</strong> con il modulo online della scuola. È il
+            passaggio con cui l'iPad viene iscritto ad <strong>Apple School Manager</strong> e
+            associato all'account scolastico dello studente: senza registrazione il dispositivo non
+            può essere configurato e non potrà essere usato a scuola.
+          </p>
+
+          <div className="flex gap-4 items-start rounded-2xl border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/30 p-5 mb-8">
+            <Icon icon="ph:warning-circle" className="text-2xl text-amber-500 shrink-0 mt-0.5" />
+            <p className="text-sm md:text-base text-amber-900 dark:text-amber-200 m-0">
+              <strong>Non accendete e non configurate l'iPad appena acquistato</strong> finché la
+              scuola non vi scrive che è pronto: se lo attivate prima che sia iscritto, va
+              ripristinato e la configurazione ricomincia da capo.
+            </p>
+          </div>
+
+          <h3 className="text-xl font-bold mb-4">Come funziona</h3>
+          <ol className="space-y-4 mb-8">
+            <li className="flex gap-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1976D2] text-white text-sm font-bold">
+                1
+              </span>
+              <span>
+                <strong>Compilate il modulo</strong> con i dati dello studente e indicate dove avete
+                acquistato l'iPad: il modulo vi chiede solo quello che serve per il vostro caso.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1976D2] text-white text-sm font-bold">
+                2
+              </span>
+              <span>
+                <strong>Rivenditore convenzionato</strong> (Unieuro, MrDigital, C2 Group): l'iPad
+                viene iscritto a distanza. Quando è tutto pronto riceverete un'email con il nome
+                utente, la password iniziale e le istruzioni per accenderlo a casa.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#1976D2] text-white text-sm font-bold">
+                3
+              </span>
+              <span>
+                <strong>Altro negozio o iPad già in famiglia</strong>: scegliete nel modulo un
+                appuntamento per portare l'iPad a scuola. Lo configura l'ufficio tecnico e vi
+                avvisiamo via email quando potete ritirarlo.
+              </span>
+            </li>
+          </ol>
+
+          <a
+            href={portaleEnroll}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1976D2] font-bold hover:bg-[#1565C0] transition-colors"
+            style={{ color: '#fff' }}
+          >
+            Registra l'iPad <Icon icon="ph:arrow-right" style={{ color: '#fff' }} />
+          </a>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 mb-6 break-all">
+            {portaleEnroll}
+          </p>
+          <p className="text-base m-0">
+            Avete già ricevuto l'email che l'iPad è pronto?{' '}
+            <a href="/prima-configurazione-ipad" className="font-semibold inline-flex items-center gap-1">
+              Istruzioni per la prima configurazione <Icon icon="ph:arrow-right" />
+            </a>
+          </p>
+        </div>
+      </section>
 
       {/* Unieuro */}
       <section id="unieuro" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
@@ -173,19 +257,21 @@ export default function IpadPage() {
             <li className="flex gap-3">
               <Icon icon="ph:camera" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0" />
               <span>
-                Fotografate il <strong>numero di serie</strong> riportato sull'etichetta della{' '}
-                <strong>scatola</strong> (senza accendere il dispositivo).
+                Fotografate l'etichetta della <strong>scatola</strong> (con il numero di serie) e lo{' '}
+                <strong>scontrino</strong>, senza accendere il dispositivo.
               </span>
             </li>
             <li className="flex gap-3">
-              <Icon icon="ph:envelope-simple" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0" />
+              <Icon icon="ph:clipboard-text" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0" />
               <span>
-                Inviate un'email a{' '}
-                <a href="mailto:assistenza@donboscosandona.it" className="font-semibold">
-                  assistenza@donboscosandona.it
+                <a href="#registrazione" className="font-semibold">
+                  Registrate l'iPad
                 </a>{' '}
-                allegando la foto del numero di serie e lo scontrino/ricevuta d'acquisto, indicando{' '}
-                <strong>nome e cognome dello studente/essa</strong>.
+                con il{' '}
+                <a href={portaleEnroll} target="_blank" rel="noopener noreferrer" className="font-semibold">
+                  modulo online
+                </a>
+                : vi chiederà numero di serie, codice articolo, dati dello scontrino e le due foto.
               </span>
             </li>
           </ol>
