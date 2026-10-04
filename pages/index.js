@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
 import {
   Carousel,
@@ -41,20 +40,6 @@ export default function Home({ data, movies }) {
       </Head>
       <NocturnalHero data={data} />
       <NewsWall title='News' data={data} limit={7} />
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8 relative aspect-video overflow-hidden">
-        <a href='https://per.donboscosandona.it'>
-          <Image
-            src='/images/home/scopri_la_per.png'
-            alt='Scopri la #per'
-            style={{
-              width: '100%',
-              display: 'block',
-              objectFit: 'cover',
-            }}
-            fill={true}
-          />
-        </a>
-      </div>
       <Table
         title='Orari delle Sante Messe'
         backgroundImageUrl='https://wp.it.aleteia.org/wp-content/uploads/sites/8/2018/01/shutterstock_untitled-design-14.jpg'
