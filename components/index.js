@@ -31,6 +31,17 @@ export { default as NewsWall } from './NewsWall.jsx'
 export { default as NewsArchiveHero } from './NewsArchiveHero.jsx'
 export { default as GoogleAnalytics } from './GoogleAnalytics'
 
+// Pagine di sezione (storia, gruppi, compagnia teatrale)
+export { default as SezioneHero } from './sezione/SezioneHero.jsx'
+export { default as SezioneIntestazione } from './sezione/SezioneIntestazione.jsx'
+export { default as AvvisoCostruzione } from './sezione/AvvisoCostruzione.jsx'
+export { default as Prosa } from './sezione/Prosa.jsx'
+export { default as Cronologia } from './sezione/Cronologia.jsx'
+export { default as Scaffale } from './sezione/Scaffale.jsx'
+export { default as SchedaIntervista } from './sezione/SchedaIntervista.jsx'
+export { default as NewsTag } from './sezione/NewsTag.jsx'
+export { default as GruppiOratorio } from './GruppiOratorio.jsx'
+
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder
 // Spiega anche come esportare più componenti (named e default) dallo stesso file

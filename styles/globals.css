@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300;400;500;600;700&family=Roboto+Slab&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Figtree:wght@300;400;500;600;700;800&family=Roboto+Slab&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
 
 @import "tailwindcss";
 
@@ -67,3 +67,47 @@ h5, h6, p, a, th, td, li, span, button, input, textarea, select, label {
 .title-display.text-white {
   color: #fff !important;
 }
+
+/* ─── Pagine di sezione (storia, gruppi, compagnia teatrale) ───
+   Le regole globali sopra forzano Bebas Neue sui titoli e Figtree sul testo
+   con !important: una classe vince sul selettore di elemento. */
+.font-serif-display {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+.font-ui {
+  font-family: var(--font-ui) !important;
+}
+
+/* Testo lungo dei contenuti importati (storia, gruppi): components/sezione/Prosa.jsx */
+.prosa { font-size: 1.125rem; line-height: 1.75; color: #3E3644; }
+html.dark .prosa { color: #D6CEDB; }
+.prosa p { margin: 0 0 1.25rem; }
+.prosa p:last-child { margin-bottom: 0; }
+.prosa h2, .prosa h3 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 600; line-height: 1.15; color: #2A2230;
+  margin: 3rem 0 1rem;
+}
+.prosa h2 { font-size: 2.25rem; }
+.prosa h3 { font-size: 1.75rem; margin-top: 2.5rem; }
+html.dark .prosa h2, html.dark .prosa h3 { color: #F4EFE6; }
+.prosa strong { font-weight: 700; color: #2A2230; }
+html.dark .prosa strong { color: #fff; }
+.prosa ul, .prosa ol { margin: 0 0 1.25rem; padding-left: 1.5rem; }
+.prosa ul { list-style: disc; }
+.prosa ol { list-style: decimal; }
+.prosa li { margin-bottom: 0.5rem; }
+.prosa a { font-weight: 600; text-decoration: underline; text-underline-offset: 4px; color: var(--accento, #5E1A63); }
+html.dark .prosa a { color: #F0C06B; }
+.prosa blockquote {
+  font-family: 'Cormorant Garamond', serif !important;
+  margin: 2rem 0; padding-left: 1.5rem; border-left: 2px solid #F0C06B;
+  font-size: 1.6rem; font-style: italic; line-height: 1.35; color: var(--accento, #5E1A63);
+}
+.prosa img { display: block; width: 100%; height: auto; border-radius: 1rem; margin: 2rem 0 0.5rem; }
+.prosa img + em, .prosa p > em:only-child { display: block; font-size: 0.875rem; color: #6E6372; }
+.prosa hr { margin: 2.5rem 0; border-color: #DCCFBE; }
+/* Domande delle interviste: paragrafo tutto in grassetto */
+.prosa p > strong:only-child { display: block; color: var(--accento, #5E1A63); font-weight: 700; }
+html.dark .prosa p > strong:only-child { color: #F0C06B; }
