@@ -1,0 +1,212 @@
+<!doctype html>
+<!--
+  Versione stampabile (A4, una facciata) di pages/prima-configurazione-ipad.js.
+  Se cambia la pagina web, aggiorna anche questo file e rigenera il PDF:
+
+    stampa/genera-pdf.sh
+
+  Il PDF finisce in public/docs/prima-configurazione-ipad.pdf
+  (scaricabile da https://www.donboscosandona.it/docs/prima-configurazione-ipad.pdf).
+-->
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Prima configurazione dell'iPad — SFP Don Bosco San Donà</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --blue: #1976D2;
+    --blue-soft: #e8f1fb;
+    --fg: #2b313c;
+    --muted: #5f6672;
+    --line: #dde3ea;
+    --amber: #f59e0b;
+    --amber-bg: #fff7e6;
+    --amber-fg: #7a4b00;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 210mm; height: 297mm; overflow: hidden;
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    color: var(--fg); font-size: 8.3pt; line-height: 1.33;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    background: #fff;
+  }
+  header {
+    background: var(--blue); color: #fff;
+    padding: 5.5mm 12mm 4.5mm; display: flex; align-items: center; gap: 7mm;
+  }
+  header img { height: 15mm; }
+  header .t { flex: 1; }
+  header h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700;
+    font-size: 25pt; line-height: 1; margin: 0 0 1.5mm;
+  }
+  header p { margin: 0; font-size: 9pt; opacity: .92; }
+  main { padding: 5mm 12mm 0; }
+  .intro { font-size: 9.2pt; margin: 0 0 4mm; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5mm; margin-bottom: 3.5mm; }
+  .card { border: 1px solid var(--line); border-radius: 3mm; padding: 2.8mm 3.2mm; }
+  .card h3 { margin: 0 0 1mm; font-size: 9.2pt; color: var(--blue); }
+  .card p { margin: 0; }
+  .big { font-weight: 800; font-size: 11pt; color: var(--fg); }
+  .note {
+    display: flex; gap: 2.5mm; align-items: flex-start;
+    border-left: 1.2mm solid var(--amber); background: var(--amber-bg); color: var(--amber-fg);
+    border-radius: 2mm; padding: 2.2mm 3mm; margin-bottom: 3.5mm;
+  }
+  .note.info { border-left-color: var(--blue); background: var(--blue-soft); color: #134a86; }
+  .note b.i { font-size: 11pt; line-height: 1; }
+  .note p { margin: 0; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 6mm; }
+  h2 {
+    font-size: 10.5pt; color: var(--blue); margin: 0 0 2mm;
+    padding-bottom: 1mm; border-bottom: 1.5px solid var(--blue);
+  }
+  ol.steps { list-style: none; margin: 0 0 3mm; padding: 0; }
+  ol.steps li { display: flex; gap: 2.5mm; margin-bottom: 1.8mm; }
+  .n {
+    flex: none; width: 5.6mm; height: 5.6mm; border-radius: 50%;
+    background: var(--blue); color: #fff; font-weight: 700; font-size: 8.4pt;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .s b.h { display: block; font-size: 9.1pt; margin-bottom: .3mm; }
+  .s p { margin: 0; }
+  .s ul { margin: .6mm 0 0; padding-left: 4mm; }
+  .scr { font-weight: 700; }
+  .scr::before { content: '«'; } .scr::after { content: '»'; }
+  .muted { color: var(--muted); }
+  footer {
+    position: absolute; left: 12mm; right: 12mm; bottom: 7mm;
+    display: flex; gap: 5mm; align-items: center;
+    border-top: 1px solid var(--line); padding-top: 3mm;
+  }
+  footer .qr svg, footer .qr img { width: 22mm; height: 22mm; display: block; }
+  footer .txt { flex: 1; }
+  footer h3 { margin: 0 0 1mm; font-size: 10pt; color: var(--blue); }
+  footer p { margin: 0 0 .6mm; }
+</style>
+</head>
+<body>
+<header>
+  <img src="../public/images/SFP-DON-BOSCO-SAN-DONA-BIANCO.png" alt="SFP Don Bosco San Donà">
+  <div class="t">
+    <h1>Prima configurazione dell'iPad</h1>
+    <p>Istruzioni per lo studente: accensione, account della scuola, app e Apple Account personale</p>
+  </div>
+</header>
+
+<main>
+  <p class="intro">
+    Il tuo iPad è iscritto ad <b>Apple School Manager</b> ed è gestito dalla scuola con <b>Jamf School</b>.
+    Alla prima accensione si collega da solo alla scuola: tu scegli la lingua, ti colleghi al Wi-Fi ed entri
+    con il tuo account scolastico. Ci vogliono circa <b>20–30 minuti</b>.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Il tuo nome utente</h3>
+      <p>Sul <b>foglio</b> consegnato o nell'<b>email</b> di conferma. Ha la forma<br>
+        <span class="big">m.rossi@donboscosandona.it</span></p>
+    </div>
+    <div class="card">
+      <h3>La password iniziale</h3>
+      <p><span class="big">benvenuto</span> (tutto minuscolo).<br>Al primo accesso dovrai sceglierne una nuova.</p>
+    </div>
+    <div class="card">
+      <h3>Wi-Fi e carica</h3>
+      <p>Tieni pronta la <b>password del Wi-Fi</b> di casa e lascia l'iPad <b>sotto carica</b> per tutta la configurazione.</p>
+    </div>
+  </div>
+
+  <div class="note info">
+    <b class="i">i</b>
+    <p>Le credenziali della scuola sono un <b>account Google @donboscosandona.it</b>: lo stesso nome utente e la
+      stessa password servono per l'iPad, per l'Apple Account della scuola e per Classroom, Gmail e Drive.</p>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h2>Accensione e prime schermate</h2>
+      <ol class="steps">
+        <li><span class="n">1</span><div class="s"><b class="h">Accendi l'iPad</b>
+          <p>Tieni premuto il tasto superiore fino al logo Apple. Su <span class="scr">Ciao</span> scorri verso l'alto dal bordo inferiore.</p></div></li>
+        <li><span class="n">2</span><div class="s"><b class="h">Scegli la lingua</b><p>Tocca <b>Italiano</b>.</p></div></li>
+        <li><span class="n">3</span><div class="s"><b class="h">Scegli il Paese o la zona</b>
+          <p>Tocca <b>Italia</b>. Se ti propone un altro dispositivo, tocca <span class="scr">Configura senza un altro dispositivo</span>; per le lingue di tastiera e dettatura tocca <span class="scr">Continua</span>.</p></div></li>
+        <li><span class="n">4</span><div class="s"><b class="h">Collegati al Wi-Fi</b>
+          <p>Scegli la rete di casa e inserisci la password. Senza Wi-Fi l'iPad non riceve la configurazione della scuola.</p></div></li>
+        <li><span class="n">5</span><div class="s"><b class="h">Gestione remota</b>
+          <p>L'iPad avvisa che verrà configurato dalla scuola: è normale, significa che la registrazione è andata a buon fine. Tocca <span class="scr">Continua</span>.</p></div></li>
+      </ol>
+
+      <h2>Entra con l'account della scuola</h2>
+      <ol class="steps">
+        <li><span class="n">6</span><div class="s"><b class="h">Accedi con Google</b>
+          <p>Si apre la pagina di accesso di Google: scrivi il nome utente completo (<b>…@donboscosandona.it</b>), poi la password <b>benvenuto</b>, toccando <b>Avanti</b>.</p></div></li>
+        <li><span class="n">7</span><div class="s"><b class="h">Scegli la tua nuova password</b>
+          <p>Google ti chiede di cambiarla: scrivila due volte. Almeno 8 caratteri, non usata altrove, da non dire a nessuno.</p></div></li>
+        <li><span class="n">8</span><div class="s"><b class="h">Apple Account della scuola</b>
+          <p>Quando l'iPad chiede un Apple Account usa <b>le stesse credenziali</b>: il tuo indirizzo @donboscosandona.it e, nella pagina di Google, la <b>nuova password</b>. Non usare qui il tuo account personale.</p></div></li>
+        <li><span class="n">9</span><div class="s"><b class="h">Le ultime schermate</b>
+          <p>Se compaiono <b>Codice</b> (6 cifre: ricordalo!), <b>Touch ID</b>/<b>Face ID</b>, <b>Aspetto</b> o <b>Dati e privacy</b>, leggi e tocca <span class="scr">Continua</span>.</p></div></li>
+      </ol>
+    </div>
+
+    <div>
+      <h2>Arrivano le app della scuola</h2>
+      <ol class="steps">
+        <li><span class="n">10</span><div class="s"><b class="h">Aspetta che finisca</b>
+          <p>Sulla schermata Home le app della scuola compaiono una alla volta, prima grigie e poi colorate. Lascia l'iPad <b>acceso, sotto carica e sul Wi-Fi</b> e non toccare le impostazioni.</p></div></li>
+      </ol>
+
+      <div class="note">
+        <b class="i">!</b>
+        <p><b>Non ripristinare e non inizializzare mai l'iPad</b> da solo: resterebbe legato alla scuola e dovresti rifare tutto. Chiedi prima all'assistenza.</p>
+      </div>
+
+      <h2>Usa il tuo Apple Account personale</h2>
+      <p style="margin:0 0 2mm">L'account della scuola non scarica app dall'App Store. Quando tutte le app della scuola sono installate puoi passare al tuo Apple Account personale.</p>
+      <ol class="steps">
+        <li><span class="n">11</span><div class="s"><b class="h">Esci dall'Apple Account della scuola</b>
+          <p><b>Impostazioni</b> → il tuo nome (in alto a sinistra) → scorri in fondo → <span class="scr">Esci</span>. Se richiesto scegli <span class="scr">Disconnetti ma non inizializzare</span> e inserisci il codice.
+          <span class="muted">Mai «Inizializza questo iPad».</span></p></div></li>
+        <li><span class="n">12</span><div class="s"><b class="h">Entra con il tuo Apple Account</b>
+          <p><b>Impostazioni</b> → <span class="scr">Apple Account</span> → <span class="scr">Accedi manualmente</span>, poi email e password del tuo account personale. Sotto i 14 anni l'account lo crea un genitore con In famiglia.</p></div></li>
+        <li><span class="n">13</span><div class="s"><b class="h">Goditi il tuo nuovo iPad</b>
+          <p>Ora puoi installare altre app dall'App Store. Le app della scuola restano e si aggiornano da sole; quelle per le lezioni si usano con l'account @donboscosandona.it.</p></div></li>
+      </ol>
+
+      <h2>Qualcosa non va?</h2>
+      <ul style="margin:0; padding-left:4mm">
+        <li style="margin-bottom:1mm"><b>Non compare «Gestione remota»</b>: l'iPad non risulta iscritto. Non andare avanti, spegnilo e scrivi all'assistenza.</li>
+        <li style="margin-bottom:1mm"><b>«benvenuto» non funziona</b>: controlla nome utente completo e minuscole; se hai già cambiato la password (es. su Classroom) usa quella.</li>
+        <li><b>Le app non arrivano</b>: verifica Wi-Fi e carica e aspetta; dopo un'ora riavvia l'iPad, poi scrivi all'assistenza.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="qr" id="qr"></div>
+  <div class="txt">
+    <h3>Hai bisogno di aiuto?</h3>
+    <p>Scrivi a <b>assistenza@donboscosandona.it</b> con nome, cognome e classe dello studente e, se puoi, una foto della schermata in cui ti sei fermato.</p>
+    <p class="muted">Queste istruzioni, sempre aggiornate: <b>www.donboscosandona.it/prima-configurazione-ipad</b> (inquadra il QR).</p>
+  </div>
+</footer>
+
+<script>
+  try {
+    var qr = qrcode(0, 'M');
+    qr.addData('https://www.donboscosandona.it/prima-configurazione-ipad');
+    qr.make();
+    document.getElementById('qr').innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+  } catch (e) {}
+</script>
+</body>
+</html>

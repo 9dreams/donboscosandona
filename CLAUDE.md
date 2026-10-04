@@ -241,6 +241,8 @@ Icone usate nel progetto: `ph:arrow-right`, `ph:grid-four`, `ph:calendar-blank`,
 - `pages/foto1.jpg`, `pages/principale.jpg` — immagini finite per errore nella cartella pages
 - `components/Test.js` vs `cc/Test.js` — esistono due versioni del quiz; `pages/quiz.js` usa `cc/Test.js`
 
+- **Versioni stampabili**: `stampa/*.html` → PDF A4 in `public/docs/` con `stampa/genera-pdf.sh` (Chromium headless di Playwright). `stampa/prima-configurazione-ipad.html` è la copia su una facciata di `pages/prima-configurazione-ipad.js`: ogni modifica alla pagina va riportata lì e il PDF rigenerato.
+
 ---
 
 ## Deployment
