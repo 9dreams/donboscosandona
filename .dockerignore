@@ -1,0 +1,26 @@
+# Version control
+.git
+.gitignore
+
+# Dipendenze e build locali (rifatte dentro l'immagine)
+/node_modules
+/.next
+/out
+/build
+
+# Segreti — mai dentro l'immagine
+.env
+.env.*
+!.env.example
+
+# Dev / tooling
+/.claude
+/.vscode
+/.idea
+.DS_Store
+*.log
+README.md
+DEPLOY.md
+CLAUDE.md
+Dockerfile
+.dockerignore

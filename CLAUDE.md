@@ -245,4 +245,4 @@ Icone usate nel progetto: `ph:arrow-right`, `ph:grid-four`, `ph:calendar-blank`,
 
 ## Deployment
 
-Compatibile con **Vercel** (Next.js standard). Base URL sviluppo: `https://dev.donboscosandona.it`.
+Pubblicato su **Coolify** con il `Dockerfile` (Next.js `output: 'standalone'`, porta 3000, ramo `donboscosandona`): procedura completa in `DEPLOY.md`. Unica variabile d'ambiente: `REVALIDATE_SECRET`. Dominio di produzione: `https://www.donboscosandona.it` (`siteBaseUrl` in `config/default.js`).

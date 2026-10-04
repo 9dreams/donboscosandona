@@ -18,7 +18,7 @@ export default function Show({ data }) {
     <Layout>
       <Head>
         <title>{data.titolo}</title>
-        <meta name='og:url' content={siteBaseUrl + '/articoli/show?id=' + data.id} />
+        <meta name='og:url' content={siteBaseUrl + '/articoli/' + data.id} />
         <meta name='og:type' content='website' />
         <meta name='og:locale' content='it_IT' />
         <meta name='og:title' content={data.titolo} />
