@@ -28,7 +28,7 @@ export default function SchedaIntervista({ intervista, accento = '#5E1A63' }) {
         <a
           href={href || `/storia/interviste/${slug}`}
           className="mt-1.5 inline-flex min-h-11 items-center gap-2 text-[15px] font-bold"
-          style={{ color: accento }}
+          style={{ '--accento': accento }} data-accento
         >
           Leggi l'intervista <Icon icon="ph:arrow-right" />
         </a>

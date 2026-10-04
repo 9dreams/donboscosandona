@@ -62,7 +62,7 @@ export default function Intervista({ intervista, precedente, successiva }) {
                 href={`/storia/interviste/${i.slug}`}
                 className={`flex flex-[1_1_320px] flex-col rounded-[18px] bg-white p-5 shadow-[0_1px_2px_rgba(42,34,48,0.06)] !text-[#2A2230] dark:bg-[#1C1822] dark:!text-[#F4EFE6] ${destra ? 'text-right' : ''}`}
               >
-                <span className="text-xs font-bold uppercase tracking-[0.14em]" style={{ color: prugna }}>{etichetta}</span>
+                <span className="text-xs font-bold uppercase tracking-[0.14em]" style={{ '--accento': prugna }} data-accento>{etichetta}</span>
                 <span className="font-serif-display mt-1 text-2xl font-bold">{i.nome}</span>
               </a>
             ))}

@@ -56,7 +56,7 @@ export default function Storia({ intro, cronologia, direttori, libri, interviste
         {/* Perché ripartire dalla storia? */}
         <section className="mx-auto flex max-w-[1200px] flex-wrap items-center gap-14 px-6 py-24">
           <div className="min-w-0 flex-[1_1_460px]">
-            <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.18em]" style={{ color: prugna }}>
+            <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.18em]" style={{ '--accento': prugna }} data-accento>
               {intro.titolo}
             </p>
             {intro.paragrafi.map((p, i) => (
@@ -173,7 +173,7 @@ export default function Storia({ intro, cronologia, direttori, libri, interviste
 
           {libro && (
             <div aria-live="polite" className="mt-10 rounded-[22px] bg-white p-8 shadow-[0_1px_2px_rgba(42,34,48,0.06)] dark:bg-[#1C1822]">
-              <p className="font-serif-display mb-1 text-2xl font-bold" style={{ color: prugna }}>{libro.anno}</p>
+              <p className="font-serif-display mb-1 text-2xl font-bold" style={{ '--accento': prugna }} data-accento>{libro.anno}</p>
               <h3 className="font-serif-display mb-1 text-4xl font-semibold !text-[#2A2230] dark:!text-[#F4EFE6]">{libro.titolo}</h3>
               {libro.sottotitolo && <p className="mb-4 text-lg italic text-[#5A5060] dark:text-[#B9AFC0]">{libro.sottotitolo}</p>}
               {libro.abstract && <p className="mb-5 max-w-[760px] text-[17px] leading-[1.7]">{libro.abstract}</p>}
@@ -187,7 +187,7 @@ export default function Storia({ intro, cronologia, direttori, libri, interviste
                   .filter(([, v]) => v)
                   .map(([k, v]) => (
                     <div key={k}>
-                      <dt className="text-xs font-bold uppercase tracking-[0.1em]" style={{ color: prugna }}>{k}</dt>
+                      <dt className="text-xs font-bold uppercase tracking-[0.1em]" style={{ '--accento': prugna }} data-accento>{k}</dt>
                       <dd className="m-0 mt-0.5">{v}</dd>
                     </div>
                   ))}

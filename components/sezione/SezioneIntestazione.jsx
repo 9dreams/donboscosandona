@@ -14,7 +14,7 @@ export default function SezioneIntestazione({
         {occhiello && (
           <p
             className="mb-2.5 text-[13px] font-bold uppercase tracking-[0.18em]"
-            style={{ color: accento }}
+            style={{ '--accento': accento }} data-accento
           >
             {occhiello}
           </p>

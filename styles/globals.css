@@ -111,3 +111,8 @@ html.dark .prosa a { color: #F0C06B; }
 /* Domande delle interviste: paragrafo tutto in grassetto */
 .prosa p > strong:only-child { display: block; color: var(--accento, #5E1A63); font-weight: 700; }
 html.dark .prosa p > strong:only-child { color: #F0C06B; }
+
+/* Testi nel colore d'accento della sezione (prugna, colore del gruppo):
+   in tema scuro diventano oro, altrimenti su fondo scuro si leggono poco. */
+[data-accento] { color: var(--accento, #5E1A63); }
+html.dark [data-accento] { color: #F0C06B; }

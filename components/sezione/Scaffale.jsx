@@ -11,9 +11,10 @@ export default function Scaffale({ libri = [], accento = '#5E1A63', selezionato,
           <>
             <div
               className={`relative aspect-[3/4] overflow-hidden rounded-[4px_10px_10px_4px] shadow-[0_1px_0_#DCCFBE,0_14px_28px_rgba(58,18,64,0.16)] transition-transform group-hover:-translate-y-1 ${
-                attivo ? '-translate-y-1 ring-4' : ''
+                attivo ? '-translate-y-1 ring-4 ring-current' : ''
               }`}
-              style={attivo ? { '--tw-ring-color': accento } : undefined}
+              style={{ '--accento': accento }}
+              data-accento
             >
               {l.copertina && (
                 <Image
@@ -27,7 +28,7 @@ export default function Scaffale({ libri = [], accento = '#5E1A63', selezionato,
             </div>
             <span
               className="font-serif-display mb-0.5 mt-3.5 block text-[22px] font-bold"
-              style={{ color: accento }}
+              style={{ '--accento': accento }} data-accento
             >
               {l.anno}
             </span>

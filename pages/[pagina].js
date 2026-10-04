@@ -61,7 +61,7 @@ export default function Pagina({ pagina, gruppo, news }) {
                   <ul className="m-0 flex list-none flex-col gap-3 p-0">
                     {allegati.map((a) => (
                       <li key={a.file}>
-                        <a href={a.file} target="_blank" rel="noopener noreferrer" className="flex min-h-11 items-start gap-3 font-semibold" style={{ color: colore }}>
+                        <a href={a.file} target="_blank" rel="noopener noreferrer" className="flex min-h-11 items-start gap-3 font-semibold" style={{ '--accento': colore }} data-accento>
                           <Icon icon="ph:file-pdf" className="mt-0.5 flex-none text-2xl" />
                           <span>{a.titolo}</span>
                         </a>

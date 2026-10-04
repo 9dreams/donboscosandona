@@ -26,7 +26,7 @@ export default function NewsTag({ posts = [], etichetta, accento = '#5E1A63', in
               )}
             </div>
             {/* `pubblicazione` arriva già formattata dal CMS («venerdì 23 settembre 2022») */}
-            <span className="text-[13px] font-bold uppercase tracking-[0.12em]" style={{ color: accento }}>
+            <span className="text-[13px] font-bold uppercase tracking-[0.12em]" style={{ '--accento': accento }} data-accento>
               {[p.pubblicazione, etichetta].filter(Boolean).join(' · ')}
             </span>
             <span className="font-serif-display text-[28px] font-bold leading-[1.12]">{p.titolo}</span>
@@ -39,7 +39,7 @@ export default function NewsTag({ posts = [], etichetta, accento = '#5E1A63', in
             type="button"
             onClick={() => setTutte(true)}
             className="min-h-11 cursor-pointer rounded-full border-[1.5px] bg-transparent px-[22px] py-3.5 text-[15px] font-bold"
-            style={{ borderColor: accento, color: accento }}
+            style={{ '--accento': accento, borderColor: 'currentColor' }} data-accento
           >
             Mostra tutti ({posts.length})
           </button>

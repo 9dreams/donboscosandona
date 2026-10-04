@@ -13,7 +13,7 @@ export default function Cronologia({ tappe = [], accento = '#5E1A63' }) {
           <div className="flex-[0_0_180px]">
             <p
               className="font-serif-display m-0 text-[44px] font-bold leading-none"
-              style={{ color: accento }}
+              style={{ '--accento': accento }} data-accento
             >
               {t.anno}
             </p>
