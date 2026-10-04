@@ -24,7 +24,7 @@ export default function MyTable(props) {
           <h1 className="text-2xl mb-4" style={{ color: props.color }}>{props.subtitle}</h1>
         )}
         <div className="overflow-x-auto">
-          <table className="min-w-[650px] w-full border-collapse">
+          <table className={`${props.rows[0].length > 3 ? 'min-w-[650px]' : ''} w-full border-collapse`}>
             <thead>
               <tr>
                 {props.rows[0].map((titolo, i) => (

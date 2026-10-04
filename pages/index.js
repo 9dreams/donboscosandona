@@ -40,21 +40,23 @@ export default function Home({ data, movies }) {
       </Head>
       <NocturnalHero data={data} />
       <NewsWall title='News' data={data} limit={7} />
-      <Table
-        title='Orari delle Sante Messe'
-        backgroundImageUrl='https://wp.it.aleteia.org/wp-content/uploads/sites/8/2018/01/shutterstock_untitled-design-14.jpg'
-        backgroundColor='#F79F1F'
-        opacity={0.7}
-        blur='0rem'
-        color='white'
-        rows={[
-          ['Feriali', 'Sabato', 'Festivi'],
-          ['ore 7.00', 'ore 7.00', ''],
-          ['', '', 'ore 9.00'],
-          ['', '', 'ore 10.30'],
-          ['ore 18.30', 'ore 18:00', ''],
-        ]}
-      />
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+        <Table
+          title='Orari delle Sante Messe'
+          backgroundImageUrl='https://wp.it.aleteia.org/wp-content/uploads/sites/8/2018/01/shutterstock_untitled-design-14.jpg'
+          backgroundColor='#F79F1F'
+          opacity={0.7}
+          blur='0rem'
+          color='white'
+          rows={[
+            ['Feriali', 'Sabato', 'Festivi'],
+            ['ore 7.00', 'ore 7.00', ''],
+            ['', '', 'ore 9.00'],
+            ['', '', 'ore 10.30'],
+            ['ore 18.30', 'ore 18:00', ''],
+          ]}
+        />
+      </div>
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
         <p className="text-right">
           <a href='https://www.duomosandona.it/orario-sante-messe/' target='_blank'>Orari delle Sante Messe nella Collaborazione Pastorale</a>
