@@ -7,7 +7,7 @@ autore: "Wally Perissinotto"
 copertina: "/images/storia/interviste/intervista-munari-copertina.jpg"
 didascaliaCopertina: "Don Nicola Munari con i ragazzi del DLC"
 testata: "/images/storia/interviste/intervista-munari-1.jpg"
-presentazione: "Don Nicola Munari è stato, dal 2020, Direttore dell'Opera e del Centro di Formazione Professionale nonché Incaricato dell'Oratorio."
+presentazione: "Don Nicola Munari è stato, dal 2020 al 2026, Direttore dell'Opera e del Centro di Formazione Professionale nonché Incaricato dell'Oratorio."
 ordine: 12
 ---
 
