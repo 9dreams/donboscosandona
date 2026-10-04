@@ -216,6 +216,16 @@ Le attività si basano sul libro e sono pensate per insegnare attraverso il gioc
        
         </div>
       </div>
+      <section className="mx-auto max-w-[1200px] px-6 pb-24 pt-8">
+        <a href="/scout/memorie-biancotto" className="flex flex-wrap items-center justify-between gap-6 rounded-[28px] bg-[#6A2A9C] px-8 py-10 !text-white md:px-10">
+          <span className="max-w-[640px]">
+            <span className="mb-2 block text-[13px] font-bold uppercase tracking-[0.2em] text-[#F0C06B]">Dalla nostra storia</span>
+            <span className="font-serif-display block text-[clamp(32px,4vw,48px)] font-semibold leading-tight">Memorie scout di Giovanni Biancotto</span>
+            <span className="mt-2 block text-lg text-white/85">Lo scoutismo a San Donà raccontato da uno dei suoi protagonisti.</span>
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#F0C06B] px-6 py-3.5 font-extrabold text-[#0E1220]">Leggi le memorie →</span>
+        </a>
+      </section>
     </Layout>
   )
 }

@@ -21,6 +21,8 @@ import {
   Elements,
 } from '/components'
 import { excludeTag } from '/lib/posts'
+import { leggiPagina } from '/lib/contenuti'
+import { SezioneApprofondimento } from '/components'
 
 const slides = [
   {
@@ -32,7 +34,7 @@ const slides = [
   },
   
 ];
-export default function Home({ data, elementi }) {
+export default function Home({data, elementi, approfondimento }) {
   return (
     <Layout>
       <Carousel
@@ -419,6 +421,15 @@ b) formazione seria che dia riferimenti di testi e letture e) formazione sui tem
               </div>
         </div>
       </div>
+      <SezioneApprofondimento
+        id="approfondimenti"
+        occhiello="Il cammino ADS"
+        titolo="Cardini, appuntamenti e Promessa"
+        intro="Approfondimento dei cardini, appuntamenti essenziali, impegni e il testo della Promessa."
+        html={approfondimento.html}
+        contatti={approfondimento.contatti || []}
+        colore="#8B1A1A"
+      />
     </Layout>
   )
 }
@@ -434,8 +445,10 @@ export async function getStaticProps() {
   )
   const elementi = await res.json()
 
+  const approfondimento = await leggiPagina('integrazioni/ads-integrazioni')
+
   return {
-    props: { data, elementi },
+    props: { data, elementi, approfondimento },
     revalidate: 1800,
   }
 }

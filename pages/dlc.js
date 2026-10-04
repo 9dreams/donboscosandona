@@ -1,5 +1,7 @@
 import { Layout, Carousel } from '/components';
 import { excludeTag } from '/lib/posts'
+import { leggiPagina } from '/lib/contenuti'
+import { SezioneApprofondimento } from '/components'
 
 const activities = [
   {
@@ -28,7 +30,7 @@ E: campanella@donboscosandona.it`,
   },
 ]
 
-export default function Home({ data, elementi }) {
+export default function Home({data, elementi, approfondimento }) {
   return (
     <Layout>
       <Carousel
@@ -154,6 +156,15 @@ export default function Home({ data, elementi }) {
           </p>
         </div>
       </div>
+      <SezioneApprofondimento
+        id="dettagli"
+        occhiello="Dopo la Campanella"
+        titolo="Il progetto nel dettaglio"
+        intro="Attività, orari, spazi e iscrizioni del doposcuola dell'Oratorio."
+        html={approfondimento.html}
+        contatti={approfondimento.contatti || []}
+        colore="#006B4E"
+      />
     </Layout>
   );
 }
@@ -171,8 +182,10 @@ export async function getStaticProps() {
   );
   const elementi = await res.json();
 
+  const approfondimento = await leggiPagina('integrazioni/dlc-integrazioni')
+
   return {
-    props: { data, elementi },
+    props: { data, elementi, approfondimento },
     revalidate: 1800, // 30 minuti
   };
 }

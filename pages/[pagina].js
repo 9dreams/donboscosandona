@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Icon } from '@iconify/react'
-import { Layout, SezioneHero, SezioneIntestazione, Prosa, NewsTag } from '/components'
+import { Layout, SezioneHero, SezioneIntestazione, Prosa, NewsTag, SchedaContatti } from '/components'
 import { leggiPagina } from '/lib/contenuti'
 import { hasTag } from '/lib/posts'
 import { getGruppo } from '/data/gruppi'
@@ -54,39 +54,7 @@ export default function Pagina({ pagina, gruppo, news }) {
 
           {(contatti.length > 0 || allegati.length > 0) && (
             <aside className="flex min-w-0 flex-[1_1_320px] flex-col gap-6 self-start">
-              {contatti.length > 0 && (
-                <div className="rounded-[22px] p-7 text-white" style={{ backgroundColor: colore }}>
-                  <h2 className="font-serif-display mb-4 text-3xl font-semibold !text-white">Contatti</h2>
-                  <ul className="m-0 flex list-none flex-col gap-5 p-0">
-                    {contatti.map((c, i) => (
-                      <li key={i} className="text-[15px] leading-relaxed text-white/90">
-                        {c.nome && <span className="block font-bold text-white">{c.nome}</span>}
-                        {c.ruolo && <span className="block text-white/75">{c.ruolo}</span>}
-                        {c.telefono && (
-                          <a href={`tel:${String(c.telefono).replace(/\s/g, '')}`} className="mt-1 flex items-center gap-2 !text-white">
-                            <Icon icon="ph:phone" /> {c.telefono}
-                          </a>
-                        )}
-                        {c.email && (
-                          <a href={`mailto:${c.email}`} className="flex items-center gap-2 break-all !text-white">
-                            <Icon icon="ph:envelope" /> {c.email}
-                          </a>
-                        )}
-                        {c.link && (
-                          <a href={c.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 !text-white underline underline-offset-4">
-                            <Icon icon="ph:arrow-square-out" /> Apri la pagina
-                          </a>
-                        )}
-                        {c.orari && (
-                          <span className="flex items-center gap-2">
-                            <Icon icon="ph:clock" /> {c.orari}
-                          </span>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              <SchedaContatti contatti={contatti} colore={colore} />
               {allegati.length > 0 && (
                 <div className="rounded-[22px] bg-white p-7 shadow-[0_1px_2px_rgba(42,34,48,0.06)] dark:bg-[#1C1822]">
                   <h2 className="font-serif-display mb-4 text-3xl font-semibold !text-[#2A2230] dark:!text-[#F4EFE6]">Documenti</h2>

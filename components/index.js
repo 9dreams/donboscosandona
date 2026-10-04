@@ -40,6 +40,8 @@ export { default as Cronologia } from './sezione/Cronologia.jsx'
 export { default as Scaffale } from './sezione/Scaffale.jsx'
 export { default as SchedaIntervista } from './sezione/SchedaIntervista.jsx'
 export { default as NewsTag } from './sezione/NewsTag.jsx'
+export { default as SchedaContatti } from './sezione/SchedaContatti.jsx'
+export { default as SezioneApprofondimento } from './sezione/SezioneApprofondimento.jsx'
 export { default as GruppiOratorio } from './GruppiOratorio.jsx'
 
 // Reference:
