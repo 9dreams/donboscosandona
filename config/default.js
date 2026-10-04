@@ -14,7 +14,7 @@ export const menu = [
     { title: 'Home', url: '/' },
     { title: 'Oratorio don Bosco', url: 'http://www.inoratorio.it' },
     { title: 'Calendario', url: '/calendario' },
-    { title: 'Privacy', url: 'http://archive.inoratorio.it/privacy-policy' },
+    { title: 'Privacy', url: 'https://www.inoratorio.it/privacy' },
 ]
 
 export const logoUrl = null
@@ -42,5 +42,5 @@ export const Footer_ = () => <Footer
     title3=""
     images={images}
     menu={menuFooter}
-    copyright={<Link color="#fff" href="https://archive.donboscosandona.it/9dreams-l-agenzia-di-comunicazione-del-settore-informatico">Copyright (C) 2023 9dreams Agency.</Link>}
+    copyright={<Link color="#fff" href="https://www.donboscosandona.it/9dreams">Copyright (C) 2023 9dreams Agency.</Link>}
 />

@@ -40,7 +40,7 @@ export default function Layout({ children }) {
           onAcceptPreferences={() => {}}
           onAcceptStatistics={() => {}}
           onAcceptMarketing={() => {}}
-          policyLink='http://archive.inoratorio.it/privacy-policy'
+          policyLink='https://www.inoratorio.it/privacy'
           privacyPolicyLinkText='Privacy Policy'
           necessaryOptionText='Necessari'
           preferencesOptionText='Preferenze'

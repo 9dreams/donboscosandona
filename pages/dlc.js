@@ -165,11 +165,11 @@ export default function Pagina() {
           <li>
             <strong>Prenotazioni appuntamento Online:</strong> Visitando il sito{" "}
             <a
-              href="http://archive.inoratorio.it/contatti-dlc"
+              href="https://www.inoratorio.it/dlc#dettagli"
               target="_blank"
               rel="noopener noreferrer"
             >
-              http://archive.inoratorio.it/contatti-dlc
+              www.inoratorio.it/dlc
             </a>
           </li>
           <li>
