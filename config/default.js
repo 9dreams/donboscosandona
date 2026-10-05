@@ -5,7 +5,7 @@ export const siteName = 'Emporio Solidale Basso Piave'
 export const siteTitle = 'Emporio Solidale del Basso Piave'
 export const siteDescription =
   'Emporio Solidale del Basso Piave'
-export const siteBaseUrl = 'https://dev.donboscosandona.it'
+export const siteBaseUrl = 'https://www.emporiosolidalebassopiave.it'
 
 export const menu = [
   { title: 'Chi siamo', url: '/chi-siamo' },
