@@ -11,22 +11,31 @@ const getTagList = (tagString) =>
         .filter(Boolean)
     : []
 
-// Helper for tags
-const renderTag = (tagString, defaultTag = '') => {
-  if (!tagString) return null
+// Helper for tags. I post che arrivano da un altro sito possono avere
+// `logo_sito` ({ src, alt }): il loghetto prende il posto del primo tag.
+const renderTag = (post, defaultTag = '') => {
+  const logo = post.logo_sito
   const hiddenTags = getTagList(defaultTag).map((tag) => tag.toLowerCase())
-  const tags = getTagList(tagString)
+  const tags = getTagList(post.tag)
     .filter((tag) => !hiddenTags.includes(tag.toLowerCase()))
-    .slice(0, 2) // Show max 2 tags
+    .slice(0, logo ? 1 : 2) // Show max 2 tags (logo included)
 
-  if (tags.length === 0) return null
+  if (!logo && tags.length === 0) return null
 
   return (
     <div className="flex gap-2 absolute top-4 left-4 z-10">
+      {logo && (
+        <img
+          src={logo.src}
+          alt={logo.alt}
+          title={logo.alt}
+          className="h-6 w-12 rounded-full shadow-sm"
+        />
+      )}
       {tags.map((t, i) => (
         <span 
           key={t} 
-          className={`text-xs font-bold px-3 py-1 rounded-full text-white uppercase shadow-sm ${i % 2 === 0 ? 'bg-[#1976D2]' : 'bg-[#F79F1F]'}`}
+          className={`text-xs font-bold px-3 py-1 rounded-full text-white uppercase shadow-sm ${(i + (logo ? 1 : 0)) % 2 === 0 ? 'bg-[#1976D2]' : 'bg-[#F79F1F]'}`}
         >
           {t}
         </span>
@@ -126,7 +135,7 @@ export default function NewsWall({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1976D2]/90 to-transparent mix-blend-multiply" />
             <div className="absolute inset-0 bg-black/20" />
-            {renderTag(news[0].tag, defaultTag)}
+            {renderTag(news[0], defaultTag)}
             <div className="relative z-10 text-white mt-auto">
               <p className="text-sm font-medium mb-1 opacity-90">{news[0].pubblicazione}</p>
               <div className="text-2xl md:text-3xl font-bold mb-2 text-white leading-tight"
@@ -148,7 +157,7 @@ export default function NewsWall({
           <CardLink post={news[1]} className="col-span-1 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full h-48">
               <Image src={news[1].immagine} alt={news[1].titolo} fill className="object-cover" />
-              {renderTag(news[1].tag, defaultTag)}
+              {renderTag(news[1], defaultTag)}
             </div>
             <div className="p-5 flex flex-col flex-grow justify-between bg-white dark:bg-[#181b23]">
               <div>
@@ -168,7 +177,7 @@ export default function NewsWall({
           <CardLink post={news[2]} className="col-span-1 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full h-48">
               <Image src={news[2].immagine} alt={news[2].titolo} fill className="object-cover" />
-              {renderTag(news[2].tag, defaultTag)}
+              {renderTag(news[2], defaultTag)}
             </div>
             <div className="p-5 flex flex-col flex-grow justify-between bg-white dark:bg-[#181b23]">
               <div>
@@ -189,7 +198,7 @@ export default function NewsWall({
             <Image src={news[3].immagine} alt={news[3].titolo} fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1976D2]/90 to-transparent mix-blend-multiply" />
             <div className="absolute inset-0 bg-black/20" />
-            {renderTag(news[3].tag, defaultTag)}
+            {renderTag(news[3], defaultTag)}
             <div className="relative z-10 text-white mt-auto">
               <p className="text-sm font-medium mb-1 opacity-90">{news[3].pubblicazione}</p>
               <div className="text-2xl md:text-3xl font-bold mb-2 text-white leading-tight"
@@ -211,7 +220,7 @@ export default function NewsWall({
           <CardLink post={news[4]} className="col-span-1 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full h-48">
               <Image src={news[4].immagine} alt={news[4].titolo} fill className="object-cover" />
-              {renderTag(news[4].tag, defaultTag)}
+              {renderTag(news[4], defaultTag)}
             </div>
             <div className="p-5 flex flex-col flex-grow justify-between bg-white dark:bg-[#181b23]">
               <div>
@@ -231,7 +240,7 @@ export default function NewsWall({
           <CardLink post={news[5]} className="col-span-1 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full h-48">
               <Image src={news[5].immagine} alt={news[5].titolo} fill className="object-cover" />
-              {renderTag(news[5].tag, defaultTag)}
+              {renderTag(news[5], defaultTag)}
             </div>
             <div className="p-5 flex flex-col flex-grow justify-between bg-white dark:bg-[#181b23]">
               <div>
@@ -251,7 +260,7 @@ export default function NewsWall({
           <CardLink post={news[6]} className="col-span-1 md:col-span-2 bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 overflow-hidden flex flex-col md:flex-row group hover:shadow-lg transition-all duration-300">
             <div className="relative w-full md:w-1/2 h-48 md:h-auto min-h-[200px]">
               <Image src={news[6].immagine} alt={news[6].titolo} fill className="object-cover" />
-              {renderTag(news[6].tag, defaultTag)}
+              {renderTag(news[6], defaultTag)}
             </div>
             <div className="p-6 flex flex-col w-full md:w-1/2 justify-between bg-white dark:bg-[#181b23]">
               <div>

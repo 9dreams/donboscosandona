@@ -103,7 +103,7 @@ export async function getStaticProps() {
     marango = fromOtherSite(await res_marango.json(), {
       baseUrl: 'https://www.monasteromarango.it',
       articlePath: '/notizie',
-      tag: 'Marango',
+      logo: { src: '/images/marango.png', alt: 'Monastero di Marango' },
     })
   } catch (e) {
     console.error('Canale monasteromarango non raggiungibile:', e)
