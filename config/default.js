@@ -5,7 +5,7 @@ export const siteName = "ANFFAS San Donà di Piave";
 export const siteTitle = "ANFFAS - San Donà di Piave";
 export const siteDescription =
   "Sito ufficiale di ANFFAS San Donà di Piave, associazione di famiglie di persone con disabilità intellettive e del neuro-sviluppo";
-export const siteBaseUrl = "https://dev.donboscosandona.it";
+export const siteBaseUrl = "https://www.anffassandona.it";
 
 export const menu = [
   { title: "Chi siamo", url: "/chi-siamo" },
