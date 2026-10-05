@@ -18,7 +18,7 @@ export default function Show({ data }) {
         <title>{data.titolo}</title>
         <meta
           name='og:url'
-          content={siteBaseUrl + '/articoli/show?id=' + data.id}
+          content={siteBaseUrl + '/articoli/' + data.id}
         />
         <meta name='og:type' content='website' />
         <meta name='og:locale' content='it_IT' />
