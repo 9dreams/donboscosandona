@@ -18,9 +18,9 @@ import {
   NocturnalHero,
   Credits,
 } from '/components'
-import { excludeTag } from '/lib/posts'
+import { excludeTag, fromOtherSite, mergeByDate } from '/lib/posts'
 
-export default function Home({ data, movies }) {
+export default function Home({ data, news, movies }) {
   return (
     <Layout>
       <Head>
@@ -39,7 +39,7 @@ export default function Home({ data, movies }) {
         <meta name='og:image' content='/images/home.png' />
       </Head>
       <NocturnalHero data={data} />
-      <NewsWall title='News' data={data} limit={7} />
+      <NewsWall title='News' data={news} limit={7} />
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
         <Table
           title='Orari delle Sante Messe'
@@ -92,6 +92,25 @@ export async function getStaticProps() {
   )
   const data = excludeTag(await res.json(), 'screen')
 
+  // Le news (non l'hero in evidenza) uniscono quelle dell'oratorio e quelle
+  // del monastero di Marango; se il canale del monastero non risponde si
+  // mostrano solo quelle dell'oratorio.
+  let marango = []
+  try {
+    const res_marango = await fetch(
+      'https://channels.donboscosandona.it/api/posts/monasteromarango'
+    )
+    marango = fromOtherSite(await res_marango.json(), {
+      baseUrl: 'https://www.monasteromarango.it',
+      articlePath: '/notizie',
+      tag: 'Marango',
+    })
+  } catch (e) {
+    console.error('Canale monasteromarango non raggiungibile:', e)
+  }
+  // NewsWall ne mostra 7 (più l'hero, che salta): ne bastano le prime 20.
+  const news = Array.isArray(data) ? mergeByDate(data, marango).slice(0, 20) : data
+
   const res_cinema = await fetch(
     'https://cinema.donboscosandona.it/api/featured'
   )
@@ -127,7 +146,7 @@ export async function getStaticProps() {
   */
 
   return {
-    props: { data, movies },
+    props: { data, news, movies },
     revalidate: 1800, // In secondi: il build viene fatto al massimo una volta ogni mezz'ora
   }
 }

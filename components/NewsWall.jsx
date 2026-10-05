@@ -35,8 +35,13 @@ const renderTag = (tagString, defaultTag = '') => {
   )
 }
 
+// `url_articolo` (facoltativo) è il link assoluto all'articolo per i post che
+// arrivano da un altro sito (es. il monastero di Marango): vedi lib/posts.js.
 const getPostHref = (post) =>
-  (post.articolo && `/articoli/${post.id}`) || post.link || post.allegato || ''
+  (post.articolo && (post.url_articolo || `/articoli/${post.id}`)) ||
+  post.link ||
+  post.allegato ||
+  ''
 
 const getPostActionLabel = (post) => {
   if (post.articolo) return 'Continua a leggere...'
