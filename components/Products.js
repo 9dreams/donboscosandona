@@ -12,7 +12,7 @@ export default function Products({ title, description, cardWidth, cardWidthXs, p
       {description && (
         <p className="text-center text-gray-500 dark:text-gray-300 px-2 mb-6">{description}</p>
       )}
-      <div className={`grid grid-cols-${xsCols} sm:grid-cols-3 md:grid-cols-${mdCols}`}>
+      <div className={`grid grid-cols-${xsCols} sm:grid-cols-3 md:grid-cols-${mdCols} gap-x-4 md:gap-x-6 gap-y-2`}>
         {products.map((product, i) => (
           <a
             key={i}
