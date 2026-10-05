@@ -24,25 +24,25 @@ const socials0 = [
   {
     title: 'Facebook',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png',
+      '/images/social/facebook.png',
     url: 'https://www.facebook.com/profile.php?id=61566531746026',
   },
   {
     title: 'Instagram',
     imageUrl:
-      'https:///archive.donboscosandona.it/img/ck/5c1c2a74750c62b3349df0d555ea9a26d1c6e8af.png',
+      '/images/social/instagram.png',
     url: 'https://www.instagram.com/donboscosandona/',
   },
   {
     title: 'Youtube',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/36189d32ee9d4be0a612c292a430106948c85bfc.png',
+      '/images/social/youtube.png',
     url: 'https://www.youtube.com/channel/UCZ2sxe9w7Yf9lP4nl65oAvg',
   },
   {
     title: 'Linkedin',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/55ed185e94be2aa2a1d854487273a4d139e5475f.png',
+      '/images/social/linkedin.png',
     url: 'https://www.linkedin.com/company/c-f-p-don-bosco/',
   },
 ]
@@ -51,13 +51,13 @@ let socials = [
   {
     title: 'Instagram',
     imageUrl:
-      'https:///archive.donboscosandona.it/img/ck/5c1c2a74750c62b3349df0d555ea9a26d1c6e8af.png',
+      '/images/social/instagram.png',
     url: 'https://www.instagram.com/martinadianese',
   },
   {
     title: 'Facebook',
     imageUrl:
-      'https://archive.donboscosandona.it/img/ck/1cffc9d197e15de1f72a89477cc75e56073980b0.png',
+      '/images/social/facebook.png',
     url: 'https://www.facebook.com/profile.php?id=61566531746026',
   },
 ]
