@@ -203,4 +203,9 @@ let siti = [
     immagineUrl: '/images/home/donboscopierabech.jpg',
     url: 'https://www.donboscopierabech.it',
   },
+  {
+    title: 'Monastero di Marango',
+    immagineUrl: '/images/home/monasteromarango.jpg',
+    url: 'https://www.monasteromarango.it',
+  },
 ]
