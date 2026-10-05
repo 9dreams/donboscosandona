@@ -208,4 +208,9 @@ let siti = [
     immagineUrl: '/images/home/monasteromarango.jpg',
     url: 'https://www.monasteromarango.it',
   },
+  {
+    title: 'Parrocchia del Duomo',
+    immagineUrl: '/images/home/duomosandona.jpg',
+    url: 'https://www.duomosandona.it',
+  },
 ]
