@@ -1,7 +1,34 @@
 import React, { useState, useEffect } from 'react'
 
 import { NocturnalHeroScreen } from '/components'
-import { stripTag } from '/lib/posts'
+import { stripTag, fromOtherSite, mergeByDate } from '/lib/posts'
+
+// Post dell'oratorio e del monastero di Marango, in ordine di pubblicazione
+// decrescente (come nelle news della home). Se il canale del monastero non
+// risponde si mostrano solo i post dell'oratorio.
+async function loadPosts() {
+  const res = await fetch(
+    'https://channels.donboscosandona.it/api/posts/inoratorio'
+  )
+  if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
+  const posts = await res.json()
+  if (!Array.isArray(posts)) return posts
+
+  let marango = []
+  try {
+    const res_marango = await fetch(
+      'https://channels.donboscosandona.it/api/posts/monasteromarango'
+    )
+    marango = fromOtherSite(await res_marango.json(), {
+      baseUrl: 'https://www.monasteromarango.it',
+      articlePath: '/notizie',
+      logo: { src: '/images/marango.png', alt: 'Monastero di Marango' },
+    })
+  } catch (e) {
+    console.error('Canale monasteromarango non raggiungibile:', e)
+  }
+  return mergeByDate(posts, marango)
+}
 
 export default function Schermo({data0}) {
   const [data, setData] = useState(data0)
@@ -10,12 +37,7 @@ export default function Schermo({data0}) {
   useEffect(() => {
     const interval = setInterval(() => {
       const fetchData = async () => {
-        const response = await fetch('https://channels.donboscosandona.it/api/posts/inoratorio')
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-        const result = await response.json()
-        setData(result)
+        setData(await loadPosts())
       }
 
       fetchData().catch((e) => {
@@ -41,6 +63,7 @@ export default function Schermo({data0}) {
           immagine: post.immagine_schermo || post.immagine,
           immagine_mobile: null,
           tag: post.immagine_schermo ? '' : stripTag(post.tag, 'screen'),
+          logo_sito: post.immagine_schermo ? null : post.logo_sito || null,
           articolo: '',
           link: '',
           allegato: null,
@@ -60,10 +83,7 @@ export default function Schermo({data0}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://channels.donboscosandona.it/api/posts/inoratorio'
-  )
-  const data0 = await res.json()
+  const data0 = await loadPosts()
 
   return {
     props: { data0 },

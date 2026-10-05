@@ -47,7 +47,13 @@ function NocturnalSlide({ post, defaultTag, hideButton }) {
     (post.allegato && "Scarica l'allegato") ||
     null
 
-  const hasCaption = Boolean(post.titolo || post.abstract || visibleTags.length > 0)
+  // Post da un altro sito (es. monastero di Marango): il loghetto prende il
+  // posto del pallino accanto ai tag. Vedi fromOtherSite in lib/posts.js.
+  const logo = post.logo_sito
+
+  const hasCaption = Boolean(
+    post.titolo || post.abstract || visibleTags.length > 0 || logo
+  )
 
   return (
     <section
@@ -105,10 +111,19 @@ function NocturnalSlide({ post, defaultTag, hideButton }) {
               </a>
             )}
 
-            {visibleTags.length > 0 && (
+            {(visibleTags.length > 0 || logo) && (
               <div className="nhs-reveal mt-6 flex justify-center">
                 <span className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-3 text-[10px] uppercase tracking-[0.3em] text-white/80 shadow-[0_8px_8px_rgba(0,0,0,.6)] backdrop-blur-[20px]">
-                  <span className="h-2 w-2 shrink-0 rounded-full bg-[#f0c06b] shadow-[0_0_18px_rgba(255,193,103,.55)]" />
+                  {logo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="-my-1 h-6 w-12 shrink-0 rounded-full"
+                    />
+                  ) : (
+                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#f0c06b] shadow-[0_0_18px_rgba(255,193,103,.55)]" />
+                  )}
                   {visibleTags.join(' / ')}
                 </span>
               </div>
