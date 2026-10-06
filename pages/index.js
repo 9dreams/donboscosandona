@@ -16,6 +16,7 @@ import {
   Test,
   NewsWall,
   SyntheticLightHero,
+  OpenSchoolBanner,
 } from '/components'
 
 import INostriNumeri from '/cc/INostriNumeri'
@@ -196,6 +197,7 @@ export default function Home({ data, movies, elementi }) {
         defaultTag='scuola'
         sponsorImage='/images/home/loghi_sponsor_new.png'
       />
+      <OpenSchoolBanner />
       <NewsWall data={data} limit={7} defaultTag='scuola' />
       <a
         href='https://www.donboscoitalia.it/go-beyond-traditional-education/'
