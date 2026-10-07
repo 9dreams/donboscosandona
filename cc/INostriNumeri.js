@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function INostriNumeri() {
-  const targetCounts = [68, 43, 15, 432, 533, 98.7, 93.4, 98];
+  const targetCounts = [69, 45, 15, 444, 533, 98.7, 93.4, 98];
   const animationDuration = 3000;
   const [counts, setCounts] = useState(targetCounts.map(() => 0));
   const [hasAnimated, setHasAnimated] = useState(false);

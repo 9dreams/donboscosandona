@@ -23,21 +23,21 @@ let documenti = [
         category: "",
         description: "",
         immagineUrl: "https://www.psbconsulting.it/wp-content/uploads/2018/04/privacy-policy-psb-consulting-gdpr-nuovo-regolamento-europeo.jpeg",
-        url: "/docs/privacy/Informativa_Scuola.pdf"
+        url: "/docs/istituzionali/Informativa_privacy_scuola.pdf"
     },
     {
         title: "Informativa Privacy Clienti e Fornitori",
         category: "",
         description: "",
         immagineUrl: "https://www.altalex.com/~/media/Images/Lex/Privacy/privacy_key%20jpg.jpg",
-        url: "/docs/privacy/Informativa_per_aziende_tirocinio.pdf"
+        url: "/docs/privacy/Informativa_clienti-fornitori_.pdf"
     },
     {
         title: "Informativa Privacy Aziende Tirocinio",
         category: "",
         description: "",
         immagineUrl: "https://www.dynamicquest.com/wp-content/uploads/2021/04/DQ-Blog-CyberSec-SMB-724x483-1.jpg",
-        url: "/docs/privacy/Informativa_clienti-fornitori_.pdf"
+        url: "/docs/istituzionali/Informativa_privacy_aziende_tirocini.pdf"
     },
 ]
 let products = [

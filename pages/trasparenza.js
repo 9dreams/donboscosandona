@@ -3,6 +3,7 @@ import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
 import Paragraph from '/components/Paragraph'
 import News from '/components/News'
+import { conDocumentiLocali } from '/data/documenti'
 
 export default function Home({ data }) {
   return (
@@ -39,7 +40,7 @@ export async function getStaticProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/donboscosandona_docs?q=trasparenza'
   )
-  const data = await res.json()
+  const data = conDocumentiLocali(await res.json())
 
   return {
     props: { data },

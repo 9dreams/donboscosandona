@@ -3,6 +3,7 @@ import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
 import Paragraph from '/components/Paragraph'
 import News from '/components/News'
+import { conDocumentiLocali } from '/data/documenti'
 
 export default function Page({ data }) {
   return (
@@ -444,7 +445,7 @@ export async function getServerSideProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/donboscosandona_docs?q=informative'
   )
-  const data = await res.json()
+  const data = conDocumentiLocali(await res.json())
 
   // Pass data to the page via props
   return { props: { data } }

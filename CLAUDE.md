@@ -133,6 +133,9 @@ GET /api/post/{id}            → singolo post
 
 Post-model: `{ id, titolo, abstract, immagine, immagine_mobile, immagine_schermo, tag, pubblicazione, in_evidenza, articolo, link, allegato }`
 
+### Documenti istituzionali (`public/docs/istituzionali/`)
+Modello Organizzativo, informative privacy e gli altri documenti ufficiali si caricano qui, non più sul CMS. `data/documenti.js` associa l'id del post CMS al PDF locale (ed eventualmente a un nuovo titolo); `conDocumentiLocali()` lo applica ai post in `pages/trasparenza.js` e `pages/privacy.js`. Nuova versione: copiare il PDF nella cartella e aggiornare il percorso in `data/documenti.js`.
+
 ### Articoli markdown locali (`/articoli/*.md`)
 Frontmatter: `title`, `date`, `abstract`, `imageUrl`. Processati da `lib/articoli.js` con remark. Usati nelle pagine settore tramite `getDatiArticoli()`.
 
