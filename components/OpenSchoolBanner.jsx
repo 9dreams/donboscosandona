@@ -1,13 +1,22 @@
 // Banner home: calendario Open School e Laboratori promozionali 2026/27.
 // Le date si aggiornano qui; il banner sparisce da solo dopo l'ultimo evento.
 
+// Più fasce nello stesso giorno stanno in un unico riquadro.
 const OPEN_SCHOOL = [
-  { label: '1° Open School', giorno: '07', mese: 'nov 2026', orario: '14:30–17:30' },
-  { label: '2° Open School', giorno: '28', mese: 'nov 2026', orario: '9:00–11:00' },
-  { label: '3° Open School', giorno: '28', mese: 'nov 2026', orario: '14:30–17:30' },
-  { label: '4° Open School', giorno: '19', mese: 'dic 2026', orario: '14:30–17:30' },
-  { label: 'Open School primaverile', giorno: '17', mese: 'apr 2027', orario: '9:00–11:00', evidenza: true },
+  { label: '1° Open School', giorno: '07', mese: 'nov 2026', orari: ['14:30–17:30'] },
+  { label: '2° e 3° Open School', giorno: '28', mese: 'nov 2026', orari: ['9:00–11:00', '14:30–17:30'] },
+  { label: '4° Open School', giorno: '19', mese: 'dic 2026', orari: ['14:30–17:30'] },
+  { label: 'Open School primaverile', giorno: '17', mese: 'apr 2027', orari: ['9:00–11:00'], evidenza: true },
 ]
+
+// «Sabato · 9:00–11:00», poi una riga «oppure 14:30–17:30» per ogni altra fascia.
+function Orari({ orari }) {
+  return orari.map((o, i) => (
+    <span key={o} className='block'>
+      {i === 0 ? `Sabato · ${o}` : `oppure ${o}`}
+    </span>
+  ))
+}
 
 const LABORATORI = [
   { giorno: '9', mese: 'novembre 2026' },
@@ -93,7 +102,7 @@ export default function OpenSchoolBanner() {
         </div>
 
         <Sezione titolo='Open School · il sabato'>
-          <ul className='m-0 grid list-none gap-3 p-0 lg:grid-cols-5 lg:gap-3.5'>
+          <ul className='m-0 grid list-none gap-3 p-0 lg:grid-cols-4 lg:gap-3.5'>
             {OPEN_SCHOOL.map((e) => (
               <li
                 key={e.label}
@@ -109,10 +118,10 @@ export default function OpenSchoolBanner() {
                   {e.label}
                   <span
                     className={`block text-base font-semibold normal-case tracking-normal lg:hidden ${
-                      e.evidenza ? '' : 'text-[#353B48]'
+                      e.evidenza ? '' : 'text-ink/80'
                     }`}
                   >
-                    Sabato · {e.orario}
+                    <Orari orari={e.orari} />
                   </span>
                 </p>
                 <p className='order-1 flex w-20 shrink-0 flex-col items-center lg:order-2 lg:w-auto lg:flex-row lg:items-baseline lg:gap-2'>
@@ -123,10 +132,10 @@ export default function OpenSchoolBanner() {
                 </p>
                 <p
                   className={`order-3 hidden text-[15px] font-semibold lg:block ${
-                    e.evidenza ? '' : 'text-[#353B48]'
+                    e.evidenza ? '' : 'text-ink/80'
                   }`}
                 >
-                  Sabato · {e.orario}
+                  <Orari orari={e.orari} />
                 </p>
               </li>
             ))}
