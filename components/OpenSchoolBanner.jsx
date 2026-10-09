@@ -19,6 +19,9 @@ const AREE = [
   { nome: 'Area elettrica · informatica · energie', orario: '14:30–17:00' },
 ]
 
+// Le iscrizioni agli eventi stanno su servizi.donboscosandona.it.
+const PRENOTAZIONI = 'https://servizi.donboscosandona.it/eventi'
+
 // Giorno successivo all'ultimo evento (17 aprile 2027)
 const FINE = new Date('2027-04-18T00:00:00+02:00')
 
@@ -72,19 +75,20 @@ export default function OpenSchoolBanner() {
           <div className='flex shrink-0 flex-col gap-2.5 rounded-2xl border border-white/15 bg-white/7 p-5 lg:w-85'>
             <p className='flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-ochre'>
               <span className='size-2.5 animate-pulse rounded-full bg-ochre shadow-[0_0_0_4px_rgba(217,162,27,0.25)]' />
-              Prenotazioni in arrivo
+              Prenotazioni aperte
             </p>
             <p className='text-[15px] leading-snug text-[#E3E8EF]'>
-              A breve potrai prenotare la tua visita o il laboratorio
-              direttamente da questo sito.
+              Scegli la data e iscriviti alla visita o al laboratorio: ricevi
+              subito la conferma via email.
             </p>
-            <button
-              type='button'
-              disabled
-              className='mt-1 h-11 cursor-not-allowed rounded-full border border-dashed border-white/40 bg-transparent text-[15px] font-semibold text-white'
+            <a
+              href={PRENOTAZIONI}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='mt-1 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-ochre text-[15px] font-bold text-ink! no-underline! transition-colors hover:bg-ochre-strong'
             >
-              Prenota · presto disponibile
-            </button>
+              Prenota la tua visita <span aria-hidden='true'>→</span>
+            </a>
           </div>
         </div>
 
