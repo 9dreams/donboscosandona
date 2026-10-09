@@ -1,164 +1,137 @@
 import Head from 'next/head'
+import { Icon } from '@iconify/react'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
-import Products from '/components/Products'
-import Paragraph from '@/components/Paragraph'
-import Image from 'next/image'
-import { NewsWall } from '/components';
+import { NewsWall, Section, SectionTitle, Lead, Card, Eyebrow } from '/components'
 import { excludeTag } from '/lib/posts'
 
-// Voci del menù per il componente LandingHero
-
-let menu = [
-    { title: 'Chi siamo', url: '/chi-siamo' },
-    { title: 'Contatti', url: '/contatti' },
-    { title: 'Dove siamo', url: '/dove-siamo' },
-    { title: 'Trasparenza', url: '/trasparenza' },
+const iniziative = [
+  { icon: 'ph:sun-horizon', testo: 'Buongiorno' },
+  { icon: 'ph:mountains', testo: 'Ritiri spirituali ed esperienziali' },
+  { icon: 'ph:chats-circle', testo: 'Attività formative su temi come: Affettività, Volontariato, Amicizia, Dipendenze, Animazione…' },
+  { icon: 'ph:trophy', testo: 'Tornei e giochi' },
+  { icon: 'ph:confetti', testo: 'Feste' },
+  { icon: 'ph:bus', testo: 'Gite e visite tecniche' },
+  { icon: 'ph:users-three', testo: 'Incontri' },
+  { icon: 'ph:dots-three-circle', testo: '…e molto altro' },
 ]
 
-
-
-
-
-
-let pastorale = [
-    {
-        title: "",
-        category: "",
-        description: "",
-        immagineUrl: "",
-        url: ""
-    },
-    {
-        title: "",
-        category: "",
-        description: "",
-        immagineUrl: "",
-        url: ""
-    },
-    {
-        title: "",
-        category: "",
-        description: "",
-        immagineUrl: "",
-        url: ""
-    },
+const equipe = [
+  { nome: 'don Nicola Munari', ruolo: 'Sacerdote Salesiano, Direttore dell’opera Salesiana di San Donà, assistente spirituale dell’equipe,' },
+  { nome: 'Alessandro Ferro', ruolo: 'Direttore della SFP, insegnante di informatica esperto in didattica e digitale' },
+  { nome: 'Daniele Zanutto', ruolo: 'incaricato per la pastorale della scuola, insegnante nel settore motoristico e carrozzeria.' },
+  { nome: 'Martina Talon', ruolo: 'insegnante d’inglese con esperienza in ambito educativo…' },
+  { nome: 'Francesco Dal Molin', ruolo: 'insegnante di matematica e fisica, scout ed esperto in tecniche di animazione' },
+  { nome: 'Francesca Cadamuro', ruolo: 'educatrice e tutor d’aula, con esperienza in ambito educativo e pastorale.' },
 ]
-
-
-
 
 export default function Home({ data }) {
-    return (
-        <Layout>
-            <Head />
-           
-            <LandingHero
-                opacity={0.5}
-                siteName="CFP DON BOSCO"
-                title="Proposta formativa 24/25"
-                description="buoni cristiani e onesti cittadini!"
-                buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
-                buttonText="Guarda il video"
-                 imageUrl="/images/pastorale/locandina.jpg"
-               />
+  return (
+    <Layout>
+      <Head />
 
-
-            <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-12">
-                
-            </div> 
-              
-            <div style={{ textAlign: 'center' }}> 
-              <NewsWall
-                title={null}
-                data={data}
-                limit={7}
-                defaultTag='pastorale'
-              />
-
-  <h1 style={{ fontWeight: 'bold', marginTop: '0px', fontSize: '30px' }}>Proposta educativa 2024|2025</h1>
-  <p style={{ fontSize: '20px', color: '#555', marginTop: '0', marginBottom: '10px' }}>
-    Scuola di Volo, Scuola di Vita<br/><br/>
-    ”Il motore è il cuore di un aereo, ma il pilota è la sua anima.”<br/> 
-    Magg. Andrea Rossi - Solista PAN<br/><br/>
-    Questa massima ci aiuta a presentare la nostra proposta formativa.<br/><br/>
-    Ma che cos'è la proposta formativa?<br/> 
-    La proposta formativa è il centro dell’azione educativa. È la modalità con cui ci impegniamo ad educare, formare, animare i giovani della scuola con una molteplicità di iniziative.<br/><br/>
-    Buongiorno<br/> 
-    Ritiri spirituali ed esperienziali<br/> 
-    Attività formative su temi come: Affettività, Volontariato, Amicizia, Dipendenze, Animazione…<br/> 
-    Tornei e giochi<br/> 
-    Feste<br/> 
-    Gite e visite tecniche<br/> 
-    Incontri<br/> 
-    …e molto altro<br/><br/>
-    Ad ispirare la proposta di quest’anno allora, saranno proprio gli aerei!<br/> 
-    Abbiamo infatti pensato di metterli sotto i riflettori e di farne metafora utile a riflettere sulla vita di tutti i giorni, naturalmente con ottica cristiana ma con un’attenzione universale.<br/><br/>
-    Per formare così:<br/>
-    Buoni Cristiani, Onesti Cittadini<br/> 
-    e Professionisti Preparati.<br/><br/>
-    E allora… Allacciate le cinture, chiudete il tavolino davanti a voi e PREPARIAMOCI al DECOLLO!
-  </p>
-</div>
-           <br/> 
-           <br/> 
-           <div style={{ textAlign: 'center', fontSize: '20px' }}> 
-<h3 style={{ fontWeight: 'bold', marginTop: '10px',}}>Timeline</h3>
-</div>
-            <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      margin: '0',
-    }}>
-      <a href="/images/pastorale/timeline completa.jpg" target="_blank">
-    <img 
-      src="/images/pastorale/timeline.jpg" 
-      alt="Immagine 1" 
-      style={{
-        width: '600px',
-      }} 
-    />
-    <p className='text-center'>Clicca l'immagine per estenderla</p>
-    </a>
-    <div>
-   </div>
-   </div>
-
-          
-
-  
-
-
-      
-        
-        <div style={{ textAlign: 'center' }}>
-        <h3 style={{ fontWeight: 'bold', marginTop: '0px', fontSize: '30px' }}>L'equipe</h3>
-        <p style={{ fontSize: '20px', color: '#555', marginTop: '0', marginBottom: '10px' }}>
-        Con piacere vi presentiamo l'équipe per la pastorale scolastica:
-
-don Nicola Munari, Sacerdote Salesiano, Direttore dell’opera Salesiana di San Donà, assistente spirituale dell’equipe,<br/> 
-Alessandro Ferro, Direttore della SFP, insegnante di informatica esperto in didattica e digitale<br/> 
-Daniele Zanutto; incaricato per la pastorale della scuola, insegnante nel settore motoristico e carrozzeria.<br/> 
-Martina Talon; insegnante d’inglese con esperienza in ambito educativo…<br/> 
-Francesco Dal Molin; insegnante di matematica e fisica, scout ed esperto in tecniche di animazione<br/> 
-Francesca Cadamuro, educatrice e tutor d’aula, con esperienza in ambito educativo e pastorale.<br/> 
-
-Un gruppo di insegnanti che con entusiasmo e passione si dedicano alla cura e all'accompagnamento dei nostri studenti, attraverso proposte educative e di crescita nella fede.
-</p>
-        </div>
-        
-<div style={styles.container}>
-      <img 
-        src="/images/pastorale/Partner.png" 
-        alt="Immagine centrata" 
-        style={styles.image} 
+      <LandingHero
+        eyebrow='Pastorale'
+        title='Proposta formativa 24/25'
+        description='buoni cristiani e onesti cittadini!'
+        buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
+        buttonText='Guarda il video'
+        imageUrl='/images/pastorale/locandina.jpg'
       />
-    </div>
-        </Layout>
-    )
 
+      <div className='mt-12'>
+        <NewsWall title={null} data={data} limit={7} defaultTag='pastorale' />
+      </div>
+
+      <Section id='proposta' width='md'>
+        <div className='text-center mb-10'>
+          <Eyebrow className='mb-4'>Scuola di Volo, Scuola di Vita</Eyebrow>
+          <h2 className='title-display text-4xl md:text-5xl m-0'>Proposta educativa 2024|2025</h2>
+        </div>
+
+        <figure className='m-0 mb-10 rounded-2xl border-l-4 border-ochre bg-surface shadow-sm p-6 md:p-8'>
+          <blockquote className='m-0 font-serif text-2xl italic leading-relaxed text-fg'>
+            ”Il motore è il cuore di un aereo, ma il pilota è la sua anima.”
+          </blockquote>
+          <figcaption className='mt-3 text-sm font-semibold text-muted'>Magg. Andrea Rossi - Solista PAN</figcaption>
+        </figure>
+
+        <Lead>Questa massima ci aiuta a presentare la nostra proposta formativa.</Lead>
+        <h3 className='text-xl font-bold mb-2'>Ma che cos&apos;è la proposta formativa?</h3>
+        <p className='text-lg leading-8 mb-6'>
+          La proposta formativa è il centro dell’azione educativa. È la modalità con cui ci impegniamo ad educare, formare, animare i giovani della scuola con una molteplicità di iniziative.
+        </p>
+
+        <ul className='grid sm:grid-cols-2 gap-3 m-0 p-0 list-none mb-10'>
+          {iniziative.map((i) => (
+            <li key={i.testo} className='flex items-center gap-3 rounded-xl bg-surface border border-line px-4 py-3'>
+              <Icon icon={i.icon} className='text-2xl text-brand shrink-0' />
+              <span className='text-[15px] font-medium'>{i.testo}</span>
+            </li>
+          ))}
+        </ul>
+
+        <p className='text-lg leading-8 mb-4'>
+          Ad ispirare la proposta di quest’anno allora, saranno proprio gli aerei!
+          Abbiamo infatti pensato di metterli sotto i riflettori e di farne metafora utile a riflettere sulla vita di tutti i giorni, naturalmente con ottica cristiana ma con un’attenzione universale.
+        </p>
+        <Card highlight className='p-6 md:p-8 text-center'>
+          <p className='text-sm font-bold uppercase tracking-widest text-muted mb-2'>Per formare così:</p>
+          <p className='text-2xl font-bold text-brand leading-snug m-0'>
+            Buoni Cristiani, Onesti Cittadini
+            <br />
+            e Professionisti Preparati.
+          </p>
+          <p className='mt-5 font-serif text-lg leading-relaxed m-0'>
+            E allora… Allacciate le cinture, chiudete il tavolino davanti a voi e PREPARIAMOCI al DECOLLO!
+          </p>
+        </Card>
+      </Section>
+
+      <Section id='timeline' width='md'>
+        <SectionTitle icon='ph:path'>Timeline</SectionTitle>
+        <a href='/images/pastorale/timeline completa.jpg' target='_blank' rel='noopener noreferrer' className='block no-underline!'>
+          <Card className='p-3 transition-shadow hover:shadow-md'>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src='/images/pastorale/timeline.jpg' alt='Timeline della proposta formativa' className='w-full rounded-xl' />
+            <p className='flex items-center justify-center gap-2 text-sm font-semibold text-brand mt-3 mb-1'>
+              <Icon icon='ph:magnifying-glass-plus' /> Clicca l&apos;immagine per estenderla
+            </p>
+          </Card>
+        </a>
+      </Section>
+
+      <Section id='equipe' width='lg'>
+        <SectionTitle icon='ph:users-four'>L&apos;equipe</SectionTitle>
+        <Lead>Con piacere vi presentiamo l&apos;équipe per la pastorale scolastica:</Lead>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6'>
+          {equipe.map((p) => (
+            <Card key={p.nome} className='p-5'>
+              <div className='flex items-center gap-3 mb-2'>
+                <span className='grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand/10 text-brand'>
+                  <Icon icon='ph:user' className='text-xl' />
+                </span>
+                <h3 className='font-bold text-fg m-0'>{p.nome}</h3>
+              </div>
+              <p className='text-sm leading-relaxed text-muted m-0'>{p.ruolo}</p>
+            </Card>
+          ))}
+        </div>
+        <p className='font-serif text-lg leading-relaxed text-muted'>
+          Un gruppo di insegnanti che con entusiasmo e passione si dedicano alla cura e all&apos;accompagnamento dei nostri studenti, attraverso proposte educative e di crescita nella fede.
+        </p>
+      </Section>
+
+      <Section width='lg'>
+        <Card className='p-6 md:p-10'>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src='/images/pastorale/Partner.png' alt='Partner' className='mx-auto w-full h-auto' />
+        </Card>
+      </Section>
+    </Layout>
+  )
 }
+
 export async function getStaticProps() {
   const res = await fetch(
     'https://channels.donboscosandona.it/api/posts/inoratorio?q=pastorale'
@@ -169,17 +142,4 @@ export async function getStaticProps() {
     props: { data },
     revalidate: 3600, // I dati vengono ricaricati al massimo una volta all'ora
   }
-}
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '50vh',
-    margin: 0,
-  },
-  image: {
-    maxWidth: '170%',
-    height: 'auto',
-  },
 }

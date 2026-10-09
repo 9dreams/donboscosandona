@@ -1,6 +1,8 @@
 import Head from 'next/head'
 
 import {
+  Button,
+  QuickNav,
   Layout,
   LandingHero,
   Products,
@@ -16,17 +18,30 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <LandingHero
+        eyebrow='Qualifica e diploma'
         title='Settore Informatico'
         description='Reti, programmazione, sistemi operativi e sviluppo web: il percorso che ti forma come tecnico del futuro digitale.'
         imageUrl='/images/settori/Informatico2.png'
       />
-
-      <NewsWall
-        title='News dal Settore Informatico'
-        data={data}
-        limit={7}
-        defaultTag='informatico'
+      <QuickNav
+        links={[
+          { href: '#news', label: 'News' },
+          { href: '#qualifiche', label: 'Qualifiche' },
+          { href: '#laboratori', label: 'I laboratori anno per anno' },
+          { href: '#ifts', label: 'IFTS' },
+          { href: '#progetti', label: 'I nostri progetti' },
+          { href: '#piano-formativo', label: 'Piano formativo' },
+        ]}
       />
+
+      <div id='news' className='scroll-mt-28'>
+        <NewsWall
+          title='News dal Settore Informatico'
+          data={data}
+          limit={7}
+          defaultTag='informatico'
+        />
+      </div>
 
       <a
         href='https://www.donboscoitalia.it/go-beyond-traditional-education/'
@@ -43,6 +58,7 @@ export default function Home({ data }) {
       </a>
 
       <Paragraph
+        id='qualifiche'
         title='Operatore Informatico'
         subtitle='Qualifica triennale'
         rightImageUrl='/images/codici_progetti.png'
@@ -74,12 +90,12 @@ export default function Home({ data }) {
           </li>
         </ol>
       </Paragraph>
-      <section className='mx-auto mb-16 grid max-w-6xl gap-8 px-4 py-8 lg:mb-24 lg:grid-cols-[minmax(260px,0.85fr)_minmax(0,1.35fr)] lg:items-start'>
-        <div className='lg:sticky lg:top-24'>
+      <section className='mx-auto mb-16 grid max-w-[1100px] gap-2 lg:gap-0 px-4 md:px-8 lg:mb-24 lg:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.4fr)] lg:items-start'>
+        <div className='lg:sticky lg:top-24 lg:mt-14'>
           <img
             src='/images/informatico/sistema-educativo-formazione.png'
             alt='Sistema educativo di istruzione e formazione'
-            className='mx-auto w-full max-w-[420px] rounded-2xl shadow-2xl lg:max-w-none'
+            className='mx-auto w-full max-w-[420px] rounded-2xl border border-line shadow-sm lg:max-w-none'
           />
         </div>
         <div>
@@ -152,7 +168,7 @@ export default function Home({ data }) {
         usare l&apos;intelligenza artificiale con criterio — capire prima di
         delegare. Selezione il 30 ottobre, inizio il 3 novembre 2026.
         {' '}
-        <a href="/ifts" className="font-semibold text-[#1976D2] dark:text-[#64B5F6]">
+        <a href="/ifts" className="font-semibold">
           Tutte le informazioni sul corso IFTS →
         </a>
       </Paragraph>
@@ -168,104 +184,84 @@ export default function Home({ data }) {
         mobileObjectPosition="78% 40%"
         sponsorImage={null}
       />
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <div className='mb-16 lg:mb-24'>
-        <Products
-          title='Primo anno'
-          description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e alla programmazione."
-          cardWidth={4}
-          cardWidthXs={6}
-          products={primo_anno}
-        />
-      </div>
-      <div className='mb-16 lg:mb-24'>
-        <Products
-          title='Secondo anno'
-          description="Il secondo anno è dedicato all'assistenza tecnica al cliente da tutti i punti di vista. Nella parte di programmazione vedremo lo sviluppo del front-end delle applicazioni."
-          cardWidth={3}
-          cardWidthXs={6}
-          products={secondo_anno}
-        />
-      </div>
-      <div className='mb-16 lg:mb-24'>
-        <Products
-          title='Terzo anno'
-          description='Il terzo anno ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end, full-stack e delle API (Application Programming Interfaces)'
-          cardWidth={3}
-          cardWidthXs={6}
-          products={terzo_anno}
-        />
-      </div>
-      <div className='mb-16 lg:mb-24'>
-        <Products
-          title='Quarto anno'
-          description="Il quarto anno - se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico - sarai collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda)."
-          cardWidth={4}
-          cardWidthXs={6}
-          products={quarto_anno}
-        />
-      </div>
       <Products
+        id='laboratori'
+        title='Primo anno'
+        description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e alla programmazione."
+        cardWidth={4}
+        cardWidthXs={6}
+        products={primo_anno}
+      />
+      <Products
+        title='Secondo anno'
+        description="Il secondo anno è dedicato all'assistenza tecnica al cliente da tutti i punti di vista. Nella parte di programmazione vedremo lo sviluppo del front-end delle applicazioni."
+        cardWidth={3}
+        cardWidthXs={6}
+        products={secondo_anno}
+      />
+      <Products
+        title='Terzo anno'
+        description='Il terzo anno ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end, full-stack e delle API (Application Programming Interfaces)'
+        cardWidth={3}
+        cardWidthXs={6}
+        products={terzo_anno}
+      />
+      <Products
+        title='Quarto anno'
+        description="Il quarto anno - se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico - sarai collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda)."
+        cardWidth={4}
+        cardWidthXs={6}
+        products={quarto_anno}
+      />
+      <Products
+        id='ifts'
         title='IFTS 2026/2027'
         description='800 ore: 400 in aula e 400 in azienda. Full Stack Developer — Coding & Vibe Coding. PHP, Laravel, Livewire, Filament e uso critico dell’intelligenza artificiale.'
         cardWidth={4}
         cardWidthXs={6}
         products={ifts}
       />
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8 -mt-8 mb-16 text-center">
-        <a
-          href="/ifts"
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1976D2] dark:bg-[#64B5F6] text-white dark:text-[#0d0f14] font-semibold px-8 py-4 text-sm uppercase tracking-[0.15em] no-underline hover:opacity-90 transition-opacity"
-        >
-          Scopri il corso IFTS
-        </a>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 -mt-4 mb-16 text-center">
+        <Button href="/ifts">Scopri il corso IFTS</Button>
       </div>
 
-      <div className='mt-16 lg:mt-24'>
-        <Products
-          title='I nostri progetti'
-          description='Ci piace mettere a frutto quello che impariamo a scuola, e siamo sempre aperti a nuove avventure!'
-          cardWidth={3}
-          cardWidthXs={12}
-          products={progetti}
-        />
-      </div>
+      <Products
+        id='progetti'
+        title='I nostri progetti'
+        description='Ci piace mettere a frutto quello che impariamo a scuola, e siamo sempre aperti a nuove avventure!'
+        cardWidth={3}
+        cardWidthXs={12}
+        products={progetti}
+      />
 
       {/* <Paragraph topImageUrl='/images/informatico/programma-scolastico.svg' /> */}
       <Sponsor logos={sponsor} />
 
-      <Paragraph>
-        <Table
-          title='Piano formativo'
-          rows={[
-            ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno', 'IFTS'],
-            ['Italiano', 3, 3, 2, 3, 1],
-            ['Storia / Economia / Diritto', 1, 1, 1, 1, 1],
-            ['Inglese', 2, 2, 2, 2, 1],
-            ['Religione', 1, 1, 1, 1, null],
-            ['Matematica', 3, 3, 3, 2, 1],
-            ['Fisica', 2, 2, 2, 2, 1],
-            ['CAD', 2, 2, 2, 2, null],
-            ['Teoria Sistemi e reti', 5, 3, 3, null, null],
-            ['Laboratorio Sistemi e Programmazione', 10, 12, 12, 3, 10],
-            [null, null, null, null, null, null],
-            [
-              'ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO',
-              '',
-              200,
-              200,
-              500,
-              400,
-            ],
-          ]}
-          backgroundImageUrl='/images/informatico/sfondo-piano-formativo.jpg'
-          backgroundColor='#003185'
-          opacity={0.8}
-          blur='0.1rem'
-          color='white'
-        />
-      </Paragraph>
+      <Table
+        id='piano-formativo'
+        title='Piano formativo'
+        rows={[
+          ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno', 'IFTS'],
+          ['Italiano', 3, 3, 2, 3, 1],
+          ['Storia / Economia / Diritto', 1, 1, 1, 1, 1],
+          ['Inglese', 2, 2, 2, 2, 1],
+          ['Religione', 1, 1, 1, 1, null],
+          ['Matematica', 3, 3, 3, 2, 1],
+          ['Fisica', 2, 2, 2, 2, 1],
+          ['CAD', 2, 2, 2, 2, null],
+          ['Teoria Sistemi e reti', 5, 3, 3, null, null],
+          ['Laboratorio Sistemi e Programmazione', 10, 12, 12, 3, 10],
+          [null, null, null, null, null, null],
+          [
+            'ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO',
+            '',
+            200,
+            200,
+            500,
+            400,
+          ],
+        ]}
+      />
     </Layout>
   )
 }

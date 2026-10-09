@@ -50,7 +50,7 @@ let images = [
 
 export const footer = <Footer
     imageUrl="https://immagine di sfondo"
-    color="#353b48"
+    color="#0b1f3a"
     opacitycolor="1"
     opacity={1}
     title1="Chi siamo"

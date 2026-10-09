@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <Layout>
       <LandingHero
-        height={100}
-        opacity={0}
+        eyebrow="Settore informatico"
+        title="9dreams"
         imageUrl="/images/informatico/9dreams.jpg"
       />
 
@@ -19,9 +19,8 @@ export default function Home() {
       
      <Paragraph
         title="9dreams: l'agenzia di comunicazione del settore informatico"
-        subtitle=""
       >
-        <p style={{ fontSize: "22px" }}>
+        <p className="text-2xl! leading-relaxed text-muted border-l-4 border-ochre pl-5">
           <em>
             Con l'acquisto del dominio e la definizione del logo, è da oggi
             operativa 9dreams, la divisione creativa del settore informatico...
@@ -102,7 +101,7 @@ export default function Home() {
         <strong> gennaio, dedicato al nostro padre fondatore don Bosco: grazie don Bosco </strong>
         per l'ispirazione che non ci fai mai mancare! Fa' Signore che ce ne
         serviamo ogni giorno per far crescere i giovani che ci affidi!<br/>
-        <h5 style={{fontSize: "16px", color:"GrayText" }}><strong>prof. Andrea Ros</strong></h5>
+        <p className="mt-6! mb-0! text-right font-sans text-base font-bold text-muted">prof. Andrea Ros</p>
 
       </Paragraph>
     </Layout>

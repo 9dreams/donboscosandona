@@ -60,16 +60,17 @@ export default function Home() {
         <Layout>
             <Head />
             <LandingHero
-                opacity={0.8}
-                siteName="CFP DON BOSCO"
+                eyebrow="Dicono di noi"
                 title="RASSEGNA STAMPA"
                 description="Articoli apparsi sulla stampa ufficiale"
                 imageUrl="https://www.focusjunior.it/content/uploads/2021/06/giornali-gazzetta-corriere.jpg"
             />
             <Products
-             cardWidth={3}
-             products={rassegna_stampa}
-             />
+                id="articoli"
+                cardWidth={3}
+                aspectRatio="4 / 5"
+                products={rassegna_stampa.map(({ category, ...a }) => ({ ...a, title: category }))}
+            />
         </Layout>
     )
 }

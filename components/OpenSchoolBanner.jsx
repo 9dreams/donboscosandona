@@ -22,8 +22,8 @@ const AREE = [
 // Giorno successivo all'ultimo evento (17 aprile 2027)
 const FINE = new Date('2027-04-18T00:00:00+02:00')
 
-const display = 'font-[family-name:var(--font-display)]! font-bold leading-none'
-const eyebrow = 'text-xs font-bold uppercase tracking-[0.14em] text-[#90CAF9]'
+const display = 'wordmark'
+const eyebrow = 'text-xs font-bold uppercase tracking-[0.14em] text-white/60'
 
 function Sezione({ titolo, children }) {
   return (
@@ -44,7 +44,7 @@ export default function OpenSchoolBanner() {
     <section
       id='open-school'
       aria-labelledby='open-school-titolo'
-      className='relative mb-12 overflow-hidden bg-[#0B2A4F] text-white md:mb-16'
+      className='relative mb-12 overflow-hidden bg-ink text-white md:mb-16'
     >
       <div className='pointer-events-none absolute -right-30 -top-40 hidden size-130 rounded-full border border-white/8 md:block' />
       <div className='pointer-events-none absolute -right-10 -top-20 hidden size-90 rounded-full border border-white/6 md:block' />
@@ -52,22 +52,26 @@ export default function OpenSchoolBanner() {
       <div className='relative mx-auto flex max-w-7xl flex-col gap-7 px-5 py-10 md:gap-9 md:px-16 md:py-14'>
         <div className='flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between lg:gap-12'>
           <div className='flex max-w-2xl flex-col gap-3'>
-            <p className={eyebrow}>Scuola aperta · SFP Don Bosco San Donà</p>
+            <p>
+              <span className='inline-block rounded-md bg-ochre px-2.5 py-1 text-[12px] font-bold uppercase tracking-widest text-ink'>
+                Scuola aperta · SFP Don Bosco San Donà
+              </span>
+            </p>
             <h2
               id='open-school-titolo'
               className={`${display} m-0 text-[56px] text-white md:text-[84px]`}
             >
-              Open School <span className={`${display} text-[#FF9800]`}>2026/27</span>
+              Open School <span className={`${display} text-ochre`}>2026/27</span>
             </h2>
-            <p className='mt-1 text-base leading-relaxed text-[#CFD8E3] md:text-lg'>
+            <p className='mt-1 font-serif text-lg leading-relaxed text-white/75 md:text-xl'>
               Vieni a conoscere la SFP Don Bosco: visita i laboratori, incontra
               formatori e allievi e scopri i nostri indirizzi.
             </p>
           </div>
 
           <div className='flex shrink-0 flex-col gap-2.5 rounded-2xl border border-white/15 bg-white/7 p-5 lg:w-85'>
-            <p className='flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-[#FF9800]'>
-              <span className='size-2.5 animate-pulse rounded-full bg-[#FF9800] shadow-[0_0_0_4px_rgba(255,152,0,0.25)]' />
+            <p className='flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.08em] text-ochre'>
+              <span className='size-2.5 animate-pulse rounded-full bg-ochre shadow-[0_0_0_4px_rgba(217,162,27,0.25)]' />
               Prenotazioni in arrivo
             </p>
             <p className='text-[15px] leading-snug text-[#E3E8EF]'>
@@ -90,12 +94,12 @@ export default function OpenSchoolBanner() {
               <li
                 key={e.label}
                 className={`flex items-center gap-4 rounded-2xl px-4 py-3.5 lg:flex-col lg:items-start lg:gap-1 lg:p-4.5 ${
-                  e.evidenza ? 'bg-[#FF9800] text-[#2B1A00]' : 'bg-white text-[#0B2A4F]'
+                  e.evidenza ? 'bg-ochre text-ink' : 'bg-white text-ink'
                 }`}
               >
                 <p
                   className={`order-2 text-xs font-bold uppercase tracking-[0.08em] lg:order-1 ${
-                    e.evidenza ? '' : 'text-[#1565C0]'
+                    e.evidenza ? '' : 'text-[#1976D2]'
                   }`}
                 >
                   {e.label}
@@ -144,7 +148,7 @@ export default function OpenSchoolBanner() {
                       {i > 0 && <div className='h-px bg-white/12' />}
                       <p className='flex flex-col md:flex-row md:justify-between md:gap-3'>
                         <span>{a.nome}</span>
-                        <span className='font-bold text-[#FF9800]'>{a.orario}</span>
+                        <span className='font-bold text-ochre'>{a.orario}</span>
                       </p>
                     </div>
                   ))}

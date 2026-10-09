@@ -2,20 +2,7 @@ import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
 import Products from '/components/Products'
-
-// Voci del menù per il componente LandingHero
-
-let menu = [
-    { title: 'Chi siamo', url: '/chi-siamo' },
-    { title: 'Contatti', url: '/contatti' },
-    { title: 'Dove siamo', url: '/dove-siamo' },
-    { title: 'Trasparenza', url: '/trasparenza' },
-]
-
-
-
-
-
+import { Intro, Section, Card, Callout, ContactLine } from '/components/ui'
 
 let adulti = [
     {
@@ -49,59 +36,48 @@ export default function Home() {
         <Layout>
             <Head />
             <LandingHero
-                opacity={0.5}
-                siteName="CFP DON BOSCO"
+                eyebrow="Formazione continua"
                 title="Area Adulti"
                 description="Investi nella tua formazione continua per rimanere sempre al passo con i tempi"
-                imageUrl="https://www.filepicker.io/api/file/weWExWuKSeCPiH3QTJO0"
-                menu={menu}
+                imageUrl="/images/corsoadulti/progetto.jpg"
             />
-            {
 
-            }
-            {/*             <LandingHero
-                opacity={0.5}
-                siteName="CFP DON BOSCO"
-                title="Centro di Formazione Professionale don Bosco"
-                description="Diventa adulto con il metodo educativo di don Bosco preparandoti ad entrare a testa alta nel mondo professionale di domani!"
-                buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
-                buttonText="Guarda il video"
-                imageUrl="/images/privacy/imgsfondo.webp"
-                menu={menu}
-            /> */}
-            <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-12 mb-12">
+            <Intro title="Perché non si smette mai di imparare!">
+                <p>
+                    La <strong>formazione</strong> e l’<strong>aggiornamento</strong> professionale assumono un’importanza rilevante nel mondo del lavoro, anche a fronte dei continui cambiamenti del mercato.
+                </p>
+                <p>
+                    Le aziende del nostro territorio esprimono continuamente i propri fabbisogni formativi; inoltre, giovani e adulti manifestano sempre più la necessità di <strong>acquisire nuove competenze</strong> o di <strong>mantenersi aggiornati</strong>.
+                </p>
+                <p>In questa sezione puoi trovare le nostre proposte formative che rispondono a queste esigenze.</p>
+            </Intro>
 
-                <font face="Verdana">
-
-                    <center><h2>Perché non si smette mai di imparare!</h2></center>
-                    <p>La <strong>formazione</strong> e l’<strong>aggiornamento</strong> professionale assumono un’importanza rilevante nel mondo del lavoro, anche a fronte dei continui cambiamenti del mercato.
-                        <br />
-
-                        Le aziende del nostro territorio esprimono continuamente i propri fabbisogni formativi; inoltre, giovani e adulti manifestano sempre più la necessità di <strong>acquisire nuove competenze</strong> o di <strong>mantenersi aggiornati</strong>.
-                        <br />
-                        In questa sezione puoi trovare le nostre proposte formative che rispondono a queste esigenze.</p>
-
-
-                    <p>
-                        I corsi vengono attivati al raggiungimento di un numero minimo di richieste.
-                        Se siete interessati vi preghiamo di contattare il nostro responsabile dei corsi per adulti:
-                        <br />
-                        Francesco Cicogna
-                        <br />
-                        f.cicogna@donboscosandona.it - tel. 0421 338 969
-
-                        <br />
-                        Scarica la scheda di pre-iscrizione ai corsi di formazione superiore e continua!
-                    </p>
-
-                </font>
-            </div>
             <Products
                 title=""
                 description=""
                 cardWidth={4}
                 products={adulti}
             />
+
+            <Section width="md">
+                <div className="grid md:grid-cols-2 gap-5 items-start">
+                    <Callout tone="info" className="m-0">
+                        I corsi vengono attivati al raggiungimento di un numero minimo di richieste.
+                        Se siete interessati vi preghiamo di contattare il nostro responsabile dei corsi per adulti.
+                    </Callout>
+                    <Card className="p-6 space-y-2">
+                        <span className="inline-block text-xs font-bold tracking-wide uppercase text-brand bg-brand/10 px-2.5 py-1 rounded-md mb-1">
+                            Responsabile dei corsi per adulti
+                        </span>
+                        <p className="m-0 text-lg font-bold">Francesco Cicogna</p>
+                        <ContactLine icon="ph:envelope" href="mailto:f.cicogna@donboscosandona.it">f.cicogna@donboscosandona.it</ContactLine>
+                        <ContactLine icon="ph:phone" href="tel:0421338969">tel. 0421 338 969</ContactLine>
+                        <p className="m-0 pt-3 border-t border-line text-sm text-muted">
+                            Scarica la scheda di pre-iscrizione ai corsi di formazione superiore e continua!
+                        </p>
+                    </Card>
+                </div>
+            </Section>
         </Layout>
     )
 }

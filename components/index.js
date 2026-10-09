@@ -35,3 +35,4 @@ export { default as GoogleAnalytics } from './GoogleAnalytics'
 // Reference:
 // https://sunnysingh.io/blog/javascript-import-from-folder
 // Spiega anche come esportare più componenti (named e default) dallo stesso file
+export * from './ui'

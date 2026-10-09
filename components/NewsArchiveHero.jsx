@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react'
 
 const DESCRIPTION =
-  "Resta aggiornato su tutte le attività dell'Oratorio don Bosco di San Donà di Piave: dalla formazione professionale agli eventi per le famiglie."
+  "Resta aggiornato su tutte le attività della Scuola di Formazione Professionale Don Bosco di San Donà di Piave: dai laboratori agli stage, fino agli eventi per le famiglie."
 
 const COLLAGE_SLOTS = [
   { left: -2, top: -4, w: 34, h: 42, rot: -4, z: 2 },
@@ -21,8 +21,6 @@ const COLLAGE_SLOTS = [
   { left: 68, top: 14, w: 26, h: 28, rot: 4, z: 8 },
   { left: 36, top: 48, w: 28, h: 32, rot: -3, z: 9 },
 ]
-
-const bodyStyle = { fontFamily: '"Plus Jakarta Sans", "Exo 2", sans-serif' }
 
 export default function NewsArchiveHero({
   data,
@@ -62,7 +60,7 @@ export default function NewsArchiveHero({
   return (
     <>
       <section className="nah-root relative h-[100svh] min-h-[100svh] w-full overflow-hidden">
-        <div className="nah-collage absolute inset-0 z-0 overflow-hidden bg-[#0b0e12]">
+        <div className="nah-collage absolute inset-0 z-0 overflow-hidden bg-ink">
           {photos.map((photo, i) => {
             const slot = COLLAGE_SLOTS[i % COLLAGE_SLOTS.length]
             return (
@@ -90,40 +88,37 @@ export default function NewsArchiveHero({
           })}
         </div>
 
-        <div className="pointer-events-none absolute inset-0 z-[1] overflow-hidden">
-          <div className="absolute left-[8%] top-[10%] h-[22rem] w-[22rem] rounded-full bg-[radial-gradient(circle,rgba(255,180,102,.14),transparent_70%)] blur-3xl" />
-          <div className="absolute right-[5%] bottom-[18%] h-[26rem] w-[26rem] rounded-full bg-[radial-gradient(circle,rgba(62,145,139,.1),transparent_70%)] blur-3xl" />
-        </div>
-
-        <div className="pointer-events-none absolute inset-0 z-[2] bg-black/40" />
+        {/* Velatura blu notte, come le testate delle altre pagine. */}
+        <div className="pointer-events-none absolute inset-0 z-[2] bg-[radial-gradient(ellipse_at_center,rgba(11,31,58,.55),rgba(11,31,58,.78))]" />
 
         <div className="relative z-10 flex h-[66%] flex-col items-center justify-center px-6 pt-[88px] text-center">
           <div className="max-w-[900px]">
-            <h1 className="nah-reveal nah-serif text-[clamp(3rem,8.5vw,7.5rem)] leading-[.88] tracking-[-.06em] text-white drop-shadow-[0_10px_24px_rgba(0,0,0,.75)]">
+            <span className="nah-reveal inline-block rounded-md bg-ochre px-2.5 py-1 text-[13px] font-bold uppercase tracking-widest text-ink">
+              Notizie dalla scuola
+            </span>
+            <h1 className="nah-reveal wordmark mt-4 text-[clamp(3rem,8.5vw,7rem)] text-white drop-shadow-[0_10px_24px_rgba(0,0,0,.6)]">
               Archivio News
             </h1>
-            <p
-              className="nah-reveal mx-auto mt-6 max-w-[720px] text-[15px] leading-[1.9] text-white/85 sm:text-[17px]"
-              style={bodyStyle}
-            >
+            <p className="nah-reveal mx-auto mt-6 max-w-[680px] font-serif text-lg leading-relaxed text-white/90 sm:text-xl">
               {DESCRIPTION}
             </p>
           </div>
         </div>
 
-        <div className="absolute inset-x-0 bottom-0 top-[66%] z-20 flex flex-col bg-gradient-to-b from-transparent via-[#f7f9fb]/92 to-[#f7f9fb] dark:via-[#0d0f14]/92 dark:to-[#0d0f14]">
-          <div className="nah-reveal mx-auto flex w-full max-w-[1280px] flex-1 flex-col justify-start px-5 pb-6 pt-4 md:px-12 md:pb-8">
-            <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-              <div className="flex flex-wrap gap-2">
+        <div className="absolute inset-x-0 bottom-0 top-[66%] z-20 flex flex-col bg-gradient-to-b from-transparent via-page/92 to-page">
+          <div className="nah-reveal mx-auto flex w-full max-w-[1200px] flex-1 flex-col justify-start px-4 pb-6 pt-4 md:px-8 md:pb-8">
+            <div className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-4 shadow-sm md:flex-row md:items-center md:justify-between md:gap-4">
+              {/* Su mobile i tag scorrono in orizzontale: a capo riempirebbero la testata. */}
+              <div className="-mx-4 flex min-w-0 gap-2 overflow-x-auto px-4 pb-1 md:mx-0 md:flex-wrap md:overflow-visible md:px-0 md:pb-0">
                 <button
                   type="button"
+                  aria-pressed={activeTag === 'all'}
                   onClick={() => onTagChange?.('all')}
-                  className={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+                  className={`shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
                     activeTag === 'all'
-                      ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white'
-                      : 'bg-[#e6e8ea] dark:bg-[#181b23] text-[#414752] dark:text-gray-300'
+                      ? 'border-brand bg-brand text-white dark:text-[#0d0f14]'
+                      : 'border-brand/30 bg-transparent text-brand hover:bg-brand/10'
                   }`}
-                  style={bodyStyle}
                 >
                   Tutte le Notizie
                 </button>
@@ -131,19 +126,19 @@ export default function NewsArchiveHero({
                   <button
                     key={tag}
                     type="button"
+                    aria-pressed={activeTag === tag}
                     onClick={() => onTagChange?.(tag)}
-                    className={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+                    className={`shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
                       activeTag === tag
-                        ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white'
-                        : 'bg-[#e6e8ea] dark:bg-[#181b23] text-[#414752] dark:text-gray-300'
+                        ? 'border-brand bg-brand text-white dark:text-[#0d0f14]'
+                        : 'border-brand/30 bg-transparent text-brand hover:bg-brand/10'
                     }`}
-                    style={bodyStyle}
                   >
                     {tag}
                   </button>
                 ))}
               </div>
-              <p className="shrink-0 text-sm text-[#717783] dark:text-gray-400 md:pt-2" style={bodyStyle}>
+              <p className="shrink-0 text-xs font-bold uppercase tracking-wider text-muted md:pr-2">
                 {filteredCount} {filteredCount === 1 ? 'articolo' : 'articoli'}
               </p>
             </div>
@@ -153,12 +148,8 @@ export default function NewsArchiveHero({
 
       <style jsx global>{`
         .nah-root {
-          background: #0b0e12;
+          background: var(--ink);
           color: white;
-        }
-
-        .nah-serif {
-          font-family: 'Cormorant Garamond', serif !important;
         }
 
         .nah-tile {

@@ -1,11 +1,29 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { Icon } from '@iconify/react'
 import { siteBaseUrl } from '/config/default'
 
 import Layout from '/components/Layout'
 import SyntheticLightHero from '/components/SyntheticLightHero'
 
 import { getIdArticoli } from '../../lib/articoli'
+
+// I tag dell'articolo: etichette ocra che portano all'archivio filtrato.
+function TagList({ tags }) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <Link
+          key={tag}
+          href={`/news?q=${encodeURIComponent(tag)}`}
+          className="rounded-md bg-ochre px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest text-ink! no-underline! transition-colors hover:bg-ochre-strong"
+        >
+          {tag}
+        </Link>
+      ))}
+    </div>
+  )
+}
 
 export default function Show({ data }) {
   if (!data) return <div>Caricamento...</div>
@@ -36,314 +54,44 @@ export default function Show({ data }) {
         ctaHref={data.link || data.allegato || null}
       />
 
-      {/* Article body */}
-      <div className="art-page">
-        <div className="art-container">
-
-          {/* Meta row */}
-          <div className="art-meta">
-            {data.pubblicazione && (
-              <span className="art-date">
-                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <rect x="3" y="4" width="18" height="18" rx="2" />
-                  <path d="M16 2v4M8 2v4M3 10h18" />
-                </svg>
-                {data.pubblicazione}
-              </span>
-            )}
-            {tags.length > 0 && (
-              <div className="art-tags">
-                {tags.map((tag) => (
-                  <Link key={tag} href={`/news?q=${encodeURIComponent(tag)}`} className="art-tag">
-                    {tag}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Divider */}
-          <div className="art-divider" />
-
-          {/* Content */}
+      {/* Corpo dell'articolo: una scheda bianca con il testo in serif. */}
+      <div className="bg-page px-4 md:px-8 pt-12 md:pt-16 pb-20 md:pb-24">
+        <article className="mx-auto max-w-[820px] rounded-2xl border border-line bg-surface shadow-sm p-6 md:p-12">
           <div
-            className="art-content"
+            className="prose-site art-content"
             dangerouslySetInnerHTML={{ __html: data.content }}
           />
 
-          {/* Bottom tags */}
           {tags.length > 0 && (
-            <div className="art-bottom-tags">
-              <span className="art-label">Argomenti</span>
-              <div className="art-tags">
-                {tags.map((tag) => (
-                  <Link key={tag} href={`/news?q=${encodeURIComponent(tag)}`} className="art-tag">
-                    {tag}
-                  </Link>
-                ))}
-              </div>
+            <div className="mt-12 flex flex-wrap items-center gap-3 border-t border-line pt-6">
+              <span className="text-xs font-bold uppercase tracking-wider text-muted">Argomenti</span>
+              <TagList tags={tags} />
             </div>
           )}
+        </article>
+
+        <div className="mx-auto mt-8 max-w-[820px] text-center">
+          <Link
+            href="/news"
+            className="inline-flex items-center gap-2 rounded-full border border-brand/40 px-6 py-3 font-bold text-brand! no-underline! transition-colors hover:bg-brand/5 dark:hover:bg-brand/10"
+          >
+            <Icon icon="ph:arrow-left" />
+            Tutte le notizie
+          </Link>
         </div>
       </div>
 
+      {/* Il contenuto arriva dal CMS come HTML: titoli e immagini vanno sistemati qui. */}
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
-
-        .art-page {
-          background: #f7f9fb;
-          min-height: 50vh;
-          padding: 5rem 1.25rem 6rem;
-        }
-
-        .art-container {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        /* Meta row */
-        .art-meta {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          gap: 1rem 2rem;
-          margin-bottom: 2rem;
-          font-family: 'Inter Tight', sans-serif;
-        }
-
-        .art-date {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-size: 0.7rem;
-          text-transform: uppercase;
-          letter-spacing: 0.2em;
-          color: #717783;
-        }
-
-        .art-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-        }
-
-        .art-tag {
-          font-family: 'Inter Tight', sans-serif;
-          font-size: 0.65rem;
-          text-transform: uppercase;
-          letter-spacing: 0.18em;
-          padding: 0.3rem 0.9rem;
-          border-radius: 999px;
-          border: 1px solid rgba(25,118,210,0.3);
-          color: #1976D2;
-          background: rgba(25,118,210,0.07);
-          text-decoration: none;
-          transition: background 0.2s, border-color 0.2s;
-        }
-
-        .art-tag:hover {
-          background: rgba(25,118,210,0.14);
-          border-color: rgba(25,118,210,0.6);
-          color: #1976D2;
-        }
-
-        /* Divider */
-        .art-divider {
-          height: 1px;
-          background: linear-gradient(90deg, transparent, #1976D2, rgba(25,118,210,.3), transparent);
-          margin-bottom: 3rem;
-        }
-
-        /* Content */
-        .art-content {
-          font-family: 'Inter Tight', sans-serif;
-          font-size: 1.05rem;
-          line-height: 1.9;
-          color: #414752;
-        }
-
-        .art-content h1,
-        .art-content h2,
-        .art-content h3,
-        .art-content h4 {
-          font-family: 'Inter Tight', sans-serif !important;
-          font-weight: 600;
-          color: #1976D2 !important;
+        .art-content > :first-child { margin-top: 0; }
+        .art-content h1, .art-content h2, .art-content h3, .art-content h4 {
+          color: var(--brand-blue) !important;
           text-shadow: none !important;
           -webkit-text-fill-color: initial !important;
-          -webkit-text-stroke: 0 !important;
-          line-height: 1.25;
-          margin-top: 2.5rem;
-          margin-bottom: 1rem;
         }
-
-        .art-content h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
-        .art-content h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
-        .art-content h4 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
-
-        .art-content p {
-          margin-bottom: 1.5rem;
-          color: #414752;
-        }
-
-        .art-content a {
-          color: #1976D2;
-          text-decoration: underline;
-          text-decoration-color: rgba(25,118,210,0.3);
-          text-underline-offset: 3px;
-          transition: color 0.2s;
-        }
-
-        .art-content a:hover {
-          color: #FF9800;
-        }
-
-        .art-content ul,
-        .art-content ol {
-          padding-left: 1.5rem;
-          margin-bottom: 1.5rem;
-        }
-
-        .art-content li {
-          margin-bottom: 0.5rem;
-          color: #414752;
-        }
-
-        .art-content img {
-          max-width: 100%;
-          border-radius: 1rem;
-          margin: 2rem 0;
-          border: 1px solid #c1c6d4;
-        }
-
-        .art-content blockquote {
-          font-family: 'Inter Tight', sans-serif !important;
-          font-size: 1.5rem;
-          line-height: 1.5;
-          color: #353B48;
-          border-left: 3px solid #1976D2;
-          padding: 0.5rem 0 0.5rem 1.5rem;
-          margin: 2rem 0;
-          font-style: italic;
-        }
-
-        .art-content table {
-          width: 100%;
-          border-collapse: collapse;
-          margin: 2rem 0;
-          font-size: 0.9rem;
-        }
-
-        .art-content th,
-        .art-content td {
-          padding: 0.75rem 1rem;
-          border: 1px solid #c1c6d4;
-          color: #414752;
-          font-family: 'Inter Tight', sans-serif !important;
-        }
-
-        .art-content th {
-          background: #eceef0;
-          color: #353B48;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          font-size: 0.75rem;
-        }
-
-        /* Bottom tags */
-        .art-bottom-tags {
-          margin-top: 4rem;
-          padding-top: 2rem;
-          border-top: 1px solid #c1c6d4;
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          gap: 1rem;
-        }
-
-        .art-label {
-          font-family: 'Inter Tight', sans-serif;
-          font-size: 0.65rem;
-          text-transform: uppercase;
-          letter-spacing: 0.25em;
-          color: #717783;
-        }
-
-        /* Dark mode */
-        :global(html.dark) .art-page {
-          background: #0d0f14;
-        }
-
-        :global(html.dark) .art-date,
-        :global(html.dark) .art-label {
-          color: #9da3af;
-        }
-
-        :global(html.dark) .art-tag {
-          border-color: rgba(100, 181, 246, 0.35);
-          color: #64B5F6;
-          background: rgba(100, 181, 246, 0.1);
-        }
-
-        :global(html.dark) .art-tag:hover {
-          background: rgba(100, 181, 246, 0.2);
-          border-color: rgba(100, 181, 246, 0.6);
-          color: #64B5F6;
-        }
-
-        :global(html.dark) .art-divider {
-          background: linear-gradient(90deg, transparent, #64B5F6, rgba(100, 181, 246, 0.3), transparent);
-        }
-
-        :global(html.dark) .art-content {
-          color: #e8eaf0;
-        }
-
-        :global(html.dark) .art-content h1,
-        :global(html.dark) .art-content h2,
-        :global(html.dark) .art-content h3,
-        :global(html.dark) .art-content h4 {
-          color: #64B5F6 !important;
-        }
-
-        :global(html.dark) .art-content p,
-        :global(html.dark) .art-content li {
-          color: #c8ccd4;
-        }
-
-        :global(html.dark) .art-content a {
-          color: #64B5F6;
-          text-decoration-color: rgba(100, 181, 246, 0.35);
-        }
-
-        :global(html.dark) .art-content a:hover {
-          color: #FF9800;
-        }
-
-        :global(html.dark) .art-content img {
-          border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        :global(html.dark) .art-content blockquote {
-          color: #e8eaf0;
-          border-left-color: #64B5F6;
-        }
-
-        :global(html.dark) .art-content th,
-        :global(html.dark) .art-content td {
-          border-color: rgba(255, 255, 255, 0.1);
-          color: #c8ccd4;
-        }
-
-        :global(html.dark) .art-content th {
-          background: #181b23;
-          color: #e8eaf0;
-        }
-
-        :global(html.dark) .art-bottom-tags {
-          border-top-color: rgba(255, 255, 255, 0.1);
-        }
+        .art-content h1 { font-size: 1.75rem; font-family: var(--font-ui); font-weight: 700; margin: 2rem 0 1rem; }
+        .art-content img { margin: 2rem 0; border: 1px solid var(--line); }
+        .art-content p:empty { display: none; }
       `}</style>
     </Layout>
   )

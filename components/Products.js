@@ -15,88 +15,82 @@ const MD_COLS = {
   6: 'md:grid-cols-6',
 }
 
+// Griglia di schede con foto: le attività di laboratorio, i corsi, i documenti.
 export default function Products({
+  id,
   title,
   description,
   cardWidth,
   cardWidthXs,
   products,
-  borderRadius,
   aspectRatio,
 }) {
   const xsCols = cardWidthXs ? Math.round(12 / cardWidthXs) : 2
   const mdCols = cardWidth ? Math.round(12 / cardWidth) : 4
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 md:px-8 mb-12 md:mb-16">
-      {title && (
-        <h2 className="text-3xl font-bold text-center text-[#1976D2] dark:text-[#64B5F6] mb-4">
-          {title}
-        </h2>
-      )}
-      {description && (
-        <p className="text-center text-gray-500 dark:text-gray-300 px-2 mb-6">
-          {description}
-        </p>
+    <section id={id} className="max-w-[1200px] mx-auto px-4 md:px-8 my-12 md:my-16 scroll-mt-28">
+      {(title || description) && (
+        <div className="text-center mb-8">
+          {title && <h2 className="text-3xl font-bold tracking-tight text-brand leading-tight m-0">{title}</h2>}
+          {description && (
+            <p className="mt-3 mx-auto max-w-[70ch] font-serif text-lg md:text-xl leading-relaxed text-muted">
+              {description}
+            </p>
+          )}
+        </div>
       )}
       <div
-        className={`grid ${XS_COLS[xsCols] || 'grid-cols-2'} sm:grid-cols-3 ${MD_COLS[mdCols] || 'md:grid-cols-4'} gap-6 md:gap-8`}
+        className={`grid ${XS_COLS[xsCols] || 'grid-cols-2'} sm:grid-cols-3 ${MD_COLS[mdCols] || 'md:grid-cols-4'} gap-4 md:gap-6`}
       >
-        {products.map((product, i) => (
-          <a
-            key={i}
-            href={product.url || undefined}
-            className={`block text-[var(--fg)] no-underline ${product.url ? '' : 'pointer-events-none'}`}
-          >
-            <div className="flex flex-col h-full">
-              <div
-                className="relative overflow-hidden w-full"
-                style={{ borderRadius, aspectRatio }}
-              >
+        {products.map((product, i) => {
+          const Tag = product.url ? 'a' : 'div'
+          return (
+            <Tag
+              key={i}
+              href={product.url || undefined}
+              className={`group flex flex-col overflow-hidden rounded-2xl bg-surface border border-line shadow-sm text-fg! no-underline! ${
+                product.url ? 'transition-shadow hover:shadow-md' : ''
+              }`}
+            >
+              <div className="relative w-full overflow-hidden" style={{ aspectRatio }}>
                 <Image
                   src={product.immagineUrl}
                   alt={product.title || ''}
                   fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className={`object-cover ${product.url ? 'transition-transform duration-500 group-hover:scale-105' : ''}`}
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                 />
-              </div>
-              <div className="p-3 relative text-[var(--fg)]">
-                {product.title && (
-                  <h4 className="text-center text-lg font-semibold mb-1 text-[var(--fg)]">
-                    {product.title}
-                  </h4>
-                )}
-                {product.category && (
-                  <p className="text-center text-sm text-gray-500 dark:text-gray-400">
-                    {product.category}
-                  </p>
-                )}
-                {product.description && (
-                  <p className="text-sm p-2 text-gray-700 dark:text-gray-300">
-                    {product.description}
-                  </p>
-                )}
                 {product.rif && (
-                  <div
-                    className="text-right px-2 absolute bottom-0 right-0"
-                    style={{ backgroundColor: product.labelColor }}
+                  <span
+                    className="absolute bottom-2 right-2 rounded-md bg-ochre px-2 py-0.5 text-xs font-bold text-ink"
+                    style={product.labelColor ? { backgroundColor: product.labelColor } : undefined}
                   >
-                    <p className="text-sm text-[var(--fg)]">{product.rif}</p>
-                  </div>
+                    {product.rif}
+                  </span>
                 )}
               </div>
-            </div>
-          </a>
-        ))}
+              {(product.title || product.category || product.description) && (
+                <div className="flex flex-1 flex-col gap-1 p-4">
+                  {product.title && (
+                    <h3 className="text-base font-bold leading-snug text-fg m-0">{product.title}</h3>
+                  )}
+                  {product.category && <p className="text-sm text-muted m-0">{product.category}</p>}
+                  {product.description && (
+                    <p className="text-sm leading-relaxed text-muted m-0">{product.description}</p>
+                  )}
+                </div>
+              )}
+            </Tag>
+          )
+        })}
       </div>
-    </div>
+    </section>
   )
 }
 
 Products.defaultProps = {
   cardWidth: 3,
   cardWidthXs: 6,
-  borderRadius: '10px',
   aspectRatio: '3 / 2',
 }

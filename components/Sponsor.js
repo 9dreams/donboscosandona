@@ -19,13 +19,13 @@ export default function Sponsor({ title, description, cardWidth, cardWidthXs, lo
   const mdCols = cardWidth ? Math.round(12 / cardWidth) : 4
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 md:px-8">
-      {title && <h3 className="text-3xl text-center mb-4">{title}</h3>}
+    <section className="max-w-[1200px] mx-auto px-4 md:px-8 my-12">
+      {title && <h2 className="text-3xl font-bold tracking-tight text-brand text-center mb-3">{title}</h2>}
       {description && (
-        <p className="text-center text-gray-500 dark:text-gray-300 mb-6 px-2">{description}</p>
+        <p className="text-center font-serif text-lg leading-relaxed text-muted mb-6 px-2">{description}</p>
       )}
       <div
-        className={`grid ${XS_COLS[xsCols] || 'grid-cols-2'} sm:grid-cols-3 ${MD_COLS[mdCols] || 'md:grid-cols-4'} gap-4 items-center`}
+        className={`grid ${XS_COLS[xsCols] || 'grid-cols-2'} sm:grid-cols-3 ${MD_COLS[mdCols] || 'md:grid-cols-4'} gap-4 items-center rounded-2xl bg-white border border-line shadow-sm p-4 md:p-6`}
       >
         {logos.map((logo, i) => (
           // eslint-disable-next-line @next/next/no-img-element
@@ -37,7 +37,7 @@ export default function Sponsor({ title, description, cardWidth, cardWidthXs, lo
           />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

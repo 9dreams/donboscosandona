@@ -72,35 +72,39 @@ export default function INostriNumeri() {
   }, [hasAnimated]);
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 mt-4 mb-32" ref={containerRef}>
-      <div className="flex justify-center items-center px-4 sm:px-6 lg:px-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center w-full">
-          {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
-            <div key={index} className="w-full flex justify-center px-2">
-              <div className="w-full max-w-2xl h-[420px] mt-3 rounded-3xl bg-white dark:bg-[#181b23] transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:border-violet-800 dark:hover:border-[#64B5F6] border border-sky-300 dark:border-white/10 flex flex-col items-center justify-center p-6 shadow-md dark:shadow-black/30">
-                <div className="flex justify-center mb-6">
-                  <div className="relative w-[160px] h-[160px] bg-sky-500 dark:bg-sky-600 rounded-full border border-sky-300 dark:border-sky-500">
-                    <div className="w-[140px] h-[125px] bg-sky-500 dark:bg-sky-600 rounded-full z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={cardImages[index]} className="w-full h-full object-contain rounded-full" alt={`Card ${index + 1}`} />
-                    </div>
-                  </div>
-                </div>
-                <div className="mb-4 border-b border-sky-300 dark:border-white/20 mx-auto w-1/2" />
-                <h2 className="text-center text-[35px] sm:text-[45px] md:text-[55px] lg:text-[66px] text-sky-500 dark:text-[#64B5F6] mb-2">
-                  {Number.isInteger(targetCounts[index])
-                    ? Math.floor(counts[index])
-                    : counts[index].toFixed(1).replace(/\.0+$/, "")}
-                  {(index === 5 || index === 6 || index === 7) && "%"}
-                </h2>
-                <h3 className="text-center text-base sm:text-lg md:text-2xl mt-[5px] min-h-[48px] text-gray-600 dark:text-gray-300 leading-snug font-normal">
-                  {labels[index].toLowerCase()}
-                </h3>
-              </div>
+    <section ref={containerRef} className="bg-ink text-white my-16 md:my-24">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-14 md:py-20">
+        <span className="inline-block rounded-md bg-ochre px-2.5 py-1 text-[12px] font-bold uppercase tracking-widest text-ink">
+          I nostri numeri
+        </span>
+        <h2 className="wordmark mt-4 text-4xl md:text-5xl text-white">Una scuola che cresce</h2>
+        <p className="mt-3 max-w-[60ch] font-serif text-xl leading-relaxed text-white/75">
+          Anni di esperienza, persone, laboratori e aziende: la SFP Don Bosco in cifre.
+        </p>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+          {targetCounts.map((target, index) => (
+            <div
+              key={index}
+              className="flex flex-col gap-4 rounded-2xl border border-white/12 bg-white/5 p-6 transition-colors hover:bg-white/8"
+            >
+              <span className="grid size-12 place-items-center rounded-full bg-brand">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={cardImages[index]} className="size-6 object-contain" alt="" />
+              </span>
+              <p className="wordmark m-0 text-5xl md:text-6xl text-white tabular-nums">
+                {Number.isInteger(target)
+                  ? Math.floor(counts[index])
+                  : counts[index].toFixed(1).replace(/\.0+$/, "")}
+                {(index === 5 || index === 6 || index === 7) && <span className="text-ochre">%</span>}
+              </p>
+              <p className="m-0 font-serif text-lg leading-snug text-white/80 first-letter:uppercase">
+                {labels[index].trim().toLowerCase()}
+              </p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

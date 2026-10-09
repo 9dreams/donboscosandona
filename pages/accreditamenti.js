@@ -2,13 +2,7 @@
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
-import Features from '/components/Features'
-import Carousel from '/components/Carousel'
-import PostInEvidenza from '/components/PostInEvidenza'
 import Products from '/components/Products'
-import Testimonials from '/components/Testimonials'
-import Team from '/components/Team'
-import Post from '/components/Post'
 import { getDatiArticoli } from '/lib/articoli'
 
 
@@ -49,31 +43,20 @@ export default function Home({ datiArticoli }) {
     return (
         <Layout>
             <Head />
-            {
-
-            }
             <LandingHero
-                opacity={0.5}
-                siteName="CFP DON BOSCO"
+                eyebrow="Qualità"
                 title="Accreditamenti"
                 description="Accreditamenti e certificazioni rilasciate al nostro Centro"
                 buttonUrl={'https://www.youtube.com/watch?v=wyjm1yGmu9g'}
                 buttonText="Guarda il video"
                 imageUrl="/images/accreditamenti/accreditamento.jpg"
-            /><br /><br />
-
-
-            <div className="max-w-[1200px] mx-auto px-4 md:px-8">
-            </div><br /><br />
-            <Products 
+            />
+            <Products
                 title="Accreditamenti"
                 description=""
                 cardWidth={3}
                 products={settori}
             />
-
-            
-
         </Layout>
     )
 }

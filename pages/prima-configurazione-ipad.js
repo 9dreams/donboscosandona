@@ -1,6 +1,17 @@
 import Head from 'next/head'
 import { Icon } from '@iconify/react'
-import { Layout, LandingHero } from '/components'
+import {
+  Layout,
+  LandingHero,
+  QuickNav,
+  Intro,
+  Section,
+  SectionTitle,
+  FeatureCard,
+  Card,
+  Callout,
+  HelpBox,
+} from '/components'
 
 // Pagina linkata da Servizi (config servizi.ipad.setup_url): il QR della
 // ricevuta e le mail «iPad pronto» / «L'iPad si può attivare» portano qui.
@@ -75,38 +86,34 @@ const passiIniziali = [
 function Passo({ numero, icona, titolo, children }) {
   return (
     <li className="flex gap-4">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1976D2] text-white font-bold">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand text-white dark:text-[#0d0f14] font-bold">
         {numero}
       </span>
-      <div className="flex-1 rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-5">
+      <Card className="flex-1 p-5">
         <div className="flex items-center gap-2 mb-2">
-          <Icon icon={icona} className="text-2xl text-[#1976D2] dark:text-[#64B5F6]" />
+          <Icon icon={icona} className="text-2xl text-brand" />
           <h3 className="font-bold text-lg m-0">{titolo}</h3>
         </div>
-        <div className="text-base leading-7 text-gray-700 dark:text-gray-300">{children}</div>
-      </div>
+        <div className="text-base leading-7 text-muted">{children}</div>
+      </Card>
     </li>
   )
 }
 
-function Avviso({ icona = 'ph:warning-circle', children }) {
+function Avviso({ icona, children }) {
   return (
-    <div className="flex gap-4 items-start rounded-2xl border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/30 p-5">
-      <Icon icon={icona} className="text-2xl text-amber-500 shrink-0 mt-0.5" />
-      <div className="text-sm md:text-base text-amber-900 dark:text-amber-200">{children}</div>
-    </div>
+    <Callout tone={icona === 'ph:info' ? 'info' : 'warning'} icon={icona} className="mb-0">
+      {children}
+    </Callout>
   )
 }
 
 function Sezione({ id, icona, titolo, children }) {
   return (
-    <section id={id} className="max-w-[900px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-      <div className="flex items-center gap-3 mb-6">
-        <Icon icon={icona} className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-        <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">{titolo}</h2>
-      </div>
+    <Section id={id} width="max-w-[900px]">
+      <SectionTitle icon={icona}>{titolo}</SectionTitle>
       {children}
-    </section>
+    </Section>
   )
 }
 
@@ -122,6 +129,7 @@ export default function PrimaConfigurazioneIpadPage() {
       </Head>
 
       <LandingHero
+        eyebrow="Per gli studenti"
         title="Il tuo iPad è pronto"
         description="Segui questi passi per accenderlo la prima volta, collegarlo al tuo account della scuola e ricevere le app per le lezioni."
         imageUrl="/images/iPad.png"
@@ -129,59 +137,34 @@ export default function PrimaConfigurazioneIpadPage() {
       />
 
       {/* Navigazione rapida tra le sezioni */}
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8 -mt-8 relative z-10">
-        <div className="flex flex-wrap gap-3 justify-center bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 p-4">
-          {ancore.map((a) => (
-            <a
-              key={a.href}
-              href={a.href}
-              className="text-sm font-semibold px-4 py-2 rounded-full border border-[#1976D2]/30 dark:border-[#64B5F6]/30 text-[#1976D2] dark:text-[#64B5F6] hover:bg-[#1976D2] hover:text-white dark:hover:bg-[#64B5F6] dark:hover:text-[#0d0f14] transition-colors"
-            >
-              {a.label}
-            </a>
-          ))}
-        </div>
-      </div>
+      <QuickNav links={ancore} />
 
       {/* Introduzione */}
-      <div className="max-w-[880px] mx-auto px-4 md:px-8 mt-16 mb-16 text-center">
-        <h1 className="title-display text-4xl md:text-5xl mb-6">Prima configurazione dell'iPad</h1>
-        <p className="text-lg leading-8 text-gray-600 dark:text-gray-300">
+      <Intro title="Prima configurazione dell'iPad">
+        <p>
           Il tuo iPad è stato iscritto ad <strong>Apple School Manager</strong> e viene gestito
           dalla scuola con <strong>Jamf School</strong>. Alla prima accensione si collegherà da solo
           alla scuola: tu dovrai solo scegliere la lingua, collegarti al Wi-Fi ed entrare con il tuo
           account scolastico. Ci vogliono circa <strong>20–30 minuti</strong>.
         </p>
-      </div>
+      </Intro>
 
       {/* Prima di iniziare */}
       <Sezione id="prima" icona="ph:list-checks" titolo="Prima di iniziare">
         <div className="grid sm:grid-cols-3 gap-5 mb-8">
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6">
-            <Icon icon="ph:user-circle" className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
-            <h3 className="font-bold text-lg mb-1">Il tuo nome utente</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300 m-0">
-              Lo trovi sul <strong>foglio</strong> che ti abbiamo consegnato o nell'<strong>email</strong>{' '}
-              di conferma della registrazione. Ha la forma{' '}
-              <strong className="break-all">m.rossi@donboscosandona.it</strong>.
-            </p>
-          </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6">
-            <Icon icon="ph:key" className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
-            <h3 className="font-bold text-lg mb-1">La password iniziale</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300 m-0">
-              Al primo accesso la password è <strong>benvenuto</strong> (tutto minuscolo). Subito
-              dopo ti verrà chiesto di sceglierne una nuova.
-            </p>
-          </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6">
-            <Icon icon="ph:battery-charging" className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
-            <h3 className="font-bold text-lg mb-1">Wi-Fi e carica</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300 m-0">
-              Tieni a portata di mano la <strong>password del Wi-Fi</strong> di casa e lascia
-              l'iPad <strong>collegato al caricatore</strong> per tutta la configurazione.
-            </p>
-          </div>
+          <FeatureCard icon="ph:user-circle" title="Il tuo nome utente">
+            Lo trovi sul <strong>foglio</strong> che ti abbiamo consegnato o nell'<strong>email</strong>{' '}
+            di conferma della registrazione. Ha la forma{' '}
+            <strong className="break-all">m.rossi@donboscosandona.it</strong>.
+          </FeatureCard>
+          <FeatureCard icon="ph:key" title="La password iniziale">
+            Al primo accesso la password è <strong>benvenuto</strong> (tutto minuscolo). Subito
+            dopo ti verrà chiesto di sceglierne una nuova.
+          </FeatureCard>
+          <FeatureCard icon="ph:battery-charging" title="Wi-Fi e carica">
+            Tieni a portata di mano la <strong>password del Wi-Fi</strong> di casa e lascia
+            l'iPad <strong>collegato al caricatore</strong> per tutta la configurazione.
+          </FeatureCard>
         </div>
 
         <Avviso icona="ph:info">
@@ -196,7 +179,7 @@ export default function PrimaConfigurazioneIpadPage() {
 
       {/* Impostazione Assistita */}
       <Sezione id="configurazione" icona="ph:device-tablet" titolo="Accensione e prime schermate">
-        <p className="text-lg leading-8 mb-8">
+        <p className="font-serif text-xl leading-relaxed mb-8">
           Alla prima accensione parte l'<strong>Impostazione Assistita</strong> di Apple. Segui le
           schermate in questo ordine:
         </p>
@@ -233,7 +216,7 @@ export default function PrimaConfigurazioneIpadPage() {
               Al primo accesso Google ti chiede di <strong>cambiare la password</strong>: scrivila
               due volte e conferma. Da qui in poi userai sempre questa.
             </p>
-            <p className="mb-0 text-sm text-gray-500 dark:text-gray-400">
+            <p className="mb-0 text-sm text-muted">
               Scegli una password di almeno 8 caratteri che non usi altrove, e non dirla a nessuno.
               Se la dimentichi, scrivi all'assistenza (vedi in fondo alla pagina).
             </p>
@@ -246,7 +229,7 @@ export default function PrimaConfigurazioneIpadPage() {
               alla pagina di Google e lì inserisci la <strong>nuova password</strong> che hai appena
               scelto.
             </p>
-            <p className="mb-0 text-sm text-gray-500 dark:text-gray-400">
+            <p className="mb-0 text-sm text-muted">
               Non usare qui il tuo Apple Account personale: lo potrai aggiungere alla fine.
             </p>
           </Passo>
@@ -287,7 +270,7 @@ export default function PrimaConfigurazioneIpadPage() {
 
       {/* Apple Account personale */}
       <Sezione id="account-personale" icona="ph:user-switch" titolo="Usa il tuo Apple Account personale">
-        <p className="text-lg leading-8 mb-8">
+        <p className="font-serif text-xl leading-relaxed mb-8">
           L'Apple Account della scuola non permette di scaricare app dall'App Store. Quando tutte
           le app della scuola sono installate, puoi sostituirlo con il tuo Apple Account personale
           (quello che usi per esempio sull'iPhone) e scaricare le app che vuoi.
@@ -307,7 +290,7 @@ export default function PrimaConfigurazioneIpadPage() {
                 inserisci il codice dell'iPad.
               </li>
             </ol>
-            <p className="mb-0 mt-3 text-sm text-gray-500 dark:text-gray-400">
+            <p className="mb-0 mt-3 text-sm text-muted">
               Attenzione: non scegliere mai «Inizializza questo iPad».
             </p>
           </Passo>
@@ -322,7 +305,7 @@ export default function PrimaConfigurazioneIpadPage() {
                 Apple Account personale.
               </li>
             </ol>
-            <p className="mb-0 mt-3 text-sm text-gray-500 dark:text-gray-400">
+            <p className="mb-0 mt-3 text-sm text-muted">
               Se non hai ancora un Apple Account, puoi crearlo dalla stessa schermata. Per chi ha
               meno di 14 anni l'account va creato da un genitore con In famiglia.
             </p>
@@ -347,49 +330,43 @@ export default function PrimaConfigurazioneIpadPage() {
       {/* Problemi frequenti */}
       <Sezione id="problemi" icona="ph:lifebuoy" titolo="Qualcosa non va?">
         <div className="space-y-4">
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6">
+          <Card>
             <h3 className="font-bold text-lg mb-2">Non compare la schermata «Gestione remota»</h3>
-            <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 m-0">
+            <p className="text-sm md:text-base text-muted m-0">
               L'iPad non risulta ancora iscritto alla scuola. Non andare avanti con la
               configurazione: spegnilo e scrivi all'assistenza indicando il nome dello studente.
             </p>
-          </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6">
+          </Card>
+          <Card>
             <h3 className="font-bold text-lg mb-2">La password «benvenuto» non funziona</h3>
-            <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 m-0">
+            <p className="text-sm md:text-base text-muted m-0">
               Controlla di aver scritto il nome utente completo, con{' '}
               <strong>@donboscosandona.it</strong>, e la password tutta in minuscolo. Se hai già
               cambiato la password in precedenza (per esempio su Classroom), usa quella nuova.
             </p>
-          </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6">
+          </Card>
+          <Card>
             <h3 className="font-bold text-lg mb-2">Le app non arrivano</h3>
-            <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 m-0">
+            <p className="text-sm md:text-base text-muted m-0">
               Verifica che l'iPad sia collegato al Wi-Fi e sotto carica, poi aspetta ancora
               qualche minuto. Se dopo un'ora mancano ancora, riavvia l'iPad; se il problema resta,
               scrivi all'assistenza.
             </p>
-          </div>
+          </Card>
         </div>
       </Sezione>
 
       {/* Serve aiuto? */}
-      <section id="contatti" className="max-w-[800px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28 text-center">
-        <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-8 md:p-10">
-          <Icon icon="ph:question" className="text-4xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
-          <h2 className="text-2xl font-bold text-[#1976D2] dark:text-[#64B5F6] mb-3">
-            Hai bisogno di aiuto?
-          </h2>
-          <p className="text-base md:text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Scrivi a{' '}
-            <a href="mailto:assistenza@donboscosandona.it" className="font-semibold">
-              assistenza@donboscosandona.it
-            </a>{' '}
-            indicando nome, cognome e classe dello studente e, se puoi, una foto della schermata in
-            cui ti sei fermato.
-          </p>
-        </div>
-      </section>
+      <div id="contatti" className="scroll-mt-28">
+        <HelpBox title="Hai bisogno di aiuto?">
+          Scrivi a{' '}
+          <a href="mailto:assistenza@donboscosandona.it" className="font-semibold">
+            assistenza@donboscosandona.it
+          </a>{' '}
+          indicando nome, cognome e classe dello studente e, se puoi, una foto della schermata in
+          cui ti sei fermato.
+        </HelpBox>
+      </div>
     </Layout>
   )
 }

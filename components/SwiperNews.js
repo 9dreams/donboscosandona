@@ -13,16 +13,16 @@ export default function News({ title, data, limit, defaultTag, aspectRatio }) {
   data.splice(limit)
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 md:px-8 mt-20 mb-24">
-      {title && (
-        <h2 className="text-3xl font-bold mb-8 text-left text-[var(--fg)] uppercase tracking-wide">
-          {title}
-        </h2>
-      )}
+    <section
+      className="max-w-[1200px] mx-auto px-4 md:px-8 my-16 md:my-20"
+      style={{ '--swiper-theme-color': 'var(--brand-blue)' }}
+    >
+      {title && <h2 className="title-display text-4xl md:text-5xl mb-8">{title}</h2>}
       <Swiper
         modules={[Pagination, Autoplay]}
         autoplay
         pagination={{ clickable: true }}
+        className="pb-12! [&_.swiper-slide]:h-auto!"
         slidesPerView={1}
         spaceBetween={10}
         breakpoints={{
@@ -36,7 +36,7 @@ export default function News({ title, data, limit, defaultTag, aspectRatio }) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   )
 }
 

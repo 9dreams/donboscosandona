@@ -1,21 +1,32 @@
 import Head from 'next/head'
+import { Icon } from '@iconify/react'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
 import Paragraph from '/components/Paragraph'
-import News from '/components/News'
+import DocumentList from '/components/DocumentList'
+import { QuickNav, Section, SectionTitle, Card, ContactLine } from '/components/ui'
 import { conDocumentiLocali } from '/data/documenti'
+
+const ancore = [
+  { href: '#gdpr', label: 'GDPR' },
+  { href: '#dpo', label: 'Responsabile protezione dati' },
+  { href: '#informativa', label: 'Informativa' },
+  { href: '#cookie', label: 'Cookie' },
+  { href: '#informative', label: 'Informative' },
+]
 
 export default function Page({ data }) {
   return (
     <Layout>
       <Head />
       <LandingHero
-        opacity={0}
-        siteName='CFP DON BOSCO'
-        buttonText='Guarda il video'
+        eyebrow='Regolamento UE 2016/679'
+        title='Privacy'
         imageUrl='/images/privacy/gdpr-privacy.jpg'
       />
+      <QuickNav links={ancore} />
       <Paragraph
+        id='gdpr'
         title='GDPR'
         subtitle='La tutela della privacy'
         columnCount={2}
@@ -33,31 +44,48 @@ export default function Page({ data }) {
         la informiamo che la Fondazione FP INE - is - SFP Don Bosco ha nominato
         il Responsabile della Protezione dei Dati (RPD o DPO).
       </Paragraph>
+      <Section id='dpo' width='lg'>
+        <Card highlight className='p-6 md:p-8'>
+          <div className='flex items-center gap-3 mb-4'>
+            <Icon icon='ph:user-circle-check' className='text-3xl text-brand' />
+            <h2 className='text-2xl font-bold text-brand m-0'>
+              Dati di contatto del Responsabile della Protezione dei Dati.
+            </h2>
+          </div>
+          <div className='space-y-2'>
+            <p className='m-0 text-lg font-bold'>Avv. Marco Bernabè</p>
+            <ContactLine icon='ph:map-pin'>
+              Via dei Salesiani, 15 · 30174 Venezia - Mestre (VENEZIA)
+            </ContactLine>
+            <ContactLine icon='ph:envelope' href='mailto:dpo.fp@salesianinordest.it'>
+              dpo.fp@salesianinordest.it
+            </ContactLine>
+            <ContactLine icon='ph:phone' href='tel:+393921549739'>
+              tel. 392 154 9739
+            </ContactLine>
+          </div>
+        </Card>
+      </Section>
+      <Section id='documentazione' width='lg'>
+        <SectionTitle icon='ph:books'>Documentazione utile</SectionTitle>
+        <div className='grid sm:grid-cols-2 gap-5'>
+          <Card href='http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/6264597'>
+            <Icon icon='ph:scales' className='text-3xl text-brand mb-3' />
+            <h3 className='font-bold text-lg text-fg m-0'>
+              Regolamento UE 2016 679. Con riferimenti ai considerando
+            </h3>
+          </Card>
+          <Card href='http://www.garanteprivacy.it/web/guest/regolamentoue/guida-all-applicazione-del-regolamento-europeo-in-materia-di-protezione-dei-dati-personali'>
+            <Icon icon='ph:book-open-text' className='text-3xl text-brand mb-3' />
+            <h3 className='font-bold text-lg text-fg m-0'>
+              Guida all’applicazione del Regolamento europeo in materia di
+              protezione dei dati personali
+            </h3>
+          </Card>
+        </div>
+      </Section>
       <Paragraph
-        subtitle='Dati di contatto del Responsabile della Protezione dei Dati.'
-        backgroundColor='#fed'
-      >
-        <b>Avv. Marco Bernabè</b>
-        <br />
-        Via dei Salesiani, 15
-        <br />
-        30174 Venezia - Mestre (VENEZIA)
-        <br />
-        e-mail: dpo.fp@salesianinordest.it
-        <br />
-        tel. 392 154 9739
-      </Paragraph>
-      <Paragraph title='Documentazione utile'>
-        <a href="http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/6264597">
-          Regolamento UE 2016 679. Con riferimenti ai considerando
-        </a>
-        <br />
-        <a href="http://www.garanteprivacy.it/web/guest/regolamentoue/guida-all-applicazione-del-regolamento-europeo-in-materia-di-protezione-dei-dati-personali">
-          Guida all’applicazione del Regolamento europeo in materia di
-          protezione dei dati personali
-        </a>
-      </Paragraph>
-      <Paragraph
+        id='informativa'
         title='Informativa sul trattamento dei dati personali '
         subtitle='Ai sensi del Art. 13 del GDPR (General Data Protection Regulation) 2016/679 '
       >
@@ -90,8 +118,6 @@ export default function Page({ data }) {
 
       <Paragraph
         subtitle=' A. IDENTITÀ DI CONTATTO DEL TITOLARE DEL TRATTAMENTO DEI DATI PERSONALI E RESPONSABILE DELLA PROTEZIONE DEI DATI (RPD)'
-        imageUrl=''
-        columnCount={2}
       >
         <br /> Ai sensi dell’art. 13 e 14 del GDPR Ti comunichiamo che il
         Titolare del trattamento dei tuoi dati personali forniti attraverso il
@@ -105,8 +131,6 @@ export default function Page({ data }) {
 
       <Paragraph
         subtitle=' B. QUALI DATI TRATTIAMO? PER CHE FINALITÀ?'
-        imageUrl=''
-        columnCount={2}
       >
         Sono i dati personali da te{' '}
         <strong>inseriti nei campi di registrazione</strong>, per accedere alle
@@ -168,8 +192,8 @@ export default function Page({ data }) {
       </Paragraph>
 
       <Paragraph
+        id='dati-navigazione'
         subtitle='DATI REGISTRATI AUTOMATICAMENTE'
-        backgroundColor='#fed'
       >
         <u>Dati di navigazione</u>
         <br />
@@ -183,17 +207,19 @@ export default function Page({ data }) {
         In questa categoria di dati rientrano:
         <br />
         <br />
-        <li>L'indirizzo della pagina che visiti sul nostro sito web</li>
-        <li>l'indirizzo IP del dispositivo</li>
-        <li>
-          l'indirizzo del sito web visitato immediatamente prima (il cosiddetto
-          "referrer")
-        </li>
-        <li>data e ora della tua visita</li>
-        <li>
-          le proprietà del dispositivo, in particolare il sistema operativo, il
-          browser utilizzato e la dimensione della finestra del browser
-        </li>
+        <ul>
+          <li>L'indirizzo della pagina che visiti sul nostro sito web</li>
+          <li>l'indirizzo IP del dispositivo</li>
+          <li>
+            l'indirizzo del sito web visitato immediatamente prima (il cosiddetto
+            "referrer")
+          </li>
+          <li>data e ora della tua visita</li>
+          <li>
+            le proprietà del dispositivo, in particolare il sistema operativo, il
+            browser utilizzato e la dimensione della finestra del browser
+          </li>
+        </ul>
         i nomi a dominio dei computer e dei terminali utilizzati dagli utenti,
         gli indirizzi in notazione URI/URL (Uniform Resource Identifier/Locator)
         delle risorse richieste, l'orario della richiesta, il metodo utilizzato
@@ -203,12 +229,14 @@ export default function Page({ data }) {
         sistema operativo e all'ambiente informatico dell'utente. Tali dati,
         necessari per la fruizione dei servizi web, vengono anche trattati allo
         scopo di:
-        <li>
-          Ottenere informazioni statistiche sull'uso dei servizi (pagine più
-          visitate, numero di visitatori per fascia oraria o giornaliera, aree
-          geografiche di provenienza, ecc.);
-        </li>
-        <li>Controllare il corretto funzionamento dei servizi offerti.</li>
+        <ul>
+          <li>
+            Ottenere informazioni statistiche sull'uso dei servizi (pagine più
+            visitate, numero di visitatori per fascia oraria o giornaliera, aree
+            geografiche di provenienza, ecc.);
+          </li>
+          <li>Controllare il corretto funzionamento dei servizi offerti.</li>
+        </ul>
         <br />
         I dati di navigazione non persistono per più di un anno e vengono
         cancellati immediatamente dopo la loro anonimizzazione (salve eventuali
@@ -218,8 +246,8 @@ export default function Page({ data }) {
       </Paragraph>
 
       <Paragraph
+        id='cookie'
         subtitle='COOKIE E ALTRI SISTEMI DI TRACCIAMENTO'
-        imageUrl='https://internetofbusiness.com/wp-content/uploads/2015/11/IoTintro-640x318.png'
       >
         Non viene fatto uso di cookie per la profilazione degli utenti, né
         vengono impiegati altri metodi di tracciamento.
@@ -304,13 +332,11 @@ export default function Page({ data }) {
         <br />
       </Paragraph>
 
-      <Paragraph imageUrl='https://www.netdream.it/sites/netdream.it/files/blog/cookies.jpg'>
-        <center>
-          <h2>
+      <Paragraph id='terze-parti'>
+        <h2>
             Quali sono le informazioni che permettiamo ad altri servizi di
             raccogliere
           </h2>
-        </center>
         <p>
           Quando viene utilizzato il nostro sito web possiamo consentire a terzi
           di raccogliere informazioni su dispositivi, utilizzo e informazioni
@@ -319,40 +345,35 @@ export default function Page({ data }) {
           per altri scopi coerenti con le loro politiche sulla privacy:
         </p>
 
-        <li>
-          Per analizzare l’uso dei nostri servizi: consentiamo a determinati
-          fornitori di servizi di raccogliere queste informazioni per aiutarci a
-          capire come viene utilizzato il nostro sito web e per aiutarci a
-          migliorare il contenuto e il funzionamento dello stesso. Questi
-          fornitori di servizi raccolgono dati di utilizzo statistico aggregati
-          che non sono abbinati o collegati a nessun singolo utente.
-        </li>
-        <br />
-        <li>
-          Per fare in modo che i servizi di altre società funzionino sul nostro
-          sito web: consentiamo alle aziende di utilizzare cookie e altre
-          tecnologie simili per migliorare servizi e funzionalità del nostro
-          sito web.
-        </li>
-        <br />
-        <li>
-          Per collegare la tua attività sul nostro sito web ai social network:
-          abbiamo aggiunto alcune funzionalità al nostro sito web che consentono
-          ai social network (come Facebook, Twitter, LinkedIn) di tenere traccia
-          delle tue attività o di raccogliere determinate informazioni quando
-          viene utilizzato il nostro sito web. Se sei preoccupato per il modo in
-          cui un social network sta monitorando la tua attività, ti preghiamo di
-          contattare il social network o rivedere la sua politica sulla privacy.
-          Ad esempio, puoi consultare la politica sull’uso dei dati di Facebook
-          all’indirizzo https://www.facebook.com/about/privacy/.
-        </li>
+        <ul>
+          <li>
+            Per analizzare l’uso dei nostri servizi: consentiamo a determinati
+            fornitori di servizi di raccogliere queste informazioni per aiutarci a
+            capire come viene utilizzato il nostro sito web e per aiutarci a
+            migliorare il contenuto e il funzionamento dello stesso. Questi
+            fornitori di servizi raccolgono dati di utilizzo statistico aggregati
+            che non sono abbinati o collegati a nessun singolo utente.
+          </li>
+          <li>
+            Per fare in modo che i servizi di altre società funzionino sul nostro
+            sito web: consentiamo alle aziende di utilizzare cookie e altre
+            tecnologie simili per migliorare servizi e funzionalità del nostro
+            sito web.
+          </li>
+          <li>
+            Per collegare la tua attività sul nostro sito web ai social network:
+            abbiamo aggiunto alcune funzionalità al nostro sito web che consentono
+            ai social network (come Facebook, Twitter, LinkedIn) di tenere traccia
+            delle tue attività o di raccogliere determinate informazioni quando
+            viene utilizzato il nostro sito web. Se sei preoccupato per il modo in
+            cui un social network sta monitorando la tua attività, ti preghiamo di
+            contattare il social network o rivedere la sua politica sulla privacy.
+            Ad esempio, puoi consultare la politica sull’uso dei dati di Facebook
+            all’indirizzo https://www.facebook.com/about/privacy/.
+          </li>
+        </ul>
 
-        <br />
-        <br />
-
-        <center>
-          <h2>Cookies e tecnologie simili</h2>
-        </center>
+        <h2>Cookies e tecnologie simili</h2>
         <p>
           Possiamo utilizzare una varietà di tecnologie per raccogliere
           informazioni sul tuo dispositivo e sull’utilizzo del nostro sito web.
@@ -362,34 +383,29 @@ export default function Page({ data }) {
           queste tecnologie. Per maggiori informazioni, consultare la sezione di
           questo documento dal titolo “Scegli come gestire i tuoi dati”.
         </p>
-        <li>
-          Cookie – I cookie sono piccoli file di dati che vengono inviati dal
-          server di un sito web e sono memorizzati sul disco rigido del
-          dispositivo dell’utente solo per la durata della visita (“cookie di
-          sessione”) o per un periodo determinato (“cookie permanenti”). I
-          cookie contengono informazioni che possono essere successivamente
-          lette da un server web.
-        </li>
-        <br />
-        <li>
-          Java Script: i Java Script sono snippet di codice incorporati in varie
-          parti di un sito web allo scopo di facilitare varie operazioni, tra
-          cui la velocità di aggiornamento di determinate funzionalità o il
-          monitoraggio dell’utilizzo di vari componenti online.
-        </li>
-        <br />
-        <li>
-          Entity Tags e archiviazione HTML5: sono funzionalità che consentono di
-          memorizzare porzioni di siti web e di memorizzarli nella cache
-          all’interno del browser, accelerando le prestazioni del sito web.
-        </li>
+        <ul>
+          <li>
+            Cookie – I cookie sono piccoli file di dati che vengono inviati dal
+            server di un sito web e sono memorizzati sul disco rigido del
+            dispositivo dell’utente solo per la durata della visita (“cookie di
+            sessione”) o per un periodo determinato (“cookie permanenti”). I
+            cookie contengono informazioni che possono essere successivamente
+            lette da un server web.
+          </li>
+          <li>
+            Java Script: i Java Script sono snippet di codice incorporati in varie
+            parti di un sito web allo scopo di facilitare varie operazioni, tra
+            cui la velocità di aggiornamento di determinate funzionalità o il
+            monitoraggio dell’utilizzo di vari componenti online.
+          </li>
+          <li>
+            Entity Tags e archiviazione HTML5: sono funzionalità che consentono di
+            memorizzare porzioni di siti web e di memorizzarli nella cache
+            all’interno del browser, accelerando le prestazioni del sito web.
+          </li>
+        </ul>
 
-        <br />
-        <br />
-
-        <center>
-          <h2>Perché vengono utilizzate queste tecnologie</h2>
-        </center>
+        <h2>Perché vengono utilizzate queste tecnologie</h2>
 
         <p>
           Alcune di queste tecnologie ci aiutano ad analizzare il traffico web e
@@ -404,13 +420,8 @@ export default function Page({ data }) {
           accelerando i tempi di caricamento e aggiornamento delle pagine.
         </p>
 
-        <br />
-        <br />
-
-        <Paragraph imageUrl='https://images.everyeye.it/img-notizie/cosa-succede-quando-accettano-cookie-cosa-serve-consenso-v3-529275-1280x720.webp'>
-          <center>
-            <h2>Quali cookie sono utilizzati sul nostro sito</h2>
-          </center>
+        <div>
+          <h2>Quali cookie sono utilizzati sul nostro sito</h2>
           <p>
             Su nostro sito sono presenti solamente cookie di tipo tecnico, che
             pertanto non prevedono il consenso da parte dell’utente. Questi
@@ -419,23 +430,28 @@ export default function Page({ data }) {
             <br />
             <br />I cookie che utilizziamo sono:
           </p>
-          <li>Cookie tecnici per il funzionamento del sito web;</li>
-          <li>
-            Cookie di Google analytics che raccolgono dati di navigazione
-            aggregati e in forma anonima, rientrano nella classificazione di
-            cookie tecnici;
-          </li>
-          <li>
-            Cookie tecnico necessario per il funzionamento del banner
-            informativo dei cookie.
-          </li>
+          <ul>
+            <li>Cookie tecnici per il funzionamento del sito web;</li>
+            <li>
+              Cookie di Google analytics che raccolgono dati di navigazione
+              aggregati e in forma anonima, rientrano nella classificazione di
+              cookie tecnici;
+            </li>
+            <li>
+              Cookie tecnico necessario per il funzionamento del banner
+              informativo dei cookie.
+            </li>
+          </ul>
           <br />I dati raccolti dai cookie tecnici vengono conservati dal nostro
           sistema per una durata di 6 mesi, così come previsto dalle linee guida
           del Garante Privacy.
-        </Paragraph>
+        </div>
       </Paragraph>
 
-      <News title='Informative' data={data} />
+      <Section id='informative' width='lg'>
+        <SectionTitle icon='ph:files'>Informative</SectionTitle>
+        <DocumentList data={data} limit={6} />
+      </Section>
     </Layout>
   )
 }

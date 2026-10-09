@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import {
+  QuickNav,
   Layout,
   LandingHero,
   Products,
@@ -16,11 +17,20 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <LandingHero
+        eyebrow='Qualifica e diploma'
         title='Settore Automotive'
         description='Diagnosi elettronica, autoriparazione meccanica e carrozzeria: il percorso che ti prepara ai veicoli di ultima generazione.'
         imageUrl='/images/settori/Automotive2.png'
       />
+      <QuickNav
+        links={[
+          { href: '#qualifiche', label: 'Qualifiche' },
+          { href: '#laboratori', label: 'I laboratori anno per anno' },
+          { href: '#news', label: 'News' },
+        ]}
+      />
       <Paragraph
+        id='qualifiche'
         title="Operatore Alla autoriparazione"
         subtitle="Qualifica triennale"
         rightImageUrl="/images/codici_progetti.png"
@@ -73,13 +83,10 @@ strumentazione specifica di settore e producendo documentazione tecnica di
 avanzamento e valutazione relativa alle lavorazioni svolte ed interazione con il cliente.
           </li>
         </ol>
-        <br>
-        </br>
-        <br>
-        </br>
-        <h1>Il percorso di formazione nel settore automotive prevede lo sviluppo di conoscenze crescenti negli anni nei quattro ambiti che compongono il veicolo: Elettrico, elettronico, meccanico e carrozzeria</h1>
+        <h3>Il percorso di formazione nel settore automotive prevede lo sviluppo di conoscenze crescenti negli anni nei quattro ambiti che compongono il veicolo: Elettrico, elettronico, meccanico e carrozzeria</h3>
       </Paragraph>
       <Products
+              id='laboratori'
               title="Primo anno"
               description=""
               cardWidth={4}
@@ -107,7 +114,9 @@ avanzamento e valutazione relativa alle lavorazioni svolte ed interazione con il
               cardWidthXs={6}
               products={quarto_anno}
             />
-            <NewsWall title="News dal Settore Automotive" data={data} limit={7} defaultTag="automotive" />
+            <div id='news' className='scroll-mt-28'>
+              <NewsWall title="News dal Settore Automotive" data={data} limit={7} defaultTag="automotive" />
+            </div>
     </Layout>
   )
 }

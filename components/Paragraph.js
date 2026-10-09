@@ -1,72 +1,57 @@
+import { Eyebrow } from './ui'
+
+// Una sezione di testo disteso dentro una scheda bianca: titolo blu, eventuale
+// sottotitolo (corto → etichetta ocra, lungo → riga serif) e corpo in serif.
+// Le vecchie prop di sfondo (backgroundColor, blur, color, opacity) non si
+// usano più: tutte le sezioni hanno la stessa scheda.
 export default function Paragraph(props) {
-  const titleColor = props.color && props.color !== '#444' ? props.color : '#1976D2'
+  const shortSubtitle = typeof props.subtitle === 'string' && props.subtitle.length <= 34
 
   return (
-    <div
-      className="relative my-8 rounded-2xl text-justify px-4 md:px-8 lg:px-12 py-4 md:py-8 lg:py-12"
-      style={{
-        maxWidth: props.maxWidth === 'lg' ? '1200px' : undefined,
-        margin: props.maxWidth === 'lg' ? '2rem auto' : undefined,
-        backgroundColor: props.backgroundColor || undefined,
-        backgroundImage: props.backgroundImageUrl ? `url(${props.backgroundImageUrl})` : undefined,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }}
+    <section
+      id={props.id}
+      className={`${props.maxWidth === 'lg' ? 'max-w-[1100px]' : ''} mx-auto px-4 md:px-8 my-10 md:my-14 scroll-mt-28`}
     >
-      {props.backgroundColor && (
-        <div className="absolute inset-0 rounded-2xl" style={{ backgroundColor: props.backgroundColor, opacity: props.opacity }} />
-      )}
-      {props.blur && (
-        <div className="absolute inset-0 rounded-2xl" style={{ backdropFilter: `blur(${props.blur})` }} />
-      )}
-      <div className="relative" style={{ color: props.color }}>
+      <div className="rounded-2xl bg-surface border border-line shadow-sm p-6 md:p-10">
         {props.topImageUrl && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={props.topImageUrl} alt="" className="w-full mb-12" />
+          <img src={props.topImageUrl} alt="" className="w-full mb-10 rounded-xl" />
         )}
+        {shortSubtitle && <Eyebrow className="mb-3">{props.subtitle}</Eyebrow>}
         {props.title && (
-          <h2 className="text-3xl font-bold mb-4 text-center sm:text-left" style={{ color: titleColor }}>
-            {props.title}
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tight text-brand leading-tight m-0">{props.title}</h2>
         )}
-        {props.subtitle && (
-          <h3 className="text-2xl font-semibold mb-4 text-center sm:text-left" style={{ color: titleColor }}>
-            {props.subtitle}
-          </h3>
+        {props.subtitle && !shortSubtitle && (
+          <p className="mt-3 font-serif text-xl leading-relaxed text-muted max-w-[62ch]">{props.subtitle}</p>
         )}
         <div
-          className="mt-8"
+          className={`prose-site ${props.title || props.subtitle ? 'mt-6' : ''}`}
           style={{
             columnCount: props.columnCount > 1 ? props.columnCount : undefined,
             columnGap: props.columnCount > 1 ? '3rem' : undefined,
           }}
         >
-          <div>
-            {props.avatarImageUrl && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={props.avatarImageUrl} alt="" className="float-left -mt-4 mr-4 w-32 rounded-full" />
-            )}
-            {props.leftImageUrl && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={props.leftImageUrl} alt="" className="float-left mr-4 mb-4 w-80 rounded" />
-            )}
-            {props.rightImageUrl && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={props.rightImageUrl} alt="" className="float-right ml-4 mb-4 w-80 rounded" />
-            )}
-            {props.children}
-          </div>
+          {props.avatarImageUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={props.avatarImageUrl} alt="" className="float-left mr-5 mb-2 w-32 rounded-full!" />
+          )}
+          {props.leftImageUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={props.leftImageUrl} alt="" className="md:float-left md:mr-6 mb-4 w-full md:w-80" />
+          )}
+          {props.rightImageUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={props.rightImageUrl} alt="" className="md:float-right md:ml-6 mb-4 w-full md:w-80" />
+          )}
+          {props.children}
+          <div className="clear-both" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
 Paragraph.defaultProps = {
   columnCount: 1,
   maxWidth: 'lg',
-  backgroundColor: false,
-  color: '#444',
-  opacity: 1,
 }

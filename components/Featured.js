@@ -12,12 +12,12 @@ export default function Featured({ data, limit, maxWidth, height, animation, int
     descrizione: post.abstract,
     immagine: post.immagine,
     immagine_mobile: post.immagine_mobile,
-    colore: '#000',
+    colore: 'rgba(11, 31, 58, 0.88)',
     colore2: 'transparent',
     opacity: 1,
     tag: post.tag,
     buttonText:
-      (post.articolo && 'Continua a leggere...') ||
+      (post.articolo && 'Continua a leggere') ||
       (post.link && 'Scopri di più') ||
       (post.allegato && "Scarica l'allegato"),
     buttonUrl:

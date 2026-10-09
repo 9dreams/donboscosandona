@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Icon } from '@iconify/react'
-import { Layout, LandingHero } from '/components'
+import { Layout, LandingHero, QuickNav, SectionTitle, Intro, Eyebrow, Button } from '/components'
 
 const CORSO_URL = 'https://itsdigitalacademy.com/corsi/web-developer-full-stack/'
 const OPENDAY_URL =
@@ -128,6 +128,7 @@ export default function ItsPage() {
       </Head>
 
       <LandingHero
+        eyebrow="ITS Academy · biennio 2026–2028"
         title="Web Developer Full Stack"
         description="Corso biennale ITS Academy — Tecnico Superiore Sviluppatore Software. A San Donà di Piave, nella nostra sede, con ITS Digital Academy Mario Volpato."
         imageUrl="/images/its/hero.jpg"
@@ -138,37 +139,21 @@ export default function ItsPage() {
         buttonText="Open Day 2 ottobre"
       />
 
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8 -mt-8 relative z-10">
-        <div className="flex flex-wrap gap-3 justify-center bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 p-4">
-          {ancore.map((a) => (
-            <a
-              key={a.href}
-              href={a.href}
-              className="text-sm font-semibold px-4 py-2 rounded-full border border-[#1976D2]/30 dark:border-[#64B5F6]/30 text-[#1976D2] dark:text-[#64B5F6] hover:bg-[#1976D2] hover:text-white dark:hover:bg-[#64B5F6] dark:hover:text-[#0d0f14] transition-colors"
-            >
-              {a.label}
-            </a>
-          ))}
-        </div>
-      </div>
+      <QuickNav links={ancore} />
 
-      <div id="corso" className="max-w-[880px] mx-auto px-4 md:px-8 mt-16 mb-12 text-center scroll-mt-28">
-        <p className="text-xs uppercase tracking-[0.25em] text-[#1976D2] dark:text-[#64B5F6] font-semibold mb-4">
-          ITS Digital Academy Mario Volpato
-        </p>
-        <h1 className="title-display text-4xl md:text-5xl mb-6">
-          Tecnico Superiore Sviluppatore Software
-        </h1>
-        <p className="text-lg leading-8 text-gray-600 dark:text-gray-300">
-          Il Web Developer Full Stack progetta, struttura e gestisce siti interattivi, database e
-          software per il web. Unisce i trend tecnologici più recenti a User Experience e alla
-          capacità di lavorare su front-end, back-end, cloud e DevOps.
-        </p>
-        <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          Il biennio si svolge anche <strong>a San Donà di Piave, presso la SFP Don Bosco</strong>{' '}
-          (Via XIII Martiri, 86). Ambito: Architetture software e data management. Le selezioni per
-          il biennio <strong>2026–2028</strong> sono aperte.
-        </p>
+      <div id="corso" className="scroll-mt-28">
+        <Intro eyebrow="ITS Digital Academy Mario Volpato" title="Tecnico Superiore Sviluppatore Software">
+          <p>
+            Il Web Developer Full Stack progetta, struttura e gestisce siti interattivi, database e
+            software per il web. Unisce i trend tecnologici più recenti a User Experience e alla
+            capacità di lavorare su front-end, back-end, cloud e DevOps.
+          </p>
+          <p>
+            Il biennio si svolge anche <strong>a San Donà di Piave, presso la SFP Don Bosco</strong>{' '}
+            (Via XIII Martiri, 86). Ambito: Architetture software e data management. Le selezioni per
+            il biennio <strong>2026–2028</strong> sono aperte.
+          </p>
+        </Intro>
       </div>
 
       <section className="max-w-[1100px] mx-auto px-4 md:px-8 mb-16">
@@ -176,38 +161,38 @@ export default function ItsPage() {
           {numeri.map((item) => (
             <div
               key={item.label}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6 text-center"
+              className="rounded-2xl bg-surface border border-line shadow-sm p-6 text-center"
             >
-              <Icon icon={item.icon} className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mx-auto mb-3" />
-              <p className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">{item.value}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wide">{item.label}</p>
+              <Icon icon={item.icon} className="text-3xl text-brand mx-auto mb-3" />
+              <p className="text-3xl font-bold text-brand m-0">{item.value}</p>
+              <p className="text-sm text-muted mt-1 uppercase tracking-wide">{item.label}</p>
             </div>
           ))}
         </div>
         <div className="mt-6 grid md:grid-cols-3 gap-4">
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#181b23] p-5 flex gap-3">
-            <Icon icon="ph:calendar-blank" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+          <div className="rounded-2xl border border-line bg-surface p-5 flex gap-3">
+            <Icon icon="ph:calendar-blank" className="text-2xl text-brand shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold m-0">Durata</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 m-0">
+              <p className="text-sm text-muted mt-1 m-0">
                 <strong>Due anni</strong>, 1800 ore, di cui 720 di tirocinio in azienda.
               </p>
             </div>
           </div>
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#181b23] p-5 flex gap-3">
-            <Icon icon="ph:users-three" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+          <div className="rounded-2xl border border-line bg-surface p-5 flex gap-3">
+            <Icon icon="ph:users-three" className="text-2xl text-brand shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold m-0">Classe</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 m-0">
+              <p className="text-sm text-muted mt-1 m-0">
                 Fino a <strong>25 studenti</strong>.
               </p>
             </div>
           </div>
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#181b23] p-5 flex gap-3">
-            <Icon icon="ph:currency-eur" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+          <div className="rounded-2xl border border-line bg-surface p-5 flex gap-3">
+            <Icon icon="ph:currency-eur" className="text-2xl text-brand shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold m-0">Contributo</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 m-0">
+              <p className="text-sm text-muted mt-1 m-0">
                 <strong>900 euro</strong> all’anno.
               </p>
             </div>
@@ -220,43 +205,34 @@ export default function ItsPage() {
           {perche.map((item) => (
             <div
               key={item.titolo}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6"
+              className="rounded-2xl bg-surface border border-line shadow-sm p-6"
             >
-              <Icon icon={item.icon} className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+              <Icon icon={item.icon} className="text-3xl text-brand mb-3" />
               <h3 className="text-xl font-bold mb-2">{item.titolo}</h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-7 m-0">{item.testo}</p>
+              <p className="text-muted leading-7 m-0">{item.testo}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section id="openday" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="rounded-2xl bg-[#1976D2] text-white p-8 md:p-10">
-          <p className="text-xs uppercase tracking-[0.25em] text-white/70 m-0 mb-3">Open Day gratuito</p>
+        <div className="rounded-2xl bg-ink text-white p-8 md:p-10">
+          <Eyebrow className="mb-4">Open Day gratuito</Eyebrow>
           <h2 className="text-3xl font-bold text-white m-0 mb-4">2 ottobre 2026 · 15:00–17:00</h2>
-          <p className="text-lg leading-8 text-white/90 mb-6">
+          <p className="font-serif text-xl leading-relaxed text-white/90 mb-6">
             Due ore per conoscere il percorso Web Developer Full Stack: programma, tirocinio,
             testimonianze di studenti e alumni, domande su selezioni, costi e borse di studio.
             Sede: <strong>Via XIII Martiri, 86 — San Donà di Piave</strong>. Posti limitati.
           </p>
-          <a
-            href={OPENDAY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-[#1976D2] font-semibold px-8 py-4 text-sm uppercase tracking-[0.15em] hover:bg-white/90 transition-colors no-underline"
-          >
+          <Button href={OPENDAY_URL} variant="accent">
             Prenota il tuo posto
-            <Icon icon="ph:arrow-right" className="text-lg" />
-          </a>
+          </Button>
         </div>
       </section>
 
       <section id="programma" className="max-w-[1100px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:path" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Il programma</h2>
-        </div>
-        <p className="text-lg leading-8 mb-10 max-w-[880px]">
+        <SectionTitle icon="ph:path">Il programma</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-10 max-w-[880px]">
           Front-end, back-end, cloud, database e i fondamenti dell’intelligenza artificiale applicata
           allo sviluppo: quanto serve per realizzare soluzioni web scalabili, con una parte importante
           del biennio in azienda.
@@ -265,22 +241,19 @@ export default function ItsPage() {
           {programma.map((blocco) => (
             <div
               key={blocco.titolo}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6"
+              className="rounded-2xl bg-surface border border-line shadow-sm p-6"
             >
-              <Icon icon={blocco.icon} className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+              <Icon icon={blocco.icon} className="text-3xl text-brand mb-3" />
               <h3 className="text-lg font-bold mb-2">{blocco.titolo}</h3>
-              <p className="text-sm leading-6 text-gray-600 dark:text-gray-300 m-0">{blocco.testo}</p>
+              <p className="text-sm leading-6 text-muted m-0">{blocco.testo}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section id="sbocchi" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:briefcase" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Cosa puoi diventare</h2>
-        </div>
-        <p className="text-lg leading-8 mb-10">
+        <SectionTitle icon="ph:briefcase">Cosa puoi diventare</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-10">
           Figure tra le più richieste dalle aziende tech del territorio e dai team di sviluppo di ogni
           settore.
         </p>
@@ -288,12 +261,12 @@ export default function ItsPage() {
           {sbocchi.map((s) => (
             <div
               key={s.n}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-5 md:p-6 md:grid md:grid-cols-[4rem_1fr] md:gap-6 md:items-start"
+              className="rounded-2xl bg-surface border border-line p-5 md:p-6 md:grid md:grid-cols-[4rem_1fr] md:gap-6 md:items-start"
             >
-              <p className="text-xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0 mb-2 md:mb-0">{s.n}</p>
+              <p className="text-xl font-bold text-brand m-0 mb-2 md:mb-0">{s.n}</p>
               <div>
                 <h3 className="text-lg font-bold m-0 mb-1">{s.titolo}</h3>
-                <p className="text-sm leading-6 text-gray-600 dark:text-gray-300 m-0">{s.testo}</p>
+                <p className="text-sm leading-6 text-muted m-0">{s.testo}</p>
               </div>
             </div>
           ))}
@@ -301,26 +274,23 @@ export default function ItsPage() {
       </section>
 
       <section id="destinatari" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:student" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Chi può iscriversi</h2>
-        </div>
+        <SectionTitle icon="ph:student">Chi può iscriversi</SectionTitle>
         <ul className="grid md:grid-cols-2 gap-4 list-none m-0 p-0 mb-8">
           {destinatari.map((d) => (
             <li
               key={d}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-5 flex gap-3"
+              className="rounded-2xl bg-surface border border-line p-5 flex gap-3"
             >
-              <Icon icon="ph:check" className="text-xl text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+              <Icon icon="ph:check" className="text-xl text-brand shrink-0 mt-0.5" />
               <span>{d}</span>
             </li>
           ))}
         </ul>
-        <div className="rounded-2xl border-l-4 border-[#1976D2] dark:border-[#64B5F6] bg-white dark:bg-[#181b23] p-6">
+        <div className="rounded-2xl border-l-4 border-brand bg-surface p-6">
           <p className="m-0 leading-7">
             Il diploma IFTS della SFP Don Bosco è uno dei titoli che danno accesso all’ITS. Se stai
             valutando il post-diploma, il nostro{' '}
-            <a href="/ifts" className="font-semibold text-[#1976D2] dark:text-[#64B5F6]">
+            <a href="/ifts" className="font-semibold">
               corso IFTS Full Stack
             </a>{' '}
             è il passaggio naturale verso questo biennio.
@@ -329,11 +299,8 @@ export default function ItsPage() {
       </section>
 
       <section id="iscriviti" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-16 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:paper-plane-tilt" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Come iscriversi</h2>
-        </div>
-        <p className="text-lg leading-8 mb-8">
+        <SectionTitle icon="ph:paper-plane-tilt">Come iscriversi</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-8">
           Le selezioni e le prenotazioni all’Open Day si gestiscono sui siti ufficiali di ITS Digital
           Academy. Qui sotto i due riferimenti.
         </p>
@@ -342,15 +309,15 @@ export default function ItsPage() {
             href={CORSO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-6 no-underline text-[var(--fg)] hover:border-[#1976D2]/40 dark:hover:border-[#64B5F6]/40 transition-colors"
+            className="rounded-2xl bg-surface border border-line shadow-sm p-6 no-underline! text-fg! hover:border-brand/40 hover:shadow-md transition"
           >
-            <Icon icon="ph:graduation-cap" className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+            <Icon icon="ph:graduation-cap" className="text-3xl text-brand mb-3" />
             <h3 className="text-xl font-bold mb-2">Pagina del corso</h3>
-            <p className="text-sm leading-6 text-gray-600 dark:text-gray-300 mb-4">
+            <p className="text-sm leading-6 text-muted mb-4">
               Programma, selezioni 2026–2028, piano formativo e iscrizione sul sito di ITS Digital
               Academy.
             </p>
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#1976D2] dark:text-[#64B5F6]">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand">
               itsdigitalacademy.com
               <Icon icon="ph:arrow-up-right" />
             </span>
@@ -359,14 +326,14 @@ export default function ItsPage() {
             href={OPENDAY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-6 no-underline text-[var(--fg)] hover:border-[#1976D2]/40 dark:hover:border-[#64B5F6]/40 transition-colors"
+            className="rounded-2xl bg-surface border border-line shadow-sm p-6 no-underline! text-fg! hover:border-brand/40 hover:shadow-md transition"
           >
-            <Icon icon="ph:calendar-check" className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+            <Icon icon="ph:calendar-check" className="text-3xl text-brand mb-3" />
             <h3 className="text-xl font-bold mb-2">Open Day San Donà</h3>
-            <p className="text-sm leading-6 text-gray-600 dark:text-gray-300 mb-4">
+            <p className="text-sm leading-6 text-muted mb-4">
               Prenota il posto per il 2 ottobre 2026, dalle 15:00 alle 17:00, in Via XIII Martiri 86.
             </p>
-            <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#1976D2] dark:text-[#64B5F6]">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand">
               landing.itsdigitalacademy.com
               <Icon icon="ph:arrow-up-right" />
             </span>
@@ -375,15 +342,12 @@ export default function ItsPage() {
       </section>
 
       <section className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20">
-        <div className="flex items-center gap-3 mb-6">
-          <Icon icon="ph:map-pin" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Sede e contatti</h2>
-        </div>
+        <SectionTitle icon="ph:map-pin">Sede e contatti</SectionTitle>
         <div className="grid md:grid-cols-3 gap-5">
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-6">
-            <Icon icon="ph:buildings" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+          <div className="rounded-2xl bg-surface border border-line p-6">
+            <Icon icon="ph:buildings" className="text-2xl text-brand mb-3" />
             <p className="font-semibold m-0 mb-2">San Donà di Piave</p>
-            <p className="text-sm leading-6 text-gray-600 dark:text-gray-300 m-0">
+            <p className="text-sm leading-6 text-muted m-0">
               ITS Digital Academy
               <br />
               c/o SFP Don Bosco
@@ -391,17 +355,17 @@ export default function ItsPage() {
               Via XIII Martiri, 86
             </p>
           </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-6">
-            <Icon icon="ph:envelope" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+          <div className="rounded-2xl bg-surface border border-line p-6">
+            <Icon icon="ph:envelope" className="text-2xl text-brand mb-3" />
             <p className="font-semibold m-0 mb-2">ITS Digital Academy</p>
-            <a href={MAIL_HREF} className="text-sm break-all text-[#1976D2] dark:text-[#64B5F6]">
+            <a href={MAIL_HREF} className="text-sm break-all text-brand">
               {MAIL}
             </a>
           </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-6">
-            <Icon icon="ph:info" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+          <div className="rounded-2xl bg-surface border border-line p-6">
+            <Icon icon="ph:info" className="text-2xl text-brand mb-3" />
             <p className="font-semibold m-0 mb-2">Altra sede</p>
-            <p className="text-sm leading-6 text-gray-600 dark:text-gray-300 m-0">
+            <p className="text-sm leading-6 text-muted m-0">
               Vicenza, c/o ITE Ambrogio Fusinieri
               <br />
               Via D’Annunzio, 15

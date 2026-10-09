@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import {
+  QuickNav,
   Layout,
   LandingHero,
   Products,
@@ -16,12 +17,21 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <LandingHero
+        eyebrow='Qualifica e diploma'
         title='Settore Meccanico'
         description='Tornitura CNC, CAD-CAM, saldatura e stampa 3D: diventa il tecnico che progetta e produce il futuro.'
         imageUrl='/images/settori/Meccanico2.png'
       />
+      <QuickNav
+        links={[
+          { href: '#qualifiche', label: 'Qualifiche' },
+          { href: '#laboratori', label: 'I laboratori anno per anno' },
+          { href: '#news', label: 'News' },
+        ]}
+      />
 
       <Paragraph
+        id='qualifiche'
         title="Operatore Meccanico"
         subtitle="Qualifica triennale"
         rightImageUrl="/images/codici_progetti.png"
@@ -80,6 +90,7 @@ export default function Home({ data }) {
         </ol>
       </Paragraph>
       <Products
+        id='laboratori'
         title="Primo anno"
         description=""
         cardWidth={4}
@@ -107,7 +118,9 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={quarto_anno}
       />
-      <NewsWall title="News dal Settore Meccanico" data={data} limit={7} defaultTag="meccanico" />
+      <div id='news' className='scroll-mt-28'>
+        <NewsWall title="News dal Settore Meccanico" data={data} limit={7} defaultTag="meccanico" />
+      </div>
     </Layout>
   );
 }

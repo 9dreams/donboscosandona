@@ -1,8 +1,8 @@
 export default function TheLogo({ url }) {
   return (
-    <div className="px-4 lg:px-8 py-4 lg:py-8">
+    <div className="max-w-[1200px] mx-auto px-4 md:px-8 my-10">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={url} alt="" className="w-full" />
+      <img src={url} alt="" className="w-full rounded-2xl" />
     </div>
   )
 }

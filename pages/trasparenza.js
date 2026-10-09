@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero.js'
-import Paragraph from '/components/Paragraph'
-import News from '/components/News'
+import DocumentList from '/components/DocumentList'
+import { Section, SectionTitle, Card, Button, ContactLine } from '/components/ui'
 import { conDocumentiLocali } from '/data/documenti'
 
 export default function Home({ data }) {
@@ -10,28 +10,34 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <LandingHero
-        opacity={0.4}
+        eyebrow='Amministrazione'
         title='Trasparenza amministrativa'
         imageUrl='/images/trasparenza/transparency-2.webp'
       />
-      <Paragraph backgroundColor='#b4cfd6'>
-        <b>
-          Fondazione Salesiani per la Formazione Professionale
-          <br />
-          Italia Nord Est - Impresa Sociale - SFP Don Bosco
-        </b>
-        <br />
-        Via XIII Martiri 86 - 30027 San Donà di Piave
-        <br />
-        C.F. 80015710306 P.IVA 01845730306
-      </Paragraph>
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
-        <a href="/whistleblowing" className="inline-block px-6 py-2 bg-[#1976D2] text-white rounded-full font-bold hover:bg-[#1565C0] transition-colors">
-          Whistleblowing - Segnalazione illeciti
-        </a>
-      </div>
-      
-      <News title={null} data={data} limit={30} />
+
+      <Section width='md' className='mt-16'>
+        <Card className='p-6 md:p-8'>
+          <div className='flex flex-col md:flex-row md:items-center gap-6 md:justify-between'>
+            <div className='space-y-2'>
+              <p className='font-bold text-lg text-fg m-0 leading-snug'>
+                Fondazione Salesiani per la Formazione Professionale
+                <br />
+                Italia Nord Est - Impresa Sociale - SFP Don Bosco
+              </p>
+              <ContactLine icon='ph:map-pin'>Via XIII Martiri 86 - 30027 San Donà di Piave</ContactLine>
+              <ContactLine icon='ph:identification-card'>C.F. 80015710306 P.IVA 01845730306</ContactLine>
+            </div>
+            <Button href='/whistleblowing' icon='ph:arrow-right' className='shrink-0'>
+              Whistleblowing - Segnalazione illeciti
+            </Button>
+          </div>
+        </Card>
+      </Section>
+
+      <Section id='documenti' width='md'>
+        <SectionTitle icon='ph:files'>Documenti</SectionTitle>
+        <DocumentList data={data} limit={30} />
+      </Section>
     </Layout>
   )
 }

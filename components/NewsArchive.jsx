@@ -8,16 +8,8 @@ import NewsArchiveHero from './NewsArchiveHero'
 
 const ITEMS_PER_PAGE = 12
 
-const cardTitleStyle = {
-  fontFamily: '"Inter Tight", sans-serif',
-  fontWeight: 600,
-}
-
-const bodyStyle = { fontFamily: '"Plus Jakarta Sans", "Exo 2", sans-serif' }
-
-// Tag color cycling: blue, orange, slate
-const TAG_COLORS = ['#1976D2', '#FF9800', '#565c6a']
-const getTagColor = (i) => TAG_COLORS[i % TAG_COLORS.length]
+// Il primo tag è l'etichetta ocra, il secondo una pillola blu notte.
+const TAG_CLASSES = ['bg-ochre text-ink', 'bg-ink/85 text-white']
 
 const getPostHref = (post) =>
   (post.articolo && `/articoli/${post.id}`) || post.link || post.allegato || null
@@ -40,7 +32,7 @@ function NewsCard({ post, hiddenTagList = [] }) {
     : []
 
   const inner = (
-    <article className="group bg-white dark:bg-[#181b23] border border-[#c1c6d4] dark:border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0px_4px_20px_rgba(0,0,0,0.08)] dark:hover:shadow-[0px_4px_20px_rgba(0,0,0,0.35)] hover:border-[#1976D2] dark:hover:border-[#64B5F6] flex flex-col h-full">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-sm transition-shadow duration-300 hover:shadow-md">
       {/* Image */}
       <div className="relative h-56 overflow-hidden flex-shrink-0">
         <Image
@@ -55,8 +47,7 @@ function NewsCard({ post, hiddenTagList = [] }) {
             {tags.slice(0, 2).map((tag, i) => (
               <span
                 key={tag}
-                className="text-white text-xs font-semibold px-3 py-1 rounded-full uppercase"
-                style={{ backgroundColor: getTagColor(i), ...bodyStyle }}
+                className={`rounded-md px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest ${TAG_CLASSES[i % TAG_CLASSES.length]}`}
               >
                 {tag}
               </span>
@@ -69,39 +60,31 @@ function NewsCard({ post, hiddenTagList = [] }) {
       <div className="p-6 flex flex-col flex-grow">
         {/* Date */}
         <div className="flex items-center gap-2 mb-3">
-          <Icon icon="ph:calendar-blank" className="text-base text-[#717783]" />
-          <span className="text-sm text-[#717783] dark:text-gray-400" style={bodyStyle}>
+          <Icon icon="ph:calendar-blank" className="text-base text-brand" />
+          <span className="text-xs font-bold uppercase tracking-wider text-muted">
             {post.pubblicazione}
           </span>
         </div>
 
         {/* Title */}
         {post.titolo && (
-          <h3
-            className="text-[#1976D2] dark:text-[#64B5F6] text-xl font-normal leading-tight mb-3 group-hover:text-[#FF9800] transition-colors"
-            style={cardTitleStyle}
-          >
+          <h3 className="mb-3 text-xl font-bold leading-snug tracking-tight text-fg transition-colors group-hover:text-brand">
             {post.titolo}
           </h3>
         )}
 
         {/* Abstract */}
         {post.abstract && (
-          <p className="text-sm text-[#414752] dark:text-gray-300 line-clamp-3 flex-grow" style={bodyStyle}>
+          <p className="flex-grow font-serif text-[17px] leading-relaxed text-muted line-clamp-3">
             {post.abstract}
           </p>
         )}
 
         {/* CTA */}
         {label && (
-          <div className="mt-6 pt-4 border-t border-[#c1c6d4] dark:border-white/10 flex justify-between items-center">
-            <span
-              className="text-sm font-bold text-[#1976D2] dark:text-[#64B5F6] uppercase"
-              style={bodyStyle}
-            >
-              {label}
-            </span>
-            <Icon icon="ph:arrow-right" className="text-[#1976D2]" />
+          <div className="mt-6 flex items-center justify-between border-t border-line pt-4">
+            <span className="text-sm font-bold text-brand">{label}</span>
+            <Icon icon="ph:arrow-right" className="text-brand transition-transform group-hover:translate-x-1" />
           </div>
         )}
       </div>
@@ -110,7 +93,7 @@ function NewsCard({ post, hiddenTagList = [] }) {
 
   if (!href) return <div className="h-full">{inner}</div>
   return (
-    <Link href={href} className="block h-full">
+    <Link href={href} className="block h-full no-underline!">
       {inner}
     </Link>
   )
@@ -119,30 +102,31 @@ function NewsCard({ post, hiddenTagList = [] }) {
 function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
   if (totalPages <= 1) return null
   return (
-    <nav className="flex justify-center items-center gap-2">
+    <nav aria-label="Pagine" className="flex flex-wrap justify-center items-center gap-2">
       <button
+        aria-label="Pagina precedente"
         onClick={() => onPage(page - 1)}
         disabled={page === 1}
-        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface text-fg transition-colors hover:border-brand hover:text-brand disabled:cursor-not-allowed disabled:opacity-40"
       >
         <Icon icon="ph:caret-left" />
       </button>
 
       {pageNumbers.map((p, i) =>
         p === '...' ? (
-          <span key={`dots-${i}`} className="px-2 text-[#717783] dark:text-gray-400">
+          <span key={`dots-${i}`} className="px-2 text-muted">
             ...
           </span>
         ) : (
           <button
             key={p}
             onClick={() => onPage(p)}
-            className={`w-12 h-12 flex items-center justify-center rounded-lg text-sm font-semibold transition-colors ${
+            aria-current={page === p ? 'page' : undefined}
+            className={`flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold transition-colors ${
               page === p
-                ? 'bg-[#1976D2] dark:bg-[#64B5F6] text-white border-none'
-                : 'bg-transparent border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23]'
+                ? 'bg-brand text-white dark:text-[#0d0f14]'
+                : 'border border-line bg-surface text-fg hover:border-brand hover:text-brand'
             }`}
-            style={bodyStyle}
           >
             {p}
           </button>
@@ -150,9 +134,10 @@ function PaginationBar({ page, totalPages, pageNumbers, onPage }) {
       )}
 
       <button
+        aria-label="Pagina successiva"
         onClick={() => onPage(page + 1)}
         disabled={page === totalPages}
-        className="w-12 h-12 flex items-center justify-center rounded-lg border border-[#c1c6d4] dark:border-white/10 text-[#191c1e] dark:text-gray-200 hover:bg-[#eceef0] dark:hover:bg-[#181b23] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface text-fg transition-colors hover:border-brand hover:text-brand disabled:cursor-not-allowed disabled:opacity-40"
       >
         <Icon icon="ph:caret-right" />
       </button>
@@ -238,7 +223,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
   }, [page, totalPages])
 
   return (
-    <div className="min-h-screen bg-[#f7f9fb] transition-colors duration-300 dark:bg-[#0d0f14]">
+    <div className="min-h-screen bg-page transition-colors duration-300">
       <NewsArchiveHero
         data={data}
         allTags={allTags}
@@ -247,10 +232,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
         filteredCount={filtered.length}
       />
 
-      <main
-        className="max-w-[1280px] mx-auto px-5 md:px-12 pb-12 md:pb-20 pt-2"
-        style={bodyStyle}
-      >
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 pb-16 md:pb-24 pt-2">
         {/* Pagination — top */}
         <div className="mb-10">
           <PaginationBar
@@ -262,7 +244,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
         </div>
 
         {/* Grid */}
-        <div ref={gridRef}>
+        <div ref={gridRef} className="scroll-mt-28">
           {paged.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {paged.map((post) => (
@@ -270,7 +252,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
               ))}
             </div>
           ) : (
-            <p className="text-center text-[#717783] dark:text-gray-400 py-20 text-lg" style={bodyStyle}>
+            <p className="rounded-2xl border border-line bg-surface px-6 py-16 text-center font-serif text-lg text-muted shadow-sm">
               Nessun articolo trovato per questo filtro.
             </p>
           )}
@@ -285,7 +267,7 @@ export default function NewsArchive({ data, hiddenTags = '' }) {
             onPage={handlePage}
           />
         </div>
-      </main>
+      </div>
     </div>
   )
 }

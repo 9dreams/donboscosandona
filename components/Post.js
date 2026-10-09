@@ -1,23 +1,27 @@
 import Date from '/components/Date'
 
+// Scheda di un articolo markdown locale (cartella /articoli).
 export default function Post({ post }) {
   return (
     <div className="w-full md:w-1/2 px-2 mb-4">
-      <a href={'/articoli/' + post.id} className="block text-[var(--fg)] no-underline hover:opacity-[0.98]">
-        <div className="flex bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-          <div className="flex-1 p-4 text-[var(--fg)]">
-            <h2 className="text-xl font-semibold mb-1 text-[var(--fg)]">{post.title}</h2>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-              <Date dateString={post.date} />
-            </p>
-            <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">{post.abstract}</p>
-            <span className="text-sm text-[#1976D2] dark:text-[#64B5F6] font-medium">Continua a leggere...</span>
+      <a
+        href={'/articoli/' + post.id}
+        className="group flex h-full overflow-hidden rounded-2xl border border-line bg-surface shadow-sm text-fg! no-underline! transition-shadow hover:shadow-md"
+      >
+        <div className="flex-1 p-5">
+          <div className="mb-2 text-xs font-bold uppercase tracking-wider text-muted">
+            <Date dateString={post.date} />
           </div>
-          {post.imageUrl && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={post.imageUrl} alt={post.title} className="hidden sm:block w-48 object-cover" />
-          )}
+          <h2 className="mb-2 text-xl font-bold leading-snug tracking-tight text-fg group-hover:text-brand transition-colors">
+            {post.title}
+          </h2>
+          <p className="mb-3 font-serif text-[17px] leading-relaxed text-muted">{post.abstract}</p>
+          <span className="text-sm font-bold text-brand">Continua a leggere →</span>
         </div>
+        {post.imageUrl && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={post.imageUrl} alt="" className="hidden sm:block w-48 object-cover" />
+        )}
       </a>
     </div>
   )

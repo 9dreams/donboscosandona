@@ -97,7 +97,7 @@ npm run lint     # ESLint
 ├── lib/
 │   └── articoli.js           # getDatiArticoli (locale), getIdArticoli (CMS), getArticolo
 ├── styles/
-│   └── globals.css           # Tailwind v4 entry point + CSS vars + animazioni Torneo
+│   └── globals.css           # Tailwind v4 entry point + token colori/font + .prose-site + animazioni Torneo
 ├── articoli/                 # File .md con frontmatter (title, date, abstract, imageUrl)
 └── public/
     ├── images/               # Immagini per sezione (settori, home, pizza, ecc.)
@@ -151,7 +151,7 @@ Esporta: `siteName`, `siteTitle`, `siteDescription`, `siteBaseUrl`, `gaMeasureme
 
 ### `styles/globals.css`
 ```css
-@import url('https://fonts.googleapis.com/...');  /* Inter Tight, Cormorant Garamond, Plus Jakarta Sans, Kaushan Script */
+@import url('https://fonts.googleapis.com/...');  /* Archivo, Newsreader, Kaushan Script */
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));   /* dark mode class-based */
 
@@ -166,23 +166,31 @@ module.exports = { plugins: { '@tailwindcss/postcss': {} } }
 ```
 Nessun `tailwind.config.js` — in v4 la configurazione è dentro il CSS.
 
-### Colori brand (CSS variables)
-| Token | Light | Dark |
-|-------|-------|------|
-| `--brand-blue` | `#1976D2` | `#64B5F6` |
-| `--bg` | `#f7f9fb` | `#0d0f14` |
-| `--fg` | `#353B48` | `#e8eaf0` |
-| `--fg-secondary` | `#717783` | `#9da3af` |
-| `--surface` | `#ffffff` | `#181b23` |
-| accento arancio | `#FF9800` | `#FF9800` |
+### Linguaggio grafico
+Tutte le pagine seguono lo stile della pagina `/ipad` e degli eventi di servizi.donboscosandona.it: foto a tutto schermo in testata (`LandingHero`, prop `eyebrow` per l'etichetta ocra), poi schede bianche bordate `rounded-2xl`, titoli di sezione blu con icona Phosphor, passi numerati in cerchi blu, riquadri di avviso con filetto, pulsanti pieni arrotondati, fasce scure blu notte.
+
+I mattoni stanno in **`components/ui.js`** (esportati anche dal barrel): `Section`, `SectionTitle`, `Intro`, `Lead`, `Eyebrow`, `Card`, `FeatureCard`, `Steps`, `IconList`, `Callout` (`warning`/`info`/`danger`/`brand`), `Button` (`primary`/`accent`/`outline`/`light`), `QuickNav`, `HelpBox`, `ContactLine`. Elenchi di PDF: `components/DocumentList.js`. Testo disteso (Paragraph, articoli): classe `.prose-site`.
+
+### Colori (CSS variables → classi Tailwind via `@theme inline`)
+| Token | Classe | Light | Dark |
+|-------|--------|-------|------|
+| `--brand-blue` | `text-brand`, `bg-brand` | `#1976D2` | `#64B5F6` |
+| `--ochre` | `bg-ochre`, `text-ochre` | `#d9a21b` | `#d9a21b` |
+| `--ink` (blu notte) | `bg-ink`, `text-ink` | `#0b1f3a` | `#0b1f3a` |
+| `--bg` | `bg-page` | `#f6f7f9` | `#0d0f14` |
+| `--fg` | `text-fg` | `#1f2937` | `#e8eaf0` |
+| `--fg-secondary` | `text-muted` | `#4a5a6e` | `#9da3af` |
+| `--surface` | `bg-surface` | `#ffffff` | `#181b23` |
+| `--line` | `border-line` | `#e2e7ee` | `white/10` |
+
+Niente hex sparsi né arancio `#FF9800`: si usano le classi token.
 
 ### Dark mode
 `next-themes` aggiunge `.dark` a `<html>`. Il prefisso `dark:` funziona grazie a `@custom-variant dark (&:where(.dark, .dark *))`. Non servono ThemeProvider MUI o CssBaseline.
 
 ### Font
-- UI body: `Inter Tight` → `var(--font-ui)` — su h1–h6, p, a, button, ecc.
-- Display hero: `Cormorant Garamond` → `var(--font-display)` — classe `.title-display` e `.slh-serif`
-- Alternativo: `Plus Jakarta Sans` — usato in NewsArchive e NewsWall
+- UI e titoli: `Archivo` → `var(--font-ui)` / `font-sans`; titoli grandi con `.wordmark` o `.title-display` (bold, spaziatura stretta)
+- Testo disteso e sottotitoli: `Newsreader` → `var(--font-display)` / `font-serif`
 - Torneo: `Kaushan Script` — solo nel componente Torneo
 
 ---

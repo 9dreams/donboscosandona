@@ -107,14 +107,13 @@ export default function SyntheticLightHero({
           <div className="max-w-3xl">
             {/* Badge */}
             {visibleTags.length > 0 && (
-              <div className="slh-glass inline-flex items-center gap-3 rounded-full px-5 py-3 text-[11px] uppercase tracking-[0.3em] text-white/70 mb-8">
-                <div className="h-2 w-2 rounded-full bg-cyan-300" />
+              <span className="inline-block rounded-md bg-ochre px-2.5 py-1 text-[13px] font-bold uppercase tracking-widest text-ink">
                 {visibleTags.join(' · ')}
-              </div>
+              </span>
             )}
 
             {/* Title */}
-            <h1 className="slh-serif mt-2 text-[clamp(3rem,7vw,6.5rem)] leading-[.88] text-white">
+            <h1 className="slh-title mt-4 text-[clamp(2.75rem,7vw,6rem)] text-white">
               {(post.titolo || '')
                 .split(/\s+/)
                 .filter(Boolean)
@@ -128,7 +127,7 @@ export default function SyntheticLightHero({
 
             {/* Abstract */}
             {post.abstract && (
-              <p className="slh-glass slh-copy mt-8 max-w-2xl rounded-[2rem] border border-white/10 p-6 text-base md:text-lg leading-8 md:leading-9 text-white/70">
+              <p className="slh-glass mt-8 max-w-2xl rounded-2xl border border-white/10 p-6 font-serif text-lg md:text-xl leading-relaxed text-white/90">
                 {post.abstract}
               </p>
             )}
@@ -138,14 +137,14 @@ export default function SyntheticLightHero({
               {ctaHref && ctaLabel && (
                 <Link
                   href={ctaHref}
-                  className="slh-glass rounded-full px-8 py-4 text-[11px] uppercase tracking-[0.25em] text-white hover:bg-white/10 transition-colors duration-300"
+                  className="inline-flex items-center gap-2 rounded-full bg-ochre px-7 py-3.5 font-bold text-ink! no-underline! hover:bg-ochre-strong transition-colors duration-300"
                 >
-                  {ctaLabel}
+                  {ctaLabel} <span aria-hidden="true">→</span>
                 </Link>
               )}
               <Link
                 href="/news"
-                className="rounded-full border border-white/15 px-8 py-4 text-[11px] uppercase tracking-[0.25em] text-white/70 hover:text-white hover:border-white/30 transition-colors duration-300"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-3.5 font-bold text-white! no-underline! hover:bg-white/10 transition-colors duration-300"
               >
                 Tutte le notizie
               </Link>
@@ -157,7 +156,7 @@ export default function SyntheticLightHero({
         {post.pubblicazione && (
           <div className="slh-floating-label absolute right-[8%] top-[30%] hidden md:block">
             <div className="flex items-center gap-2">
-              <Icon icon="ph:calendar-blank" className="text-cyan-300 text-base" />
+              <Icon icon="ph:calendar-blank" className="text-ochre text-base" />
               <span>{post.pubblicazione}</span>
             </div>
           </div>
@@ -188,19 +187,13 @@ export default function SyntheticLightHero({
 
       {/* Scoped styles (no CSS Modules needed) */}
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
-
         .slh-root {
-          background: #06060a;
+          background: #0b1f3a;
           color: white;
-          font-family: 'Inter Tight', sans-serif;
         }
 
         .slh-bg-gradient {
-          background:
-            radial-gradient(circle at 20% 10%, rgba(255,56,182,.14), transparent 22%),
-            radial-gradient(circle at 78% 20%, rgba(97,218,251,.11), transparent 24%),
-            linear-gradient(180deg, #09090d 0%, #06060a 100%);
+          background: linear-gradient(180deg, #0b1f3a 0%, #071426 100%);
         }
 
         .slh-grain {
@@ -209,20 +202,8 @@ export default function SyntheticLightHero({
         }
 
         .slh-hero-mask {
-          mask-image: radial-gradient(
-            circle at center,
-            black 30%,
-            rgba(0,0,0,.92) 50%,
-            rgba(0,0,0,.68) 70%,
-            transparent 100%
-          );
-          -webkit-mask-image: radial-gradient(
-            circle at center,
-            black 30%,
-            rgba(0,0,0,.92) 50%,
-            rgba(0,0,0,.68) 70%,
-            transparent 100%
-          );
+          mask-image: radial-gradient(circle at center, black 35%, rgba(0,0,0,.92) 55%, rgba(0,0,0,.7) 75%, transparent 100%);
+          -webkit-mask-image: radial-gradient(circle at center, black 35%, rgba(0,0,0,.92) 55%, rgba(0,0,0,.7) 75%, transparent 100%);
         }
 
         .slh-hero-img {
@@ -230,34 +211,28 @@ export default function SyntheticLightHero({
           transform: scale(1.05);
         }
 
+        /* Velatura blu notte, come in LandingHero: più scura dove sta il testo. */
         .slh-hero-color-overlay {
           background:
-            radial-gradient(circle at 30% 30%, rgba(255,56,182,.2), transparent 22%),
-            radial-gradient(circle at 70% 45%, rgba(97,218,251,.16), transparent 24%),
-            linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.6));
+            linear-gradient(90deg, rgba(11,31,58,.72) 0%, rgba(11,31,58,.35) 45%, rgba(11,31,58,0) 75%),
+            linear-gradient(180deg, rgba(11,31,58,.15), rgba(11,31,58,.7));
         }
 
         .slh-glass {
-          background: rgba(255,255,255,.04);
-          border: 1px solid rgba(255,255,255,.08);
-          backdrop-filter: blur(30px) saturate(1.4);
-          -webkit-backdrop-filter: blur(30px) saturate(1.4);
-          box-shadow:
-            0 10px 60px rgba(0,0,0,.45),
-            inset 0 1px 0 rgba(255,255,255,.08);
+          background: rgba(11,31,58,.35);
+          border: 1px solid rgba(255,255,255,.12);
+          backdrop-filter: blur(24px) saturate(1.3);
+          -webkit-backdrop-filter: blur(24px) saturate(1.3);
+          box-shadow: 0 10px 50px rgba(0,0,0,.35);
         }
 
-        .slh-root h1.slh-serif,
-        .slh-root .slh-serif .slh-wind {
-          font-family: 'Cormorant Garamond', serif !important;
-          letter-spacing: -0.04em;
-          text-shadow: none;
-          -webkit-text-fill-color: initial;
-          -webkit-text-stroke: 0;
-        }
-
-        .slh-copy {
-          font-family: 'Inter Tight', sans-serif;
+        .slh-root h1.slh-title,
+        .slh-root .slh-title .slh-wind {
+          font-family: var(--font-ui) !important;
+          font-weight: 700;
+          letter-spacing: -0.045em;
+          line-height: 0.95;
+          color: #fff;
         }
 
         .slh-wind {
@@ -270,20 +245,21 @@ export default function SyntheticLightHero({
         .slh-wind:nth-child(3n) { animation-delay: -4.5s; }
 
         .slh-floating-label {
-          padding: 12px 18px;
+          padding: 10px 16px;
           border-radius: 999px;
-          font-size: 11px;
-          letter-spacing: .2em;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: .14em;
           text-transform: uppercase;
-          color: rgba(255,255,255,.75);
-          background: rgba(255,255,255,.04);
-          backdrop-filter: blur(30px);
-          border: 1px solid rgba(255,255,255,.08);
+          color: rgba(255,255,255,.85);
+          background: rgba(11,31,58,.45);
+          backdrop-filter: blur(24px);
+          border: 1px solid rgba(255,255,255,.12);
         }
 
         @keyframes slhWind {
-          0%, 100% { transform: rotate(-0.8deg); }
-          50% { transform: rotate(0.8deg); }
+          0%, 100% { transform: rotate(-0.6deg); }
+          50% { transform: rotate(0.6deg); }
         }
 
         @media (max-width: 768px) {

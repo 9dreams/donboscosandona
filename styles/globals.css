@@ -1,26 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Kaushan+Script&display=swap');
 
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ─── Brand variables ─── */
+/*
+ * I colori della casa, gli stessi della pagina iPad e degli eventi di
+ * servizi.donboscosandona.it: il blu del sito, l'ocra per etichette e
+ * richiami, il blu notte per le fasce scure. In dark mode cambiano le
+ * variabili, le classi restano le stesse (text-brand, bg-surface, …).
+ */
 :root {
   --brand-blue: #1976D2;
-  --font-ui: 'Inter Tight', sans-serif;
-  --font-display: 'Cormorant Garamond', serif;
-  --bg: #f7f9fb;
-  --fg: #353B48;
-  --fg-secondary: #717783;
+  --brand-blue-strong: #1565C0;
+  --ochre: #d9a21b;
+  --ochre-strong: #c8920f;
+  --ink: #0b1f3a;
+  --font-ui: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Newsreader', ui-serif, Georgia, serif;
+  --bg: #f6f7f9;
+  --fg: #1f2937;
+  --fg-secondary: #4a5a6e;
   --surface: #ffffff;
+  --line: #e2e7ee;
 }
 
 html.dark {
   --brand-blue: #64B5F6;
+  --brand-blue-strong: #90CAF9;
   --bg: #0d0f14;
   --fg: #e8eaf0;
   --fg-secondary: #9da3af;
   --surface: #181b23;
+  --line: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --font-sans: var(--font-ui);
+  --font-serif: var(--font-display);
+  --color-brand: var(--brand-blue);
+  --color-brand-strong: var(--brand-blue-strong);
+  --color-ochre: var(--ochre);
+  --color-ochre-strong: var(--ochre-strong);
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-page: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--fg-secondary);
+  --color-line: var(--line);
 }
 
 /* ─── Base ─── */
@@ -34,17 +61,13 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-ui) !important;
-}
-
-h5, h6, p, a, th, td, li, span, button, input, textarea, select, label {
-  font-family: var(--font-ui) !important;
-}
-
 /* Colori di default in @layer base: così le utility Tailwind (text-white, ecc.)
    possono sovrascriverli — le regole fuori layer vincerebbero sempre. */
 @layer base {
+  button, input, textarea, select {
+    font-family: inherit;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     color: var(--brand-blue);
   }
@@ -55,25 +78,59 @@ h5, h6, p, a, th, td, li, span, button, input, textarea, select, label {
   }
 
   a:hover {
-    color: #FF9800;
+    color: var(--brand-blue-strong);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ochre);
+    outline-offset: 3px;
   }
 }
 
-/* ─── Display titles ─── */
-.title-display,
-.slh-root h1.slh-serif,
-.slh-root .slh-serif .slh-wind {
-  font-family: var(--font-display) !important;
-  letter-spacing: -0.04em;
+/* ─── Titoli ─── */
+/* Il marchio: lettere strette e serrate, come l'insegna sopra una porta. */
+.wordmark,
+.title-display {
+  font-family: var(--font-ui) !important;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
 }
 
 .title-display { color: var(--brand-blue); }
+.title-display.text-white { color: #fff !important; }
 
-.slh-root h1.slh-serif,
-.slh-root .slh-serif .slh-wind,
-.title-display.text-white {
-  color: #fff !important;
+/* Il testo disteso dei contenuti (Paragraph, articoli): serif, comodo da leggere. */
+.prose-site {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--fg);
+  overflow-wrap: anywhere;
 }
+.prose-site p, .prose-site ul, .prose-site ol, .prose-site table { margin-bottom: 1rem; }
+.prose-site h2, .prose-site h3, .prose-site h4 {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 1.75rem 0 0.75rem;
+  line-height: 1.25;
+}
+.prose-site h2 { font-size: 1.5rem; }
+.prose-site h3 { font-size: 1.2rem; }
+.prose-site h4 { font-size: 1.05rem; }
+.prose-site ul { list-style: disc; padding-inline-start: 1.4rem; }
+.prose-site ol { list-style: decimal; padding-inline-start: 1.4rem; }
+.prose-site li { margin-bottom: 0.4rem; }
+.prose-site li::marker { color: var(--brand-blue); font-family: var(--font-ui); font-weight: 600; }
+.prose-site a { text-decoration: underline; text-underline-offset: 2px; }
+.prose-site strong, .prose-site b { font-weight: 600; color: inherit; }
+.prose-site img { border-radius: 1rem; max-width: 100%; height: auto; }
+.prose-site table { width: 100%; border-collapse: collapse; font-family: var(--font-ui); font-size: 0.95rem; }
+.prose-site th, .prose-site td { border-bottom: 1px solid var(--line); padding: 0.6rem 0.75rem; text-align: left; }
+.prose-site blockquote { border-left: 4px solid var(--ochre); padding-left: 1rem; font-style: italic; }
 
 /* ─── Torneo component animations ─── */
 @keyframes torneo-fallRotate {

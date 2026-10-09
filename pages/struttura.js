@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
 import Paragraph from '/components/Paragraph'
+import { Section, SectionTitle, FeatureCard } from '/components/ui'
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <Head />
 
       <LandingHero
-        opacity={0.5}
+        eyebrow='La nostra casa'
         title="L'ambiente del C.F.P. Don Bosco"
         description="Spazi moderni, laboratori all'avanguardia e un oratorio ricco di storia: il luogo ideale per crescere."
         buttonUrl='https://www.donboscosandona.it/virtual-tour/index.htm'
@@ -17,13 +18,20 @@ export default function Home() {
         imageUrl='/images/struttura/donbosco_struttura.jpg'
       />
 
-      <Paragraph title='Cosa offre ai giovani'>
-        <ul>
-          <li><b>Aule didattiche multimediali</b> fornite di computer e videoproiettore;</li>
-          <li><b>Laboratori di settore</b> completi e dinamici che simulano le diverse realtà di impresa;</li>
-          <li><b>Aule di informatica</b> con computer e software costantemente aggiornati.</li>
-        </ul>
-      </Paragraph>
+      <Section width='lg' className='mt-16'>
+        <SectionTitle icon='ph:buildings'>Cosa offre ai giovani</SectionTitle>
+        <div className='grid sm:grid-cols-3 gap-5'>
+          <FeatureCard icon='ph:projector-screen' title='Aule didattiche multimediali'>
+            fornite di computer e videoproiettore;
+          </FeatureCard>
+          <FeatureCard icon='ph:wrench' title='Laboratori di settore'>
+            completi e dinamici che simulano le diverse realtà di impresa;
+          </FeatureCard>
+          <FeatureCard icon='ph:desktop-tower' title='Aule di informatica'>
+            con computer e software costantemente aggiornati.
+          </FeatureCard>
+        </div>
+      </Section>
 
       <Paragraph
         title='Il nostro ambiente'

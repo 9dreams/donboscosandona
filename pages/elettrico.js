@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import {
+  QuickNav,
   Layout,
   LandingHero,
   Products,
@@ -16,11 +17,21 @@ export default function Home({ data }) {
     <Layout>
       <Head />
       <LandingHero
+        eyebrow='Qualifica e diploma'
         title='Settore Elettrico'
         description='Impianti civili e industriali, domotica, PLC e building automation KNX: il percorso per diventare tecnico elettrico del futuro.'
         imageUrl='/images/settori/Elettrico2.png'
       />
+      <QuickNav
+        links={[
+          { href: '#qualifiche', label: 'Qualifiche' },
+          { href: '#laboratori', label: 'I laboratori anno per anno' },
+          { href: '#news', label: 'News' },
+          { href: '#piano-formativo', label: 'Piano formativo' },
+        ]}
+      />
       <Paragraph
+        id='qualifiche'
         title='Operatore Elettrico'
         subtitle='Qualifica triennale'
         rightImageUrl='/images/codici_progetti.png'
@@ -93,6 +104,7 @@ export default function Home({ data }) {
         </ol>
       </Paragraph>
       <Products
+        id='laboratori'
         title='Primo anno'
         description='Il primo anno ti introduce al mondo dell’impiantistica civile. Imparerai a gestire e utilizzare i principali strumenti di lavoro, ad effettuare le operazioni basilari per l’installazione elettrica e a costruire i primi semplici impianti elettrici. Darai da subito un’occhiata agli impianti civili smart, da poter controllare con i dispositivi mobili quali smartphone e/o tablet.'
         cardWidth={4}
@@ -120,34 +132,30 @@ export default function Home({ data }) {
         cardWidthXs={6}
         products={quarto_anno}
       />
-      <NewsWall title='News dal Settore Elettrico' data={data} limit={7} defaultTag="elettrico" />
+      <div id='news' className='scroll-mt-28'>
+        <NewsWall title='News dal Settore Elettrico' data={data} limit={7} defaultTag="elettrico" />
+      </div>
       <Sponsor logos={sponsor} />
 
-      <Paragraph>
-        <Table
-          title='Piano formativo'
-          rows={[
-            ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno'],
-            ['Italiano', 3, 3, 2, 3],
-            ['Storia / Economia / Diritto', 1, 1, 1, 1],
-            ['Inglese', 2, 2, 2, 2],
-            ['Religione', 1, 1, 1, 1],
-            ['Matematica', 3, 3, 3, 2],
-            ['Fisica', 2, 2, 2, 2],
-            ['CAD', 2, 2, 2, 2],
-            ['Informatica', 2, '', '', ''],
-            ['Elettrotecnica', 3, 3, 3, ''],
-            ['Laboratorio Elettrico', 10, 12, 12, 3],
-            ['', '', '', '', ''],
-            ['ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO', '', 200, 200, 500],
-          ]}
-          backgroundImageUrl='/images/informatico/sfondo-piano-formativo.jpg'
-          backgroundColor='#003185'
-          opacity={0.8}
-          blur='0.1rem'
-          color='white'
-        />
-      </Paragraph>
+      <Table
+        id='piano-formativo'
+        title='Piano formativo'
+        rows={[
+          ['', '1° Anno', '2° Anno', '3° Anno', '4° Anno'],
+          ['Italiano', 3, 3, 2, 3],
+          ['Storia / Economia / Diritto', 1, 1, 1, 1],
+          ['Inglese', 2, 2, 2, 2],
+          ['Religione', 1, 1, 1, 1],
+          ['Matematica', 3, 3, 3, 2],
+          ['Fisica', 2, 2, 2, 2],
+          ['CAD', 2, 2, 2, 2],
+          ['Informatica', 2, '', '', ''],
+          ['Elettrotecnica', 3, 3, 3, ''],
+          ['Laboratorio Elettrico', 10, 12, 12, 3],
+          ['', '', '', '', ''],
+          ['ORE ANNUALI STAGE / APPRENDISTATO FORMATIVO', '', 200, 200, 500],
+        ]}
+      />
     </Layout>
   )
 }

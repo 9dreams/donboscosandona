@@ -43,13 +43,34 @@ export default function Layout({ children }) {
           managePreferencesButtonText='Gestisci le preferenze'
           savePreferencesButtonText='Salva e chiudi'
           styles={{
+            dialog: {
+              position: 'fixed',
+              left: 0,
+              right: 0,
+              bottom: 0,
+              zIndex: 100000,
+              backgroundColor: '#0b1f3a',
+              color: '#fff',
+              padding: '1rem 1.25rem',
+              boxShadow: '0 -8px 40px rgba(11,31,58,.35)',
+              fontFamily: 'var(--font-ui)',
+            },
+            // Le chiavi sostituiscono per intero quelle della libreria: si
+            // ripetono i valori predefiniti che servono all'impaginazione.
+            message: { minHeight: '32px', fontSize: '14px', lineHeight: 1.5, padding: '10px 0', color: 'rgba(255,255,255,.85)', fontFamily: 'var(--font-ui)' },
+            policy: { fontSize: '14px', marginLeft: '10px', color: '#d9a21b', fontWeight: 600, textDecoration: 'underline' },
+            optionLabel: { height: 'auto', width: 'auto', minHeight: '14px', fontSize: '14px', color: '#fff', display: 'inline-block', padding: '1px 0 0 20px', position: 'relative', top: 0, left: 0, zIndex: 1, cursor: 'default', verticalAlign: 'top', fontFamily: 'var(--font-ui)' },
             button: {
-              backgroundColor: '#2980b9',
+              backgroundColor: '#1976D2',
               border: 'none',
               margin: '5px',
-              padding: '0.5rem',
+              padding: '0.6rem 1.25rem',
               color: 'white',
-              borderRadius: '2rem',
+              borderRadius: '9999px',
+              fontWeight: 700,
+              fontSize: '14px',
+              fontFamily: 'var(--font-ui)',
+              cursor: 'pointer',
             },
           }}
         />

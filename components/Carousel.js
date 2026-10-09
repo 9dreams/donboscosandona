@@ -19,7 +19,7 @@ function readMore(string, maxWords) {
 
 export default function MyCarousel({ slides, height, animation, interval, duration, defaultTag }) {
   return (
-    <div className="relative mb-8 w-full">
+    <div className="relative mb-8 w-full" style={{ '--swiper-theme-color': 'var(--ochre)', '--swiper-pagination-bullet-inactive-color': '#fff' }}>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation
@@ -77,19 +77,19 @@ export default function MyCarousel({ slides, height, animation, interval, durati
                     {slide.tag && slide.tag !== defaultTag && (
                       <div className="flex gap-2 mb-4 flex-wrap">
                         {slide.tag.split(',').map((tag) => (
-                          <span key={tag} className="px-3 py-1 bg-[#1976D2] text-white text-xs font-bold rounded-full uppercase">
+                          <span key={tag} className="rounded-md bg-ochre px-2.5 py-1 text-[12px] font-bold uppercase tracking-widest text-ink">
                             {tag}
                           </span>
                         ))}
                       </div>
                     )}
                     {/* Title */}
-                    <h2 className="title-display text-white mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: 1.1, letterSpacing: '-0.04em' }}>
+                    <h2 className="wordmark text-white mb-4 text-[clamp(2.25rem,5vw,4rem)]">
                       {slide.titolo}
                     </h2>
                     {/* Description */}
                     {slide.descrizione && (
-                      <p className="text-white/80 text-base mb-4">
+                      <p className="font-serif text-white/85 text-lg md:text-xl leading-relaxed mb-4">
                         {readMore(slide.descrizione, 50)}
                       </p>
                     )}
@@ -97,9 +97,9 @@ export default function MyCarousel({ slides, height, animation, interval, durati
                     {slide.buttonUrl && (
                       <a
                         href={slide.buttonUrl}
-                        className="mt-4 inline-block px-6 py-3 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-colors"
+                        className="mt-4 inline-flex items-center gap-2 px-7 py-3.5 bg-ochre text-ink! no-underline! rounded-full font-bold hover:bg-ochre-strong transition-colors"
                       >
-                        {slide.buttonText}
+                        {slide.buttonText} <span aria-hidden="true">→</span>
                       </a>
                     )}
                   </div>

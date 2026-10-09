@@ -1,22 +1,28 @@
 import Head from 'next/head'
 import Layout from '/components/Layout'
 import LandingHero from '/components/LandingHero'
-import { NewsWall } from '/components'
+import { NewsWall, QuickNav } from '/components'
 import Paragraph from '/components/Paragraph'
+
+const ancore = [
+  { href: '#orientamento', label: 'Orientamento' },
+  { href: '#servizi-lavoro', label: 'Servizi al lavoro' },
+  { href: '#incontro', label: 'Domanda e offerta' },
+  { href: '#offerte', label: 'Offerte di lavoro' },
+]
 
 export default function Page({ data }) {
   return (
     <Layout>
       <Head />
       <LandingHero
-        opacity={0.2}
-        siteName='CFP DON BOSCO'
+        eyebrow='Orientamento e lavoro'
         title='Servizi al lavoro'
         description="Il nostro sportello è aperto tutti i giorni dalle 10.30 alle 11.30"
-        buttonText='Guarda il video'
         imageUrl='/images/news/2023/sal.JPG'
       />
-      <Paragraph title='Servizi di orientamento'>
+      <QuickNav links={ancore} />
+      <Paragraph id='orientamento' title='Servizi di orientamento'>
         Il Centro è accreditato come sportello orientativo. Presso il Centro si
         svolgono attività di: 1- Orientamento previo visite guidate al Centro su
         richiesta; 2- Orientamento nei percorsi di Formazione Professionale
@@ -50,7 +56,7 @@ export default function Page({ data }) {
         contesto lavorativo.
       </Paragraph>
 
-      <Paragraph title='Servizi al Lavoro'>
+      <Paragraph id='servizi-lavoro' title='Servizi al Lavoro'>
         Il Centro collabora attivamente con la Federazione CNOS/FAP Veneto che è
         Ente accreditato per lo svolgimento dei servizi al lavoro presso la
         Regione Veneto. Questo servizio ha l’obiettivo di orientare,
@@ -75,12 +81,14 @@ export default function Page({ data }) {
         riqualificazione e dell’inserimento lavorativo.
       </Paragraph>
 
-      <Paragraph title='Incontro domanda e offerta di lavoro'>
+      <Paragraph id='incontro' title='Incontro domanda e offerta di lavoro'>
         Il CNOS-FAP si avvale di PerformanSe, strumento informatizzato per l’orientamento e la
         valorizzazione delle competenze professionali, finalizzato alla crescita
         professionale nel contesto lavorativo.
       </Paragraph>
-      <NewsWall title='Offerte di lavoro' data={data} limit={7} />
+      <div id='offerte' className='scroll-mt-28'>
+        <NewsWall title='Offerte di lavoro' eyebrow='Lavoro' data={data} limit={7} />
+      </div>
     </Layout>
   )
 }

@@ -6,8 +6,8 @@ import { useTheme } from 'next-themes'
 
 function NavLink({ item, active, onNavigate }) {
   const isExternal = /^https?:\/\//i.test(item.url)
-  const className = `nb-link text-[11px] uppercase tracking-[0.2em] transition-colors duration-300 ${
-    active ? 'text-cyan-300' : 'text-white/75 hover:text-white'
+  const className = `nb-link text-[12px] font-semibold uppercase tracking-[0.08em] whitespace-nowrap no-underline! transition-colors duration-300 ${
+    active ? 'nb-link--active text-ochre!' : 'text-white/80! hover:text-white!'
   }`
 
   if (isExternal) {
@@ -84,7 +84,7 @@ export default function NavBar({
             )}
           </Link>
 
-          <ul className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <ul className="hidden lg:flex items-center gap-0 xl:gap-1">
             {menu.map((item) => (
               <li key={item.title}>
                 <NavLink item={item} active={isActive(item.url)} />
@@ -117,13 +117,13 @@ export default function NavBar({
 
       <div
         aria-hidden={!mobileOpen}
-        className={`fixed inset-0 z-[90] bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed inset-0 z-[90] bg-[#0b1f3a]/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         onClick={closeMobile}
       />
 
       <aside
         className={`fixed top-0 right-0 z-[95] flex h-full w-[min(100vw,320px)] flex-col border-l border-white/10 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] lg:hidden ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
-        style={{ backgroundColor: drawerBgcolor || 'rgba(9, 9, 13, 0.97)', color: drawerTextColor || '#fff' }}
+        style={{ backgroundColor: drawerBgcolor || '#0b1f3a', color: drawerTextColor || '#fff' }}
         aria-hidden={!mobileOpen}
       >
         <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
@@ -149,33 +149,43 @@ export default function NavBar({
 
       <style jsx global>{`
         .nb-root {
-          font-family: 'Inter Tight', sans-serif;
-          background: rgba(6, 6, 10, 0.35);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+          background: rgba(11, 31, 58, 0.35);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
           backdrop-filter: blur(24px) saturate(1.3);
           -webkit-backdrop-filter: blur(24px) saturate(1.3);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 30px rgba(11, 31, 58, 0.15);
         }
         .nb-root--scrolled {
-          background: rgba(6, 6, 10, 0.82);
+          background: rgba(11, 31, 58, 0.9);
           border-bottom-color: rgba(255, 255, 255, 0.1);
-          box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 8px 40px rgba(11, 31, 58, 0.35);
         }
         .nb-glass {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(255, 255, 255, 0.06);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
         }
         .nb-link {
+          position: relative;
           display: block;
           padding: 0.65rem 0.85rem;
-          font-family: 'Inter Tight', sans-serif !important;
         }
-        @media (min-width: 1024px) { .nb-link { padding: 0.5rem 0.75rem; } }
-        aside .nb-link { padding: 0.9rem 1rem; border-radius: 0.75rem; font-size: 0.8rem; }
+        @media (min-width: 1024px) {
+          .nb-link { padding: 0.5rem 0.55rem; }
+          .nb-root .nb-link--active::after {
+            content: '';
+            position: absolute;
+            left: 0.55rem;
+            right: 0.55rem;
+            bottom: 0.2rem;
+            height: 2px;
+            border-radius: 2px;
+            background: var(--ochre);
+          }
+        }
+        aside .nb-link { padding: 0.9rem 1rem; border-radius: 0.75rem; font-size: 0.85rem; }
         aside .nb-link:hover { background: rgba(255, 255, 255, 0.06); }
-        aside .text-cyan-300 { background: rgba(97, 218, 251, 0.08); }
-        .nb-site-name { font-family: 'Inter Tight', sans-serif !important; }
+        aside .nb-link--active { background: rgba(217, 162, 27, 0.12); }
       `}</style>
     </>
   )
@@ -186,7 +196,7 @@ NavBar.defaultProps = {
   menu: [],
   logoUrl: '',
   bgcolor: 'transparent',
-  drawerBgcolor: '#09090d',
+  drawerBgcolor: '#0b1f3a',
   drawerTextColor: '#fff',
   color: '#fff',
   elevation: 0,

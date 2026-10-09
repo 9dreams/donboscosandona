@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Icon } from '@iconify/react'
-import { Layout, LandingHero } from '/components'
+import { Layout, LandingHero, QuickNav, SectionTitle, Intro, Eyebrow, Callout, Button } from '/components'
 
 const MAIL = 'f.cicogna@donboscosandona.it'
 const MAIL_HREF =
@@ -237,6 +237,7 @@ export default function IftsPage() {
       </Head>
 
       <LandingHero
+        eyebrow="Corso IFTS 2026/2027"
         title="Full Stack Developer"
         description="Corso IFTS 2026/2027 — Coding & Vibe Coding. Impara a progettare e sviluppare applicazioni web, comprendendone a fondo il funzionamento e con l’aiuto dell’intelligenza artificiale."
         imageUrl="/images/ifts/hero-desktop.jpg"
@@ -247,37 +248,21 @@ export default function IftsPage() {
         buttonText="Candidati al corso"
       />
 
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8 -mt-8 relative z-10">
-        <div className="flex flex-wrap gap-3 justify-center bg-white dark:bg-[#181b23] rounded-2xl shadow-sm border border-gray-200 dark:border-white/10 p-4">
-          {ancore.map((a) => (
-            <a
-              key={a.href}
-              href={a.href}
-              className="text-sm font-semibold px-4 py-2 rounded-full border border-[#1976D2]/30 dark:border-[#64B5F6]/30 text-[#1976D2] dark:text-[#64B5F6] hover:bg-[#1976D2] hover:text-white dark:hover:bg-[#64B5F6] dark:hover:text-[#0d0f14] transition-colors"
-            >
-              {a.label}
-            </a>
-          ))}
-        </div>
-      </div>
+      <QuickNav links={ancore} />
 
-      <div id="corso" className="max-w-[880px] mx-auto px-4 md:px-8 mt-16 mb-12 text-center scroll-mt-28">
-        <p className="text-xs uppercase tracking-[0.25em] text-[#1976D2] dark:text-[#64B5F6] font-semibold mb-4">
-          Istruzione e Formazione Tecnica Superiore
-        </p>
-        <h1 className="title-display text-4xl md:text-5xl mb-6">
-          Tecniche per la progettazione e lo sviluppo di applicazioni informatiche
-        </h1>
-        <p className="text-lg leading-8 text-gray-600 dark:text-gray-300">
-          Percorso post-diploma della <strong>SFP Don Bosco di San Donà di Piave</strong>, edizione{' '}
-          <strong>2026/2027</strong>. Forma sviluppatori full stack in grado di coprire l’intero ciclo
-          di un’applicazione web: dati, server, interfaccia e pubblicazione.
-        </p>
-        <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          Il corso è <strong>gratuito</strong>, si attiva con almeno 15 allievi e si conclude con un
-          esame per il <strong>Certificato di Specializzazione Tecnica Superiore</strong> (livello{' '}
-          <strong>EQF IV</strong>), valido anche per l’accesso agli ITS Academy.
-        </p>
+      <div id="corso" className="scroll-mt-28">
+        <Intro eyebrow="Istruzione e Formazione Tecnica Superiore" title="Tecniche per la progettazione e lo sviluppo di applicazioni informatiche">
+          <p>
+            Percorso post-diploma della <strong>SFP Don Bosco di San Donà di Piave</strong>, edizione{' '}
+            <strong>2026/2027</strong>. Forma sviluppatori full stack in grado di coprire l’intero ciclo
+            di un’applicazione web: dati, server, interfaccia e pubblicazione.
+          </p>
+          <p>
+            Il corso è <strong>gratuito</strong>, si attiva con almeno 15 allievi e si conclude con un
+            esame per il <strong>Certificato di Specializzazione Tecnica Superiore</strong> (livello{' '}
+            <strong>EQF IV</strong>), valido anche per l’accesso agli ITS Academy.
+          </p>
+        </Intro>
       </div>
 
       <section className="max-w-[1100px] mx-auto px-4 md:px-8 mb-16">
@@ -285,39 +270,39 @@ export default function IftsPage() {
           {numeri.map((item) => (
             <div
               key={item.label}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6 text-center"
+              className="rounded-2xl bg-surface border border-line shadow-sm p-6 text-center"
             >
-              <Icon icon={item.icon} className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mx-auto mb-3" />
-              <p className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">{item.value}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wide">{item.label}</p>
+              <Icon icon={item.icon} className="text-3xl text-brand mx-auto mb-3" />
+              <p className="text-3xl font-bold text-brand m-0">{item.value}</p>
+              <p className="text-sm text-muted mt-1 uppercase tracking-wide">{item.label}</p>
             </div>
           ))}
         </div>
         <div className="mt-6 grid md:grid-cols-3 gap-4">
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#181b23] p-5 flex gap-3">
-            <Icon icon="ph:calendar-blank" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+          <div className="rounded-2xl border border-line bg-surface p-5 flex gap-3">
+            <Icon icon="ph:calendar-blank" className="text-2xl text-brand shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold m-0">Calendario</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 m-0">
+              <p className="text-sm text-muted mt-1 m-0">
                 Selezione il <strong>30 ottobre</strong>. Lezioni dal <strong>3 novembre 2026</strong> a{' '}
                 <strong>giugno 2027</strong>.
               </p>
             </div>
           </div>
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#181b23] p-5 flex gap-3">
-            <Icon icon="ph:users-three" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+          <div className="rounded-2xl border border-line bg-surface p-5 flex gap-3">
+            <Icon icon="ph:users-three" className="text-2xl text-brand shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold m-0">Frequenza</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 m-0">
+              <p className="text-sm text-muted mt-1 m-0">
                 Obbligatoria almeno al <strong>70%</strong> del monte ore. Corso a numero chiuso.
               </p>
             </div>
           </div>
-          <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#181b23] p-5 flex gap-3">
-            <Icon icon="ph:currency-eur" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+          <div className="rounded-2xl border border-line bg-surface p-5 flex gap-3">
+            <Icon icon="ph:currency-eur" className="text-2xl text-brand shrink-0 mt-0.5" />
             <div>
               <p className="font-semibold m-0">Costo</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 m-0">
+              <p className="text-sm text-muted mt-1 m-0">
                 <strong>Interamente gratuito</strong> per gli allievi, con il sostegno della Regione del Veneto.
               </p>
             </div>
@@ -326,9 +311,9 @@ export default function IftsPage() {
       </section>
 
       <section className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20">
-        <div className="rounded-2xl bg-[#1976D2]/5 dark:bg-[#64B5F6]/10 border border-[#1976D2]/15 dark:border-[#64B5F6]/20 p-8 md:p-10">
-          <h2 className="text-2xl font-bold text-[#1976D2] dark:text-[#64B5F6] mb-4">Chi è il Full Stack Developer</h2>
-          <p className="text-lg leading-8 text-gray-700 dark:text-gray-300 m-0">
+        <div className="rounded-2xl bg-brand/5 dark:bg-brand/10 border border-brand/15 p-8 md:p-10">
+          <h2 className="text-2xl font-bold text-brand mb-4">Chi è il Full Stack Developer</h2>
+          <p className="font-serif text-xl leading-relaxed text-muted m-0">
             È lo sviluppatore che tiene insieme tutto lo stack: dal database al server, dall’interfaccia
             utente al pannello di amministrazione. Non si limita a “far funzionare le pagine”: progetta
             i dati, scrive la logica, cura l’esperienza su desktop e mobile e pubblica il risultato.
@@ -352,32 +337,29 @@ export default function IftsPage() {
       </section>
 
       <section id="metodo" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:sparkle" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Coding &amp; Vibe Coding</h2>
-        </div>
-        <p className="text-lg leading-8 mb-8">
+        <SectionTitle icon="ph:sparkle">Coding &amp; Vibe Coding</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-8">
           L’intelligenza artificiale scrive codice in pochi secondi. Chi non sa programmare, però, non
           sa dire se quel codice è giusto. Il principio del corso è uno solo:{' '}
           <strong>capire prima di delegare</strong>. Per questo ogni argomento si affronta due volte.
         </p>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-7">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#1976D2] dark:text-[#64B5F6] font-semibold mb-2">
+          <div className="rounded-2xl bg-surface border border-line shadow-sm p-7">
+            <p className="text-xs font-bold uppercase tracking-widest text-brand mb-2">
               Traccia manuale
             </p>
             <h3 className="text-xl font-bold mb-3">Si scrive con le proprie mani</h3>
-            <p className="text-gray-600 dark:text-gray-300 leading-7 m-0">
+            <p className="text-muted leading-7 m-0">
               Lezione, esercizio, correzione. Si costruisce il vocabolario tecnico: sintassi, errori,
               convenzioni. Senza questa base l’AI resta una scatola nera.
             </p>
           </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-7">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#1976D2] dark:text-[#64B5F6] font-semibold mb-2">
+          <div className="rounded-2xl bg-surface border border-line shadow-sm p-7">
+            <p className="text-xs font-bold uppercase tracking-widest text-brand mb-2">
               Traccia AI-assistita
             </p>
             <h3 className="text-xl font-bold mb-3">Si guida, si legge, si giudica</h3>
-            <p className="text-gray-600 dark:text-gray-300 leading-7 m-0">
+            <p className="text-muted leading-7 m-0">
               Stesso argomento, strumenti di generazione del codice. Si impara a scrivere una specifica
               chiara, a leggere il diff, a cogliere bug e scorciatoie, a integrare solo ciò che regge.
             </p>
@@ -386,11 +368,8 @@ export default function IftsPage() {
       </section>
 
       <section id="programma" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:path" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Il percorso in quattro fasi</h2>
-        </div>
-        <p className="text-lg leading-8 mb-10">
+        <SectionTitle icon="ph:path">Il percorso in quattro fasi</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-10">
           La specializzazione tecnica è un cammino unico: ogni fase poggia sulla precedente. Si arriva
           al progetto finale sapendo perché le cose funzionano, non solo come si cliccano.
         </p>
@@ -398,21 +377,21 @@ export default function IftsPage() {
           {fasi.map((fase) => (
             <article
               key={fase.n}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6 md:p-8 md:grid md:grid-cols-[auto_1fr] md:gap-8"
+              className="rounded-2xl bg-surface border border-line shadow-sm p-6 md:p-8 md:grid md:grid-cols-[auto_1fr] md:gap-8"
             >
               <div className="mb-4 md:mb-0 md:w-40 shrink-0">
-                <p className="text-5xl font-bold text-[#1976D2] dark:text-[#64B5F6] leading-none m-0">
+                <p className="text-5xl font-bold text-brand leading-none m-0">
                   {fase.n}
                 </p>
-                <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mt-2 m-0">{fase.periodo}</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-muted mt-2 m-0">{fase.periodo}</p>
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-3">{fase.titolo}</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-7 mb-4">{fase.testo}</p>
+                <p className="text-muted leading-7 mb-4">{fase.testo}</p>
                 <ul className="grid sm:grid-cols-2 gap-2 m-0 p-0 list-none">
                   {fase.punti.map((p) => (
-                    <li key={p} className="flex gap-2 text-sm text-gray-700 dark:text-gray-300">
-                      <Icon icon="ph:check-circle" className="text-lg text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+                    <li key={p} className="flex gap-2 text-sm text-muted">
+                      <Icon icon="ph:check-circle" className="text-lg text-brand shrink-0 mt-0.5" />
                       <span>{p}</span>
                     </li>
                   ))}
@@ -424,11 +403,8 @@ export default function IftsPage() {
       </section>
 
       <section id="argomenti" className="max-w-[1100px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:list-bullets" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Argomenti trattati</h2>
-        </div>
-        <p className="text-lg leading-8 mb-10 max-w-[880px]">
+        <SectionTitle icon="ph:list-bullets">Argomenti trattati</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-10 max-w-[880px]">
           Il dettaglio del programma tecnico: dalle basi del linguaggio fino al deploy del progetto di
           gruppo, con un filo conduttore sull’uso responsabile dell’intelligenza artificiale.
         </p>
@@ -436,11 +412,11 @@ export default function IftsPage() {
           {argomenti.map((blocco) => (
             <div
               key={blocco.titolo}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 shadow-sm p-6"
+              className="rounded-2xl bg-surface border border-line shadow-sm p-6"
             >
-              <Icon icon={blocco.icon} className="text-3xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+              <Icon icon={blocco.icon} className="text-3xl text-brand mb-3" />
               <h3 className="text-lg font-bold mb-3">{blocco.titolo}</h3>
-              <ul className="m-0 pl-4 text-sm leading-6 text-gray-600 dark:text-gray-300">
+              <ul className="m-0 pl-4 text-sm leading-6 text-muted">
                 {blocco.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -451,11 +427,8 @@ export default function IftsPage() {
       </section>
 
       <section id="competenze" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:target" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Competenze in uscita</h2>
-        </div>
-        <p className="text-lg leading-8 mb-8">
+        <SectionTitle icon="ph:target">Competenze in uscita</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-8">
           La specializzazione Full Stack è articolata in queste competenze. Le ore dell’intelligenza
           artificiale non aggiungono argomenti extra: sono il tempo in cui le stesse competenze tecniche
           si allenano in modalità assistita.
@@ -464,31 +437,28 @@ export default function IftsPage() {
           {competenze.map((c) => (
             <div
               key={c.titolo}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-5 md:p-6 md:grid md:grid-cols-[5rem_1fr] md:gap-6 md:items-start"
+              className="rounded-2xl bg-surface border border-line p-5 md:p-6 md:grid md:grid-cols-[5rem_1fr] md:gap-6 md:items-start"
             >
-              <p className="text-2xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0 mb-2 md:mb-0">
+              <p className="text-2xl font-bold text-brand m-0 mb-2 md:mb-0">
                 {c.ore}
                 <span className="text-sm font-semibold ml-1">ore</span>
               </p>
               <div>
                 <h3 className="text-lg font-bold m-0 mb-1">{c.titolo}</h3>
-                <p className="text-sm leading-6 text-gray-600 dark:text-gray-300 m-0">{c.testo}</p>
+                <p className="text-sm leading-6 text-muted m-0">{c.testo}</p>
               </div>
             </div>
           ))}
         </div>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-6">
+        <p className="text-sm text-muted mt-6">
           Alle 400 ore in aula si affiancano <strong>400 ore di stage</strong> in azienda: il contesto
           reale in cui mettere alla prova quanto appreso a scuola.
         </p>
       </section>
 
       <section id="destinatari" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:student" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Chi può iscriversi</h2>
-        </div>
-        <p className="text-lg leading-8 mb-6">
+        <SectionTitle icon="ph:student">Chi può iscriversi</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-6">
           Il corso è aperto a chi ha già concluso (o sta concludendo) un percorso di scuola superiore
           o di istruzione e formazione professionale, in una di queste condizioni:
         </p>
@@ -496,34 +466,31 @@ export default function IftsPage() {
           {destinatari.map((d) => (
             <li
               key={d}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-5 flex gap-3"
+              className="rounded-2xl bg-surface border border-line p-5 flex gap-3"
             >
-              <Icon icon="ph:check" className="text-xl text-[#1976D2] dark:text-[#64B5F6] shrink-0 mt-0.5" />
+              <Icon icon="ph:check" className="text-xl text-brand shrink-0 mt-0.5" />
               <span>{d}</span>
             </li>
           ))}
         </ul>
-        <div className="rounded-2xl border-l-4 border-[#1976D2] dark:border-[#64B5F6] bg-white dark:bg-[#181b23] p-6">
-          <p className="m-0 leading-7">
+        <Callout tone="brand" icon="ph:certificate" className="mb-0">
+          <p className="m-0">
             Al termine, dopo l’esame, si ottiene il <strong>Certificato di Specializzazione Tecnica
             Superiore</strong> (EQF IV). Il titolo consente l’<strong>accesso ai percorsi ITS Academy</strong>,
             tra cui l’indirizzo{' '}
-            <a href="/its" className="font-semibold text-[#1976D2] dark:text-[#64B5F6]">
+            <a href="/its" className="font-semibold">
               Web Developer Full Stack
             </a>{' '}
             dell’ITS Digital Academy Mario Volpato, con sede anche a San Donà di Piave.
           </p>
-        </div>
+        </Callout>
       </section>
 
       <section id="candidati" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-16 scroll-mt-28">
-        <div className="flex items-center gap-3 mb-4">
-          <Icon icon="ph:paper-plane-tilt" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Come candidarsi</h2>
-        </div>
-        <p className="text-lg leading-8 mb-8">
+        <SectionTitle icon="ph:paper-plane-tilt">Come candidarsi</SectionTitle>
+        <p className="font-serif text-xl leading-relaxed mb-8">
           Invia la candidatura a{' '}
-          <a href={MAIL_HREF} className="font-semibold text-[#1976D2] dark:text-[#64B5F6]">
+          <a href={MAIL_HREF} className="font-semibold">
             {MAIL}
           </a>
           , allegando:
@@ -532,60 +499,53 @@ export default function IftsPage() {
           {documenti.map((doc, i) => (
             <div
               key={doc}
-              className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-5 text-center"
+              className="rounded-2xl bg-surface border border-line p-5 text-center"
             >
-              <p className="text-sm font-bold text-[#1976D2] dark:text-[#64B5F6] m-0 mb-2">
+              <p className="text-sm font-bold text-brand m-0 mb-2">
                 {String(i + 1).padStart(2, '0')}
               </p>
               <p className="m-0 font-medium">{doc}</p>
             </div>
           ))}
         </div>
-        <div className="rounded-2xl bg-[#1976D2] text-white p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div className="rounded-2xl bg-ink text-white p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-white/70 m-0 mb-2">Selezione</p>
+            <Eyebrow className="mb-3">Selezione</Eyebrow>
             <h3 className="text-2xl font-bold text-white m-0 mb-2">30 ottobre 2026</h3>
             <p className="m-0 text-white/90 leading-7">
               Le attività formative iniziano il <strong>3 novembre 2026</strong>. Posti limitati:
               si attiva con almeno 15 allievi.
             </p>
           </div>
-          <a
-            href={MAIL_HREF}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-[#1976D2] font-semibold px-8 py-4 text-sm uppercase tracking-[0.15em] hover:bg-white/90 transition-colors shrink-0 no-underline"
-          >
+          <Button href={MAIL_HREF} variant="accent" className="shrink-0">
             Invia la candidatura
-            <Icon icon="ph:arrow-right" className="text-lg" />
-          </a>
+          </Button>
         </div>
       </section>
 
       <section className="max-w-[1000px] mx-auto px-4 md:px-8 mb-20">
-        <div className="flex items-center gap-3 mb-6">
-          <Icon icon="ph:map-pin" className="text-3xl text-[#1976D2] dark:text-[#64B5F6]" />
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] m-0">Sede e contatti</h2>
-        </div>
+        <SectionTitle icon="ph:map-pin">Sede e contatti</SectionTitle>
         <div className="grid md:grid-cols-3 gap-5">
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-6">
-            <Icon icon="ph:buildings" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+          <div className="rounded-2xl bg-surface border border-line p-6">
+            <Icon icon="ph:buildings" className="text-2xl text-brand mb-3" />
             <p className="font-semibold m-0 mb-2">SFP Don Bosco</p>
-            <p className="text-sm leading-6 text-gray-600 dark:text-gray-300 m-0">
+            <p className="text-sm leading-6 text-muted m-0">
               Via XIII Martiri, 86
               <br />
               30027 San Donà di Piave (VE)
             </p>
           </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-6">
-            <Icon icon="ph:phone" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+          <div className="rounded-2xl bg-surface border border-line p-6">
+            <Icon icon="ph:phone" className="text-2xl text-brand mb-3" />
             <p className="font-semibold m-0 mb-2">Telefono</p>
-            <a href={`tel:${TEL}`} className="text-sm text-[#1976D2] dark:text-[#64B5F6]">
+            <a href={`tel:${TEL}`} className="text-sm">
               {TEL_LABEL}
             </a>
           </div>
-          <div className="rounded-2xl bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 p-6">
-            <Icon icon="ph:envelope" className="text-2xl text-[#1976D2] dark:text-[#64B5F6] mb-3" />
+          <div className="rounded-2xl bg-surface border border-line p-6">
+            <Icon icon="ph:envelope" className="text-2xl text-brand mb-3" />
             <p className="font-semibold m-0 mb-2">Candidature</p>
-            <a href={MAIL_HREF} className="text-sm break-all text-[#1976D2] dark:text-[#64B5F6]">
+            <a href={MAIL_HREF} className="text-sm break-all">
               {MAIL}
             </a>
           </div>
@@ -593,7 +553,7 @@ export default function IftsPage() {
       </section>
 
       <section className="max-w-[1000px] mx-auto px-4 md:px-8 mb-24">
-        <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#181b23] p-8">
+        <div className="rounded-2xl border border-line bg-surface p-8">
           <div className="flex flex-wrap items-center justify-center gap-8 mb-8">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -614,7 +574,7 @@ export default function IftsPage() {
             alt="Repubblica Italiana, Regione del Veneto, Fondo per lo Sviluppo e la Coesione, Piano Sviluppo e Coesione Veneto"
             className="w-full max-w-[720px] mx-auto h-auto object-contain"
           />
-          <p className="text-xs leading-5 text-center text-gray-500 dark:text-gray-400 mt-8 m-0">
+          <p className="text-xs leading-5 text-center text-muted mt-8 m-0">
             Corso IFTS “Tecniche per la progettazione e lo sviluppo di applicazioni informatiche”,
             edizione 2026/2027. Approvato con DGR n. 680 del 17/06/2025 e Decreto n. 1149 del 29/09/2025.
           </p>

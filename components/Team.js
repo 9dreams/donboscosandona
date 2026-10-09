@@ -8,7 +8,7 @@ function MemberAvatar({ imageUrl, name }) {
 
   return (
     <div
-      className="w-28 h-28 rounded-full bg-gray-200 dark:bg-white/15 shadow-md flex items-center justify-center mb-4 shrink-0 overflow-hidden"
+      className="w-28 h-28 rounded-full bg-brand/15 ring-4 ring-brand/10 flex items-center justify-center mb-4 shrink-0 overflow-hidden"
       role="img"
       aria-label={name || undefined}
     >
@@ -21,7 +21,7 @@ function MemberAvatar({ imageUrl, name }) {
           onError={() => setBroken(true)}
         />
       ) : (
-        <Icon icon="ph:user" className="text-5xl text-white" aria-hidden />
+        <Icon icon="ph:user" className="text-5xl text-brand" aria-hidden />
       )}
     </div>
   )
@@ -38,58 +38,58 @@ export default function Team({ members, cardWidth, title, description, maxWidth 
       {(title || description) && (
         <div className="text-center mb-10">
           {title && (
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--fg)] uppercase tracking-wide">
+            <h2 className="title-display text-4xl md:text-5xl mb-3">
               {title}
             </h2>
           )}
           {description && (
-            <p className="text-[var(--fg-secondary)]">{description}</p>
+            <p className="mx-auto max-w-[62ch] font-serif text-xl leading-relaxed text-muted">{description}</p>
           )}
         </div>
       )}
 
       <div
-        className="team-grid grid grid-cols-1 sm:grid-cols-2 gap-10 justify-items-center"
+        className="team-grid grid grid-cols-1 sm:grid-cols-2 gap-5"
         style={{ ['--team-cols']: String(lgCols) }}
       >
         {members.map((member, i) => (
           <div
             key={i}
-            className="flex flex-col items-center text-center w-full max-w-sm"
+            className="flex flex-col items-center text-center w-full rounded-2xl bg-surface border border-line shadow-sm p-6"
           >
             <MemberAvatar imageUrl={member.imageUrl} name={member.name} />
             {member.name && (
-              <h3 className="text-lg font-bold mb-1 text-[var(--fg)] uppercase tracking-wide">
+              <h3 className="text-lg font-bold mb-1 text-fg">
                 {member.name}
               </h3>
             )}
             {member.role && (
-              <p className="text-sm text-[var(--fg)] mb-3 leading-relaxed px-2">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand mb-3 leading-relaxed px-2">
                 {member.role}
               </p>
             )}
             {member.description && (
-              <p className="text-sm text-[var(--fg-secondary)]">{member.description}</p>
+              <p className="text-sm text-muted">{member.description}</p>
             )}
             {member.description1 && (
-              <p className="text-sm text-[var(--fg-secondary)]">{member.description1}</p>
+              <p className="text-sm text-muted">{member.description1}</p>
             )}
             <div className="flex flex-wrap justify-center gap-2 mt-2">
               {member.phone && (
                 <a
                   href={`tel:${String(member.phone).replace(/\s/g, '')}`}
-                  className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-white/10 text-[var(--fg)] hover:text-[var(--fg)] no-underline"
+                  className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-brand/8 dark:bg-brand/15 text-brand! no-underline! hover:bg-brand/15 font-semibold"
                 >
-                  <Icon icon="ph:phone" className="text-sm opacity-70" />
+                  <Icon icon="ph:phone" className="text-sm" />
                   {member.phone}
                 </a>
               )}
               {member.email && (
                 <a
                   href={`mailto:${member.email}`}
-                  className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-white/10 text-[var(--fg)] hover:text-[var(--fg)] no-underline"
+                  className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-brand/8 dark:bg-brand/15 text-brand! no-underline! hover:bg-brand/15 font-semibold"
                 >
-                  <Icon icon="ph:envelope" className="text-sm opacity-70" />
+                  <Icon icon="ph:envelope" className="text-sm" />
                   {member.email}
                 </a>
               )}

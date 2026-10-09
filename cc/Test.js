@@ -1,125 +1,143 @@
 import { useState } from 'react'
+import { Icon } from '@iconify/react'
+
+// Il quiz di orientamento (in home e su /quiz): una domanda alla volta, con
+// le risposte come schede da toccare, poi il settore consigliato e i punteggi.
+
+const SETTORI = [
+  { key: 'elettrico', label: 'Elettrico', url: '/elettrico' },
+  { key: 'energia', label: 'Energia', url: '/energia' },
+  { key: 'informatico', label: 'Informatico', url: '/informatico' },
+  { key: 'meccanico', label: 'Meccanico', url: '/meccanico' },
+  { key: 'motoristico', label: 'Motoristico', url: '/automotive' },
+]
+
+const vuoto = () => Object.fromEntries(SETTORI.map((s) => [s.key, 0]))
 
 export default function Test(props) {
   const n = props.domande.length
   const [indice, setIndice] = useState(0)
-  const [elettrico, setElettrico] = useState(0)
-  const [energia, setEnergia] = useState(0)
-  const [informatico, setInformatico] = useState(0)
-  const [meccanico, setMeccanico] = useState(0)
-  const [motoristico, setMotoristico] = useState(0)
+  const [punti, setPunti] = useState(vuoto)
 
   const item = props.domande[indice]
 
   function scelta(s) {
-    setElettrico(elettrico + s.elettrico)
-    setEnergia(energia + s.energia)
-    setInformatico(informatico + s.informatico)
-    setMeccanico(meccanico + s.meccanico)
-    setMotoristico(motoristico + s.motoristico)
+    setPunti((p) => Object.fromEntries(SETTORI.map(({ key }) => [key, p[key] + (s[key] || 0)])))
     setIndice(indice + 1)
   }
 
   function reset() {
-    setElettrico(0); setEnergia(0); setInformatico(0)
-    setMeccanico(0); setMotoristico(0); setIndice(0)
+    setPunti(vuoto())
+    setIndice(0)
   }
 
-  const totale = elettrico + energia + informatico + meccanico + motoristico
-
-  function percentuale(punti) {
-    return totale > 0 ? ((punti / totale) * 100).toFixed(1) : '0'
-  }
-
-  function categorieConPercentualePiuAlta() {
-    const categorie = { Elettrico: elettrico, Energia: energia, Informatico: informatico, Meccanico: meccanico, Motoristico: motoristico }
-    const percentuali = Object.keys(categorie).map((categoria) => ({
-      categoria,
-      percentuale: percentuale(categorie[categoria]),
-    }))
-    const maxPercentuale = Math.max(...percentuali.map((item) => parseFloat(item.percentuale)))
-    return percentuali.filter((item) => parseFloat(item.percentuale) === maxPercentuale)
-  }
-
-  const coloriSettori = {
-    Elettrico: '#add8e6', Energia: '#ffcc80', Informatico: '#ffeb3b', Meccanico: '#98fb98', Motoristico: '#f08080',
-  }
-
-  const tdClass = "px-4 py-3 text-[1.1rem] border-t border-gray-200"
+  const totale = SETTORI.reduce((t, { key }) => t + punti[key], 0)
+  const percentuale = (v) => (totale > 0 ? ((v / totale) * 100).toFixed(1) : '0')
+  const massimo = Math.max(...SETTORI.map(({ key }) => punti[key]))
+  const consigliati = SETTORI.filter(({ key }) => punti[key] === massimo)
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 py-8">
-      {indice < n ? (
-        <div className="flex flex-col">
-          <div className="w-full">
-            <p className="text-sky-500 mb-4">
-              <b>Scopri qual&apos;è il settore giusto per te con il quiz preparato dagli allievi della 3F informatici!</b>
-            </p>
-            <h2 className="text-xl font-semibold mb-4">
-              Domanda {indice + 1}/{n}: <b>{item.domanda}</b>
-            </h2>
-            <div className="mb-4 overflow-hidden rounded-lg border border-gray-200 dark:border-white/10">
-              {['a', 'b', 'c'].map((key) => (
-                <div key={key} className="border-t border-gray-200 dark:border-white/10 first:border-0 p-3">
+    <section id="quiz" className="max-w-[1100px] mx-auto px-4 md:px-8 my-16 md:my-20 scroll-mt-28">
+      <div className="overflow-hidden rounded-2xl bg-surface border border-line shadow-sm">
+        <div className="bg-ink px-6 py-7 md:px-10 md:py-9 text-white">
+          <span className="inline-block rounded-md bg-ochre px-2.5 py-1 text-[12px] font-bold uppercase tracking-widest text-ink">
+            Quiz di orientamento
+          </span>
+          <h2 className="wordmark mt-4 text-3xl md:text-4xl text-white">Qual è il settore giusto per te?</h2>
+          <p className="mt-2 font-serif text-lg leading-relaxed text-white/75">
+            Il quiz preparato dagli allievi della 3F informatici: {n} domande, una risposta per ciascuna.
+          </p>
+          {indice < n && (
+            <div className="mt-6 flex items-center gap-4">
+              <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/15">
+                <div className="h-full rounded-full bg-ochre transition-all duration-500" style={{ width: `${(indice / n) * 100}%` }} />
+              </div>
+              <span className="text-sm font-bold tabular-nums text-white/80">
+                {indice + 1}/{n}
+              </span>
+            </div>
+          )}
+        </div>
+
+        {indice < n ? (
+          <div className="grid gap-8 p-6 md:grid-cols-[1fr_minmax(0,320px)] md:p-10">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-brand mb-2">Domanda {indice + 1}</p>
+              <h3 className="text-2xl font-bold tracking-tight leading-snug text-fg mb-6">{item.domanda}</h3>
+              <div className="flex flex-col gap-3">
+                {['a', 'b', 'c'].map((key) => (
                   <button
+                    key={key}
+                    type="button"
                     onClick={() => scelta(item[key])}
-                    className="w-full px-4 py-2 bg-[#1976D2] text-white rounded font-medium hover:bg-[#1565C0] transition-colors"
+                    className="group flex w-full cursor-pointer items-center gap-4 rounded-xl border-[1.5px] border-line bg-surface px-4 py-3.5 text-left text-fg transition-colors hover:border-brand hover:bg-brand/5"
                   >
-                    {key.toUpperCase()}: {item[key].risposta}
+                    <span className="grid size-8 shrink-0 place-items-center rounded-full bg-brand/10 font-bold uppercase text-brand transition-colors group-hover:bg-brand group-hover:text-white dark:group-hover:text-[#0d0f14]">
+                      {key}
+                    </span>
+                    <span className="font-medium">{item[key].risposta}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+            {item.immagine && (
+              <div className="order-first md:order-none">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="w-full rounded-xl object-cover" src={item.immagine} alt="" />
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="p-6 md:p-10">
+            <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-brand mb-2">Complimenti!</p>
+                <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-fg m-0">
+                  La nostra IA ti consiglia: <span className="text-brand">{consigliati.map((s) => s.label).join(', ')}</span>
+                </h3>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  {consigliati.map((s) => (
+                    <a
+                      key={s.key}
+                      href={s.url}
+                      className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-bold text-white! dark:text-[#0d0f14]! no-underline! hover:bg-brand-strong transition-colors"
+                    >
+                      Scopri il settore {s.label} <Icon icon="ph:arrow-right" />
+                    </a>
+                  ))}
+                  <button
+                    type="button"
+                    onClick={reset}
+                    className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-brand/40 px-6 py-3 font-bold text-brand hover:bg-brand/5 transition-colors"
+                  >
+                    <Icon icon="ph:arrow-counter-clockwise" /> Ripeti il test
                   </button>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-          <div className="flex justify-center mt-4 mb-5">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="rounded-xl max-w-full" src={item.immagine} alt="" />
-          </div>
-        </div>
-      ) : (
-        <>
-          <h2 className="text-3xl font-bold text-[#1976D2] dark:text-[#64B5F6] mb-3">Complimenti!</h2>
-          <h3 className="text-2xl text-[#1976D2] dark:text-[#64B5F6] mb-6">
-            La nostra IA ti consiglia:{' '}
-            <b>{categorieConPercentualePiuAlta().map((item) => item.categoria).join(', ')}</b>
-          </h3>
-          <button
-            onClick={reset}
-            className="px-6 py-2 bg-[#1976D2] text-white rounded-full font-bold hover:bg-[#1565C0] transition-colors"
-          >
-            Ripeti il test
-          </button>
-        </>
-      )}
 
-      {indice === n && (
-        <div className="mt-8 overflow-x-auto rounded-lg border border-gray-200 dark:border-white/10">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="border-b border-gray-200 dark:border-white/10">
-                <th className="px-4 py-3 text-left text-[1.2rem]"><b>Categoria</b></th>
-                <th className="px-4 py-3 text-right text-[1.2rem]"><b>Punteggio</b></th>
-                <th className="px-4 py-3 text-right text-[1.2rem]"><b>Percentuale</b></th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                { label: 'Elettrico', val: elettrico },
-                { label: 'Energia', val: energia },
-                { label: 'Informatico', val: informatico },
-                { label: 'Meccanico', val: meccanico },
-                { label: 'Motoristico', val: motoristico },
-              ].map(({ label, val }) => (
-                <tr key={label} style={{ backgroundColor: coloriSettori[label] }}>
-                  <td className={tdClass}>{label}</td>
-                  <td className={`${tdClass} text-right`}>{val}</td>
-                  <td className={`${tdClass} text-right`}>{percentuale(val)}%</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </div>
+            <ul className="mt-8 space-y-3">
+              {SETTORI.map((s) => {
+                const top = punti[s.key] === massimo
+                return (
+                  <li key={s.key} className="grid grid-cols-[110px_1fr_auto] items-center gap-4">
+                    <span className={`font-semibold ${top ? 'text-fg' : 'text-muted'}`}>{s.label}</span>
+                    <span className="h-3 overflow-hidden rounded-full bg-line">
+                      <span
+                        className={`block h-full rounded-full ${top ? 'bg-ochre' : 'bg-brand/60'}`}
+                        style={{ width: `${percentuale(punti[s.key])}%` }}
+                      />
+                    </span>
+                    <span className="w-28 text-right text-sm tabular-nums text-muted">
+                      {punti[s.key]} pt · {percentuale(punti[s.key])}%
+                    </span>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        )}
+      </div>
+    </section>
   )
 }

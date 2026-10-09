@@ -1,59 +1,48 @@
+// Tabella dentro una scheda bianca, con l'intestazione su fondo blu tenue.
+// Le vecchie prop di sfondo (backgroundColor, backgroundImageUrl, blur, color)
+// non si usano più. `flush` toglie i margini laterali, per una tabella dentro una sezione.
 export default function MyTable(props) {
-  const titleColor = props.color === 'white' ? 'white' : '#1976D2'
-
   return (
-    <div
-      className="relative my-8 p-6 md:p-12 text-justify rounded-2xl bg-cover bg-no-repeat bg-center"
-      style={{
-        maxWidth: props.maxWidth === 'lg' ? '1200px' : undefined,
-        margin: props.maxWidth === 'lg' ? '2rem auto' : undefined,
-        backgroundImage: props.backgroundImageUrl ? `url(${props.backgroundImageUrl})` : undefined,
-      }}
+    <section
+      id={props.id}
+      className={
+        props.flush
+          ? 'my-8'
+          : `${props.maxWidth === 'lg' || !props.maxWidth ? 'max-w-[1100px]' : ''} mx-auto px-4 md:px-8 my-10 md:my-14 scroll-mt-28`
+      }
     >
-      {props.backgroundColor && (
-        <div className="absolute inset-0 rounded-2xl" style={{ backgroundColor: props.backgroundColor, opacity: props.opacity }} />
-      )}
-      {props.blur && (
-        <div className="absolute inset-0 rounded-2xl" style={{ backdropFilter: `blur(${props.blur})` }} />
-      )}
-      <div className="relative" style={{ color: props.color }}>
+      <div className="rounded-2xl bg-surface border border-line shadow-sm p-6 md:p-10">
         {props.title && (
-          <h2 className="text-3xl font-bold mb-4" style={{ color: titleColor }}>{props.title}</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-brand leading-tight m-0">{props.title}</h2>
         )}
         {props.subtitle && (
-          <h1 className="text-2xl mb-4" style={{ color: props.color }}>{props.subtitle}</h1>
+          <p className="mt-2 font-serif text-xl leading-relaxed text-muted">{props.subtitle}</p>
         )}
-        <div className="overflow-x-auto">
-          <table className="min-w-[650px] w-full border-collapse">
+        <div className={`overflow-x-auto rounded-xl border border-line ${props.title || props.subtitle ? 'mt-6' : ''}`}>
+          <table className="min-w-[560px] w-full border-collapse text-[15px]">
             <thead>
-              <tr>
+              <tr className="bg-brand/8 dark:bg-brand/15">
                 {props.rows[0].map((titolo, i) => (
-                  <th key={i} className="px-4 py-3 text-left font-semibold border-b border-current/20" style={{ color: props.color }}>
+                  <th key={i} className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-brand">
                     {titolo}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {props.rows.map((row, i) =>
-                i > 0 && (
-                  <tr key={i} className="border-b border-current/10 last:border-0">
-                    {row.map((content, j) => (
-                      <td key={j} className="px-4 py-3" style={{ color: props.color }}>
-                        {content}
-                      </td>
-                    ))}
-                  </tr>
-                )
-              )}
+              {props.rows.slice(1).map((row, i) => (
+                <tr key={i} className="border-t border-line even:bg-page/60">
+                  {row.map((content, j) => (
+                    <td key={j} className={`px-4 py-3 ${j === 0 ? 'font-semibold text-fg' : 'text-muted'}`}>
+                      {content}
+                    </td>
+                  ))}
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </div>
-    </div>
+    </section>
   )
-}
-
-MyTable.defaultProps = {
-  color: 'black',
 }

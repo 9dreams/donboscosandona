@@ -20,44 +20,44 @@ export default function NewsCard({ post, aspectRatio, defaultTag }) {
     : []
 
   const card = (
-    <div className="block min-h-[33rem] mb-8 bg-white dark:bg-[#181b23] border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden hover:shadow-lg transition-shadow text-[var(--fg)]">
+    <div className="group flex h-full min-h-[30rem] flex-col overflow-hidden rounded-2xl bg-surface border border-line shadow-sm transition-shadow hover:shadow-md text-fg">
       <div className="relative overflow-hidden" style={{ aspectRatio }}>
         <Image
           src={post.immagine}
           alt={post.titolo || ''}
           fill
-          style={{ objectFit: 'cover' }}
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-      </div>
-      <div className="p-4">
-        {tags.length > 0 ? (
-          <div className="flex gap-2 mb-2 flex-wrap">
-            {tags.map((tag) => (
+        {tags.length > 0 && (
+          <div className="absolute top-3 left-3 flex flex-wrap gap-2">
+            {tags.slice(0, 2).map((tag, i) => (
               <span
                 key={tag}
-                className="text-xs font-bold px-3 py-1 rounded-full bg-[#1976D2] text-white uppercase"
+                className={`rounded-md px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest ${
+                  i === 0 ? 'bg-ochre text-ink' : 'bg-brand text-white dark:text-[#0d0f14]'
+                }`}
               >
                 {tag}
               </span>
             ))}
           </div>
-        ) : (
-          <div className="h-8" />
         )}
-        <h2 className="text-xl font-semibold mb-1 text-[var(--fg)]">{post.titolo}</h2>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{post.pubblicazione}</p>
-        <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-          {readMore(post.abstract, 40)}
-        </p>
+      </div>
+      <div className="flex flex-1 flex-col p-5">
+        {post.pubblicazione && (
+          <p className="text-xs font-bold uppercase tracking-widest text-muted mb-2">{post.pubblicazione}</p>
+        )}
+        <h3 className="text-xl font-bold tracking-tight leading-snug text-fg mb-2">{post.titolo}</h3>
+        <p className="font-serif text-base leading-relaxed text-muted mb-3">{readMore(post.abstract, 40)}</p>
         {post.articolo && (
-          <span className="text-sm text-[#1976D2] dark:text-[#64B5F6] font-medium">
-            Continua a leggere...
+          <span className="mt-auto text-sm font-bold text-brand group-hover:underline underline-offset-4">
+            Continua a leggere →
           </span>
         )}
         {!post.articolo && post.allegato && (
-          <span className="text-sm text-[#1976D2] dark:text-[#64B5F6] font-medium">
-            Scarica l&apos;allegato
+          <span className="mt-auto text-sm font-bold text-brand group-hover:underline underline-offset-4">
+            Scarica l&apos;allegato →
           </span>
         )}
       </div>
@@ -67,7 +67,7 @@ export default function NewsCard({ post, aspectRatio, defaultTag }) {
   if (isDisabled) return card
 
   return (
-    <a href={href} className="block text-[var(--fg)] no-underline hover:opacity-[0.98]">
+    <a href={href} className="block h-full text-fg! no-underline!">
       {card}
     </a>
   )
