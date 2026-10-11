@@ -267,6 +267,23 @@ export default function Page({ data }) {
         <br />
         c. <strong>Destinatari dei dati personali</strong>
         <p>
+          I dati saranno trattati all’interno della struttura dal personale
+          autorizzato preposto alla gestione del sito internet e
+          all’amministrazione e contabilità.
+          <br />
+          <br />
+          Il sito è ospitato su un server dedicato presso{' '}
+          <strong>OVH SAS</strong> (2 rue Kellermann, 59100 Roubaix, Francia),
+          che opera come responsabile del trattamento ai sensi dell’art. 28
+          GDPR: i dati restano quindi all’interno dell’Unione europea. Il
+          server è amministrato direttamente dal personale dell’Ente, e nessun
+          altro soggetto vi accede per la manutenzione. L’elenco aggiornato dei
+          responsabili esterni nominati è disponibile a semplice richiesta.
+          <br />
+          <br />I dati raccolti non verranno in alcun modo diffusi.
+        </p>
+        d. <strong>Periodo di conservazione dei dati personali</strong>
+        <p>
           I tuoi dati comunicati per la conclusione del contratto saranno
           conservati per tutta la durata del contratto e per il periodo di tempo
           successivo prescritto da legge. In particolare si precisa che le
@@ -278,7 +295,7 @@ export default function Page({ data }) {
           <br />I dati forniti per l’iscrizione alle newsletter saranno
           conservati per il periodo in cui il servizio è attivo.
         </p>
-        d. <strong>Obbligo di conferire i dati</strong>
+        e. <strong>Obbligo di conferire i dati</strong>
         <p>
           Il conferimento dei dati è obbligatorio e necessario per lo
           svolgimento del contratto stipulato tra te e il Titolare del
