@@ -136,7 +136,7 @@ Il sito si appoggia a Google Analytics che svolge profilazione in forma anonima,
 
 I dati saranno trattati all’interno della struttura dal personale autorizzato preposto alla gestione del sito internet e all’amministrazione e contabilità e potranno essere comunicati ai seguenti soggetti nominati responsabili esterni del trattamento:
 
-Aruba spa per il servizio di hosting
+**OVH SAS** (2 rue Kellermann, 59100 Roubaix, Francia), per il servizio di hosting: il sito è ospitato su un server dedicato, i dati restano quindi all’interno dell’Unione europea e il server è amministrato direttamente dal personale dell’Ente, senza che nessun altro soggetto vi acceda per la manutenzione.
 
 L’elenco aggiornato dei responsabili esterni nominati è disponibile a semplice richiesta.
 
