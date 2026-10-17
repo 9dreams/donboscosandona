@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Kaushan+Script&display=swap');
 
 @import "tailwindcss";
 
@@ -16,6 +16,7 @@
   --ochre: #d9a21b;
   --ochre-strong: #c8920f;
   --ink: #0b1f3a;
+  --brand-deep: #17457e;
   --font-ui: 'Archivo', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Newsreader', ui-serif, Georgia, serif;
   --bg: #f6f7f9;
@@ -43,6 +44,7 @@ html.dark {
   --color-ochre: var(--ochre);
   --color-ochre-strong: var(--ochre-strong);
   --color-ink: var(--ink);
+  --color-brand-deep: var(--brand-deep);
   --color-surface: var(--surface);
   --color-page: var(--bg);
   --color-fg: var(--fg);

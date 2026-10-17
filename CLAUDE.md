@@ -117,6 +117,7 @@ npm run lint     # ESLint
 | Quiz | `/quiz` | Importa `Test` da `/cc/Test` |
 | Schermo | `/screen` | `Featured` fullscreen, autoplay, reload ogni 10min |
 | Trasparenza | `/trasparenza` | Documenti da CMS con query `?q=trasparenza` |
+| Studenti atleti | `/studenti-atleti` | **Bozza**: non collegata da nessuna pagina, `noindex`, dati di prova. Foto in `public/images/studenti_atleti/` |
 | Progetto educativo | `/progetto`, `/progetto/*`, `/progetto_educativo` | Pagine rimosse: redirect in `next.config.js` al PDF aggiornato sul CMS (stesso link del riquadro in home) |
 
 ---
@@ -177,6 +178,7 @@ I mattoni stanno in **`components/ui.js`** (esportati anche dal barrel): `Sectio
 | `--brand-blue` | `text-brand`, `bg-brand` | `#1976D2` | `#64B5F6` |
 | `--ochre` | `bg-ochre`, `text-ochre` | `#d9a21b` | `#d9a21b` |
 | `--ink` (blu notte) | `bg-ink`, `text-ink` | `#0b1f3a` | `#0b1f3a` |
+| `--brand-deep` (blu scuro) | `bg-brand-deep`, `text-brand-deep` | `#17457e` | `#17457e` |
 | `--bg` | `bg-page` | `#f6f7f9` | `#0d0f14` |
 | `--fg` | `text-fg` | `#1f2937` | `#e8eaf0` |
 | `--fg-secondary` | `text-muted` | `#4a5a6e` | `#9da3af` |
