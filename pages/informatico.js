@@ -1,11 +1,11 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import {
-  Button,
   QuickNav,
   Layout,
   LandingHero,
-  Products,
+  SectionTitle,
   NewsWall,
   Paragraph,
   Sponsor,
@@ -27,9 +27,8 @@ export default function Home({ data }) {
         links={[
           { href: '#news', label: 'News' },
           { href: '#qualifiche', label: 'Qualifiche' },
-          { href: '#laboratori', label: 'I laboratori anno per anno' },
+          { href: '#percorso', label: 'Il percorso anno per anno' },
           { href: '#ifts', label: 'IFTS' },
-          { href: '#progetti', label: 'I nostri progetti' },
           { href: '#piano-formativo', label: 'Piano formativo' },
         ]}
       />
@@ -154,6 +153,7 @@ export default function Home({ data }) {
         </ol>
       </Paragraph>
       <Paragraph
+        id='ifts'
         maxWidth={false}
         title='Full Stack Developer'
         subtitle='Corso IFTS 2026/2027 — Coding & Vibe Coding'
@@ -184,55 +184,22 @@ export default function Home({ data }) {
         mobileObjectPosition="78% 40%"
         sponsorImage={null}
       />
-      <Products
-        id='laboratori'
-        title='Primo anno'
-        description="Durante primo anno vivrai un primo approccio alle Tecnologie dell'Informazione e alla programmazione."
-        cardWidth={4}
-        cardWidthXs={6}
-        products={primo_anno}
-      />
-      <Products
-        title='Secondo anno'
-        description="Il secondo anno è dedicato all'assistenza tecnica al cliente da tutti i punti di vista. Nella parte di programmazione vedremo lo sviluppo del front-end delle applicazioni."
-        cardWidth={3}
-        cardWidthXs={6}
-        products={secondo_anno}
-      />
-      <Products
-        title='Terzo anno'
-        description='Il terzo anno ti insegnerà a gestire le reti e i server. Entrerai inoltre nel mondo dello sviluppo back-end, full-stack e delle API (Application Programming Interfaces)'
-        cardWidth={3}
-        cardWidthXs={6}
-        products={terzo_anno}
-      />
-      <Products
-        title='Quarto anno'
-        description="Il quarto anno - se deciderai di non fermarti alla qualifica ma di conseguire il diploma di tecnico - sarai collocato in un'azienda del settore per una formazione con il Sistema Duale (scuola e azienda)."
-        cardWidth={4}
-        cardWidthXs={6}
-        products={quarto_anno}
-      />
-      <Products
-        id='ifts'
-        title='IFTS 2026/2027'
-        description='800 ore: 400 in aula e 400 in azienda. Full Stack Developer — Coding & Vibe Coding. PHP, Laravel, Livewire, Filament e uso critico dell’intelligenza artificiale.'
-        cardWidth={4}
-        cardWidthXs={6}
-        products={ifts}
-      />
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8 -mt-4 mb-16 text-center">
-        <Button href="/ifts">Scopri il corso IFTS</Button>
-      </div>
-
-      <Products
-        id='progetti'
-        title='I nostri progetti'
-        description='Ci piace mettere a frutto quello che impariamo a scuola, e siamo sempre aperti a nuove avventure!'
-        cardWidth={3}
-        cardWidthXs={12}
-        products={progetti}
-      />
+      <section id='percorso' className='max-w-[1400px] mx-auto px-4 md:px-8 my-16 scroll-mt-28'>
+        <SectionTitle icon='ph:path'>Il percorso anno per anno</SectionTitle>
+        <div className='grid md:grid-cols-2 gap-6'>
+          {banner.map((b) => (
+            <Image
+              key={b.src}
+              src={b.src}
+              alt={b.alt}
+              width={b.width}
+              height={b.height}
+              sizes='(min-width: 768px) 50vw, 100vw'
+              className='w-full h-auto rounded-2xl border border-line shadow-sm'
+            />
+          ))}
+        </div>
+      </section>
 
       {/* <Paragraph topImageUrl='/images/informatico/programma-scolastico.svg' /> */}
       <Sponsor logos={sponsor} />
@@ -278,309 +245,18 @@ export async function getStaticProps() {
   }
 }
 
-let progetti = [
+let banner = [
   {
-    title: '9dreams Agency',
-    description: 'La nostra agenzia di comunicazione.',
-    url: '/9dreams',
-    immagineUrl: '/images/informatico/loghi/logo_9dreams.png',
+    src: '/images/informatico/banner-programmazione.jpg',
+    alt: 'Programmazione, dalla prima riga di codice alle app vere: HTML e Arduino al 1° anno; JavaScript, CSS, Bootstrap, ReactJS, versioning e Raspberry al 2°; Tailwind CSS, NextJS e SQL al 3°; PHP, Laravel e React Native al 4° anno in Sistema Duale; PHP e OOP, database relazionali, Tailwind, Laravel, Livewire, Filament e Vibe Coding all’IFTS Full Stack Developer',
+    width: 1536,
+    height: 2581,
   },
   {
-    title: 'Assistenza Informatica',
-    description:
-      'Il servizio di qualità offerto dalle nostre classi a tutta la scuola.',
-    immagineUrl:
-      'https://computernext.it/wp-content/uploads/2017/06/assistenza-informatica.jpg',
-  },
-  {
-    title: 'Books',
-    description: 'Gli appunti dei nostri corsi di programmazione.',
-    immagineUrl: '/images/informatico/books.png',
-    url: 'https://books.donboscosandona.it',
-  },
-  {
-    title: 'FreeCodeCamp',
-    url: 'https://www.freecodecamp.org/italian/',
-    description:
-      'Siamo fieri di aver contribuito con le nostre classi alla traduzione italiana del progetto freeCodeCamp, dove puoi imparare a programmare gratuitamente ottenendo certificazioni di livello Universitario.',
-    immagineUrl:
-      '/images/informatico/freecodecamp.jpg',
-  },
-]
-
-let primo_anno = [
-  {
-    title: 'Sicurezza',
-    description:
-      "Lavorare in sicurezza è fondamentale per qualsiasi professione. Imparerai la normativa, l'uso corretto degli attrezzi manuali e delle sostanze chimiche, quali sono i dispositivi di protezione da indossare, le procedure antincendio e la lettura dei vari cartelli.",
-    immagineUrl: '/images/informatico/sicurezza.png',
-  },
-  {
-    title: 'Assemblaggio PC',
-    description:
-      'Scheda madre, processore, dissipatore, RAM, alimentatore, SSD: imparerai a riconoscere i vari componenti del computer e ad assemblarli in modo corretto, per dare vita a un pc funzionante.',
-    immagineUrl: '/images/informatico/assemblaggio-pc.png',
-  },
-  {
-    title: 'Sistemi Operativi',
-    description:
-      'Dopo aver assemblato il tuo pc imparerai a dargli vita installando e configurando le principali versioni dei sistemi operativi Windows e Linux.',
-    immagineUrl: '/images/informatico/sistemi-operativi.png',
-  },
-  {
-    title: 'HTML',
-    description:
-      "HTML è un linguaggio basato sui tag che è alla base di qualsiasi applicazione web. Puoi considerarlo lo scheletro dell'applicazione.",
-    immagineUrl: '/images/informatico/html.png',
-  },
-  {
-    title: 'Arduino',
-    description:
-      "Arduino è una piccola scheda elettronica che ti permette di collegare dei sensori e scrivere un programma che legge il loro valore e comanda degli attuatori nel mondo reale: un'ottima introduzione alla programmazione e all'elettronica.",
-    immagineUrl: '/images/informatico/arduino.png',
-  },
-  {
-    title: 'JavaScript',
-    description:
-      "Dopo aver curato l'aspetto della tua pagina, potrai darle vita e renderla attiva usando JavaScript.",
-    immagineUrl: '/images/informatico/javascript.png',
-  },
-]
-
-let secondo_anno = [
-  {
-    title: 'Assistenza al cliente',
-    description:
-      "Nella nostra scuola l'assistenza informatica è fornita dagli allievi informatici di seconda: 500 iPad, 6 aule informatiche, apparecchiature di ogni tipo e svariati uffici bisognosi di cure ogni giorno.",
-    immagineUrl: '/images/informatico/assistenza-al-cliente.png',
-  },
-  {
-    title: 'Scelta dei componenti',
-    description:
-      'Dopo aver visto come assemblarli, dedicherai del tempo a capire quali sono i criteri per capire quali componenti sono compatibili con gli altri, e a sceglierli correttamente per ottenere un pc con prestazioni ottimali.',
-    immagineUrl: '/images/informatico/cambio-componenti.png',
-  },
-  {
-    title: 'Benchmark e Test',
-    description:
-      'Utilizzerai gli strumenti hardware e software a disposizione per verificare che tutte le parti del pc stiano operando correttamente, senza surriscaldamenti o perdite di dati.',
-    immagineUrl: '/images/informatico/benchmark-test.png',
-  },
-  {
-    title: 'Apparati di rete',
-    description:
-      'Imparerai a connettere tra di loro i pc in una rete locale utilizzando switch, router, access point e altre apparecchiature di rete.',
-    immagineUrl: '/images/informatico/apparati-di-rete.png',
-  },
-  {
-    title: 'Shell Linux',
-    description:
-      "Sempre più dispositivi e servizi sono basati sul sistema operativo Linux, che permette un controllo potente senza l'appesantimento di un'interfaccia grafica. Imparerai ad usare i comandi fondamentali della linea di comando e a gestire i vari processi del Sistema Operativo.",
-    immagineUrl: '/images/informatico/shell-linux.png',
-  },
-  {
-    title: 'Python',
-    description:
-      'Python è un linguaggio di programmazione che viene impiegato sempre più nelle applicazioni web, nella scienza dei dati e nel Machine Learning. Vale la pena di fare la sua conoscenza.',
-    immagineUrl: '/images/informatico/python.png',
-  },
-  {
-    title: 'Raspberry',
-    description:
-      'Hai presente Arduino visto in prima? Raspberry è una sua evoluzione e ti permette di controllare ingressi e uscite collegati al mondo reale con un vero e proprio computer che sta nel palmo di una mano. Un ottimo banco di prova per le tue conoscenze di Linux e della programmazione.',
-    immagineUrl: '/images/informatico/rasp-berry.png',
-  },
-  {
-    title: 'Versioning',
-    description:
-      'Git e GitHub sono strumenti utilizzati quotidianamente dagli sviluppatori di tutto il mondo per gestire il loro codice: imparerai a mantenere diverse versioni di uno stesso programma, e a collaborare con altri sviluppatori in modo che il codice scritto da ognuno vada a fondersi con quello scritto dagli altri senza creare problemi.',
-    immagineUrl: '/images/informatico/versioning.png',
-  },
-  {
-    title: 'CSS',
-    description:
-      "Usato insieme ad HTML, CSS permette di curare l'aspetto grafico della tua applicazione... proprio come quando applichi diversi temi allo stesso programma.",
-    immagineUrl: '/images/informatico/css.png',
-  },
-  {
-    title: 'Bootstrap',
-    description:
-      'Bootstrap ti permetterà di strutturare velocemente le tue pagine web in modo che si adattino senza problemi anche agli schermi di smartphone e tablet.',
-    immagineUrl: '/images/informatico/bootstrap.png',
-  },
-  {
-    title: 'ReactJS',
-    description:
-      'React è una libreria creata dagli sviluppatori di Facebook che viene usata in tutto il mondo per costruire velocemente applicazioni basate su componenti creati da te o da altri sviluppatori.',
-    immagineUrl: '/images/informatico/reactjs.png',
-  },
-]
-
-let terzo_anno = [
-  {
-    title: 'Server Windows',
-    description:
-      'Dopo aver visto nel dettaglio come si gestiscono i personal computer, in terza imparerai a gestire i server, che con i loro servizi sono il cuore di tutte le reti locali di computer.',
-    immagineUrl: '/images/informatico/windows-server.png',
-  },
-  {
-    title: 'Server Linux',
-    description:
-      "Oltre ai server Windows imparerai a gestire quelli con il sistema operativo Linux, ampiamente utilizzati per ospitare le applicazioni web, ma anche mille altre servizi legati all'Internet delle cose.",
-    immagineUrl: '/images/informatico/server-linux.png',
-  },
-  {
-    title: 'UptimeRobot',
-    description:
-      'UptimeRobot è un servizio online che controlla continuamente la disponibilità dei tuoi servizi online: verifica costantemente se i tuoi server rispondono e se i tuoi siti web sono raggiungibili.',
-    immagineUrl: '/images/informatico/uptime-robot.png',
-    url: 'https://uptimerobot.com/',
-  },
-  {
-    title: 'Virtualizzazione',
-    description:
-      "Un unico server fisico può ospitare molti server virtuali, che possono essere accesi, duplicati, spostati all'occorrenza.",
-    immagineUrl: '/images/informatico/virtualizzazione.png',
-  },
-  {
-    title: 'Domini Active Directory',
-    description:
-      "Le reti aziendali, con centinaia o migliaia di utenti, sono per lo più basate su domini Active Directory: imparerai a gestire gli utenti e i loro spazi, a concedere i permessi, insomma ad avere il potere dell'Amministratore di Rete.",
-    immagineUrl: '/images/informatico/domini-active-directory.png',
-  },
-  {
-    title: 'Router',
-    description:
-      "In ogni nodo della rete Internet, ma anche a casa tua, c'è un router, un dispositivo che permette di instradare il traffico di rete in modo che prenda la direzione più opportuna per raggiungere l'indirizzo richiesto, che sia a due passi come dall'altra parte del mondo.",
-    immagineUrl: '/images/informatico/router.png',
-  },
-  {
-    title: 'Cisco Packet Tracer',
-    description:
-      'Con questo strumento imparerai a simulare il funzionamento di reti complesse, collegando tra loro diversi dispositivi virtuali e analizzando il traffico dei dati.',
-    immagineUrl: '/images/informatico/cisco-packet.png',
-  },
-  {
-    title: 'Sicurezza Informatica',
-    description:
-      'La sicurezza informatica non è solo questione di film: ogni giono nel mondo migliaia di persone o aziende perdono i loro dati, sono truffate o messe nei guai dai criminali informatici. Imparerai le tecniche di base per difendere il server o la rete che gestisci da questi attacchi.',
-    immagineUrl: '/images/informatico/sicurezza-informatica.png',
-  },
-  {
-    title: 'TailWind CSS',
-    description:
-      'Il framework CSS che permette di costruire qualsiasi design direttamente dal codice HTML.',
-    immagineUrl: '/images/informatico/tailwind-css.jpeg',
-  },
-  {
-    title: 'NextJS',
-    description:
-      'NextJS permette di creare con facilità interi siti basati sui componenti di React, ottimizzando le pagine in modo che siano superveloci. Anche questo sito è creato con React e NextJS.',
-    immagineUrl: '/images/informatico/nextjs.png',
-  },
-  {
-    title: 'Fotoritocco',
-    description:
-      'Imparerai a scattare foto e a curarle nei dettagli, perché al centro di ogni buon sito ci sono sempre le immagini.',
-    immagineUrl: '/images/informatico/fotoritocco.png',
-  },
-  {
-    title: 'Droni',
-    description:
-      "Con i tuoi compagni avrai a disposizione una squadriglia di quattro droni per scattare foto e girare clip video dall'alto o comunque con inquadrature spettacolari.",
-    immagineUrl: '/images/informatico/drone.png',
-  },
-]
-
-let quarto_anno = [
-  {
-    title: 'Figma',
-    description:
-      "Con questo stumento potrai disegnare l'interfaccia utente della tua applicazione: realizzerai un progetto grafico e di comunicazione sul quale poi basare lo sviluppo vero e proprio.",
-    immagineUrl: '/images/informatico/figma.png',
-  },
-  {
-    title: 'PHP',
-    description:
-      'PHP è uno dei linguaggi più diffusi per lo sviluppo web lato server: permette di costruire siti dinamici, gestire dati e creare servizi backend.',
-    immagineUrl: '/images/informatico/loghi/php.png',
-  },
-  {
-    title: 'SQL',
-    description:
-      'È il linguaggio usato per interrogare i database, per inserire nuovi dati e per fare ricerche tra di essi.',
-    immagineUrl: '/images/informatico/sql.png',
-  },
-  {
-    title: 'Laravel',
-    description:
-      "Framework PHP moderno per costruire applicazioni web full-stack: backend, database, autenticazione, API e interfacce web organizzate in modo solido e professionale.",
-    immagineUrl: '/images/informatico/loghi/laraver.webp',
-  },
-  {
-    title: 'React Native',
-    description:
-      'Potrai mettere a frutto la conoscenza di ReactJS fatta negli anni precedenti per realizzare applicazioni native per iOS e Android. Sarai tu a sviluppare la prossima app virale negli store?',
-    immagineUrl: '/images/informatico/react_native.png',
-  },
-]
-
-let ifts = [
-  {
-    title: 'PHP e OOP',
-    description:
-      'Il linguaggio e la programmazione a oggetti: classi, ereditarietà, interfacce, debugging. La base su cui poggia tutto il resto.',
-    immagineUrl: '/images/informatico/loghi/php.png',
-    url: '/ifts',
-  },
-  {
-    title: 'Database relazionali',
-    description:
-      'Modellazione dei dati, SQL, relazioni 1-N e N-N: lo schema su cui Laravel ed Eloquent lavorano ogni giorno.',
-    immagineUrl: '/images/informatico/sql.png',
-    url: '/ifts',
-  },
-  {
-    title: 'Tailwind CSS',
-    description:
-      'Interfacce moderne e responsive, insieme ai template Blade, per un front end coerente su desktop e mobile.',
-    immagineUrl: '/images/informatico/tailwind-css.jpeg',
-    url: '/ifts',
-  },
-  {
-    title: 'Laravel',
-    description:
-      'Il framework PHP per applicazioni reali: routing, controller, migration, Eloquent, autenticazione e API.',
-    immagineUrl: '/images/informatico/loghi/laraver.webp',
-    url: '/ifts',
-  },
-  {
-    title: 'Livewire',
-    description:
-      'Componenti interattivi senza ricaricare la pagina: il ponte concettuale tra Blade e i pannelli Filament.',
-    immagineUrl: '/images/informatico/javascript.png',
-    url: '/ifts',
-  },
-  {
-    title: 'Filament',
-    description:
-      'Pannelli di amministrazione professionali: Resource, form, tabelle, filtri, ruoli e permessi.',
-    immagineUrl: '/images/informatico/loghi/filament.jpg',
-    url: '/ifts',
-  },
-  {
-    title: 'DevOps',
-    description:
-      'Git in team, Docker, ambienti, CI/CD e deploy: portare un’applicazione dal computer alla produzione.',
-    immagineUrl: '/images/informatico/versioning.png',
-    url: '/ifts',
-  },
-  {
-    title: 'Vibe Coding',
-    description:
-      'Uso critico dell’intelligenza artificiale: specifiche chiare, lettura del codice generato, giudizio. Capire prima di delegare.',
-    immagineUrl: '/images/informatico/loghi/vibe_coding.png',
-    url: '/ifts',
+    src: '/images/informatico/banner-sistemi.jpg',
+    alt: 'Sistemi e reti, dal primo PC alla rete di un’azienda: sicurezza, assemblaggio PC e sistemi operativi al 1° anno; assistenza tecnica, scelta dei componenti, benchmark, apparati di rete e shell Linux al 2°; server Windows e Linux, virtualizzazione, router, MikroTik, Cisco Packet Tracer, droni, fotoritocco e sicurezza informatica al 3°; Sistema Duale al 4° anno; DevOps, container Docker, deploy, pubblicazione negli store e gestione dei domini all’IFTS',
+    width: 1536,
+    height: 2569,
   },
 ]
 

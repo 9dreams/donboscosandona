@@ -118,6 +118,7 @@ npm run lint     # ESLint
 | Schermo | `/screen` | `Featured` fullscreen, autoplay, reload ogni 10min |
 | Trasparenza | `/trasparenza` | Documenti da CMS con query `?q=trasparenza` |
 | Studenti atleti | `/studenti-atleti` | **Bozza**: non collegata da nessuna pagina, `noindex`, dati di prova. Foto in `public/images/studenti_atleti/` |
+| Archivio informatico | `/informatico-archived` | Fasce tolte da `/informatico` (laboratori anno per anno, IFTS, progetti) e sostituite dai banner: non collegata, `noindex` |
 | Progetto educativo | `/progetto`, `/progetto/*`, `/progetto_educativo` | Pagine rimosse: redirect in `next.config.js` al PDF aggiornato sul CMS (stesso link del riquadro in home) |
 
 ---
