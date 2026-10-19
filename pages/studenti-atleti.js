@@ -21,18 +21,6 @@ const atleti = [
   { name: 'Zanin Marco', className: '4B', course: 'Grafico', sport: 'Ciclismo su strada', specialty: 'Juniores', club: 'Team Pedale Piave', national: true, photo: 'ciclismo.jpg', pos: '38% center' },
 ]
 
-const gare = [
-  { when: 'Sab 10 ott', name: 'Furlan Giulia', className: '2A', sport: 'Pallavolo', what: 'Piave Volley – Volley Treviso · Campionato Under 18', where: 'Jesolo' },
-  { when: 'Ven 16 ott', name: 'Pavan Sofia', className: '1F', sport: 'Nuoto', what: 'Meeting regionale, 200 m farfalla', where: 'Padova' },
-  { when: 'Ven 16 – Sab 17 ott', name: 'Zanin Marco', className: '4B', sport: 'Ciclismo', what: 'Trofeo d’autunno, juniores', where: 'Pordenone' },
-  { when: 'Sab 17 ott', name: 'Tonon Riccardo', className: '2C', sport: 'Pallacanestro', what: 'Basket Musile – Vicenza Basket · Under 17 Gold', where: 'Vicenza' },
-  { when: 'Dom 18 ott', name: 'Momesso Davide', className: '4A', sport: 'Rugby', what: 'Rugby Basso Piave – Mogliano Rugby · Campionato Under 18', where: 'Mogliano Veneto' },
-  { when: 'Mer 21 – Ven 23 ott', name: 'Cester Anna', className: '2B', sport: 'Atletica', what: 'Raduno federale Under 18', where: 'Formia' },
-  { when: 'Ven 23 – Sab 24 ott', name: 'Marchiori Elisa', className: '1C', sport: 'Ginnastica ritmica', what: 'Serie B, prima prova', where: 'Fabriano' },
-  { when: 'Dom 25 ott', name: 'Bortolato Matteo', className: '3A', sport: 'Canottaggio', what: 'Meeting d’autunno', where: 'Piediluco' },
-  { when: 'Sab 31 ott', name: 'Dal Ben Luca', className: '3C', sport: 'Calcio', what: 'Calcio Litorale Veneto – Triestina · Campionato Under 17', where: 'Trieste' },
-]
-
 const news = [
   { title: 'Piave Volley vince il derby e vola al secondo posto', text: 'Il nostro palleggiatore guida la squadra Under 18 alla quinta vittoria di fila, davanti a un palazzetto pieno.', photo: 'news-volley.jpg' },
   { title: 'Raduno federale a Formia: convocata Anna Cester', text: 'Tre giorni di allenamenti con la nazionale Under 18. Le verifiche sono già state concordate con il consiglio di classe.', photo: 'news-formia.jpg' },
@@ -86,32 +74,15 @@ const passi = [
   { title: 'Il punto', text: 'A fine trimestre si guarda insieme come va. Se la scuola soffre, il progetto si corregge.' },
 ]
 
-// I documenti non sono ancora pronti: i collegamenti restano vuoti.
-const documenti = [
-  { title: 'Modulo di richiesta', meta: 'PDF · da firmare e consegnare entro il 30 novembre' },
-  { title: 'Attestazione della società sportiva', meta: 'Modello · la compila la società' },
-  { title: 'Calendario della stagione', meta: 'Foglio di calcolo · gare e raduni' },
-  { title: 'Regolamento del progetto', meta: 'PDF · approvato dal collegio formatori' },
-]
-
-const faq = [
-  { q: 'Chi può fare la richiesta?', a: 'Chi è tesserato con una società affiliata a una federazione o a un ente di promozione sportiva e gareggia almeno a livello regionale.' },
-  { q: 'Le assenze per le gare contano nel monte ore?', a: 'No, se sono nel calendario consegnato e il tutor è stato avvisato prima. Un’assenza non annunciata vale come le altre.' },
-  { q: 'Si può chiedere durante l’anno?', a: 'Sì, per una convocazione arrivata dopo novembre. Il consiglio di classe la esamina alla prima riunione utile.' },
-  { q: 'E se i voti calano?', a: 'Al punto di fine trimestre si rivede il progetto: meno uscite, verifiche più vicine, qualche ora di recupero in più.' },
-]
-
 const numeri = [
   { value: atleti.length, label: 'studenti atleti quest’anno', accent: true },
   { value: new Set(atleti.map((a) => a.sport)).size, label: 'discipline diverse' },
   { value: atleti.filter((a) => a.national).length, label: 'di livello nazionale' },
-  { value: gare.length, label: 'impegni nelle prossime tre settimane' },
 ]
 
 const ancore = [
   { href: '#come-funziona', label: 'Come funziona' },
   { href: '#atleti', label: 'Gli atleti' },
-  { href: '#calendario', label: 'Calendario gare' },
 ]
 
 const wrap = 'max-w-[1200px] mx-auto px-4 md:px-6 scroll-mt-28'
@@ -189,7 +160,7 @@ export default function StudentiAtletiPage() {
             scuola gli costruisce intorno un percorso su misura: assenze per le gare giustificate, verifiche
             programmate, due tutor che si parlano.
           </p>
-          <div className="mt-6 grid grid-cols-2 md:grid-cols-4 border-t border-white/25">
+          <div className="mt-6 grid grid-cols-3 border-t border-white/25">
             {numeri.map((x) => (
               <div key={x.label} className="pt-6 pr-6 flex flex-col gap-1.5">
                 <span className={`text-[56px] font-black leading-none ${x.accent ? 'text-ochre' : 'text-white'}`}>
@@ -252,39 +223,6 @@ export default function StudentiAtletiPage() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-
-      {/* Calendario */}
-      <section id="calendario" className={`${wrap} pt-16 pb-10 flex flex-col gap-6`}>
-        <h2 className={h2}>Calendario gare</h2>
-        <div className={`${card} overflow-x-auto`}>
-          <table className="w-full min-w-[760px] border-collapse text-[15px]">
-            <thead>
-              <tr className="bg-ink text-white text-left">
-                {['Quando', 'Atleta', 'Gara', 'Dove'].map((t) => (
-                  <th key={t} scope="col" className="px-[18px] py-3.5 font-bold">
-                    {t}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {gare.map((e, i) => (
-                <tr key={e.when + e.name} className={`border-t border-line align-top ${i % 2 ? 'bg-page' : 'bg-surface'}`}>
-                  <td className="p-[18px] font-bold whitespace-nowrap">{e.when}</td>
-                  <td className="p-[18px]">
-                    <div className="font-semibold">{e.name}</div>
-                    <div className="text-[13px] text-muted">
-                      {e.className} · {e.sport}
-                    </div>
-                  </td>
-                  <td className="p-[18px]">{e.what}</td>
-                  <td className="p-[18px] text-muted">{e.where}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </section>
 
@@ -415,55 +353,16 @@ export default function StudentiAtletiPage() {
         </ol>
       </section>
 
-      {/* Contatti, documenti, domande */}
-      <section id="contatti" className={`${wrap} pt-16 pb-24 flex flex-wrap gap-6`}>
-        <div className="flex-[1_1_340px] min-w-0 bg-ochre text-ink rounded-[10px] p-8 flex flex-col gap-4">
-          <h2 className="m-0 text-[30px] font-extrabold text-ink">Vuoi fare la richiesta?</h2>
-          <p className="m-0 font-serif text-lg leading-normal">
-            Scrivi al referente del progetto: ti manda i moduli e fissa il primo incontro con la famiglia.
-          </p>
-          <div className="flex flex-col gap-1 text-base">
-            <span className="font-extrabold">[Nome del referente]</span>
-            <span>[email del referente]</span>
-            <span>Riceve il martedì, 14.00–15.30, in Segreteria SFP</span>
-          </div>
-          <a href="#" className="self-start mt-2 bg-ink text-white! no-underline! px-[22px] py-3.5 rounded-md font-bold">
-            Scrivi al referente
-          </a>
-        </div>
-
-        <div className={`flex-[1_1_300px] min-w-0 ${card} p-8 flex flex-col gap-3.5`}>
-          <h2 className="m-0 text-2xl font-extrabold text-fg">Documenti</h2>
-          {documenti.map((d) => (
-            <a key={d.title} href="#" className="flex items-center gap-3.5 py-3 border-b border-line text-fg! no-underline!">
-              <Icon icon="ph:file-arrow-down" className="text-[22px] text-brand-deep dark:text-brand shrink-0" />
-              <span className="flex flex-col gap-0.5">
-                <span className="font-semibold text-base">{d.title}</span>
-                <span className="text-[13px] text-muted">{d.meta}</span>
-              </span>
-            </a>
-          ))}
-        </div>
-
-        <div className="flex-[1_1_340px] min-w-0 flex flex-col gap-2.5">
-          <h2 className="mt-0 mb-1.5 text-2xl font-extrabold text-fg">Domande frequenti</h2>
-          {faq.map((q) => (
-            <details key={q.q} className={`group ${card}`}>
-              <summary className="list-none [&::-webkit-details-marker]:hidden cursor-pointer px-5 py-[18px] min-h-11 flex justify-between items-center gap-3 font-bold text-base text-fg">
-                {q.q}
-                <Icon
-                  icon="ph:plus-bold"
-                  className="text-lg text-brand-deep dark:text-brand shrink-0 transition-transform duration-200 group-open:rotate-45"
-                />
-              </summary>
-              <p className={`m-0 px-5 pb-[18px] ${serif}`}>{q.a}</p>
-            </details>
-          ))}
-        </div>
-
-        <p className="basis-full m-0 text-sm text-muted">
-          Bozza: studenti, società e risultati sono dati di prova.
-        </p>
+      {/* Richiesta */}
+      <section id="contatti" className={`${wrap} pt-16 pb-24 flex flex-col items-center gap-6`}>
+        <a
+          href="mailto:segreteria.fp.sandona@salesianinordest.it?subject=Progetto%20studenti%20atleti"
+          className="inline-flex items-center gap-3 max-w-full bg-ochre text-ink! no-underline! px-8 py-5 rounded-full text-lg md:text-xl font-bold text-center"
+        >
+          <Icon icon="ph:envelope-simple" className="text-2xl shrink-0" />
+          Sei uno studente atleta e vuoi essere inserito nel programma? Scrivi alla segreteria
+        </a>
+        <p className="m-0 text-sm text-muted">Bozza: studenti, società e risultati sono dati di prova.</p>
       </section>
     </Layout>
   )
