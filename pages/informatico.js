@@ -166,7 +166,7 @@ export default function Home({ data }) {
         edizione si diventa sviluppatori full stack su PHP, Laravel, Livewire
         e Filament, imparando a scrivere il codice con le proprie mani e a
         usare l&apos;intelligenza artificiale con criterio — capire prima di
-        delegare. Selezione il 30 ottobre, inizio il 3 novembre 2026.
+        delegare. Inizio a novembre 2026.
         {' '}
         <a href="/ifts" className="font-semibold">
           Tutte le informazioni sul corso IFTS →

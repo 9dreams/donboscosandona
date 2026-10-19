@@ -206,7 +206,7 @@ const destinatari = [
   'Diploma di istruzione secondaria di secondo grado',
   'Diploma professionale di tecnico di 4° anno IeFP',
   'Ammissione al quinto anno dei percorsi di liceo',
-  'Qualifica di operatore di 3° anno IeFP, con riconoscimento di crediti formativi',
+  'Terzo anno IeFP completato o, comunque, senza diploma di scuola superiore: previo riconoscimento delle competenze acquisite in istruzione, formazione e lavoro',
 ]
 
 const documenti = [
@@ -284,7 +284,7 @@ export default function IftsPage() {
             <div>
               <p className="font-semibold m-0">Calendario</p>
               <p className="text-sm text-muted mt-1 m-0">
-                Selezione il <strong>30 ottobre</strong>. Lezioni dal <strong>3 novembre 2026</strong> a{' '}
+                Selezione prima dell’inizio. Lezioni da <strong>novembre 2026</strong> a{' '}
                 <strong>giugno 2027</strong>.
               </p>
             </div>
@@ -294,7 +294,7 @@ export default function IftsPage() {
             <div>
               <p className="font-semibold m-0">Frequenza</p>
               <p className="text-sm text-muted mt-1 m-0">
-                Obbligatoria almeno al <strong>70%</strong> del monte ore. Corso a numero chiuso.
+                Obbligatoria almeno al <strong>70%</strong>, sia in aula sia nello stage. Corso a numero chiuso.
               </p>
             </div>
           </div>
@@ -303,7 +303,7 @@ export default function IftsPage() {
             <div>
               <p className="font-semibold m-0">Costo</p>
               <p className="text-sm text-muted mt-1 m-0">
-                <strong>Interamente gratuito</strong> per gli allievi, con il sostegno della Regione del Veneto.
+                <strong>Interamente gratuito</strong> per gli allievi, cofinanziato dall’Unione europea e dalla Regione del Veneto.
               </p>
             </div>
           </div>
@@ -489,7 +489,7 @@ export default function IftsPage() {
       <section id="candidati" className="max-w-[1000px] mx-auto px-4 md:px-8 mb-16 scroll-mt-28">
         <SectionTitle icon="ph:paper-plane-tilt">Come candidarsi</SectionTitle>
         <p className="font-serif text-xl leading-relaxed mb-8">
-          Invia la candidatura a{' '}
+          Consegna la domanda a mano in segreteria, presso la sede formativa, oppure inviala a{' '}
           <a href={MAIL_HREF} className="font-semibold">
             {MAIL}
           </a>
@@ -511,9 +511,9 @@ export default function IftsPage() {
         <div className="rounded-2xl bg-ink text-white p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
             <Eyebrow className="mb-3">Selezione</Eyebrow>
-            <h3 className="text-2xl font-bold text-white m-0 mb-2">30 ottobre 2026</h3>
+            <h3 className="text-2xl font-bold text-white m-0 mb-2">Prima dell’inizio del corso</h3>
             <p className="m-0 text-white/90 leading-7">
-              Le attività formative iniziano il <strong>3 novembre 2026</strong>. Posti limitati:
+              Le attività formative iniziano a <strong>novembre 2026</strong>. Posti limitati:
               si attiva con almeno 15 allievi.
             </p>
           </div>
@@ -571,12 +571,12 @@ export default function IftsPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/ifts/finanziatori.jpg"
-            alt="Repubblica Italiana, Regione del Veneto, Fondo per lo Sviluppo e la Coesione, Piano Sviluppo e Coesione Veneto"
+            alt="Coesione Italia 21-27 Veneto, Cofinanziato dall’Unione europea, Repubblica Italiana, Regione del Veneto"
             className="w-full max-w-[720px] mx-auto h-auto object-contain"
           />
           <p className="text-xs leading-5 text-center text-muted mt-8 m-0">
             Corso IFTS “Tecniche per la progettazione e lo sviluppo di applicazioni informatiche”,
-            edizione 2026/2027. Approvato con DGR n. 680 del 17/06/2025 e Decreto n. 1149 del 29/09/2025.
+            edizione 2026/2027. Approvato con DGR n. 713 del 07/07/2026 e Decreto n. 340 del 29/09/2026.
           </p>
         </div>
       </section>
