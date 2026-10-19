@@ -53,27 +53,6 @@ const albo = [
   { medal: 'bronzo', name: 'Sara Gobbo', sport: 'Atletica leggera', text: 'Bronzo nei 800 m ai Campionati italiani Under 18, 2023.' },
 ]
 
-const garanzie = [
-  'Assenze per gare e raduni giustificate, senza pesare sul monte ore.',
-  'Verifiche concordate in anticipo, mai il giorno dopo una trasferta.',
-  'Materiali delle lezioni perse sul registro, il giorno stesso.',
-  'Stage di laboratorio programmati lontano dalle gare importanti.',
-]
-
-const impegni = [
-  'A comunicare ogni gara al tutor almeno una settimana prima.',
-  'A recuperare le lezioni perse entro la verifica successiva.',
-  'A presentarsi alle verifiche programmate: quelle non si spostano due volte.',
-  'A tenere il comportamento che si chiede a chi rappresenta la scuola.',
-]
-
-const passi = [
-  { title: 'La richiesta', text: 'La famiglia la presenta entro il 30 novembre, con l’attestazione della società sportiva e il calendario della stagione.' },
-  { title: 'Il progetto', text: 'Il consiglio di classe scrive il Progetto Formativo Personalizzato: quali assenze, quali verifiche, come si recupera.' },
-  { title: 'Due tutor', text: 'Un formatore della classe e un tecnico della società seguono lo studente e si sentono ogni volta che serve.' },
-  { title: 'Il punto', text: 'A fine trimestre si guarda insieme come va. Se la scuola soffre, il progetto si corregge.' },
-]
-
 const numeri = [
   { value: atleti.length, label: 'studenti atleti quest’anno', accent: true },
   { value: new Set(atleti.map((a) => a.sport)).size, label: 'discipline diverse' },
@@ -81,7 +60,6 @@ const numeri = [
 ]
 
 const ancore = [
-  { href: '#come-funziona', label: 'Come funziona' },
   { href: '#atleti', label: 'Gli atleti' },
 ]
 
@@ -306,51 +284,6 @@ export default function StudentiAtletiPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Come funziona */}
-      <section id="come-funziona" className={`${wrap} pt-[88px] pb-10 flex flex-col gap-10`}>
-        <div className="flex flex-col gap-3 max-w-[720px]">
-          <h2 className={h2}>Come funziona</h2>
-          <p className="m-0 font-serif text-xl leading-relaxed text-muted">
-            Il percorso si chiama Progetto Formativo Personalizzato. Si chiede una volta all’anno e vale fino a giugno.
-          </p>
-        </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-5">
-          <div className="bg-ink text-white rounded-[10px] p-8 flex flex-col gap-4">
-            <h3 className="m-0 text-[22px] font-extrabold text-white">La scuola garantisce</h3>
-            <ul className="m-0 p-0 list-none flex flex-col gap-3 font-serif text-lg leading-snug">
-              {garanzie.map((t) => (
-                <li key={t} className="flex gap-3 items-start">
-                  <Icon icon="ph:check-bold" className="text-xl text-ochre shrink-0 mt-0.5" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className={`${card} p-8 flex flex-col gap-4`}>
-            <h3 className="m-0 text-[22px] font-extrabold text-fg">Lo studente si impegna</h3>
-            <ul className="m-0 p-0 list-none flex flex-col gap-3 font-serif text-lg leading-snug text-muted">
-              {impegni.map((t) => (
-                <li key={t} className="flex gap-3 items-start">
-                  <Icon icon="ph:caret-right-bold" className="text-xl text-brand-deep dark:text-brand shrink-0 mt-0.5" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <ol className="list-none m-0 p-0 grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">
-          {passi.map((p, i) => (
-            <li key={p.title} className={`${card} p-7 flex flex-col gap-3`}>
-              <span className="text-[15px] font-extrabold text-brand-deep dark:text-brand">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <h3 className="m-0 text-[21px] font-bold text-fg">{p.title}</h3>
-              <p className={`m-0 ${serif}`}>{p.text}</p>
-            </li>
-          ))}
-        </ol>
       </section>
 
       {/* Richiesta */}
