@@ -130,9 +130,11 @@ export default function SuperPizzaBanner({ iniziale = null }) {
         <img
           src='/images/pizza/superpizza.webp'
           alt=''
-          className='superpizza-kenburns absolute inset-0 size-full object-cover opacity-60'
+          className='superpizza-kenburns absolute inset-0 size-full object-cover'
         />
-        <div className='absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40' />
+        {/* Il velo scuro serve solo dove c'è il testo: a sinistra su desktop,
+            più uniforme su telefono, dove il testo copre tutta l'immagine. */}
+        <div className='absolute inset-0 bg-ink/60 md:bg-transparent md:bg-gradient-to-r md:from-ink/90 md:via-ink/45 md:to-transparent' />
 
         <div className='pointer-events-none absolute inset-0 overflow-hidden' aria-hidden='true'>
           {PIZZETTE.map((p, i) => (
@@ -198,8 +200,8 @@ export default function SuperPizzaBanner({ iniziale = null }) {
                       {posto === 0 ? (
                         <span className='superpizza-corona mb-1 text-3xl' aria-hidden='true'>👑</span>
                       ) : null}
-                      <span className='wordmark text-2xl text-white md:text-3xl'>{riga.classe}</span>
-                      <span className='mb-2 text-sm font-bold text-pizza-cheese'>
+                      <span className='wordmark text-2xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] md:text-3xl'>{riga.classe}</span>
+                      <span className='mb-2 rounded-full bg-ink/70 px-2 py-0.5 text-sm font-bold text-pizza-cheese'>
                         <Contatore valore={riga.punti} visibile={visibile} /> pt
                       </span>
                       <div className={`superpizza-gradino relative flex w-full justify-center ${altezza}`} style={{ transitionDelay: ritardo }}>
@@ -212,7 +214,7 @@ export default function SuperPizzaBanner({ iniziale = null }) {
               </div>
 
               {altre.length > 0 ? (
-                <div className='overflow-hidden rounded-full border border-white/15 bg-white/5 py-2.5' aria-label='Le altre classi in classifica'>
+                <div className='overflow-hidden rounded-full border border-white/15 bg-ink/75 py-2.5 backdrop-blur-sm' aria-label='Le altre classi in classifica'>
                   <ul className='superpizza-nastro m-0 flex w-max list-none p-0'>
                     {[...altre, ...altre].map((riga, i) => (
                       <li
