@@ -30,6 +30,7 @@ export { default as SyntheticLightHero } from './SyntheticLightHero.jsx'
 export { default as NewsArchive } from './NewsArchive.jsx'
 export { default as NewsArchiveHero } from './NewsArchiveHero.jsx'
 export { default as OpenSchoolBanner } from './OpenSchoolBanner.jsx'
+export { default as SuperPizzaBanner } from './SuperPizzaBanner.jsx'
 export { default as GoogleAnalytics } from './GoogleAnalytics'
 
 // Reference:

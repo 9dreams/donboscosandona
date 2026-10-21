@@ -17,7 +17,9 @@ import {
   NewsWall,
   SyntheticLightHero,
   OpenSchoolBanner,
+  SuperPizzaBanner,
 } from '/components'
+import { SUPERPIZZA_API } from '/components/SuperPizzaBanner'
 
 import INostriNumeri from '/cc/INostriNumeri'
 import { excludeTag } from '/lib/posts'
@@ -188,7 +190,7 @@ let link_utili = [
   },
 ]
 
-export default function Home({ data, movies, elementi }) {
+export default function Home({ data, movies, elementi, superpizza }) {
   return (
     <Layout>
       
@@ -199,6 +201,7 @@ export default function Home({ data, movies, elementi }) {
       />
       <OpenSchoolBanner />
       <NewsWall data={data} limit={7} defaultTag='scuola' />
+      <SuperPizzaBanner iniziale={superpizza} />
       <a
         href='https://www.donboscoitalia.it/go-beyond-traditional-education/'
         target='_blank'
@@ -303,8 +306,18 @@ export async function getStaticProps() {
   )
   const elementi = await res.json()
 
+  // La classifica della SuperPizza: se il sito dei tornei non risponde, la
+  // home si costruisce lo stesso e il banner compare senza numeri.
+  let superpizza = null
+  try {
+    res = await fetch(SUPERPIZZA_API, { signal: AbortSignal.timeout(5000) })
+    superpizza = res.ok ? await res.json() : null
+  } catch {
+    superpizza = null
+  }
+
   return {
-    props: { data, movies, elementi },
+    props: { data, movies, elementi, superpizza },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 minutes

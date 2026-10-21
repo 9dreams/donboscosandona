@@ -80,6 +80,7 @@ npm run lint     # ESLint
 │   ├── PostInEvidenza.js     # Banner hero articolo in evidenza
 │   ├── Header.js             # Header secondario con barra navigazione
 │   ├── Torneo.js             # Torneo Superpizza (pizza animata + classifica)
+│   ├── SuperPizzaBanner.jsx  # Banner home SuperPizza: classifica dall'API di tornei.donboscosandona.it
 │   ├── Test.js               # Quiz orientamento (variante components/)
 │   ├── Credits.js            # Footer crediti 9dreams
 │   ├── Footer.js             # Footer alternativo (non usato da config/default.js)
@@ -216,6 +217,10 @@ Icone usate nel progetto: `ph:arrow-right`, `ph:grid-four`, `ph:calendar-blank`,
 `components/Torneo.js` usa animazioni CSS complesse (pizza rotante, pizzette cadenti in falling). Le classi `.torneo-*` e i `@keyframes torneo-*` sono definiti in `styles/globals.css`. Non spostare queste regole in CSS Modules.
 
 ---
+
+## Banner SuperPizza
+
+`components/SuperPizzaBanner.jsx`, in home sotto il `NewsWall`. Legge la classifica dall'API pubblica del sito dei tornei (`https://tornei.donboscosandona.it/api/v1/superpizza`, senza chiavi, CORS aperto): `getStaticProps` di `pages/index.js` la scarica con un timeout di 5 secondi e la passa come `iniziale`, SWR la rinfresca nel browser. Se l'API non risponde il banner resta, senza numeri. Clic → `tornei.donboscosandona.it/superpizza`. Per provarlo contro un sito dei tornei in locale: `NEXT_PUBLIC_SUPERPIZZA_API=http://localhost:8000/api/v1/superpizza npm run dev`. Colori `pizza-*` (token in `globals.css`), animazioni `superpizza-*` nello stesso file; `Torneo.js` e i dati a mano `classi` in `data/homePage.js` sono il vecchio torneo e non sono più usati.
 
 ## Path alias
 

@@ -24,6 +24,12 @@
   --fg-secondary: #4a5a6e;
   --surface: #ffffff;
   --line: #e2e7ee;
+  /* La SuperPizza: gli stessi colori della pagina sul sito dei tornei. */
+  --pizza-tomato: #ff4d3d;
+  --pizza-cheese: #ffc83d;
+  --pizza-basil: #3ddc84;
+  --pizza-mozzarella: #fff6dc;
+  --pizza-crust: #c26a1f;
 }
 
 html.dark {
@@ -50,6 +56,11 @@ html.dark {
   --color-fg: var(--fg);
   --color-muted: var(--fg-secondary);
   --color-line: var(--line);
+  --color-pizza-tomato: var(--pizza-tomato);
+  --color-pizza-cheese: var(--pizza-cheese);
+  --color-pizza-basil: var(--pizza-basil);
+  --color-pizza-mozzarella: var(--pizza-mozzarella);
+  --color-pizza-crust: var(--pizza-crust);
 }
 
 /* ─── Base ─── */
@@ -133,6 +144,60 @@ body {
 .prose-site table { width: 100%; border-collapse: collapse; font-family: var(--font-ui); font-size: 0.95rem; }
 .prose-site th, .prose-site td { border-bottom: 1px solid var(--line); padding: 0.6rem 0.75rem; text-align: left; }
 .prose-site blockquote { border-left: 4px solid var(--ochre); padding-left: 1rem; font-style: italic; }
+
+/* ─── Banner SuperPizza (components/SuperPizzaBanner.jsx) ─── */
+/* Quello che parte «quando si vede» aspetta la classe .is-in, messa
+   dall'IntersectionObserver del componente. */
+.superpizza-titolo {
+  font-family: 'Kaushan Script', cursive !important;
+  letter-spacing: 0;
+}
+.superpizza-lettera {
+  animation: superpizza-salta 2.8s ease-in-out infinite;
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35), 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+.superpizza-gradino {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 1s cubic-bezier(0.34, 1.45, 0.64, 1);
+}
+.superpizza-banner.is-in .superpizza-gradino { transform: scaleY(1); }
+.superpizza-banner:hover .superpizza-spicchio { animation: superpizza-dondola 0.6s ease-in-out; }
+.superpizza-corona { display: inline-block; animation: superpizza-dondola 2.2s ease-in-out infinite; transform-origin: bottom; }
+.superpizza-gira { animation: superpizza-gira 8s linear infinite; }
+.superpizza-cade { animation: superpizza-cade 12s linear infinite; opacity: 0.85; }
+.superpizza-kenburns { animation: superpizza-kenburns 22s ease-in-out infinite alternate; }
+.superpizza-nastro { animation: superpizza-nastro 28s linear infinite; }
+.superpizza-banner:hover .superpizza-nastro { animation-play-state: paused; }
+
+@keyframes superpizza-salta {
+  0%, 70%, 100% { transform: none; }
+  80% { transform: translateY(-10px) rotate(-4deg); }
+  90% { transform: translateY(2px) rotate(3deg); }
+}
+@keyframes superpizza-dondola {
+  0%, 100% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg) translateY(-3px); }
+}
+@keyframes superpizza-gira { to { transform: rotate(360deg); } }
+@keyframes superpizza-cade {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(700px) rotate(540deg); }
+}
+@keyframes superpizza-kenburns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+@keyframes superpizza-nastro {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .superpizza-lettera, .superpizza-corona, .superpizza-gira, .superpizza-kenburns, .superpizza-nastro { animation: none; }
+  .superpizza-cade { display: none; }
+  .superpizza-gradino { transform: none; transition: none; }
+}
 
 /* ─── Torneo component animations ─── */
 @keyframes torneo-fallRotate {
