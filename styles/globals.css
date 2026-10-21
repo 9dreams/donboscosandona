@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Kaushan+Script&family=Lilita+One&display=swap');
 
 @import "tailwindcss";
 
@@ -148,13 +148,16 @@ body {
 /* ─── Banner SuperPizza (components/SuperPizzaBanner.jsx) ─── */
 /* Quello che parte «quando si vede» aspetta la classe .is-in, messa
    dall'IntersectionObserver del componente. */
+/* Lilita One, lo stesso carattere della pagina SuperPizza sul sito dei tornei:
+   chi clicca il banner ritrova la stessa insegna. */
 .superpizza-titolo {
-  font-family: 'Kaushan Script', cursive !important;
-  letter-spacing: 0;
+  font-family: 'Lilita One', 'Archivo', sans-serif !important;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
 }
 .superpizza-lettera {
   animation: superpizza-salta 2.8s ease-in-out infinite;
-  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35), 0 10px 24px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 0.06em 0 color-mix(in oklab, var(--pizza-crust) 80%, black), 0 0.12em 0 color-mix(in oklab, var(--pizza-crust) 50%, black), 0 0.2em 0.35em rgba(0, 0, 0, 0.55);
 }
 .superpizza-gradino {
   transform: scaleY(0);

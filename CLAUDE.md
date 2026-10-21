@@ -196,6 +196,7 @@ Niente hex sparsi né arancio `#FF9800`: si usano le classi token.
 - UI e titoli: `Archivo` → `var(--font-ui)` / `font-sans`; titoli grandi con `.wordmark` o `.title-display` (bold, spaziatura stretta)
 - Testo disteso e sottotitoli: `Newsreader` → `var(--font-display)` / `font-serif`
 - Torneo: `Kaushan Script` — solo nel componente Torneo
+- SuperPizza: `Lilita One` — solo nel titolo di `SuperPizzaBanner`, lo stesso della pagina sul sito dei tornei
 
 ---
 

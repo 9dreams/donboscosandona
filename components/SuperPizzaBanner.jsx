@@ -156,7 +156,7 @@ export default function SuperPizzaBanner({ iniziale = null }) {
               </span>
             </p>
 
-            <h2 className='superpizza-titolo m-0 whitespace-nowrap text-[52px] leading-none sm:text-[64px] md:text-[96px]' aria-label='SuperPizza'>
+            <h2 className='superpizza-titolo m-0 whitespace-nowrap text-[44px] leading-[0.9] sm:text-[60px] md:text-[84px]' aria-label='SuperPizza'>
               {LETTERE.map((lettera, i) => (
                 <span
                   key={i}
